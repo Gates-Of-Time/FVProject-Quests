@@ -46,7 +46,6 @@ sub EVENT_ITEM {
 	#:: Turn in for 18770 -  Recruitment Summons
 	if (plugin::check_handin(\%itemcount, 18770 => 1)) {
 		quest::say("I, Baxok, guildmaster, welcome you to Gemchopper Hall, young warrior! You are expected to serve his majesty, King Ak'Anon, with pride. You have much to learn. You may report to Naygog for further guidance. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
-		]
 		#:: Give item 13520 - Torn and Ripped Tunic*
 		quest::summonitem(13520);
 		#:: Give a small amount of xp
