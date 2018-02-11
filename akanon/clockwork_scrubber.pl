@@ -1,10 +1,10 @@
 # Ak'Anon (akanon) >> clockwork_scrubber (55001), (55010), (55035)
 
 sub EVENT_SPAWN {
-	my $miner628 == 0;
+	my $miner628 eq "0";
 	my $random = int(rand(100));
 	if ($random <= 5) {
-		$miner628 == 1;
+		$miner628 eq "1";
 	}
 }
 
