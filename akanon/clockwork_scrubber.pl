@@ -16,6 +16,7 @@ sub EVENT_SAY {
 		quest::emote(".wizz.click.628.");
 	}
 	elsif ($text=~/628/i && $miner628 eq "false") {
+	#:: Do nothing
 	}
 }
 
