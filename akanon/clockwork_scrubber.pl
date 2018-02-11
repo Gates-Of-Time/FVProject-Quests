@@ -22,16 +22,21 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Check for handin of 12164 - Scrubber Key (Rogue Scrubber Key)
-	if (plugin::check_handin(%itemcount, 12164 => 1)) && $miner628 eq "true") {
-		quest::emote(".wizz.click.628.");
-		#:: Choose a random 12162 - Gnome Take (Good Take For Rogues), 12167 - Gnome Take (Bad Take For Rogues)
-		$gnometake = quest::ChooseRandom(12162,12167);
-		#:: Give one of the Gnome Take items
-		quest::summonitem($gnometake);
-		#:: Set faction
-		quest::faction(45,-10); 	#:: -10 Clockwork Gnome
-		quest::ding();
-		quest::exp(500);
+	if (plugin::check_handin(%itemcount, 12164 => 1)) {
+		if $miner628 eq "true") {
+			quest::emote(".wizz.click.628.");
+			#:: Choose a random 12162 - Gnome Take (Good Take For Rogues), 12167 - Gnome Take (Bad Take For Rogues)
+			$gnometake = quest::ChooseRandom(12162,12167);
+			#:: Give one of the Gnome Take items
+			quest::summonitem($gnometake);
+			#:: Set faction
+			quest::faction(45,-10); 	#:: -10 Clockwork Gnome
+			quest::ding();
+			quest::exp(500);
+		}
+		if $miner628 eq "false") {
+			plugin::return_items(%itemcount); # return unused items
+		}
 	}
 	plugin::return_items(%itemcount); # return unused items
 }
