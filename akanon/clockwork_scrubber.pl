@@ -5,7 +5,7 @@ my $miner628 = "false";
 sub EVENT_SPAWN {
 	#:: 1 in 20 will be 628
 	my $random = int(rand(100));
-	if ($random <= 99) {
+	if ($random <= 5) {
 		$miner628 = "true";
 	}
 }
