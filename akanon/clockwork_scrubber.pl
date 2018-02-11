@@ -7,6 +7,7 @@ sub EVENT_SPAWN {
 	my $random = int(rand(100));
 	if ($random <= 5) {
 		$miner628 = "true";
+		quest::ding();
 	}
 }
 
