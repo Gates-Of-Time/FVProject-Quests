@@ -1,7 +1,9 @@
 # Ak'Anon (akanon) >> clockwork_scrubber (55001), (55010), (55035)
 
+my $miner628 = "false";
+
 sub EVENT_SPAWN {
-	my $miner628 = "false";
+	#:: 1 in 20 will be 628
 	my $random = int(rand(100));
 	if ($random <= 5) {
 		$miner628 = "true";
@@ -9,6 +11,7 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_SAY {
+	#:: 1 in 20 will respond to 628
 	if ($text=~/628/i && $miner628 eq "true") {
 		quest::emote(".wizz.click.628.");
 	}
