@@ -22,7 +22,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Check for handin of 12164 - Scrubber Key (Rogue Scrubber Key)
-	if (plugin::check_handin(%itemcount, 12164 == 1)) {
+	if (plugin::check_handin(\%itemcount, 12164 => 1) && $miner628 eq "true") {
 		quest::emote(".wizz.click.628.");
 		#:: Choose a random 12162 - Gnome Take (Good Take For Rogues), 12167 - Gnome Take (Bad Take For Rogues)
 		$gnometake = quest::ChooseRandom(12162,12167);
