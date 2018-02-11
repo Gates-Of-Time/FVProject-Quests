@@ -9,17 +9,21 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_SAY {
-	if ($text=~/628/i && $miner628 == 1) {
+	if ($text=~/628/i && $miner628 eq "1") {
 		quest::emote(".wizz.click.628.");
 	}
 }
 
 sub EVENT_ITEM {
-	if (plugin::check_handin(%itemcount, 12164 => 1) && $miner628 == 1) { #Scrubber Key
+	#:: Check for handin of 12164 - Scrubber Key (Rogue Scrubber Key)
+	if (plugin::check_handin(%itemcount, 12164 => 1) && $miner628 eq "1") {
 		quest::emote(".wizz.click.628.");
-		$gnometake = quest::ChooseRandom(12162,12167); #Gnome Take (Good or Bad)
+		#:: Choose a random 12162 - Gnome Take (Good Take For Rogues), 12167 - Gnome Take (Bad Take For Rogues)
+		$gnometake = quest::ChooseRandom(12162,12167);
+		#:: Give one of the Gnome Take items
 		quest::summonitem($gnometake);
-		quest::faction(45,-10); # Clockwork Gnome
+		#:: Set faction
+		quest::faction(45,-10); 	#:: -10 Clockwork Gnome
 		quest::ding();
 		quest::exp(500);
 	}
