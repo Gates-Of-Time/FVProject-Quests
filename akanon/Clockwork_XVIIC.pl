@@ -1,5 +1,8 @@
+# Ak'Anon (akanon) >> Clockwork_XVIIC (55222), (55170), (55165), (55003)
+# Series C Black Boxes Quest
+
 sub EVENT_ITEM {
-	#:: Turn in for 13844 -  Shiny Card for Series C Black Boxes Quest
+	#:: Turn in for 13844 - Shiny Card for Series C Black Boxes Quest
 	if (plugin::check_handin(\%itemcount, 18770 => 1)) {
 		quest::say("Tick.. Pop.. Access granted.");
 		#:: Give item 13212 - Blackbox XVIIC
