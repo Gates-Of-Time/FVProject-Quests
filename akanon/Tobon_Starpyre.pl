@@ -34,7 +34,7 @@ sub EVENT_SAY {
      }
 }
 sub EVENT_ITEM {
-    if (plugin::check_handin(%itemcount, 18774 => 1)) { #Registration Letter
+    if (plugin::check_handin(\%itemcount, 18774 => 1)) { #Registration Letter
         quest::Say("Ah.. Welcome, friend! I am Tobon Starpyre, Master Wizard of Library Mechanimagica. This is our tunic - wear it with pride. Study hard, master your skills, and make us proud. Once you are ready to begin your training please make sure that you see Xalirilan, he can assist you in developing your hunting and gathering skills. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [trades] you will have available to you.");
 		quest::summonitem(13523); #Soot Stained Gold Robe*
 		quest::faction(76,-5); # the dead
@@ -53,6 +53,6 @@ sub EVENT_ITEM {
 		quest::exp(500);
 		quest::givecash(1,0,0,0);
 	}
-    plugin::return_items(%itemcount); # return unused items
+    plugin::return_items(\%itemcount); # return unused items
 }
 # converted to Perl by SS
