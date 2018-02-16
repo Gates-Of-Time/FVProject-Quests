@@ -12,7 +12,7 @@ sub EVENT_ENTER {
   }
 }
 sub EVENT_ITEM {
-    if (plugin::check_handin(%itemcount, 18772 => 1)) { #Recruitment Summons
+    if (plugin::check_handin(\%itemcount, 18772 => 1)) { #Recruitment Summons
         quest::Say("Welcome to Library Mechanimagica. I am Master Magician Wuggan Azusphere. and I will help to teach you the ways of summoning. Here is our guild tunic, make us proud.");
 		quest::summonitem(13521); #Dusty Gold Robe*
 		quest::faction(91,100); # eldritch collective
@@ -23,6 +23,6 @@ sub EVENT_ITEM {
 		quest::ding();
 		quest::exp(100);
     }
-    plugin::return_items(%itemcount); # return unused items
+    plugin::return_items(\%itemcount); # return unused items
 }
 #converted to Perl by SS
