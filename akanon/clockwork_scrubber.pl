@@ -33,7 +33,7 @@ sub EVENT_ITEM {
 		quest::ding();
 		quest::exp(500);
 	}
-	plugin::return_items(%itemcount); # return unused items
+	plugin::return_items(\%itemcount); # return unused items
 }
 
 # Ak'Anon (akanon) >> clockwork_scrubber (55001), (55010), (55035)
