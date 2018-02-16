@@ -55,7 +55,7 @@ sub EVENT_ITEM {
 		quest::faction(176,10); 	#:: + King Ak'Anon
 		quest::faction(71,-30); 	#:: - Dark Reflection
 		quest::faction(322,-30); 	#:: - The Dead
-		quest::givecash(0,2,1,6);	#:: Give a small amount of cash
+		quest::givecash(6,1,2,0);	#:: Give a small amount of cash
 	}
 	#:: Turn in for 12160 -  Basilisk Tongue
 	if (plugin::check_handin(\%itemcount, 12160 => 4)) {
@@ -72,7 +72,7 @@ sub EVENT_ITEM {
 		quest::faction(176,10); 	#:: + King Ak'Anon
 		quest::faction(71,-30); 	#:: - Dark Reflection
 		quest::faction(322,-30); 	#:: - The Dead
-		quest::givecash(1,5,1,6);	#:: Give a small amount of cash
+		quest::givecash(6,1,5,1);	#:: Give a small amount of cash
 	}
 	#:: Turn in for 12160 -  Bozinite Pestle
 	if (plugin::check_handin(\%itemcount, 13272 => 1)) {
@@ -89,7 +89,7 @@ sub EVENT_ITEM {
 		quest::faction(176,10); 	#:: + King Ak'Anon
 		quest::faction(71,-30); 	#:: - Dark Reflection
 		quest::faction(322,-30); 	#:: - The Dead
-		quest::givecash(1,5,1,6);	#:: Give a small amount of cash
+		quest::givecash(6,1,5,1);	#:: Give a small amount of cash
 	}
 		plugin::return_items(\%itemcount);
 }
