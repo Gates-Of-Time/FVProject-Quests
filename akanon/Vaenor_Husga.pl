@@ -12,7 +12,7 @@ sub EVENT_ENTER {
   }
 }
 sub EVENT_ITEM {
-    if (plugin::check_handin(%itemcount, 18702 => 1)) { #Old Folded Letter
+    if (plugin::check_handin(\%itemcount, 18702 => 1)) { #Old Folded Letter
         quest::Say("A new initiate I see. Take this robe you will surely need it in the winter months.");
 		quest::summonitem(13524); #Dark Gold Felt Robe*
 		quest::faction(76,-10); # Deep Muses
@@ -22,6 +22,6 @@ sub EVENT_ITEM {
 		quest::ding();
 		quest::exp(100);
     }
-    plugin::return_items(%itemcount); # return unused items
+    plugin::return_items(\%itemcount); # return unused items
 }
 # converted to Perl by SS
