@@ -18,7 +18,7 @@ sub EVENT_ENTER {
 sub EVENT_ITEM {
 	#:: match for a 18776 - Note
 	if (plugin::check_handin(\%itemcount, 18776 => 1)) {
-		quest::Say("Yes, I just knew you'd see it my way, $name. Anyway, welcome to our little part of Ak'Anon's underworld. We have to pay a high price to keep our small orgainzation hidden, which keeps us all busy around here. Now throw this on, and let's put you to work.");
+		quest::say("Yes, I just knew you'd see it my way, $name. Anyway, welcome to our little part of Ak'Anon's underworld. We have to pay a high price to keep our small orgainzation hidden, which keeps us all busy around here. Now throw this on, and let's put you to work.");
 		# removed "Once you are ready to begin your training please make sure that you come back to see me after collecting your initial supplies! I have many things to teach you that you would benefit from, from furthering your knowledge of our arts, to the various [trades] you will have available to you."
 		quest::summonitem(13519); #Scuffed Tunic*
 		quest::faction(76,100); # Deep Muses
