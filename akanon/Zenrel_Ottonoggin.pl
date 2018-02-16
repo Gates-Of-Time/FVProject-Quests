@@ -5,5 +5,5 @@ sub EVENT_SAY {
 }
 sub EVENT_ITEM {
     
-    plugin::return_items(%itemcount); # return unused items
+    plugin::return_items(\%itemcount); # return unused items
 }
