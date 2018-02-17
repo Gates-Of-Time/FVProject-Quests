@@ -24,6 +24,8 @@ sub EVENT_ITEM {
 	#:: Turn in for 18838 -  Daily Log Initiating the second of two possible quest lines
 	if (plugin::check_handin(\%itemcount, 18838 => 1)) {
 		quest::say("Oh my! It seems two of the obsolete duster models were not fully shut down. You must find them. They could be anywhere in Ak'Anon! After you destroy them, take their scraps to Sanfyrd Montop. He is the operator of the scrapyard.");
+		#:: Spawn Ak'Anon >> Duster_X (55334)
+		quest::spawn2(55334,0,0,-192.15,1488.87,-107.59,252.4);
 		#:: Give xp
 		quest::exp(2000);
 		#:: Ding!
