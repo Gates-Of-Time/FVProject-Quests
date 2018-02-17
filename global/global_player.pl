@@ -68,15 +68,15 @@
 #}
 
 sub EVENT_ZONE {
-	#:: Figure out if the player has a pet and blow it up when they zone
+	#:: Figure out if the player has a pet and blow it up when they leave a zone
 	if ($client->GetPetID()) {
 		$PetID = $entity_list->GetMobByID($client->GetPetID());
 		$PetID->Kill();
 	}	
 }
 
-sub EVENT_DISCONNNECT {
-	#:: Figure out if the player has a pet and blow it up when they camp
+sub EVENT_ENTERZONE {
+	#:: Figure out if the player has a pet and blow it up when they enter a zone
 	if ($client->GetPetID()) {
 		$PetID = $entity_list->GetMobByID($client->GetPetID());
 		$PetID->Kill();
