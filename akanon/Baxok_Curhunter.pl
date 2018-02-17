@@ -59,8 +59,8 @@ sub EVENT_ITEM {
 		quest::faction(71,-25); 	#:: - Dark Reflection
 		quest::faction(39,-5); 		#:: - Clan Grikbar
 	}
-	#:: Turn in for the Gearheart Quest, 18770 - Blackbox XIVD
-	if (plugin::check_handin(\%itemcount, 18770=> 1)) {
+	#:: Turn in for the Gearheart Quest, 13344 - Blackbox XIVD
+	if (plugin::check_handin(\%itemcount, 13344=> 1)) {
 		#:: Randomly choose some cloth armor or round shield
 		quest::summonitem(quest::ChooseRandom(9002,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1010,1011));
 		#:: Give a little xp
