@@ -67,10 +67,10 @@
 #    }
 #}
 
-#sub EVENT_ZONE {
+sub EVENT_ZONE {
 	#:: Figure out if the player has a pet and blow it up
-#	if ($client->GetPetID()) {
-#		$PetID = $entity_list->GetMobByID($client->GetPetID());
-#		$PetID->Kill();
-#	}	
-#}
+	if ($client->GetPetID()) {
+		$PetID = $entity_list->GetMobByID($client->GetPetID());
+		$PetID->Kill();
+	}	
+}
