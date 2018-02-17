@@ -1,24 +1,25 @@
 sub EVENT_SAY {
-		if ($text=~/Hail/i) {
+	if ($text=~/Hail/i) {
 		quest::say("Greetings, young one. I am Manik Compolten, High Watchman. Are you a [" . quest::saylink("new warrior") . "] or an [" . quest::saylink("experienced fighter") . "]?");
-		}
-		if ($text=~/new warrior/i) {
+	}
+	if ($text=~/new warrior/i) {
 		quest::say("It is always good to see new blood amongst the Gemchoppers. I have a small task for you. Take this keycard. I will give you only one at a time. Use each to obtain blackboxes for the C series clockworks. I am sure you are familiar with the clockworks. When you are done, bring them all to me. Let me know if you need another keycard.");
 		#:: Give a 13844 - Shiny Card
 		quest::summonitem(13844);
-		}
-		if ($text=~/keycard/i) {
+	}
+	if ($text=~/keycard/i) {
 		quest::say("It is always good to see new blood amongst the Gemchoppers. I have a small task for you. Take this keycard. I will give you only one at a time. Use each to obtain blackboxes for the C series clockworks. I am sure you are familiar with the clockworks. When you are done, bring them all to me. Let me know if you need another keycard.");
 		#:: Give a 13844 - Shiny Card
 		quest::summonitem(13844);
-		}
-		if ($text=~/experienced fighter/i) {
+	}
+	if ($text=~/experienced fighter/i) {
 		quest::say("Good. I require your talents to destroy rogue clockworks. After we sent the clockworks to destroy the Asylum of the Mad we found some of the clockworks went haywire and never returned. We must destroy them, not for the safety of the people, but to keep our technology from falling into the hands of any other nation. Go to the Steamfont Mountains and return their rogue blackboxes to me.");
-		}
-		if ($text=~/clockwork/i) {
+	}
+	if ($text=~/clockwork/i) {
 		quest::say("The clockworks were developed by the Eldritch Collective. They are used as our policing force in Ak'Anon. They come in many series. The letter following their number is the series model.");
-		}
+	}
 }
+
 sub EVENT_ITEM {
 	#:: Turn in for 13208 -  Rusted Blackbox
 	if (plugin::check_handin(\%itemcount, 13208 => 1)) {
