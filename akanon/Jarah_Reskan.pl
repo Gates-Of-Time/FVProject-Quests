@@ -14,7 +14,8 @@ sub EVENT_SAY {
 	if ($text=~/cargo clockwork/i) {
 		quest::say("The cargo clockwork is located near the entrance to Ak'Anon in the Steamfont Mountains. It runs a delivery to the windmills every five days at eight in the morning. There have been attacks by a group of highwaymen. They are quite a formidable group. I have offered a reward for their heads. Be very careful if you plan on escorting the cargo clockwork. This trio of bandits is very strong.");
 	}
-}	
+}
+
 sub EVENT_ITEM {
 	#:: Turn in for 85058 -  Highway Protectors Mask
 	if (plugin::check_handin(\%itemcount, 85056 => 1, 85055 => 1, 85057 =>1)) { #:: Hector's Severed Head, Renaldo's Severed Head, Jerald's Severed Head
