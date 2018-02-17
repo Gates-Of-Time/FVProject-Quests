@@ -1,18 +1,18 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::emote("Greetings, child. Welcome to Gemchopper Hall. I trust that you are a [" . quest::saylink("warrior") . "], or perhaps you are [" . quest::saylink("lost") . "]..?");
+		quest::say("Greetings, child. Welcome to Gemchopper Hall. I trust that you are a [" . quest::saylink("warrior") . "], or perhaps you are [" . quest::saylink("lost") . "]..?");
 	}
 	if ($text=~/lost/i) {
-		quest::emote("One can easily get lost in Ak'Anon. You must get your vision checked. If you are truly lost, I would advise speaking with a mechanical guide. There should be one close by on the main walkway.");
+		quest::say("One can easily get lost in Ak'Anon. You must get your vision checked. If you are truly lost, I would advise speaking with a mechanical guide. There should be one close by on the main walkway.");
 	}
 	if ($text=~/warrior/i) {
-		quest::emote("That is good news! We gnomes are not known for our love of battle so it is always good to bring new blood into our ranks. We shall prove our worth as warriors to all other races. For now. there is much to do in Ak'Anon. There are [" . quest::saylink("rogue clockworks") . "] and the [" . quest::saylink("cargo clockwork") . "].");
+		quest::say("That is good news! We gnomes are not known for our love of battle so it is always good to bring new blood into our ranks. We shall prove our worth as warriors to all other races. For now. there is much to do in Ak'Anon. There are [" . quest::saylink("rogue clockworks") . "] and the [" . quest::saylink("cargo clockwork") . "].");
 	}
 	if ($text=~/rogue clockworks/i) {
-		quest::emote("The clockworks are the responsibility of Manik Compolten. Speak with him - I am sure he is here somewhere.");
+		quest::say("The clockworks are the responsibility of Manik Compolten. Speak with him - I am sure he is here somewhere.");
 	}
 	if ($text=~/cargo clockwork/i) {
-		quest::emote("The cargo clockwork is located near the entrance to Ak'Anon in the Steamfont Mountains. It runs a delivery to the windmills every five days at eight in the morning. There have been attacks by a group of highwaymen. They are quite a formidable group. I have offered a reward for their heads. Be very careful if you plan on escorting the cargo clockwork. This trio of bandits is very strong.");
+		quest::say("The cargo clockwork is located near the entrance to Ak'Anon in the Steamfont Mountains. It runs a delivery to the windmills every five days at eight in the morning. There have been attacks by a group of highwaymen. They are quite a formidable group. I have offered a reward for their heads. Be very careful if you plan on escorting the cargo clockwork. This trio of bandits is very strong.");
 	}
 }	
 sub EVENT_ITEM {
