@@ -84,6 +84,6 @@ sub EVENT_ENTERZONE {
 	#:: Set common tongue to 1 for any new player
 	if (!defined $qglobals{newbiecommon}) {
 		quest::setlanguage(0, 1);
-		quest::setglobal("newbiecommon",1,6,"F");
+		quest::setglobal("newbiecommon",1,5,"F");
 	}
 }
