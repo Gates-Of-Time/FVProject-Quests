@@ -25,7 +25,7 @@ sub EVENT_ITEM {
 		#:: Give a small amount of xp
 		quest::exp(6000);
 		#:: Give small amount of cash
-		quest::givecash(0,2,1,6);	#:: Give a small amount of cash
+		quest::givecash(3,2,3,0);	#:: Give a small amount of cash
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
