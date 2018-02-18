@@ -33,7 +33,7 @@ sub EVENT_ITEM {
 		quest::faction(176,3); 		#:: + King Ak'Anon
 		quest::faction(71,-3); 		#:: - Dark Reflection
 		quest::faction(39,-3); 		#:: - Clan Grikbar
-		quest::givecash(1,1,5,4);	#:: Give a small amount of cash
+		quest::givecash(4,5,1,1);	#:: Give a small amount of cash
 	}
 	#:: Turn in for the Aid Fimli Quest (POP) Bundle of Super Conductive Wires, Gold Tipped Boar Horn, Shard of Pure Energy, Silicorrosive Grease
 	#if (plugin::check_handin(\%itemcount, 9426 => 1, 28618 => 1, 29906 =>1, 28165 +>1)) {
