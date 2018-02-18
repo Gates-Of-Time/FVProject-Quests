@@ -77,7 +77,7 @@ sub EVENT_ZONE {
 
 sub EVENT_ENTERZONE {
 	#:: Set common tongue to 1 for any new player that is not human
-	if ($race != 1) {
+	if ($race ne "Human") {
 		quest::ding();
 	}
 	#:: Figure out if the player has a pet and blow it up when they enter a zone
