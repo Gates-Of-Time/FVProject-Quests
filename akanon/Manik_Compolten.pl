@@ -21,8 +21,8 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Turn in for 13215 -  Rusted Blackbox
-	if (plugin::check_handin(\%itemcount, 13215=> 1)) {
+	#:: Turn in for 13208 -  Rusted Blackbox
+	if (plugin::check_handin(\%itemcount, 13208=> 1)) {
 		quest::say("Ah! Excellent work! I think we may have further use for you if you like.");
 		#:: Give a small amount of xp
 		quest::exp(1000);
@@ -52,8 +52,8 @@ sub EVENT_ITEM {
 		quest::faction(71,-1); 		#:: - Dark Reflection
 		quest::faction(39,-1); 		#:: - Clan Grikbar
 	}
-	#:: Turn in for 13208 -  Red V Clockwork
-	if (plugin::check_handin(\%itemcount, 13208 => 1)) {
+	#:: Turn in for 13215 -  Rusted Black Box - Red V Clockwork
+	if (plugin::check_handin(\%itemcount, 13215 => 1)) {
 		quest::say("This is fabulous news!! You have done well, young one.");
 		#:: Randomly choose one of the following: Bull Smasher, Iony's Absorber, or various pieces of small cloth armor
 		quest::summonitem(quest::ChooseRandom(13219, 13219, 13220, 13220, 1013, 1018, 1015, 1019, 1022, 1023, 1024, 1017, 1016, 1020, 1014, 1021));
