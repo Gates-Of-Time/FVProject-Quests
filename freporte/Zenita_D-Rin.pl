@@ -31,16 +31,12 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(22293,22294,22295,22296,22297,22298,22299));
 	}
 	#:: Turn in for Any Card aside from King or Joker 
-	if ((plugin::check_handin(\%itemcount, 22299 => 1)) ||
-		(plugin::check_handin(\%itemcount, 22297 => 1)) ||
-		(plugin::check_handin(\%itemcount, 22296 => 1)) ||
-		(plugin::check_handin(\%itemcount, 22294 => 1)) ||
-		(plugin::check_handin(\%itemcount, 22293 => 1))) {
-		quest::say("Bad luck must be one of your strong suits. You should have been a beggar because you sure aren't a very good %s. You lose! $name");
+	if ((plugin::check_handin(\%itemcount, 22299 => 1)) || (plugin::check_handin(\%itemcount, 22297 => 1)) || (plugin::check_handin(\%itemcount, 22296 => 1)) || (plugin::check_handin(\%itemcount, 22294 => 1)) || (plugin::check_handin(\%itemcount, 22293 => 1))) {
+		quest::say("Bad luck must be one of your strong suits. You should have been a beggar because you sure aren't a very good $class. You lose! $name");
 	}
 	#:: Turn in for 22295 -  Joker Card
 	if (plugin::check_handin(\%itemcount, 22295 => 1)) {
-		quest::say("I see you have drawn the card that best represents a %s such as yourself. You lose! $name");
+		quest::say("I see you have drawn the card that best represents a $class such as yourself. You lose! $name");
 	}
 	plugin::return_items(\%itemcount);
 }
