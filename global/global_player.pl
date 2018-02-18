@@ -81,11 +81,13 @@ sub EVENT_ENTERZONE {
 		$PetID = $entity_list->GetMobByID($client->GetPetID());
 		$PetID->Kill();
 	}
-	#:: Create a scaler for player race
+	#:: Create a scalar for player race
 	my $p_race = $client->GetBaseRace();
 	#:: Set common tongue to 1 for any new player that is not human
-	if ($p_race > 1) {	
-		if (!defined $qglobals{newbiecommon}) {
+	if (!defined $qglobals{newbiecommon}) {
+		if ($p_race == 1) {
+			quest::setglobal("newbiecommon"1,5,"F");
+		} else {
 			quest::setlanguage(0, 1);
 			quest::setglobal("newbiecommon",1,5,"F");
 		}
