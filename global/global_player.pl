@@ -76,15 +76,11 @@ sub EVENT_ZONE {
 }
 
 sub EVENT_ENTERZONE {
-	#:: Create a scalar for player race
-	my $RealRace = $client->GetBaseRace();
 	#:: Set common tongue to 1 for any new player that is not human
-	if (!defined $qglobals{newbiecommon}) {
-		if ($RealRace == 1) {
-			quest::setglobal("newbiecommon"1,5,"F");
-		} else {
-			quest::setlanguage(0, 1);
-			quest::setglobal("newbiecommon",1,5,"F");
+	if ($race ne "Human") {
+		if (!defined $qglobals{"newbiecommon"}) {
+			$client->SetLanguageSkill(0, 1);
+			quest::setglobal("newbiecommon", 1, 5, "F");
 		}
 	}
 	#:: Figure out if the player has a pet and blow it up when they enter a zone
