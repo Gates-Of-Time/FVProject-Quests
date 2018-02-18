@@ -2,12 +2,13 @@
 # Created by Gonner
 
 sub EVENT_SAY {
-  if($text=~/hail/i) {
-    quest::say("I had a wrench around here somewhere.")  
-  }
+	if($text=~/hail/i) {
+		quest::say("I had a wrench around here somewhere.");
+	}
 }
+
+sub EVENT_ITEM {
 # GoD content
-#sub EVENT_ITEM {
 #  if (plugin::check_handin(\%itemcount, 55557 => 1,55561 => 1)) { # Note to Gilipus and Worker's Badge - number 2
 #    quest::say("Yes, what is it? Just a moment, I cannot read without my glasses.");
 #    quest::emote("rummages through his numerous pockets looking for his reading glasses. 'Oh this is most embarrassing. Seems I have lost my reading glasses. Oh wait, I know where they are. They are on this bench here.' Just as Gilipus reaches for his glasses, a small mechanical rat snatches them and hurriedly scuttles away. 'Oh drat. This isn't good at all. That defective cleaner just took my reading glasses! Think you could go get them? What defective cleaner you ask? I don't know for certain. I couldn't make out the serial number. If you can find my glasses, I will read this note you brought me.");
@@ -25,7 +26,7 @@ sub EVENT_SAY {
 #    quest::summonitem(55564); # Worker's badge - number five
 #    quest::summonitem(55556); # Vial of Anti-Rusting Agent
 #  }
-  plugin::return_items(\%itemcount);
+	plugin::return_items(\%itemcount);
 }
 # END of FILE Zone:Ak'Anon ID:55159 -- Gilipus.pl
 # edited by SS
