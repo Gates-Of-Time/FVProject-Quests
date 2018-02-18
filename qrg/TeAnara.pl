@@ -1,17 +1,18 @@
 sub EVENT_SPAWN {
-  #:: Set up a 50 unit distance
-  $x = $npc->GetX();
-  $y = $npc->GetY();
-  quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Set up a 50 unit distance
+	$x = $npc->GetX();
+	$y = $npc->GetY();
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
 }
 
 sub EVENT_ENTER {
-  #:: Check for 18713 - Tattered Note (Qeynos Druid Guild Summons)
-  if(plugin::check_hasitem($client, 18713)) { 
+	#:: Check for 18713 - Tattered Note (Qeynos Druid Guild Summons)
+	if (plugin::check_hasitem($client, 18713)) { 
 		$client->Message(15,"As you orient yourself amongst the peacefulness of the Surefall Glade, a melodic, peaceful voice seems to float on the wind. 'I am Te'Anara, Master of the Woods. Read the note in your inventory and when you wish to begin your training, hand it to me. We must preserve the heart of the Jaggedpine lest all of Norrath will perish!'");
-  }
-}  
-sub EVENT_SAY {	
+	}
+}
+
+sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Welcome, friend! I hope your stay in Surefall Glade will ease your mind and soothe your soul. While you are here, we ask you to abide by the [" . quest::saylink("laws of the Jaggedpine") . "].");
 	}
@@ -28,6 +29,7 @@ sub EVENT_SAY {
 		quest::say("Go to the gnome city of Ak'Anon on the continent of Faydwer. With their great zoo, you will find a gnome named Kimble Nogflop. Give him this flask of nitrates and he shall hand you a special potion which will force Mammoth to cough up whatever may be stuck inside his throat. Be sure to show me what you find inside his throat upon your return.");
 	}
 }
+
 sub EVENT_ITEM {
 	#:: Turn in for 18713 -   Tattered Note (Qeynos Druid Guild Summons)
 	if (plugin::check_handin(\%itemcount, 18713 => 1)) {
@@ -45,7 +47,7 @@ sub EVENT_ITEM {
 		quest::faction(347,-25); 	#:: - Unkempt Druids
 		quest::faction(135,15); 	#:: + Guards of Qeynos
 	}
-	#:: Turn in for 18809-   Bayle List II
+	#:: Turn in for 18809 - Bayle List II
 	if (plugin::check_handin(\%itemcount, 18809 => 1)) {
 		quest::say("Oh my, this must belong to Antonius Bayle! I shall see that he receives it. You have done a great service to Qeynos and Surefall Glade. I reward you with this. May it be of good use in your future deeds.");
 		#:: Give item 15222 - Spell: Invigor
@@ -61,7 +63,7 @@ sub EVENT_ITEM {
 		quest::faction(347,-15); 	#:: - Unkempt Druids
 		quest::faction(135,10); 	#:: + Guards of Qeynos
 	}
-		#:: Turn in for 18807-   Sealed Letter (Note to Jaggedpine)
+	#:: Turn in for 18807 - Sealed Letter (Note to Jaggedpine)
 	if (plugin::check_handin(\%itemcount, 18807 => 1)) {
 		quest::say("Aye! This is good news. We shall try to supply Qeynos with a limited number of acres to begin their lumberyard. Here, my good messenger. A token to share in the good news.");
 		#:: Give a small amount of xp
@@ -74,7 +76,9 @@ sub EVENT_ITEM {
 		quest::faction(267,10); 	#:: + QRG Protected Animals
 		quest::faction(347,-15); 	#:: - Unkempt Druids
 		quest::faction(135,10); 	#:: + Guards of Qeynos
-		quest::givecash(0,2,8,0);	#:: Give a small amount of cash copper - plat
+		#:: Give a small amount of cash copper - plat
+		quest::givecash(0,2,8,0);
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
