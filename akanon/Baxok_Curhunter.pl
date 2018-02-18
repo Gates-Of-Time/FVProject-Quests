@@ -72,8 +72,7 @@ sub EVENT_ITEM {
 		quest::faction(210,25); 	#:: + Merchants of Ak'Anon
 		quest::faction(176,25); 	#:: + King Ak'Anon
 		quest::faction(71,-25); 	#:: - Dark Reflection
-		quest::faction(39,-5); 		#:: - Clan Grikbar
-		quest::faction(39,-10); 	#:: -Clan Grikbar
+		quest::faction(39,-10); 	#:: - Clan Grikbar
 	}
 	plugin::return_items(\%itemcount);
 }
