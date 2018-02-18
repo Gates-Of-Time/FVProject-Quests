@@ -77,7 +77,7 @@ sub EVENT_ZONE {
 
 sub EVENT_ENTERZONE {
 	#:: Set common tongue to 1 for any new player that is not human
-	if ($race ne "Human") {
+	if ($race != 1) {
 		#if (!defined $qglobals{"newbiecommon"}) {
 		#	$client->SetLanguageSkill(0, 1);
 		#	quest::setglobal("newbiecommon", 1, 5, "F");
