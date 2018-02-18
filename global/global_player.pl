@@ -81,9 +81,12 @@ sub EVENT_ENTERZONE {
 		$PetID = $entity_list->GetMobByID($client->GetPetID());
 		$PetID->Kill();
 	}
-	#:: Set common tongue to 1 for any new player
-	if (!defined $qglobals{newbiecommon}) {
+	#:: Set common tongue to 1 for any new player that is not human
+	if (!defined $qglobals{newbiecommon} && $race > 1) {
 		quest::setlanguage(0, 1);
+		quest::setglobal("newbiecommon",1,5,"F");
+	} 
+	elsif (!defined $qglobals{newbiecommon} && $race == 1) {
 		quest::setglobal("newbiecommon",1,5,"F");
 	}
 }
