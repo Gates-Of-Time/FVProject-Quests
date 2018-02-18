@@ -1,15 +1,15 @@
 sub EVENT_SPAWN {
-  #:: Set up a 50 unit distance
-  $x = $npc->GetX();
-  $y = $npc->GetY();
-  quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Set up a 50 unit distance
+	$x = $npc->GetX();
+	$y = $npc->GetY();
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
 }
 
 sub EVENT_ENTER {
-  #:: Check for 18770 - Recruitment Summons
-  if (plugin::check_hasitem($client, 18770)) { 
+	#:: Check for 18770 - Recruitment Summons
+	if (plugin::check_hasitem($client, 18770)) { 
 		$client->Message(15,"Baxok Curhunter, a jittery older looking gnome appears to be startled. 'Well hello there. You scared me! You young ones always popping up here and there. You would think there is a hidden tunnel somewhere around here the way you just popped up near me. Well no matter. If you are here to train with the warriors of Gemchopper Hall, read the note in your inventory and hand it to me to begin your training.'");
-  }
+	}
 }  
 
 sub EVENT_SAY {
@@ -72,8 +72,7 @@ sub EVENT_ITEM {
 		quest::faction(210,25); 	#:: + Merchants of Ak'Anon
 		quest::faction(176,25); 	#:: + King Ak'Anon
 		quest::faction(71,-25); 	#:: - Dark Reflection
-		quest::faction(39,-5); 		#:: - Clan Grikbar
-		quest::faction(39,-10); 	#:: -Clan Grikbar
+		quest::faction(39,-10); 	#:: - Clan Grikbar
 	}
 	plugin::return_items(\%itemcount);
 }
