@@ -21,8 +21,8 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Turn in for 13208 -  Rusted Blackbox
-	if (plugin::check_handin(\%itemcount, 13208 => 1)) {
+	#:: Turn in for 13215 -  Rusted Blackbox
+	if (plugin::check_handin(\%itemcount, 13215=> 1)) {
 		quest::say("Ah! Excellent work! I think we may have further use for you if you like.");
 		#:: Give a small amount of xp
 		quest::exp(1000);
