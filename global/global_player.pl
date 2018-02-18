@@ -82,7 +82,7 @@ sub EVENT_ENTERZONE {
 		$PetID->Kill();
 	}
 	#:: Set common tongue to 1 for any new player that is not human
-	if ($client->GetBaseRace() ne "HUMAN") {	
+	if ($client->GetBaseRace() != 1) {	
 		if (!defined $qglobals{newbiecommon}) {
 			quest::setlanguage(0, 1);
 			quest::setglobal("newbiecommon",1,5,"F");
