@@ -20,14 +20,16 @@ sub EVENT_ENTER {
 sub EVENT_SAY { 
 	if ($text=~/hail/i) {
 		quest::say("Welcome to the Church of Underfoot. Please open your soul to the greatness of Brell Serilis. May he guide you in all your future endeavors. And may your soules long for the [" . quest::saylink("soil of underfoot") . "].");
-	} elsif ($text=~/soil of underfoot/i) {
+	} 
+	elsif ($text=~/soil of underfoot/i) {
 		#:: Check faction--must be amiable or better to get quest.
 		if ($faction >=5 ) {
 			quest::say("The Clerics of Underfoot have yet to see your faith directed towards our wills. Perhaps you should assist Master Gunlok Jure in the crusade against the undead.");
 		} else {
 			quest::say("I can trust you with the soil of Underfoot, but first you must obtain four portions of fairy dust. Return them to me and I shall mix it and pray over it. Then I shall give you a pouch of soil of Underfoot.");
 		}
-	} elsif ($text=~/candle of bravery/i) {
+	} 
+	elsif ($text=~/candle of bravery/i) {
 		quest::say("The Candle of Bravery is used for temple ceremonies here in Kaladim. When the candle burns out, I must venture to the frigid village of Halas far to the north of the continent of Antonica. There I will take the candlestick and the [" . quest::saylink("soil of underfoot") . "] to Dok. He must create the candle in the very ornate candlestick.");
 	}
 	elsif ($text=~/trades/i) {
