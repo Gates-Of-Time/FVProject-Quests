@@ -32,7 +32,7 @@ sub EVENT_ITEM {
 	#:: Tinmizer's Stupendous Contraption
 	if (plugin::check_handin(\%itemcount, 17033 => 1)) {
 		#:: Give item 13520 - Lapis Lazuli
-		quest::summonitem(10016);
+		quest::summonitem(13520);
 		#:: Give a small amount of xp
 		quest::exp(100);
 		#:: Ding!
