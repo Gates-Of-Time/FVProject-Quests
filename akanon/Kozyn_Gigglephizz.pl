@@ -29,6 +29,14 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: There is no item "Tinmizer's Fabulous Compactor"
+	#:: Tinmizer's Stupendous Contraption
+	if (plugin::check_handin(\%itemcount, 17033 => 1)) {
+		#:: Give item 13520 - Lapis Lazuli
+		quest::summonitem(10016);
+		#:: Give a small amount of xp
+		quest::exp(100);
+		#:: Ding!
+		quest::ding();
+	}
 	plugin::return_items(\%itemcount);
 }
