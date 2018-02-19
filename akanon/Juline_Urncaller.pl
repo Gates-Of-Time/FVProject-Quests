@@ -28,7 +28,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Check for 18773 - Registration Letter
 	if (plugin::check_handin(\%itemcount, 18773 => 1)) {
-		quest::Say("Welcome! I am Juline Urncaller, I will help to guide you on your path to becoming a powerful enchanter. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of teh various [" . quest::saylink("trades") . "] you will have available to you.");
+		quest::say("Welcome! I am Juline Urncaller, I will help to guide you on your path to becoming a powerful enchanter. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of teh various [" . quest::saylink("trades") . "] you will have available to you.");
 		#:: Reward 13522 - Dirty Gold Felt Robe*
 		quest::summonitem(13522);
 		#:: Set factions
