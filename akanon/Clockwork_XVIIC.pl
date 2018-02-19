@@ -3,7 +3,7 @@
 
 sub EVENT_ITEM {
 	#:: Turn in for 13844 - Shiny Card for Series C Black Boxes Quest
-	if (plugin::check_handin(\%itemcount, 18770 => 1)) {
+	if (plugin::check_handin(\%itemcount, 13844 => 1)) {
 		quest::say("Tick.. Pop.. Access granted.");
 		#:: Give item 13212 - Blackbox XVIIC
 		quest::summonitem(13213);
