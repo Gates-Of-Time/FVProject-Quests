@@ -27,6 +27,8 @@ sub EVENT_SAY {
 	}
 	if ($text=~/fetch a special potion/i) {
 		quest::say("Go to the gnome city of Ak'Anon on the continent of Faydwer. With their great zoo, you will find a gnome named Kimble Nogflop. Give him this flask of nitrates and he shall hand you a special potion which will force Mammoth to cough up whatever may be stuck inside his throat. Be sure to show me what you find inside his throat upon your return.");
+		#:: Give item 13945 - Flask of Nitrates
+		quest::summonitem(13945);
 	}
 }
 
