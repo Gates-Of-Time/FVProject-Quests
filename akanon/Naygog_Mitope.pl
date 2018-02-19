@@ -28,7 +28,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	# Check for 18759 - Stained Parchment
 	if (plugin::check_handin(\%itemcount, 18759 => 1)) { 
-		quest::Say("This is fabulous news!! You have done well, young one. When you have become more experienced in our art, I will be able to further train you, both in our art as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
+		quest::say("This is fabulous news!! You have done well, young one. When you have become more experienced in our art, I will be able to further train you, both in our art as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
 		#:: Give item 13518 - Tin Patched Tunic*
 		quest::summonitem(13518);
 		#:: Set faction reward
