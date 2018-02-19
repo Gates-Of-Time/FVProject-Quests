@@ -28,7 +28,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match for 18434 - Gnome Shadowknight Note
 	if (plugin::check_handin(\%itemcount, 18434 => 1)) {
-		quest::Say("Welcome to the Dark Reflection, $name! Take this tunic as a gift for your desire to serve the will of Bertoxxulous, The Plague Lord. Beware of the followers of Brell Serilis, they would see us members of the Dark Reflection exiled from Ak'Anon.  Return to me when you have become more experienced in our art, I will be able to further train you, both in our art as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
+		quest::say("Welcome to the Dark Reflection, $name! Take this tunic as a gift for your desire to serve the will of Bertoxxulous, The Plague Lord. Beware of the followers of Brell Serilis, they would see us members of the Dark Reflection exiled from Ak'Anon.  Return to me when you have become more experienced in our art, I will be able to further train you, both in our art as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
 		#:: Reward with 13518 - Tin Patched Tunic*
 		quest::summonitem(13518);
 		#:: Set factions
