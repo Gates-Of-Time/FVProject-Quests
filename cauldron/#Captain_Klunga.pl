@@ -6,8 +6,8 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_ITEM {
-
-	if (plugin::check_handin(\%itemcount, 12278 => 1)) { # Abandoned Orc Shovel
+	#:: Match for 12278 - Abandoned Orc Shovel
+	if (plugin::check_handin(\%itemcount, 12278 => 1)) {
 		$npc->SetAppearance(0);
 		quest::moveto(-395.87, 807.04, 70.53, 0, 1);
 	}
@@ -15,8 +15,8 @@ sub EVENT_ITEM {
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
-
-	quest::creategroundobject(12274, $x, $y, $z, $h); # Chalice of Conquest
+	#:: Ground spawn a 122274 - Chalice of Conquest
+	quest::creategroundobject(12274, $x, $y, $z, $h);
 }
 
 # EOF Zone: Dagnor's Cauldron (cauldron) >> #Captain Klunga (70072)
