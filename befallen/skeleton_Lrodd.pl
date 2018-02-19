@@ -7,5 +7,6 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
