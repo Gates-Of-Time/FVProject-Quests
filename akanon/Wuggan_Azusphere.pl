@@ -27,7 +27,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	if (plugin::check_handin(\%itemcount, 18772 => 1)) { #Recruitment Summons
-		quest::Say("Welcome to Library Mechanimagica. I am Master Magician Wuggan Azusphere. and I will help to teach you the ways of summoning. Here is our guild tunic, make us proud. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
+		quest::say("Welcome to Library Mechanimagica. I am Master Magician Wuggan Azusphere. and I will help to teach you the ways of summoning. Here is our guild tunic, make us proud. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
 		#:: Give a 13521 - Dusty Gold Robe*
 		quest::summonitem(13521);
 		#:: Set faction
