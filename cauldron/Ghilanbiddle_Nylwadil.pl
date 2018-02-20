@@ -4,13 +4,9 @@ sub EVENT_SAY {
 
 	if ($faction < 7) {
 		if ($text=~/hail/i) {
-			if ($random_result <= 50) {
-				quest::say("Hail!! You are welcome to rest here.");
-				#:: Send a signal to Elmion Hendrys after 5 second pause
-				quest::signal(70005,5);
-			} else {
-				quest::say("What business do you have here?!! Trying to keep safe? Expecting us to fight your battles? Bah!!");
-			}
+			quest::say("What business do you have here?!! Trying to keep safe? Expecting us to fight your battles? Bah!!");
+			#:: Send a signal to Elmion Hendrys after 5 second pause
+			quest::signal(70005,5);
 		}
 		if ($text=~/chalice of conquest/i) { 
 			quest::say("Looking for the chalice, are you? Ha!! I don't know where it is, but I know a [" . quest::saylink("lost soul") . "] who does and he could lead you right to it. He had a taste of it and now he can't get enough. He is sort of under the weather, or do I mean under the ground? Ha!!");
