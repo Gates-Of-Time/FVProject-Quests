@@ -7,7 +7,7 @@ sub EVENT_PLAYER_PICKUP {
 			#:: Make sure there are players in zone
 			if ($entity_list->GetClientList()) {
 				#:: Randomly select some unlucky player within 100 units
-				my $rClient = $entity_list->GetRandomClient($x,$y,$z, 100);
+				$rClient = $entity_list->GetRandomClient($x,$y,$z, 100);
 				if ($rClient) {
 					#:: Get him!
         				quest::attack($rClient->GetName());
