@@ -19,4 +19,9 @@ sub EVENT_WAYPOINT_ARRIVE {
 	quest::creategroundobject(12274, $x, $y, $z, $h);
 }
 
+sub EVENT_SIGNAL {
+
+	quest::ze(1,"I got your signal!");
+}
+
 # EOF Zone: Dagnor's Cauldron (cauldron) >> #Captain Klunga (70072)
