@@ -42,6 +42,8 @@ sub EVENT_ITEM {
 		quest::faction(351,1); 		# Veeshan
 		quest::ding();
 		quest::exp(750);
+		#:: Give item 5376 -Holy Partison of Underfoot
+		quest::summonitem(5376);
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
