@@ -2,7 +2,7 @@ my $random = int(rand(100));
 
 sub EVENT_SAY {
 
-	if ($faction > 7) {
+	if ($faction < 7) {
 		if ($text=~/hail/i) {
 			if ($random_result <= 50) {
 				quest::say("Hail!! You are welcome to rest here.");
