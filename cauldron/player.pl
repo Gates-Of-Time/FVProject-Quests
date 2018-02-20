@@ -6,8 +6,8 @@ sub EVENT_PLAYER_PICKUP {
 		if ($entity_list->IsMobSpawnedByNpcTypeID(70072)) {
 			#:: Make sure there are players in zone
 			if ($entity_list->GetClientList()) {
-				#:: Randomly select some unlucky player within 100 units
-				$rClient = $entity_list->GetRandomClient($x,$y,$z, 100);
+				#:: Randomly select some unlucky player within 200 units
+				my $rClient = $entity_list->GetRandomClient($x,$y,$z, 200);
 				if ($rClient) {
 					#:: Get him!
         				quest::attack($rClient->GetName());
