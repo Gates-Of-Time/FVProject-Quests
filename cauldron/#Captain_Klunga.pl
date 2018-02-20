@@ -20,8 +20,14 @@ sub EVENT_WAYPOINT_ARRIVE {
 }
 
 sub EVENT_SIGNAL {
-
-	quest::ze(1,"I got your signal!");
+	if ($entity_list->GetClientList()) {
+		my $rClient = $entity_list->GetRandomClient($x,$y,$z, 200);
+		if ($rClient) {
+			quest::attack($rClient->GetName());
+		}
+		else {
+			quest::depop();
+		}
+	}
 }
-
 # EOF Zone: Dagnor's Cauldron (cauldron) >> #Captain Klunga (70072)
