@@ -10,17 +10,6 @@ sub EVENT_ENTER {
 	}
 }
 
-#sub EVENT_SAY { # LDoN content
-#	if ($client->GetGlobal("paladin_epic") ==9) {
-#		if ($text=~/prayer bead/i) {
-#		  quest::say("You're trying to tell me that those beads in your hand are supposed to help cure someone?");
-#		}
-#		elsif ($text=~/yes/i) {
-#		  quest::say("Well who am I to argue with you. I'm just a holy knight of Brell! Lad, I'm feeling a little parched. Help an old knight out and run along down to a pub and get me a bottle of that double brewed double dry stout.");
-#		}
-#	}
-#}
-
 sub EVENT_ITEM {
 	#:: Match a 18768 - Folded Parchment
 	if (plugin::check_handin(\%itemcount, 18768 => 1)) {
@@ -33,25 +22,24 @@ sub EVENT_ITEM {
 		quest::faction(219,75); 	# Miners Guild 249
 	}
 	#:: Match a 12279 - Chalice Case
-	if (plugin::check_handin(\%itemcount, 12279 => 1)) { # Chalice Case
-	if ($client->GetRace() == 8 && $class eq "Paladin") { 
-		quest::say("The chalice is returned!! Praise be to Brell!! You have proven yourself to our church and have earned our respect. Let me welcome you into our brotherhood with the Cape of Underfoot. Wear it with pride as all of our finest paladins do.");
-		quest::faction(44, 25);		# Clerics of Underfoot
-		quest::faction(169, 25);	# Kazon Stormhammer
-		quest::faction(219, 25);	# Miners Guild 249
-		quest::exp(250);
-		quest::givecash(0, 0, 0, 3);
-		quest::summonitem(12281); # Cape of Underfoot
+	if (plugin::check_handin(\%itemcount, 12279 => 1)) {
+		if ($race eq "Dwarf" && $class eq "Paladin") {
+			quest::say("The chalice is returned!! Praise be to Brell!! You have proven yourself to our church and have earned our respect. Let me welcome you into our brotherhood with the Cape of Underfoot. Wear it with pride as all of our finest paladins do.");
+			#:: Give a 12281 - Cape of Underfoot
+			quest::summonitem(12281);
+			#:: Set Factions
+			quest::faction(44, 25);		# Clerics of Underfoot
+			quest::faction(169, 25);	# Kazon Stormhammer
+			quest::faction(219, 25);	# Miners Guild 249
+			quest::exp(250);
+			quest::givecash(0, 0, 0, 3);
+		} else {
+			quest::say("$name, you are no Dwarf! Leave this place at once!");
+		}
 	}
-# LDON content
-#   if ($client->GetGlobal("paladin_epic")==9 && plugin::check_handin(\%itemcount, 51157 => 1)) { # Bottle of Double Brewed Double Dry Stout
-#	  quest::summonitem(69963); # Kaladim Prayer Bead
-#	  quest::say("Now that is a tasty beverage!! It sure is strong too for this tiny dwarf! I guess I should give you some kind of thanks. Take this jewel that I found and see if it will help your friend Kemik. I wish I had the second jewel that was with it. You will find that one with a young but brave froglok.");
-#   }
-#   do all other handins first with plugin, then let it do disciplines
-#   plugin::try_tome_handins(\%itemcount, $class, 'Paladin');
 	#:: Return Unused Items
 	plugin::return_items(\%itemcount);
 }
+
 # edited by SS Removed LDON Content
 #END of FILE Zone:kaladimb  ID:67029 -- Datur_Nightseer
