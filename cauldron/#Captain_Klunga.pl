@@ -8,7 +8,7 @@ sub EVENT_SPAWN {
 sub EVENT_ITEM {
 	#:: Match for 12278 - Abandoned Orc Shovel
 	if (plugin::check_handin(\%itemcount, 12278 => 1)) {
-		$npc->SetAppearance(0);
+#		$npc->SetAppearance(0);
 		quest::moveto(-395.87, 807.04, 70.53, 0, 1);
 	}
 	plugin::return_items(\%itemcount);
