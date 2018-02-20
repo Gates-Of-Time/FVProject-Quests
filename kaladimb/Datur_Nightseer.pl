@@ -33,16 +33,15 @@ sub EVENT_ITEM {
 		quest::faction(219,75); 	# Miners Guild 249
 	}
 	#:: Match a 12279 - Chalice Case
-	if (($faction <= 4) && (plugin::check_handin(\%itemcount, 12279 => 1))) {
+	if (plugin::check_handin(\%itemcount, 12279 => 1)) { # Chalice Case
+	if ($client->GetRace() == 8 && $class eq "Paladin") { 
 		quest::say("The chalice is returned!! Praise be to Brell!! You have proven yourself to our church and have earned our respect. Let me welcome you into our brotherhood with the Cape of Underfoot. Wear it with pride as all of our finest paladins do.");
-		#:: Give a 12281 - Cape of Underfoot
-		quest::summonitem(12281); # Cape of Underfoot
-		#:: Set Factions
-		quest::faction(44, 25); 	# Clerics of Underfoot
-		quest::faction(169, 25); 	# Kazon Stormhammer
-		quest::faction(219, 25); 	# Miners Guild 249
+		quest::faction(44, 25);		# Clerics of Underfoot
+		quest::faction(169, 25);	# Kazon Stormhammer
+		quest::faction(219, 25);	# Miners Guild 249
 		quest::exp(250);
 		quest::givecash(0, 0, 0, 3);
+		quest::summonitem(12281); # Cape of Underfoot
 	}
 # LDON content
 #   if ($client->GetGlobal("paladin_epic")==9 && plugin::check_handin(\%itemcount, 51157 => 1)) { # Bottle of Double Brewed Double Dry Stout
