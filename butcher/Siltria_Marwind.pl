@@ -1,5 +1,5 @@
-sub EVENT_SAY {	
-#:: Going Postal Butcherblock to Kelethin Quest
+sub EVENT_SAY {
+	#:: Going Postal Butcherblock to Kelethin Quest
 	if ($text=~/hail/i) {
 		quest::say("Hail. $name - Are you [" . quest::saylink("interested") . "] in helping the League of Antonican Bards by delivering some [" . quest::saylink("mail") . "]?");
 	}
