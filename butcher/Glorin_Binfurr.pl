@@ -1,5 +1,6 @@
-sub EVENT_SAY {	
 #:: The Mudtoes Quest NPC
+
+sub EVENT_SAY {	
 	if ($text=~/hail/i) {
 		quest::say("Pleasure to meet you.  Keep your eye out for the ship.  You don't want to miss it.");
 	}
