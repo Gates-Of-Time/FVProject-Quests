@@ -3,12 +3,15 @@ sub EVENT_SAY {
 	if ($text=~/ringmail/i) {
 		quest::say("The king was the last person I heard of who was wearing what sounded like my ringmail. Return it to me and I will reward you with a fine weapon I forged myself.");
 	}
+	if ($text=~/Interested/i) {
+		quest::say("Okay, then! The first item you can get back for me is my brass shield. Up on that hill, over where the trainees practice, there is usually an instructor. Last time I saw my shield, it was in the hands of one of those blasted lackeys. Bring it back to me!");
+	}
 }
 
 sub EVENT_ITEM {
 	#:: Turn in for 10351 -  Brass Earring
 	if (plugin::check_handin(\%itemcount, 10351 => 1)) {
-		quest::say("Outstanding! If you can kill the taskmaster, you might prove useful in recovering the items the orcs took from me when they caught me out in the Faydarks. Interested in helping me out?");
+		quest::say("Outstanding! If you can kill the taskmaster, you might prove useful in recovering the items the orcs took from me when they caught me out in the Faydarks. [" . quest::saylink("Interested") . "] in helping me out?");
 		#:: Give item 13850 - Unfinished Blade Mold
 		quest::summonitem(13850);
 		#:: Give a small amount of xp
