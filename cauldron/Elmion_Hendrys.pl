@@ -17,8 +17,6 @@ sub EVENT_SAY {
 sub EVENT_SIGNAL {
 	#:: Signal sent from Ghilanbiddle_Nylwadil.pl
 	quest::say("Pipe down, Ghil!! We have no quarrel with this adventurer.");
-	#:: Send a signal to 70005 - Elmion Hendrys
-	quest::signal(70005,5);
 }
 
 sub EVENT_ITEM {
