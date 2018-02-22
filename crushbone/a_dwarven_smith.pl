@@ -1,8 +1,10 @@
 #:: Screaming Mace Quest
+sub EVENT_SAY {
 	if ($text=~/ringmail/i) {
 		quest::say("The king was the last person I heard of who was wearing what sounded like my ringmail. Return it to me and I will reward you with a fine weapon I forged myself.");
+	}
 }
-#:: Screaming Mace Quest Turn Ins
+
 sub EVENT_ITEM {
 	#:: Turn in for 10351 -  Brass Earring
 	if (plugin::check_handin(\%itemcount, 10351 => 1)) {
@@ -24,7 +26,7 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 	}
-		#:: Turn in for 3301 -  Dwarven Ringmail Tunic
+	#:: Turn in for 3301 -  Dwarven Ringmail Tunic
 	if (plugin::check_handin(\%itemcount,3301 => 1)) {
 		quest::say("AHA!! My ringmail!! My, you ARE a resourceful one! Here is your reward as promised. It is exquisite, if I do say so myself. You might also wish to tell the priest in the cell over there that the king is dead. I am sure he will be pleased to hear that and might even be able to help you further. Farewell! It's time for me to make my escape!");
 		#:: Give item 6315- Dwarven Mace
@@ -37,13 +39,14 @@ sub EVENT_ITEM {
 		quest::settimer("depop",60);
 	}
 	plugin::return_items(\%itemcount);
-	}
+}
+
 sub EVENT_TIMER {
-    #:: Catch the "depop" timer
-    if ($timer eq "depop") {
-        #:: Stop the timer "depop"
-        quest::stoptimer("depop");
-        #:: Depop with spawn timer active
-        quest::depop_withtimer();
-		}
+	#:: Catch the "depop" timer
+	if ($timer eq "depop") {
+		#:: Stop the timer "depop"
+		quest::stoptimer("depop");
+		#:: Depop with spawn timer active
+		quest::depop_withtimer();
+	}
 }
