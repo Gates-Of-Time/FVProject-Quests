@@ -1,11 +1,11 @@
 #:: Screaming Mace Quest
-sub EVENT_SAY {	
-#:: Screaming Mace Quest
+
+sub EVENT_SAY {
 	if ($text=~/king is dead/i) {
 		quest::say("Dead you say? My goodness! Did you manage to slay the warlord too? If you provide me with proof of his death, I can enchant the mace the dwarf gave you as payment. But, I will require the proof first!");
 	}
 }
-#:: Screaming Mace Quest
+
 sub EVENT_ITEM {
 	#:: Turn in for 2301 -  Bracers of Battle
 	if (plugin::check_handin(\%itemcount, 2301 => 1)) {
@@ -27,5 +27,6 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
