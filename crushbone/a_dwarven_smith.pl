@@ -1,4 +1,5 @@
 #:: Screaming Mace Quest
+
 sub EVENT_SAY {
 	if ($text=~/ringmail/i) {
 		quest::say("The king was the last person I heard of who was wearing what sounded like my ringmail. Return it to me and I will reward you with a fine weapon I forged myself.");
@@ -41,6 +42,7 @@ sub EVENT_ITEM {
 		#:: Set Depop Timer
 		quest::settimer("depop",60);
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
 
