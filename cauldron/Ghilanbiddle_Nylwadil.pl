@@ -1,7 +1,7 @@
 my $random = int(rand(100));
 
 sub EVENT_SAY {
-
+	#:: If faction is better than dubious
 	if ($faction < 7) {
 		if ($text=~/hail/i) {
 			quest::say("What business do you have here?!! Trying to keep safe? Expecting us to fight your battles? Bah!!");
@@ -17,7 +17,7 @@ sub EVENT_SAY {
 		if ($text=~/raise klunga/i) {
 			quest::say("I can raise Captain Klunga if I have a portion of his blood, an item he once owned and the most important part, 100 gold coins!! Hehe!! A gnome's got to make a living, you know?");
 		}
-	} else{
+	} else {
 		quest::say("You dare to speak to a member of the Eldritch Collective!! You had best leave before you find your soul displaced from your body.");
 	}
 }
