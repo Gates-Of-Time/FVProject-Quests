@@ -1,12 +1,12 @@
 my $random = int(rand(100));
 
 sub EVENT_SAY {
-
+	#:: If faction is better than dubious
 	if ($faction < 7) {
 		if ($text=~/hail/i) {
 			quest::say("What business do you have here?!! Trying to keep safe? Expecting us to fight your battles? Bah!!");
-			#:: Send a signal to Elmion Hendrys after 5 second pause
-			quest::signal(70005,5);
+			#:: Send a signal to Nyrien_Lyrdarniel after 5 second pause
+			quest::signal(70006,5);
 		}
 		if ($text=~/chalice of conquest/i) { 
 			quest::say("Looking for the chalice, are you? Ha!! I don't know where it is, but I know a [" . quest::saylink("lost soul") . "] who does and he could lead you right to it. He had a taste of it and now he can't get enough. He is sort of under the weather, or do I mean under the ground? Ha!!");
@@ -17,7 +17,7 @@ sub EVENT_SAY {
 		if ($text=~/raise klunga/i) {
 			quest::say("I can raise Captain Klunga if I have a portion of his blood, an item he once owned and the most important part, 100 gold coins!! Hehe!! A gnome's got to make a living, you know?");
 		}
-	} else{
+	} else {
 		quest::say("You dare to speak to a member of the Eldritch Collective!! You had best leave before you find your soul displaced from your body.");
 	}
 }
