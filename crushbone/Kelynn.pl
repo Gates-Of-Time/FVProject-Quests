@@ -1,10 +1,11 @@
-sub EVENT_SAY {	
 #:: Scouts Cape Quest
+
+sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("What are you doing here?!! Get out before you find yourself mining for these wretched beasts!");
 	}
 }
-#:: Scouts Cape Quest
+
 sub EVENT_ITEM {
 	#:: Turn in for 12184 -  Useless Token
 	if (plugin::check_handin(\%itemcount, 12184 => 1)) {
@@ -16,5 +17,6 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
