@@ -1,5 +1,5 @@
 sub EVENT_SAY {
-	if ($faction > 4) {
+	if ($faction < 4) {
 		if ($text=~/hail/i) {
 			quest::say("How are you? Please rest. Have you [" . quest::saylink("been wounded by the beasts") . "] of this region.");
 		}
