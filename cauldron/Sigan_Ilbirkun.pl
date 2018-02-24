@@ -1,15 +1,17 @@
 sub EVENT_SAY {
-	# check faction
+	#:: Check faction is Indifferent or better
 	if ($faction > 4) {
 		if ($text=~/hail/i) {
 			quest::say("Hail!! You are welcome to rest here.");
-			quest::signal(70007,5); # send Signal to Ghilanbiddle Nylwadil
+			#:: Send Signal to 70007 Ghilanbiddle Nylwadil
+			quest::signal(70007,5);
 		}
-		if ($text=~/escort/i) { # escort player to Valley entrance
+		#:: Starts the escort player to Valley entrance
+		if ($text=~/escort/i) {
 			quest::say("Yes. Follow me closely!!");
-			quest::moveto(-141.75, 1201.45, 141.42, 0) # NPC moves to the set coordinates then path back
+			#:: NPC moves to the set coordinates then paths back (noguard)
+			quest::moveto(-141.75, 1201.45, 141.42, 0);
 		}
- 
 	} else {
 		quest::say("Your shifty eyes tell me that you are no ally of the Stormguard.");
 	}
