@@ -2,7 +2,7 @@ my $random = int(rand(100));
 
 sub EVENT_SAY {
 	#:: If faction is better than dubious
-	if ($faction < 7) {
+	if ($faction < 4) {
 		if ($text=~/hail/i) {
 			quest::say("What business do you have here?!! Trying to keep safe? Expecting us to fight your battles? Bah!!");
 			#:: Send a signal to Nyrien_Lyrdarniel after 5 second pause
