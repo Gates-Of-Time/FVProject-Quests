@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	# If faction is indifferent or better
-	if ($faction <= 5) {
+	if ($faction > 4) {
      		if ($text=~/hail/i) {
 			quest::say("Greetings, my friend! You may rest here if you like. There are many dangers in this land. May Tunare watch over you when you depart our camp.");
 			quest::signal(70005,5); # signal Elmion Hendrys
