@@ -18,7 +18,7 @@ sub EVENT_ITEM {
 		quest::ding();
 	}
 	#:: Give item 1900 - Prayer Cloth of Tunare and Dwarven Mace
-	if (plugin::check_handin(\%itemcount, 2301 => 1, 6315 => 1)) {
+	if (plugin::check_handin(\%itemcount, 1900 => 1, 6315 => 1)) {
 		quest::say("Erollisi be praised! You slew the orc lord! Well, here is a token of my appreciation! Should you wish to have that mace enchanted, just hand me the mace and my token and I shall uphold my end of the bargain!");
 		#:: Give item 6305 - Screaming Mace
 		quest::summonitem(6305);
