@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	#:: Check faction is Indifferent or better
-	if ($faction > 4) {
+	if ($faction < 4) {
 		if ($text=~/hail/i) {
 			quest::say("Hail!! You are welcome to rest here.");
 			#:: Send Signal to 70007 Ghilanbiddle Nylwadil
