@@ -10,7 +10,7 @@ sub EVENT_COMBAT {
 		elsif (($random_result>=30) && ($random_result<65)) {
 			quest::say("Hail, Emperor Crush!!");
 		} else {
-		#:: Result >65
+			#:: Result >65
 			quest::say("Fall before the might of Clan Crushbone!!");
 		}
 	}
