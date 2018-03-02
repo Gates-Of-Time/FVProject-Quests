@@ -16,7 +16,10 @@ sub EVENT_SAY {
 		quest::say("You have some nerve to approach a loyal member of the Paladins of Tunare! Run, while you can!");
 	}
 }
-
+sub EVENT_SIGNAL {
+	#:: Signal sent from Ghilanbiddle_Nylwadil.pl
+	quest::say("Leave our new friend alone, Ghilanbiddle.  He is quite welcome to rest amongst us.");
+}
 sub EVENT_ITEM {
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
