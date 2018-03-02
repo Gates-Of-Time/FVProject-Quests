@@ -1,3 +1,7 @@
+#:: Create scalar variables for mob race and gender
+my $npcrace = $npc->GetBaseRace();
+my $npcgener = $npc->GetBaseGender();
+
 sub EVENT_SAY {	
 	#:: Quest Dialog for Slave Keys, Taskmaster Earring, and Clue to Screaming Mace quest initiation.
 	if ($text=~/hail/i) {
@@ -9,12 +13,12 @@ sub EVENT_SAY {
 	if ($text=~/bronze earring/i) {
 		quest::say("Yeah, a bronze earring; He wears it like a newly crowned king. If I ever had that earring I know I would stand a chance at escape.");
 	}
+	if ($text=~/npcinfo/i) {
+		quest::say("My race is $npcrace, and my gender is $npcgender");
+	}
 }
 
 sub EVENT_ITEM {
-	#:: create scalar variables for mob race and gender
-	my $npcrace = $npc->GetBaseRace();
-	my $npcgener = $npc->GetBaseGender();
 	#:: Match copper
 	if ($copper == 1) {
 		if ($npcrace eq "Dwarf" && $npcgender == 0) {
