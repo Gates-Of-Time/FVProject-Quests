@@ -14,7 +14,7 @@ sub EVENT_SAY {
 		quest::say("Yeah, a bronze earring; He wears it like a newly crowned king. If I ever had that earring I know I would stand a chance at escape.");
 	}
 	if ($text=~/npcinfo/i) {
-		quest::say("My race is "$npc->GetBaseRace()", and my gender is "$npc->GetBaseGender()".");
+		quest::say("My race is "$npc->GetBaseRace());
 	}
 }
 
