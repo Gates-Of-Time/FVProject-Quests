@@ -41,7 +41,7 @@ sub EVENT_ITEM {
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
-		else {
+		elsif ($npcrace == 8 && $npcgender == 1) {
 			plugin::return_items(\%itemcount);
 		}
 	}
@@ -86,6 +86,9 @@ sub EVENT_ITEM {
 			quest::givecash(0,3,7,0);	#:: Give a small amount of cash copper - plat
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
+		}
+		elsif ($npcrace == 8 && $npcgender == 0) {
+			plugin::return_items(\%itemcount);
 		}
 	}
 	#:: Return unused items
