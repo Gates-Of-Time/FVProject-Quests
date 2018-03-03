@@ -14,7 +14,7 @@ sub EVENT_SAY {
 	}
 }
 
-#sub EVENT_ITEM {
+sub EVENT_ITEM {
 	my $npcrace = $npc->GetRace();
 	my $npcgender = $npc->GetGender();
 	#:: Match copper
