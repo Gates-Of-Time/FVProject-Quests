@@ -41,6 +41,9 @@ sub EVENT_ITEM {
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
+		else {
+			plugin::return_items(\%itemcount);
+		}
 	}
 	#:: Match item 10351 - Brass Earring
 	if (plugin::check_handin(\%itemcount, 10351 =>1)) {
