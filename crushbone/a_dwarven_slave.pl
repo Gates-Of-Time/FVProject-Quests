@@ -1,6 +1,3 @@
-#:: Create scalar variables for mob race and gender
-#my $npcgender = $npc->GetBaseGender();
-
 sub EVENT_SAY {	
 	#:: Quest Dialog for Slave Keys, Taskmaster Earring, and Clue to Screaming Mace quest initiation.
 	if ($text=~/hail/i) {
@@ -15,6 +12,7 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
+	#:: Create scalar variables for mob race and gender
 	my $npcrace = $npc->GetRace();
 	my $npcgender = $npc->GetGender();
 	#:: Match copper
@@ -22,12 +20,12 @@ sub EVENT_ITEM {
 		if ($npcrace == 8 && $npcgender == 0) {
 			quest::say("No, no!! I do not need this!! Get me key number 16!!");
 		}
-		if ($npcrace == 8 && $npcgender == 1) {
+		elsif ($npcrace == 8 && $npcgender == 1) {
 			quest::say("What is this!!? Get me key number 17!!");
 		}
 	}
 	#:: Match item 20016 - Shackle Key 16
-	if (plugin::check_handin(\%itemcount, 20016 => 1)){
+	if (plugin::check_handin(\%itemcount, 20016 => 1)) {
 		if ($npcrace == 8 && $npcgender == 0) {
 			quest::say("Good work!! I shall be on my way.  Farewell my friend!!");
 			#:: Give a small amount of xp
@@ -70,7 +68,7 @@ sub EVENT_ITEM {
 		}
 	}
 	#:: Match item 20017 - Shackle Key 17
-	if (plugin::check_handin(%\itemcount, 20017 => 1)) {
+	if (plugin::check_handin(\%itemcount, 20017 => 1)) {
 		if ($npcrace == 8 && $npcgender == 1) {
 			quest::say("Good work!! I shall be on my way. Farewell my friend!!");
 			#:: Give a small amount of xp
