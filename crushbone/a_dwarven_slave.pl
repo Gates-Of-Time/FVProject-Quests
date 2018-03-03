@@ -3,6 +3,7 @@
 
 sub EVENT_SAY {	
 	my $NPCRace = $npc->GetRace();
+	my $NPCGender = $npc->GetGender();
 	#:: Quest Dialog for Slave Keys, Taskmaster Earring, and Clue to Screaming Mace quest initiation.
 	if ($text=~/hail/i) {
 		quest::say("Slavedrivers are just lackeys for the [" . quest::saylink("taskmaster") . "]. He is the real orc in charge.");
@@ -14,7 +15,7 @@ sub EVENT_SAY {
 		quest::say("Yeah, a bronze earring; He wears it like a newly crowned king. If I ever had that earring I know I would stand a chance at escape.");
 	}
 	if ($text=~/npcinfo/i) {
-		quest::say("My race is $NPCRace");
+		quest::say("My race is $NPCRace and my gender is $NPCGender");
 	}
 }
 
