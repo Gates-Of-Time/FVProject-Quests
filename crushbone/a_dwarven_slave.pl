@@ -22,7 +22,7 @@ sub EVENT_SAY {
 		if ($npcrace == 8 && $npcgender == 0) {
 			quest::say("No, no!! I do not need this!! Get me key number 16!!");
 		}
-		elsif ($npcrace == 8 && $npcgender == 1) {
+		if ($npcrace == 8 && $npcgender == 1) {
 			quest::say("What is this!!? Get me key number 17!!");
 		}
 	}
