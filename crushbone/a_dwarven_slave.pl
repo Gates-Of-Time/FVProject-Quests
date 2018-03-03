@@ -57,7 +57,7 @@ sub EVENT_SAY {
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
-		elsif ($npcrace == 8 && $npcgender == 1) {
+		if ($npcrace == 8 && $npcgender == 1) {
 			#:: Summon Item 18906 - Small Wood Carving (Csb 1.O.U. Dwf 2)
 			quest::summonitem(18906);
 			quest::say("You killed the taskmaster?!  Absolutely amazing! The orcs will be fighting among themselves for power now and I can disappear in the commotion. Thanks, friend! Take this for your deeds!");
