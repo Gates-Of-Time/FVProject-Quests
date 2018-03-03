@@ -25,14 +25,10 @@ sub EVENT_SAY {
 		elsif ($npcrace == 8 && $npcgender == 1) {
 			quest::say("What is this!!? Get me key number 17!!");
 		}
-		else {
-			plugin::return_items(\%itemcount);
-			quest::say("I have no need for these items, $name, you can have them back.");
-		}
 	}
 	#:: Match item 20016 - Shackle Key 16
 	if (plugin::check_handin(\%itemcount, 20016 => 1)){
-		if ($npcrace == 8" && $npcgender == 0) {
+		if ($npcrace == 8 && $npcgender == 0) {
 			quest::say("Good work!! I shall be on my way.  Farewell my friend!!");
 			#:: Give a small amount of xp
 			quest::exp(1000);
@@ -46,10 +42,6 @@ sub EVENT_SAY {
 			quest::givecash(0,3,7,0);	#:: Give a small amount of cash copper - plat
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
-		}
-		else {
-			plugin::return_items(\%itemcount);
-			quest::say("I have no need for these items, $name, you can have them back.");
 		}
 	}
 	#:: Match item 10351 - Brass Earring
@@ -76,10 +68,6 @@ sub EVENT_SAY {
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
-		else {
-			plugin::return_items(\%itemcount);
-			quest::say("I have no need for these items, $name, you can have them back.");
-		}
 	}
 	#:: Match item 20017 - Shackle Key 17
 	if (plugin::check_handin(%\itemcount, 20017 => 1)) {
@@ -98,11 +86,6 @@ sub EVENT_SAY {
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
-		else {
-			plugin::return_items(\%itemcount);
-			quest::say("I have no need for these items, $name, you can have them back.");
-		}
-	
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
