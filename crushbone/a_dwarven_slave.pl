@@ -42,7 +42,8 @@ sub EVENT_ITEM {
 			quest::settimer("depop",30);
 		}
 		elsif ($npcrace == 8 && $npcgender == 1) {
-			plugin::return_items(\%itemcount);
+			quest::say("I have no need for this item $name, you can have it back.");
+			quest::summonitem(20016);
 		}
 	}
 	#:: Match item 10351 - Brass Earring
@@ -88,7 +89,8 @@ sub EVENT_ITEM {
 			quest::settimer("depop",30);
 		}
 		elsif ($npcrace == 8 && $npcgender == 0) {
-			plugin::return_items(\%itemcount);
+			quest::say("I have no need for this item $name, you can have it back.");
+			quest::summonitem(20017);
 		}
 	}
 	#:: Return unused items
