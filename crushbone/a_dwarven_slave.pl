@@ -1,8 +1,8 @@
 #:: Create scalar variables for mob race and gender
-my $NPCRace = $npc->GetRace();
 #my $npcgender = $npc->GetBaseGender();
 
 sub EVENT_SAY {	
+	my $NPCRace = $npc->GetRace();
 	#:: Quest Dialog for Slave Keys, Taskmaster Earring, and Clue to Screaming Mace quest initiation.
 	if ($text=~/hail/i) {
 		quest::say("Slavedrivers are just lackeys for the [" . quest::saylink("taskmaster") . "]. He is the real orc in charge.");
