@@ -1,5 +1,5 @@
 #:: Create scalar variables for mob race and gender
-#my $npcrace = $Mob->GetRace();
+my $NPCRace = $npc->GetRace();
 #my $npcgender = $npc->GetBaseGender();
 
 sub EVENT_SAY {	
@@ -14,7 +14,7 @@ sub EVENT_SAY {
 		quest::say("Yeah, a bronze earring; He wears it like a newly crowned king. If I ever had that earring I know I would stand a chance at escape.");
 	}
 	if ($text=~/npcinfo/i) {
-		quest::say("My race is $race");
+		quest::say("My race is $NPCRace");
 	}
 }
 
