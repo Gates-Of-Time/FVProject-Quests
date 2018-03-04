@@ -28,7 +28,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match 18704 - Old Folded Letter
 	if (plugin::check_handin(\%itemcount, 18704 => 1)) {
-		quest::Say("A new wizard pledging to our cause is always welcome. Take this robe and see Tilkzog Mournumder when you are ready to begin your training. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
+		quest::say("A new wizard pledging to our cause is always welcome. Take this robe and see Tilkzog Mournumder when you are ready to begin your training. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
 		#:: Give a 13524 - Dark Gold Felt Robe*
 		quest::summonitem(13524);
 		#:: Set faction
