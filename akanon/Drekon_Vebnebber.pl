@@ -4,6 +4,7 @@ sub EVENT_SAY {
 	}
 	if ($text=~/Red 5/i) {
 		quest::say("Red 5 is rumored to be a haywire clockwork. They say he pieced himself back together and lives in the scrapyard. If he IS there, you must hunt him down and take his blackbox to Manik Compolten. Be careful, if Red 5 rebuilt himself, he may have rebuilt minions as well.");
+	}
 }
 
 sub EVENT_ITEM {
@@ -37,6 +38,6 @@ sub EVENT_ITEM {
 		quest::faction(71,-2); 		#:: - Dark Reflection
 		quest::faction(39,-2); 		#:: - Clan Grikbar
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
-	}
 }
