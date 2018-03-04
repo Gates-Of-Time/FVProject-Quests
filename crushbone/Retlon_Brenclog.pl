@@ -44,7 +44,6 @@ sub EVENT_ITEM {
 		quest::givecash(0,3,7,0);	
 	}
 	plugin::return_items(\%itemcount);
-	quest::say("No, no!! I do not need this!! Get me key number 15!!");
 }
 
 sub EVENT_TIMER {
