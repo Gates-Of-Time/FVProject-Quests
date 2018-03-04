@@ -23,7 +23,7 @@ sub EVENT_ITEM {
 		}
 		#:: Match Female High Elf
 		elsif ($npcrace == 8 && $npcgender == 1) {
-			quest::say("What is this!!? Get me key number 17!!");
+			quest::say("What is this!!? Get me key number 21!!");
 		}
 		#:: Match Male Wood Elf
 		elsif ($npcrace == 4 && $npcgender == 0) {
