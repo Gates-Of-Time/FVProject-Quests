@@ -12,8 +12,5 @@ sub EVENT_SAY {
 		quest::say("Take this letter to Jakum Webdancer in Kelethin. You can find him at the bard guild hall. I am sure he will compensate you for your troubles.");
 		#:: Give a 18163 - Bardic Letter (Kelethin)
 		quest::summonitem(18163);
-		#:: Ding!
-		quest::ding();
 	}
-	plugin::return_items(\%itemcount);
 }
