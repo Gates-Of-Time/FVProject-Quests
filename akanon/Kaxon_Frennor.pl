@@ -28,7 +28,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Check for 18705 - Old Folded Letter
 	if (plugin::check_handin(\%itemcount, 18705 => 1)) {
-		quest::Say("A new rogue eh? Well put this tunic on and get to it! Once you are ready to begin your training please make sure that you see Morlan. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
+		quest::say("A new rogue eh? Well put this tunic on and get to it! Once you are ready to begin your training please make sure that you see Morlan. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
 		#:: Reward item 13518 - Tin Patched Tunic
 		quest::summonitem(13518);
 		#:: Set factions
