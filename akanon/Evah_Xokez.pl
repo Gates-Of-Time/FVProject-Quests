@@ -6,7 +6,7 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_ENTER {
-	#:: Check for 18771 - Stained Note
+	#:: Check for 18769 - Stained Note
 	if (plugin::check_hasitem($client, 18769)) { 
 		$client->Message(15,"Evah Xokex, a diminutive, but powerful looking gnome turns to address you. 'I am Evah Xokez. The Dark Reflection has called you. Read the note in your inventory and hand it to me to start your training. Your destiny awaits!");
 	}
@@ -40,7 +40,7 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Turn in for 18770 -  Recruitment Summons
+	#:: Turn in for 18769 -  Recruitment Summons
 	if (plugin::check_handin(\%itemcount, 18769 => 1)) {
 		quest::say("Join us in fulfilling teh will of Bertoxxulous. You can train with us here, in the shadows of the Abbey. Wear this tunic to help conceal your true identity. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you. Once you are ready to begin your training please make sure that you see Derthix Gibblix, he can assist you in developing your hunting and gathering skills.");
 		#:: Give item 13518 - Tin Patched Tunic*
