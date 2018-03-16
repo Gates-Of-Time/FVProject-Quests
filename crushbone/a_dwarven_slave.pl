@@ -4,9 +4,9 @@ sub EVENT_SAY {
 		quest::say("Slavedrivers are just lackeys for the [" . quest::saylink("taskmaster") . "]. He is the real orc in charge.");
 	}
 	if ($text=~/taskmaster/i) {
-		quest::say("The taskmaster?? He is that large orc who runs around with that [" . quest::saylink("bronze earring") . "] in his ear.");
+		quest::say("The taskmaster?? He is that large orc who runs around with that [" . quest::saylink("brass earring") . "] in his ear.");
 	}
-	if ($text=~/bronze earring/i) {
+	if ($text=~/brass earring/i) {
 		quest::say("Yeah, a bronze earring; He wears it like a newly crowned king. If I ever had that earring I know I would stand a chance at escape.");
 	}
 }
