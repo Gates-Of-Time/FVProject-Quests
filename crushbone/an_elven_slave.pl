@@ -78,6 +78,18 @@ sub EVENT_ITEM {
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
+		#:: Match Female High Elf
+		if ($npcrace == 5 && $npcgender == 1) {
+			#:: Summon Item 18902 - Torn Drawing (Csb I.O.U. Hie 2)
+			quest::summonitem(18902);
+			quest::say("You killed the taskmaster?!  Absolutely amazing! The orcs will be fighting among themselves for power now and I can disappear in the commotion. Thanks, friend! Take this for your deeds!");
+			#:: Give a small amount of xp
+			quest::exp(1500);
+			#:: Ding!
+			quest::ding();
+			#:: Set Depop Timer
+			quest::settimer("depop",30);
+		}
 		#:: Match Male Wood Elf
 		elsif ($npcrace == 4 && $npcgender == 0) {
 			#:: Summon Item 18903 - Tattered Cloth Note (Csb 1.O.U. Elf 1)
