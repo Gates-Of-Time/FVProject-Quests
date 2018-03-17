@@ -79,7 +79,7 @@ sub EVENT_ITEM {
 			quest::settimer("depop",30);
 		}
 		#:: Match Male Wood Elf
-		if ($npcrace == 4 && $npcgender == 0) {
+		elsif ($npcrace == 4 && $npcgender == 0) {
 			#:: Summon Item 18903 - Tattered Cloth Note (Csb 1.O.U. Elf 1)
 			quest::summonitem(18903);
 			quest::say("You killed the taskmaster?!  Absolutely amazing! The orcs will be fighting among themselves for power now and I can disappear in the commotion. Thanks, friend! Take this for your deeds!");
@@ -91,7 +91,7 @@ sub EVENT_ITEM {
 			quest::settimer("depop",30);
 		}
 		#:: Match Female Wood Elf
-		if ($npcrace == 4 && $npcgender == 1) {
+		elsif ($npcrace == 4 && $npcgender == 1) {
 			#:: Summon Item 18904 - Faded Wedding Cloth (Csb 1.O.U. Elf 2)
 			quest::summonitem(18904);
 			quest::say("You killed the taskmaster?!  Absolutely amazing! The orcs will be fighting among themselves for power now and I can disappear in the commotion. Thanks, friend! Take this for your deeds!");
