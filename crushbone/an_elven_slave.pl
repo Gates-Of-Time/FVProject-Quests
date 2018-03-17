@@ -12,11 +12,11 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Create scalar variables for mob race and gender
-	my $npcrace = $npc->GetRace();
-	my $npcgender = $npc->GetGender();
 	#:: Match copper
 	if ($copper == 1) {
+		#:: Create scalar variables for mob race and gender
+		my $npcrace = $npc->GetRace();
+		my $npcgender = $npc->GetGender();
 		#:: Match Male High Elf
 		if ($npcrace == 5 && $npcgender == 0) {
 			quest::say("Not that!! I need key number 20!!");
@@ -36,6 +36,9 @@ sub EVENT_ITEM {
 	}
 	#:: Match item 20020 - Shackle Key 20
 	if (plugin::check_handin(\%itemcount, 20020 => 1)) {
+		#:: Create scalar variables for mob race and gender
+		my $npcrace = $npc->GetRace();
+		my $npcgender = $npc->GetGender();
 		#:: Match Male High Elf
 		if ($npcrace == 5 && $npcgender == 0) {
 			quest::say("Good work!! I shall be on my way.  Farewell my friend!!");
@@ -60,6 +63,9 @@ sub EVENT_ITEM {
 	}
 	#:: Match item 10351 - Brass Earring
 	if (plugin::check_handin(\%itemcount, 10351 =>1)) {
+		#:: Create scalar variables for mob race and gender
+		my $npcrace = $npc->GetRace();
+		my $npcgender = $npc->GetGender();
 		#:: Match Male High Elf
 		if ($npcrace == 5 && $npcgender == 0) {
 			#:: Summon Item 18901 - Ragged Cloth Note (Csb 1.O.U. Hie 1)
@@ -99,6 +105,9 @@ sub EVENT_ITEM {
 	}
 	#:: Match item 20021 - Shackle Key 21
 	if (plugin::check_handin(\%itemcount, 20021 => 1)) {
+		#:: Create scalar variables for mob race and gender
+		my $npcrace = $npc->GetRace();
+		my $npcgender = $npc->GetGender();
 		#:: Match Female High Elf
 		if ($npcrace == 5 && $npcgender == 1) {
 			quest::say("Good work!! I shall be on my way. Farewell my friend!!");
@@ -123,6 +132,9 @@ sub EVENT_ITEM {
 	}
 	#:: Match item 20018 - Shackle Key 18
 	if (plugin::check_handin(\%itemcount, 20018 => 1)) {
+		#:: Create scalar variables for mob race and gender
+		my $npcrace = $npc->GetRace();
+		my $npcgender = $npc->GetGender();
 		#:: Match Male Wood Elf
 		if ($npcrace == 4 && $npcgender == 0) {
 			quest::say("Good work!! I shall be on my way. Farewell my friend!!");
@@ -148,6 +160,9 @@ sub EVENT_ITEM {
 	}
 	#:: Match item 20019 - Shackle Key 19
 	if (plugin::check_handin(\%itemcount, 20019 => 1)) {
+		#:: Create scalar variables for mob race and gender
+		my $npcrace = $npc->GetRace();
+		my $npcgender = $npc->GetGender();
 		#:: Match Female Wood Elf
 		if ($npcrace == 4 && $npcgender == 1) {
 			quest::say("Good work!! I shall be on my way. Farewell my friend!!");
