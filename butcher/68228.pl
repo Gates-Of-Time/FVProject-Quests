@@ -1,7 +1,3 @@
-# Zone to OOT SirensBane event
-# Zone: Butcher
-# AngeloX
-
 sub EVENT_SPAWN {
 	$x = $npc->GetX();
 	$y = $npc->GetY();
@@ -9,6 +5,5 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_ENTER {
-#	quest::emote ("'s spirit moves you to another land ...");
-#	quest::movepc(69,-9193.3,386.7,5.2);
+	quest::movepc(69,-9193.3,386.7,5.2);
 }
