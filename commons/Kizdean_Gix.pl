@@ -1,5 +1,9 @@
 #:: Part of Thex Mallet
 
+sub EVENT_SPAWN {
+	plugin::RandomRoam(500,500,5,15);
+}
+
 sub EVENT_SAY {
 	if ($text =~/hail/i) {
 		quest::say("If you have business then out with it!! If not, then please be gone. I have little time to waste on chitchat!");
