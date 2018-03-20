@@ -1,7 +1,7 @@
 #:: Part of Thex Mallet
 
 sub EVENT_SPAWN {
-	plugin::RandomRoam(500,500,5,15);
+	plugin::RandomRoam(500, 500);
 }
 
 sub EVENT_SAY {
