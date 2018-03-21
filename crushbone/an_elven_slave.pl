@@ -6,8 +6,8 @@ sub EVENT_SAY {
 	if ($text=~/taskmaster/i) {
 		quest::say("The taskmaster?? He is that large orc who runs around with that [" . quest::saylink("bronze earring") . "] in his ear.");
 	}
-	if ($text=~/bronze earring/i) {
-		quest::say("Yeah, a bronze earring; He wears it like a newly crowned king. If I ever had that earring I know I would stand a chance at escape.");
+	if ($text=~/brass earring/i) {
+		quest::say("Yeah, a brass earring; He wears it like a newly crowned king. If I ever had that earring I know I would stand a chance at escape.");
 	}
 }
 
