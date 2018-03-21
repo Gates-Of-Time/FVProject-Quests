@@ -6,9 +6,9 @@ my $timer;
 my $move;
 
 sub EVENT_ITEM {
-  if (plugin::check_handin(\%itemcount, 20451 => 1)) {
+  if (plugin::check_handin(\%itemcount, 20451 => 1)) { #Frayed Braided Grass Amulet
     quest::emote("begins walking toward the gathering spot. 'Follow, friend.'");
-    $start = $entity_list->GetMobByNpcTypeID(15044);
+    $start = $entity_list->GetMobByNpcTypeID(15044); # Althele
     $timer = $start->CastToNPC();
     $timer->SignalNPC(1); # start the timers on althele
   }
@@ -27,7 +27,7 @@ sub EVENT_SIGNAL {
 
 sub EVENT_WAYPOINT_DEPART {
   if ($move == 1) {
-    quest::spawn2(15170,0,0,-1597,-3670,-18,0);
+    quest::spawn2(15170,0,0,-1597,-3670,-18,0); # Spawn Teloa
     quest::depop();
   }
 }
