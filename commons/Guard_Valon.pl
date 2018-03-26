@@ -24,6 +24,9 @@ sub EVENT_ITEM {
 	#:: Match 13885 - Orc Pawn Pick x 4
 	if (plugin::check_handin(\%itemcount, 13885 => 4)) {
 		quest::say("You have done well. Keep up the good work and we may trust you to [" . quest::saylink("hunt dervish cutthroats") . "] which in turn will allow you to join the Reserve Freeport Militia.");
+		#:: Ding!
+		quest::ding();
+		#:: Give cash reward
 		quest::givecash(0,0,1,0);
 		#:: Set factions
 		quest::faction(105,10);		#:: Freeport Militia
@@ -36,6 +39,8 @@ sub EVENT_ITEM {
 		quest::say("Excellent work, $name!! You are quite formidable. Maybe soon you shall aid in our efforts to rid the Northern part of Freeport of the paladins!! Until then keep up the good work. Take this Armory Token to the Militia Armorer in the Militia House in Freeport to receive your tunic. He may not be there, but I assure you he will show up at some time. On the second floor. Hail Sir Lucan!!");
 		#:: Summon a 12273 - Militia Armory Token
 		quest::summonitem(12273);
+		#:: Ding!
+		quest::ding();
 		#:: Set factions
 		quest::faction(105,10);		#:: Freeport Militia
 		quest::faction(48,10);		#:: Coalition of Tradefolk Underground
