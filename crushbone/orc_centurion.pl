@@ -15,5 +15,4 @@ sub EVENT_COMBAT {
     }
 }
 
-
 # Converted to Perl by SS
