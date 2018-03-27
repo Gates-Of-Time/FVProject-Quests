@@ -23,8 +23,8 @@ sub EVENT_ITEM {
 		quest::faction(105,-1);	#:: Freeport Militia
 		quest::faction(311,1);	#:: Steel Warriors
 		quest::faction(258,1);	#:: Priests of Marr
-		#:: Spawn 21136 - West Commonlands >> Duggin_Scumber
-		quest::spawn2(21136,0,0,2769,-314,-61,175);
+		#:: Spawn 21136 - West Commonlands >> Duggin_Scumber <-- This is pretty weak--he's supposed to path to the inn first.
+		quest::spawn2(21136,0,0,$x,$y,$z,$h);
 	}
 	plugin::return_items(\%itemcount);
 }
