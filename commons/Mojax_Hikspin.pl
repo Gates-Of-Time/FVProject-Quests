@@ -24,7 +24,7 @@ sub EVENT_ITEM {
 		quest::faction(311,1);	#:: Steel Warriors
 		quest::faction(258,1);	#:: Priests of Marr
 		#:: Spawn 21136 - West Commonlands >> Duggin_Scumber
-		quest::spawn2(21136,0,0,2750,-307,-62);
+		quest::spawn2(21136,0,0,2750,-307,-62,124);
 	}
 	plugin::return_items(\%itemcount);
 }
