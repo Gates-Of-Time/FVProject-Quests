@@ -19,4 +19,5 @@ sub EVENT_ENTERZONE {
 		$PetID = $entity_list->GetMobByID($client->GetPetID());
 		$PetID->Kill();
 	}
+	$client->Message(13, "your global player pl said hello");
 }
