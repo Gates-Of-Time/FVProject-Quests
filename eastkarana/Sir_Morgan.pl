@@ -34,7 +34,7 @@ sub EVENT_ITEM {
 	if ($cash >= 500) {
 		quest::say("What a grand donation!! You must be a rich noble to be making such a donation. Here, I am but a simple warrior, but I found this lying on the highway to Highpass Hold. The lifeless corpse next to it had no more need of it.");
 		#:: Ding!!
-		quest::Ding();
+		quest::ding();
 		#:: Give a random item from Patchwork cloak, Patchwork boots, Rusty Weapons, Silver Earring, Bloodstone, Halfling knife, Bronze Dagger, Belt pouch, Damask cap, Mountain Lion Cape, Highkeep Flask, Snakeskin Mask, Drom's Champagne
 		quest::summonitem(quest::ChooseRandom(2106,2112,2041,13944,2307,3829,1331,17002,7012,8306,10006,10019,5013,5019,5021,5022,6011,5023,7007,7008));
 		#:: Set Factions
