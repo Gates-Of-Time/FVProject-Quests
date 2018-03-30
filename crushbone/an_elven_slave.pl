@@ -78,14 +78,8 @@ sub EVENT_ITEM {
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
-	if (plugin::check_handin(\%itemcount, 10351 =>1)) {
-		#:: Create scalar variables for mob race and gender
-		my $npcrace = $npc->GetRace();
-		my $npcgender = $npc->GetGender();
-		#:: Match Male High Elf
-		if ($npcrace == 5 && $npcgender == 0) {
 		#:: Match Female High Elf
-		if ($npcrace == 5 && $npcgender == 1) {
+		elsif ($npcrace == 5 && $npcgender == 1) {
 			#:: Summon Item 18902 - Torn Drawing (Csb I.O.U. Hie 2)
 			quest::summonitem(18902);
 			quest::say("You killed the taskmaster?!  Absolutely amazing! The orcs will be fighting among themselves for power now and I can disappear in the commotion. Thanks, friend! Take this for your deeds!");
