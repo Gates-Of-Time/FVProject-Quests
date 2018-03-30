@@ -1,5 +1,5 @@
 sub EVENT_ITEM {
-#:: Turn in for 18901 -  Ragged Cloth Note
+	#:: Match item 18901 - Ragged Cloth Note
 	if (plugin::check_handin(\%itemcount, 18901 => 1)) {
 		quest::say("I.. but.. she.. You can take this. I guess I don't need it any more.");
 		#:: Give item 14640 - Silver Amber Ring
