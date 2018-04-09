@@ -1,14 +1,15 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::emote("Ahh salutations young adventurer. I'd love to chat, but I have much studying to do. Farewell.");
+		quest::say("Ahh salutations young adventurer. I'd love to chat, but I have much studying to do. Farewell.");
 	}
 	if ($text=~/help/i) {
-		quest::emote("Wonderful. The beast took my tool kit whilst I slept at camp. I awoke only to see him paddling frantically out into the ocean in a small boat. He couldn't have gone very far. If you stand at my [" . quest::saylink("camp") . "] and look towards the next closest head stone, you will be facing the direction in which the Kerran thief fled. Swim straight out from there and you should see his cunning little boat.");
+		quest::say("Wonderful. The beast took my tool kit whilst I slept at camp. I awoke only to see him paddling frantically out into the ocean in a small boat. He couldn't have gone very far. If you stand at my [" . quest::saylink("camp") . "] and look towards the next closest head stone, you will be facing the direction in which the Kerran thief fled. Swim straight out from there and you should see his cunning little boat.");
 	}
 	if ($text=~/camp/i) {
-		quest::emote("My camp is next to the head stone on the eastern most portion of this island. The Kerran may have dropped some of my tools inot the ocean as it fled. Please return the complete tool kit and I'll make sure my brother rewards you");
+		quest::say("My camp is next to the head stone on the eastern most portion of this island. The Kerran may have dropped some of my tools inot the ocean as it fled. Please return the complete tool kit and I'll make sure my brother rewards you");
 	}
 }
+
 sub EVENT_ITEM {
 	#:: Turn in for 18173 -  Gan's Note to Yelesom
 	if (plugin::check_handin(\%itemcount, 18173 => 1)) {
