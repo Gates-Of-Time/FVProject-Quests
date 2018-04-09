@@ -46,4 +46,5 @@ sub EVENT_ITEM {
 		quest::faction(311,1);		#:: Steel Warriors Faction
 		quest::faction(184,1);		#:: Knights of Truth Faction
 	}
+	plugin::return_items(\%itemcount);
 }
