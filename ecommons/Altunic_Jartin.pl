@@ -14,17 +14,18 @@ sub EVENT_SAY {
 	if ($text=~/Hail/i) {
 		quest::say("Greetings, traveler! Have you need of provisions or perhaps other wares? I sell what I find upon the battlegrounds of the Commonlands.");
 	}
-	if ($text=~/Where is your house/i) {
+	if ($text=~/house/i) {
 		quest::say("Follow me.");
 		quest::moveto(4791.06,-83.55,-51.47);
-		quest::spawn(22196, 0, 0, 4707.63, -105.49, -51.47);
+		#:: Spawn East Commonlands >> Squire_Narl (22196)
+		quest::unique_spawn(22196, 0, 0, 4707.63, -105.49, -51.47);
 	}
 }
 
 sub EVENT_ITEM { 
 	#:: Check for "A Note (Note To Altunic)".
 	if (plugin::check_handin(\%itemcount, 18896 => 1)) {
-		quest::say("You are the one they have sent? A squire?!! I hope you can help me. I gather items strewn upon the grounds of the Commonlands. I sell them at good prices. Lately, I have been terrorized by a human rogue named Narl. He will no doubt appear at my [house] soon. Bring his head to me.");
+		quest::say("You are the one they have sent? A squire?!! I hope you can help me. I gather items strewn upon the grounds of the Commonlands. I sell them at good prices. Lately, I have been terrorized by a human rogue named Narl. He will no doubt appear at my [" . quest::saylink("house") . "] soon. Bring his head to me.");
 	}
 	#:: Check for Human Head (Narl's Head)
 	if (plugin::check_handin(\%itemcount, 13867 => 1)) {
