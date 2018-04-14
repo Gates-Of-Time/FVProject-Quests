@@ -1,12 +1,12 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings. I am searching for the [wheel of Tarton]. If you will assist me I will provide you with [runes] to create a powerful spell.");
+		quest::say("Greetings. I am searching for the [" . quest::saylink("wheel of Tarton") . "]. If you will assist me I will provide you with [" . quest::saylink("runes") . "] to create a powerful spell.");
 		}
 	if ($text=~/runes/i) {
 		quest::say("I have these runes, Rune of Frost and Rune of the Astral, which can be combined to produce a powerful spell that can call down destruction from the heavens. I will give them to you in exchange for the Staff of the Wheel and Star of Eyes.");
 		}
-	if ($text=~/wheel/i) {
-		quest::say("The wheel was broken into several pieces and scattered throughout the world. This book will give you clues as to their whereabouts. Once you gather all the pieces, they can be reassembled in a special [case].");
+	if ($text=~/wheel of Tarton/i) {
+		quest::say("The wheel was broken into several pieces and scattered throughout the world. This book will give you clues as to their whereabouts. Once you gather all the pieces, they can be reassembled in a special [" . quest::saylink("case") . "].");
 		quest::SummonItem(18031); # Tome of the Wheel		
 		}
 	if ($text=~/case/i) {
