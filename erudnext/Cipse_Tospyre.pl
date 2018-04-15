@@ -12,15 +12,28 @@ sub EVENT_SAY {
 		quest::emote("You must pay the tribute of three gold before I cast the toxin from your body.");
 	}
 }
+
 sub EVENT_ITEM {
-	if($gold == 4) {
-    quest::cast($spell_12); # Casts Healing
-  }
-  elsif ($gold == 3) {
-    quest::cast($spell_203); # Casts Cure Poison
-  }
-   elsif ($gold == 2) {
-    quest::cast($spell_213); # Casts Cure Disease
-  }
-  plugin::return_items(\%itemcount);
+	#:: Create a scalar variable for storing money
+	my $cash = 0;
+	$cash = ($platinum * 1000) + ($gold * 100) + ($silver * 10) + $copper;
+	#:: Match 400 copper - 4gp
+	if ($cash == 400) {
+		#:: Cast spell 12 - Healing
+		$npc->CastSpell($userid,12);
+	}
+	#:: Match 300 copper - 3gp
+	elsif ($cash == 300) {
+		#:: Cast spell 203 - Cure Poison
+		$npc->CastSpell($userid,203);
+	}
+	#:: Match 200 copper - 2gp
+	elsif ($cash == 200) {
+		#:: Cast spell 213 - Cure Disease
+		$npc->CastSpell($userid,243);
+	}
+	else {
+    		quest::givecash($copper, $silver, $gold, $platinum);
+	}
+	plugin::return_items(\%itemcount);
 }
