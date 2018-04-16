@@ -3,10 +3,10 @@ sub EVENT_SAY {
 		if ($faction <= 4) {
 			quest::say("I heard she got lost on the plains. You should go ask her dog, Snowflake, where she is. I hear she is somewhere around the pass to Halas.");
 		}
-		if ($faction = 5) {
-			quest::say("The Wolves o' the North show ye no ill will, but there's much ye must do t' earn our trust.  Perhaps ye should speak with Lysbith and inquire o' the [gnoll bounty].");
+		elsif ($faction == 5) {
+			quest::say("The Wolves o' the North show ye no ill will, but there's much ye must do t' earn our trust.  Perhaps ye should speak with Lysbith and inquire o' the [" . quest::saylink("gnoll bounty") . "].");
 		}
-		if ($faction >= 6) {
+		elsif ($faction >= 6) {
 			quest::say("Run while ye still can!! The Wolves o' the North will not tolerate yer presence!");
 		}
 	}
@@ -39,4 +39,4 @@ sub EVENT_SIGNAL {
 	}
 }
 
-# Converted to Perl by SS 
+# Converted to Perl by SS
