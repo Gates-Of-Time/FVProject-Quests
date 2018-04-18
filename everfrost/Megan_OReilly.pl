@@ -1,9 +1,9 @@
 sub WAYPOINT_ARRIVE {
 	if ($wp == 3) {
-		 quest::setrunning(true);
+		 quest::setrunning(1);
 	}
 	if ($wp == 6) {
-		 quest::setrunning(false);
+		 quest::setrunning(0);
 	}
 }
 
