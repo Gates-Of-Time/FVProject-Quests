@@ -1,17 +1,18 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("It is good to meet you. $name.  To enter the Temple of Divine Light is to invite Quellious into your body and soul.  Tranquility is our way and. as such. we do all we can to uphold it.  Are you a [" . quest::saylink("cleric of Quellious") . "]. or am I mistaken?");
-		}
-		if ($text=~/cleric of Quellious/i) {
+	}
+	if ($text=~/cleric of Quellious/i) {
 		quest::say("It is good to meet you. $name.  To enter the Temple of Divine Light is to invite Quellious into your body and soul.  Tranquility is our way and. as such. we do all we can to uphold it.  Are you a [" . quest::saylink("cleric of Quellious") . "]. or am I mistaken?");
-			if ($faction <= 5 ) {
+		if ($faction <= 5 ) {
 			quest::say("I have a small task for you then. Go to the city library and ask the librarian for the book 'The Testament of Vanear'. I shall require it for further studies. Do not return empty-handed or you shall know my rage.");
-			}
-			elsif ($faction > 5 ) {
-			quest::say("You have not done much to upset the Peacekeepers of this temple. but we must ask you to prove yourself to us before we may discuss things such as this.")
-			}
 		}
+		elsif ($faction > 5 ) {
+			quest::say("You have not done much to upset the Peacekeepers of this temple. but we must ask you to prove yourself to us before we may discuss things such as this.");
+		}
+	}
 }
+
 sub EVENT_ITEM {
 	#:: Turn in for 13991 -  Testament of Vanear
 	if (plugin::check_handin(\%itemcount, 13991 => 1)) {
