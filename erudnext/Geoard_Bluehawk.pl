@@ -1,4 +1,4 @@
-sub EVENT_SAY {	
+sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Greetings. adventurer! After all those months of sweaty. hot and dirty battling of beasts untold. it is time to treat yourself to a tall. cool grog!");
 	}
@@ -7,6 +7,7 @@ sub EVENT_SAY {
 	}
 	if ($text=~/have some Erud's Tonic/i) {
 		quest::say("The sale or provision of Erud's Tonic to travelers is prohibited!");
+		#:: Send signal to erudnext/Phloatin_Highbrow.pl
 		quest::signal(24039,50);
 	}
 	if ($text=~/Vasty Deep Water/i) {
