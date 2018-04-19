@@ -9,6 +9,7 @@ sub EVENT_SAY {
 		quest::say("Go to the waters near the harbor. We have heard of Qeynos' rogue guild attempting to smuggle our valuable Vasty Deep water from Odus by way of swimmers. We require proof of their involvement. It is said they often carry special coins. Return one of these coins to me.?");
 	}
 }
+
 sub EVENT_ITEM {
 	#:: Turn in for 13881 -  Nicked Coin
 	if (plugin::check_handin(\%itemcount, 13881 => 1)) {
