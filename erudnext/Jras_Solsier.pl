@@ -9,6 +9,7 @@ sub EVENT_SAY {
 		quest::say("The infidels are in Toxxulia Forest.  They have begun hunting the kobolds.  We have no love of the kobolds. but cannot allow the lands of Odus to be overrun by outsiders.  The ways of tranquility are balanced with harmony.  We will not allow chaos to take hold of our land.  Go and find these poachers.  Bring me their heads!!");
 	}
 }
+
 sub EVENT_ITEM {
 	#:: Turn in for 13825 -  Poacher's Head
 	if (plugin::check_handin(\%itemcount, 13825 => 1)) {
@@ -23,6 +24,6 @@ sub EVENT_ITEM {
 		quest::faction(247,20); 	#:: + Peace Keepers
 		quest::faction(145,20); 	#:: + High Council of Erudin
 		quest::faction(142,-20); 	#:: - Heretics
-		}
+	}
 	plugin::return_items(\%itemcount);
 }
