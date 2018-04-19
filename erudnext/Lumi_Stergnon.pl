@@ -21,20 +21,21 @@ sub EVENT_SAY {
 	if ($text=~/important missions/i) {
 		if ($faction <= 4 ) {
 			quest::say("We have need of skilled priests. We have learned that a High Guard battle staff has been stolen. We require a priest to [" . quest::saylink("track down the staff") . "].");
-			}
-			elsif ($faction > 4 ) {
-			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.")
+		}
+		elsif ($faction > 4 ) {
+			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
 		}
 	}
 	if ($text=~/here to pay homage/i) {
 		if ($faction <= 4 ) {
 			quest::say("Then respect our temple and keep your prayers silent.");
-			}
-			elsif ($faction > 4 ) {
-			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.")
+		}
+		elsif ($faction > 4 ) {
+			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
 		}
 	}
 }
+
 sub EVENT_ITEM {
 	#:: Turn in for 13882 -  Box of Bones
 	if (plugin::check_handin(\%itemcount, 13882 => 1)) {
@@ -53,7 +54,7 @@ sub EVENT_ITEM {
 	}
 	#:: Turn in for 13816 Peacekeeper staff
 	if (plugin::check_handin(\%itemcount, 13816 => 1)) {
-		quest::say("You have done well, neophyte.Let me add the touch of harmony to finish the job.. Here, then. Take these supplies. I am sure you'll need them. Soon you may be able to assist us in [" . quest::saylink("important missions") . "]");
+		quest::say("You have done well, neophyte. Let me add the touch of harmony to finish the job.. Here, then. Take these supplies. I am sure you'll need them. Soon you may be able to assist us in [" . quest::saylink("important missions") . "]");
 		#:: Give a small amount of xp
 		quest::exp(600);
 		#:: Ding!
