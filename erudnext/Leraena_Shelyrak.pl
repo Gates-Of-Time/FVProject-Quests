@@ -1,15 +1,17 @@
 sub EVENT_SPAWN {
-  #:: Set up a 50 unit distance
-  $x = $npc->GetX();
-  $y = $npc->GetY();
-  quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Set up a 50 unit distance
+	$x = $npc->GetX();
+	$y = $npc->GetY();
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
 }
+
 sub EVENT_ENTER {
-  #:: Check for 18723 - Tattered Note
-  if (plugin::check_hasitem($client, 18723)) { 
+	#:: Check for 18723 - Tattered Note
+	if (plugin::check_hasitem($client, 18723)) {
 		$client->Message(15,"A commanding, yet kind looking Erudite turns towards you as you attempt to get your bearings. 'Do not be startled. I am Leraena Shelyrak, Guild Master for the Clerics of Quellious. Read the note in your inventory and hand it to me when you are ready to begin your training.'");
-  }
-}  
+	}
+}
+
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Welcome. my child.  I am Leraena Shelyrak. overseer of the Temple of Divine Light. Inside this temple. you may find the path to inner peace.  Introduce yourself to each of the priests and priestesses of the temple as well as the paladins. Together we shall put an end to such disruptive influences as the [" . quest::saylink("kobold shaman") . "].");
@@ -39,6 +41,7 @@ sub EVENT_SAY {
 		#quest::say("You are ready to strike at the body of the kobold shamans power. There is no reasoning with the Kobolds thus there shall be no peace in our beloved lands until their devotion to their wicked deity ceases. Return once again to the Warrens and bring me the unholy symbol worn by the High Shaman.");
 	#}
 }
+
 sub EVENT_ITEM {
 	#:: Turn in for 18723 -  Tattered Note
 	if (plugin::check_handin(\%itemcount, 18770 => 1)) {
