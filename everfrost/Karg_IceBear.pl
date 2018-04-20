@@ -36,34 +36,42 @@ sub EVENT_ITEM {
 	#:: Set a scalar variable to convert currency
 	my $cash = $copper + $silver * 10 + $gold * 100 + $platinum * 1000;
 	#:: Match 13761 - Polar Bear Skin and 5pp
-	if (plugin::check_handin(\%itemcount, 13761 => 1, $cash >= 5000)) {
-		quest::emote("It has been a long time since I crafted items from polar bears. I hope this aids you in your journeys. Farewell, friend, until we meet again");
-		#:: Give a 2912 - Polar Bear Cloak
-		quest::summonitem(2912);
-		quest::ding();
-		#:: Despawn with timer
-		quest::depop_withtimer();
-	}
-	#:: Match 13714 - Werewolf Pelt and 100pp
-	if (plugin::check_handin(\%itemcount, 13714 => 1, $cash >= 100000)) {
-		quest::say("It has been a long time since I crafted items from werewolves. I hope this aids you in your journeys. Farewell, friend, until we meet again");
-		#:: Give a 2401 - Werewolf Skin Cloak
-		quest::summonitem(2401);
-		quest::ding();
-		#:: Despawn with timer
-		quest::depop_withtimer();
+	if ($cash >= 5000) {
+		if (plugin::check_handin(\%itemcount, 13761 => 1)) {
+			quest::emote("It has been a long time since I crafted items from polar bears. I hope this aids you in your journeys. Farewell, friend, until we meet again");
+			#:: Give a 2912 - Polar Bear Cloak
+			quest::summonitem(2912);
+			quest::ding();
+			#:: Despawn with timer
+			quest::depop_withtimer();
+		}
 	}
 	#:: Match 13715 - Werewolf Claws and 75pp
-	if (plugin::check_handin(\%itemcount, 13715 => 1, $cash >= 75000)) {
-		quest::say("It has been a long time since I crafted items from werewolves. I hope this aids you in your journeys. Farewell, friend, until we meet again");
-		#:: Give a 2402 - Lupine Claw Gauntlets
-		quest::summonitem(2402); # Lupine Claw Gauntlets
-		quest::ding();
-		#:: Despawn with timer
-		quest::depop_withtimer();
+	elsif ($cash >= 75000) {
+		if (plugin::check_handin(\%itemcount, 13715 => 1)) {
+			quest::say("It has been a long time since I crafted items from werewolves. I hope this aids you in your journeys. Farewell, friend, until we meet again");
+			#:: Give a 2402 - Lupine Claw Gauntlets
+			quest::summonitem(2402); # Lupine Claw Gauntlets
+			quest::ding();
+			#:: Despawn with timer
+			quest::depop_withtimer();
+		}
+	}
+	#:: Match 13714 - Werewolf Pelt and 100pp
+	elsif ($cash >= 100000) {
+		if (plugin::check_handin(\%itemcount, 13714 => 1)) {
+			quest::say("It has been a long time since I crafted items from werewolves. I hope this aids you in your journeys. Farewell, friend, until we meet again");
+			#:: Give a 2401 - Werewolf Skin Cloak
+			quest::summonitem(2401);
+			quest::ding();
+			#:: Despawn with timer
+			quest::depop_withtimer();
+		}
+	}
+	else {
+		#:: Return unused cash
+		quest::givecash($copper, $silver, $gold, $platinum);
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
-
-# Converted to Perl by SS
