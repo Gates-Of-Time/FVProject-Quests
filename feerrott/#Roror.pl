@@ -42,6 +42,7 @@ sub EVENT_ITEM {
 			#:: Set Faction
 			quest::setfaction(18,10);	#:: +Beta Neutral
 		}
+	}
 	else {
 		quest::givecash($copper, $silver, $gold, $platinum);
 	}
