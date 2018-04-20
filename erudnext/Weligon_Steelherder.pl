@@ -1,16 +1,17 @@
 sub EVENT_SPAWN {
-  #:: Set up a 50 unit distance
-  $x = $npc->GetX();
-  $y = $npc->GetY();
-  quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Set up a 50 unit distance
+	$x = $npc->GetX();
+	$y = $npc->GetY();
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
 }
 
 sub EVENT_ENTER {
-  #:: Check for 18725 - Tattered Note
-  if(plugin::check_hasitem($client, 18725)) { 
+	#:: Check for 18725 - Tattered Note
+	if (plugin::check_hasitem($client, 18725)) {
 		$client->Message(15,"Weligon Steelherder tells you, 'Greetings, A young recruit perhaps? I am Weligon Steelherder, Guild Master of the Deepwater Knights. Read the note in your inventory and then hand it to me when you are ready to begin your training. Truth awaits!'");
-  }
-}  
+	}
+}
+
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Hail, $name! This is the Deepwater Temple. Here you shall find the wisdom and courage of Prexus, the Ocean Lord. I am glad to see you have an interest. Forgive me if I cut our conversation short, but I have many [" . quest::saylink("Deepwater tasks") . "] to complete.");
@@ -20,10 +21,10 @@ sub EVENT_SAY {
 			quest::say("We, the Deepwater Knights, know of your vile ways. You had best leave while you can.");
 		}
 		elsif ($faction = 5 ) {
-        quest::say("There is no reason to dislike you, but we of the Deepwater Knights must see more done for our cause before we truly accept you.")
+			quest::say("There is no reason to dislike you, but we of the Deepwater Knights must see more done for our cause before we truly accept you.");
 		}
 		elsif ($faction > 5 ) {
-        quest::say("We here at the Deepwater Temple must tend to the [" . quest::saylink("Peacekeeper battlestaff") . "] and the [" . quest::saylink("Deepwater harpoon") . "] as well as other duties such as [" . quest::saylink("") . "]. There is always something we must do.")
+			quest::say("We here at the Deepwater Temple must tend to the [" . quest::saylink("Peacekeeper battlestaff") . "] and the [" . quest::saylink("Deepwater harpoon") . "] as well as other duties such as [" . quest::saylink("") . "]. There is always something we must do.");
 		}
 	}
 	if ($text=~/Peacekeeper battlestaff/i) {
@@ -46,6 +47,7 @@ sub EVENT_SAY {
 		quest::say("The Deepwater harpoon's distribution has been restricted by order of the High Council. The last one awarded was to an outsider, the brave and noble paladin, Sentry Xyrin. She hailed from the Temple of Marr.");
 	}
 }
+
 sub EVENT_ITEM {
 	#:: Turn in for 13876 -  Bag of Shark remains
 	if (plugin::check_handin(\%itemcount, 13876 => 1)) {
