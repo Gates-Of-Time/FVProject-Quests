@@ -33,13 +33,17 @@ sub EVENT_ITEM {
 	my $cash = 0;
 	$cash = ($platinum * 1000) + ($gold * 100) + ($silver * 10) + $copper;
 	#:: Match 13990 - Bale of Hay and 66gp
-	if (plugin::check_handin(\%itemcount, 13990 => 1, $cash >= 6600)) {
-		#:: Give a 14320 - Sack of Cursed Hay
-		quest::summonitem(14320);
-		quest::exp(300);
-		quest::ding();
-		#:: Set Faction
-		quest::setfaction(18,10);	#:: +Beta Neutral
+	if ($cash >= 6600) {
+		if (plugin::check_handin(\%itemcount, 13990 => 1)) {
+			#:: Give a 14320 - Sack of Cursed Hay
+			quest::summonitem(14320);
+			quest::exp(300);
+			quest::ding();
+			#:: Set Faction
+			quest::setfaction(18,10);	#:: +Beta Neutral
+		}
+	else {
+		quest::givecash($copper, $silver, $gold, $platinum);
 	}
 	plugin::return_items(\%itemcount);
 }
