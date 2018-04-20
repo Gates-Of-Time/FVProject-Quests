@@ -1,11 +1,12 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::emote("Why. hello there fellow scholar!  Don't you just love books?  I am quite a bookworm myself.  I could read forever!  I am currently working my way through the 'T's.");
+		quest::say("Why. hello there fellow scholar!  Don't you just love books?  I am quite a bookworm myself.  I could read forever!  I am currently working my way through the 'T's.");
 	}
 	if ($text=~/erud's tonic/i) {
-		quest::emote("Erud's Tonic! That is none of your concern!");
+		quest::say("Erud's Tonic! That is none of your concern!");
 	}
 }
+
 sub EVENT_ITEM {
 	#:: Turn in for 13121 -  Innoruuk's Kiss of Death
 	if (plugin::check_handin(\%itemcount, 13121 => 1)) {
