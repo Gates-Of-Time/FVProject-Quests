@@ -47,7 +47,7 @@ sub EVENT_ITEM {
 		}
 	}
 	#:: Match 13715 - Werewolf Claws and 75pp
-	elsif ($cash >= 75000) {
+	if ($cash >= 75000) {
 		if (plugin::check_handin(\%itemcount, 13715 => 1)) {
 			quest::say("It has been a long time since I crafted items from werewolves. I hope this aids you in your journeys. Farewell, friend, until we meet again");
 			#:: Give a 2402 - Lupine Claw Gauntlets
@@ -58,7 +58,7 @@ sub EVENT_ITEM {
 		}
 	}
 	#:: Match 13714 - Werewolf Pelt and 100pp
-	elsif ($cash >= 100000) {
+	if ($cash >= 100000) {
 		if (plugin::check_handin(\%itemcount, 13714 => 1)) {
 			quest::say("It has been a long time since I crafted items from werewolves. I hope this aids you in your journeys. Farewell, friend, until we meet again");
 			#:: Give a 2401 - Werewolf Skin Cloak
