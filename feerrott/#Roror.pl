@@ -40,7 +40,7 @@ sub EVENT_ITEM {
 			quest::exp(300);
 			quest::ding();
 			#:: Set Faction
-			quest::setfaction(18,10);	#:: +Beta Neutral
+			quest::faction(18,10);		#:: +Beta Neutral
 		}
 	}
 	else {
