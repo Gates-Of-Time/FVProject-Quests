@@ -6,6 +6,7 @@ sub EVENT_SAY {
 		quest::say("Very well. You shall face it. In Toxxulia Forest. you shall seek out Kerra Ridge. Once found. you will bring me the tail of a catfisher. Somehow. you shall find a way. They are weak. but they only work near the opposite side of the bridge. along the water's edge.");
 	}
 }
+
 sub EVENT_ITEM {
 	#:: Turn in for 13884 -  Fishy Cat Tail
 	if (plugin::check_handin(\%itemcount, 13884 => 1)) {
