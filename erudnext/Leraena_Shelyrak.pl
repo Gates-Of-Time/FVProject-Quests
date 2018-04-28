@@ -44,7 +44,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Turn in for 18723 -  Tattered Note
-	if (plugin::check_handin(\%itemcount, 18770 => 1)) {
+	if (plugin::check_handin(\%itemcount, 18723 => 1)) {
 		quest::say("Greetings. and welcome to the Temple of Divine Light! Here is your guild tunic. Serve Quellious well. Please see Lumi Stergnon - he has a task for you.");
 		#:: Give item 135546 - Faded Silver Tunic
 		quest::summonitem(13546);
