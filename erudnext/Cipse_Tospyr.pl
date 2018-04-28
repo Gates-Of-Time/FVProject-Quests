@@ -20,17 +20,17 @@ sub EVENT_ITEM {
 	#:: Match 400 copper - 4gp
 	if ($cash == 400) {
 		#:: Cast spell 12 - Healing
-		$npc->CastSpell($userid,12);
+		$npc->CastSpell(12,$userid);
 	}
 	#:: Match 300 copper - 3gp
 	elsif ($cash == 300) {
 		#:: Cast spell 203 - Cure Poison
-		$npc->CastSpell($userid,203);
+		$npc->CastSpell(203,$userid);
 	}
 	#:: Match 200 copper - 2gp
 	elsif ($cash == 200) {
 		#:: Cast spell 213 - Cure Disease
-		$npc->CastSpell($userid,213);
+		$npc->CastSpell(213,$userid);
 	}
 	else {
     		quest::givecash($copper, $silver, $gold, $platinum);
