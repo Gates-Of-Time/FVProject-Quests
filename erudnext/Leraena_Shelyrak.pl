@@ -17,9 +17,9 @@ sub EVENT_SAY {
 		quest::say("Welcome. my child.  I am Leraena Shelyrak. overseer of the Temple of Divine Light. Inside this temple. you may find the path to inner peace.  Introduce yourself to each of the priests and priestesses of the temple as well as the paladins. Together we shall put an end to such disruptive influences as the [" . quest::saylink("kobold shaman") . "].");
 	}
 	if ($text=~/kobold shaman/i) {
-		quest::say("The primitive kobold race has begun to show signs of healing ability.  No doubt this was granted by some evil deity.  Since they are of little power compared to a much more superior race such as ours. we only require the talents of young priests to [" . quest::saylink("slay the kobold shaman") . "].");
+		quest::say("The primitive kobold race has begun to show signs of healing ability.  No doubt this was granted by some evil deity.  Since they are of little power compared to a much more superior race such as ours. we only require the talents of young priests to [" . quest::saylink("slay") . "] the kobold shaman.");
 	}
-	if ($text=~/slay the kobold shaman/i) {
+	if ($text=~/slay/i) {
 		quest::say("You are so young...  Go to Toxxulia and find these kobold shamans.  Cut off their paws and return them to me.  I require three paws as proof of your worth to our temple.");
 	}
 	if ($text=~/guild coin/i) {
