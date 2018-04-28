@@ -23,7 +23,7 @@ sub EVENT_ITEM {
 		#:: Set faction
 		quest::faction(247,20); 	#:: + Peace Keepers
 		quest::faction(145,20); 	#:: + High Council of Erudin
-		quest::faction(142,-20); 	#:: - Heretics
+		quest::faction(143,-20); 	#:: - Heretics
 	}
 	plugin::return_items(\%itemcount);
 }
