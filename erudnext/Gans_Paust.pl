@@ -29,7 +29,7 @@ sub EVENT_SAY {
 		#:: Give item 51121 - Tradeskill Basics : Volume I
 		quest::summonitem(51121);
 	}
-	if ($text=~/trades/i) {
+	if ($text=~/second book/i) {
 		quest::say("Here is the second volume of the book you requested, may it serve you well!");
 		#:: Give item 51122 - Tradeskill Basics : Volume II
 		quest::summonitem(51122);
