@@ -21,8 +21,8 @@ sub EVENT_ENTERZONE {
 	}
 }
 
-sub EVENT_COMMAND {
-	if ($command eq "melody") {
+sub EVENT_SAY {
+	if ($text eq "/melody") {
 		quest::ding();
 	}
 }
