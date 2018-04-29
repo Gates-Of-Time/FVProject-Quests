@@ -22,7 +22,7 @@ sub EVENT_ENTERZONE {
 }
 
 sub EVENT_SAY {
-	if ($text eq "/melody") {
+	if ($text=~//melody/i) {
 		quest::ding();
 	}
 }
