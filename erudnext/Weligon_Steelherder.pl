@@ -17,34 +17,92 @@ sub EVENT_SAY {
 		quest::say("Hail, $name! This is the Deepwater Temple. Here you shall find the wisdom and courage of Prexus, the Ocean Lord. I am glad to see you have an interest. Forgive me if I cut our conversation short, but I have many [" . quest::saylink("Deepwater tasks") . "] to complete.");
 	}
 	if ($text=~/Deepwater tasks/i) {
-		if ($faction < 5 ) {
+		#:: Match if faction is Apprehensive or worse
+		if ($faction > 5 ) {
 			quest::say("We, the Deepwater Knights, know of your vile ways. You had best leave while you can.");
 		}
+		#:: Match if faction is Indifferent
 		elsif ($faction = 5 ) {
 			quest::say("There is no reason to dislike you, but we of the Deepwater Knights must see more done for our cause before we truly accept you.");
 		}
-		elsif ($faction > 4 ) {
+		#:: Match if faction is Amiably or better
+		elsif ($faction < 4 ) {
 			quest::say("We here at the Deepwater Temple must tend to the [" . quest::saylink("Peacekeeper battlestaff") . "] and the [" . quest::saylink("Deepwater harpoon") . "] as well as other duties such as [" . quest::saylink("") . "]. There is always something we must do.");
 		}
 	}
 	if ($text=~/Peacekeeper battlestaff/i) {
-		quest::say("Every sentinel in Erudin carries a High Guard battlestaff.  The creation of these weapons is the duty of the Deepwater Temple and the Temple of Divine Light.  Our portion of the task is to send young members to [" . quest::saylink("collect the Pearls of Odus") . "].  These are imbedded into the staff and used to store mystical power.");
+		#:: Match if faction is Amiably or better
+		if ($faction < 4 ) {
+			quest::say("Every sentinel in Erudin carries a High Guard battlestaff.  The creation of these weapons is the duty of the Deepwater Temple and the Temple of Divine Light.  Our portion of the task is to send young members to [" . quest::saylink("collect the Pearls of Odus") . "].  These are imbedded into the staff and used to store mystical power.");
+		}
+		#:: Match if faction is Apprehensive or worse
+		elsif ($faction > 5 ) {
+			quest::say("We, the Deepwater Knights, know of your vile ways. You had best leave while you can.");
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction = 5 ) {
+			quest::say("There is no reason to dislike you, but we of the Deepwater Knights must see more done for our cause before we truly accept you.");
+		}
 	}
 	if ($text=~/ocean protection/i) {
-		quest::say("In the name of Prexus, we are sworn to protect all ocean creatures.  We have heard reports of a shark carrying a deadly malady.  We believe she is pregnant.  If she delivers her young to the ocean, it will endanger all other creatures.  We need to find a young paladin to [" . quest::saylink("hunt the diseased shark") . "].");
+		#:: Match if faction is Amiably or better
+		if ($faction < 4 ) {
+			quest::say("In the name of Prexus, we are sworn to protect all ocean creatures.  We have heard reports of a shark carrying a deadly malady.  We believe she is pregnant.  If she delivers her young to the ocean, it will endanger all other creatures.  We need to find a young paladin to [" . quest::saylink("hunt the diseased shark") . "].");
+		}
+		#:: Match if faction is Apprehensive or worse
+		elsif ($faction > 5 ) {
+			quest::say("We, the Deepwater Knights, know of your vile ways. You had best leave while you can.");
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction = 5 ) {
+			quest::say("There is no reason to dislike you, but we of the Deepwater Knights must see more done for our cause before we truly accept you.");
+		}
 	}
 	if ($text=~/hunt the diseased shark/i) {
-		quest::say("Ah, yes!  Take this bag with you.  When you have collected the remains of the diseased shark and no fewer than three of her young in it, combine them in it and return it to me.  Then, you shall get your reward.");
-		#:: Give item 17938 - Empty Shark Bag
-		quest::summonitem(17938);
+		#:: Match if faction is Amiably or better
+		if ($faction < 4 ) {
+			quest::say("Ah, yes!  Take this bag with you.  When you have collected the remains of the diseased shark and no fewer than three of her young in it, combine them in it and return it to me.  Then, you shall get your reward.");
+			#:: Give item 17938 - Empty Shark Bag
+			quest::summonitem(17938);
+		}
+		#:: Match if faction is Apprehensive or worse
+		elsif ($faction > 5 ) {
+			quest::say("We, the Deepwater Knights, know of your vile ways. You had best leave while you can.");
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction = 5 ) {
+			quest::say("There is no reason to dislike you, but we of the Deepwater Knights must see more done for our cause before we truly accept you.");
+		}
 	}
 	if ($text=~/collect the Pearls of Odus/i) {
-		quest::say("Then venture to the harbor of Erudin. There, you shall dive into the shark-infested water and search for the Pearls of Odus. They lie upon the grounds of our waters.  Fill the bag I have given you, combine it, and return it to me.  Good luck.");
-		#:: Give item 17939 - Empty  Bag
-		quest::summonitem(17939);
+		#:: Match if faction is Amiably or better
+		if ($faction < 4 ) {
+			quest::say("Then venture to the harbor of Erudin. There, you shall dive into the shark-infested water and search for the Pearls of Odus. They lie upon the grounds of our waters.  Fill the bag I have given you, combine it, and return it to me.  Good luck.");
+			#:: Give item 17939 - Empty  Bag
+			quest::summonitem(17939);
+		}
+		#:: Match if faction is Apprehensive or worse
+		elsif ($faction > 5 ) {
+			quest::say("We, the Deepwater Knights, know of your vile ways. You had best leave while you can.");
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction = 5 ) {
+			quest::say("There is no reason to dislike you, but we of the Deepwater Knights must see more done for our cause before we truly accept you.");
+		}
 	}
 	if ($text=~/Deepwater harpoon/i) {
-		quest::say("The Deepwater harpoon's distribution has been restricted by order of the High Council. The last one awarded was to an outsider, the brave and noble paladin, Sentry Xyrin. She hailed from the Temple of Marr.");
+		#:: Match if faction is Amiably or better
+		if ($faction < 4 ) {
+			quest::say("The Deepwater harpoon's distribution has been restricted by order of the High Council. The last one awarded was to an outsider, the brave and noble paladin, Sentry Xyrin. She hailed from the Temple of Marr.");
+		}
+		#:: Match if faction is Apprehensive or worse
+		elsif ($faction > 5 ) {
+			quest::say("We, the Deepwater Knights, know of your vile ways. You had best leave while you can.");
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction = 5 ) {
+			quest::say("There is no reason to dislike you, but we of the Deepwater Knights must see more done for our cause before we truly accept you.");
+		}
 	}
 }
 
