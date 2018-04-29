@@ -17,7 +17,10 @@ sub WAYPOINT_ARRIVE {
 }
 
 sub EVENT_SAY {
-	if ($text=~/an escort/i) {
+	if ($text=~/hail/i) {
+		quest::say("Hail, traveler! Might I escort you through to Highpass? The path ahead is filled with giants and many other hungry beasts. I assure you, you will be safe with me. I must admit, I am quite experienced in the ways of the warrior. Do you [" . quest::saylink("wish an escort") . "] or will you [" . quest::saylink("travel alone") . "]");
+	}
+	if ($text=~/wish an escort/i) {
 		quest::say("I shall be honored to escort you to Highpass, but you shall have to wait for a spell. I make trips every few hours. I also would be grateful to any who wish to donate gold coins to the upkeep of my armor. The rains in the plains cause much rusting.");
 	}
 	if ($text=~/travel alone/i) {
