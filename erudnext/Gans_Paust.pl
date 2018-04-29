@@ -60,6 +60,11 @@ sub EVENT_ITEM {
 		quest::exp(100);
 		#:: Ding!
 		quest::ding();
+		#:: Set faction
+		quest::faction(79,25);		#:: + Deepwater Knights
+		quest::faction(145,3);		#:: + High Council of Erudin
+		quest::faction(143,-3);	#:: - Heretics
+
 	}
 	plugin::return_items(\%itemcount);
 }
