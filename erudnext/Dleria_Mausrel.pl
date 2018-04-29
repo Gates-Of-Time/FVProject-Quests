@@ -28,7 +28,7 @@ sub EVENT_ITEM {
 		quest::faction(145,10);		#:: + High Council of Erudin
 		quest::faction(143,-15);	#:: - Heretics
 		#:: Give a small amount of cash copper - plat
-		quest::givecash(0,5,14,0);
+		quest::givecash(0,14,5,0);
 	}
 	#:: Match turn in for 13880 - Bag of Zombie Flesh
 	if (plugin::check_handin(\%itemcount, 13880 => 1)) {
@@ -42,7 +42,7 @@ sub EVENT_ITEM {
 		quest::faction(145,10);		#:: + High Council of Erudin
 		quest::faction(143,-15);	#:: - Heretics
 		#:: Give a small amount of cash copper - plat
-		quest::givecash(0,4,12,0);
+		quest::givecash(0,12,4,0);
 	}
 	plugin::return_items(\%itemcount);
 }
