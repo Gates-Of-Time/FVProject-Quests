@@ -20,3 +20,10 @@ sub EVENT_ENTERZONE {
 		$PetID->Kill();
 	}
 }
+
+sub EVENT_COMMAND {
+	if ($text=~/melody/i) {
+		$client->Stun(1);
+		quest::ding();
+	}
+}
