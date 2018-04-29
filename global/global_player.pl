@@ -23,7 +23,6 @@ sub EVENT_ENTERZONE {
 
 sub EVENT_COMMAND {
 	if ($text=~/melody/i) {
-		$client->Stun(1);
 		quest::ding();
 	}
 }
