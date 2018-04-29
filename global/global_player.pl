@@ -20,9 +20,3 @@ sub EVENT_ENTERZONE {
 		$PetID->Kill();
 	}
 }
-
-sub EVENT_SAY {
-	if ($text=~//melody/i) {
-		quest::ding();
-	}
-}
