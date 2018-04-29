@@ -17,17 +17,17 @@ sub EVENT_SAY {
 		quest::say("Hail, $name! This is the Deepwater Temple. Here you shall find the wisdom and courage of Prexus, the Ocean Lord. I am glad to see you have an interest. Forgive me if I cut our conversation short, but I have many [" . quest::saylink("Deepwater tasks") . "] to complete.");
 	}
 	if ($text=~/Deepwater tasks/i) {
-		#:: Match if faction is Apprehensive or worse
-		if ($faction > 5 ) {
-			quest::say("We, the Deepwater Knights, know of your vile ways. You had best leave while you can.");
+		#:: Match if faction is Amiably or better
+		if ($faction < 4 ) {
+			quest::say("We here at the Deepwater Temple must tend to the [" . quest::saylink("Peacekeeper battlestaff") . "] and the [" . quest::saylink("Deepwater harpoon") . "] as well as other duties such as [" . quest::saylink("") . "]. There is always something we must do.");
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction = 5 ) {
 			quest::say("There is no reason to dislike you, but we of the Deepwater Knights must see more done for our cause before we truly accept you.");
 		}
-		#:: Match if faction is Amiably or better
-		elsif ($faction < 4 ) {
-			quest::say("We here at the Deepwater Temple must tend to the [" . quest::saylink("Peacekeeper battlestaff") . "] and the [" . quest::saylink("Deepwater harpoon") . "] as well as other duties such as [" . quest::saylink("") . "]. There is always something we must do.");
+		#:: Match if faction is Apprehensive or worse
+		elsif ($faction > 5 ) {
+			quest::say("We, the Deepwater Knights, know of your vile ways. You had best leave while you can.");
 		}
 	}
 	if ($text=~/Peacekeeper battlestaff/i) {
