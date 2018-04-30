@@ -26,7 +26,7 @@ sub EVENT_ITEM {
 		quest::faction(247,5); 		#:: + Peace Keepers
 		quest::faction(145,-10); 	#:: - High Council of Erudin
 		quest::faction(143, 5); 	#:: + Heretics
-		quest::givecash(3,20,0,0);	#:: Give a small amount of cash copper - plat
+		quest::givecash(0,0,20,3);	#:: Give a small amount of cash copper - plat
 	}
 	plugin::return_items(\%itemcount);
 }
