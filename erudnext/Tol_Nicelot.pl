@@ -3,9 +3,6 @@ sub EVENT_SAY {
 		quest::say("I have no time to waste with strangers!");
 	}
 	if ($text=~/moodoro/i) {
-		quest:say("Yes, I knew Moodoro Finharn. He used to be a good friend until he started visiting Qeynos and indulging in human vices. He was executed for crimes against the state. Not even his sister Nolusia could get the charge dropped. There have been some who say he escaped execution and lives in Qeynos. That is insane babbling.");
-	}
-	if ($text=~/moodoro/i) {
 		quest::say("Yes, I knew Moodoro Finharn. He used to be a good friend until he started visiting Qeynos and indulging in human vices. He was executed for crimes against the state. Not even his sister [" . quest::saylink("Nolusia") . "] could get the charge dropped. There have been some who say he escaped execution and lives in Qeynos. That is insane babbling.");
 	}
 	if ($text=~/Nolusia/i) {
