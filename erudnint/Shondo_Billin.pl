@@ -21,6 +21,13 @@ sub EVENT_ITEM {
 		quest::faction(210,10);		#:: Merchants of Ak'Anon +10
 		quest::faction(176,10);		#:: King Ak'Anon +10
 		quest::faction(71,-30);		#:: Dark Reflection -30
+		quest::faction(39,-10);		#:: Clan Grikbar -10
 	}
 	plugin::return_items(\%itemcount);
+}
+
+sub EVENT_COMBAT {
+	if ($combat_state == 1) {
+		quest::say("Die by lava - Die by flame - Fire Peak goblins kill and maim.");
+	}
 }
