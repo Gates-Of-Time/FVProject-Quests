@@ -16,7 +16,7 @@ sub EVENT_ITEM {
 	#:: Turn in for 18700 -  Tome of Order and Discord
 	if (plugin::check_handin(\%itemcount, 18700 => 1)) {
 		quest::say("I see you wish to join us in Discord! Welcome! By turning your back on the protection of Order you are now open to many more opportunities for glory and power. Remember that you can now be harmed by those who have also heard the call of Discord.");
-		quest::pvp(on);
+		quest::pvp("on");
 		quest::ding();
 	}
 	plugin::return_items(\%itemcount);
