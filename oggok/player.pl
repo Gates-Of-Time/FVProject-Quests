@@ -1,6 +1,6 @@
 sub EVENT_CLICK_OBJECT {
 	#:: Match to the ogre cultural forge in Oggok by object ID
-	if ($objectid == 1075) {
+	if ($objectid == 19) {
 		#:: Check to see if the player who clicked is a race other than Ogre
 		if ($race ne "Ogre") {
 			#:: Send the client a message in color 1 (gray)
