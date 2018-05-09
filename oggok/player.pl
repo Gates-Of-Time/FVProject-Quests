@@ -1,7 +1,7 @@
 sub EVENT_CLICK_OBJECT {
 	quest::say($objectid);
 	#:: Match to the ogre cultural forge in Oggok by object ID
-	if ($objectid == 19) {
+	if ($objectid == 673) {
 		#:: Check to see if the player who clicked is a race other than Ogre
 		if ($race ne "Ogre") {
 			#:: Send the client a message in color 1 (gray)
