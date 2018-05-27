@@ -104,7 +104,7 @@ sub EVENT_SAY {
 			quest::say("There is no reason to dislike you, but we of the Deepwater Knights must see more done for our cause before we truly accept you.");
 		}
 	}
-		if ($text=~/prove allegiance to Erudin/i) {
+	if ($text=~/prove allegiance to Erudin/i) {
 		#:: Match if faction is Amiably or better
 		if ($faction < 4 ) {
 			quest::say("Yes, you are ready. We have heard rumors of a great bridge which will connect Antonica with Odus!! This must not happen! We must shield ourselves from the savage and evil ways of the other races. They say that a list exists. A list of three grand architects who wish to see this bridge erected. You will venture to Qeynos and find the list, then exterminate these three men. Return the list along with their heads and the Deepwater Harpoon is yours. Go!!");
