@@ -93,7 +93,21 @@ sub EVENT_SAY {
 	if ($text=~/Deepwater harpoon/i) {
 		#:: Match if faction is Amiably or better
 		if ($faction < 4 ) {
-			quest::say("The Deepwater harpoon's distribution has been restricted by order of the High Council. The last one awarded was to an outsider, the brave and noble paladin, Sentry Xyrin. She hailed from the Temple of Marr.");
+			quest::say("We do not award the Deepwater harpoon to just any paladin. Nobility is all well and good, but you must still prove yourself. We have heard rumors of a very distressing matter. Perhaps it is your calling. Are you ready to [" . quest::saylink("prove allegiance to Erudin") . "] and earn the Deepwater harpoon?");
+		}
+		#:: Match if faction is Apprehensive or worse
+		elsif ($faction > 5 ) {
+			quest::say("We, the Deepwater Knights, know of your vile ways. You had best leave while you can.");
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction = 5 ) {
+			quest::say("There is no reason to dislike you, but we of the Deepwater Knights must see more done for our cause before we truly accept you.");
+		}
+	}
+	if ($text=~/prove allegiance to Erudin/i) {
+		#:: Match if faction is Amiably or better
+		if ($faction < 4 ) {
+			quest::say("Yes, you are ready. We have heard rumors of a great bridge which will connect Antonica with Odus!! This must not happen! We must shield ourselves from the savage and evil ways of the other races. They say that a list exists. A list of three grand architects who wish to see this bridge erected. You will venture to Qeynos and find the list, then exterminate these three men. Return the list along with their heads and the Deepwater Harpoon is yours. Go!!");
 		}
 		#:: Match if faction is Apprehensive or worse
 		elsif ($faction > 5 ) {
