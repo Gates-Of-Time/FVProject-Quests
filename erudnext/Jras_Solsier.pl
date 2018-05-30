@@ -25,8 +25,8 @@ sub EVENT_ITEM {
 		quest::faction(145,20); 	#:: + High Council of Erudin
 		quest::faction(143,-20); 	#:: - Heretics
 	}
-	#:: Turn in for 14120 -  Barbaria Head
-	if (plugin::check_handin(\%itemcount, 14120 => 1)) {
+	#:: Turn in for 13913 -  Barbaria Head (Talym's Head)
+	if (plugin::check_handin(\%itemcount, 13913 => 1)) {
 		quest::say("It is done! Quellious will look favorably upon our church and we will look favorably upon you. Go in peace");
 		#:: Give item 15202 - Spell: Courage
 		quest::summonitem(15202);
@@ -39,7 +39,7 @@ sub EVENT_ITEM {
 		quest::faction(145,20); 	#:: + High Council of Erudin
 		quest::faction(143,-20); 	#:: - Heretics
 		#:: Give small amount of cash
-		uest::givecash(0,2,1,0);
+		quest::givecash(0,2,1,0);
 	}
 	plugin::return_items(\%itemcount);
 }
