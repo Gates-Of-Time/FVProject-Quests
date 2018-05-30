@@ -4,7 +4,7 @@ sub EVENT_SAY {
 	}
 	if ($text=~/study/i) {
 		quest::say("Then I welcome you into our circle. It is good to see new blood. I have a favor to ask of you. Do you wish to [" . quest::saylink("assist Toresian") . "] or do you not have the time?");
-		if (!$entity_list->IsMobSpawnedByNpcTypeID(23080) || !$entity_list->IsMobSpawnedByNpcTypeID(23001) {
+		if (!$entity_list->IsMobSpawnedByNpcTypeID(23080) || !$entity_list->IsMobSpawnedByNpcTypeID(23001)) {
 			quest::unique_spawn(quest::ChooseRandom(23080,23001),0,0,575,683,-12.13,78);
 		}
 	}
