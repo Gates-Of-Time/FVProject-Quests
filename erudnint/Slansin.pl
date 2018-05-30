@@ -8,7 +8,7 @@ sub EVENT_ITEM {
 	#:: Match turn in for 13983 - Inert Potion
 	if (plugin::check_handin(\%itemcount, 13983 => 1)) {
 		#:: Create a scalar variable for mob class
-		my $mobclass = $npc->GetCLass();
+		my $mobclass = $npc->GetClass();
 		#:: Match if class is 41 - shopkeeper
 		if ($mobclass == 41) {
 			quest::say("Thank you. I have been expecting this. We require it for mixing.");
