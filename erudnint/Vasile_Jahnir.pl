@@ -12,7 +12,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match turn in for 13078 - Summoned: Black Bread, 7305 - Summoned: Dagger
-	if (plugin::check_handin(\%itemcount, 13078 => 1, 7305 => 1)) {
+	if (plugin::check_handin(\%itemcount, 13078 => 2, 7305 => 2)) {
 		quest::say("You have mastered these spells quickly. You shall now wear the gloves of the Gatecaller. Cumbersome they may feel, but they protect the hands of a young magician. In your young days of magic they will protect you from harm. They are not valued much by merchants, but they are prized by other circles. Nevertheless, we offer them only to our young Gatecallers. You may now be of assistance with a [" . quest::saylink("slight problem") . "].");
 		#:: Give item 12209 - Gloves of the Gatecaller
 		quest::summonitem(12209);
