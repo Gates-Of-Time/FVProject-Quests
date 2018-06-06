@@ -14,6 +14,12 @@ sub EVENT_SAY {
 	if ($text=~/titanic bridge/i) {
 		quest::say("My grand plan has always been to erect a bridge which would span the distance between Qeynos and Odus. It would bypass the city of Erudin. Antonius Bayle would take full control of the bridge and its adjacent territories. This has had some opposition in Erudin, but for the most part, they just believe it is impossible to build such a bridge.");
 	}
+	if ($text=~/three great engineers/i) {
+		quest::say("They are some of the finest engineers in all of Norrath. Young, they may be, but as smart as the wisest architects I have ever met. That reminds me.. I must have a list of the engineers somewhere.. [" . quest::saylink("Where is it") . "]?");
+	}
+	if ($text=~/Where is it/i) {
+		quest::say("Do not concern yourself with the list. It is of no concern to you. I do not even have it. It is tucked away safely at home.");
+	}
 	if ($text=~/dontation/i) {
 		quest::say("I would be pleased to help out such a noble organization. Here you are, my good friend. See you at weekly services!");
 		#:: Give item 13290 - A Donation (*Donation 1)
