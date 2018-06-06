@@ -7,6 +7,8 @@ sub EVENT_SAY {
 	}
 	if ($text=~/protect the depths/i) {
 		quest::say("We have heard of zombies inhabiting the depths of Erud's Crossing. Go and seek them out. Destroy them. This evil should not exist within the realm of the Ocean Lord. Take this bag. Fill it with their rotting flesh. combine it and return it to me. May Prexus guide you.");
+		#:: Give item 17939 - Empty Bag (*Zombie Flesh Bag)
+		quest::summonitem(17939);
 	}
 	if ($text=~/convert fishermen in Qeynos/i) {
 		quest::say("So you wish to journey to Qeynos? So be it. Go to Qeynos and find me a willing convert. Ask them if they wish the blessing of Prexus. If so, they should snap their pole in two and you will return it to me. Do this and be rewarded.");
