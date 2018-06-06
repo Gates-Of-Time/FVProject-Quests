@@ -34,10 +34,10 @@ sub EVENT_ITEM {
 		#:: Give a 12220 - Everburn Candle
 		quest::summonitem(12220);
 		#:: Set Factions
-		quest::faction(213,3); 		# Merchants of Halas
-		quest::faction(361,3);		# Wolves of the North
-		quest::faction(294,3);		# Shamen of Justice
-		quest::givecash(1,0,0,0);
+		quest::faction(213,25); 	# Merchants of Halas
+		quest::faction(361,18);		# Wolves of the North
+		quest::faction(294,18);		# Shamen of Justice
+		quest::givecash(0,0,0,1);
 		quest::ding();
 		quest::exp(250);
 	}
