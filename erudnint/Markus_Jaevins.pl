@@ -19,14 +19,20 @@ sub EVENT_SAY {
 	if ($text=~/crime/i) {
 		quest::say("Oh, yes. We here in Erudin have no crime. Actually, it is a very low crime rate. Most of those crimes are committed by the defective brains of [" . quest::saylink("heretics") . "] or inferior, non-Erudite races.");
 	}
+	if ($text=~/Who are you?/i) {
+		quest::say("Markus Jaevins is the highest ranking official in Erudin");
+	}
 	if ($text=~/heretics/i) {
 		quest::say("The heretics are our sworn enemies. Their ancient origins are our own, however, they are the mad Erudites who chose the dark side of magic called necromancy. We, the magicians, caught one snooping in the palace just last week. He is now our [" . quest::saylink("prisoner") . "].");
 	}
 	if ($text=~/prisoner/i) {
-		quest::say("The infidel was memorizing our spells to take to the rest of the heretic scum. He will finally be [" . quest::saylink("purged") . "] today. Could you please go to the cells here in the palace and ask Jail Master Lius to give you the heretic's remains?");
+		quest::say("The infidel was memorizing our spells to take to the rest of the heretic scum. He will finally be [" . quest::saylink("purged") . "] today. Could you please go to the cells here in the palace and ask  [" . quest::saylink("Jail Master Lius") . "] to give you the heretic's remains?");
 	}
 	if ($text=~/purged/i) {
 		quest::say("To be purged is to take all the evil from ones body and set your soul free. Through magical means, the Erudite Cleansers pull the accused's organs out through the mouth. When all is done, you can be assured the body is cleansed of all evil.");
+	}
+	if ($text=~/Jail Master Lius/i) {
+		quest::say("The prison is on the lower level of the palace inside the City Office.");
 	}
 	if ($text=~/heretic has escaped/i) {
 		quest::say("Escaped!! This is not good. The sentinels will not find him in time. You must find him. When you find him, release his soul and rid his body of evil any way you can. Bring me proof and all will be well.");
