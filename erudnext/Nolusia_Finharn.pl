@@ -9,7 +9,7 @@ sub EVENT_SAY {
 		quest::say("Moodoro Finharn is my brother. He was a good boy up until he met that accursed halfling named [" . quest::saylink("Flynn") . "] Merrington.");
 	}
 	if ($text=~/Flynn/i) {
-		quest::say("Flynn Merrington talked my brother into stealing waters from the [Vasty Deep] and selling them to any buyers they could find. The waters from the Vasty Deep are sacred. That is why they started their [" . quest::saylink("business") . "].");
+		quest::say("Flynn Merrington talked my brother into stealing waters from the [" . quest::saylink("Vasty Deep") . "] and selling them to any buyers they could find. The waters from the Vasty Deep are sacred. That is why they started their [" . quest::saylink("business") . "].");
 	}
 	if ($text=~/vasty deep/i) {
 		quest::say("The Vasty Deep waters are said to be magical. Of course this is rumor, but it does not stop magic users from all over Norrath from trying to obtain some of the waters.");
