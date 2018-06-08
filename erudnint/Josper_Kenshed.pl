@@ -7,6 +7,8 @@ sub EVENT_SAY {
 	}
 	if ($text=~/collect components/i) {
 		quest::say("Of course you may assist me!! We have much need of a certain item which can only be found in the frigid peaks of Everfrost. There you shall find creatures called ice goblins. Take this bag and fill it with ice goblin beads and be sure to combine them before you return them. Well, then... Off with you!! And be quick about it and I shall give you a fine wizard's weapon. None of this rust-covered garbage offered by our associates!");
+		#:: Give item 17944 - Empty Bag (*Bag for Ice Necklaces)
+		quest::summonitem(17944);
 	}
 	if ($text=~/special matter/i) {
 		quest::say("An old friend of mine cannot rest till he his research is finished.  If I only knew what he was working on. Go to the forest of Toxxulia and seek him out. Bring me back what information you can find about what he was researching before his demise.");
