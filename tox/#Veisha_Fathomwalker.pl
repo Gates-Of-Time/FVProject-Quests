@@ -13,7 +13,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 12998 - Rolled up Note
 	if (plugin::check_handin(\%itemcount, 12998 => 1)) {
-		quest::say("Davorre, he is still alive! All these years I had thought him dead. He has kept his promise to me, and yet my most recent actions betray him so. I did not know. Here. Please give this to him with my most sincere regrets. I have moved on with my life and it is good to know that he is alive and well. But [" . quest::saylink("Phaefil") . "] is now my life.");
+		quest::say("Davorre, he is still alive! All these years I had thought him dead. He has kept his promise to me, and yet my most recent actions betray him so. I did not know. Here. Please give this to him with my most sincere regrets. I have moved on with my life and it is good to know that he is alive and well. But [" . quest::saylink("Phaeril") . "] is now my life.");
 		#:: Give a 12997 - Veisha's Engagement Ring
 		quest::summonitem(12997);
 		#:: Grant a small amount of experience
