@@ -1,11 +1,11 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Stand at attention!!  I am General Jyleel. of the Koada'Vie. defenders of Felwithe.  Do you [" . quest::saylink("follow Tunare") . "]. the Mother of All. or do you still [" .. eq.say_link("seek my enlightenment",false,"seek your enlightenment") .. "]?");
+		quest::say("Stand at attention!!  I am General Jyleel. of the Koada'Vie. defenders of Felwithe.  Do you [" . quest::saylink("follow Tunare") . "]. the Mother of All. or do you still [" . quest::saylink("seek enlightenment") . "]?");
 	}
 	if ($text=~/follow Tunare/i) {
 		quest::say("Then you are wise indeed.  Would you like to [" . quest::saylink("assist the defenders") . "] in our conflicts or have you other business to attend to?");
 	}
-	if ($text=~/seek my enlightenment/i) {
+	if ($text=~/seek enlightenment/i) {
 		quest::say("Then seek it within these walls.  We welcome all fine upstanding Koada'Dal.");
 	}
 	if ($text=~/assist the defenders/i) {
