@@ -20,7 +20,7 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-#:: Turn in for the Illegible Scroll Quest, 13225 Illegible Scroll
+	#:: Turn in for the Illegible Scroll Quest, 13225 Illegible Scroll
 	if (plugin::check_handin(\%itemcount, 13225=> 1)) {
 		quest::say("Very fine work. A pity you are not Koada'Vie. Here is a small reward for you. Anytime you come upon an oracle. remember to return its scroll to me. Go and find your fate on the field of battle.");
 		#:: Randomly choose Spell: Minor Healing, Spell: Invisibility, Spell: Endure Disease, Rotted Illegible Scroll, Spell: Lesser Shielding, Spell: Serpent Sight
@@ -60,7 +60,7 @@ sub EVENT_ITEM {
 		quest::faction(178,5); 		#:: + King Tearis Thex
 		quest::faction(8,3); 		#:: + Anti Mage
 	}
-		#:: Turn in for the Falchion Quest , 12330 A Large Locked Crate, 12329 Blue Orc Head, 13227 Black Heart
+	#:: Turn in for the Falchion Quest , 12330 A Large Locked Crate, 12329 Blue Orc Head, 13227 Black Heart
 	if (plugin::check_handin(\%itemcount, 12330 => 1, 12329 => 1, 13227 => 1)) {
 		quest::say("A noble deed has been done and the alliance of evil has been stalled. I present you with the falchion of the Koada`Vie. You are now an honorable member of our order. Hail Felwithe, and may you defender her with honor.");
 		#:: Give a little xp
