@@ -28,7 +28,7 @@ sub EVENT_SAY {
 	if ($text=~/wish to leave/i) {
 		#:: Match if faction is Amiably or better
 		if ($faction < 5) {
-			quest::say("There is only insufferable labor and merciless torment here, stranger. Kaya Rishareth has condemned her eternal self to servitude in the War Forge -- her selfless act malignantly repaid by the gods with this existence. Her spirit died here long ago and her life's [" . quest::saylink("effort and struggles") . "] were ultimately for naught.");
+			quest::say("There is only insufferable labor and merciless torment here, stranger. Kaya Rishareth has condemned her eternal self to servitude in the War Forge -- her selfless act malignantly repaid by the gods with this existence. Her spirit died here long ago and her life's effort and struggles were ultimately for naught.");
 			quest::attack($name);
 		}
 		#:: Match if faction is Indifferent or worse
@@ -39,7 +39,7 @@ sub EVENT_SAY {
 	if ($text=~/accept the mission/i) {
 		#:: Match if faction is Kindly or better
 		if ($faction < 4) {
-			quest::say("In her mortal life, Kaya Rishareth was a keeper of tranquility and served her beloved child-like goddess with every fiber of her being. A native to the free city of Freeport, Kaya found herself traveling on her own as soon as her master would allow. Erudin was the destination she chose and it was the temples dedicated to The Tranquil where she sought to learn more about her goddess and perhaps share philosophies and knowledge with the High Men. Erudin received her graciously and for nearly a year, she studied the High Men's way of worship and reverence to their shared deity. However, tranquility is easily disrupted and those who seek it, must also [" . quest::saylink("defend it") . "].");			
+			quest::say("In her mortal life, Kaya Rishareth was a keeper of tranquility and served her beloved child-like goddess with every fiber of her being. A native to the free city of Freeport, Kaya found herself traveling on her own as soon as her master would allow. Erudin was the destination she chose and it was the temples dedicated to The Tranquil where she sought to learn more about her goddess and perhaps share philosophies and knowledge with the High Men. Erudin received her graciously and for nearly a year, she studied the High Men's way of worship and reverence to their shared deity. However, tranquility is easily disrupted and those who seek it, must also defend it.");			
 		}
 		#:: Match if faction is Amiably or worse
 		else {
