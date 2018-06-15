@@ -8,25 +8,19 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Set a scalar variable to accept only gold
-	my $cash = $gold);
- 	#:: Match if cash is greater than 500 gp
-	if ($cash >= 1000) {
-		#:: Match a 7113 - Potion of Sorrow
-		if (plugin::check_handin(\%itemcount, 7113 => 1)) {
-			quest::say("Excuse me while I add some other items to this mix.  There. Finished. Here you go, and thank you for your business.");
-			#:: Grant a small amount of experience
-			quest::exp(1250);
-			#:: Give a 7112 - Empty Crystal Sphere
-			quest::summonitem(7112);
-			#:: Ding!
-			quest::ding();
-			#:: Set factions
-			quest::faction(112,1);	# + Gate Callers
-			quest::faction(145,1);	# + High Council of Erudin
-			quest::faction(147,1);	# + High Guard of Erudin
-			quest::faction(143,-1);	# - Heretics
-		}
+ 	#:: Match if cash is greater than 1000 gp and for a 7113 - Potion of Sorrow
+	if (plugin::check_handin(\%itemcount, 7113 => 1) && $gold >= 1000) {
+		quest::say("Excuse me while I add some other items to this mix.  There. Finished. Here you go, and thank you for your business.");			#:: Grant a small amount of experience
+		quest::exp(1250);
+		#:: Give a 7112 - Empty Crystal Sphere
+		quest::summonitem(7112);
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(112,1);	# + Gate Callers
+		quest::faction(145,1);	# + High Council of Erudin
+		quest::faction(147,1);	# + High Guard of Erudin
+		quest::faction(143,-1);	# - Heretics
 	}
 	else {
 		#:: Return unused money
