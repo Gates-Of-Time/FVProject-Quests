@@ -20,7 +20,7 @@ sub EVENT_SAY {
 	if ($text=~/protect the pass/i) {
 		quest::say("Then travel to the Everfrost Peaks and take this pack with ye. I want ye to return this pack to me when it is filled with the beaded ice necklaces o' the ice goblins. When it is filled, combine the items and return it to me and I'll decide whether ye deserve a reward fer yer deed.");
 		#:: Give a 17944 - Empty Bag (*Bag for Ice Necklaces) 
-		quest::SummonItem(17944);
+		quest::summonitem(17944);
 	}
 }	
 	
