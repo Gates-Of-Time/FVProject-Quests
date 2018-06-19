@@ -2,7 +2,7 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Beware!!..  Beware, the Teir'Dal walk the halls of Highkeep!!");
 	}
-		if ($text=~/princess lenya thex/i) {
+	if ($text=~/princess lenya thex/i) {
 		quest::say("The Princess Lenya Thex is the daughter of His Royal Majesty, King Tearis Thex of Felwithe. She was on her way to Qeynos when we believe she was kidnapped by Carson McCabe, the governor of this vile city. I await the paladin from Felwithe.");
 	}
 	#:: Match if faction is better than Amiable
@@ -15,7 +15,7 @@ sub EVENT_SAY {
 			quest::ding();	
 		} else {
 			quest::say("When you have furthered your service to the Paladins of Tunare, we shall make conversation.");
-			}
+		}
 	}
 }
 
