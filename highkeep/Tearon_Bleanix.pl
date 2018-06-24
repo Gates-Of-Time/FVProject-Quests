@@ -6,14 +6,15 @@ sub EVENT_SAY {
 		quest::say("The Princess Lenya Thex is the daughter of His Royal Majesty, King Tearis Thex of Felwithe. She was on her way to Qeynos when we believe she was kidnapped by Carson McCabe, the governor of this vile city. I await the paladin from Felwithe.");
 	}
 	#:: Match if faction is better than Amiable
-	if ($faction < 4) {
-		if ($text=~/all is not bright above the clouds/i) {
+	if ($text=~/all is not bright above the clouds/i) {
+		if ($faction < 4) {
 			quest::say("Taken from this place she has been.  Seek the Highpass hussy.  Ask of her.  Only she knows where.  Find the Princess.  Give her this.  Show your allegiance.  This and her key. Then return the room key to me with the prize from the princess.  Become a hero!!");
 			#:: Give item 13108 - Tearons Bracer
 			quest::summonitem(13108);
 			#:: Ding!
 			quest::ding();	
-		} else {
+		}
+		elsif ($faction > 4 ) {
 			quest::say("When you have furthered your service to the Paladins of Tunare, we shall make conversation.");
 		}
 	}
