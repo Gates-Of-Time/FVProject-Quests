@@ -2,8 +2,8 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Greetings!!  Welcome to Highkeep. home of the greatest casino in all of Norrath.  Please visit our fine casino on the second floor.");
 	}
-	if ($text=~/highpass lottery/i) {
-		quest::say("Interested in the Highkeep lotter, are we?  I am afraid it as been put on hold.  We found last season's winner to be holding a counterfeit ticket.  We now await [" . quest::saylink("last season's winner") . "] to step foward with the winning ticket - ticket number 16568.  His prize is the key to the royal suite.");
+	if ($text=~/highkeep lottery/i) {
+		quest::say("Interested in the Highkeep lottery, are we?  I am afraid it as been put on hold.  We found last season's winner to be holding a counterfeit ticket.  We now await [" . quest::saylink("last season's winner") . "] to step foward with the winning ticket - ticket number 16568.  His prize is the key to the royal suite.");
 	}
 	if ($text=~/last season's winner/i) {
 		quest::say("Last season's winner is not known.  I have heard from my sources that he was some sort of merchant of used goods.");
@@ -18,7 +18,8 @@ sub EVENT_ITEM {
 		quest::exp(500);
 		#:: Ding!
 		quest::ding();
-		quest::givecash(10,11,16,0);	#:: Give a small amount of cash copper - plat
+		#:: Give a small amount of cash copper - plat
+		quest::givecash(10,11,16,0);
 	}
 	#:: Turn in for 12266 -  Lottery Ticket # 16568
 	if (plugin::check_handin(\%itemcount, 12266 => 1)) {
