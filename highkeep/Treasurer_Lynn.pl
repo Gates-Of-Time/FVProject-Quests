@@ -18,7 +18,8 @@ sub EVENT_ITEM {
 		quest::exp(500);
 		#:: Ding!
 		quest::ding();
-		quest::givecash(10,11,16,0);	#:: Give a small amount of cash copper - plat
+		#:: Give a small amount of cash copper - plat
+		quest::givecash(10,11,16,0);
 	}
 	#:: Turn in for 12266 -  Lottery Ticket # 16568
 	if (plugin::check_handin(\%itemcount, 12266 => 1)) {
