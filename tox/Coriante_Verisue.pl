@@ -58,6 +58,8 @@ sub EVENT_ITEM {
 		quest::faction(60,-1);	# - Crimson Hands
 		quest::faction(79,-1);	# - Deepwater Knights
 		quest::faction(112,-1);	# - Gate Callers
+		#:: Grant a small amount of experience
+		quest::exp(100);
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
