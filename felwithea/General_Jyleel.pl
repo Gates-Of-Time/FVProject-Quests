@@ -63,6 +63,8 @@ sub EVENT_ITEM {
 	#:: Turn in for the Falchion Quest , 12330 A Large Locked Crate, 12329 Blue Orc Head, 13227 Black Heart
 	if (plugin::check_handin(\%itemcount, 12330 => 1, 12329 => 1, 13227 => 1)) {
 		quest::say("A noble deed has been done and the alliance of evil has been stalled. I present you with the falchion of the Koada`Vie. You are now an honorable member of our order. Hail Felwithe, and may you defender her with honor.");
+		#:: Give item 5379 - Falchion of the KoadaVie*
+		quest::summonitem(5379);
 		#:: Give a little xp
 		quest::exp(500);
 		#:: Ding!
