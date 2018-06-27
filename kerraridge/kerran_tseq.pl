@@ -15,4 +15,6 @@ sub EVENT_ITEM {
 		quest::summonitem(13748);
 		quest::faction( 175, 20);	# + Kerra Isle
 	}
+	#:: Return unused items
+	plugin::return_items(\%itemcount);
 }
