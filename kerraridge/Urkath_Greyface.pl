@@ -16,5 +16,13 @@ sub EVENT_ITEM {
 		quest::say("Excellent! I can't believe you found it.  Here is the rrrreward that I promised you.");
 		#:: Give a 2045 - Worn Leather Shoulderpads
 		quest::summonitem(2045);
+		#:: Ding!
+		quest::ding();
+		#:: Grant a moderate amount of experience
+		quest::exp(2000);
+		#:: Set faction
+		quest::faction(175,30);	# + Kerra Isle
 	}
+	#:: Return unused items
+	plugin::return_items(\%itemcount);
 }
