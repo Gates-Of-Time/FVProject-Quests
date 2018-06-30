@@ -1,10 +1,11 @@
 sub EVENT_SPAWN {
 	quest::settimer("follow",10);
+	quest::say("Ding!");
 }
 
 sub EVENT_TIMER {
 	my $zapf = $entity_list->GetMobByNpcTypeID(2161);
-	if ($timer = "follow") {
+	if ($timer eq "follow") {
 		quest::follow($zapf);
 		quest::stoptimer("follow");
 	}
