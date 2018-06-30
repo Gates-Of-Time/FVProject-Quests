@@ -7,7 +7,7 @@ sub EVENT_SAY {
 		    quest::level($ulevel+1);
 		}
 		else {
-			quest::castspell(904,$name);
+			$npc->CastSpell(904, $name);
 		}
 	}
 }
