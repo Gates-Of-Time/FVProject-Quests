@@ -7,7 +7,7 @@ sub EVENT_TIMER {
 	if ($timer eq "follow") {
 		my $zapf = $entity_list->GetMobByNpcTypeID(2161);
 		quest::follow($zapf,10);
-		quest::stoptimer("follow");
+		quest::say("My target is $zapf");
 	}
 }
 
