@@ -3,11 +3,13 @@ sub EVENT_SPAWN {
 	my $range = 4;
 	my $randomspawn = int(rand($range)) + $min;
 	plugin::RandomRoam(250, 250);
-	quest::settimer(1,$randomspawn);
+	quest::settimer("move",$randomspawn);
 }
 	
 sub EVENT_TIMER {
-	plugin::RandomRoam(250, 250);
+	if ($timer eq "move") {
+		plugin::RandomRoam(250, 250);
+	}
 }
 
 sub EVENT_SAY {
