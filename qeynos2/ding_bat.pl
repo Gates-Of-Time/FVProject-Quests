@@ -3,10 +3,10 @@ sub EVENT_SAY {
 		quest::ding();
 	}
 	if ($text=~/level/i) {
-		if ($ulevel <= 45) {
+		if ($ulevel <= 20) {
 		    quest::level($ulevel+1);
 		}
-		elsif ($ulevel > 45) {
+		elsif ($ulevel > 21) {
 			$npc->CastSpell(904, $userid);
 		}
 	}
