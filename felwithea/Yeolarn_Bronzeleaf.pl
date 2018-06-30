@@ -44,7 +44,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Turn in for 18780 -  A Tattered Note
-	if (plugin::check_handin(\%itemcount, 18781 => 1)) {
+	if (plugin::check_handin(\%itemcount, 18780 => 1)) {
 		quest::say("Welcome, friend, to the Clerics of Tunare. I am Yeolarn Bronzeleaf, head of the guild and devout follower of Tunare. Here is your guild tunic - it will help to protect you against this world's evils. Once you are ready to begin your training please make sure that you see Terren Starwatcher, he can assist you in developing your hunting and gathering skills. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [trades] you will have available to you.");
 		#:: Give item 13590 - Faded Gold Training Tunic*
 		quest::summonitem(13590);
@@ -71,8 +71,8 @@ sub EVENT_ITEM {
 		quest::faction(178,15); 	#:: + King Tearis Thex
 		quest::faction(8,15); 		#:: + Anti-mage
 	}
-	#:: Turn in for 10199 x4 -  Putrescent Heart x4
-	if (plugin::check_handin(\%itemcount, 10199 => 4)) {
+	#:: Turn in for 13073 x4 -  Putrescent Heart x4
+	if (plugin::check_handin(\%itemcount, 13073 => 4)) {
 		quest::say("Praise Tunare!! You have done well young Initiate. Here the symbol of your station within our faith. Return to me when you are ready to [" . quest::saylink("slay the necromancer") . "] that has been creating the undead.");
 		#:: Give item 1570 - Initiate Symbol of Tunare
 		quest::summonitem(1570);
