@@ -20,38 +20,14 @@ sub EVENT_SAY {
 }
 
 sub Train {
-	$client->Message(15,"Your experiences across the realm have infused you with increased power and knowledge..." );
-
-	$CanSkill = sub { $client->CanHaveSkill(shift) };
-	$MaxSkill = sub { $client->MaxSkill( shift, $class, $ulevel ) };
-	$RawSkill = sub { $client->GetRawSkill(shift) };
-	$SetSkill = sub { $client->SetSkill( shift, shift ) };
-
-	#:: set all available skills to maximum for class at current level
-	foreach my $skillNum ( 0 .. 42, 48 .. 74 ) {
-		next unless $CanSkill->($skillNum);
-		my $maxVal = $MaxSkill->($skillNum);
-		next unless $maxVal > $RawSkill->($skillNum);
-		$SetSkill->( $skillNum, $maxVal );
-	}
-
-	#:: if client is a caster and can specialize
-	if ( $CanSkill->(43) ) {
-		#:: get current raw value for all spell-casting spec skills
-		my %spec = map { $_ => $RawSkill->($_) } ( 43 .. 47 );
-
-		#:: if one spell-casting spec skill is above 50, set it to the max value for the client's current level
-		if ( my $main = first { $spec{$_} > 50 } keys %spec ) {
-			$SetSkill->( $main, $MaxSkill->($main) );
-			delete $spec{$main};
-		}
-		#:: set spell-casting spec skills to max value for client's current level--all skill levels but the first one that goes over 50 are capped at 50
-		foreach my $skillNum ( keys %spec ) {
-			next if $spec{$skillNum} == 50;
-			my $maxVal = $MaxSkill->($skillNum);
-			$SetSkill->( $skillNum, $maxVal > 50 ? 50 : $maxVal );
-		}
+	$client->Message( 15, "Your experiences across the realm have infused you with increased power and knowledge..." );
+	# set all available skills to maximum for race/class at current level
+	foreach my $skill ( 0 .. 74 ) {
+		next unless $client->CanHaveSkill($skill);
+		my $maxSkill = $client->MaxSkill( $skill, $client->GetClass(), $ulevel );
+		next unless $maxSkill > $client->GetRawSkill($skill);
+		$client->SetSkill( $skill, $maxSkill );
 	}
 	# scribe all spells for current level
-	quest::scribespells( $ulevel, $ulevel );
+	quest::scribespells( $ulevel, $ulevel - 1 );
 }
