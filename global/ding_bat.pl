@@ -6,7 +6,7 @@ sub EVENT_SAY {
 		if ($ulevel <= 20) {
 		    quest::level($ulevel+1);
 		}
-		elsif ($ulevel > 21) {
+		elsif ($ulevel >= 21) {
 			$npc->CastSpell(808, $userid);
 			quest::say("Begone!");
 		}
