@@ -1,3 +1,15 @@
+sub EVENT_SPAWN {
+	quest::settimer("follow",10);
+}
+
+sub EVENT_TIMER {
+	my $zapf = $entity_list->GetMobByNpcTypeID(2161);
+	if ($timer = "follow") {
+		quest::follow($zapf);
+		quest::stoptimer("follow");
+	}
+}
+
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::ding();
