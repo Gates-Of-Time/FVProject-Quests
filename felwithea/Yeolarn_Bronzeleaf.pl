@@ -14,7 +14,7 @@ sub EVENT_ENTER {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail, $name ! We of Tunare are charged with protecting the Great Mother from the forces of Innoruuk. Even now, the evil minions of this foul deity are despoiling our great forest. Will you help us [" . quest::saylink("protect the Mother") . "]?");
+		quest::say("Hail, $name! We of Tunare are charged with protecting the Great Mother from the forces of Innoruuk. Even now, the evil minions of this foul deity are despoiling our great forest. Will you help us [" . quest::saylink("protect the Mother") . "]?");
 	}
 	if ($text=~/trades/i) {
 		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [" . quest::saylink("second book") . "], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
@@ -113,5 +113,6 @@ sub EVENT_ITEM {
 		quest::faction(178,15); 	#:: + King Tearis Thex
 		quest::faction(8,15); 		#:: + Anti-mage
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
