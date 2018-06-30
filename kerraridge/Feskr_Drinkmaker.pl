@@ -15,6 +15,8 @@ sub EVENT_ITEM {
 		quest::summonitem(17032);
 		#:: Ding!
 		quest::ding();
+		#:: Set faction
+		quest::faction(175,5); 	#:: + Kerra Isle
 		#:: Grant a moderate amount of experience
 		quest::exp(5000);
 	}
