@@ -5,9 +5,7 @@ sub EVENT_SPAWN {
 
 sub EVENT_TIMER {
 	if ($timer eq "follow") {
-		$zapf = $entity_list->GetMobByNpcTypeID(2161);
-		quest::follow($zapf,10);
-		quest::say("My target is $zapf");
+		quest::follow($entity_list->GetMobByNpcTypeID(2161),10);
 	}
 }
 
