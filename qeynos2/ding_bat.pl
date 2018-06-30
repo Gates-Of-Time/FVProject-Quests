@@ -3,7 +3,7 @@ sub EVENT_SAY {
 		quest::ding();
 	}
 	if ($text=~/level/i) {
-		if ($ulevel < 50) {
+		if ($ulevel <= 45) {
 		    quest::level($ulevel+1);
 		}
 		else {
