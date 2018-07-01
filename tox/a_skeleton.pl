@@ -1,3 +1,10 @@
+sub EVENT_SAY {
+	if ($text=~/hail/i) {
+		quest::say("A skeleton's day is never done.");
+		quest::say("Yo ho. No sun!");
+	}
+}
+
 sub EVENT_ITEM {
 	#:: Match 13894 - Useless Cloth Cap
 	if (plugin::check_handin(\%itemcount, 13894 => 1)) {
@@ -7,4 +14,10 @@ sub EVENT_ITEM {
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
+}
+
+sub EVENT_SIGNAL {
+	#:: Signal from erudnext/abandoned_heretic_pet.pl
+	quest::say("We are not your pets!");
+	quest::say("We will speed up when you return our mining caps. There are falling rocks all over this place! We could get killed!");
 }
