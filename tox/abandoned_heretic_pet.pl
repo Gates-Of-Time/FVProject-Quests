@@ -8,3 +8,10 @@ sub EVENT_ITEM {
 	#:: Return Unused Items
 	plugin::return_items(\%itemcount);
 }
+
+sub EVENT_SIGNAL {
+	#:: Signal from Tox/a_skeleton.pl
+	quest::say("Blast you, skeletons! Why I ever resurrected you, I don't know!");
+	#:: send a signal to 38017 - a_skeleton
+	quest::signal(38017,51);
+}
