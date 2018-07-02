@@ -18,7 +18,7 @@ sub EVENT_SAY {
 	}
 	if ($text=~/Deepwater tasks/i) {
 		#:: Match if faction is Amiably or better
-		if ($faction < 4 ) {
+		if ($faction < 5 ) {
 			quest::say("We here at the Deepwater Temple must tend to the [" . quest::saylink("Peacekeeper battlestaff") . "] and the [" . quest::saylink("Deepwater harpoon") . "] as well as other duties such as [" . quest::saylink("ocean protection") . "]. There is always something we must do.");
 		}
 		#:: Match if faction is Indifferent
