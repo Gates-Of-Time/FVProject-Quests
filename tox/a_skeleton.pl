@@ -2,6 +2,8 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("A skeleton's day is never done.");
 		quest::say("Yo ho. No sun!");
+		#:: send a signal to 38139 - Tox/abandoned_heretic_pet
+		quest::signal(38139,51);
 	}
 }
 
@@ -17,7 +19,8 @@ sub EVENT_ITEM {
 }
 
 sub EVENT_SIGNAL {
-	#:: Signal from erudnext/abandoned_heretic_pet.pl
+	#:: Signal from tox/abandoned_heretic_pet.pl
 	quest::say("We are not your pets!");
 	quest::say("We will speed up when you return our mining caps. There are falling rocks all over this place! We could get killed!");
 }
+
