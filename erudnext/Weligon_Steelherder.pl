@@ -32,7 +32,7 @@ sub EVENT_SAY {
 	}
 	if ($text=~/Peacekeeper battlestaff/i) {
 		#:: Match if faction is Amiably or better
-		if ($faction < 4 ) {
+		if ($faction < 5 ) {
 			quest::say("Every sentinel in Erudin carries a High Guard battlestaff.  The creation of these weapons is the duty of the Deepwater Temple and the Temple of Divine Light.  Our portion of the task is to send young members to [" . quest::saylink("collect the Pearls of Odus") . "].  These are imbedded into the staff and used to store mystical power.");
 		}
 		#:: Match if faction is Apprehensive or worse
@@ -46,7 +46,7 @@ sub EVENT_SAY {
 	}
 	if ($text=~/ocean protection/i) {
 		#:: Match if faction is Amiably or better
-		if ($faction < 4 ) {
+		if ($faction < 5) {
 			quest::say("In the name of Prexus, we are sworn to protect all ocean creatures.  We have heard reports of a shark carrying a deadly malady.  We believe she is pregnant.  If she delivers her young to the ocean, it will endanger all other creatures.  We need to find a young paladin to [" . quest::saylink("hunt the diseased shark") . "].");
 		}
 		#:: Match if faction is Apprehensive or worse
@@ -60,7 +60,7 @@ sub EVENT_SAY {
 	}
 	if ($text=~/hunt the diseased shark/i) {
 		#:: Match if faction is Amiably or better
-		if ($faction < 4 ) {
+		if ($faction < 5 ) {
 			quest::say("Ah, yes!  Take this bag with you.  When you have collected the remains of the diseased shark and no fewer than three of her young in it, combine them in it and return it to me.  Then, you shall get your reward.");
 			#:: Give item 17938 - Empty Shark Bag
 			quest::summonitem(17938);
@@ -76,7 +76,7 @@ sub EVENT_SAY {
 	}
 	if ($text=~/collect the Pearls of Odus/i) {
 		#:: Match if faction is Amiably or better
-		if ($faction < 4 ) {
+		if ($faction < 5 ) {
 			quest::say("Then venture to the harbor of Erudin. There, you shall dive into the shark-infested water and search for the Pearls of Odus. They lie upon the grounds of our waters.  Fill the bag I have given you, combine it, and return it to me.  Good luck.");
 			#:: Give item 17939 - Empty  Bag
 			quest::summonitem(17939);
@@ -92,7 +92,7 @@ sub EVENT_SAY {
 	}
 	if ($text=~/Deepwater harpoon/i) {
 		#:: Match if faction is Amiably or better
-		if ($faction < 4 ) {
+		if ($faction < 5 ) {
 			quest::say("We do not award the Deepwater harpoon to just any paladin. Nobility is all well and good, but you must still prove yourself. We have heard rumors of a very distressing matter. Perhaps it is your calling. Are you ready to [" . quest::saylink("prove allegiance to Erudin") . "] and earn the Deepwater harpoon?");
 		}
 		#:: Match if faction is Apprehensive or worse
@@ -106,7 +106,7 @@ sub EVENT_SAY {
 	}
 	if ($text=~/prove allegiance to Erudin/i) {
 		#:: Match if faction is Amiably or better
-		if ($faction < 4 ) {
+		if ($faction < 5 ) {
 			quest::say("Yes, you are ready. We have heard rumors of a great bridge which will connect Antonica with Odus!! This must not happen! We must shield ourselves from the savage and evil ways of the other races. They say that a list exists. A list of three grand architects who wish to see this bridge erected. You will venture to Qeynos and find the list, then exterminate these three men. Return the list along with their heads and the Deepwater Harpoon is yours. Go!!");
 		}
 		#:: Match if faction is Apprehensive or worse
