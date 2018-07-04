@@ -11,10 +11,23 @@ sub EVENT_ITEM {
 	#:: Match a 10523 - Eye of Urd, 19032 - Basalt Drake Scales, 14110 - Lens of Lord Soptyvr, 14109 - Widowmistress Hair
 	if (plugin::check_handin(\%itemcount, 10523 => 1, 19032 => 1, 14110 => 1, 14109 => 1)) {
 		quest::say("Yes, this is what I require to summon Terror!"); #Text made up
-		quest::emote("begins speaking an incantation. 'Take this mask as your reward for helping me.'");
+		quest::emote("begins speaking an incantation. 'Our chanters have summoned the Avatar of Terror. Take him this mundane mask so that he may forge it into a truly valuable symbol of your devotion to the lord of Fear!'");
 		#:: Give a 14106 - Mundane Mask
 		quest::summonitem(14106);
-		#quest::spawn2(?????); #Avatar of Terror
+		#:: Ding!
+		quest::ding();
+		#:: Grant a moderate amount of experience
+		quest::exp(1000);
+		#:: Grant a random amount of cash
+		quest::givecash(quest::ChooseRandom(1,2,3,4,5,6,7,8,9),quest::ChooseRandom(1,2,3,4,5,6,7,8,9),quest::ChooseRandom(1,2,3,4,5,6,7,8,9),quest::ChooseRandom(1,2,3,4,5,6,7,8,9));
+		#:: Set factions
+		quest::faction(143,400);	# + Heretics
+		quest::faction(112,-400);	# - Gate Callers
+		quest::faction(79,-400);	# - Deepwater Knights
+		quest::faction(56,-400);	# - Craftkeepers
+		quest::faction(60,-400);	# - Crimson Hands
+		#:: Spawn an avatar_of_terror (75165)
+		quest::unique_spawn(75165,0,0,474,1230,-37,128);
 	}
 	#:: Return unused items
 	plugin::returnitems(\%itemcount);
