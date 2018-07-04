@@ -83,6 +83,7 @@ sub EVENT_ITEM {
 		quest::faction(247,20); 	#:: + Peace Keepers
 		quest::faction(145,20); 	#:: + High Council of Erudin
 		quest::faction(143,-20); 	#:: - Heretics
+		#quest::givecash(0,17,0,0);	#:: Give a small amount of cash copper - plat
 	}
 	#:: Turn in for 14582 -  Embroidered Bag of Bone Necklaces Quellious Disciple Quest - Stonebrunt/Warrens Expansion
 	#if (plugin::check_handin(\%itemcount, 14582 => 1)) {
