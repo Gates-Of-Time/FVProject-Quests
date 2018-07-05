@@ -16,12 +16,17 @@ sub EVENT_ITEM {
 		quest::say("Good work. You have shown these rogues who are the better swimmers. Now we have proof of their involvement. You are a fine addition to the temple. Take this small reward. Go, and serve Prexus.");
 		#:: Give a small amount of xp
 		quest::exp(100);
+		#:: Randomly choose 13003 - Small Lantern or 10004 - Copper Band
+		quest::summonitem(quest::ChooseRandom(13003,10004));
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
 		quest::faction(79,10);	 	#:: + Deepwater Knights
 		quest::faction(145,10); 	#:: + High Council of Erudin
 		quest::faction(143,-15); 	#:: - Heretics
+		#:: Give random amount of cash
+		quest::givecash(quest::ChooseRandom(5,6,7,8,9),0,0,0);
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
