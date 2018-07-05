@@ -24,7 +24,8 @@ sub EVENT_ITEM {
 		quest::faction(247,20); 	#:: + Peace Keepers
 		quest::faction(145,20); 	#:: + High Council of Erudin
 		quest::faction(143,-20); 	#:: - Heretics
-		quest::givecash(quest::ChooseRandom(1,2,3,4,5),quest::ChooseRandom(1,2,3,4,5),0,0); #:: Give random amount of cash
+		 #:: Give random amount of cash
+		quest::givecash(quest::ChooseRandom(1,2,3,4,5),quest::ChooseRandom(1,2,3,4,5),0,0);
 	}
 	#:: Turn in for 13913 -  Barbaria Head (Talym's Head)
 	if (plugin::check_handin(\%itemcount, 13913 => 1)) {
