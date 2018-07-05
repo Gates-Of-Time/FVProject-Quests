@@ -1,13 +1,13 @@
 sub EVENT_SPAWN {
-  #:: Set up a 50 unit distance
-  $x = $npc->GetX();
-  $y = $npc->GetY();
-  quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Set up a 50 unit distance
+	$x = $npc->GetX();
+	$y = $npc->GetY();
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
 }
 
 sub EVENT_ENTER {
-  #:: Check for 18779 - An Enrollment Letter
-  if(plugin::check_hasitem($client, 18779)) { 
+	#:: Check for 18779 - An Enrollment Letter
+	if (plugin::check_hasitem($client, 18779)) {
 		$client->Message(15,"As you get your bearings, Tarker Blazetoss, an important looking High Elf turns to greet you. 'Welcome young wizard. I am guild Master Tarker Blazetoss. Read the note in your inventory and once you are ready to begin your training, hand me your note. I welcome you to our crusade against evil.'");
 	}
 }
@@ -62,5 +62,6 @@ sub EVENT_ITEM {
 		quest::faction(99,10); 		#:: + Faydark's Champions
 		quest::faction(322,-10); 	#:: - The Dead
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
