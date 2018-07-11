@@ -1,4 +1,5 @@
 sub EVENT_SAY {
+	#:: Match any text
 	if ($text) {
 		quest::say("Close the door and be gone fool! You are going to give away my hiding spot!");
 	}
@@ -19,6 +20,7 @@ sub EVENT_ITEM {
 		quest::faction(91,-1); 		#:: - Eldritch Collective
 		quest::faction(115,-1); 	#:: - Gem Choppers
 		quest::faction(76,-1); 		#:: - Deep Muses
-		}
-		plugin::return_items(\%itemcount);
+	}
+	#:: Return unused items
+	plugin::return_items(\%itemcount);
 }
