@@ -15,7 +15,7 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("I hope you have a good reason for disturbing my contemplations. Perhaps you [" . quest::saylink("seek the knowledge") . "] of those who meditate within this Temple of Fear?");
 	}
-	if ($text=~/I seek knowledge/i) {
+	if ($text=~/seek the knowledge/i) {
 		quest::say("It is the secrets of Fear you seek, but first you must prove your devotion to our temple. There are pack rats within the city that have a habit of getting into things. Some of these rats have ingested a concoction developed by the necromancers of this great city. The rats have since died and, due to the concoction, their undead corpses now roam the fields. Bring me four livers from these undead rats so that we may examine them.");
 	}
 	if ($text=~/duties/i) {
