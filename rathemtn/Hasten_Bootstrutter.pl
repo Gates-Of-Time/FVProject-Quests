@@ -1,3 +1,5 @@
+my $cash;
+
 sub EVENT_SAY {
 	if ($text=~ /Hail/i) {
 		quest::say("Stopped I have done. Greet you I will. What business do we have? Hmm? Speak up!!");
@@ -17,64 +19,14 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
+	$cash = $gold;
 	#:: Let's do some multiquesting!
 	plugin::mq_process_items(\%itemcount);
-	#:: Match if the player is trading the gold and an item
-	if ($gold >= 3250) {
-		#:: Match if trade is a 12268 - Ring of the Ancients
-		if (plugin::check_handin(\%itemcount, 12268 => 1)) {
-			#:: Store the item in the MQ Entity Variable
-			plugin::mq_process_items(12268 => 1);
-			#:: Match if required items have been turned in
-			if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
-				quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
-				#:: Ding!
-				quest::ding();
-				#:: Grant a moderate amount of experience
-				quest::exp(1250);
-				#:: Give a 2300 - Journeyman's Boots
-				quest::summonitem(2300);
-				#:: Clear out the MQ Entity Variable for the next user
-				plugin::clear_mq_handin();
-			}
-			else {
-				quest::say("The Shadowed Rapier, give me first.  Then the gold and the Ring of the Ancients.");
-				#:: Return the 12268 - Ring of the Ancients
-				quest::summonitem(12268);
-				#:: Return the gold
-				quest::givecash(0,0,$gold,0);
-				#:: Clear out the MQ Entity Variable for the next user
-				plugin::clear_mq_handin();
-			}
-		}
-		#:: Match if trade is a 7100 - Shadowed Rapier
-		elsif (plugin::check_handin(\%itemcount, 7100 => 1)) {
-			#:: Store the item in the MQ Entity Variable
-			plugin::mq_process_items(7100 => 1);
-			#:: Match if required items have been turned in
-			if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
-				quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
-				#:: Ding!
-				quest::ding();
-				#:: Grant a moderate amount of experience
-				quest::exp(1250);
-				#:: Give a 2300 - Journeyman's Boots
-				quest::summonitem(2300);
-				#:: Clear out the MQ Entity Variable for the next user
-				plugin::clear_mq_handin();
-			}
-			else {
-				quest::say("The Ring of the Ancients, give me first.  Then the gold and Shadowed Rapier.");
-				#:: Return the 7100 - Shadowed Rapier
-				quest::summonitem(7100);
-				#:: Return the gold
-				quest::givecash(0,0,$gold,0);
-				#:: Clear out the MQ Entity Variable for the next user
-				plugin::clear_mq_handin();
-			}
-		}
-		#:: Match the turn in of 7100 - Shadowed Rapier and 12268 - Ring of the Ancients
-		elsif (plugin::check_handin(\%itemcount, 7100 => 1, 12268 => 1)) {
+	if (plugin::check_handin(\%itemcount, 12268 => 1) && $cash => 3250) {
+		#:: Store the item in the MQ Entity Variable
+		plugin::mq_process_items(12268 => 1);
+		#:: Match if required items have been turned in
+		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
 			quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
 			#:: Ding!
 			quest::ding();
@@ -85,8 +37,72 @@ sub EVENT_ITEM {
 			#:: Clear out the MQ Entity Variable for the next user
 			plugin::clear_mq_handin();
 		}
-	} else {
+	}
+	if (plugin::check_handin(\%itemcount, 12268 => 1)) {
+		#:: Store the item in the MQ Entity Variable
+		plugin::mq_process_items(12268 => 1);
+		#:: Match if required items have been turned in
+		if (plugin::check_mq_handin(12268 => 1, 7100 => 1) && $cash => 3250) {
+			quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
+			#:: Ding!
+			quest::ding();
+			#:: Grant a moderate amount of experience
+			quest::exp(1250);
+			#:: Give a 2300 - Journeyman's Boots
+			quest::summonitem(2300);
+			#:: Clear out the MQ Entity Variable for the next user
+			plugin::clear_mq_handin();
+		}
+	}
+	if (plugin::check_handin(\%itemcount, 7100 => 1) && $cash => 3250) {
+		#:: Store the item in the MQ Entity Variable
+		plugin::mq_process_items(7100 => 1);
+		#:: Match if required items have been turned in
+		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
+			quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
+			#:: Ding!
+			quest::ding();
+			#:: Grant a moderate amount of experience
+			quest::exp(1250);
+			#:: Give a 2300 - Journeyman's Boots
+			quest::summonitem(2300);
+			#:: Clear out the MQ Entity Variable for the next user
+			plugin::clear_mq_handin();
+		}
+	}
+	if (plugin::check_handin(\%itemcount, 7100 => 1)) {
+		#:: Store the item in the MQ Entity Variable
+		plugin::mq_process_items(7100 => 1);
+		#:: Match if required items have been turned in
+		if (plugin::check_mq_handin(12268 => 1, 7100 => 1) && $cash => 3250) {
+			quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
+			#:: Ding!
+			quest::ding();
+			#:: Grant a moderate amount of experience
+			quest::exp(1250);
+			#:: Give a 2300 - Journeyman's Boots
+			quest::summonitem(2300);
+			#:: Clear out the MQ Entity Variable for the next user
+			plugin::clear_mq_handin();
+		}
+	}
+	if ($cash => 3250) {
+		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
+			quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
+			#:: Ding!
+			quest::ding();
+			#:: Grant a moderate amount of experience
+			quest::exp(1250);
+			#:: Give a 2300 - Journeyman's Boots
+			quest::summonitem(2300);
+			#:: Clear out the MQ Entity Variable for the next user
+			plugin::clear_mq_handin();
+		}
+	}
+	else {
 		#:: Return unused money
 		quest::givecash($copper, $silver, $gold, $platinum);
 	}
+	#:: Return unused items
+	plugin::return_items(\%itemcount);
 }
