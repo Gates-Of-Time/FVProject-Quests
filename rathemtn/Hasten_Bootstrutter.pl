@@ -130,10 +130,6 @@ sub EVENT_ITEM {
 			$cash = 0;
 		}
 	}
-	else {
-		#:: Return unused money
-		quest::givecash($copper, $silver, $gold, $platinum);
-	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
