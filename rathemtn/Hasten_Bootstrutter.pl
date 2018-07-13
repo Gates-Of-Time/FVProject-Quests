@@ -1,4 +1,4 @@
-my $cash;
+my $cash = 0;
 
 sub EVENT_SAY {
 	if ($text=~ /Hail/i) {
@@ -36,6 +36,7 @@ sub EVENT_ITEM {
 			quest::summonitem(2300);
 			#:: Clear out the MQ Entity Variable for the next user
 			plugin::clear_mq_handin();
+			$cash = 0;
 		}
 	}
 	if (plugin::check_handin(\%itemcount, 12268 => 1)) {
@@ -52,6 +53,7 @@ sub EVENT_ITEM {
 			quest::summonitem(2300);
 			#:: Clear out the MQ Entity Variable for the next user
 			plugin::clear_mq_handin();
+			$cash = 0;
 		}
 	}
 	if (plugin::check_handin(\%itemcount, 7100 => 1) && $cash => 3250) {
@@ -68,6 +70,7 @@ sub EVENT_ITEM {
 			quest::summonitem(2300);
 			#:: Clear out the MQ Entity Variable for the next user
 			plugin::clear_mq_handin();
+			$cash = 0;
 		}
 	}
 	if (plugin::check_handin(\%itemcount, 7100 => 1)) {
@@ -84,6 +87,7 @@ sub EVENT_ITEM {
 			quest::summonitem(2300);
 			#:: Clear out the MQ Entity Variable for the next user
 			plugin::clear_mq_handin();
+			$cash = 0;
 		}
 	}
 	if ($cash => 3250) {
@@ -97,6 +101,7 @@ sub EVENT_ITEM {
 			quest::summonitem(2300);
 			#:: Clear out the MQ Entity Variable for the next user
 			plugin::clear_mq_handin();
+			$cash = 0;
 		}
 	}
 	else {
