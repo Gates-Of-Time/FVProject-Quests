@@ -57,5 +57,10 @@ sub EVENT_ITEM {
 				plugin::clear_mq_handin();
 			}
 		}
+		elsif (plugin::check_handin(\%itemcount, 1002 => 1, 1001 => 1)) {
+			quest::say("Yay you did it, you completed the MQ cycle!");
+			#:: Clear out the MQ Entity Variable for the next user
+			plugin::clear_mq_handin();
+		}
 	}
 }
