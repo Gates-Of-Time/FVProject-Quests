@@ -20,49 +20,73 @@ sub EVENT_ITEM {
 	#:: Let's do some multiquesting!
 	plugin::mq_process_items(\%itemcount);
 	#:: Match if the player is trading the gold and an item
-	if ($gold == 3250) {
-		#:: Match if trade is a 1001 - Cloth Cap
-		if (plugin::check_handin(\%itemcount, 1001 => 1)) {
+	if ($gold >= 3250) {
+		#:: Match if trade is a 12268 - Ring of the Ancients
+		if (plugin::check_handin(\%itemcount, 12268 => 1)) {
 			#:: Store the item in the MQ Entity Variable
-			plugin::mq_process_items(1001 => 1);
+			plugin::mq_process_items(12268 => 1);
 			#:: Match if required items have been turned in
-			if (plugin::check_mq_handin(1001 => 1, 1002 => 1)) {
-				quest::say("Yay you did it, you completed the MQ cycle!");
+			if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
+				quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
+				#:: Ding!
+				quest::ding();
+				#:: Grant a moderate amount of experience
+				quest::exp(1250);
+				#:: Give a 2300 - Journeyman's Boots
+				quest::summonitem(2300);
 				#:: Clear out the MQ Entity Variable for the next user
 				plugin::clear_mq_handin();
 			}
 			else {
-				quest::say("The Cloth Veil, give me first.  Then the gold and the Cloth Cap.");
-				quest::summonitem(1001);
+				quest::say("The Shadowed Rapier, give me first.  Then the gold and the Ring of the Ancients.");
+				#:: Return the 12268 - Ring of the Ancients
+				quest::summonitem(12268);
+				#:: Return the gold
 				quest::givecash(0,0,3250,0);
 				#:: Clear out the MQ Entity Variable for the next user
 				plugin::clear_mq_handin();
 			}
 		}
-		#:: Match if trade is a 1002 - Cloth Veil
-		elsif (plugin::check_handin(\%itemcount, 1002 => 1)) {
+		#:: Match if trade is a 7100 - Shadowed Rapier
+		elsif (plugin::check_handin(\%itemcount, 7100 => 1)) {
 			#:: Store the item in the MQ Entity Variable
-			plugin::mq_process_items(1002 => 1);
+			plugin::mq_process_items(7100 => 1);
 			#:: Match if required items have been turned in
-			if (plugin::check_mq_handin(1001 => 1, 1002 => 1)) {
-				quest::say("Yay you did it, you completed the MQ cycle!");
+			if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
+				quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
+				#:: Ding!
+				quest::ding();
+				#:: Grant a moderate amount of experience
+				quest::exp(1250);
+				#:: Give a 2300 - Journeyman's Boots
+				quest::summonitem(2300);
 				#:: Clear out the MQ Entity Variable for the next user
 				plugin::clear_mq_handin();
 			}
 			else {
-				quest::say("The Cloth Cap, give me first.  Then the gold and Cloth Veil.");
-				quest::summonitem(1002);
+				quest::say("The Ring of the Ancients, give me first.  Then the gold and Shadowed Rapier.");
+				#:: Return the 7100 - Shadowed Rapier
+				quest::summonitem(7100);
+				#:: Return the gold
 				quest::givecash(0,0,3250,0);
 				#:: Clear out the MQ Entity Variable for the next user
 				plugin::clear_mq_handin();
 			}
 		}
-		elsif (plugin::check_handin(\%itemcount, 1002 => 1, 1001 => 1)) {
-			quest::say("Yay you did it, you completed the MQ cycle!");
+		#:: Match the turn in of 7100 - Shadowed Rapier and 12268 - Ring of the Ancients
+		elsif (plugin::check_handin(\%itemcount, 7100 => 1, 12268 => 1)) {
+			quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
+			#:: Ding!
+			quest::ding();
+			#:: Grant a moderate amount of experience
+			quest::exp(1250);
+			#:: Give a 2300 - Journeyman's Boots
+			quest::summonitem(2300);
 			#:: Clear out the MQ Entity Variable for the next user
 			plugin::clear_mq_handin();
 		}
 	} else {
+		#:: Return unused money
 		quest::givecash($copper, $silver, $gold, $platinum);
 	}
 }
