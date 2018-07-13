@@ -17,9 +17,10 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
+	#:: Let's do some multiquesting!
+	plugin::mq_process_items(\%itemcount);
+	#:: One player hands in gold and a 1001 - Cloth Cap
 	if ($gold >= 3250) {
-		#:: Let's do some multiquesting!
-		plugin::mq_process_items(\%itemcount);
 		#:: Match if trade is a 1001 - Cloth Cap
 		if (plugin::check_handin(\%itemcount, 1001 => 1)) {
 			#:: Store the item in the MQ Entity Variable
@@ -34,6 +35,9 @@ sub EVENT_ITEM {
 				quest::say("I need some more items");
 			}
 		}
+	}
+	#:: One player hands in gold and a 1002 - Cloth Veil
+	elsif ($gold >= 3250) {
 		#:: Match if trade is a 1002 - Cloth Veil
 		if (plugin::check_handin(\%itemcount, 1002 => 1)) {
 			#:: Store the item in the MQ Entity Variable
@@ -47,6 +51,30 @@ sub EVENT_ITEM {
 			else {
 				quest::say("I need some more items");
 			}
+		}
+	}
+	#:: One player hands in a 1001 - Cloth Cap
+	elsif (plugin::check_handin(\%itemcount, 1001 => 1)) {
+		#:: Store the item in the MQ Entity Variable
+		plugin::mq_process_items(1001 => 1);
+		#:: Match if the gold is already turned in
+		if (plugin::check_mq_handin(1001 => 1, 1002 => 1) && $gold >=3250) {
+			quest::say("Yay you did it, you completed the MQ cycle!");
+		}
+		else {
+			quest::say("One of you owes me some gold and a Cloth Veil!");
+		}
+	}
+	#:: One player hands in a 1002 - Cloth Veil
+	elsif (plugin::check_handin(\%itemcount, 1002 => 1)) {
+		#:: Store the item in the MQ Entity Variable
+		plugin::mq_process_items(1002 => 1);
+		#:: Match if the gold is already turned in
+		if (plugin::check_mq_handin(1001 => 1, 1002 => 1) && $gold >=3250) {
+			quest::say("Yay you did it, you completed the MQ cycle!");
+		}
+		else {
+			quest::say("One of you owes me some gold and a Cloth Cap!");
 		}
 	}
 }
