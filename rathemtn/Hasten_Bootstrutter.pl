@@ -58,4 +58,5 @@ sub EVENT_ITEM {
 			}
 		}
 	}
+	quest::say("Thank you!");
 }
