@@ -35,6 +35,8 @@ sub EVENT_ITEM {
 				quest::say("The Cloth Veil, give me first");
 				plugin::return_items(\%itemcount);
 				quest::givecash($gold);
+				#:: Clear out the MQ Entity Variable for the next user
+				plugin::clear_mq_handin();
 			}
 		}
 		#:: Match if trade is a 1002 - Cloth Veil
@@ -51,9 +53,9 @@ sub EVENT_ITEM {
 				quest::say("The Cloth Cap, give me first");
 				plugin::return_items(\%itemcount);
 				quest::givecash($gold);
+				#:: Clear out the MQ Entity Variable for the next user
+				plugin::clear_mq_handin();
 			}
 		}
-	} 
-	else {
-		quest::say("More for me do you have?");
+	}
 }
