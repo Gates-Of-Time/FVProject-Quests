@@ -17,9 +17,10 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
+	my $cash = 0;
 	#:: Let's do some multiquesting!
 	plugin::mq_process_items(\%itemcount);
-	#:: One player hands in gold and a 1001 - Cloth Cap
+	#:: Match if the player is trading the gold and an item
 	if ($gold == 3250) {
 		#:: Match if trade is a 1001 - Cloth Cap
 		if (plugin::check_handin(\%itemcount, 1001 => 1)) {
@@ -30,9 +31,11 @@ sub EVENT_ITEM {
 				quest::say("Yay you did it, you completed the MQ cycle!");
 				#:: Clear out the MQ Entity Variable for the next user
 				plugin::clear_mq_handin();
+				$cash = 0;
 			}
 			else {
 				quest::say("I need a Cloth Veil");
+				$cash = 3250;
 			}
 		}
 		#:: Match if trade is a 1002 - Cloth Veil
@@ -44,13 +47,23 @@ sub EVENT_ITEM {
 				quest::say("Yay you did it, you completed the MQ cycle!");
 				#:: Clear out the MQ Entity Variable for the next user
 				plugin::clear_mq_handin();
+				$cash = 0;
 			}
 			else {
 				quest::say("I need a Cloth Cap");
+				$cash = 3250;
 			}
 		}
 	} 
 	else {
-		quest::say("Hmmm...you seem to be missing some of the items I requested");
+		if (plugin::check_mq_handin(1001 => 1, 1002 => 1) && $cash == 3250) {
+			quest::say("Yay you did it, you completed the MQ cycle!");
+			#:: Clear out the MQ Entity Variable for the next user
+			plugin::clear_mq_handin();
+			$cash = 0;
+		} 
+		else {
+			quest::say("Missing something is!");
+		}
 	}
 }
