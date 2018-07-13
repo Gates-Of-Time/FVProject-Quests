@@ -48,6 +48,13 @@ sub EVENT_ITEM {
 			quest::say("Now just give me the gold!");
 		}
 	}
+	#:: Just Gold
+	elsif (plugin::takeCoin(325000)) {
+		$tradestate = 1;
+		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
+			quest::say("Yay, you did it!");
+		}
+	}
 	#:: Just gold and Rapier
 	elsif (plugin::takeItemsCoin(0,0,3250,0, 7100 => 1)) {
 		plugin::mq_process_items(7100 => 1);
@@ -102,13 +109,6 @@ sub EVENT_ITEM {
 			} else {
 				quest::say("You still owe me a Rapier and gold!");
 			}
-		}
-	}
-	#:: Just Gold
-	elsif (plugin::takeCoin(325000)) {
-		$tradestate = 1;
-		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
-			quest::say("Yay, you did it!");
 		}
 	}
 	plugin::returnUnusedItems();
