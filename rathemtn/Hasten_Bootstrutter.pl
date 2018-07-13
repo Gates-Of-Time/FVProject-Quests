@@ -17,7 +17,6 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	my $cash = 0;
 	#:: Let's do some multiquesting!
 	plugin::mq_process_items(\%itemcount);
 	#:: One player hands in gold and a 1001 - Cloth Cap
@@ -31,11 +30,9 @@ sub EVENT_ITEM {
 				quest::say("Yay you did it, you completed the MQ cycle!");
 				#:: Clear out the MQ Entity Variable for the next user
 				plugin::clear_mq_handin();
-				$cash = 0;
 			}
 			else {
 				quest::say("I need a Cloth Veil");
-				$cash = 3250;
 			}
 		}
 	}
@@ -50,42 +47,10 @@ sub EVENT_ITEM {
 				quest::say("Yay you did it, you completed the MQ cycle!");
 				#:: Clear out the MQ Entity Variable for the next user
 				plugin::clear_mq_handin();
-				$cash = 0;
 			}
 			else {
 				quest::say("I need a Cloth Cap");
-				$cash = 3250;
 			}
-		}
-	}
-	#:: One player hands in a 1001 - Cloth Cap
-	elsif (plugin::check_handin(\%itemcount, 1001 => 1)) {
-		#:: Store the item in the MQ Entity Variable
-		plugin::mq_process_items(1001 => 1);
-		#:: Match if the gold is already turned in
-		if (plugin::check_mq_handin(1001 => 1, 1002 => 1) && $cash == 3250) {
-			quest::say("Yay you did it, you completed the MQ cycle!");
-			#:: Clear out the MQ Entity Variable for the next user
-			plugin::clear_mq_handin();
-			$cash = 0;
-		}
-		else {
-			quest::say("One of you owes me 3250 gold and a Cloth Veil!");
-		}
-	}
-	#:: One player hands in a 1002 - Cloth Veil
-	elsif (plugin::check_handin(\%itemcount, 1002 => 1)) {
-		#:: Store the item in the MQ Entity Variable
-		plugin::mq_process_items(1002 => 1);
-		#:: Match if the gold is already turned in
-		if (plugin::check_mq_handin(1001 => 1, 1002 => 1) && $cash ==3250) {
-			quest::say("Yay you did it, you completed the MQ cycle!");
-			#:: Clear out the MQ Entity Variable for the next user
-			plugin::clear_mq_handin();
-			$cash = 0;
-		}
-		else {
-			quest::say("One of you owes me 3250 gold and a Cloth Cap!");
 		}
 	}
 }
