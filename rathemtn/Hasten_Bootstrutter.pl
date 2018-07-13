@@ -32,7 +32,7 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	my $cash = ($gold);
+	my @cash = ($gold);
 	#:: Let's do some multiquesting!
 	plugin::mq_process_items(\%itemcount);
 	#:: Match a trade of 12268 - Ring of the Ancients and 3250 gold
@@ -138,7 +138,8 @@ sub EVENT_ITEM {
 		}
 	}
 	if (plugin::check_handin(\%itemcount, 7100 => 1)) {
-		quest::say("I have $cash[-1] gold.");
+		$cash = $cash[1];
+		quest::say("I have $cash gold.");
 		#:: Store the item in the MQ Entity Variable
 		plugin::mq_process_items(7100 => 1);
 		#:: Match if required items have been turned in
