@@ -33,8 +33,8 @@ sub EVENT_ITEM {
 			}
 			else {
 				quest::say("The Cloth Veil, give me first");
-				plugin::return_items(\%itemcount);
-				quest::givecash($gold);
+				quest::summonitem(1001);
+				quest::givecash(0,0,3250,0);
 				#:: Clear out the MQ Entity Variable for the next user
 				plugin::clear_mq_handin();
 			}
@@ -51,8 +51,8 @@ sub EVENT_ITEM {
 			}
 			else {
 				quest::say("The Cloth Cap, give me first");
-				plugin::return_items(\%itemcount);
-				quest::givecash($gold);
+				quest::summonitem(1002);
+				quest::givecash(0,0,3250,0);
 				#:: Clear out the MQ Entity Variable for the next user
 				plugin::clear_mq_handin();
 			}
