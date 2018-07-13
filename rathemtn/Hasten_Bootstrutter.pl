@@ -75,7 +75,7 @@ sub EVENT_ITEM {
 		}
 	}
 	#:: Just Gold
-	if (plugin::takeCoin(0,0,3250,0)) {
+	if (plugin::takeCoin(325000)) {
 		$tradestate = 1;
 		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
 			quest::say("Yay, you did it!");
