@@ -41,6 +41,7 @@ sub EVENT_ITEM {
 	if (($cash >= 3250) && plugin::check_handin(\%itemcount, 12268 => 1)) {
 		#:: Store the item in the MQ Entity Variable
 		plugin::mq_process_items(12268 => 1);
+		quest::say("Thanks for the Ring of the Ancients and the $cash.");
 		#:: Match if required items have been turned in
 		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
 			quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
