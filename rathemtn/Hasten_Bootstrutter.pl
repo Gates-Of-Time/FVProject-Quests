@@ -32,10 +32,31 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	if (plugin::takeCoin(0,0,$g1 => 3250,0)) {
-		quest::say("Yay, you gave me enough gold!");
+	plugin::mq_process_items(\%itemcount);
+	if (plugin::check_handin(\%itemcount, 7100 => 1)) {
+		plugin::mq_process_items(7100 => 1);
 	}
-	if (plugin::takeCoin(0,0,$g1 => 1,0)) {
-		quest::say("You have given me $gold");
+	if (plugin::check_handin(\%itemcount, 12268 => 1)) {
+		plugin::mq_process_items(12268 => 1);
+	}
+	if (plugin::check_handin(\%itemcount, 7100 => 1, 12268 => 1)) {
+		plugin::mq_process_items(7100 => 1);
+		plugin::mq_process_items(12268 => 1);
+	}
+	if (plugin::takeItemsCoin(0,0,3250,0, 7100 => 1)) {
+		plugin::mq_process_items(7100 => 1);
+		plugin::check_mq_handin(12268 => 1, 7100 => 1);
+	}
+	if (plugin::takeItemsCoin(0,0,3250,0, 12268 => 1)) {
+		plugin::mq_process_items(12268 => 1);
+		plugin::check_mq_handin(12268 => 1, 7100 => 1);
+	}
+	if (plugin::takeItemsCoin(0,0,3250,0, 7100 => 1, 12268 => 1)) {
+		plugin::mq_process_items(7100 => 1);
+		plugin::mq_process_items(12268 => 1);
+		plugin::check_mq_handin(12268 => 1, 7100 => 1);
+	}
+	if (plugin::takeCoin(0,0,3250,0)) {
+		plugin::check_mq_handin(12268 => 1, 7100 => 1);
 	}
 }
