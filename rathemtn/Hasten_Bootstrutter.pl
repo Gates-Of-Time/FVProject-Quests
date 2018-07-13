@@ -62,6 +62,7 @@ sub EVENT_ITEM {
 			#:: Clear out the MQ Entity Variable for the next user
 			plugin::clear_mq_handin();
 		}
+	} else {
+		quest::givecash($copper, $silver, $gold, $platinum);
 	}
-	quest::givecash($copper, $silver, $gold, $platinum);
 }
