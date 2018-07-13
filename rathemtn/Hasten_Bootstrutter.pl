@@ -61,8 +61,7 @@ sub EVENT_ITEM {
 		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
 			quest::say("Yay, you did it!");
 		} else {
-			quest::summonitem(7100);
-			quest::say("Hand me the Ring and the Gold first!");
+			quest::say("Now hand me the Ring and the Gold!");
 		}
 
 	}
@@ -71,8 +70,7 @@ sub EVENT_ITEM {
 		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
 			quest::say("Yay, you did it!");
 		} else {
-			quest::summonitem(12268);
-			quest::say("Hand me the Rapier and the Gold first!");
+			quest::say("Now hand me the Rapier and the Gold!");
 		}
 	}
 	plugin::returnUnusedItems();
