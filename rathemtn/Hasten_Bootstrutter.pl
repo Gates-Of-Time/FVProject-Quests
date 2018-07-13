@@ -1,5 +1,20 @@
 my $cash;
 
+sub EVENT_SPAWN {
+	#:: Set a timer for four hours
+	quest::settimer("HastenDepop",14400);
+}
+
+sub EVENT_TIMER {
+	#:: Match the four hour timer
+	if ($timer eq "HastenDepop") {
+		#:: Stop the timer HastenDepop
+		quest::stoptimer("HastenDepop");
+		#:: Depop and start the spawn point timer
+		quest::depop_withtimer();
+	}
+}
+
 sub EVENT_SAY {
 	if ($text=~ /Hail/i) {
 		quest::say("Stopped I have done. Greet you I will. What business do we have? Hmm? Speak up!!");
@@ -38,7 +53,10 @@ sub EVENT_ITEM {
 			quest::summonitem(2300);
 			#:: Clear out the MQ Entity Variable for the next user
 			plugin::clear_mq_handin();
+			#:: Reset Cash
 			$cash = 0;
+			#:: Depop with Timer
+			quest::depop_withtimer();
 		}
 	}
 	#:: Match a trade of 7100 - Shadowed Rapier and 3250 gold
@@ -58,7 +76,10 @@ sub EVENT_ITEM {
 			quest::summonitem(2300);
 			#:: Clear out the MQ Entity Variable for the next user
 			plugin::clear_mq_handin();
+			#:: Reset Cash
 			$cash = 0;
+			#:: Depop with Timer
+			quest::depop_withtimer();
 		}
 	}
 	#:: Match a trade of 3250 gold or more
@@ -75,7 +96,10 @@ sub EVENT_ITEM {
 			quest::summonitem(2300);
 			#:: Clear out the MQ Entity Variable for the next user
 			plugin::clear_mq_handin();
+			#:: Reset Cash
 			$cash = 0;
+			#:: Depop with Timer
+			quest::depop_withtimer();
 		}
 	}
 	if (plugin::check_handin(\%itemcount, 7100 => 1, 12268 => 1)) {
@@ -93,7 +117,10 @@ sub EVENT_ITEM {
 			quest::summonitem(2300);
 			#:: Clear out the MQ Entity Variable for the next user
 			plugin::clear_mq_handin();
+			#:: Reset Cash
 			$cash = 0;
+			#:: Depop with Timer
+			quest::depop_withtimer();
 		}
 	}
 	if (plugin::check_handin(\%itemcount, 12268 => 1)) {
@@ -110,7 +137,10 @@ sub EVENT_ITEM {
 			quest::summonitem(2300);
 			#:: Clear out the MQ Entity Variable for the next user
 			plugin::clear_mq_handin();
+			#:: Reset Cash
 			$cash = 0;
+			#:: Depop with Timer
+			quest::depop_withtimer();
 		}
 	}
 	if (plugin::check_handin(\%itemcount, 7100 => 1)) {
@@ -127,7 +157,10 @@ sub EVENT_ITEM {
 			quest::summonitem(2300);
 			#:: Clear out the MQ Entity Variable for the next user
 			plugin::clear_mq_handin();
+			#:: Reset Cash
 			$cash = 0;
+			#:: Depop with Timer
+			quest::depop_withtimer();
 		}
 	}
 	#:: Return unused items
