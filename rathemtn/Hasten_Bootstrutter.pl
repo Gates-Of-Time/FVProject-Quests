@@ -21,12 +21,11 @@ sub EVENT_ITEM {
 	
 	if (plugin::check_handin(\%itemcount, 1001 => 1)) {
 		plugin::mq_process_items(1001 => 1);
-	}
-	elsif (plugin::check_mq_handin(1001 => 1, 1002 => 1)) { 
-		quest::say("Yay you did it, you completed the MQ cycle!");
-		plugin::clear_mq_handin();
-	} 
-	else {
-		plugin::return_items(\%itemcount);	
+		if (plugin::check_mq_handin(1001 => 1, 1002 => 1)) {
+			quest::say("Yay you did it, you completed the MQ cycle!");
+		}
+		else {
+			quest::say("I need some more items");
+		}
 	}
 }
