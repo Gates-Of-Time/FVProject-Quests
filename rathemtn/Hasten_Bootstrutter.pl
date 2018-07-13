@@ -49,5 +49,8 @@ sub EVENT_ITEM {
 				quest::say("I need a Cloth Cap");
 			}
 		}
+	} 
+	else {
+		quest::say("Hmmm...you seem to be missing some of the items I requested");
 	}
 }
