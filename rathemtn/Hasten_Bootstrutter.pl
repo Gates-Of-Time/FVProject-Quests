@@ -34,43 +34,77 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Let's MultiqQuest!
 	plugin::mq_process_items(\%itemcount);
-	#:: Gold, Ring and Rapier
+	#:: Match a 7100 - Shadowed Rapier and 12268 - Ring of the Ancients and 3250 gold
 	if (plugin::takeItemsCoin(0,0,3250,0, 7100 => 1, 12268 => 1)) {
-		quest::say("yay, you did it!");
+		quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
+		#:: Ding!
+		quest::ding();
+		#:: Grant a moderate amount of experience
+		quest::exp(1250);
+		#:: Give a 2300 - Journeyman's Boots
+		quest::summonitem(2300);
 	}
-	#:: Just gold and Rapier
+	#:: Match a 7100 - Shadowed Rapier and 3250 gold
 	elsif (plugin::takeItemsCoin(0,0,3250,0, 7100 => 1)) {
 		plugin::mq_process_items(7100 => 1);
+		#:: Match a 7100 - Shadowed Rapier and 12268 - Ring of the Ancients
 		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
-			quest::say("Yay, you did it!");
+			quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
+			#:: Ding!
+			quest::ding();
+			#:: Grant a moderate amount of experience
+			quest::exp(1250);
+			#:: Give a 2300 - Journeyman's Boots
+			quest::summonitem(2300);
 		} else {
-			quest::say("You still owe me a Ring!");
+			quest::say("A Ring of the Ancients you still owe me!");
 		}
 	}
-	#:: Just gold and Ring
+	#:: Match a 12268 - Ring of the Ancients and 3250 gold
 	elsif (plugin::takeItemsCoin(0,0,3250,0, 12268 => 1)) {
 		plugin::mq_process_items(12268 => 1);
+		#:: Match a 7100 - Shadowed Rapier and 12268 - Ring of the Ancients
 		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
-			quest::say("Yay, you did it!");
+			quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
+			#:: Ding!
+			quest::ding();
+			#:: Grant a moderate amount of experience
+			quest::exp(1250);
+			#:: Give a 2300 - Journeyman's Boots
+			quest::summonitem(2300);
 		} else {
-			quest::say("You still owe me a Rapier!");
+			quest::say("A Shadowed Rapier you still owe me!");
 		}
 	}
-	#:: Just Rapier
+	#:: Match a 7100 - Shadowed Rapier
 	elsif (plugin::takeItems(7100 => 1)) {
+		#:: Match a 7100 - Shadowed Rapier and 12268 - Ring of the Ancients
 		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
-			quest::say("Yay, you did it!");
+			quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
+			#:: Ding!
+			quest::ding();
+			#:: Grant a moderate amount of experience
+			quest::exp(1250);
+			#:: Give a 2300 - Journeyman's Boots
+			quest::summonitem(2300);
 		} else {
-			quest::say("Now hand me the Ring and the Gold!");
+			quest::say("A Ring of the Ancients and 3250 Gold you owe me!");
 		}
 
 	}
-	#:: Just Ring
+	#:: Match a 12268 - Ring of the Ancients
 	elsif (plugin::takeItems(12268 => 1)) {
+		#:: Match a 7100 - Shadowed Rapier and 12268 - Ring of the Ancients
 		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
-			quest::say("Yay, you did it!");
+			quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
+			#:: Ding!
+			quest::ding();
+			#:: Grant a moderate amount of experience
+			quest::exp(1250);
+			#:: Give a 2300 - Journeyman's Boots
+			quest::summonitem(2300);
 		} else {
-			quest::say("Now hand me the Rapier and the Gold!");
+			quest::say("A Shadowed Rapier and 3250 Gold you owe me!");
 		}
 	}
 	plugin::returnUnusedItems();
