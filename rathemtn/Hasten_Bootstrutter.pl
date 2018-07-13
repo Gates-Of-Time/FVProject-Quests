@@ -28,4 +28,13 @@ sub EVENT_ITEM {
 			quest::say("I need some more items");
 		}
 	}
+	if (plugin::check_handin(\%itemcount, 1002 => 1)) {
+		plugin::mq_process_items(1002 => 1);
+		if (plugin::check_mq_handin(1001 => 1, 1002 => 1)) {
+			quest::say("Yay you did it, you completed the MQ cycle!");
+		}
+		else {
+			quest::say("I need some more items");
+		}
+	}
 }
