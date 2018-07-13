@@ -53,8 +53,4 @@ sub EVENT_ITEM {
 		plugin::mq_process_items(7100 => 1);
 		quest::say("yay, you triggered the Shadowed Rapier");
 	}
-	#:: Return unused coin
-	quest::givecash($copper, $silver, $gold, $platinum);
-	#:: Return unused items
-	plugin::return_items(\%itemcount);
 }
