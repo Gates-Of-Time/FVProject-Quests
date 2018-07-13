@@ -138,7 +138,7 @@ sub EVENT_ITEM {
 		}
 	}
 	if (plugin::check_handin(\%itemcount, 7100 => 1)) {
-		quest::say("I have $cash gold.");
+		quest::say("I have $cash[-1] gold.");
 		#:: Store the item in the MQ Entity Variable
 		plugin::mq_process_items(7100 => 1);
 		#:: Match if required items have been turned in
