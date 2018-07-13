@@ -18,14 +18,17 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	if ($gold >= 3250) {
+		#:: Match trade for 12268 - Ring of the Ancients
 		if (plugin::check_handin(\%itemcount, 12268 => 1)) {
 			#:: Store the item in the MQ entity variable
 			plugin::mq_process_items(12268 => 1);
+			quest::say("yay, you triggered gold AND Ring of the Ancients");
 		}
 		#:: Match trade for 7100 - Shadowed Rapier
 		if (plugin::check_handin(\%itemcount, 7100 => 1)) {
 			#:: Store the item in the MQ entity variable
 			plugin::mq_process_items(7100 => 1);
+			quest::say("yay, you triggered gold AND Shadowed Rapier");
 		}
 		#:: Check the MQ entity variable for the items 
 		elsif (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
@@ -39,18 +42,19 @@ sub EVENT_ITEM {
 			#:: Clear out the MQ entity variable for the next guy
 			plugin::clear_mq_handin();
 		}
-		else {
-		#:: Return unused coin
-		quest::givecash($copper, $silver, $gold, $platinum);
-		#:: Return unused items
-		plugin::return_items(\%itemcount);
 	}
 	if (plugin::check_handin(\%itemcount, 12268 => 1)) {
 		#:: Store the item in the MQ entity variable
 		plugin::mq_process_items(12268 => 1);
+		quest::say("yay, you triggered the Ring of the Ancients");
 	}
 	if (plugin::check_handin(\%itemcount, 7100 => 1)) {
 		#:: Store the item in the MQ entity variable
 		plugin::mq_process_items(7100 => 1);
+		quest::say("yay, you triggered the Shadowed Rapier");
 	}
+	#:: Return unused coin
+	quest::givecash($copper, $silver, $gold, $platinum);
+	#:: Return unused items
+	plugin::return_items(\%itemcount);
 }
