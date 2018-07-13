@@ -42,7 +42,7 @@ sub EVENT_ITEM {
 				#:: Return the 12268 - Ring of the Ancients
 				quest::summonitem(12268);
 				#:: Return the gold
-				quest::givecash(0,0,3250,0);
+				quest::givecash(0,0,$gold,0);
 				#:: Clear out the MQ Entity Variable for the next user
 				plugin::clear_mq_handin();
 			}
@@ -68,7 +68,7 @@ sub EVENT_ITEM {
 				#:: Return the 7100 - Shadowed Rapier
 				quest::summonitem(7100);
 				#:: Return the gold
-				quest::givecash(0,0,3250,0);
+				quest::givecash(0,0,$gold,0);
 				#:: Clear out the MQ Entity Variable for the next user
 				plugin::clear_mq_handin();
 			}
