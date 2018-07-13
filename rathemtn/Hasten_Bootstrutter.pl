@@ -34,12 +34,11 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
+	$cash = ($gold);
 	#:: Let's do some multiquesting!
 	plugin::mq_process_items(\%itemcount);
 	#:: Match a trade of 12268 - Ring of the Ancients and 3250 gold
 	if (plugin::check_handin(\%itemcount, 12268 => 1) && $gold >= 3250) {
-		#:: Use a scalar variable to store the amount of gold
-		$cash = ($gold);
 		#:: Store the item in the MQ Entity Variable
 		plugin::mq_process_items(12268 => 1);
 		#:: Match if required items have been turned in
@@ -61,8 +60,6 @@ sub EVENT_ITEM {
 	}
 	#:: Match a trade of 7100 - Shadowed Rapier and 3250 gold
 	if (plugin::check_handin(\%itemcount, 7100 => 1) && $gold >= 3250) {
-		#:: Use a scalar variable to store the amount of gold
-		$cash = ($gold);
 		#:: Store the item in the MQ Entity Variable
 		plugin::mq_process_items(7100 => 1);
 		#:: Match if required items have been turned in
@@ -84,8 +81,6 @@ sub EVENT_ITEM {
 	}
 	#:: Match a trade of 3250 gold or more
 	if ($gold >= 3250) {
-		#:: Use a scalar variable to store the amount of gold
-		$cash = ($gold);
 		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
 			quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
 			#:: Ding!
