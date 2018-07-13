@@ -35,11 +35,8 @@ sub EVENT_ITEM {
 				quest::say("I need a Cloth Veil");
 			}
 		}
-	}
-	#:: One player hands in gold and a 1002 - Cloth Veil
-	elsif ($gold == 3250) {
 		#:: Match if trade is a 1002 - Cloth Veil
-		if (plugin::check_handin(\%itemcount, 1002 => 1)) {
+		elsif (plugin::check_handin(\%itemcount, 1002 => 1)) {
 			#:: Store the item in the MQ Entity Variable
 			plugin::mq_process_items(1002 => 1);
 			#:: Match if required items have been turned in
