@@ -1,5 +1,3 @@
-my $cash = 0;
-
 sub EVENT_SAY {
 	if ($text=~ /Hail/i) {
 		quest::say("Stopped I have done. Greet you I will. What business do we have? Hmm? Speak up!!");
