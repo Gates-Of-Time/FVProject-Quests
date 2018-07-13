@@ -33,9 +33,9 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	if (plugin::takeCoin(0,0,3250,0)) {
-		quest::say("$coin1");
+		quest::say("$g1");
 	}
 	if (plugin::takeCoin(0,0,$g1 => 1,0)) {
-		quest::say("Now I have $coin2");
+		quest::say("Now I have $g2");
 	}
 }
