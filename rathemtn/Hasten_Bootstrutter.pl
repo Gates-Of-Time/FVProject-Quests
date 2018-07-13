@@ -30,11 +30,11 @@ sub EVENT_ITEM {
 				quest::say("Yay you did it, you completed the MQ cycle!");
 				#:: Clear out the MQ Entity Variable for the next user
 				plugin::clear_mq_handin();
-				$cash = 0;
 			}
 			else {
-				quest::say("I need a Cloth Veil");
-				$cash = 3250;
+				quest::say("The Cloth Veil, give me first");
+				plugin::return_items(\%itemcount);
+				quest::givecash($gold);
 			}
 		}
 		#:: Match if trade is a 1002 - Cloth Veil
@@ -46,14 +46,14 @@ sub EVENT_ITEM {
 				quest::say("Yay you did it, you completed the MQ cycle!");
 				#:: Clear out the MQ Entity Variable for the next user
 				plugin::clear_mq_handin();
-				$cash = 0;
 			}
 			else {
-				quest::say("I need a Cloth Cap");
-				$cash = 3250;
+				quest::say("The Cloth Cap, give me first");
+				plugin::return_items(\%itemcount);
+				quest::givecash($gold);
 			}
 		}
 	} 
 	else {
-		quest::say("Missing something is!");
+		quest::say("More for me do you have?");
 }
