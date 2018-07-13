@@ -39,7 +39,7 @@ sub EVENT_ITEM {
 		quest::say("yay, you did it!");
 	}
 	#:: Just Rapier
-	elsif (plugin::check_handin(\%itemcount, 7100 => 1)) {
+	elsif (plugin::takeItems(7100 => 1)) {
 		plugin::mq_process_items(7100 => 1);
 		if ($tradestate == 1) {
 			if (plugin::check_mq_handin(12268 => 1)) {
@@ -57,7 +57,7 @@ sub EVENT_ITEM {
 		}
 	}
 	#:: Just Ring
-	elsif (plugin::check_handin(\%itemcount, 12268 => 1)) {
+	elsif (plugin::takeItems(12268 => 1)) {
 		plugin::mq_process_items(12268 => 1);
 		if ($tradestate == 1) {
 			if (plugin::check_mq_handin(7100 => 1)) {
@@ -82,7 +82,7 @@ sub EVENT_ITEM {
 		}
 	}
 	#:: Just Ring and Rapier
-	elsif (plugin::check_handin(\%itemcount, 7100 => 1, 12268 => 1)) {
+	elsif (plugin::takeItems(7100 => 1, 12268 => 1)) {
 		plugin::mq_process_items(7100 => 1);
 		plugin::mq_process_items(12268 => 1);
 		if ($tradestate == 1) {
