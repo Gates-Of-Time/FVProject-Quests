@@ -22,15 +22,11 @@ sub EVENT_ITEM {
 	if (plugin::check_handin(\%itemcount, 1001 => 1)) {
 		plugin::mq_process_items(1001 => 1);
 	}
-	if (plugin::check_handin(\%itemcount, 1002 => 1)) {
-		plugin::mq_process_items(1002 => 1);
-	}
-	elsif (plugin::check_mq_handin(1001 => 1, 1002 => 1)) {
+	elsif (plugin::check_mq_handin(1001 => 1, 1002 => 1)) { 
 		quest::say("Yay you did it, you completed the MQ cycle!");
-		quest::summonitem(17243);
 		plugin::clear_mq_handin();
-	}
+	} 
 	else {
-		plugin::return_items(\%itemcount);  
+		plugin::return_items(\%itemcount);	
 	}
 }
