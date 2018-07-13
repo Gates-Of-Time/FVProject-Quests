@@ -38,6 +38,36 @@ sub EVENT_ITEM {
 	if (plugin::takeItemsCoin(0,0,3250,0, 7100 => 1, 12268 => 1)) {
 		quest::say("yay, you did it!");
 	}
+	#:: Just Ring and Rapier
+	elsif (plugin::takeItems(7100 => 1, 12268 => 1)) {
+		plugin::mq_process_items(7100 => 1);
+		plugin::mq_process_items(12268 => 1);
+		if ($tradestate == 1) {
+			quest::say("Yay, you did it!");
+		} else {
+			quest::say("Now just give me the gold!");
+		}
+	}
+	#:: Just gold and Rapier
+	elsif (plugin::takeItemsCoin(0,0,3250,0, 7100 => 1)) {
+		plugin::mq_process_items(7100 => 1);
+		if (plugin::check_mq_handin(12268 => 1)) {
+			quest::say("Yay, you did it!");
+		} else {
+			$tradestate = 1;
+			quest::say("You still owe me a Ring!");
+		}
+	}
+	#:: Just gold and Ring
+	elsif (plugin::takeItemsCoin(0,0,3250,0, 12268 => 1)) {
+		plugin::mq_process_items(12268 => 1);
+		if (plugin::check_mq_handin(7100 => 1)) {
+			quest::say("Yay, you did it!");
+		} else {
+			$tradestate = 1;
+			quest::say("You still owe me a Rapier!");
+		}
+	}
 	#:: Just Rapier
 	elsif (plugin::takeItems(7100 => 1)) {
 		plugin::mq_process_items(7100 => 1);
@@ -79,36 +109,6 @@ sub EVENT_ITEM {
 		$tradestate = 1;
 		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
 			quest::say("Yay, you did it!");
-		}
-	}
-	#:: Just Ring and Rapier
-	elsif (plugin::takeItems(7100 => 1, 12268 => 1)) {
-		plugin::mq_process_items(7100 => 1);
-		plugin::mq_process_items(12268 => 1);
-		if ($tradestate == 1) {
-			quest::say("Yay, you did it!");
-		} else {
-			quest::say("Now just give me the gold!");
-		}
-	}
-	#:: Just gold and Rapier
-	elsif (plugin::takeItemsCoin(0,0,3250,0, 7100 => 1)) {
-		plugin::mq_process_items(7100 => 1);
-		if (plugin::check_mq_handin(12268 => 1)) {
-			quest::say("Yay, you did it!");
-		} else {
-			$tradestate = 1;
-			quest::say("You still owe me a Ring!");
-		}
-	}
-	#:: Just gold and Ring
-	elsif (plugin::takeItemsCoin(0,0,3250,0, 12268 => 1)) {
-		plugin::mq_process_items(12268 => 1);
-		if (plugin::check_mq_handin(7100 => 1)) {
-			quest::say("Yay, you did it!");
-		} else {
-			$tradestate = 1;
-			quest::say("You still owe me a Rapier!");
 		}
 	}
 	plugin::returnUnusedItems();
