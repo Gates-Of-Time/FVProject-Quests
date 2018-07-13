@@ -17,7 +17,6 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	if ($gold >= 3250) {
 		#:: Match trade for 12268 - Ring of the Ancients
 		if (plugin::check_handin(\%itemcount, 12268 => 1)) {
 			#:: Store the item in the MQ entity variable
@@ -35,5 +34,4 @@ sub EVENT_ITEM {
 				quest::say("yay, you made it!");
 			}
 		}
-	}
 }
