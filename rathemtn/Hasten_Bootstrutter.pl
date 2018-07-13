@@ -39,7 +39,7 @@ sub EVENT_ITEM {
 		quest::say("yay, you did it!");
 	}
 	#:: Just Rapier
-	if (plugin::check_handin(\%itemcount, 7100 => 1)) {
+	elsif (plugin::check_handin(\%itemcount, 7100 => 1)) {
 		plugin::mq_process_items(7100 => 1);
 		if ($tradestate == 1) {
 			if (plugin::check_mq_handin(12268 => 1)) {
@@ -57,7 +57,7 @@ sub EVENT_ITEM {
 		}
 	}
 	#:: Just Ring
-	if (plugin::check_handin(\%itemcount, 12268 => 1)) {
+	elsif (plugin::check_handin(\%itemcount, 12268 => 1)) {
 		plugin::mq_process_items(12268 => 1);
 		if ($tradestate == 1) {
 			if (plugin::check_mq_handin(7100 => 1)) {
@@ -75,14 +75,14 @@ sub EVENT_ITEM {
 		}
 	}
 	#:: Just Gold
-	if (plugin::takeCoin(325000)) {
+	elsif (plugin::takeCoin(325000)) {
 		$tradestate = 1;
 		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
 			quest::say("Yay, you did it!");
 		}
 	}
 	#:: Just Ring and Rapier
-	if (plugin::check_handin(\%itemcount, 7100 => 1, 12268 => 1)) {
+	elsif (plugin::check_handin(\%itemcount, 7100 => 1, 12268 => 1)) {
 		plugin::mq_process_items(7100 => 1);
 		plugin::mq_process_items(12268 => 1);
 		if ($tradestate == 1) {
@@ -92,7 +92,7 @@ sub EVENT_ITEM {
 		}
 	}
 	#:: Just gold and Rapier
-	if (plugin::takeItemsCoin(0,0,3250,0, 7100 => 1)) {
+	elsif (plugin::takeItemsCoin(0,0,3250,0, 7100 => 1)) {
 		plugin::mq_process_items(7100 => 1);
 		if (plugin::check_mq_handin(12268 => 1)) {
 			quest::say("Yay, you did it!");
@@ -102,7 +102,7 @@ sub EVENT_ITEM {
 		}
 	}
 	#:: Just gold and Ring
-	if (plugin::takeItemsCoin(0,0,3250,0, 12268 => 1)) {
+	elsif (plugin::takeItemsCoin(0,0,3250,0, 12268 => 1)) {
 		plugin::mq_process_items(12268 => 1);
 		if (plugin::check_mq_handin(7100 => 1)) {
 			quest::say("Yay, you did it!");
@@ -111,4 +111,5 @@ sub EVENT_ITEM {
 			quest::say("You still owe me a Rapier!");
 		}
 	}
+	plugin::returnUnusedItems();
 }
