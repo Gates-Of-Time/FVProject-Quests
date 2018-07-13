@@ -63,4 +63,5 @@ sub EVENT_ITEM {
 			plugin::clear_mq_handin();
 		}
 	}
+	quest::givecash($copper, $silver, $gold, $platinum);
 }
