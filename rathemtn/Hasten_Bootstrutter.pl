@@ -1,3 +1,5 @@
+my $cash;
+
 sub EVENT_SAY {
 	if ($text=~ /Hail/i) {
 		quest::say("Stopped I have done. Greet you I will. What business do we have? Hmm? Speak up!!");
@@ -20,7 +22,7 @@ sub EVENT_ITEM {
 	$cash = $gold;
 	#:: Let's do some multiquesting!
 	plugin::mq_process_items(\%itemcount);
-	if (plugin::check_handin(\%itemcount, 12268 => 1) && $cash => 3250) {
+	if (plugin::check_handin(\%itemcount, 12268 => 1) && $cash >= 3250) {
 		#:: Store the item in the MQ Entity Variable
 		plugin::mq_process_items(12268 => 1);
 		#:: Match if required items have been turned in
@@ -41,7 +43,7 @@ sub EVENT_ITEM {
 		#:: Store the item in the MQ Entity Variable
 		plugin::mq_process_items(12268 => 1);
 		#:: Match if required items have been turned in
-		if (plugin::check_mq_handin(12268 => 1, 7100 => 1) && $cash => 3250) {
+		if (plugin::check_mq_handin(12268 => 1, 7100 => 1) && $cash >= 3250) {
 			quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
 			#:: Ding!
 			quest::ding();
@@ -54,7 +56,7 @@ sub EVENT_ITEM {
 			$cash = 0;
 		}
 	}
-	if (plugin::check_handin(\%itemcount, 7100 => 1) && $cash => 3250) {
+	if (plugin::check_handin(\%itemcount, 7100 => 1) && $cash >= 3250) {
 		#:: Store the item in the MQ Entity Variable
 		plugin::mq_process_items(7100 => 1);
 		#:: Match if required items have been turned in
@@ -75,7 +77,7 @@ sub EVENT_ITEM {
 		#:: Store the item in the MQ Entity Variable
 		plugin::mq_process_items(7100 => 1);
 		#:: Match if required items have been turned in
-		if (plugin::check_mq_handin(12268 => 1, 7100 => 1) && $cash => 3250) {
+		if (plugin::check_mq_handin(12268 => 1, 7100 => 1) && $cash >= 3250) {
 			quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
 			#:: Ding!
 			quest::ding();
@@ -88,7 +90,7 @@ sub EVENT_ITEM {
 			$cash = 0;
 		}
 	}
-	if ($cash => 3250) {
+	if ($cash >= 3250) {
 		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
 			quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
 			#:: Ding!
