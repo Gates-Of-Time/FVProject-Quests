@@ -97,16 +97,16 @@ sub EVENT_ITEM {
 	}
 	#:: Just Gold
 	if (plugin::takeCoin(0,0,3250,0)) {
-		if (plugin::check_mq_handin(12268 => 1)) {
+		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
+			quest::say("Yay, you did it!");
+		}
+		elsif (plugin::check_mq_handin(12268 => 1)) {
 			quest::say("You still owe me a Rapier!");
 			$tradestate = 1;
 		}
 		elsif (plugin::check_mq_handin(7100 => 1)) {
 			quest::say("You still owe me a Ring!");
 			$tradestate = 1;
-		}
-		elsif (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
-			quest::say("Yay, you did it!");
 		}
 		else {
 			quest::say("You still owe me a Ring and a Rapier!");
