@@ -32,7 +32,7 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	my $tradestate = 0;
+	#:: Let's MultiqQuest!
 	plugin::mq_process_items(\%itemcount);
 	#:: Gold, Ring and Rapier
 	if (plugin::takeItemsCoin(0,0,3250,0, 7100 => 1, 12268 => 1)) {
@@ -44,7 +44,6 @@ sub EVENT_ITEM {
 		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
 			quest::say("Yay, you did it!");
 		} else {
-			$tradestate = 1;
 			quest::say("You still owe me a Ring!");
 		}
 	}
@@ -54,44 +53,26 @@ sub EVENT_ITEM {
 		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
 			quest::say("Yay, you did it!");
 		} else {
-			$tradestate = 1;
 			quest::say("You still owe me a Rapier!");
 		}
 	}
 	#:: Just Rapier
 	elsif (plugin::takeItems(7100 => 1)) {
-		plugin::mq_process_items(7100 => 1);
-		if ($tradestate == 1) {
-			if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
-				quest::say("Yay, you did it!");
-			} else {
-				quest::say("You still owe me a Ring!");
-			}
+		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
+			quest::say("Yay, you did it!");
+		} else {
+			quest::summonitem(7100);
+			quest::say("Hand me the Ring and the Gold first!");
 		}
-		elsif ($tradestate == 0) {
-			if (plugin::check_mq_handin(12268 => 1)) {
-				quest::say("You still owe me gold!");
-			} else {
-				quest::say("You still owe me a Ring and gold!");
-			}
-		}
+
 	}
 	#:: Just Ring
 	elsif (plugin::takeItems(12268 => 1)) {
-		plugin::mq_process_items(12268 => 1);
-		if ($tradestate == 1) {
-			if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
-				quest::say("Yay, you did it!");
-			} else {
-				quest::say("You still owe me a Rapier!");
-			}
-		}
-		elsif ($tradestate == 0) {
-			if (plugin::check_mq_handin(7100 => 1)) {
-				quest::say("You still owe me gold!");
-			} else {
-				quest::say("You still owe me a Rapier and gold!");
-			}
+		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
+			quest::say("Yay, you did it!");
+		} else {
+			quest::summonitem(12268);
+			quest::say("Hand me the Rapier and the Gold first!");
 		}
 	}
 	plugin::returnUnusedItems();
