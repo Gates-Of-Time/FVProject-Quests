@@ -79,8 +79,10 @@ sub EVENT_ITEM {
 	#:: Match a 13074 - Zombie Skin, 16990 - Embalming Dust, 14102 - Charred Bone Chips, 14103 - Vial of Tunare's Breath
 	if (plugin::check_handin(\%itemcount, 13074 => 1, 16990 => 1, 14102 => 1, 14103 => 1)) {
 		quest::say("Excellent job, $name. These components will help with our research immeasurably. You will soon be reaping the rewards granted by our Lord Cazic-Thule!! If you want to further assist our research effots, talk to Atdehim Sqonci.");
-		#:: Match a 14100 - Fright Forged Helm
-		quest::summonitem(14100);
+		#:: Give a 147495 - Mundane Helm
+		quest::summonitem(147495);
+		#:: Grant a random amount of cash
+		quest::givecash(quest::ChooseRandom(1,2,3,4,5,6,7,8,9),quest::ChooseRandom(1,2,3,4,5,6,7,8,9),quest::ChooseRandom(1,2,3,4,5,6,7,8,9),quest::ChooseRandom(1,2,3,4,5,6,7,8,9));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a moderate amount of experience
@@ -91,6 +93,8 @@ sub EVENT_ITEM {
 		quest::faction(60, -30);	# - Crimson Hands
 		quest::faction(79, -30);	# - Deepwater Knights
 		quest::faction(112, -30);	# - Gate Callers
+		#:: Spawn an Avatar_of_Fright (38202)
+		quest::unique_spawn(38202,0,0,474,1230,-37,128);
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
