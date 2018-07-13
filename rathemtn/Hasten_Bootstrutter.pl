@@ -32,7 +32,7 @@ sub EVENT_ITEM {
 				plugin::clear_mq_handin();
 			}
 			else {
-				quest::say("The Cloth Veil, give me first");
+				quest::say("The Cloth Veil, give me first.  Then the gold and the Cloth Cap.");
 				quest::summonitem(1001);
 				quest::givecash(0,0,3250,0);
 				#:: Clear out the MQ Entity Variable for the next user
@@ -50,7 +50,7 @@ sub EVENT_ITEM {
 				plugin::clear_mq_handin();
 			}
 			else {
-				quest::say("The Cloth Cap, give me first");
+				quest::say("The Cloth Cap, give me first.  Then the gold and Cloth Veil.");
 				quest::summonitem(1002);
 				quest::givecash(0,0,3250,0);
 				#:: Clear out the MQ Entity Variable for the next user
@@ -58,5 +58,4 @@ sub EVENT_ITEM {
 			}
 		}
 	}
-	quest::say("Thank you!");
 }
