@@ -1,5 +1,3 @@
-my $cash;
-
 sub EVENT_SPAWN {
 	#:: Set a timer for four hours
 	quest::settimer("HastenDepop",14400);
@@ -34,14 +32,14 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	$cash = ($gold);
+	my $cash = ($gold);
 	#:: Let's do some multiquesting!
 	plugin::mq_process_items(\%itemcount);
 	#:: Match a trade of 12268 - Ring of the Ancients and 3250 gold
 	if (($cash >= 3250) && plugin::check_handin(\%itemcount, 12268 => 1)) {
 		#:: Store the item in the MQ Entity Variable
 		plugin::mq_process_items(12268 => 1);
-		quest::say("Thanks for the Ring of the Ancients and the $cash.");
+		quest::say("Thanks for the Ring of the Ancients and the $cash gold.");
 		#:: Match if required items have been turned in
 		if (plugin::check_mq_handin(12268 => 1, 7100 => 1)) {
 			quest::say("The time to trade has come!! I am now rich and you are now fast. Take the Journeyman Boots and run like the wind.");
