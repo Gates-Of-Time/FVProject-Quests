@@ -32,10 +32,10 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	if (plugin::takeCoin(0,0,3250,0)) {
-		quest::say("$g1");
+	if (plugin::takeCoin(0,0,$g1 => 3250,0)) {
+		quest::say("Yay, you gave me enough gold!");
 	}
 	if (plugin::takeCoin(0,0,$g1 => 1,0)) {
-		quest::say("Now I have $g2");
+		quest::say("You have given me $gold");
 	}
 }
