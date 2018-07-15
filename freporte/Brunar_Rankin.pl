@@ -8,7 +8,7 @@ sub EVENT_WAYPOINT_ARRIVE {
 	#:: When NPC arrives at 13
 	if ($wp == 13) {
 		quest::say("Here is my catch for today, Gregor");
-		#:: Send a signal "1" to East Freeport >> Gregor_Nasin (10171)
+		#:: Send a signal to East Freeport >> Gregor_Nasin (10171)
 		quest::signal(10171,1);
 	}
 	#:: When NPC arrives at waypoint 34
