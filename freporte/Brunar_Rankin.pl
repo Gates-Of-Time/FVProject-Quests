@@ -5,26 +5,31 @@ sub EVENT_SAY {
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
-    #::: When NPC arrives at 13
-    if ($wp == 13) {
-        quest::say("Here is my catch for today, Gregor");
-		quest::signal(10171,1); #Grefor Nasin
-		}
-	#::: When NPC arrives at waypoint 34
-    if ($wp == 34) {	
+	#:: When NPC arrives at 13
+	if ($wp == 13) {
+		quest::say("Here is my catch for today, Gregor");
+		#:: Send a signal "1" to East Freeport >> Gregor_Nasin (10171)
+		quest::signal(10171,1);
+	}
+	#:: When NPC arrives at waypoint 34
+	if ($wp == 34) {
 		quest::say("Ho hum, what a lovely day !");
-		quest::SetRunning(1);  #:: Run
+		#:: Set running true (run)
+		quest::SetRunning(1);
+	}
+	#:: When NPC arrives at waypoint 39
+	if ($wp == 39) {
+		#:: Set running false (walk)
+		quest::SetRunning(0);
 	    }
-	#::: When NPC arrives at waypoint 39
-    if ($wp == 39) {	
-		quest::SetRunning(0);  #:: Walk
-	    }
-	#::: When NPC arrives at waypoint 44
-    if ($wp == 44) {	
-		quest::SetRunning(1);  #:: Run
-	    }
-	#::: When NPC arrives at waypoint 59
-    if ($wp == 59) {	
-		quest::SetRunning(0);  #:: Walk
-	    }			
+	#:: When NPC arrives at waypoint 44
+	if ($wp == 44) {
+		#:: Set running true (run)
+		quest::SetRunning(1);
+	}
+	#:: When NPC arrives at waypoint 59
+	if ($wp == 59) {
+		#:: Set running false (walk)
+		quest::SetRunning(0);
+	}			
 }
