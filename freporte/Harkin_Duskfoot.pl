@@ -24,13 +24,14 @@ sub EVENT_ITEM {
 		quest::exp(100);
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of cash copper - plat
+		quest::givecash(6,0,0,0);
 		#:: Set faction
 		quest::faction(47,1); 		#:: + Coalition of Trade Folk
 		quest::faction(48,1); 		#:: + Coalition of Tradefolk Underground
 		quest::faction(31,1); 		#:: + Carson McCabe
 		quest::faction(53,1); 		#:: + Corrupt Qeynos Guards
-		quest::faction(105,1); 		#:: + Freeport Militia
-		quest::givecash(6,0,0,0);	#:: Give a small amount of cash copper - plat		
+		quest::faction(105,1); 		#:: + Freeport Militia					
 	}
 	plugin::return_items(\%itemcount);
 }
