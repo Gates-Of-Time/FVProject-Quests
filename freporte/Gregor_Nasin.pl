@@ -38,17 +38,18 @@ sub EVENT_ITEM {
 		quest::exp(200);
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of cash copper - plat
+		quest::givecash(0,0,0,2);
 		#:: Set faction
 		quest::faction(48,1); 		#:: + Coalition of Tradefolk Underground
 		quest::faction(47,1);	 	#:: + Coalition of Trade Folk
 		quest::faction(31,1); 		#:: + Carson McCabe
 		quest::faction(53,1); 		#:: + Corrupt Qeynos Guards
-		quest::faction(105,1); 		#:: + Freeport Militia
-		quest::givecash(0,0,0,2);	#:: Give a small amount of cash copper - plat
+		quest::faction(105,1); 		#:: + Freeport Militia			
 	}
 	plugin::return_items(\%itemcount);
 }
 
 sub EVENT_SIGNAL {
-  quest::say("Thank you, Brunar. You are some kind of fisherman! I better take this down to the storeroom with your earlier catches before it spoils.. hmm.. a little later.");	
+	quest::say("Thank you, Brunar. You are some kind of fisherman! I better take this down to the storeroom with your earlier catches before it spoils.. hmm.. a little later.");	
  }
