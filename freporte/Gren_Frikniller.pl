@@ -23,18 +23,19 @@ sub EVENT_ITEM {
 		quest::exp(200);
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of cash copper - plat
+		quest::givecash(6,1,0,0);
 		#:: Set faction
 		quest::faction(48,1); 		#:: + Coalition of Tradefolk Underground
 		quest::faction(47,1); 		#:: + Coalition of Trade Folk
 		quest::faction(31,1); 		#:: + Carson McCabe
 		quest::faction(53,1); 		#:: + Corrupt Qeynos Guards
-		quest::faction(105,1); 		#:: - Freeport Militia
-		quest::givecash(6,1,0,0);	#:: Give a small amount of cash copper - plat
+		quest::faction(105,1); 		#:: - Freeport Militia		
 	}
 	plugin::return_items(\%itemcount);
 }
 
 sub EVENT_SIGNAL {
-	#Signal from Elisi Nasin
+	#:: Signal from Elisi Nasin
 	quest::say("Yea.. Bite that tongue of yours, there shorty, or I might just have to cut it off to shut you up for good.");
 }
