@@ -13,13 +13,15 @@ sub EVENT_ITEM {
 		quest::say("So the great Antonius Bayle wishes to ally himself with the mighty Knights of Truth. How pathetic. It would appear that the alliance has spawned infiltrators of sorts. Of course, we of the Dismal Rage are already aware of this, but I am sure Sir Lucan D'Lere knows nothing as usual. I have a mission for any evil shadowknight of Innoruuk.");
 		#:: Give a small amount of xp
 		quest::exp(5000);
+		#:: Give a small amount of cash copper - plat
+		quest::givecash(0,2,0,0);
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
+		#:: Set factions
 		quest::faction(235,1); 		#:: + Opal Dark Briar
 		quest::faction(86,1); 		#:: + Dismal Rage
-		quest::faction(184,-3); 	#:: - Knights of Truth
-		quest::givecash(0,2,0,0);	#:: Give a small amount of cash copper - plat
+		quest::faction(184,-3); 	#:: - Knights of Truth		
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
