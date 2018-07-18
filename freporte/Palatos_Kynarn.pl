@@ -32,14 +32,16 @@ sub EVENT_ITEM {
 		quest::say("Thanks.. That saved me a lot of money. Now I can spend more time with the captain before I give this back to Lenka Stoutheart. Here is a little so...mething.");
 		#:: Give a small amount of xp
 		quest::exp(200);
+		#:: Give a small amount of cash copper - plat
+		quest::givecash(0,0,0,1);
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
 		quest::faction(56,1); 		#:: + Craftkeepers
 		quest::faction(145,1); 		#:: + High Council of Erudin
 		quest::faction(147,1); 		#:: + High Guard of Erudin
-		quest::faction(143,-1); 	#:: - Heretics
-		quest::givecash(0,0,0,1);	#:: Give a small amount of cash copper - plat
+		quest::faction(143,-1); 	#:: - Heretics		
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
