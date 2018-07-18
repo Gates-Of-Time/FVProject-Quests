@@ -10,14 +10,16 @@ sub EVENT_ITEM {
 		quest::say("Great! Thank you stranger. The rogues must have broken it. At least I could repair it. It would be seasons before I could afford another pole.");
 		#:: Give a small amount of xp
 		quest::exp(100);
+		#:: Give a small amount of cash copper - plat
+		quest::givecash(50,0,0,0);
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
 		quest::faction(105,1); 		#:: + Freeport Militia
 		quest::faction(48,1); 		#:: + Coalition of Tradefolk Underground
 		quest::faction(184,-1); 	#:: - Knights of Truth
-		quest::faction(258,-1); 	#:: - Priests of Marr
-		quest::givecash(50,0,0,0);	#:: Give a small amount of cash copper - plat
+		quest::faction(258,-1); 	#:: - Priests of Marr		
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
