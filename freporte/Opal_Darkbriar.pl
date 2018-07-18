@@ -12,6 +12,8 @@ sub EVENT_ITEM {
 		quest::summonitem(13562);
 		#:: Give a small amount of xp
 		quest::exp(100);
+		#:: Give a small amount of cash copper - plat
+		quest::givecash(1,1,5,4);
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
@@ -19,8 +21,8 @@ sub EVENT_ITEM {
 		quest::faction(86,25); 		#:: + Dismal Rage
 		quest::faction(322,25); 	#:: + The Dead
 		quest::faction(71,25); 		#:: + Dark Reflection
-		quest::faction(21,25); 		#:: + Bloodsabers
-		quest::givecash(1,1,5,4);	#:: Give a small amount of cash copper - plat
+		quest::faction(21,25); 		#:: + Bloodsabers		
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
