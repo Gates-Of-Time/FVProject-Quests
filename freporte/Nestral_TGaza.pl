@@ -18,6 +18,8 @@ sub EVENT_ITEM {
 		quest::say("Thank you $name, You have done well.");
 		#:: Give a small amount of xp
 		quest::exp(500);
+		#:: Give a small amount of cash copper - plat
+		quest::givecash(7,0,0,0);
 		#:: Ding!
 		quest::ding();
 		#:: Set faction	
@@ -25,8 +27,8 @@ sub EVENT_ITEM {
 		quest::faction(47,7); 		#:: + Coalition of Trade Folk
 		quest::faction(31,1); 		#:: + Carson McCabe
 		quest::faction(53,1); 		#:: + Corrupt Qeynos Guards
-		quest::faction(105,1); 		#:: + Freeport Militia
-		quest::givecash(7,0,0,0);	#:: Give a small amount of cash copper - plat
+		quest::faction(105,1); 		#:: + Freeport Militia			
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
