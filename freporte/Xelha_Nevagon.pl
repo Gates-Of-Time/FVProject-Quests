@@ -15,13 +15,14 @@ sub EVENT_ITEM {
 		quest::summonitem(12247);
 		#:: Give a small amount of xp
 		quest::exp(60);
+		#:: Give a small amount of cash copper - plat
+		quest::givecash(0,4,0,0);
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
 		quest::faction(86,1); 		#:: + Dismal Rage
 		quest::faction(184,-1); 	#:: - Knights of Truth
 		quest::faction(235,1); 		#:: + Opal Dark Briar
-		quest::givecash(0,4,0,0);	#:: Give a small amount of cash copper - plat
 	}
 	#:: Turn in for 10307 -  Fire Beetle Eye x4
 	if (plugin::check_handin(\%itemcount, 10307 => 4)) {
@@ -30,26 +31,28 @@ sub EVENT_ITEM {
 		quest::summonitem(15338);
 		#:: Give a small amount of xp
 		quest::exp(40);
+		#:: Give a small amount of cash copper - plat
+		quest::givecash(8,1,0,0);
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
 		quest::faction(86,1); 		#:: + Dismal Rage
 		quest::faction(184,-1); 	#:: - Knights of Truth
-		quest::faction(235,1); 		#:: + Opal Dark Briar
-		quest::givecash(8,1,0,0);	#:: Give a small amount of cash copper - plat
+		quest::faction(235,1); 		#:: + Opal Dark Briar		
 	}
 	#:: Turn in for 13073 -  Bone Chips x4
 	if (plugin::check_handin(\%itemcount, 13073 => 4)) {
 		quest::say("Let's see here. One.. two.. three.. and.. four. Great!! Just enough for my needs. You are serving Xelha well. I give you Spell: Cavorting Bones. It is not much, but neither are you. You know what I really need is a cyclops eye. That would be worthy of a great reward.");
 		#:: Give a small amount of xp
 		quest::exp(20);
+		#:: Give a small amount of cash copper - plat
+		quest::givecash(8,1,0,0);
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
 		quest::faction(86,1); 		#:: + Dismal Rage
 		quest::faction(184,-1); 	#:: - Knights of Truth
-		quest::faction(235,1); 		#:: + Opal Dark Briar
-		quest::givecash(8,1,0,0);	#:: Give a small amount of cash copper - plat
+		quest::faction(235,1); 		#:: + Opal Dark Briar		
 	}
 	#:: Turn in for 13927 -  Cyclops Eye
 	if (plugin::check_handin(\%itemcount, 13927 => 1)) {
@@ -58,13 +61,15 @@ sub EVENT_ITEM {
 		quest::summonitem(15331);
 		#:: Give a small amount of xp
 		quest::exp(1000);
+		#:: Give a small amount of cash copper - plat
+		quest::givecash(8,1,0,0);
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
 		quest::faction(86,1); 		#:: + Dismal Rage
 		quest::faction(184,-1); 	#:: - Knights of Truth
-		quest::faction(235,1); 		#:: + Opal Dark Briar
-		quest::givecash(8,1,0,0);	#:: Give a small amount of cash copper - plat
+		quest::faction(235,1); 		#:: + Opal Dark Briar		
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
