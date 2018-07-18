@@ -9,5 +9,6 @@ sub EVENT_ITEM {
 		#:: Set Depop Timer
 		quest::settimer("depop",5);
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
