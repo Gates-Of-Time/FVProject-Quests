@@ -14,15 +14,16 @@ sub EVENT_ITEM {
 	}
 	#:: Turn in for 19931 and 19929 -  Bundle of Hardwood Staves and Crate of Pick Axe Heads
 	if (plugin::check_handin(\%itemcount, 19931 => 1, 19929 => 1)) {
-		quest::say("Thanks $class.  Now hand this crate to the fellow behind you, $name.");		
+		quest::say("Thanks $class.  Now hand this crate to the fellow behind you, $name.");
 		#:: Give item 19930 - Large Crate of Mining Supplies
 		quest::summonitem(19930);
 		#:: Give a small amount of xp
 		quest::exp(100);
 		#:: Ding!
 		quest::ding();
-	    #Spawn Orc Centurion (10000)
+		#Spawn Orc Centurion (10000)
 		quest::spawn2(1000, 0, 0, -144, -456, -52, 0);
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
