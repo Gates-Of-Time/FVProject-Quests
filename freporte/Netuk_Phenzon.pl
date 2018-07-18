@@ -15,13 +15,15 @@ sub EVENT_ITEM {
 		quest::summonitem(15343);
 		#:: Give a small amount of xp
 		quest::exp(500);
+		#:: Give a small amount of cash copper - plat
+		quest::givecash(0,12,6,0);
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
 		quest::faction(86,1); 		#:: + Dismal Rage
 		quest::faction(184,-5); 	#:: - Knights of Truth
-		quest::faction(235,1); 		#:: + Opal Dark Briar
-		quest::givecash(0,12,6,0);	#:: Give a small amount of cash copper - plat
+		quest::faction(235,1); 		#:: + Opal Dark Briar		
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
