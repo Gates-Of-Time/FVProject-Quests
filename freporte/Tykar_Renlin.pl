@@ -33,5 +33,6 @@ sub EVENT_ITEM {
 		#:: Give item 12196- Bunker Cell #1 (Zimel's Blanket)
 		quest::summonitem(12196);
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
