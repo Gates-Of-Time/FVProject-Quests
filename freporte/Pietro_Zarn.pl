@@ -1,6 +1,7 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Who are you that you dare to speak with the great Pietro Zarn!! I see nothing more than a whelp in front of me. Innoruuk himself speaks with me. And now you expect me to waste words on you, a common. Begone $name . You have nothing to peak my interest, only my rage.");
+	}
 	if ($text=~/trades/i) {
 		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [" . quest::saylink("second book") . "], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
 		#:: Give a 51121 - Tradeskill Basics: Volume 1
@@ -11,7 +12,6 @@ sub EVENT_SAY {
 		#:: Give a 51122 - Tradeskill Basics: Volume II
 		quest::summonitem(51122);
 	}
-}
 }
 
 sub EVENT_ITEM {
@@ -24,7 +24,7 @@ sub EVENT_ITEM {
 		quest::exp(100);
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
+		#:: Set factions
 		quest::faction(86,100); 	#:: + Dismal Rage
 		quest::faction(184,-15); 	#:: - Knights of Truth
 		quest::faction(235,20); 	#:: + Opal Dark Briar
@@ -38,6 +38,7 @@ sub EVENT_ITEM {
 		quest::exp(100);
 		#:: Ding!
 		quest::ding();
-	}	
+	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
