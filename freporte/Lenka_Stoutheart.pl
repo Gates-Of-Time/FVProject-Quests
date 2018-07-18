@@ -1,13 +1,14 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		#Match Merchants of Halas Indifferent or Better
+		#:: Match Merchants of Halas faction if indifferent or better
 		if ($faction <= 5 ) {
 			quest::say("Hi, kid! You seem to be a stranger in these parts. Heed my words, this city is dangerous to new blood!");
-			quest::signal(10135,10); #:: Signal Bronto Thudfoot
+			#:: Signal Bronto Thudfoot
+			quest::signal(10135,10);
 		}
-		#Match Merchants of Halas Worse than Indifferent
+		#:: Match Merchants of Halas faction if worse than indifferent
 		elsif ($faction > 5 ) {
-        quest::say("Run while ye still can!!  The Wolves o' the North will not tolerate yer presence!")
+			quest::say("Run while ye still can!!  The Wolves o' the North will not tolerate yer presence!");
 		}
 	}
 	if ($text=~/toala sent me/i) {
@@ -35,7 +36,7 @@ sub EVENT_ITEM {
 		quest::say("Oh!! You must work for that Erudite named Palatos. I guess he won't have to spend anymore money drinking in Freeport. Here. Here is the portrait I kept until he could get me a new boat beacon.");
 		#:: Give item 12146 - Ak'anon's Portrait
 		quest::summonitem(12146);
-		#:: Give a small amount of xp
+		#:: Give a small amount of experience
 		quest::exp(100);
 		#:: Ding!
 		quest::ding();
@@ -52,6 +53,8 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(13922,13923));
 		#:: Give a small amount of xp
 		quest::exp(200);
+		#:: Give a small amount of cash copper - plat
+		quest::givecash(0,2,0,0);
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
@@ -60,7 +63,7 @@ sub EVENT_ITEM {
 		quest::faction(213,2); 		#:: + Merchants of Halas
 		quest::faction(311,1); 		#:: + Steel Warriors
 		quest::faction(275,-2); 	#:: + Rogues of the White Rose
-		quest::givecash(0,2,0,0);	#:: Give a small amount of cash copper - plat
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
