@@ -19,5 +19,6 @@ sub EVENT_ITEM {
 		quest::faction(184,-15); 	#:: - Knights of Truth
 		quest::faction(235,20); 	#:: + Opal Dark Briar
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
