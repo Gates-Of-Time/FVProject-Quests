@@ -31,7 +31,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match a 9967 - Karran's Head
 	if (plugin::check_handin(\%itemcount, 9967 => 1)) {
-		quest::say("I take it he got the message... Excellent work!");
+		quest::say("Ah, it seems as if he was not a very cooperative kitty. So much for family. Oh well, take this token change as a show of my appreciation. Cazic-Thule shines on you in all his glorious fear this day, young one.");
 		#:: Ding!
 		quest::ding();
 		#:: Grant a moderate amount of experienct
