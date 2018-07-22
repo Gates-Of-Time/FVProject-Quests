@@ -26,7 +26,8 @@ sub EVENT_ITEM {
 	}
 	#:: Turn in for 10307 -  Fire Beetle Eye x4
 	if (plugin::check_handin(\%itemcount, 10307 => 4)) {
-		quest::say("Let's see here. One.. two.. three.. and.. four. Great!! Just enough for my needs. You are serving Xelha well. I give you Spell: Cavorting Bones. It is not much, but neither are you. You know what I really need is a cyclops eye. That would be worthy of a great reward.");
+		quest::say("This is a good sight. I needed these to complete the current mixture. 
+Bah!! I shall reward you for this small, very small, deed!! I pass on to you the knowledge of summoning. The more you serve, the more your faith in Innoruuk grows.");
 		#:: Give item 15338 - Spell: Cavorting Bones
 		quest::summonitem(15338);
 		#:: Give a small amount of xp
@@ -42,7 +43,7 @@ sub EVENT_ITEM {
 	}
 	#:: Turn in for 13073 -  Bone Chips x4
 	if (plugin::check_handin(\%itemcount, 13073 => 4)) {
-		quest::say("Let's see here. One.. two.. three.. and.. four. Great!! Just enough for my needs. You are serving Xelha well. I give you Spell: Cavorting Bones. It is not much, but neither are you. You know what I really need is a cyclops eye. That would be worthy of a great reward.");
+		quest::say("Excellent work! You are quite the little helper. Here you go, then. A little something for your little work. Your service to me has caused Innoruuk to look upon you favorably. Your faith in our group has grown. Continue the work.");
 		#:: Give a small amount of xp
 		quest::exp(20);
 		#:: Give a small amount of cash copper - plat
