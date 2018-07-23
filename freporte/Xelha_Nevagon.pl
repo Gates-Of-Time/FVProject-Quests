@@ -26,8 +26,7 @@ sub EVENT_ITEM {
 	}
 	#:: Turn in for 10307 -  Fire Beetle Eye x4
 	if (plugin::check_handin(\%itemcount, 10307 => 4)) {
-		quest::say("This is a good sight. I needed these to complete the current mixture. 
-Bah!! I shall reward you for this small, very small, deed!! I pass on to you the knowledge of summoning. The more you serve, the more your faith in Innoruuk grows.");
+		quest::say("This is a good sight. I needed these to complete the current mixture. Bah!! I shall reward you for this small, very small, deed!! I pass on to you the knowledge of summoning. The more you serve, the more your faith in Innoruuk grows.");
 		#:: Give item 15338 - Spell: Cavorting Bones
 		quest::summonitem(15338);
 		#:: Give a small amount of xp
