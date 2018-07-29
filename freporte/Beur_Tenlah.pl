@@ -21,7 +21,7 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Send a signal to Harkin Duskfoot in Freporte
-		quest::signal(10107,1);
+		quest::signal(10107,0,1);
 	}
 	plugin::return_items(\%itemcount);
 }
