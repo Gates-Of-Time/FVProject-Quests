@@ -15,7 +15,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Turn in for 13703 -  Bag of Troll Guts & 1 Platinum
-	if (plugin::takeItemsCoin(0,0,0,1, 13073 => 1)) {
+	if (plugin::takeItemsCoin(0,0,0,1, 13703 => 1)) {
 		quest::say("I am not even going to bother asking where you got that. Just take this set I already made and hurry them back to Fabian.");
 		#:: Give item 13709 Lut Strings
 		quest::summonitem(13709);
