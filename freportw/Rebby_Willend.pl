@@ -1,5 +1,4 @@
 sub EVENT_SAY {
-
 	if ($text=~/hail/i) {
 		quest::say("Hey friend. nice wallet ya got there.  Bet it's fulla money. huh?  Why don't ya let me take a quick look. huh?");
 	}
@@ -17,4 +16,4 @@ sub EVENT_ITEM {
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
-} 
+}
