@@ -8,7 +8,7 @@ sub EVENT_SAY {
 }
 
 sub EVENT_SIGNAL {
-	#:  Signal from Harking Duskfoot in freporte
+	#::  Signal from Harking Duskfoot in freporte
 	quest::say("Heh, I got something that reminds you of home.. My armpit! Bwa haha!!!.");
 }
 
@@ -21,7 +21,8 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Send a signal to Harkin Duskfoot in Freporte
-		quest::signal(10107,0,1);
+		quest::signal(10107,1,0);
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
