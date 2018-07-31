@@ -35,7 +35,7 @@ sub EVENT_ITEM {
 		quest::faction(63,-10);	#:: - Crushbone Orcs
 	}
 	#:: Match a 13336 - Pirate's Earring
-	if (plugin::takeItems(13337 => 1)) {
+	if (plugin::takeItems(13336 => 1)) {
 		quest::say("Good work. I see you have removed that retchid pirate from here.");
 		#:: Give a 13339 - Aviak Feather, 13342 - Conch Shell, 7017 - Fishing Spear, 13340 - Kiola Nut
 		quest::summonitem(quest::ChooseRandom(13339,13342,7017,13340));
