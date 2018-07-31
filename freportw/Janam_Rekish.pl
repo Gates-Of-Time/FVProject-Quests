@@ -1,7 +1,6 @@
 sub EVENT_SAY {
-
-if ($text=~/hail/i) {
-	quest::say("Ah. hello there. friend!  Me an' Rebby here. we're a just couple o' regular merchants.  Though we've got nothin' to sell right now. we'd gladly take any donations.  Them's the breaks. I suppose.");
+	if ($text=~/hail/i) {
+		quest::say("Ah. hello there. friend!  Me an' Rebby here. we're a just couple o' regular merchants.  Though we've got nothin' to sell right now. we'd gladly take any donations.  Them's the breaks. I suppose.");
 	}
 } 
 
