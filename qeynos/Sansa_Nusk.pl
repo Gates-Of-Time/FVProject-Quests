@@ -15,7 +15,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Turn in for 13703 -  Bag of Troll Guts & 1 Platinum
-	if (plugin::check_handin(\%itemcount, 13073 => 1, $platinum == 1)) {
+	if (plugin::takeItemsCoin(0,0,0,1, 13073 => 1)) {
 		quest::say("I am not even going to bother asking where you got that. Just take this set I already made and hurry them back to Fabian.");
 		#:: Give item 13709 Lut Strings
 		quest::summonitem(13709);
@@ -28,9 +28,8 @@ sub EVENT_ITEM {
 		quest::faction(184,30); 	#:: + Knights of Truth
 		quest::faction(135,30); 	#:: + Guards of Qeynos
 		quest::faction(273,-30); 	#:: - Ring of Scale
-		quest::faction(207,-30); 	#:: - Mayong Mistmoore	
+		quest::faction(207,-30); 	#:: - Mayong Mistmoore
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
- 
