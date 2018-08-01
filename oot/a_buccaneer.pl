@@ -1,3 +1,3 @@
-sub EVENT_AGGRO{
+sub EVENT_AGGRO {
 	quest::say("Time to die $name.");
 }
