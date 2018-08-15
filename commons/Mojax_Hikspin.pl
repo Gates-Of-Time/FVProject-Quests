@@ -31,9 +31,19 @@ sub EVENT_ITEM {
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
+	#:: Create a scalar variable to count pathing loops
+	$pathcount = 0;
 	#:: Match at grid entry 3 - at the inn
-	if ($WP == 2) {
+	if ($wp == 2) {
 		#:: Spawn 21136 - West Commonlands >> Duggin_Scumber
 		quest::spawn2(21136,0,0,$x,$y,$z,$h);
+		$pathcount = 1;
+	}
+	#:: Match at grid entry 1 - spawn point
+	if ($wp == 0 && $pathcount == 1) {
+		#:: Stop Grid 86
+		quest::stop();
+		#:: Reset scalar to 0
+		$pathcount = 0;
 	}
 }
