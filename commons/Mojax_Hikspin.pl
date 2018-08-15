@@ -1,3 +1,6 @@
+#:: Create a scalar variable to count pathing loops
+my $pathcount = 0;
+
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Hi. How are you? The fish are biting pretty good. That is what Skipynn tells me. I sure wish I had a different [" . quest::saylink("job") . "]. If I did, I could fish all day long.");
@@ -31,8 +34,6 @@ sub EVENT_ITEM {
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
-	#:: Create a scalar variable to count pathing loops
-	my $pathcount = 0;
 	#:: Match at grid entry 2 - at the inn
 	if ($wp == 2 && $pathcount == 0) {
 		#:: Spawn 21136 - West Commonlands >> Duggin_Scumber
