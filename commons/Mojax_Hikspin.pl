@@ -32,12 +32,12 @@ sub EVENT_ITEM {
 
 sub EVENT_WAYPOINT_ARRIVE {
 	#:: Match at grid entry 3 - at the inn
-	if ($WP == 3) {
+	if ($WP == 2) {
 		#:: Spawn 21136 - West Commonlands >> Duggin_Scumber
 		quest::spawn2(21136,0,0,$x,$y,$z,$h);
 	}
 	#:: Match at grid entry 1 - spawn point
-	if ($WP == 1) {
+	if ($WP == 0) {
 		#:: Stop Grid 86
 		quest::stop();
 	}
