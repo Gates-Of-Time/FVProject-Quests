@@ -15,7 +15,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match 13087 - Bottle of Milk
-	if (plugin::check_handin(\%itemcount, 13087 =>1 )) {
+	if (plugin::check_handin(\%itemcount, 13087 => 1 )) {
 		quest::say("Aaahhhh. Now that is refreshing. Just let me rest for a bit. The note is safe and sound in my bedroll inside the inn.");
 		#:: Set factions
 		quest::faction(184,1);	#:: Knights of Truth
@@ -26,14 +26,19 @@ sub EVENT_ITEM {
 		#:: Start Grid 86 - Path to the nearby Inn
 		quest::start(86);
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
-	if ($WP = 2) {
+	#:: Match at grid entry 3 - at the inn
+	if ($WP = 3) {
 		#:: Spawn 21136 - West Commonlands >> Duggin_Scumber
 		quest::spawn2(21136,0,0,$x,$y,$z,$h);
-		#:: Move to spawn point
-		quest::moveto(2770,-307,-62,13);
+	}
+	#:: Match at grid entry 1 - spawn point
+	if ($WP = 1) {
+		#:: Stop Grid 86
+		quest::stop();
 	}
 }
