@@ -1,6 +1,10 @@
 sub EVENT_SPAWN {
 	#:: Set a timer for four hours
 	quest::settimer("HastenDepop",14400);
+	#:: Clear out items
+	$npc->ClearItemList();
+	#:: Clear out gold
+	$gold = 0;
 }
 
 sub EVENT_TIMER {
@@ -43,6 +47,10 @@ sub EVENT_ITEM {
 		quest::exp(1250);
 		#:: Give a 2300 - Journeyman's Boots
 		quest::summonitem(2300);
+		#:: Clear out items
+		$npc->ClearItemList();
+		#:: Clear out gold
+		$gold = 0;
 	}
 	#:: Match a 7100 - Shadowed Rapier and 3250 gold
 	elsif (plugin::takeItemsCoin(0,0,3250,0, 7100 => 1)) {
@@ -56,6 +64,10 @@ sub EVENT_ITEM {
 			quest::exp(1250);
 			#:: Give a 2300 - Journeyman's Boots
 			quest::summonitem(2300);
+			#:: Clear out items
+			$npc->ClearItemList();
+			#:: Clear out gold
+			$gold = 0;
 		} else {
 			quest::say("A Ring of the Ancients you still owe me!");
 		}
@@ -72,6 +84,10 @@ sub EVENT_ITEM {
 			quest::exp(1250);
 			#:: Give a 2300 - Journeyman's Boots
 			quest::summonitem(2300);
+			#:: Clear out items
+			$npc->ClearItemList();
+			#:: Clear out gold
+			$gold = 0;
 		} else {
 			quest::say("A Shadowed Rapier you still owe me!");
 		}
@@ -87,6 +103,10 @@ sub EVENT_ITEM {
 			quest::exp(1250);
 			#:: Give a 2300 - Journeyman's Boots
 			quest::summonitem(2300);
+			#:: Clear out items
+			$npc->ClearItemList();
+			#:: Clear out gold
+			$gold = 0;
 		} else {
 			quest::say("A Ring of the Ancients and 3250 Gold you owe me!");
 		}
@@ -103,9 +123,14 @@ sub EVENT_ITEM {
 			quest::exp(1250);
 			#:: Give a 2300 - Journeyman's Boots
 			quest::summonitem(2300);
+			#:: Clear out items
+			$npc->ClearItemList();
+			#:: Clear out gold
+			$gold = 0;
 		} else {
 			quest::say("A Shadowed Rapier and 3250 Gold you owe me!");
 		}
 	}
+	#:: Return unused items
 	plugin::returnUnusedItems();
 }
