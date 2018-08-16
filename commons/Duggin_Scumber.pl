@@ -1,14 +1,15 @@
 sub EVENT_SPAWN {
 	quest::emote("runs up and steals the note.");
 	quest::say("Aha!! Foolish Qeynite or whatever you call yourself!! I have found the note and now I shall take it to my superior!! Just try and catch me!!");
+	#:: Set running to true (run)
 	quest::SetRunning(1);
-	quest::moveto(73,16,-52,180);
-	quest::settimer(1,120);
+	#:: Start Grid 87
+	quest::start(87);
 }
 
-sub EVENT_TIMER {
-	if ($timer == 1) {
-		quest::stoptimer(1);
+sub EVENT_WAYPOINT_ARRIVE {
+	#:: Match at grid entry 7 - at the toll booth
+	if ($wp == 7) {
 		quest::depop();
 	}
 }
