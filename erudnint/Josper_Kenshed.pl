@@ -21,12 +21,14 @@ sub EVENT_ITEM {
 		quest::say("Well done, my young apprentice. I call you apprentice for you are nothing but a spark to my fire. This is the final component for my greatest creation. AHA!! I call it - iced tea!! Never again shall I boil under the hot sun. As for you, take this. It should serve you well. Now go away. There is no iced tea for you");
 		#:: Give item 12208 - Servant's Staff
 		quest::summonitem(12208);
-		#:: Give a small amount of coin
-		quest::givecash(0,7,0,0);
-		#:: Give a small amount of xp
-		quest::exp(1000);
 		#:: Ding!
 		quest::ding();
+		#:: Give a moderate amount of xp
+		quest::exp(1000);
+		#:: Create a hash for storing cash - 50 to 100cp
+		my %cash = plugin::RandomCash(50,100);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(60,10);		#:: + Crimson Hands
 		quest::faction(145,10);		#:: + High Council of Erudin
@@ -38,17 +40,20 @@ sub EVENT_ITEM {
 		quest::say("Go now and use his research to aid yourself. Seems that I lack the will to use Ilanic's knowledge for my better good.");
 		#:: Give item 15380 - Spell: Column of Frost
 		quest::summonitem(15380);
-		#:: Give a small amount of coin
-		quest::givecash(0,7,0,0);
-		#:: Give a small amount of xp
-		quest::exp(1000);
 		#:: Ding!
 		quest::ding();
+		#:: Give a moderate amount of xp
+		quest::exp(1000);
+		#:: Create a hash for storing cash - 50 to 100cp
+		my %cash = plugin::RandomCash(50,100);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(60,10);		#:: + Crimson Hands
 		quest::faction(145,10);		#:: + High Council of Erudin
 		quest::faction(143,-30);	#:: - Heretics
 		quest::faction(147,10);		#:: + High Guard of Erudin							
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
