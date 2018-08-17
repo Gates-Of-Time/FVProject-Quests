@@ -17,12 +17,12 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(2104, 2106, 2108, 2111, 2112));
 		#:: Ding!!
 		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(800);
 		#:: Create a hash for storing cash - 100 to 200cp
 		my %cash = plugin::RandomCash(100,200);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Grant a small amount of experience
-		quest::exp(800);
 		#:: Set faction
 		quest::faction(283, 10);	#:: + Tunare's Scouts
 	}
