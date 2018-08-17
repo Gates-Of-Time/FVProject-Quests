@@ -22,12 +22,14 @@ sub EVENT_ITEM {
 		quest::say("I heard our shipment made it back safely. These heads will send a message to any other thief that plans on robbing our cargo shipments. Thank you $name, take this mask and this coin as your reward.");
 		#:: Give item 85058 -  Highway Protectors Mask
 		quest::summonitem(85058);
-		#:: Give a small amount of xp
-		quest::exp(6000);
-		#:: Give small amount of cash
-		quest::givecash(3,2,3,0);	#:: Give a small amount of cash
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of xp
+		quest::exp(6000);
+		#:: Create a hash for storing cash - 300 to 350cp
+		my %cash = plugin::RandomCash(300,350);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(115,15); 	#:: + Gem Cutters
 		quest::faction(210,15); 	#:: + Merchants of Ak'Anon
@@ -35,5 +37,6 @@ sub EVENT_ITEM {
 		quest::faction(71,-15); 	#:: - Dark Reflection
 		quest::faction(39,-15); 	#:: - Clan Grikbar
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
