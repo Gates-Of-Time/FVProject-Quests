@@ -20,14 +20,19 @@ sub EVENT_ITEM {
 		quest::say("I sent you after that book ages ago! What took you so long? I have already completed my studies. Luckily I found the original manuscript under my bedroll. I forgot I had kept it there. Take this as a token of my apology. Maybe it will aid you in your next book hunt. I know how cunning those books can be.");
 		#:: Randomly choose Spell: Languid Pace, Fine Steel Morning Star,Cracked Eye stone, or Aged Platinum Bloodstone Earring
 		quest::summonitem(quest::ChooseRandom(15302,6351,89036,16647));
-		quest::exp(12500);
 		#:: Ding!
 		quest::ding();
+		#:: Give a moderate amount of xp
+		quest::exp(12500);
+		#:: Create a hash for storing cash - 5000 to 5500cp
+		my %cash = plugin::RandomCash(5000,5500);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(247,5); 		#:: + Peace Keepers
 		quest::faction(145,-10); 	#:: - High Council of Erudin
 		quest::faction(143, 5); 	#:: + Heretics
-		quest::givecash(0,0,20,3);	#:: Give a small amount of cash copper - plat
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
