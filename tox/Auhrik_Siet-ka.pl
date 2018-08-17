@@ -18,14 +18,16 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Give a moderate amount of experience
 		quest::exp(2000);
-		#:: Give a small cash reward
-		quest::givecash(5,3,0,0);
+		#:: Create a hash for storing cash - 30 to 50cp
+		my %cash = plugin::RandomCash(30,50);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(143,5);	# + Heretics
-		quest::faction(79,-5);	# - Deepwater Knights
-		quest::faction(112,-5);	# - Gate Callers
-		quest::faction(56,-5);	# - Craftkeepers
-		quest::faction(60,-5);	# - Crimson Hands
+		quest::faction(143,5);	#:: + Heretics
+		quest::faction(79,-5);	#:: - Deepwater Knights
+		quest::faction(112,-5);	#:: - Gate Callers
+		quest::faction(56,-5);	#:: - Craftkeepers
+		quest::faction(60,-5);	#:: - Crimson Hands
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
