@@ -28,16 +28,19 @@ sub EVENT_ITEM {
 	if (plugin::check_handin(\%itemcount, 20016 => 1)) {
 		if ($npcrace == 8 && $npcgender == 0) {
 			quest::say("Good work!! I shall be on my way.  Farewell my friend!!");
-			#:: Give a small amount of xp
-			quest::exp(1000);
 			#:: Ding!
 			quest::ding();
+			#:: Give a moderate amount of xp
+			quest::exp(1000);
+			#:: Create a hash for storing cash - 700 to 750cp
+			my %cash = plugin::RandomCash(700,750);
+			#:: Grant a random cash reward
+			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set faction
 			quest::faction(169,1); 		#:: + Kazon Stormhammer
 			quest::faction(314,1); 		#:: + Storm Guard
 			quest::faction(220,1); 		#:: + Miners Guild 628
 			quest::faction(215,1); 		#:: + Merchants of Kaladim
-			quest::givecash(0,3,7,0);	#:: Give a small amount of cash copper - plat
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
@@ -52,10 +55,10 @@ sub EVENT_ITEM {
 			#:: Summon Item 18905 - Worn Rune (Csb 1.O.U. Dwf 1)
 			quest::summonitem(18905);
 			quest::say("You killed the taskmaster?!  Absolutely amazing! The orcs will be fighting among themselves for power now and I can disappear in the commotion. Thanks, friend! Take this for your deeds!");
-			#:: Give a small amount of xp
-			quest::exp(1500);
 			#:: Ding!
 			quest::ding();
+			#:: Give a moderate amount of xp
+			quest::exp(1500);
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
@@ -63,10 +66,10 @@ sub EVENT_ITEM {
 			#:: Summon Item 18906 - Small Wood Carving (Csb 1.O.U. Dwf 2)
 			quest::summonitem(18906);
 			quest::say("You killed the taskmaster?!  Absolutely amazing! The orcs will be fighting among themselves for power now and I can disappear in the commotion. Thanks, friend! Take this for your deeds!");
-			#:: Give a small amount of xp
-			quest::exp(1500);
 			#:: Ding!
 			quest::ding();
+			#:: Give a moderate amount of xp
+			quest::exp(1500);
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
@@ -75,16 +78,19 @@ sub EVENT_ITEM {
 	if (plugin::check_handin(\%itemcount, 20017 => 1)) {
 		if ($npcrace == 8 && $npcgender == 1) {
 			quest::say("Good work!! I shall be on my way. Farewell my friend!!");
-			#:: Give a small amount of xp
-			quest::exp(1000);
 			#:: Ding!
 			quest::ding();
+			#:: Give a moderate amount of xp
+			quest::exp(1000);
+			#:: Create a hash for storing cash - 700 to 750cp
+			my %cash = plugin::RandomCash(700,750);
+			#:: Grant a random cash reward
+			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set faction
 			quest::faction(169,1); 		#:: + Kazon Stormhammer
 			quest::faction(314,1); 		#:: + Storm Guard
 			quest::faction(220,1); 		#:: + Miners Guild 628
 			quest::faction(215,1); 		#:: + Merchants of Kaladim
-			quest::givecash(0,3,7,0);	#:: Give a small amount of cash copper - plat
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
