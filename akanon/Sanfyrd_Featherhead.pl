@@ -12,8 +12,6 @@ sub EVENT_SAY {
 		quest::say("Great!! Here you go, my friend. Take this crate and within you shall fill each slot with hair tonic. When all are combined within the crate, return it to me for your wing. I am not sure what the tonic was or where I got it. There is some writing on the crate, but I could not identify it.");
 		#:: Give a 17979 - Crate for Tonics
 		quest::summonitem(17979);
-		#:: Ding!
-		quest::ding();
 	}
 }
 
@@ -23,17 +21,20 @@ sub EVENT_ITEM {
 		quest::say("Grand! We always need more scraps to melt down. Here you are, then... Some coins for supporting Ak'Anon and a salvaged item from the scrapyard.");
 		#:: Randomly choose one of various rusty weapons, gnome glow rod, and Tinmizer's Stupendous Contraption
 		quest::summonitem(quest::ChooseRandom(5013,5013,5013,5014,5014,5014,5015,5015,5015,5016,5016,5016,5019,5019,5019,5020,5020,5020,12340,12340,17033));
-		#:: Give a little xp
-		quest::exp(1000);
 		#:: Ding!
 		quest::ding();
+		#:: Grant a moderate amount of experience
+		quest::exp(1000);
+		#:: Create a hash for storing cash - 1100 to 1200cp
+		my %cash = plugin::RandomCash(1100,1200);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(115,3); 		#:: + Gem Cutters
 		quest::faction(210,3); 		#:: + Merchants of Ak'Anon
 		quest::faction(176,3); 		#:: + King Ak'Anon
 		quest::faction(71,-3); 		#:: - Dark Reflection
 		quest::faction(39,-3); 		#:: - Clan Grikbar
-		quest::givecash(4,5,1,1);	#:: Give a small amount of cash
 	}
 	#:: Turn in for the Aid Fimli Quest (POP) Bundle of Super Conductive Wires, Gold Tipped Boar Horn, Shard of Pure Energy, Silicorrosive Grease
 	#if (plugin::check_handin(\%itemcount, 9426 => 1, 28618 => 1, 29906 =>1, 28165 +>1)) {
@@ -49,6 +50,18 @@ sub EVENT_ITEM {
 		quest::summonitem(12337); 
 		#:: Ding!
 		quest::ding();
+		#:: Grant a moderate amount of experience
+		quest::exp(1000);
+		#:: Create a hash for storing cash - 1100 to 1200cp
+		my %cash = plugin::RandomCash(1100,1200);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Set faction
+		quest::faction(115,3); 		#:: + Gem Cutters
+		quest::faction(210,3); 		#:: + Merchants of Ak'Anon
+		quest::faction(176,3); 		#:: + King Ak'Anon
+		quest::faction(71,-3); 		#:: - Dark Reflection
+		quest::faction(39,-3); 		#:: - Clan Grikbar
 	}
 	#:: Turn in for the Rain Caller Quest - Mane Attraction
 	if (plugin::check_handin(\%itemcount, 12254 => 1)) {
@@ -57,16 +70,12 @@ sub EVENT_ITEM {
 		quest::summonitem(12339); 
 		#:: Ding!
 		quest::ding();
-	}
-	#:: Turn in for the Duster Models Quest - Scrap Metal(Duster V Scrap Metal) and Scrap Metal (Duster X Scrap Metal)
-	if (plugin::check_handin(\%itemcount, 13216 => 1, 13217 =>1)) {
-		quest::say("Good. The citizens of Ak'Anon are safe from those little critters. They may have injured someone; that is why they were deactivated. Here is something I found in the scrapyard. I hope you can find a purpose for it.");
-		#:: Randomly choose one of Bootstrutter's Framed Pack or Forging Hammer
-		quest::summonitem(quest::ChooseRandom(17981, 17981, 6027));
-		#:: Give a little xp
+		#:: Grant a moderate amount of experience
 		quest::exp(1000);
-		#:: Ding!
-		quest::ding();
+		#:: Create a hash for storing cash - 1100 to 1200cp
+		my %cash = plugin::RandomCash(1100,1200);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(115,3); 		#:: + Gem Cutters
 		quest::faction(210,3); 		#:: + Merchants of Ak'Anon
@@ -74,5 +83,26 @@ sub EVENT_ITEM {
 		quest::faction(71,-3); 		#:: - Dark Reflection
 		quest::faction(39,-3); 		#:: - Clan Grikbar
 	}
+	#:: Turn in for the Duster Models Quest - Scrap Metal(Duster V Scrap Metal) and Scrap Metal (Duster X Scrap Metal)
+	if (plugin::check_handin(\%itemcount, 13216 => 1, 13217 =>1)) {
+		quest::say("Good. The citizens of Ak'Anon are safe from those little critters. They may have injured someone; that is why they were deactivated. Here is something I found in the scrapyard. I hope you can find a purpose for it.");
+		#:: Randomly choose one of Bootstrutter's Framed Pack or Forging Hammer
+		quest::summonitem(quest::ChooseRandom(17981, 17981, 6027));
+		#:: Ding!
+		quest::ding();
+		#:: Grant a moderate amount of experience
+		quest::exp(1000);
+		#:: Create a hash for storing cash - 1100 to 1200cp
+		my %cash = plugin::RandomCash(1100,1200);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Set faction
+		quest::faction(115,3); 		#:: + Gem Cutters
+		quest::faction(210,3); 		#:: + Merchants of Ak'Anon
+		quest::faction(176,3); 		#:: + King Ak'Anon
+		quest::faction(71,-3); 		#:: - Dark Reflection
+		quest::faction(39,-3); 		#:: - Clan Grikbar
+	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
