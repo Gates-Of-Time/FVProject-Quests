@@ -21,30 +21,35 @@ sub EVENT_ITEM {
 		quest::say("Good work, young priest. Soon you shall carry the word of the Ocean Lord to distant lands. For now, continue your training. As for your reward, I have this which has been sitting in our vault. I hope it can be of use to a young priest such as yourself.");
 		#:: Randomly choose reward: 2144 - Raw-hide Sleeves, 2146 - Raw-hide Gloves, 2147 - Raw-hide Leggings, 17005 - Backpack
 		quest::summonitem(quest::ChooseRandom(2144, 2146, 2147, 17005));
-		#:: Give a small amount of xp
-		quest::exp(100);
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of xp
+		quest::exp(100);
+		#:: Create a hash for storing cash - 450 to 550cp
+		my %cash = plugin::RandomCash(450,550);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(79,10);		#:: + Deepwater Knights
 		quest::faction(145,10);		#:: + High Council of Erudin
 		quest::faction(143,-15);	#:: - Heretics
-		#:: Give a small amount of cash copper - plat
-		quest::givecash(0,14,5,0);
 	}
 	#:: Match turn in for 13880 - Bag of Zombie Flesh
 	if (plugin::check_handin(\%itemcount, 13880 => 1)) {
 		quest::say("Peeuww!! That most certainly is zombie flesh!! Here is your reward. You have done a fine service in the name of Prexus. Soon you shall advance and we may tell you of greater dangers lurking in the depths.");
-		#:: Give a small amount of xp
-		quest::exp(100);
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of xp
+		quest::exp(100);
+		#:: Create a hash for storing cash - 350 to 450cp
+		my %cash = plugin::RandomCash(350,450);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(79,10);		#:: + Deepwater Knights
 		quest::faction(145,10);		#:: + High Council of Erudin
 		quest::faction(143,-15);	#:: - Heretics
-		#:: Give a small amount of cash copper - plat
-		quest::givecash(0,12,4,0);
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
