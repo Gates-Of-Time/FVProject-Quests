@@ -1,4 +1,5 @@
 sub EVENT_SPAWN {
+	#:: Set up a proximity, 100 units across
 	$x = $npc->GetX();
 	$y = $npc->GetY();
 	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
@@ -53,12 +54,11 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(143,100);	# + Heretics
-		quest::faction(79,-100);	# - Deepwater Knights
-		quest::faction(112,-100);	# - Gate Callers
-		quest::faction(56,-100);	# - Craftkeepers
-		quest::faction(60,-100);	# - Crimson Hands
-    
+		quest::faction(143,100);	#:: + Heretics
+		quest::faction(79,-100);	#:: - Deepwater Knights
+		quest::faction(112,-100);	#:: - Gate Callers
+		quest::faction(56,-100);	#:: - Craftkeepers
+		quest::faction(60,-100);	#:: - Crimson Hands
 	}
 	#:: Match four 13270 - Infected Rat Livers
 	if (plugin::check_handin(\%itemcount, 13270 => 4)) {
@@ -70,29 +70,31 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(200);
 		#:: Set factions
-		quest::faction(143, 10);	# + Heretics
-		quest::faction(56, -30);	# - Craftkeepers
-		quest::faction(60, -30);	# - Crimson Hands
-		quest::faction(79, -30);	# - Deepwater Knights
-		quest::faction(112, -30);	# - Gate Callers
+		quest::faction(143, 10);	#:: + Heretics
+		quest::faction(56, -30);	#:: - Craftkeepers
+		quest::faction(60, -30);	#:: - Crimson Hands
+		quest::faction(79, -30);	#:: - Deepwater Knights
+		quest::faction(112, -30);	#:: - Gate Callers
 	} 
 	#:: Match a 13074 - Zombie Skin, 16990 - Embalming Dust, 14102 - Charred Bone Chips, 14103 - Vial of Tunare's Breath
 	if (plugin::check_handin(\%itemcount, 13074 => 1, 16990 => 1, 14102 => 1, 14103 => 1)) {
 		quest::say("Excellent job, $name. These components will help with our research immeasurably. You will soon be reaping the rewards granted by our Lord Cazic-Thule!! If you want to further assist our research effots, talk to Atdehim Sqonci.");
 		#:: Give a 147495 - Mundane Helm
 		quest::summonitem(147495);
-		#:: Grant a random amount of cash
-		quest::givecash(quest::ChooseRandom(1,2,3,4,5,6,7,8,9),quest::ChooseRandom(1,2,3,4,5,6,7,8,9),quest::ChooseRandom(1,2,3,4,5,6,7,8,9),quest::ChooseRandom(1,2,3,4,5,6,7,8,9));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a moderate amount of experience
 		quest::exp(1000);
+		#:: Create a hash for storing cash - 1111 to 9999cp
+		my %cash = plugin::RandomCash(1111,9999);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(143, 150);	# + Heretics
-		quest::faction(56, -30);	# - Craftkeepers
-		quest::faction(60, -30);	# - Crimson Hands
-		quest::faction(79, -30);	# - Deepwater Knights
-		quest::faction(112, -30);	# - Gate Callers
+		quest::faction(143, 150);	#:: + Heretics
+		quest::faction(56, -30);	#:: - Craftkeepers
+		quest::faction(60, -30);	#:: - Crimson Hands
+		quest::faction(79, -30);	#:: - Deepwater Knights
+		quest::faction(112, -30);	#:: - Gate Callers
 		#:: Spawn an Avatar_of_Fright (38202)
 		quest::unique_spawn(38202,0,0,474,1230,-37,128);
 	}
