@@ -48,10 +48,10 @@ sub EVENT_ITEM {
 		quest::say("Greetings. and welcome to the Temple of Divine Light! Here is your guild tunic. Serve Quellious well. Please see Lumi Stergnon - he has a task for you.");
 		#:: Give item 135546 - Faded Silver Tunic
 		quest::summonitem(13546);
-		#:: Give a small amount of xp
-		quest::exp(100);
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of xp
+		quest::exp(100);
 		#:: Set faction
 		quest::faction(247,100); 	#:: + Peace Keepers
 		quest::faction(145,25); 	#:: + High Council of Erudin
@@ -75,16 +75,18 @@ sub EVENT_ITEM {
 		quest::say("Fine work. They shall never lay hands upon another kobold again. I mean paws. Here is a small reward for a fine job. Unfortunatly we have recently learned that the shamen in the forest are merely underlings to more [" . quest::saylink("powerful kobold shaman") . "] that reside in the kobold warrens. Continue the work of Quellious.");
 		#:: Randomly choose Spell: Cure Disease or Spell: Holy Armor
 		quest::summonitem(quest::ChooseRandom(15011,15213));
-		#:: Give a small amount of xp
-		quest::exp(500);
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of xp
+		quest::exp(500);
+		#:: Create a hash for storing cash - 150 to 200cp
+		my %cash = plugin::RandomCash(150,200);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(247,20); 	#:: + Peace Keepers
 		quest::faction(145,20); 	#:: + High Council of Erudin
 		quest::faction(143,-20); 	#:: - Heretics
-		#:: Give a small amount of cash copper - plat
-		quest::givecash(0,17,0,0);
 	}
 	#:: Turn in for 14582 -  Embroidered Bag of Bone Necklaces Quellious Disciple Quest - Stonebrunt/Warrens Expansion
 	#if (plugin::check_handin(\%itemcount, 14582 => 1)) {
