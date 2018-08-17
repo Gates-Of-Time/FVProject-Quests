@@ -1,16 +1,17 @@
-#:: Zimel's Blades Quest (Quest for Soulfire)
-
 sub EVENT_WAYPOINT_ARRIVE {
-	if ($wp==2) {
+	#:: Match waypoint 2
+	if ($wp == 2) {
+		#:: Set running true (run)
 		quest::SetRunning(1);
 	}
-	if ($wp==3) {
+	#:: Match waypoint 3
+	if ($wp == 3) {
+		#:: Set running false (walk)
 		quest::SetRunning(0);
 	}
 }
 
 sub EVENT_SAY {
-
 	if ($text=~/Hail/i) {
 		quest::say("Greetings, traveler! Have you need of provisions or perhaps other wares? I sell what I find upon the battlegrounds of the Commonlands.");
 	}
@@ -30,7 +31,12 @@ sub EVENT_ITEM {
 	#:: Check for Human Head (Narl's Head)
 	if (plugin::check_handin(\%itemcount, 13867 => 1)) {
 		quest::say("You have performed a great service to me, but I fear others will attack me while I stroll the countryside. It would be very noble of you to fetch me a cloth shirt for protection from wicked creatures. It is not much, but it will help.");
-		quest::givecash("7","0","0","0");
+		#:: Ding!
+		quest::ding();
+		#:: Create a hash for storing cash - 1 to 10cp
+		my %cash = plugin::RandomCash(1,10);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set Factions
 		quest::faction(105, -1);	#:: Freeport Militia Faction
 		quest::faction(311,1);		#:: Steel Warriors Factions
@@ -41,10 +47,13 @@ sub EVENT_ITEM {
 		quest::say("Thank you. You are very noble for a squire. I can see you becoming a very valuable asset to the Hall of Truth. Take this token. Tell Merko that you have [earned the Token of Generosity].");
 		#:: Give 13865 - Token of Generosity
 		quest::summonitem("13865");
+		#:: Ding!
+		quest::ding();
 		#:: Set Factions
 		quest::faction(105, -1);	#:: Freeport Militia Faction
 		quest::faction(311,1);		#:: Steel Warriors Faction
 		quest::faction(184,1);		#:: Knights of Truth Faction
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
