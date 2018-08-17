@@ -40,32 +40,39 @@ sub EVENT_ITEM {
 	#:: Turn in for 13882 -  Box of Bones
 	if (plugin::check_handin(\%itemcount, 13882 => 1)) {
 		quest::say("This is fabulous work, my friend! You have served your people well. Take this as a gift. I hope it can be of use to you. We need proof of these skeletons' origins. Continue the eradication of the undead and find out who creates them. Once you know, bring their head to me.");
-		#:: Give a small amount of xp
-		quest::exp(200);
-		#:: Ding!
-		quest::ding();
 		#:: Randomly choose a backpack, belt pouch, hematite, raw-hide armor pieces,rusty weapons, and various spells
 		quest::summonitem(quest::ChooseRandom(17005,17002,10018,2144,2145,2146,6011,6016,15203,15207,15201,15208,15209,15014,15205,15210,6012));
+		#:: Ding!
+		quest::ding();
+		#:: Give a small amount of xp
+		quest::exp(200);
+		#:: Create a hash for storing cash - 400 to 450cp
+		my %cash = plugin::RandomCash(400,450);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(247,10);	 	#:: + Peace Keepers
 		quest::faction(145,5); 		#:: + High Council of Erudin
 		quest::faction(143,-10); 	#:: - Heretics
-		quest::givecash(0,12,3,0);	#:: Give a small amount of cash copper - plat
 	}
 	#:: Turn in for 13816 Peacekeeper staff
 	if (plugin::check_handin(\%itemcount, 13816 => 1)) {
 		quest::say("You have done well, neophyte. Let me add the touch of harmony to finish the job.. Here, then. Take these supplies. I am sure you'll need them. Soon you may be able to assist us in [" . quest::saylink("important missions") . "]");
-		#:: Give a small amount of xp
-		quest::exp(600);
-		#:: Ding!
-		quest::ding();
 		#:: Randomly choose a backpack, belt pouch, hematite, raw-hide armor pieces,rusty weapons
 		quest::summonitem(quest::ChooseRandom(17005,17002,10018,2144,2145,2146,6011,6016,6012));
+		#:: Ding!
+		quest::ding();
+		#:: Give a small amount of xp
+		quest::exp(600);
+		#:: Create a hash for storing cash - 100 to 150cp
+		my %cash = plugin::RandomCash(100,150);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(247,10);	 	#:: + Peace Keepers
 		quest::faction(145,5); 		#:: + High Council of Erudin
 		quest::faction(143,-10); 	#:: - Heretics
-		quest::givecash(12,11,0,0);	#:: Give a small amount of cash copper - plat
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
