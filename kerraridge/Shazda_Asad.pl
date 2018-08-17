@@ -13,13 +13,15 @@ sub EVENT_ITEM {
 		quest::say("Excellent work, young ayyar! You have proven your willingness to dispose of the enemies of our tribe, now you must face one of their most murderous sentries! Bring me the head of Sentinel Creot and I shall induct you into our sejah!");
 		#:: Give a 10343 - Kejaar Totem
 		quest::summonitem(10343);
-		#:: Give a small cash reward
-		quest::givecash(0,6,0,0);
 		#:: Ding!
 		quest::ding();
 		#:: Grant a moderate experience award
 		quest::exp(5000);
-		#:: Set factions
+		#:: Create a hash for storing cash - 50 to 60cp
+		my %cash = plugin::RandomCash(50,60);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Set faction
 		quest::faction(175,20);	# + Kerra Isle
 	}
 	#:: Match a 12438 - Sentinel Creot's Head
