@@ -48,23 +48,36 @@ sub EVENT_ITEM {
 		quest::say("Ah.. Welcome, friend! I am Tobon Starpyre, Master Wizard of Library Mechanimagica. This is our tunic - wear it with pride. Study hard, master your skills, and make us proud. Once you are ready to begin your training please make sure that you see Xalirilan, he can assist you in developing your hunting and gathering skills. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
 		#:: Give item 13523 - Soot Stained Gold Robe*
 		quest::summonitem(13523);
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(100);
 		#:: Set factions
 		quest::faction(76,-5); 		# The Dead
 		quest::faction(91,100); 	# Eldritch Collective
 		quest::faction(71,-15); 	# Dark Reflection
 		quest::faction(115,15); 	# Gem Choppers
 		quest::faction(176,15); 	# King Ak'anon	
-		quest::ding();
-		quest::exp(100);
 	}
 	#:: Check for Telescope Lens x4
 	if (plugin::check_handin(\%itemcount, 13275 => 1, 13276 => 1, 13277 => 1, 13279 => 1)) {
 		quest::say("Thank you for your work. I heard news of the troubles you encountered. Besides these troubles you still completed your mission. We are grateful. And as I once stated, your reward awaits.");
 		#:: Reward random 8th level spell reward
 		quest::summonitem(quest::ChooseRandom(15380,15477,15656));
+		#:: Ding!
 		quest::ding();
-		quest::exp(500);
-		quest::givecash(1,0,0,0);
+		#:: Grant a small amount of experience
+		quest::exp(100);
+		#:: Create a hash for storing cash - 900 to 1100cp
+		my %cash = plugin::RandomCash(900,1100);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Set factions
+		quest::faction(76,-5); 		# The Dead
+		quest::faction(91,100); 	# Eldritch Collective
+		quest::faction(71,-15); 	# Dark Reflection
+		quest::faction(115,15); 	# Gem Choppers
+		quest::faction(176,15); 	# King Ak'anon	
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
