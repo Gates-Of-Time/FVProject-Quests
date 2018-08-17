@@ -22,8 +22,10 @@ sub EVENT_ITEM {
 			quest::ding();
 			#:: Grant a moderate amount of experience
 			quest::exp(1000);
-			#:: Grant a random amount of cash
-			quest::givecash(quest::ChooseRandom(1,2,3,4,5,6,7,8,9),quest::ChooseRandom(1,2,3,4,5,6,7,8,9),quest::ChooseRandom(1,2,3,4,5,6,7,8,9),quest::ChooseRandom(1,2,3,4,5,6,7,8,9));
+			#:: Create a hash for storing cash - 1111 to 9999cp
+			my %cash = plugin::RandomCash(1111,9999);
+			#:: Grant a random cash reward
+			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set factions
 			quest::faction(143,400);	# + Heretics
 			quest::faction(112,-400);	# - Gate Callers
