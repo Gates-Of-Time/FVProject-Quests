@@ -24,72 +24,86 @@ sub EVENT_SAY {
 		quest::emote("We need someone to venture to the dwarven kingdom of Kaladim and speak with Myre of Miner's Guild 628. She has a delivery of special pestles made from bozinite. If you feel up to it, go to her and tell her you are from the Eldritch Collective and desire the bozinite pestles. Return them to me.");
 	}
 }
+
 sub EVENT_ITEM {
 	#:: Turn in for 13077 -  Minotaur Horn x2
 	if (plugin::check_handin(\%itemcount, 13077 => 2)) {
 		quest::say("Fine work. You have earned the respect of the Library. Here is a small token of our appreciation. We shall have this ground down as soon as we find someone to go to [" . quest::saylink("Kaladim") . "].");
-		#:: Give a small amount of xp
-		quest::exp(100);
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of xp
+		quest::exp(100);
+		#:: Create a hash for storing cash - 200 to 250cp
+		my %cash = plugin::RandomCash(200,250);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(91,10); 		#:: + Eldritch Collective
 		quest::faction(115,10); 	#:: + Gem Choppers
 		quest::faction(176,10); 	#:: + King Ak'Anon
 		quest::faction(71,-30); 	#:: - Dark Reflection
 		quest::faction(322,-30); 	#:: - The Dead
-		quest::givecash(0,2,1,6);	#:: Give a small amount of cash
 	}
 	#:: Turn in for 13071 -  Air Tight Box
 	if (plugin::check_handin(\%itemcount, 13271 => 1)) {
 		quest::say("Ah! See? you weren't too afraid to get your hands dirty after all. Now go take a bath!");
 		#:: Give item 10017 - Turquoise
 		quest::summonitem(10017);
-		#:: Give a small amount of xp
-		quest::exp(100);
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of xp
+		quest::exp(100);
+		#:: Create a hash for storing cash - 200 to 250cp
+		my %cash = plugin::RandomCash(200,250);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(91,10); 		#:: + Eldritch Collective
 		quest::faction(115,10); 	#:: + Gem Choppers
 		quest::faction(176,10); 	#:: + King Ak'Anon
 		quest::faction(71,-30); 	#:: - Dark Reflection
 		quest::faction(322,-30); 	#:: - The Dead
-		quest::givecash(6,1,2,0);	#:: Give a small amount of cash
 	}
 	#:: Turn in for 12160 -  Basilisk Tongue
 	if (plugin::check_handin(\%itemcount, 12160 => 4)) {
 		quest::say("Very very good! I can use these in some of our experiments. These tongues are hard to come by and more than a few of our scouts have been turned to stone because of these creatures, but I'm sure you found that out by now, eh?");
 		#:: Randomly choose various mage level spells excluding pet item spells
 		quest::summonitem(quest::ChooseRandom(15205,15211,15288,15310,15311,15313,15331,15050,15093,15315,15316,15058,15317,15318,15036,15094,15246,15322,15323,15325,15851,15324,15332,15400,15399,15398,15042,15613));
-		#:: Give a small amount of xp
-		quest::exp(100);
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of xp
+		quest::exp(100);
+		#:: Create a hash for storing cash - 1500 to 1600cp
+		my %cash = plugin::RandomCash(1500,1600);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(91,10); 		#:: + Eldritch Collective
 		quest::faction(115,10); 	#:: + Gem Choppers
 		quest::faction(176,10); 	#:: + King Ak'Anon
 		quest::faction(71,-30); 	#:: - Dark Reflection
 		quest::faction(322,-30); 	#:: - The Dead
-		quest::givecash(6,1,5,1);	#:: Give a small amount of cash
 	}
 	#:: Turn in for 12160 -  Bozinite Pestle
 	if (plugin::check_handin(\%itemcount, 13272 => 1)) {
 		quest::say("Outstanding $name!! This should be of help to you.");
 		#:: Randomly choose various mage level spells excluding pet item spells
 		quest::summonitem(quest::ChooseRandom(15205,15211,15288,15310,15311,15313,15331,15050,15093,15315,15316,15058,15317,15318,15036,15094,15246,15322,15323,15325,15851,15324,15332,15400,15399,15398,15042,15613));
-		#:: Give a small amount of xp
-		quest::exp(100);
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of xp
+		quest::exp(100);
+		#:: Create a hash for storing cash - 1500 to 1600cp
+		my %cash = plugin::RandomCash(1500,1600);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(91,10); 		#:: + Eldritch Collective
 		quest::faction(115,10); 	#:: + Gem Choppers
 		quest::faction(176,10); 	#:: + King Ak'Anon
 		quest::faction(71,-30); 	#:: - Dark Reflection
 		quest::faction(322,-30); 	#:: - The Dead
-		quest::givecash(6,1,5,1);	#:: Give a small amount of cash
 	}
-		plugin::return_items(\%itemcount);
+	#:: Return unused items
+	plugin::return_items(\%itemcount);
 }
