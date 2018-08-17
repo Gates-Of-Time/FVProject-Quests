@@ -16,12 +16,14 @@ sub EVENT_ITEM {
 		quest::say("You have mastered these spells quickly. You shall now wear the gloves of the Gatecaller. Cumbersome they may feel, but they protect the hands of a young magician. In your young days of magic they will protect you from harm. They are not valued much by merchants, but they are prized by other circles. Nevertheless, we offer them only to our young Gatecallers. You may now be of assistance with a [" . quest::saylink("slight problem") . "].");
 		#:: Give item 12209 - Gloves of the Gatecaller
 		quest::summonitem(12209);
-		#:: Give a small amount of coin
-		quest::givecash(0,5,0,0);
-		#:: Give a small amount of xp
-		quest::exp(175);
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of xp
+		quest::exp(175);
+		#:: Create a hash for storing cash - 40 to 60cp
+		my %cash = plugin::RandomCash(40,60);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(112,10);		#:: + Gate Callers
 		quest::faction(145,10);		#:: + High Council of Erudin
@@ -33,17 +35,20 @@ sub EVENT_ITEM {
 		quest::say("So the rumor shows true. Good work. You are an excellent student and a noble $race. Here is your spell as I promised. Go forth and fill your brain with knowledge.");
 		#:: Give item 15313 - Spell: Fire Flux
 		quest::summonitem(15313);
-		#:: Give a small amount of coin
-		quest::givecash(0,0,10,0);
-		#:: Give a small amount of xp
-		quest::exp(250);
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of xp
+		quest::exp(250);
+		#:: Create a hash for storing cash - 900 to 1100cp
+		my %cash = plugin::RandomCash(900,1100);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(112,10);		#:: + Gate Callers
 		quest::faction(145,10);		#:: + High Council of Erudin
 		quest::faction(143,-30);	#:: - Heretics
 		quest::faction(147,10);		#:: + High Guard of Erudin							
-	}			
+	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
