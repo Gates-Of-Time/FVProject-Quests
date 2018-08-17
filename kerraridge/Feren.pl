@@ -16,10 +16,14 @@ sub EVENT_ITEM {
 		quest::say("Rarr, Feren not haunted by Razortooth no more. Feren grateful and give you this possession.");
 		#:: Give a 1062 - Kerran Fishingpole
 		quest::summonitem(1062);
-		#:: Set factions
+		#:: Ding!
+		quest::ding();
+		#:: Create a hash for storing cash - 1900 to 2100cp
+		my %cash = plugin::RandomCash(1900,2100);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Set faction
 		quest::faction(175,10); 	# + Kerra Isle
-		#:: Grant a small cash reward
-		quest::givecash(0,0,0,2);
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
