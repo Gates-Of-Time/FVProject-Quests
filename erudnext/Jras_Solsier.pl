@@ -16,32 +16,37 @@ sub EVENT_ITEM {
 		quest::say("You have served us well. The harmony of the forest shall be preserved. I have word that theses infidels were all working for one man. Find me evidence pertaining to this man. Surely one of these poachers has something which could aid in finding this man. We must stop him to stop the poachers. Go in peace.");
 		#:: Give item 10004 - Copper Band
 		quest::summonitem(10004);
-		#:: Give a small amount of xp
-		quest::exp(500);
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of xp
+		quest::exp(500);
+		#:: Create a hash for storing cash - 11 to 60cp
+		my %cash = plugin::RandomCash(11,60);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(247,20); 	#:: + Peace Keepers
 		quest::faction(145,20); 	#:: + High Council of Erudin
 		quest::faction(143,-20); 	#:: - Heretics
-		 #:: Give random amount of cash
-		quest::givecash(quest::ChooseRandom(1,2,3,4,5),quest::ChooseRandom(1,2,3,4,5),0,0);
 	}
 	#:: Turn in for 13913 -  Barbaria Head (Talym's Head)
 	if (plugin::check_handin(\%itemcount, 13913 => 1)) {
 		quest::say("It is done! Quellious will look favorably upon our church and we will look favorably upon you. Go in peace");
 		#:: Give item 15202 - Spell: Courage
 		quest::summonitem(15202);
-		#:: Give a small amount of xp
-		quest::exp(1000);
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of xp
+		quest::exp(1000);
+		#:: Create a hash for storing cash - 100 to 120cp
+		my %cash = plugin::RandomCash(100,120);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(247,20); 	#:: + Peace Keepers
 		quest::faction(145,20); 	#:: + High Council of Erudin
 		quest::faction(143,-20); 	#:: - Heretics
-		#:: Give small amount of cash
-		quest::givecash(0,2,1,0);
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
