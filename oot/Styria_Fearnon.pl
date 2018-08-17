@@ -25,14 +25,16 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Grant a small amount of experience
 		quest::exp(250);
-		#:: Give a small armount of cash
-		quest::givecash(0,quest::ChooseRandom(1,2,3,4,5,6),quest::ChooseRandom(1,2,3,4,5,6),0);
+		#:: Create a hash for storing cash - 600 to 700cp
+		my %cash = plugin::RandomCash(600,700);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(99,5);	#:: + Faydarks Champions
-		quest::faction(178,5);	#:: + King Tearis Thex
-		quest::faction(304,5);	#:: + Soldiers of Tunare
-		quest::faction(43,5);	#:: + Clerics of Tunare
-		quest::faction(63,-10);	#:: - Crushbone Orcs
+		quest::faction(99,5);		#:: + Faydarks Champions
+		quest::faction(178,5);		#:: + King Tearis Thex
+		quest::faction(304,5);		#:: + Soldiers of Tunare
+		quest::faction(43,5);		#:: + Clerics of Tunare
+		quest::faction(63,-10);		#:: - Crushbone Orcs
 	}
 	#:: Match a 13336 - Pirate's Earring
 	if (plugin::takeItems(13336 => 1)) {
@@ -43,14 +45,16 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Grant a small amount of experience
 		quest::exp(250);
-		#:: Give a small armount of cash
-		quest::givecash(0,quest::ChooseRandom(1,2,3,4,5,6),quest::ChooseRandom(1,2,3,4,5,6),0);
+		#:: Create a hash for storing cash - 600 to 700cp
+		my %cash = plugin::RandomCash(600,700);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(99,5);	#:: + Faydarks Champions
-		quest::faction(178,5);	#:: + King Tearis Thex
-		quest::faction(304,5);	#:: + Soldiers of Tunare
-		quest::faction(43,5);	#:: + Clerics of Tunare
-		quest::faction(63,-10);	#:: - Crushbone Orcs
+		quest::faction(99,5);		#:: + Faydarks Champions
+		quest::faction(178,5);		#:: + King Tearis Thex
+		quest::faction(304,5);		#:: + Soldiers of Tunare
+		quest::faction(43,5);		#:: + Clerics of Tunare
+		quest::faction(63,-10);		#:: - Crushbone Orcs
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
