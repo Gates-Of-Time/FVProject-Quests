@@ -42,15 +42,17 @@ sub EVENT_ITEM {
 		#:: Match Male High Elf
 		if ($npcrace == 5 && $npcgender == 0) {
 			quest::say("Good work!! I shall be on my way.  Farewell my friend!!");
-			#:: Give a small amount of xp
-			quest::exp(1000);
 			#:: Ding!
 			quest::ding();
+			#:: Give a small amount of xp
+			quest::exp(1000);
+			#:: Create a hash for storing cash - 700 to 750cp
+			my %cash = plugin::RandomCash(700,750);
+			#:: Grant a random cash reward
+			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set faction
 			quest::faction(170,1); 		#:: + Keepers of the Art
 			quest::faction(178,1); 		#:: + King Tearis Thex
-			#:: Give a small amount of cash copper - plat
-			quest::givecash(0,3,7,0);
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
@@ -71,10 +73,10 @@ sub EVENT_ITEM {
 			#:: Summon Item 18901 - Ragged Cloth Note (Csb 1.O.U. Hie 1)
 			quest::summonitem(18901);
 			quest::say("You killed the taskmaster?!  Absolutely amazing! The orcs will be fighting among themselves for power now and I can disappear in the commotion. Thanks, friend! Take this for your deeds!");
-			#:: Give a small amount of xp
-			quest::exp(1500);
 			#:: Ding!
 			quest::ding();
+			#:: Give a small amount of xp
+			quest::exp(1500);
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
@@ -83,10 +85,10 @@ sub EVENT_ITEM {
 			#:: Summon Item 18902 - Torn Drawing (Csb I.O.U. Hie 2)
 			quest::summonitem(18902);
 			quest::say("You killed the taskmaster?!  Absolutely amazing! The orcs will be fighting among themselves for power now and I can disappear in the commotion. Thanks, friend! Take this for your deeds!");
-			#:: Give a small amount of xp
-			quest::exp(1500);
 			#:: Ding!
 			quest::ding();
+			#:: Give a small amount of xp
+			quest::exp(1500);
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
@@ -95,10 +97,10 @@ sub EVENT_ITEM {
 			#:: Summon Item 18903 - Tattered Cloth Note (Csb 1.O.U. Elf 1)
 			quest::summonitem(18903);
 			quest::say("You killed the taskmaster?!  Absolutely amazing! The orcs will be fighting among themselves for power now and I can disappear in the commotion. Thanks, friend! Take this for your deeds!");
-			#:: Give a small amount of xp
-			quest::exp(1500);
 			#:: Ding!
 			quest::ding();
+			#:: Give a small amount of xp
+			quest::exp(1500);
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
@@ -107,10 +109,10 @@ sub EVENT_ITEM {
 			#:: Summon Item 18904 - Faded Wedding Cloth (Csb 1.O.U. Elf 2)
 			quest::summonitem(18904);
 			quest::say("You killed the taskmaster?!  Absolutely amazing! The orcs will be fighting among themselves for power now and I can disappear in the commotion. Thanks, friend! Take this for your deeds!");
-			#:: Give a small amount of xp
-			quest::exp(1500);
 			#:: Ding!
 			quest::ding();
+			#:: Give a small amount of xp
+			quest::exp(1500);
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
@@ -123,15 +125,17 @@ sub EVENT_ITEM {
 		#:: Match Female High Elf
 		if ($npcrace == 5 && $npcgender == 1) {
 			quest::say("Good work!! I shall be on my way. Farewell my friend!!");
-			#:: Give a small amount of xp
-			quest::exp(1000);
 			#:: Ding!
 			quest::ding();
+			#:: Give a small amount of xp
+			quest::exp(1000);
+			#:: Create a hash for storing cash - 700 to 750cp
+			my %cash = plugin::RandomCash(700,750);
+			#:: Grant a random cash reward
+			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set faction
 			quest::faction(170,1); 		#:: + Keepers of the Art
 			quest::faction(178,1); 		#:: + King Tearis Thex
-			#:: Give a small amount of cash copper - plat
-			quest::givecash(0,3,7,0);
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
@@ -150,16 +154,18 @@ sub EVENT_ITEM {
 		#:: Match Male Wood Elf
 		if ($npcrace == 4 && $npcgender == 0) {
 			quest::say("Good work!! I shall be on my way. Farewell my friend!!");
-			#:: Give a small amount of xp
-			quest::exp(1000);
 			#:: Ding!
 			quest::ding();
+			#:: Give a small amount of xp
+			quest::exp(1000);
+			#:: Create a hash for storing cash - 700 to 750cp
+			my %cash = plugin::RandomCash(700,750);
+			#:: Grant a random cash reward
+			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set faction
 			quest::faction(99,1); 		#:: + Faydark's Champions
 			quest::faction(174,1); 		#:: + Kelethin Merchants
 			quest::faction(212,1); 		#:: + Merchants of Felwithe
-			#:: Give a small amount of cash copper - plat
-			quest::givecash(0,3,7,0);
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
@@ -178,16 +184,18 @@ sub EVENT_ITEM {
 		#:: Match Female Wood Elf
 		if ($npcrace == 4 && $npcgender == 1) {
 			quest::say("Good work!! I shall be on my way. Farewell my friend!!");
-			#:: Give a small amount of xp
-			quest::exp(1000);
 			#:: Ding!
 			quest::ding();
+			#:: Create a hash for storing cash - 700 to 750cp
+			my %cash = plugin::RandomCash(700,750);
+			#:: Grant a random cash reward
+			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+			#:: Give a small amount of xp
+			quest::exp(1000);
 			#:: Set faction
 			quest::faction(99,1); 		#:: + Faydark's Champions
 			quest::faction(174,1); 		#:: + Kelethin Merchants
 			quest::faction(212,1); 		#:: + Merchants of Felwithe
-			#:: Give a small amount of cash copper - plat
-			quest::givecash(0,3,7,0);
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
