@@ -12,9 +12,12 @@ sub EVENT_ENTER {
 	}
 }
 
-sub EVENT_SAY { 
+sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings, child of Tunare. As druids of the Mother of all, we may only use blunt weapons and the scimitar, all other blades are forbidden. Prove your devotion by bringing me a [rusty short sword], a [rusty long sword], a [rusty broad sword], and a [rusty bastard sword]. I will destroy them and reward your faith.");
+		quest::say("Welcome! We are the Soldiers of Tuneare, the sworn protectors of Faydark. Through the magic of Tunare we care for the land and with blade, staff and spell we protect the Faydark against those who would destroy and despoil it. We are always grateful for any assistance to our cause. Perhaps you could help me with some simple [" . quest::saylink("errands") . "].");
+	}
+	if ($text=~/errands/i) {
+		quest::say("As druids of the Mother of All, we may only use the schimitar and blunt weapons, all other blades are fobidden. Prove your devotion by bringing me a rusty short sword, long sword, broad sword, and bastard sword. I will destoy them and reward you for your faith. They will be reforged into weapons blessed by Tunare to assist the Soldiers in their defence of the Heartwood.");
 	}
 	if ($text=~/trades/i) {
 		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [" . quest::saylink("second book") . "], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
