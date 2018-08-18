@@ -57,9 +57,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(304,100);	#:: + Soldiers of Tunare
-		quest::faction(178,15);		#:: + King Tearis Thex
-		quest::faction(99,15);		#:: + Faydark's Champions
+		quest::faction(304,1);		#:: + Soldiers of Tunare
+		quest::faction(178,1);		#:: + King Tearis Thex
+		quest::faction(99,1);		#:: + Faydark's Champions
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
