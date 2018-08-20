@@ -46,22 +46,28 @@ sub EVENT_ITEM {
 	}
 	#:: Match 13073 - Bone Chips, 13782 - Ruined Wolf Pelt, 13253 - Spiderling Eye, 13069 - Bat Fur
 	if (plugin::takeItems(13073 => 1, 13782 => 1, 13253 => 1, 13069 => 1)) {
-		quest::say("Fine work! You are on your way to becoming an adequate combatant.");
-		#:: Give a random reward: 5013 - Rusty Short Sword, 5014 - Rusty Axe, 5015 - Rusty Scythe, 5016 - Rusty Broad Sword, 5019 - Rusty Long Sword, 5020 - Rusty Battle Axe, 5021 - Rusty Scimitar
-		#:: 5022 - Rusty Bastard Sword, 5023 - Rusty Two Handed Sword, 5024 - Rusty Halberd, 5025 - Rusty Two Handed Battle Axe, 5042 - Tarnished Short Sword, 5043 - Tarnished Axe, 5044 - Tarnished Broad Sword
-		#:: 5045 - Tarnished Long Sword, 5046 - Tarnished Battle Axe, 5047 - Tarnished Scimitar, 5048 - Tarnished Bastard Sword, 5049 - Tarnished Scythe, 5070 - Tarnished Two Handed Sword, 5071 - Tarnished Two Handed Battle Axe
-		#:: 6011 - Rusty Mace, 6013 - Rusty Two Handed Hammer, 6014 - Rusty Warhammer, 6015 - Rusty Flail, 6016 - Rusty Morning Star, 6030 - Tarnished Mace, 6031 - Tarnished Warhammer, 6032 - Tarnished Flail, 6033 - Tarnished Morning Star
-		#:: 7007 - Rusty Dagger, 7008 - Rusty Rapier, 7009 - Rusty Spear, 7010 - Rusty Shortened Spear, 7021 - Tarnished Dagger, 7022 - Tarnished Shortened Spear, 7023 - Tarnished Rapier, 7024 - Tarnished Spear
-		quest::summonitem(quest::ChooseRandom(5013,5014,5015,5016,5019,5020,5021,5022,5023,5024,5025,5042,5043,5044,5045,5046,5047,5048,5049,5070,5071,6011,6013,6014,6015,6016,6030,6031,6032,6033,7007,7008,7009,7010,7021,7022,7023,7024));
-		#:: Ding!
-		quest::ding();
-		#:: Grant a small amount of experience
-		quest::exp(500);
-		#:: Set factions
-		quest::faction(92,10);		#:: + Emerald Warriors
-		quest::faction(155,-10);	#:: - Indigo Brotherhood
-		quest::faction(174,10);		#:: + Kelethin Merchants
-		quest::faction(212,10);		#:: + Merchants of Felwithe
+		#:: Match if faction is amiably or better
+		if ($faction <= 4) {
+			quest::say("Fine work! You are on your way to becoming an adequate combatant.");
+			#:: Give a random reward: 10018 - Hematite, 10016 - Lapis Lazuli, 10015 - Malachite, 6014 - Rusty Warhammer, 10005 - Silver Stud, 2124 - Small Patchwork Boots, 2119 - Small Tattered Belt, 2122 - Small Tattered Gloves, 2115 - Small Tattered Gorget, 2113 - Small Tattered Skullcap, 5043 - Tarnished Axe, 5045 - Tarnished Long Sword, 5042 - Tarnished Short Sword, 6012 - Worn Great Staff
+			quest::summonitem(quest::ChooseRandom(10018, 10016, 10015, 6014, 10005, 2124, 2119, 2122, 2115, 2113, 5043, 5045, 5042, 6012));
+			#:: Ding!
+			quest::ding();
+			#:: Grant a small amount of experience
+			quest::exp(500);
+			#:: Create a hash for storing cash - 20 to 150cp
+			my %cash = plugin::RandomCash(20,150);
+			#:: Grant a random cash reward
+			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+			#:: Set factions
+			quest::faction(92,10);		#:: + Emerald Warriors
+			quest::faction(155,-10);	#:: - Indigo Brotherhood
+			quest::faction(174,10);		#:: + Kelethin Merchants
+			quest::faction(212,10);		#:: + Merchants of Felwithe
+		}
+		else {
+			quest::say("I will not aid beings like you.");
+		}
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
