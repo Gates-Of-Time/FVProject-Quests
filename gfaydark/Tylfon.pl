@@ -54,6 +54,7 @@ sub EVENT_SAY {
 		}
 	}
 	elsif ($text=~/elmion hendrys/i) {
+		#:: Match if faction is Dubious or better
 		if ($faction <= 7) {
 			quest::say("Seek out the Fier'Dal, Elmion. He was last heard telling the local bar patrons that he was off to do some adventuring at the lake near the estate. What that is, I do not know.");
 		}
@@ -87,7 +88,7 @@ sub EVENT_ITEM {
 		#:: quest::exp(100); 
 	#:: }
 	#:: Match 2gp and a 7007 - Rusty Dagger
-	elsif (plugin::takeItemsCoin(0, 0, 2, 0, 7007 => 1)) {
+	elsif (plugin::takeItemsCoin(0, 0, 2, 0, 7007 => 2)) {
 		quest::say("Well, well. I didn't think you could do it. Here's your cut and don't be surprised that it's not much because it's your first lesson. Remember. the smaller the operation. the bigger the share, and the richest rogues have the tightest lips.");
 		#:: Give a 7021 - Tarnished Dagger
 		quest::summonitem(7021);
