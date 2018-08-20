@@ -1,49 +1,65 @@
 sub EVENT_SPAWN {
-  $x = $npc->GetX();
-  $y = $npc->GetY();
-  quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Set a proximity, 100 units across
+	$x = $npc->GetX();
+	$y = $npc->GetY();
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
 }
 
 sub EVENT_ENTER {
-  if(plugin::check_hasitem($client, 18783)) { 
+	#:: Match a 18783 - Tattered Note
+	if (plugin::check_hasitem($client, 18783)) {
 		$client->Message(15,"Sylia Windlehands, a beautiful elven bard addresses you. 'Welcome young one. I am Sylia Windlehands. I will start your training in the ways of the Bard. Read the note in your inventory and when you are ready to start training, hand it to me. Never underestimate the power of song, my friend and you will go far!'");
-  }
+	}
 }
 
 sub EVENT_SAY { 
-	if($text=~/hail/i){
-		quest::say("Salutations! The Song Weavers are always glad to add a new voice to the choir.  In addition to your voice. will you also [fetch spiderling silk]?  We need some to replace our worn lute strings.  Carry out this task in high tempo and we will show our gratitude.");
+	if ($text=~/hail/i) {
+		quest::say("Salutations! The Song Weavers are always glad to add a new voice to the choir.  In addition to your voice. will you also [" . quest::saylink("fetch spiderling silk") . "]?  We need some to replace our worn lute strings.  Carry out this task in high tempo and we will show our gratitude.");
 	}
-	if($text=~/spiderling silk/i){
-		quest::say("Very spirited of you!!  Gather four spiderling silk and return them to me.  Good hunting. my friend!!");
+	if ($text=~/fetch spiderling silk/i) {
+		quest::say("Very spirited of you!!  Gather four spiderling silk and return them to me.  Good hunting, my friend!!");
 	}
-	if($text=~/trades/i) {
-		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [second book], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
+	if ($text=~/trades/i) {
+		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [" . quest::saylink("second book") . "], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
+		#:: Give a 51121 - Tradeskill Basics : Volume I
 		quest::summonitem(51121);
 	}
-	if($text=~/second book/i)	{
+	if ($text=~/second book/i) {
 		quest::say("Here is the second volume of the book you requested, may it serve you well!");
+		#:: Give a 51122 - Tradeskill Basics : Volume II
 		quest::summonitem(51122);
 	}
 }
 
 sub EVENT_ITEM {
-	if(plugin::check_handin(\%itemcount, 18783 => 1)){ #Tattered Note
+	#:: Match a 18783 - Tattered Note
+	if (plugin::takeItems(18783 => 1)) {
 		quest::say("Greetings. friend. I am Sylia.  I see that you wish to join our humble guild.  Good.  Here is a gift for you - your guild tunic.  Once you are ready to begin your training please make sure that you see Sarialiyn Tranquilsong, She can assist you in developing your hunting and gathering skills. Return to me when you have become more experienced in our art, I will be able to further instructd you on how to progress through your early ranks, as well as in some of the various [trades] you will have available to you.");
-		quest::summonitem(13534); #Faded Brown Tunic
+		#:: Give a 13534 - Faded Brown Tunic*
+		quest::summonitem(13534);
+		#:: Ding!
 		quest::ding();
-		quest::faction(306,100); #Song Weavers
+		#:: Grant a small amount of experience
 		quest::exp(100);
+		#:: Set faction
+		quest::faction(306,100);	#:: + Song Weavers
 	}
-	if(plugin::check_handin(\%itemcount, 13099  => 4)) {
+	#:: Match four 13099 - Spiderling Silk
+	if (plugin::takeItems(13099  => 4)) {
 		quest::say("Splendid job! Now if you can just keep a tune, you'll be a fine bard.");
+		#:: Give a 13000 - Hand Drum
 		quest::summonitem(13000);
-		quest::givecash("0","0","1","0");
+		#:: Ding!
+		quest::ding();
+		#:: Create a hash for storing cash - 90 to 110cp
+		my %cash = plugin::RandomCash(40,60);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Grant a small amount of experience
+		quest::exp(100);
+		#:: Set faction
+		quest::faction(306,10);		#:: + Song Weavers
 	}
-	#do all other handins first with plugin, then let it do disciplines
-	plugin::try_tome_handins(\%itemcount, $class, 'Bard');
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
-
-#END of FILE Zone:gfaydark  ID:54088 -- Sylia_Windlehands 
-
