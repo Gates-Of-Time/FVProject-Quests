@@ -23,8 +23,8 @@ sub EVENT_ITEM {
 		quest::faction(273,-30); 	#:: - Ring of Scale
 		quest::faction(207,-30); 	#:: - Mayong Mistmoore
 	}
-	#:: Match 18161 - Bardic Letter (Kelethin), 18162 - Bardic Letter (Kelethin), 18163 - Bardic Letter (Kelethin)
-	if (plugin::takeItems(18160 => 1) || (plugin::takeItems(18162 => 1) || (plugin::takeItems(18163 => 1)) {
+	#:: Match 18160 - Bardic Letter (Kelethin), 18162 - Bardic Letter (Kelethin), 18163 - Bardic Letter (Kelethin)
+	if (plugin::takeItems(18160 => 1) || plugin::takeItems(18162 => 1) || plugin::takeItems(18163 => 1)) {
 		quest::say("Incoming mail - very good!  Please take this gold for your troubles.");
 		#:: Ding!
 		quest::ding();
