@@ -1,37 +1,46 @@
-#############
-#Quest Name: Bard Mail Quest
-#Author: RealityIncarnate
-#NPCs Involved: Tralyn Marsinger, Eve Marsinger, Lislia Goldtune, Felisity Starbright, Jakum Webdancer, Ton Twostring, Idia, Sivina Lutewhisper, Ticar Lorestring, Marton Stringsinger, Drizda Tunesinger, Travis Two Tone, Silna Songsmith, Siltria Marwind, Tacar Tissleplay, Kilam Oresinger, Lyra Lyrestringer 
-#Items Involved: Bardic letters: 18150-18167
-#################
-
 sub EVENT_SAY { 
-if($text=~/Hail/i){
-quest::say("Hail. $name - If you are interested in helping the League of Antonican Bards by delivering some mail then you should talk to Idia."); }
+	if ($text=~/Hail/i) {
+		quest::say("Hail. $name - If you are interested in helping the League of Antonican Bards by delivering some mail then you should talk to Idia.");
+	}
 }
 
 sub EVENT_ITEM {
-  if (plugin::check_handin(\%itemcount, 18161 => 1)) {
-    quest::say("Incoming mail - very good!  Please take this gold for your troubles.");
-    quest::givecash(0,0,quest::ChooseRandom(3,4,5,6),0);
-    quest::exp(50);
-    quest::faction(192,10); #league of antonican bards
-    quest::faction(184,10); #knights of truth
-    quest::faction(135,10); #guards of qeynos
-    quest::faction(273,-30); #ring of scale
-    quest::faction(207,-30); #mayong mistmoore
-  }
-  
-  if(plugin::check_handin(\%itemcount, 18160 => 1) || plugin::check_handin(\%itemcount, 18162 => 1) || plugin::check_handin(\%itemcount, 18163 => 1)) {
-    quest::say("Incoming mail - very good!  Please take this gold for your troubles.");
-    quest::givecash(0,0,quest::ChooseRandom(6,7,8,9),0);
-    quest::exp(80);
-    quest::faction(192,10); #league of antonican bards
-    quest::faction(184,10); #knights of truth
-    quest::faction(135,10); #guards of qeynos
-    quest::faction(273,-30); #ring of scale
-    quest::faction(207,-30); #mayong mistmoore
-  }
-  plugin::return_items(\%itemcount);
+	#:: Match 18161 - Bardic Letter (Kelethin)
+	if (plugin::takeItems(18161 => 1)) {
+		quest::say("Incoming mail - very good!  Please take this gold for your troubles.");
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(50);
+		#:: Create a hash for storing cash - 300 to 600cp
+		my %cash = plugin::RandomCash(300,600);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Set factions
+		quest::faction(192,10); 	#:: + League of Antonican Bards
+		quest::faction(184,10); 	#:: + Knights of Truth
+		quest::faction(135,10); 	#:: + Guards of Qeynos
+		quest::faction(273,-30); 	#:: - Ring of Scale
+		quest::faction(207,-30); 	#:: - Mayong Mistmoore
+	}
+	#:: Match 18161 - Bardic Letter (Kelethin), 18162 - Bardic Letter (Kelethin), 18163 - Bardic Letter (Kelethin)
+	if (plugin::takeItems(18160 => 1) || (plugin::takeItems(18162 => 1) || (plugin::takeItems(18163 => 1)) {
+		quest::say("Incoming mail - very good!  Please take this gold for your troubles.");
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(80);
+		#:: Create a hash for storing cash - 600 to 900cp
+		my %cash = plugin::RandomCash(600,900);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Set factions
+		quest::faction(192,10); 	#:: + League of Antonican Bards
+		quest::faction(184,10); 	#:: + Knights of Truth
+		quest::faction(135,10); 	#:: + Guards of Qeynos
+		quest::faction(273,-30); 	#:: - Ring of Scale
+		quest::faction(207,-30); 	#:: - Mayong Mistmoore
+	}
+	#:: Return unused items
+	plugin::return_items(\%itemcount);
 }
-#END of FILE Zone:gfaydark
