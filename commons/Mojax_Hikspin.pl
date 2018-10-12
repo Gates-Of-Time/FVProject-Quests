@@ -1,6 +1,11 @@
 #:: Create a scalar variable to count pathing loops
 my $pathcount = 0;
 
+sub EVENT_SPAWN {
+	#:: Create a timer to trigger every 5 seconds
+	quest::settimer("MojaxTimer",5);
+}
+
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Hi. How are you? The fish are biting pretty good. That is what Skipynn tells me. I sure wish I had a different [" . quest::saylink("job") . "]. If I did, I could fish all day long.");
@@ -18,7 +23,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match 13087 - Bottle of Milk
-	if (plugin::check_handin(\%itemcount, 13087 => 1 )) {
+	if (plugin::takeItems(13087 => 1 )) {
 		quest::say("Aaahhhh. Now that is refreshing. Just let me rest for a bit. The note is safe and sound in my bedroll inside the inn.");
 		#:: Set factions
 		quest::faction(184,1);	#:: Knights of Truth
@@ -33,21 +38,60 @@ sub EVENT_ITEM {
 	plugin::return_items(\%itemcount);
 }
 
+sub EVENT_TIMER {
+	#:: Match "MojaxTimer" every five seconds
+	if ($timer eq "MojaxTimer") {
+		#:: Match if the time is 2 AM
+		if ($zonehour == 2) {
+			#:: Start Grid 88 - Path to the nearby stone marker
+			quest::start(88);
+			$pathcount = 1;
+		}
+	}
+}
+			
+
 sub EVENT_WAYPOINT_ARRIVE {
-	#:: Match at grid entry 2 - at the inn
-	if ($wp == 2 && $pathcount == 0) {
-		#:: Spawn 21136 - West Commonlands >> Duggin_Scumber
-		quest::spawn2(21136,0,0,$x,$y,$z,$h);
-		$pathcount = 1;
+	#:: Match if on grid 86 -- the path to the inn
+	if ($npc->GetGrid() == 86) {
+		#:: Match at grid entry 2 - at the inn
+		if ($wp == 2 && $pathcount == 0) {
+			#:: Spawn 21136 - West Commonlands >> Duggin_Scumber
+			quest::spawn2(21136,0,0,$x,$y,$z,$h);
+			$pathcount = 1;
+		}
+		elsif ($wp == 2 && $pathcount == 1) {
+			#:: Do nothing
+		}
+		#:: Match at grid entry 0 - spawn point
+		elsif ($wp == 0 && $pathcount == 1) {
+			#:: Stop Grid 86
+			quest::stop();
+			#:: Reset scalar to 0
+			$pathcount = 0;
+		}
 	}
-	elsif ($wp == 2 && $pathcount == 1) {
-		#:: Do nothing
+	#:: Match if on grid 88 -- the path to the marker
+	if ($npc->GetGrid() == 88) {
+		#:: Match at grid entry 10 - at the marker
+		if ($wp == 10) {
+			#:: Create a proximity 10 units across
+			quest::set_proximity($x - 5, $x + 5, $y - 5, $y + 5);
+		}
+		elsif ($wp == 0 && $pathcount == 1) {
+			#:: Stop Grid 88
+			quest::stop();
+			#:: Reset scalar to 0
+			$pathcount = 0;
+		}
+		else {
+			quest::clear_proximity();
+		}
 	}
-	#:: Match at grid entry 0 - spawn point
-	elsif ($wp == 0 && $pathcount == 1) {
-		#:: Stop Grid 86
-		quest::stop();
-		#:: Reset scalar to 0
-		$pathcount = 0;
-	}
+}
+
+sub EVENT_ENTER {
+	quest::say("Here you are. I hid it in this box behind the marker. Take it to Eestyana of the Temple of Marr. Goodbye.");
+	#:: Give a 18822 - Note
+	quest::summonitem(18822)
 }
