@@ -9,7 +9,8 @@ sub EVENT_SAY {
 
 sub EVENT_SIGNAL {
 	#::  Signal from Harking Duskfoot in freporte
-	quest::say("Heh, I got something that reminds you of home.. My armpit! Bwa haha!!!.");
+	if ($signal == 1) {
+		quest::say("Heh, I got something that reminds you of home.. My armpit! Bwa haha!!!.");
 }
 
 sub EVENT_ITEM {
