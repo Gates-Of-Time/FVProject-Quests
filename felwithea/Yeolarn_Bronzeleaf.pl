@@ -57,15 +57,13 @@ sub EVENT_ITEM {
 		quest::faction(178,100); 	#:: + King Tearis Thex
 		quest::faction(8,75); 		#:: + Anti-mage
 	}
-	#:: Turn in for 13074 x4 -  Bone Chips x4
-	if (plugin::takeItems(13074 => 4)) {
+	#:: Turn in for 13073 - Bone Chips x4
+	if (plugin::takeItems(13073 => 4)) {
 		quest::say("Praise Tunare! I knew you would be victorious. I reward you with this spell, and pray that it will help you in your fight against the unholy forces of Innoruk. When you are ready you will make a fine [" . quest::saylink("Initiate of Tunare") . "].");
 		#:: Ding!
 		quest::ding();
 		#:: Give a small amount of xp
 		quest::exp(2500);
-		#:: Ding!
-		quest::ding();
 		#:: Give item 15014 - Spell: Strike
 		quest::summonitem(15014);
 		#:: Set faction
@@ -73,8 +71,8 @@ sub EVENT_ITEM {
 		quest::faction(178,15); 	#:: + King Tearis Thex
 		quest::faction(8,15); 		#:: + Anti-mage
 	}
-	#:: Turn in for 13073 x4 -  Putrescent Heart x4
-	if (plugin::takeItems(13073 => 4)) {
+	#:: Turn in for 10199 - Putrescent Heart x4
+	if (plugin::takeItems(10199 => 4)) {
 		quest::say("Praise Tunare!! You have done well young Initiate. Here the symbol of your station within our faith. Return to me when you are ready to [" . quest::saylink("slay the necromancer") . "] that has been creating the undead.");
 		#:: Ding!
 		quest::ding();
