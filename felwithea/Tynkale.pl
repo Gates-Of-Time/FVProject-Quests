@@ -1,5 +1,5 @@
 sub EVENT_SPAWN {
-	#:: Set up a 50 unit distance
+	#:: Set up a proximity, 50 units across
 	$x = $npc->GetX();
 	$y = $npc->GetY();
 	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
@@ -61,13 +61,13 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Turn in for 18781 -  A Tattered Note
 	if (plugin::check_handin(\%itemcount, 18781 => 1)) {
-		quest::say("Greetings. young paladin!  I am Master Tynkale of the Clerics of Tunare.  Here. we shall teach and train you in the skills needed to defeat our evil and diseased enemies.  Take this, our guild tunic - it will help protect you.  Once you are ready to begin your training please make sure that you see Seria Woodwind, she can assist you in experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [trades] you will have available to you.");
+		quest::say("Greetings. young paladin!  I am Master Tynkale of the Clerics of Tunare.  Here, we shall teach and train you in the skills needed to defeat our evil and diseased enemies.  Take this, our guild tunic - it will help protect you.  Once you are ready to begin your training please make sure that you see Seria Woodwind, she can assist you in experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
 		#:: Give item 13591 - Used Gold Training Tunic*
 		quest::summonitem(13591);
-		#:: Give a small amount of xp
-		quest::exp(100);
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of xp
+		quest::exp(100);
 		#:: Set faction
 		quest::faction(43,100); 	#:: + Clerics of Tunare
 		quest::faction(178,100); 	#:: + King Tearis Thex
@@ -78,15 +78,16 @@ sub EVENT_ITEM {
 		#:: Match if faction is better than indifferent
 		if ($faction < 5) {
 			quest::say("So you have proven yourself to be a great slayer of beasts.Now it is time to prove yourself to be an asset to the Crown. You are to meet a man named Tolon Nurbyte.He will be at the local inn. Go to him and repeat the phrase, 'The glory of the Mother shines bright.' I can say no more. Oh.. and here. This may help you on your upcoming adventure.");
-			#:: Give a small amount of xp
-			quest::exp(150);
 			#:: Ding!
 			quest::ding();
+			#:: Give a small amount of xp
+			quest::exp(150);
 			#:: Set faction
 			quest::faction(43,10); 		#:: + Clerics of Tunare
 			quest::faction(178,10); 	#:: + King Tearis Thex
 			quest::faction(8,10); 		#:: + Anti-mage
 		}
 	}
+	#:: Return unused items
 	plugin::return_items(\%itemcount);
 }
