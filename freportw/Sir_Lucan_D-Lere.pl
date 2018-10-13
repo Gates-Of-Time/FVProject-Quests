@@ -28,7 +28,7 @@ sub EVENT_ITEM {
 	}
 	#:: Turn in for Slashed Militia Tunic
 	if (plugin::check_handin(\%itemcount, 13926=> 1)) {
-		quest::say("Sir Lucan D`Lere says 'So, it was Alayle! He was of no importance to us. He knew nothing. I thank you for assisting the Freeport Militia. My men shall keep an eye out for you. Unfortunately, so will the Knights of Truth. Might I suggest you spend less time in North Freeport?' ");
+		quest::say("So, it was Alayle! He was of no importance to us. He knew nothing. I thank you for assisting the Freeport Militia. My men shall keep an eye out for you. Unfortunately, so will the Knights of Truth. Might I suggest you spend less time in North Freeport?' ");
 		#:: Give xp
 		quest::exp(7500);
 		#:: Ding!
