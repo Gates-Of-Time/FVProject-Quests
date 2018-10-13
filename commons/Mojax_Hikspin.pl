@@ -39,14 +39,11 @@ sub EVENT_ITEM {
 }
 
 sub EVENT_TIMER {
-	#:: Match "MojaxTimer" every five seconds
-	if ($timer eq "MojaxTimer") {
+	#:: Match "MojaxTimer" every five seconds and match 2AM
+	if (($timer eq "MojaxTimer") && ($zonehour == 2)) {
 		quest::say("MojaxTimer $zonehour");
-		#:: Match if the time is 2 AM
-		if ($zonehour == 2) {
-			#:: Start Grid 88 - Path to the nearby stone marker
-			quest::start(88);
-		}
+		#:: Start Grid 88 - Path to the nearby stone marker
+		quest::start(88);
 	}
 }
 			
