@@ -33,7 +33,7 @@ sub EVENT_ITEM {
 		quest::faction(217,1); 		#:: + Merchants of Qeynos
 	}
 	#:: Turn in for 12214 -  Trumpy Tonic x4
-	if (plugin::check_handin(\%itemcount, 12214 = 4)) {
+	if (plugin::check_handin(\%itemcount, 12114 = 4)) {
 		quest::say("Mmmm. Weee thats a good drink you made there.");
 		#:: Give a small amount of xp
 		quest::exp(60);
@@ -46,7 +46,7 @@ sub EVENT_ITEM {
 		quest::faction(217,4); 		#:: + Merchants of Qeynos
 	}
 	#:: Turn in for 12214 -  Trumpy Tonic x3
-	if (plugin::check_handin(\%itemcount, 12214 = 3)) {
+	if (plugin::check_handin(\%itemcount, 12114 = 3)) {
 		quest::say("Mmmm. Weee thats a good drink you made there.");
 		#:: Give a small amount of xp
 		quest::exp(45);
@@ -59,7 +59,7 @@ sub EVENT_ITEM {
 		quest::faction(217,3); 		#:: + Merchants of Qeynos
 	}	
 	#:: Turn in for 12214 -  Trumpy Tonic x2
-	if (plugin::check_handin(\%itemcount, 12214 = 2)) {
+	if (plugin::check_handin(\%itemcount, 12114 = 2)) {
 		quest::say("Mmmm. Weee thats a good drink you made there.");
 		#:: Give a small amount of xp
 		quest::exp(30);
@@ -72,7 +72,7 @@ sub EVENT_ITEM {
 		quest::faction(217,2); 		#:: + Merchants of Qeynos
 	}	
 	#:: Turn in for 12214 -  Trumpy Tonic x1
-	if (plugin::check_handin(\%itemcount, 12214 = 1)) {
+	if (plugin::check_handin(\%itemcount, 12114 = 1)) {
 		quest::say("Mmmm. Weee thats a good drink you made there.");
 		#:: Give a small amount of xp
 		quest::exp(15);
