@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Aya. howdy there, $name.  The name's Gren Frikniller.  'Niller the Killer' The only person who can give me a run for my money is my [" . quest::saylink("sister") . "]., $name.");
+		quest::say("Aya. howdy there, $name.  The name's Gren Frikniller.  'Niller the Killer' The only person who can give me a run for my money is my [" . quest::saylink("sister") . "]. Falia.");
 	}
 	if ($text=~/sister/i) {
 		quest::say("Ah, my sister Falia has traveled here all the way from Rivervale. I hear that she's been staying up in North Freeport, but I haven't had a chance to find her yet. If you get some spare time, could you take this letter to her for me? Thanks, $name, you're really not so bad after all.");
