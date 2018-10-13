@@ -45,7 +45,6 @@ sub EVENT_TIMER {
 		if ($zonehour == 2) {
 			#:: Start Grid 88 - Path to the nearby stone marker
 			quest::start(88);
-			$pathcount = 1;
 		}
 	}
 }
@@ -77,6 +76,7 @@ sub EVENT_WAYPOINT_ARRIVE {
 		if ($wp == 10) {
 			#:: Create a proximity 10 units across
 			quest::set_proximity($x - 5, $x + 5, $y - 5, $y + 5);
+			$pathcount = 1;
 		}
 		elsif ($wp == 0 && $pathcount == 1) {
 			#:: Stop Grid 88
