@@ -8,20 +8,21 @@ sub EVENT_SAY {
 }
 
 sub EVENT_SIGNAL {
-	#::  Signal from Harking Duskfoot in freporte
+	#::  Signal from freporte/Harkin_Duskfoot.pl
 	if ($signal == 1) {
 		quest::say("Heh, I got something that reminds you of home.. My armpit! Bwa haha!!!.");
+	}
 }
 
 sub EVENT_ITEM {
 	#:: Turn in for 13036 -  Dwarven Ale
-	if (plugin::check_handin(\%itemcount, 13036 => 1)) {
+	if (plugin::takeItems(13036 => 1)) {
 		quest::say("Well, well, well.. It's about time. Whatta ya got, boots fulla stones? Or maybe yer just part turtle? Bah, anyways, thanks for the ale. Maybe I'll buy you one sometime, eh? Bwahaha!");
-		#:: Give a small amount of xp
-		quest::exp(100);
 		#:: Ding!
 		quest::ding();
-		#:: Send a signal to Harkin Duskfoot in Freporte
+		#:: Give a small amount of xp
+		quest::exp(100);
+		#:: Send a signal "1" to East Freeport >> Harkin_Duskfoot (10107)
 		quest::signal(10107,1,0);
 	}
 	#:: Return unused items
