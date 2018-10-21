@@ -16,11 +16,11 @@ sub EVENT_ITEM {
 	#:: Turn in for Note for the Hall of Truth 18822
 	if (plugin::check_handin(\%itemcount, 18822=> 1)) {
 		quest::say("So I see you decided to bring me the message. Good. I would hate to have to hunt you down. It could have gotten really messy and I hate reading bloodstained messages. Well it seems Antonius Bayle and the Knights of Truth have begun an alliance. And it sounds as though I may have a traitor among my guards. If you wish to switch your allegiance to Freeport, then find me this traitor. Bring me his militia tunic. Try to keep the blood from staining it.");
-		#:: Give xp
-		quest::exp(5000);
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
+		#:: Give xp
+		quest::exp(5000);
+		#:: Set factions
 		quest::faction(105,10); 	#:: + Freeport Militia
 		quest::faction(48,10); 		#:: + Coalition of Tradefolk Underground
 		quest::faction(184,-20); 	#:: - Knights of Truth
@@ -28,12 +28,16 @@ sub EVENT_ITEM {
 	}
 	#:: Turn in for Slashed Militia Tunic
 	if (plugin::check_handin(\%itemcount, 13926=> 1)) {
-		quest::say("Sir Lucan D`Lere says 'So, it was Alayle! He was of no importance to us. He knew nothing. I thank you for assisting the Freeport Militia. My men shall keep an eye out for you. Unfortunately, so will the Knights of Truth. Might I suggest you spend less time in North Freeport?' ");
-		#:: Give xp
-		quest::exp(7500);
+		quest::say("So, it was Alayle! He was of no importance to us. He knew nothing. I thank you for assisting the Freeport Militia. My men shall keep an eye out for you. Unfortunately, so will the Knights of Truth. Might I suggest you spend less time in North Freeport?' ");
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
+		#:: Give xp
+		quest::exp(7500);
+		#:: Create a hash for storing cash - 80 to 120cp
+		my %cash = plugin::RandomCash(80,120);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Set factions
 		quest::faction(105,10); 	#:: + Freeport Militia
 		quest::faction(48,10); 		#:: + Coalition of Tradefolk Underground
 		quest::faction(184,-240); 	#:: - Knights of Truth
