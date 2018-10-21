@@ -44,6 +44,7 @@ sub EVENT_TIMER {
 		if (($timer eq "MojaxTimer") && ($zonehour == 2)) {
 			#:: Start Grid 88 - Path to the nearby stone marker
 			quest::start(88);
+			#:: Set scalar to 1
 			$pathcount = 1;
 		}
 	}
@@ -57,6 +58,7 @@ sub EVENT_WAYPOINT_ARRIVE {
 		if ($wp == 2 && $pathcount == 0) {
 			#:: Spawn 21136 - West Commonlands >> Duggin_Scumber
 			quest::spawn2(21136,0,0,$x,$y,$z,$h);
+			#:: Set scalar to 1
 			$pathcount = 1;
 		}
 		elsif ($wp == 2 && $pathcount == 1) {
@@ -76,7 +78,6 @@ sub EVENT_WAYPOINT_ARRIVE {
 		if ($wp == 10) {
 			#:: Create a proximity 10 units across
 			quest::set_proximity($x - 5, $x + 5, $y - 5, $y + 5);
-			$pathcount = 1;
 		}
 		elsif ($wp == 0 && $pathcount == 1) {
 			#:: Stop Grid 88
@@ -91,7 +92,9 @@ sub EVENT_WAYPOINT_ARRIVE {
 }
 
 sub EVENT_ENTER {
-	quest::say("Here you are. I hid it in this box behind the marker. Take it to Eestyana of the Temple of Marr. Goodbye.");
-	#:: Give a 18822 - Note
-	quest::summonitem(18822)
+	if (!plugin::check_hasitem($client, 18822)) {
+		quest::say("Here you are. I hid it in this box behind the marker. Take it to Eestyana of the Temple of Marr. Goodbye.");
+		#:: Give a 18822 - Note
+		quest::summonitem(18822)
+	}
 }
