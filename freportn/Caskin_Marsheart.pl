@@ -7,7 +7,7 @@ sub EVENT_ENTER {
 
 sub EVENT_ENTER {
 	#:: Check for 18747 - A Tattered Note
-	if(plugin::check_hasitem($client, 18747)) {
+	if (plugin::check_hasitem($client, 18747)) {
 		$client->Message(15,"As you get your bearings, you can hear a beautiful song. It almost seems to draw you towards it. It's as if you can hear a voice in your head as the music surrounds you. 'Welcome to Marsheart's Chords. young bard. I am Caskin Marsheart. To begin your training as a bard, read the note in your inventory and hand it to me.' The music then fades as quickly as it had begun.'");
 	}
 }
@@ -35,7 +35,7 @@ sub EVENT_ITEM {
 		quest::exp(100);
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
+		#:: Set factions
 		quest::faction(192,100); 	#:: + League of Antonican Bards
 		quest::faction(184,15); 	#:: + Knights of Truth
 		quest::faction(135,15); 	#:: + Guards of Qeynos
