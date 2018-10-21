@@ -16,15 +16,17 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Give item 9985 - Spell: Courage*
-		quest::summonitem(9985);		
-		#:: Set faction
+		quest::summonitem(9985);
+		#:: Create a hash for storing cash - 7 to 10cp
+		my %cash = plugin::RandomCash(7,10);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Set factions
 		quest::faction(184,10); 	#:: + Knights of Truth
 		quest::faction(86,-15); 	#:: - Dismal Rage
 		quest::faction(105,-15); 	#:: - Freeport Militia
 		quest::faction(258,10); 	#:: + Priests of Marr
 		quest::faction(311,10); 	#:: + Steel Warriors
-		#:: Grant a cash reward
-		quest::givecash(9,0,0,0); Copper - Plat
 	}
 	#:: Turn in for 18804 - A Tattered Note
 	if (plugin::takeItems(18804 => 1 )) {
@@ -34,15 +36,17 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Give random item 6016 Rusty Morning Star or 13296 Prayer Beads
-		quest::summonitem(quest::ChooseRandom(6016, 13296));		
-		#:: Set faction
+		quest::summonitem(quest::ChooseRandom(6016, 13296));
+		#:: Create a hash for storing cash - 1600 to 1800cp
+		my %cash = plugin::RandomCash(1600,1800);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Set factions
 		quest::faction(184,10); 	#:: + Knights of Truth
 		quest::faction(86,-15); 	#:: - Dismal Rage
 		quest::faction(105,-15); 	#:: - Freeport Militia
 		quest::faction(258,10); 	#:: + Priests of Marr
 		quest::faction(311,10); 	#:: + Steel Warriors
-		#:: Grant a cash reward
-		quest::givecash(0,0,7,1); Copper - Plat
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
