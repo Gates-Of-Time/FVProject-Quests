@@ -2,7 +2,7 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("HA! Greetings there. $name!  How are ya this fine day?  Me?  I'm doing all right.  Guard duty down here always reminds me of home.");
 		#:: Send a signal "1" to East Freeport >> Beur_Tenlah (10106)
-		quest::signal(10106,1,0)
+		quest::signalwith(10106,1,0)
 	}
 	if ($text=~/message/i) {
 		quest::say("Ok, $name, I need you to take this message to Janam in West Freeport. He is usually hanging out in front of the Theater of the Tranquil with that good-for-nothing Rebby. Anyway, give this note to Janam and bring his reply back to me.");
