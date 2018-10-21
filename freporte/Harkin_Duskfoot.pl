@@ -1,9 +1,20 @@
+sub EVENT_SPAWN {
+	#:: Set the proximity bounds around the NPC on spawn, 30 units across
+	$x = $npc->GetX();
+	$y = $npc->GetY();
+	quest::set_proximity($x-15,$x+15,$y-15,$y+15);
+	quest::enable_proximity_say();
+}
+
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("HA! Greetings there. $name!  How are ya this fine day?  Me?  I'm doing all right.  Guard duty down here always reminds me of home.");
 		#:: Send a signal "1" to East Freeport >> Beur_Tenlah (10106)
 		quest::signalwith(10106,1,0)
 	}
+}
+
+sub EVENT_PROXIMITY_SAY {
 	if ($text=~/message/i) {
 		quest::say("Ok, $name, I need you to take this message to Janam in West Freeport. He is usually hanging out in front of the Theater of the Tranquil with that good-for-nothing Rebby. Anyway, give this note to Janam and bring his reply back to me.");
 		#:: Give item 18015 - Note to Janam
