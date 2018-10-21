@@ -12,14 +12,16 @@ sub EVENT_ITEM {
 		quest::exp(80);
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
+		#:: Create a hash for storing cash - 600 to 1000cp
+		my %cash = plugin::RandomCash(600,1000);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Set factions
 		quest::faction(192,100); 	#:: + League of Antonican Bards
 		quest::faction(184,10); 	#:: + Knights of Truth
 		quest::faction(135,10); 	#:: + Guards of Qeynos
 		quest::faction(273,-30); 	#:: - Ring of Scale
 		quest::faction(207,-30); 	#:: - Mayong Mistmoore
-		#:: Grant a cash reward
-		quest::GiveCash(0,0,ChooseRandom(6,7,8,9),0); Copper - Plat
 	}
 	#:: Turn in for 18157 - A Bardic Letter (Freeport)
 	if (plugin::takeItems(18157 => 1 )) {
@@ -28,14 +30,16 @@ sub EVENT_ITEM {
 		quest::exp(80);
 		#:: Ding!
 		quest::ding();
+		#:: Create a hash for storing cash - 600 to 1000cp
+		my %cash = plugin::RandomCash(600,1000);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(192,100); 	#:: + League of Antonican Bards
 		quest::faction(184,10); 	#:: + Knights of Truth
 		quest::faction(135,10); 	#:: + Guards of Qeynos
 		quest::faction(273,-30); 	#:: - Ring of Scale
 		quest::faction(207,-30); 	#:: - Mayong Mistmoore
-		#:: Grant a cash reward
-		quest::GiveCash(0,0,ChooseRandom(6,7,8,9),0); Copper - Plat
 	}
 	#:: Turn in for 18159 - A Bardic Letter (Freeport)
 	if (plugin::takeItems(18159 => 1 )) {
@@ -44,14 +48,16 @@ sub EVENT_ITEM {
 		quest::exp(100);
 		#:: Ding!
 		quest::ding();
+		#:: Create a hash for storing cash - 800 to 1200cp
+		my %cash = plugin::RandomCash(800,1200);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(192,100); 	#:: + League of Antonican Bards
 		quest::faction(184,10); 	#:: + Knights of Truth
 		quest::faction(135,10); 	#:: + Guards of Qeynos
 		quest::faction(273,-30); 	#:: - Ring of Scale
 		quest::faction(207,-30); 	#:: - Mayong Mistmoore
-		#:: Grant a cash reward
-		quest::GiveCash(0,0,ChooseRandom(8,9,10,12),0); Copper - Plat
 	}
 	#:: Turn in for 18155 - A Bardic Letter (Freeport)
 	if (plugin::takeItems(18155 => 1 )) {
@@ -60,14 +66,16 @@ sub EVENT_ITEM {
 		quest::exp(100);
 		#:: Ding!
 		quest::ding();
+		#:: Create a hash for storing cash - 1100 to 15000cp
+		my %cash = plugin::RandomCash(1100,1500);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(192,100); 	#:: + League of Antonican Bards
 		quest::faction(184,10); 	#:: + Knights of Truth
 		quest::faction(135,10); 	#:: + Guards of Qeynos
 		quest::faction(273,-30); 	#:: - Ring of Scale
 		quest::faction(207,-30); 	#:: - Mayong Mistmoore
-		#:: Grant a cash reward
-		quest::GiveCash(0,0,ChooseRandom(11,12,13,14,15),0); Copper - Plat
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
