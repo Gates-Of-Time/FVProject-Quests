@@ -1,7 +1,7 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("HA! Greetings there. $name!  How are ya this fine day?  Me?  I'm doing all right.  Guard duty down here always reminds me of home.");
-		#:: Signal Beur_Tenlah
+		#:: Send a signal "1" to East Freeport >> Beur_Tenlah (10106)
 		quest::signal(10106,1,0)
 	}
 	if ($text=~/message/i) {
@@ -12,7 +12,7 @@ sub EVENT_SAY {
 }
 
 sub EVENT_SIGNAL {
-	#:: Signal From Beur_Tenlah.pl
+	#:: Signal From freporte/Beur_Tenlah.pl
 	if ($signal == 1) {
 		quest::say("Bah! Don't listen to this fool. Listen, I've something a little more important for you to do than buy ales. I need you to take a [" . quest::saylink("message") . "] to my friend Janam over in West Freeport.");
 	}
@@ -20,16 +20,18 @@ sub EVENT_SIGNAL {
 
 sub EVENT_ITEM {
 	#:: Turn in for 18016 -  Note to Harkin
-	if (plugin::check_handin(\%itemcount, 18016 => 1)) {
+	if (plugin::takeItems(18016 => 1)) {
 		quest::say("Ah, good work, $name. And quick too, I'll makes sure that Elisi hears of your loyal work. Here... take this for your efforts.. it's not much, but it's all I have on me right now.");
 		#:: Give item 1054 - Used Merchants Gloves
 		quest::summonitem(1054);
-		#:: Give a small amount of xp
-		quest::exp(100);
 		#:: Ding!
 		quest::ding();
-		#:: Give a small amount of cash copper - plat
-		quest::givecash(6,0,0,0);
+		#:: Give a small amount of xp
+		quest::exp(100);
+		#:: Create a hash for storing cash - 5 to 7cp
+		my %cash = plugin::RandomCash(5,7);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
 		quest::faction(47,1); 		#:: + Coalition of Trade Folk
 		quest::faction(48,1); 		#:: + Coalition of Tradefolk Underground
