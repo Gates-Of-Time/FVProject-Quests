@@ -24,6 +24,7 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Give a small amount of xp
 		quest::exp(100);
+		quest::signalwith(10107,1,0);
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
