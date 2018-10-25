@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::emote("Heya. $name!  I've been on watch duty all night.  Kinda makes a man thirsty. ya know?  Why don't you be a good little scamp and run up to the bar and get me a [" . quest::saylink("dwarven ale") . "]?  That sure would hit the spot right about now.");
+		quest::say("Heya. $name!  I've been on watch duty all night.  Kinda makes a man thirsty. ya know?  Why don't you be a good little scamp and run up to the bar and get me a [" . quest::saylink("dwarven ale") . "]?  That sure would hit the spot right about now.");
 	}
 	if ($text=~/dwarven ale/i) {
-		quest::emote("Ahhh..  Dwarven ale is the best.  You gotta hand it to those stinky little dirt diggers, they know how to make a good brew.  Now if they could just learn to shower. huh. Harkin? Ha ha ha!");
+		quest::say("Ahhh..  Dwarven ale is the best.  You gotta hand it to those stinky little dirt diggers, they know how to make a good brew.  Now if they could just learn to shower. huh. Harkin? Ha ha ha!");
 		#:: Send a signal "1" to East Freeport >> Harkin_Duskfoot (10107)
 		quest::signalwith(10107,1,0);
 	}
@@ -24,7 +24,6 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Give a small amount of xp
 		quest::exp(100);
-		quest::signalwith(10107,1,0);
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
