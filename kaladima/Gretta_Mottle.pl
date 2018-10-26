@@ -19,7 +19,7 @@ sub EVENT_SAY {
 #:: Remove after the plague of the Karanas has been cured
 sub EVENT_ITEM {
 	#:: Match a 1838 - Bag of Bread Loaves
-	if (plugin::takeItems(1838)) {
+	if (plugin::takeItems(1838 => 1)) {
 		quest::say("'Well now, what do we have here? You actually went out of your way to fetch bread for me? Thank ye so kindly. Please accept this payment for your service.");
 		#:: Ding!
 		quest::ding();
