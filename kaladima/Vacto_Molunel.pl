@@ -8,7 +8,7 @@ sub EVENT_SAY {
 	if ($text=~/scarab helms/i) {
 		quest::say("Interested in a scarab helm. are you?  Well, because my talent is so unique and my time is so valuable, I am afraid I could only make you a helm if you were to provide me with the two scarab carapaces necessary to accommodate a head such as yours.  I will also need a payment of 5 gold pieces.  The Butcherblocks are crawling with worker scarabs that have just the right size carapaces for our needs.");
 	}
-	if	($text=~/scarab breastplates/i) {
+	if ($text=~/scarab breastplates/i) {
 		quest::say("Ah..  A  scarab breastplate.. hmm.  Well, if you want to convince me to go though the trouble of crafting one of those, not only will you have to pay my fee of 23 gold pieces, you must provide me with a pristine giant scarab carapace.  I refuse to make a breastplate with cracked carapaces."); 
 	}
 	if ($text=~/boots/i) {
