@@ -32,7 +32,7 @@ sub EVENT_ITEM {
 		quest::faction(184,1); 		#:: + Knights of Truth
 		quest::faction(217,1); 		#:: + Merchants of Qeynos
 	}
-	#:: Turn in for 12214 -  Trumpy Tonic x4
+	#:: Turn in for 12114 -  Trumpy Tonic x4
 	if (plugin::takeItems(12114 = 4)) {
 		quest::say("Mmmm. Weee thats a good drink you made there.");
 		#:: Give a small amount of xp
@@ -45,7 +45,7 @@ sub EVENT_ITEM {
 		quest::faction(184,4); 		#:: + Knights of Truth
 		quest::faction(217,4); 		#:: + Merchants of Qeynos
 	}
-	#:: Turn in for 12214 -  Trumpy Tonic x3
+	#:: Turn in for 11214 -  Trumpy Tonic x3
 	if (plugin::takeItems(12114 = 3)) {
 		quest::say("Mmmm. Weee thats a good drink you made there.");
 		#:: Give a small amount of xp
@@ -58,7 +58,7 @@ sub EVENT_ITEM {
 		quest::faction(184,3); 		#:: + Knights of Truth
 		quest::faction(217,3); 		#:: + Merchants of Qeynos
 	}	
-	#:: Turn in for 12214 -  Trumpy Tonic x2
+	#:: Turn in for 12114 -  Trumpy Tonic x2
 	if (plugin::takeItems(12114 = 2)) {
 		quest::say("Mmmm. Weee thats a good drink you made there.");
 		#:: Give a small amount of xp
@@ -71,7 +71,7 @@ sub EVENT_ITEM {
 		quest::faction(184,2); 		#:: + Knights of Truth
 		quest::faction(217,2); 		#:: + Merchants of Qeynos
 	}	
-	#:: Turn in for 12214 -  Trumpy Tonic x1
+	#:: Turn in for 12114 -  Trumpy Tonic x1
 	if (plugin::takeItems(12114 = 1)) {
 		quest::say("Mmmm. Weee thats a good drink you made there.");
 		#:: Give a small amount of xp
