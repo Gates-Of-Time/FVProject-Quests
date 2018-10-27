@@ -12,7 +12,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match a 12156 - Dwarf Head and a 5014 - Rusty Axe
-	if (plugin::takeItems(12156 =>1, 5014 =>1 )) {
+	if (plugin::takeItems(12156 => 1, 5014 => 1 )) {
 		quest::say("Well Done!");
 		#:: Ding!
 		quest::ding();
