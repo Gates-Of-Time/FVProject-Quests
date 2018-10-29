@@ -4,8 +4,6 @@ sub EVENT_SAY {
 	}
 	if ($text=~/dwarven ale/i) {
 		quest::say("Ahhh..  Dwarven ale is the best.  You gotta hand it to those stinky little dirt diggers, they know how to make a good brew.  Now if they could just learn to shower. huh. Harkin? Ha ha ha!");
-		#:: Send a signal "1" to East Freeport >> Harkin_Duskfoot (10107)
-		quest::signalwith(10107,1,0);
 	}
 }
 
@@ -24,6 +22,8 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Give a small amount of xp
 		quest::exp(100);
+		#:: Send a signal "1" to East Freeport >> Harkin_Duskfoot (10107)
+		quest::signalwith(10107,1,0);
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
