@@ -17,10 +17,10 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Turn#:: Turn in for 18818 -  A Tattered Flier
-	if (plugif::takeItems(18818 => 1)) {
+	#:: Match a 18818 - Tattered Flier
+	if (plugin::takeItems(18818 => 1)) {
 		quest::say("This used to be hanging in Zimel's Blades. It is the price list. It is badly faded though. There was a fire in Zimel's Blades and I was on the scene just afterward. I did not see this hanging. I wonder who took it . . . Hmmmm.. oh, yes.. the markings on the list! It is a code! Here. I will fill it in. Read it. You probably do not even know who [" . quest::saylink("Ariska") . "] is.");
-		#:: Give item 18818 - A Tattered Flier
+		#:: Give item 18818 - Tattered Flier
 		quest::summonitem(18818);
 		#:: Give a small amount of xp
 		quest::exp(15);
@@ -32,8 +32,8 @@ sub EVENT_ITEM {
 		quest::faction(184,1); 		#:: + Knights of Truth
 		quest::faction(217,1); 		#:: + Merchants of Qeynos
 	}
-	#:: Turn#:: Turn in for 12114 -  Trumpy Tonic x4
-	if (plugif::takeItems(12114 = 4)) {
+	#:: Match four 12114 - Trumpy Tonic
+	if (plugin::takeItems(12114 = 4)) {
 		quest::say("Ahh! I missed those. I was just telling myself the other... Uh oh! I have to use the little dwarf's facilities. Excuse me.' ");
 		#:: Give a small amount of xp
 		quest::exp(60);
@@ -45,8 +45,8 @@ sub EVENT_ITEM {
 		quest::faction(184,4); 		#:: + Knights of Truth
 		quest::faction(217,4); 		#:: + Merchants of Qeynos
 	}
-	#:: Turn#:: Turn in for 12114 -  Trumpy Tonic x3
-	if (plugif::takeItems(12114 = 3)) {
+	#:: Match three 12114 - Trumpy Tonic
+	if (plugin::takeItems(12114 = 3)) {
 		quest::say("Ahh! I missed those. I was just telling myself the other... Uh oh! I have to use the little dwarf's facilities. Excuse me.");
 		#:: Give a small amount of xp
 		quest::exp(45);
@@ -58,8 +58,8 @@ sub EVENT_ITEM {
 		quest::faction(184,3); 		#:: + Knights of Truth
 		quest::faction(217,3); 		#:: + Merchants of Qeynos
 	}	
-	#:: Turn#:: Turn in for 12114 -  Trumpy Tonic x2
-	if (plugif::takeItems(12114 = 2)) {
+	#:: Match two 12114 - Trumpy Tonic
+	if (plugin::takeItems(12114 = 2)) {
 		quest::say("Ahh! I missed those. I was just telling myself the other... Uh oh! I have to use the little dwarf's facilities. Excuse me. ");
 		#:: Give a small amount of xp
 		quest::exp(30);
@@ -71,8 +71,8 @@ sub EVENT_ITEM {
 		quest::faction(184,2); 		#:: + Knights of Truth
 		quest::faction(217,2); 		#:: + Merchants of Qeynos
 	}	
-	#:: Turn#:: Turn in for 12114 -  Trumpy Tonic x1
-	if (plugif::takeItems(12114 = 1)) {
+	#:: Match a 12114 - Trumpy Tonic
+	if (plugin::takeItems(12114 = 1)) {
 		quest::say("Ahh! I missed those. I was just telling myself the other... Uh oh! I have to use the little dwarf's facilities. Excuse me.");
 		#:: Give a small amount of xp
 		quest::exp(15);
