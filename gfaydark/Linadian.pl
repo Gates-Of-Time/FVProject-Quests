@@ -24,5 +24,5 @@ sub EVENT_ITEM {
 		quest::faction(92,10);	#:: + Emerald Warriors
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
