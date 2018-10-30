@@ -31,5 +31,5 @@ sub EVENT_ITEM {
 		quest::faction(207,-30); 	#:: - Mayong Mistmoore
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
