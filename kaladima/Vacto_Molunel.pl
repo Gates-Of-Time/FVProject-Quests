@@ -36,5 +36,5 @@ sub EVENT_ITEM {
 		quest::say("Here is your Scarab boots!"); 
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
