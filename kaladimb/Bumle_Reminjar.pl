@@ -47,7 +47,7 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Grant a large amount of experience
 		quest::exp(80000);
-		#:: Create a hash for storing cash - 900 to 2000cp
+		#:: Create a hash for storing cash - 2500 to 2600cp
 		my %cash = plugin::RandomCash(2500,2600);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
