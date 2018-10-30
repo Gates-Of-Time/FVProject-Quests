@@ -25,5 +25,5 @@ sub EVENT_ITEM {
 		quest::faction(63,-1); 		#:: - Crushbone Orcs
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
