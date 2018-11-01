@@ -33,7 +33,7 @@ sub EVENT_ITEM {
 		quest::faction(217,1); 		#:: + Merchants of Qeynos
 	}
 	#:: Match four 12114 - Trumpy Tonic
-	if (plugin::takeItems(12114 = 4)) {
+	if (plugin::takeItems(12114 == 4)) {
 		quest::say("Ahh! I missed those. I was just telling myself the other... Uh oh! I have to use the little dwarf's facilities. Excuse me.' ");
 		#:: Give a small amount of xp
 		quest::exp(60);
@@ -46,7 +46,7 @@ sub EVENT_ITEM {
 		quest::faction(217,4); 		#:: + Merchants of Qeynos
 	}
 	#:: Match three 12114 - Trumpy Tonic
-	if (plugin::takeItems(12114 = 3)) {
+	if (plugin::takeItems(12114 == 3)) {
 		quest::say("Ahh! I missed those. I was just telling myself the other... Uh oh! I have to use the little dwarf's facilities. Excuse me.");
 		#:: Give a small amount of xp
 		quest::exp(45);
@@ -59,7 +59,7 @@ sub EVENT_ITEM {
 		quest::faction(217,3); 		#:: + Merchants of Qeynos
 	}	
 	#:: Match two 12114 - Trumpy Tonic
-	if (plugin::takeItems(12114 = 2)) {
+	if (plugin::takeItems(12114 == 2)) {
 		quest::say("Ahh! I missed those. I was just telling myself the other... Uh oh! I have to use the little dwarf's facilities. Excuse me. ");
 		#:: Give a small amount of xp
 		quest::exp(30);
@@ -72,7 +72,7 @@ sub EVENT_ITEM {
 		quest::faction(217,2); 		#:: + Merchants of Qeynos
 	}	
 	#:: Match a 12114 - Trumpy Tonic
-	if (plugin::takeItems(12114 = 1)) {
+	if (plugin::takeItems(12114 == 1)) {
 		quest::say("Ahh! I missed those. I was just telling myself the other... Uh oh! I have to use the little dwarf's facilities. Excuse me.");
 		#:: Give a small amount of xp
 		quest::exp(15);
