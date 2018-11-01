@@ -10,6 +10,12 @@ sub EVENT_SAY {
 	if ($text=~/Hail/i) {
 		quest::say("Good day to you. $name!  I am Devin Ashwood.  Pleased to make your acquaintance."); 
 	}
+}
+
+sub EVENT_PROXIMITY_SAY {
+	if ($text=~/Ganelorn Oast/i) {
+		quest::say("Ganelorn Oast! For he has single-handedly caught more poachers than any other ranger. He is credited for helping numerous endangered species recover from certain extinction. I suppose I am lucky he is fond of my sister, as I am soon to train under him as an apprentice. Perhaps one day I will even [" . quest::saylink("call upon the flames") . "] in the way that he does.");
+	}
 	if ($text=~/call upon the flames/i) {
 		quest::say("Aye, Ganelorn is renowned not only for his abilities as an archer and a master of melee combat, but also for his use of powerful magics. Never before have I seen a forester evoke a fireball of such great force. It would be any ranger's dream to become his pupil just to study that one spell. Ganelorn doesn't train just anyone, though. If you want to learn from him, I'm certain you would have to prove yourself as a forester.");
 	}
@@ -17,12 +23,6 @@ sub EVENT_SAY {
 		quest::say("He is a very busy individual. I believe he is currently in the eastern part of the Karanas trying to track down a poacher. Even if you can track him down, don't get your hopes up.");
 		#:: Send a signal 2 to The Greater Faydark >> Lily_Ashwood (54086)
 		quest::signalwith(54086, 2, 3);
-	}
-}
-
-sub EVENT_PROXIMITY_SAY {
-	if ($text=~/Ganelorn Oast/i) {
-		quest::say("Ganelorn Oast! For he has single-handedly caught more poachers than any other ranger. He is credited for helping numerous endangered species recover from certain extinction. I suppose I am lucky he is fond of my sister, as I am soon to train under him as an apprentice. Perhaps one day I will even [" . quest::saylink("call upon the flames") . "] in the way that he does.");
 	}
 }
 
