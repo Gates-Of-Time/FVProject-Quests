@@ -11,7 +11,7 @@ sub EVENT_SAY {
 		quest::say("Hello there, $name. You wouldn't by chance happen to be a [" . quest::saylink("ranger") . "], would you?'");
 	}
 	if ($text=~/ranger/i) {
-		quest::say("I sure love a strong ranger. Especially [" . quest::saylink("Ganelorn Oast") . "]. He's so dreamy and handsome. I think one day he's going to ask me to marry him.");
+		quest::say("I sure love a strong ranger. Especially Ganelorn Oast. He's so dreamy and handsome. I think one day he's going to ask me to marry him.");
 		#:: Send a signal to The Greater Faydark >> Devin_Ashwood (54085)
 		quest::signalwith(54085, 1, 3)
 	}
