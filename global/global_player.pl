@@ -30,6 +30,6 @@ sub EVENT_CAST_BEGIN {
 
 sub EVENT_CAST {
 	if ($spell_id == 48) {
-		$client->SpellFinished(11545,client->GetTarget());
+		$client->Message(13, "The spell id that was just cast is: $spell_id");
 	}
 }
