@@ -20,3 +20,10 @@ sub EVENT_ENTERZONE {
 		$PetID->Kill();
 	}
 }
+
+sub EVENT_CAST {
+	if ($client->GetGM() == 1) {
+		$client->Message(13, "You cast spell id: $spell_id");
+		$client->Message(13, "Spell delay is: " . $client->GetSpellStat($spell_id, "range"));
+	}
+}
