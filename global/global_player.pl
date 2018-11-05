@@ -20,19 +20,3 @@ sub EVENT_ENTERZONE {
 		$PetID->Kill();
 	}
 }
-
-sub EVENT_CAST_BEGIN {
-	if ($client->GetGM() == 1) {
-		$client->Message(13, "You cast spell id: $spell_id");
-		$client->Message(13, "Spell delay is: " . $client->GetSpellStat($spell_id, "cast_time"));
-	}
-}
-
-sub EVENT_CAST {
-	if ($spell_id == 48) {
-		$client->Message(13, "The spell id that was just cast is: $spell_id");
-		if ($client->GetGlobal("newbiecommon") == 1) {
-			$client->Message(15, "Let's crash this puppy!");
-		}
-	}
-}
