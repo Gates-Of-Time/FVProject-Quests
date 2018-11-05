@@ -12,7 +12,7 @@ sub EVENT_SAY {
 		quest::say("Lyra Lyrestringer, Tacar Tissleplay, Kilam Oresinger and Siltria Marwind all report to Jakum Webdancer.");
 	}
 	if ($text=~/freeport/i) {
-		quest::say("Take this pouch of mail to Ton Twostring. You can find him at the bard guild hall. I'm sure he will compensate you for your trouble.");
+		quest::say("Take this letter to Felisity Starbright. You can find her at the bard guild hall. I'm sure she will compensate you for your trouble");
 		#:: Give a 18166 - Pouch of Mail (Freeport)
 		quest::summonitem("18166");
 	}
