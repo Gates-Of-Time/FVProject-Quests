@@ -31,5 +31,6 @@ sub EVENT_CAST_BEGIN {
 sub EVENT_CAST {
 	if ($spell_id == 48) {
 		$client->Message(13, "The spell id that was just cast is: $spell_id");
+		$client->Message(15, "Let's crash this puppy!");
 	}
 }
