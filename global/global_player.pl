@@ -27,3 +27,9 @@ sub EVENT_CAST_BEGIN {
 		$client->Message(13, "Spell delay is: " . $client->GetSpellStat($spell_id, "cast_time"));
 	}
 }
+
+sub EVENT_CAST {
+	if ($spell_id == 48) {
+		$client->SpellFinished(11545,client->GetTarget());
+	}
+}
