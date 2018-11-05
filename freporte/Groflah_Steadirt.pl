@@ -44,6 +44,10 @@ sub EVENT_ITEM {
 		quest::faction(48,4); 		#:: + Coalition of Tradefolk Underground
 		quest::faction(184,4); 		#:: + Knights of Truth
 		quest::faction(217,4); 		#:: + Merchants of Qeynos
+		#:: Create a hash for storing cash - 200 to 400cp
+		my %cash = plugin::RandomCash(200,400);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Match three 12114 - Trumpy Tonic
 	if (plugin::takeItems(12114 => 3)) {
@@ -57,6 +61,10 @@ sub EVENT_ITEM {
 		quest::faction(48,3); 		#:: + Coalition of Tradefolk Underground
 		quest::faction(184,3); 		#:: + Knights of Truth
 		quest::faction(217,3); 		#:: + Merchants of Qeynos
+		#:: Create a hash for storing cash - 100 to 300cp
+		my %cash = plugin::RandomCash(100,300);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});	
 	}	
 	#:: Match two 12114 - Trumpy Tonic
 	if (plugin::takeItems(12114 => 2)) {
@@ -70,6 +78,10 @@ sub EVENT_ITEM {
 		quest::faction(48,2); 		#:: + Coalition of Tradefolk Underground
 		quest::faction(184,2); 		#:: + Knights of Truth
 		quest::faction(217,2); 		#:: + Merchants of Qeynos
+		#:: Create a hash for storing cash - 50 to 200cp
+		my %cash = plugin::RandomCash(50,200);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});	
 	}	
 	#:: Match a 12114 - Trumpy Tonic
 	if (plugin::takeItems(12114 => 1)) {
@@ -83,6 +95,10 @@ sub EVENT_ITEM {
 		quest::faction(48,1); 		#:: + Coalition of Tradefolk Underground
 		quest::faction(184,1); 		#:: + Knights of Truth
 		quest::faction(217,1); 		#:: + Merchants of Qeynos
+		#:: Create a hash for storing cash - 1 to 100cp
+		my %cash = plugin::RandomCash(1,100);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
