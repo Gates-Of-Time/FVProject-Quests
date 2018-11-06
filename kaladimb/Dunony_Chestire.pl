@@ -1,37 +1,24 @@
 sub EVENT_SAY {
 	#:: Match text for "hail", case insensitive
 	if ($text=~/hail/i) {
-		#:: Separate response for melee classes
-		if ($class eq 'Monk'  || $class eq 'Rogue' || $class eq 'Warrior') {
-			#:: Send a message that only the client can see, in yellow (15) text
-			$client->Message(15, "Young fighter, I am the greatest spell scribe Norrath has ever seen--I do not waste my time on brutes like you!");
-		}
-		#:: Separate response from bards, who are always special
-		elsif ($class eq 'Bard') {
-			#:: Send a message that only the client can see, in yellow (15) text
-			$client->Message(15, "With just one look, I can see that your songbook is lacking, $name.  Would you like me to [" . quest::saylink("scribe") . "] all of the known $class songs for you?");
-		}
-		#:: Separate response for casting classes
-		elsif ($class eq 'Beastlord' || $class eq 'Berserker' || $class eq 'Cleric' || $class eq 'Druid' || $class eq 'Enchanter' || $class eq 'Magician' || $class eq 'Necromancer' || $class eq 'Paladin' || $class eq 'Ranger' || $class eq 'Shadowknight' || $class eq 'Shaman' || $class eq 'Wizard') {
-			#:: Send a message that only the client can see, in yellow (15) text
-			$client->Message(15, "With just one look, I can see that your spellbook is lacking, $name.  Would you like me to [" . quest::saylink("scribe") . "] all of the known $class spells for you?");
-		}
+		#:: Send a message that only the client can see, in yellow (15) text
+		$client->Message(15, "Hello, $name!  It appears you could use some help with your [" . quest::saylink("skills") . "].  Would you like me to teach you?");
 	}
-	#:: Match text for "scribe", case insensitive
-	elsif ($text=~/scribe/i) {
-		if ($class eq 'Bard' || $class eq 'Beastlord' || $class eq 'Berserker' || $class eq 'Cleric' || $class eq 'Druid' || $class eq 'Enchanter' || $class eq 'Magician' || $class eq 'Necromancer' || $class eq 'Paladin' || $class eq 'Ranger' || $class eq 'Shadowknight' || $class eq 'Shaman' || $class eq 'Wizard') {
-			#:: Clear out any existing spells
-			quest::unscribespells();
-			#:: Scribe all spells up to the user's level
-			quest::scribespells($ulevel, 0);
-			#:: Send a message that only the client can see, in yellow (15) text
-			$client->Message(15, "You look like a more powerful caster already! Go out and test your new spells!");
-			#:: Play a Ding! sound
-			quest::ding();
-		}
-		elsif ($class eq 'Monk'  || $class eq 'Rogue' || $class eq 'Warrior') {
-			$client->Message(15, "Begone, $class--lest I turn you into froglok tad!");
-		}
+	#:: Match text for "skills", case insensitive
+	elsif ($text=~/skills/i) {
+		#:: Set available (non-trade, non-casting specialization) skills to maximum for race/class at current level
+		foreach my $skill ( 0 .. 42, 48 .. 54, 70 .. 74 ) {
+		next unless $client->CanHaveSkill($skill);
+		#:: Create a scalar variable to store each skill's maximum skill level at the player's current level
+		my $maxSkill = $client->MaxSkill($skill, $client->GetClass(), $ulevel);
+		#:: Check that the player's skill does not already exceed the maximum skill based on level
+		next unless $maxSkill > $client->GetRawSkill($skill);
+		#:: Set the skill to the maximum
+		$client->SetSkill($skill, $maxSkill);
+		#:: Send a message that only the client can see, in yellow (15) text
+		$client->Message(15, "You look like a more capable $class already! Go out and test your new skills!");
+		#:: Play a Ding! sound
+		quest::ding();
 	}
 }
 
