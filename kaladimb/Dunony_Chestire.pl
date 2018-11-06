@@ -618,3 +618,4 @@ sub round_up {
 		$n = int($n/$scale+1)*$scale;
 	}
 	$n;
+}
