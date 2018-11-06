@@ -77,8 +77,8 @@ sub EVENT_ITEM {
 		quest::faction(273,-30); 	#:: - Ring of Scale
 		quest::faction(207,-30); 	#:: - Mayong Mistmoore
 	}
-	#:: Turn in for 18167 - Pouch of Mail (Freeport)
-	if (plugin::takeItems(18167 => 1 )) {
+	#:: Turn in for 18166 - Pouch of Mail (Freeport)
+	if (plugin::takeItems(18166 => 1 )) {
 		quest::say("'Mail from the front - thank you very much! Please take this gold for your troubles. If you are interested in more work, just ask Ton Twostring");
 		#:: Give a small amount of xp
 		quest::exp(100);
