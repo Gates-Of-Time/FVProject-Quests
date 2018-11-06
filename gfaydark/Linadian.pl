@@ -8,8 +8,8 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Match two 13319 - Crushbone Shoulderpads, one 13318 - Crushbone Belt, and 10 gold coins
-	if (plugin::takeItemsCoin(0, 0, 10, 0, 13319 => 2, 13318 => 1)) {
+	#:: Match two 13917 - Deathfist Slashed Shoulderpads, one 13916 - Deathfist Slashed Belt and 10 gold coins
+	if (plugin::takeItemsCoin(0, 0, 10, 0, 13917 => 2, 13916 => 1)) {
 		quest::say("Grand doing business with you. Hold your nose. I can never get rid of the orc stench of the vests. That is why the other merchants do not pay me much for them.");
 		#:: Give a 12187 - Banded Orc Vest
 		quest::summonitem(12187);
@@ -23,8 +23,8 @@ sub EVENT_ITEM {
 		quest::faction(99,10);	#:: + Faydark's Champions
 		quest::faction(92,10);	#:: + Emerald Warriors
 	}
-	#:: Match two 13917 - Deathfist Slashed Shoulderpads, one 13916 - Deathfist Slashed Belt, and one 16482 silk swatch 
-	if (plugin::takeItems(13917 => 2, 13916 => 1, 16482 => 1)) {
+	#:: Match two 13319 - Crushbone Shoulderpads, one 13318 - Crushbone Belt,, and one 16482 silk swatch 
+	if (plugin::takeItems(13319 => 2, 13318 => 1, 16482 => 1)) {
 		quest::say("Grand doing business with you. Hold your nose. I can never get rid of the orc stench of the vests. That is why the other merchants do not pay me much for them.");
 		#:: Give a 12187 - Banded Orc Vest
 		quest::summonitem(12187);
