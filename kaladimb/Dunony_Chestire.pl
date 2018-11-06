@@ -16,35 +16,35 @@ sub EVENT_SAY {
 	}
 	elsif ($text =~ /Nektulos Forest/i) {
 		quest::say("Begone!");
-		$npc->CastSpell(1371, $ClientID);
+		$npc->CastSpell(1371, $userid);
 	}
 	elsif ($text =~ /The Northern Desert of Ro/i) {
 		quest::say("Begone!");
-		$npc->CastSpell(1373, $ClientID);
+		$npc->CastSpell(1373, $userid);
 	}
 	elsif ($text =~ /The Northern Plains of Karana/i) {
 		quest::say("Begone!");
-		$npc->CastSpell(1338, $ClientID);
+		$npc->CastSpell(1338, $userid);
 	}
 	elsif ($text =~ /The Temple of Cazic Thule/i) {
 		quest::say("Begone!");
-		$npc->CastSpell(1375, $ClientID);
+		$npc->CastSpell(1375, $userid);
 	}
 	elsif ($text =~ /The Western Commonlands/i) {
 		quest::say("Begone!");
-		$npc->CastSpell(1372, $ClientID);
+		$npc->CastSpell(1372, $userid);
 	}
 	elsif ($text =~ /The Western Plains of Karana/i) {
 		quest::say("Begone!");
-		$npc->CastSpell(1374, $ClientID);
+		$npc->CastSpell(1374, $userid);
 	}
 	elsif ($text =~ /The Greater Faydark/i) {
 		quest::say("Begone!");
-		$npc->CastSpell(1336, $ClientID);
+		$npc->CastSpell(1336, $userid);
 	}
 	elsif ($text =~ /Toxxulia Forest/i) {
 		quest::say("Begone!");
-		$npc->CastSpell(1337, $ClientID);
+		$npc->CastSpell(1337, $userid);
 	}
 
 }
