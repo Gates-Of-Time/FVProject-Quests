@@ -1,4 +1,4 @@
-$maxlevelbuffs = 70;
+$maxlevelbuffs = 71;
 %buffshash = (
     1 => 
 	# Warrior
