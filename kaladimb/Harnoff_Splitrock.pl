@@ -30,8 +30,10 @@ sub EVENT_ITEM {
 		quest::faction(314,5);		#:: + Storm Guard
 		#:: Spawn a North Kaladim >> Harnoff_Splitrock_ (67095)
 		quest::spawn2(67095,0,0,$x,$y,$z,$h);
-		#:: Depop and disable spawn point
-		quest::disable_spawn2(67057);	
+		#:: Disable spawn point
+		quest::disable_spawn2(67057);
+		#:: Depop
+		quest::depop();
 	}
 	#:: Match a 10953 - Large Shipment of High Quality Ore
 	elsif (plugin::takeItems(10953 => 1)) {
@@ -55,6 +57,8 @@ sub EVENT_ITEM {
 		quest::spawn2(67095,0,0,$x,$y,$z,$h);
 		#:: Depop and disable spawn point
 		quest::disable_spawn2(67057);
+		#:: Depop
+		quest::depop();
 	}
   	#:: Return unused items
 	plugin::returnUnusedItems();
