@@ -66,7 +66,7 @@ sub EVENT_ITEM {
 		quest::faction(322,-25);	#:: - The Dead
 	}
 	#:: Turn in for 12333 - Pouch of Gold Dust, 12334 - Wooden Heart, 8401 - Trueshot Longbow, Gold = 3000
-	if (plugin::check_handin(\%itemcount, 12333 => 1, 12334 => 1, 8401 => 1, $cash = 300000)) {
+	if (plugin::check_handin(\%itemcount, 12333 => 1, 12334 => 1, 8401 => 1, $gold = 3000)) {
 		quest::say("Fine work!! I now reward you with The Rain Caller.");
 		#:: Give item 8402 - Trueshot Longbow
 		quest::summonitem(8402);
