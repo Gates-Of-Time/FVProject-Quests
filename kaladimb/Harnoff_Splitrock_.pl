@@ -22,3 +22,8 @@ sub EVENT_ITEM {
   	#:: Return unused items
 	plugin::returnUnusedItems();
 }
+
+sub EVENT_DEATH_COMPLETE {
+	#:: Enable spawn point for North Kaladim >> Harnoff_Splitrock (67057)
+	quest::enable_spawn2(67057);
+}
