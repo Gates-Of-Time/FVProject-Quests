@@ -32,7 +32,7 @@ sub EVENT_ITEM {
 		quest::summonitem(17080);
 	}
 	#:: Turn in for Clumps of Hair ID- 12335 - Lock of Hair ID- 12338 - Tattered Toupee ID- 12337
-	if (plugin::takeItems(12335 => 1, 12338 =>1, 12337 =>1)) {
+	if (plugin::takeItems(12335 => 2, 12338 =>1, 12337 =>1)) {
 		quest::say("You are a good helper. Here you go. One genuine, charismatic, lady magnet, zero to hero making Mane Attraction!! Guaranteed to lower prices world wide. Guaranteed to last forever.. Err.. Well,.. It has a 1000 year warranty at least.");
 		#:: Give item 12254 - Mane Attraction
 		quest::summonitem(12254);
