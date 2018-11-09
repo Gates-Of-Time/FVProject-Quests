@@ -1,5 +1,5 @@
 sub EVENT_SPAWN {
-	#:: Set up a 50 unit distance
+	#:: Set up a proximity, 100 units across
 	$x = $npc->GetX();
 	$y = $npc->GetY();
 	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
@@ -46,19 +46,16 @@ sub EVENT_SAY {
 	}
 }
 
-sub EVENT_ITEM {	
-	#:: Create a scalar variable for storing money
-	my $cash = 0;
-	$cash = ($platinum * 1000) + ($gold * 100) + ($silver * 10) + $copper;
+sub EVENT_ITEM {
 	#:: Match a 18778 - Enrollment Letter
-	if (plugin::check_handin(\%itemcount, 18778 => 1)) {
+	if (plugin::takeItems(18778 => 1)) {
 		quest::say("Greetings and welcome aboard!  My name's Kinool. Master Enchanter of the Keepers of the Art.  Here is your guild tunic. Make us proud, young pupil! Once you are ready to begin your training please make sure that you see Yuin Starchaser, he can assist you in developing your hunting and gathering skills. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
 		#:: Give item 13593 - Torn Training Robe*
 		quest::summonitem(13593);
-		#:: Give a little xp
-		quest::exp(100);
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of experience
+		quest::exp(100);
 		#:: Set faction
 		quest::faction(170,100);	#:: + Keepers of the Art
 		quest::faction(178,25);		#:: + Kin Tearis Thex
@@ -66,19 +63,15 @@ sub EVENT_ITEM {
 		quest::faction(322,-25);	#:: - The Dead
 	}
 	#:: Turn in for 12333 - Pouch of Gold Dust, 12334 - Wooden Heart, 8401 - Trueshot Longbow, Gold = 3000
-	if (plugin::check_handin(\%itemcount, 12333 => 1, 12334 => 1, 8401 => 1, $gold = 3000)) {
+	elsif (plugin::takeItemsCoin(0,0,3000,0, 12333 => 1, 12334 => 1, 8401 => 1)) {
 		quest::say("Fine work!! I now reward you with The Rain Caller.");
 		#:: Give item 8402 - Trueshot Longbow
 		quest::summonitem(8402);
-		#:: Give a little xp
-		quest::exp(5000);
 		#:: Ding!
 		quest::ding();
-	}
-	else {
-		#:: Return unused money
-		quest::givecash($copper, $silver, $gold, $platinum);
+		#:: Give a small amount of experience
+		quest::exp(5000);
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
