@@ -1,6 +1,6 @@
 sub EVENT_SAY {
-	#:: Match for kindly faction
-	if ($faction == 3) {
+	#:: Match for kindly or better faction
+	if ($faction <= 3) {
 		if ($text=~/hail/i) {
 			quest::say("Welcome, my friend! What is it you seek from Laren and the Scouts of Tunare?");
 		}
@@ -28,7 +28,7 @@ sub EVENT_ITEM {
 			quest::summonitem(7321);
 			#:: Ding!
 			quest::ding();
-			#:: Grant a moderate amount of experience
+			#:: Grant a large amount of experience
 			quest::exp(20000);
 			#:: Create a hash for storing cash - 2700 to 2900cp
 			my %cash = plugin::RandomCash(2700,2900);
@@ -39,5 +39,5 @@ sub EVENT_ITEM {
 		}
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
