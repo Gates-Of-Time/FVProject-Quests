@@ -1,6 +1,6 @@
 sub EVENT_SAY {
-	#:: Match for ally faction
-	if ($faction == 1) {
+	#:: Match for kindly faction
+	if ($faction == 3) {
 		if ($text=~/hail/i) {
 			quest::say("Welcome, my friend! What is it you seek from Laren and the Scouts of Tunare?");
 		}
@@ -14,7 +14,7 @@ sub EVENT_SAY {
 		}
 	}
 	else {
-		quest::say("Perhaps a few less Crushbone Orcs will prove your worth.");
+		quest::say("Perhaps more service to Tunare's Scouts will prove your worth.");
 	}
 }
 
