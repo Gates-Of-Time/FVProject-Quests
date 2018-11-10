@@ -20,3 +20,7 @@ sub EVENT_ENTERZONE {
 		$PetID->Kill();
 	}
 }
+
+sub EVENT_TICK {
+	quest::we(15,"This is a tick");
+}
