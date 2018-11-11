@@ -12,35 +12,12 @@ sub EVENT_SAY {
 	}
 	if ($text=~/potion of marr/i) {
 		quest::say("The Potion of Marr was created for the Sentries of Passion. It makes us alert and energetic. It will work only on sentries such as myself. It is distributed by Serna Tasknon of the Temple of Marr in Freeport.");
-		#:: Start path grid 62
-		quest::start(62);
-		#:: Set running to true
-		quest::SetRunning(1);
 	}			
-}
-
-sub EVENT_ITEM {
-	#:: Match a 12134 - Last of Potion of Marr
-	if (plugin::takeItems(12134 => 1)) {
-		quest::say("I thank you. I cannot do battle at this moment. I am summoned elsewhere. May Marr guide you from this isle.");
-		#:: give a 12135 - Empty Potion of Marr
-		quest::summonitem(12135);
-		#:: Ding!
-		quest::ding();
-		#:: Set factions
-		quest::faction(258,5);		#:: + Priests of Marr
-		quest::faction(105,-10);	#:: - Freeport Militia
-		quest::faction(184,5);		#:: + Knights of Truth
-		#:: Depop
-		quest::depop();
-	}
-	#:: Return unused items
-	plugin::return_items(\%itemcount);
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
 	if ($wp == 4) {
-		quest::shout("Long live Marr !!");
+		quest::shout("Long live Marr!!");
 	}
 	if ($wp == 5) {
 		quest::say("Many thanks to all who aided in this battle. I offer you this, a weapon I found on a slain Erudite paladin. May Marr watch over his soul and may Marr guide yours. Now I must go.");
@@ -51,10 +28,37 @@ sub EVENT_WAYPOINT_ARRIVE {
 	}
 }
 
+sub EVENT_COMBAT {
+	if ($combat_state == 1) {
+		quest::say("Let the fury of passion smite thee!");
+	}
+}
+
 sub EVENT_TIMER {
 	#:: Match timer named "depop"
 	if ($timer eq "depop") {
 		#:: Depop
 		quest::depop();
 	}
+}
+
+sub EVENT_ITEM {
+	#:: Match a 12134 - Last of Potion of Marr
+	if (plugin::takeItems(12134 => 1)) {
+		quest::say("Ahhhh! I am energized! Come! Let us show these undead the greatness of Erollisi Marr!");
+		#:: give a 12135 - Empty Potion of Marr
+		quest::summonitem(12135);
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(258,5);		#:: + Priests of Marr
+		quest::faction(105,-10);	#:: - Freeport Militia
+		quest::faction(184,5);		#:: + Knights of Truth
+		#:: Start path grid 62
+		quest::start(62);
+		#:: Set running to true
+		quest::SetRunning(1);
+	}
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
