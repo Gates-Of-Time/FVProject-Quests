@@ -16,8 +16,8 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Match a 67702 - Sealed Note
-	if (plugin::takeItems(67702 => 1)) {
+	#:: Match a 12183 - Crushbone Information
+	if (plugin::takeItems(12183 => 1)) {
 		quest::say("Fine work. We are very grateful. Take this Scout Cape. May you use it to serve Kelethin.");
 		#:: Give a 2914 - Scouts Cape
 		quest::summonitem(2914);
