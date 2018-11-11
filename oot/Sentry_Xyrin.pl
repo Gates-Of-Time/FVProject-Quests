@@ -61,6 +61,7 @@ sub EVENT_ITEM {
 		#:: Hate on the spectres
 		quest::attacknpctype(69039);
 		quest::attacknpctype(69040);
+		quest::attacknpctype(69040);
 		quest::attacknpctype(69099);
 		quest::attacknpctype(69115);
 	}
