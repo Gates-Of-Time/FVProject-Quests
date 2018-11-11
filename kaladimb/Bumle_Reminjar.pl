@@ -42,7 +42,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match if faction is Amiable or better and four 12158 - Aviak Talon
 	elsif (($faction <= 4) && (plugin::takeItems(12158 => 4))) {
-		quest::say("Ahh! you are truly brave, $name!");
+		quest::say("Fine work! You shall be known for your great deeds. Take this and may it aid you in your defense of Kaladim. Hail King Kazon!");
 		#:: Ding!
 		quest::ding();
 		#:: Grant a large amount of experience
@@ -51,6 +51,8 @@ sub EVENT_ITEM {
 		my %cash = plugin::RandomCash(2500,2600);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Give a random reward: 2114 - Small tattered Mask, 6041 - Cast-iron Warhammer
+		quest::summonitem(quest::ChooseRandom(2114,6041));
 		#:: Set factions
 		quest::faction(44, 40);		#:: + Clerics Of Underfoot
 		quest::faction(169, 40);	#:: + Kazon Stormhammer
