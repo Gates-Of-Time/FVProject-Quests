@@ -16,7 +16,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 13035 - Elven Wine
 	if (plugin::check_handin(\%itemcount, 13035 => 1)) {
-		quest::say("Thank you kind sir <hic>, I am most grateful for your generosity.");
+		quest::say("Oh.. .. Thank you!! Oh, what has become of me?! Look at me!! I was great once. I wish I never had that shocking experience.");
 		#:: Ding!
 		quest::ding();
 		#:: Grants a small amount of experience
