@@ -15,15 +15,15 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match a 13035 - Elven Wine
-	if (plugin::check_handin(\%itemcount, 13035 => 1)) {
-		quest::say("Thank you kind sir <hic>, I am most grateful for your generosity.");
+	if (plugin::takeItems(13035 => 1)) {
+		quest::say("Oh.. .. Thank you!! Oh, what has become of me?! Look at me!! I was great once. I wish I never had that shocking experience.");
 		#:: Ding!
 		quest::ding();
 		#:: Grants a small amount of experience
 		quest::exp(150);
 	}
 	#:: Match a 13347 - Dull Pearl Necklace, 13349 - Dull Pearl Necklace, 13348 - Dull Pearl Necklace, 13350 - Dull Pearl Necklace
-	if (plugin::check_handin(\%itemcount, 13347 => 1, 13349 => 1, 13348 => 1, 13350 => 1)) {
+	elsif (plugin::takeItems(13347 => 1, 13349 => 1, 13348 => 1, 13350 => 1)) {
 		quest::say("This is a sad day, but it was the just thing to do. The Nybright name will no longer be tarnished. Here you are my friend. This is a bit uncared for, but it is yours. My warrior days are over. Now go. I must be alone.");
 		#:: Give a random item: 2314 - Bearskin Gloves, 2007 - Leather Belt, 2005 - Leather Shoulderpads  (later also has the chance to give 23359 - Targ Shield)
 		quest::summonitem(quest::ChooseRandom(2314, 2007, 2005));
@@ -37,7 +37,7 @@ sub EVENT_ITEM {
 		quest::faction(178, 20);	#:: + King Tearis Thex
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
