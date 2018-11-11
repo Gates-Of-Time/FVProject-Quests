@@ -120,7 +120,6 @@ sub EVENT_ITEM {
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(283,5);		#:: + Tunare's Scouts
-      
 	}
 	#:: Match a 13322 - Emerald Shard
 	elsif (plugin::takeItems(13322=> 1)) {
