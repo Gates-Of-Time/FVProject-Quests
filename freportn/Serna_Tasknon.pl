@@ -3,7 +3,7 @@ sub EVENT_SAY {
 		quest::say("It is a good thing to see new faces visiting our temple. We are the source of strength within this city. Do not be fooled by the Freeport Militia. They are not warriors of valor.  [" . quest::saylink("Join the fight") . "] against the Freeport Militia.");
 	}
 	if ($text=~/Join the fight/i) {
-		quest::say("You are wise. If you are a paladin, either speak with Theron of this temple or visit the Hall of Truth here in North Freeport. Clerics should concetrate on keeping the knights strong and healthy. Would you care to [" . quest::saylink("") . "] the Temple of Marr?");
+		quest::say("You are wise. If you are a paladin, either speak with Theron of this temple or visit the Hall of Truth here in North Freeport. Clerics should concetrate on keeping the knights strong and healthy. Would you care to [" . quest::saylink("assist") . "] the Temple of Marr?");
 	}
 	if ($text=~/assist/i) {
 		#:: Match if faction is better than indifferent
