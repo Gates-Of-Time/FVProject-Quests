@@ -10,13 +10,13 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Turn in for 12133 - Part of Potion of Marr
 	if (plugin::takeItems(12133 => 1 )) {
-		quest::say("Thank you. I believe you need to seek out Sentry Xyrin. She is not at the temple. I believe she left to speak with [Sisterhood of Erollisi]. She was to speak with Styria.");
-		#:: Give a small amount of xp
-		quest::exp(100);
+		quest::say("Thank you. I believe you need to seek out Sentry Xyrin. She is not at the temple. I believe she left to speak with [" . quest::saylink("Sisterhood of Erollisi") . "]. She was to speak with Styria.");
 		#:: Give item 12134 - Last of Potion of Marr
 		quest::summonitem(12134);
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of xp
+		quest::exp(100);
 		#:: Set faction
 		quest::faction(258,5); 		#:: + Priests of Marr
 		quest::faction(105,-10); 	#:: - Freeport Militia
