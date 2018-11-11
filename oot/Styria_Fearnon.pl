@@ -18,9 +18,9 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 13337 - Bracers of Erollisi
 	if (plugin::takeItems(13337 => 1)) {
-		quest::say("Good work. I see you have removed that retchid pirate from here.");
-		#:: Give a 13339 - Aviak Feather, 13342 - Conch Shell, 7017 - Fishing Spear, 13340 - Kiola Nut
-		quest::summonitem(quest::ChooseRandom(13339,13342,7017,13340));
+		quest::say("Oh!! Thank you!! We are so grateful to you. I offer you this as reward. It is one of the dwarven smith's finest works");
+		#:: Give a 13339 - Aviak Feather, 13342 - Conch Shell, 7017 - Fishing Spear, 13340 - Kiola Nut, 5007 - Axe, 5008 - Broad Sword
+		quest::summonitem(quest::ChooseRandom(13339,13342,7017,13340,5007,5008));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
