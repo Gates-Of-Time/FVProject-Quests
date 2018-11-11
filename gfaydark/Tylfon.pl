@@ -44,18 +44,36 @@ sub EVENT_SAY {
 			quest::say("You dare to speak with a loyal member of the Scouts of Tunare?!! You are truly foolish!! Run away, while you still can.");
 		}
 	}
+	elsif ($text=~/scout silvermesh leggings/i) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
+			quest::say("Scout silvermesh leggings are part of the garb of the Scouts of Tunare. Besides greater protection in battle, they offer a protection against magic and their unique powers boost the wearer's agility. They are meant for the scouts only and, as such, are not just given away. Are you [" . quest::saylink("willing to earn the leggings") . "]?");
+		}
+		else {
+			quest::say("You dare to speak with a loyal member of the Scouts of Tunare?!! You are truly foolish!! Run away, while you still can.");
+		}
+	}
+	elsif ($text=~/willing to earn the leggings/i) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
+			quest::say("Tylfon says 'A former scout named Faldor Hendrys has stolen our [" . quest::saylink("gem of tunare") . "]. He has fled Faydwer and we have been unable to track him down. Perhaps if you go and speak with his brother, [" . quest::saylink("gem of tunare") . "][Elmion Hendrys], and ask him of Faldor, we might learn something of value?");
+		}
+		else {
+			quest::say("You dare to speak with a loyal member of the Scouts of Tunare?!! You are truly foolish!! Run away, while you still can.");
+		}
+	}
 	elsif ($text=~/gem of tunare/i) {
-		#:: Match if faction is Dubious or better
-		if ($faction <= 7) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
 			quest::say("The bright green Gem of Tunare was discovered by the Scouts of Tunare in the trunk of a great tree. The lightning streaked down to split the tree in twain and there, inside, was the gem, Tunare's gift to the people of Kelethin. It has no magical properties, but it represents the glory of Tunare. It appears as a small emerald shard. Alas, now it has been stolen by Faldor Hendrys and only his brother [" . quest::saylink("Elmion Hendrys") . "] could know of his whereabouts.");
 		}
 		else {
 			quest::say("You dare to speak with a loyal member of the Scouts of Tunare?!! You are truly foolish!! Run away, while you still can.");
 		}
 	}
-	elsif ($text=~/elmion hendrys/i) {
-		#:: Match if faction is Dubious or better
-		if ($faction <= 7) {
+	elsif ($text=~/Elmion Hendrys/i) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
 			quest::say("Seek out the Fier'Dal, Elmion. He was last heard telling the local bar patrons that he was off to do some adventuring at the lake near the estate. What that is, I do not know.");
 		}
 		else {
@@ -102,7 +120,6 @@ sub EVENT_ITEM {
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(283,5);		#:: + Tunare's Scouts
-      
 	}
 	#:: Match a 13322 - Emerald Shard
 	elsif (plugin::takeItems(13322=> 1)) {
