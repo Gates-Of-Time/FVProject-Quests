@@ -10,7 +10,7 @@ sub EVENT_SAY {
 		if ($faction < 5) {
 			quest::say("Good. Take this Potion of Marr to the Sentries of Passion. They are the protectors of this temple. Start in alphabetical order and the first shall take but a sip then you shall take it to the next in order of the alphabet. There are but eight sentries. Sentry Andlin to Sentry Xyrin. Go.");
 			#:: Summon 12127 - Full Potion of Marr
-			quest::summonitem(12127); 
+			quest::summonitem(12127);
 		}
 		else {
 			quest::say("The path you walk is correct, but you have further to travel before you need worry about this.");
@@ -19,7 +19,7 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Turn in for 10 Gold and 12126 - Shark Bones x3 
+	#:: Turn in for 10 Gold and 12126 - Shark Bones x3
 	if (plugin::takeItemsCoin(0,10,0,0, 12126 => 3)) {
 		quest::say("I thank you for your ten gold coins. Now we can pay the weekly oxygen tax imposed by the militia. Here is the shark powder.");
 		#:: Give item 12125 - shark Powder
@@ -28,7 +28,7 @@ sub EVENT_ITEM {
 		quest::exp(100);
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
+		#:: Set factions
 		quest::faction(258,5); 		#:: + Priests of Marr
 		quest::faction(105,-10); 	#:: - Freeport Militia
 		quest::faction(184,5); 		#:: + Knights of Truth
@@ -40,7 +40,7 @@ sub EVENT_ITEM {
 		quest::exp(100);
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
+		#:: Set factions
 		quest::faction(258,5); 		#:: + Priests of Marr
 		quest::faction(105,-10); 	#:: - Freeport Militia
 		quest::faction(184,5); 		#:: + Knights of Truth	
@@ -54,11 +54,11 @@ sub EVENT_ITEM {
 		quest::summonitem(15207);
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
+		#:: Set factions
 		quest::faction(258,5); 		#:: + Priests of Marr
 		quest::faction(105,-10); 	#:: - Freeport Militia
 		quest::faction(184,5); 		#:: + Knights of Truth	
-	}		
+	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
