@@ -54,10 +54,17 @@ sub EVENT_ITEM {
 		quest::faction(258,5);		#:: + Priests of Marr
 		quest::faction(105,-10);	#:: - Freeport Militia
 		quest::faction(184,5);		#:: + Knights of Truth
-		#:: Start path grid 62
-		quest::start(62);
 		#:: Set running to true
 		quest::SetRunning(1);
+		#:: Start grid 62
+		quest::start(62);
+		#:: Hate on the spectres
+		my @npcslist = $entity_list->GetNPCList();
+        	foreach my $npc_on_list (@npcslist) {
+			if ($npc_on_list->GetCleanName()=~/a_spectre/i) {
+				$npc->AddToHateList($npc_on_list, 1);
+			}
+		}
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
