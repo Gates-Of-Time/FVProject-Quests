@@ -68,7 +68,7 @@ sub EVENT_ITEM {
 sub KillUndead {
 	my @npc_list = $entity_list->GetNPCList();
 	foreach $npc_ent (@npc_list) {
-		if ($npc_ent->CalculateDistance($x, $y, $z) > 1000 && $npc_ent->GetCleanName()=~/spectre/i || $npc_ent->GetCleanName()=~/skeleton/i) {
+		if ($npc_ent->CalculateDistance($x, $y, $z) < 1000 && $npc_ent->GetCleanName()=~/spectre/i || $npc_ent->GetCleanName()=~/skeleton/i) {
 			$npc->Attack($npc_ent)
 		}
 	}
