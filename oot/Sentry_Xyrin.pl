@@ -70,6 +70,7 @@ sub KillUndead {
 	foreach $npc_ent (@npc_list) {
 		if ($npc_ent->CalculateDistance($x, $y, $z) < 1000 && $npc_ent->GetCleanName()=~/spectre/i || $npc_ent->GetCleanName()=~/skeleton/i) {
 			$npc->Attack($npc_ent)
+			last;
 		}
 	}
 }
