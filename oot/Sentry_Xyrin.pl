@@ -20,8 +20,6 @@ sub EVENT_WAYPOINT_ARRIVE {
 		quest::shout("Long live Marr!!");
 		#:: Hate on the undead
 		$npc->CastSpell(221,$npc->GetID());
-		quest::say("my target is $target");
-		$npc->Attack($target);
 	}
 	if ($wp == 5) {
 		quest::say("Many thanks to all who aided in this battle. I offer you this, a weapon I found on a slain Erudite paladin. May Marr watch over his soul and may Marr guide yours. Now I must go.");
@@ -30,6 +28,10 @@ sub EVENT_WAYPOINT_ARRIVE {
 		#:: Depop
 		quest::depop();			
 	}
+}
+
+sub EVENT_TARGET_CHANGE {
+	$npc->Attack($target);
 }
 
 sub EVENT_COMBAT {
