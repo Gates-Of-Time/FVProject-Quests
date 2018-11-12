@@ -19,7 +19,7 @@ sub EVENT_WAYPOINT_ARRIVE {
 	if ($wp == 4) {
 		quest::shout("Long live Marr!!");
 		#:: Hate on the undead
-		$npc->CastSpell(221);
+		$npc->CastSpell(221,$npc->GetID());
 		quest::say("my target is $target");
 		$npc->Attack($target);
 	}
