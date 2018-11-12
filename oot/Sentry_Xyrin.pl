@@ -59,11 +59,12 @@ sub EVENT_ITEM {
 		#:: Start grid 62
 		quest::start(62);
 		#:: Hate on the spectres
-		quest::attacknpctype(69039);
-		quest::attacknpctype(69040);
-		quest::attacknpctype(69040);
-		quest::attacknpctype(69099);
-		quest::attacknpctype(69115);
+		my @npc_list = $entity_list->GetNPCList();
+		foreach $npc_ent (@npc_list) {
+			if ($npc_ent->GetCleanName()=~/spectre/i) {
+				$npc->Attack($npc_ent)
+			}
+		}
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
