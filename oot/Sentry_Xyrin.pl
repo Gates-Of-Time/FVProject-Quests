@@ -28,10 +28,10 @@ sub EVENT_WAYPOINT_ARRIVE {
 	}
 	if ($wp == 5) {
 		quest::say("Many thanks to all who aided in this battle. I offer you this, a weapon I found on a slain Erudite paladin. May Marr watch over his soul and may Marr guide yours. Now I must go.");
-		#:: Depop
-		quest::depop();
 		#:: Ground spawn a 5414 - Deepwater Harpoon
-		quest::creategroundobject(5414,-6963,-886,139,0,1800000);			
+		quest::creategroundobject(5414,$X,$Y,$Z,0,1800000);
+		#:: Depop
+		quest::depop();			
 	}
 }
 
