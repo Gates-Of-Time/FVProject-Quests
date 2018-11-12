@@ -19,7 +19,9 @@ sub EVENT_WAYPOINT_ARRIVE {
 	if ($wp == 4) {
 		quest::shout("Long live Marr!!");
 		#:: Hate on the undead
-		KillUndead();
+		$npc->CastSpell(221);
+		quest::say("my target is $target");
+		$npc->Attack($target);
 	}
 	if ($wp == 5) {
 		quest::say("Many thanks to all who aided in this battle. I offer you this, a weapon I found on a slain Erudite paladin. May Marr watch over his soul and may Marr guide yours. Now I must go.");
@@ -63,17 +65,4 @@ sub EVENT_ITEM {
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
-}
-
-sub KillUndead {
-	#my @npc_list = $entity_list->GetNPCList();
-	#foreach $npc_ent (@npc_list) {
-	#	if ($npc_ent->CalculateDistance($x, $y, $z) < 1000 && $npc_ent->GetCleanName()=~/spectre/i || $npc_ent->GetCleanName()=~/skeleton/i) {
-	#		$npc->Attack($npc_ent)
-	#		last;
-	#	}
-	#}
-	$npc->CastSpell(221);
-	quest::say("my target is $target");
-	$npc->Attack($target);
 }
