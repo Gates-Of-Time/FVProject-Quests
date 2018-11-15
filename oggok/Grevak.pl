@@ -56,11 +56,8 @@ sub EVENT_ITEM {
 		quest::faction(314, -1);	#:: - Storm Guard
 		quest::faction(292, -1);	#:: - Shadowknights of Night Keep
 	}
-	#:: Match two 13367 - Mystic Doll and faction Apprehensive or worse
-	elsif (plugin::check_handin(\%itemcount, 13367 => 2) && $faction >= 4) {
+	elsif ($faction > 5) {
 		quest::say("Help Greenbloods you will. Give lizard tails to Grevak. Den maybe we trust.");
-		#:: Return items
-		plugin::return_items(\%itemcount);
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Shadowknight');
 	#:: Return unused items
