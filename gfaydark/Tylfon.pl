@@ -56,7 +56,7 @@ sub EVENT_SAY {
 	elsif ($text=~/willing to earn the leggings/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
-			quest::say("Tylfon says 'A former scout named Faldor Hendrys has stolen our [" . quest::saylink("gem of tunare") . "]. He has fled Faydwer and we have been unable to track him down. Perhaps if you go and speak with his brother, [" . quest::saylink("gem of tunare") . "][Elmion Hendrys], and ask him of Faldor, we might learn something of value?");
+			quest::say("Tylfon says 'A former scout named Faldor Hendrys has stolen our [" . quest::saylink("gem of tunare") . "]. He has fled Faydwer and we have been unable to track him down. Perhaps if you go and speak with his brother, [" . quest::saylink("Elmion Hendrys") . "], and ask him of Faldor, we might learn something of value?");
 		}
 		else {
 			quest::say("You dare to speak with a loyal member of the Scouts of Tunare?!! You are truly foolish!! Run away, while you still can.");
