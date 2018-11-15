@@ -1,83 +1,68 @@
-############################################
-# ZONE: Oggok (oggok)
-# Database: PEQ (from CVS)
-# LAST EDIT DATE: November 24, 2007
-# Version 1.1
-# Developer: Diuretic Effluent
-#
-# *** NPC INFORMATION ***
-#
-# NAME: Grevak
-# ID: 49037
-# Type: Shadowknight Guild Master
-# Race: Ogre
-# Level: 61
-#
-# *** ITEMS GIVEN OR TAKEN ***
-#
-# Lizard Tail ID - 13354
-# Pickled Lizard ID - 13453
-# Mystic Doll ID - 13367
-#
-# *** QUESTS INVOLVED IN ***
-#
-# Lizard Tails #2
-# Lizardman Mystic Shaman Dolls (text only, turn-in coding help required);
-#
-# *** QUESTS AVAILABLE TO ***
-#
-# Must be Indifferent or better
-#
-###########################################
-
-
 sub EVENT_SAY {
-if($text=~/Hail/i){
-quest::say("Need new members we do not. Powerful enough are we with Grevak. Still. peons needed. Are you a [new peon] or are you an [outsider]? Speak up!! Fool!! No time Grevak has!!");
-      }
-if($text=~/i am a new peon/i){
-quest::say("So you think you can be greater than Grevak!! Touch you not and still I can smash you. I am a Greenblood shadowknight!! Peon are you. Peons go to swamps and slay lizardmen. You return with four lizardmen tails and a reward is yours. You return with two lizardman shaman dolls and a great reward is yours.");
-      }
-if($text=~/i am an outsider/i){
-quest::say("Go away or soon your pain will find you.");
-            }
+	if ($text=~/hail/i) {
+		quest::say("Need new members we do not. Powerful enough are we with Grevak. Still, peons needed. Are you a [" . quest::saylink("new peon") . "] or are you an [" . quest::saylink("outsider") . "]? Speak up!! Fool!! No time Grevak has!!");
+	}
+	if ($text=~/new peon/i) {
+		#:: Match if faction is Indifferent or better
+		if ($faction <= 5) {
+			quest::say("So you think you can be greater than Grevak!! Touch you not and still I can smash you. I am a Greenblood shadowknight!! Peon are you. Peons go to swamps and slay lizardmen. You return with four lizardmen tails and a reward is yours. You return with two lizardman shaman dolls and a great reward is yours.");
+		}
+		#:: Match if faction is Apprehensive or worse
+		else {
+			quest::say("Foe of the Greenbloods are you. I will rip you in two.");
+		}
+	}
+	if ($text=~/outsider/i) {
+		quest::say("Go away or soon your pain will find you.");
+	}
 }
 
 sub EVENT_ITEM {
-  if  (plugin::check_handin(\%itemcount, 13354 => 4))
-   {
-   # Text created by Diuretic since nothing found on Allakhazam
-   quest::say("Grevak rewards peon with reward instead of smashing you.  Bring me more, peon!");
-   #Summon Pickled Lizard
-   quest::summonitem("13453");
-   quest::exp("500");
-   # Increase faction -- Clurg
-   quest::faction("46","10");
-   # Increase faction -- Greenblood Knights
-   quest::faction("128","20");
-   # Decrease faction -- Shadowknights of Night Keep
-   quest::faction("292","-20");
-   # Decrease faction -- Storm Guard
-   quest::faction("314","-10");
-
-    }
-elsif(plugin::check_handin(\%itemcount, 13367 => 2))
-   {
-   # Text created by Diuretic since nothing found on Allakhazam
-   quest::say("Grevak rewards you. Grevak now afraid of nothing! Ha ha! Mighty mighty!");
-   #Summon Random Rusty Shadowknight-Friendly weapon
-   quest::summonitem(quest::ChooseRandom(13453,5013,5014,5016,5019,5020,5023,5025));
-   quest::exp("500");
-   # Increase faction -- Greenblood Knights
-   quest::faction("128","20");
-   # Decrease faction -- Shadowknights of Night Keep
-   quest::faction("292","-20");
-
-    }
-
-  #do all other handins first with plugin, then let it do disciplines
-  plugin::try_tome_handins(\%itemcount, $class, 'Shadowknight');
-  plugin::return_items(\%itemcount);
-
+	#:: Match four 13354 - Lizard Tail
+	if (plugin::takeItems(13354 => 4)) {
+		quest::say("Now I shall take the lizard tails to shamans I will. Healing spells will this help create. You continue to slay. Continue to be the peon. Continue to live.");
+		#:: Give a random reward: 2130 - Large Patchwork Cloak, 2132 - Large Patchwork Sleeves, 2127 - Large Tattered Gorget, 2126 - Large Tattered Mask, 2129 - Large Tattered Shoulderpads, 2125 - Large Tattered Skullcap, 2133 - Large Tattered Wristbands, 9016 - Large Buckler
+		quest::summonitem(quest::ChooseRandom(2130, 2132, 2127, 2126, 2129, 2125, 2133, 9016));
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp("500");
+		#:: Create a hash for storing cash - 100 to 200cp
+		my %cash = plugin::RandomCash(100,200);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Set factions
+		quest::faction(128, 10);	#:: + Green Blood Knights
+		quest::faction(46, 5);		#:: + Clurg
+		quest::faction(314, -1);	#:: - Storm Guard
+		quest::faction(292, -1);	#:: - Shadowknights of Night Keep
+	}
+	#:: Match two 13367 - Mystic Doll and faction Indifferent or better
+	elsif (plugin::check_handin(\%itemcount, 13367 => 2) && $faction <=5) {
+		quest::say("A shaman doll! A great knight you some day become. A gift I give to help you on your way. The fight you will continue. All hail the Greenbloods!");
+		#:: Give a random reward: 17005 - Backpack, 2136 - Large Patchwork Boots, 2135 - Large Patchwork Pants, 2132 - Large Patchwork Sleeves, 2129 - Large Tattered Shoulderpads, 2133 - Large Tattered Wristbands, 15235 - Spell: Invisibility vs Undead
+		quest::summonitem(quest::ChooseRandom(17005, 2136, 2135, 2132, 2129, 2133, 15235));
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp("500");
+		#:: Create a hash for storing cash - 300 to 400cp
+		my %cash = plugin::RandomCash(300,400);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Set factions
+		quest::faction(128, 10);	#:: + Green Blood Knights
+		quest::faction(46, 5);		#:: + Clurg
+		quest::faction(314, -1);	#:: - Storm Guard
+		quest::faction(292, -1);	#:: - Shadowknights of Night Keep
+	}
+	#:: Match two 13367 - Mystic Doll and faction Apprehensive or worse
+	elsif (plugin::check_handin(\%itemcount, 13367 => 2) && $faction >= 4) {
+		quest::say("Help Greenbloods you will. Give lizard tails to Grevak. Den maybe we trust.");
+		#:: Return items
+		plugin::return_items(\%itemcount);
+	}
+	#:: plugin::try_tome_handins(\%itemcount, $class, 'Shadowknight');
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
-#END of FILE Zone:oggok  ID:49034 -- Grevak 
