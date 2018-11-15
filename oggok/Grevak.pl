@@ -37,27 +37,34 @@ sub EVENT_ITEM {
 		quest::faction(314, -1);	#:: - Storm Guard
 		quest::faction(292, -1);	#:: - Shadowknights of Night Keep
 	}
-	#:: Match two 13367 - Mystic Doll and faction Indifferent or better
-	elsif (plugin::check_handin(\%itemcount, 13367 => 2) && $faction <=5) {
-		quest::say("A shaman doll! A great knight you some day become. A gift I give to help you on your way. The fight you will continue. All hail the Greenbloods!");
-		#:: Give a random reward: 17005 - Backpack, 2136 - Large Patchwork Boots, 2135 - Large Patchwork Pants, 2132 - Large Patchwork Sleeves, 2129 - Large Tattered Shoulderpads, 2133 - Large Tattered Wristbands, 15235 - Spell: Invisibility vs Undead
-		quest::summonitem(quest::ChooseRandom(17005, 2136, 2135, 2132, 2129, 2133, 15235));
-		#:: Ding!
-		quest::ding();
-		#:: Grant a small amount of experience
-		quest::exp("500");
-		#:: Create a hash for storing cash - 300 to 400cp
-		my %cash = plugin::RandomCash(300,400);
-		#:: Grant a random cash reward
-		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set factions
-		quest::faction(128, 10);	#:: + Green Blood Knights
-		quest::faction(46, 5);		#:: + Clurg
-		quest::faction(314, -1);	#:: - Storm Guard
-		quest::faction(292, -1);	#:: - Shadowknights of Night Keep
-	}
-	elsif ($faction > 5) {
-		quest::say("Help Greenbloods you will. Give lizard tails to Grevak. Den maybe we trust.");
+	#:: Match two 13367 - Mystic Doll
+	elsif (plugin::takeItems(13367 => 2) {
+		#:: Match if faction is Indifferent or better
+		if ($faction <=5) {
+			quest::say("A shaman doll! A great knight you some day become. A gift I give to help you on your way. The fight you will continue. All hail the Greenbloods!");
+			#:: Give a random reward: 17005 - Backpack, 2136 - Large Patchwork Boots, 2135 - Large Patchwork Pants, 2132 - Large Patchwork Sleeves, 2129 - Large Tattered Shoulderpads, 2133 - Large Tattered Wristbands, 15235 - Spell: Invisibility vs Undead
+			quest::summonitem(quest::ChooseRandom(17005, 2136, 2135, 2132, 2129, 2133, 15235));
+			#:: Ding!
+			quest::ding();
+			#:: Grant a small amount of experience
+			quest::exp("500");
+			#:: Create a hash for storing cash - 300 to 400cp
+			my %cash = plugin::RandomCash(300,400);
+			#:: Grant a random cash reward
+			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+			#:: Set factions
+			quest::faction(128, 10);	#:: + Green Blood Knights
+			quest::faction(46, 5);		#:: + Clurg
+			quest::faction(314, -1);	#:: - Storm Guard
+			quest::faction(292, -1);	#:: - Shadowknights of Night Keep
+		}
+		#:: Match if faction is Apprehensive or worse
+		else {
+			quest::say("Help Greenbloods you will. Give lizard tails to Grevak. Den maybe we trust.");
+			#:: Give back the two 13367 - Mystic Doll
+			quest::summonitem(13367);
+			quest::summonitem(13367);
+		}
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Shadowknight');
 	#:: Return unused items
