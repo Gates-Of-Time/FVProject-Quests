@@ -38,9 +38,9 @@ sub EVENT_ITEM {
 		quest::faction(292, -1);	#:: - Shadowknights of Night Keep
 	}
 	#:: Match two 13367 - Mystic Doll
-	elsif (plugin::takeItems(13367 => 2) {
+	elsif (plugin::takeItems(13367 => 2)) {
 		#:: Match if faction is Indifferent or better
-		if ($faction <=5) {
+		if ($faction <= 5) {
 			quest::say("A shaman doll! A great knight you some day become. A gift I give to help you on your way. The fight you will continue. All hail the Greenbloods!");
 			#:: Give a random reward: 17005 - Backpack, 2136 - Large Patchwork Boots, 2135 - Large Patchwork Pants, 2132 - Large Patchwork Sleeves, 2129 - Large Tattered Shoulderpads, 2133 - Large Tattered Wristbands, 15235 - Spell: Invisibility vs Undead
 			quest::summonitem(quest::ChooseRandom(17005, 2136, 2135, 2132, 2129, 2133, 15235));
