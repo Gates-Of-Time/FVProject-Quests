@@ -22,7 +22,5 @@ sub EVENT_SIGNAL {
 
 sub EVENT_ITEM {
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
-
-# Converted to Perl by SS 
