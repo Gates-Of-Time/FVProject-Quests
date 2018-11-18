@@ -12,8 +12,8 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match three gold pieces
-	if ($gold == 3) {
-		quest::say("Be healed!");
+	if (plugin::takeCoin(0, 0, 3, 0) {
+		quest::say("May your body and soul be rejuvenated.");
 		#:: Cast 17 - Light Healing
 		$npc->CastSpell(17,$userid);
 	}
@@ -35,10 +35,6 @@ sub EVENT_ITEM {
 		quest::faction(169,5);		#:: + Kazon Stormhammer
 		quest::faction(219,5);		#:: + Miners Guild 249
 	}
-	else {
-		#:: Return unused cash
-		quest::givecash($copper, $silver, $gold, $platinum);
-	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
