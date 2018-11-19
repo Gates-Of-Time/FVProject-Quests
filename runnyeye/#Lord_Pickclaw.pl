@@ -9,13 +9,3 @@ sub EVENT_SAY {
 		quest::say("We are the Pickclaw. Once we were of Runnyeye, but when Xorbb corrupted our king and took over the citadel, we fled, risking death in the caverns of the Serpent's Spine rather than submit to Xorbb's twisted rule. We grew strong in the tunnels, learning much about warfare and survival. We honed our skills against the masters of High Keep, and we learned much about the ways of magic from those we captured. But we never forgot where we had come from, and we vowed to one day return. When I saw that Xorbb had grown careless and complacent here, while our clan had grown strong, I took back our home. The name Runnyeye it shall keep, as a reminder of who we WERE, but all who I suffer to live here must prove themselves, as Pickclaws, for this is who we ARE!");
 	}
 }
-
-sub EVENT_COMBAT {
-	if ($combat_state == 1) {
-		quest::say("You invade my realm, and you kill my vassals! For that I shall strip your flesh, and wear it as tassels.");
-	}
-}
-
-sub EVENT_DEATH_COMPLETE {
-	quest::shout("I am dead, this is true. But at least my stupid rhymes are through!");
-}
