@@ -25,7 +25,8 @@ sub EVENT_SAY {
 	}
 	if ($text=~/zone/i) {
 		$ZoneID = quest::GetZoneID($zonesn);
-		quest::say("Today I find myself in $zonesn, with zone id $ZoneID.");
+		$ZoneLN = quest::GetZoneLongName($zonesn);
+		quest::say("Today I find myself in $zonesn, sometimes called $ZoneLN, with zone id $ZoneID.");
 	}
 }
 
