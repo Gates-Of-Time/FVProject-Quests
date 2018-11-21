@@ -23,6 +23,9 @@ sub EVENT_SAY {
 		$UnixTime = quest::GetTimeSeconds();
 		quest::say("The current time is $UnixTime seconds.");
 	}
+	if ($text=~/zone/i) {
+		quest::say("Today I find myself in $zonesn, with zone id quest::GetZoneID($zonesn)");
+	}
 }
 
 sub Train {
