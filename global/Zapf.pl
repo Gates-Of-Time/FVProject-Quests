@@ -19,9 +19,9 @@ sub EVENT_SAY {
 	if ($text=~/train/i) {
 		Train();
 	}
-	if ($text=~/timer/i) {
-		$MoveTimer = quest::GetTimeSeconds();
-		quest::say("I will move in $MoveTimer seconds");
+	if ($text=~/time/i) {
+		$UnixTime = quest::GetTimeSeconds();
+		quest::say("The current time is $UnixTime seconds.");
 	}
 }
 
