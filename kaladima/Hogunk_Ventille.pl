@@ -13,7 +13,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 12156 - Dwarf Head and a 5014 - Rusty Axe
 	if (plugin::takeItems(12156 => 1, 5014 => 1 )) {
-		quest::say("Well Done!");
+		quest::say("I shall display this in the guard hall. Let it be a warning to all those who dare to run from battle. As for you, that was splendid work, but next time, remember to wrap decapitated heads in something drip-proof. Those stains will never come out! Oh yes, and here is your reward.");
 		#:: Ding!
 		quest::ding();
 		#:: Grant a moderate amount of experience
@@ -33,5 +33,5 @@ sub EVENT_ITEM {
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Warrior');
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
