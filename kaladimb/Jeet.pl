@@ -134,7 +134,7 @@ sub EVENT_ITEM {
 	elsif (($faction <= 4) && (plugin::takeItems(12162 => 1))) {
 		quest::say("Good work miner. This is a fantastic haul!! Those wrinkly little gnomes don't know what is going on. Here is your cut. Now get back to work.");
 		#:: Give a random reward: 10017 - Turquoise, 10020 - Jasper, 10006 - Silver Earring, 10320 - Golden Ear Stud, 10019 - bloodstone 
-		quest::summonitem(quest::ChooseRandom(10017,10020,10006,10320,10019);
+		quest::summonitem(quest::ChooseRandom(10017,10020,10006,10320,10019));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a moderate amount of experience
