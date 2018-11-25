@@ -63,7 +63,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match if faction is Amiable or better, 300 gold pieces, and a 13316 - Ogre Head
-	if (($faction <4) && (plugin::takeItemsCoin(0,0,300,0, 13316 => 1))) {
+	if (($faction <= 4) && (plugin::takeItemsCoin(0,0,300,0, 13316 => 1))) {
 		quest::say("Very good!! You found him. His head shall bring us a great reward from the Stormguard. And as for you, here is your Mining Pick 628. Only a member of 628 can wield this fine weapon. We are the only ones who can wield it in such a way as to pierce our foes.");
 		#:: Give a 12161 - Mining Pick 628
 		quest::summonitem(12161);
