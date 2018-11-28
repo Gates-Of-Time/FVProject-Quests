@@ -33,7 +33,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match if faction is amiable or better and four 13931 - Runnyeye Warbeads
-	if (($faction <= 4) && (plugin::takeItems(13931 => 4)) {
+	if (($faction <= 4) && (plugin::takeItems(13931 => 4))) {
 		quest::say("You finally have proven yourself a warrior, a slow one!!  Take this reward and ask for nothing else.  You should be proud to defend Kaladim and expect no reward.");
 		#:: Reward a 2113 - Small Tattered Skullcap, 2114 - Small Tattered Mask, 2115 - Small Tattered Gorget, 2117 - Small Tattered Shoulderpads, 2119 - Small Tattered Belt, 2121 - Small Tattered Wristbands, 2122 - Small Tattered Gloves
 		quest::summonitem(quest::ChooseRandom(2113,2114,2115,2117,2119,2121,2122));
@@ -53,7 +53,7 @@ sub EVENT_ITEM {
 		quest::faction(57,- 15);	#:: - Craknek Warriors
 	}
 	#:: Match if faction is amiable or better and a 13741 - Ogre Head and 13740 - Ogre Head
-	elsif (($faction <= 4) && (plugin::takeItems(13741 => 1, 13740 => 1)) {
+	elsif (($faction <= 4) && (plugin::takeItems(13741 => 1, 13740 => 1))) {
 		quest::say("I underestimated you.  You are truly a great warrior.  I reward you with a piece of my own Bloodforge armor.  You would be fine Bloodforge Brigade material!  How would you like to [" . quest::saylink("take a little trip") . "] in the name of the Bloodforge Brigade?");
 		#:: Reward a 3090 - Bloodforge Helm, 3091 - Bloodforge Mail, 3092 - Bloodforge Armplates, 3093 - Bloodforge Bracers, 3094 - Bloodforge Gauntlets, 3095 - Bloodforge Legplates, 3096 - Bloodforge Boots
 		quest::summonitem(quest::ChooseRandom(3090,3090,3090,3090,3090,3090,3091,3092,3093,3094,3095,3096));
@@ -73,7 +73,7 @@ sub EVENT_ITEM {
 		quest::faction(57, -15);	#:: - Craknek Warriors
 	}
 	#:: Match if faction is amiable or better and a 12136 - Dwarf Head
-	elsif (($faction <= 4) && (plugin::takeItems(12136 => 1)) {
+	elsif (($faction <= 4) && (plugin::takeItems(12136 => 1))) {
 		quest::say("Ha!! His death brings me great happiness.  I owe you much.  Take this hammer.  It is the hammer of the Bloodforge Brigade.  May it serve you well.  Now go, so I can enjoy this moment of happiness alone.");
  		#:: Reward a 13314 - Bloodforge Hammer
 		quest::summonitem(13314);
