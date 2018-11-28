@@ -64,6 +64,7 @@ sub EVENT_ITEM {
 		quest::faction(48, 10);		#:: + Coalition of Tradefolk Underground
 		quest::faction(31, 10);		#:: + Carson McCabe
 	}
+	#:: Match if Indifferent or worse for Deeppockets and a 12192 - Froglok Leg
 	elsif (($faction >= 5) && (if (plugin::takeItems(12192 => 1 ))) {
 		quest::say("You are no ally of the Rivervale Deeppockets!! Leave at once!!");
 		#:: Give a 12192 - Froglok Leg
