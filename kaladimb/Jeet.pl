@@ -82,7 +82,7 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(13054 => 4)) {
 		quest::say("It's about time you managed to smash these four!! Here. You do good work. We could use someone like you to [" . quest::saylink("run to the gnome city") . "]."); 
 		#:: Give a random reward: 2117 - Small tattered shoulderpads, 2119 - Small tattered Belt, 2122 - Small tattered gloves, 2115 - Small Tattered Gorget, 2114 - Small Tattered Mask, 2113 - Small tattered skullcap, 2121 Small Tattered Wristbands
-		quest::summonitem(quest::ChooseRandom(2117,2119,2122,2115,2114,2113, 2121));
+		quest::summonitem(quest::ChooseRandom(2117,2119,2122,2115,2114,2113,2121));
 		#:: Ding!
 		quest::ding();
 		#:: Reward a moderate amount of experience
