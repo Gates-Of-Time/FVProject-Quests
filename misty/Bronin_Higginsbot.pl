@@ -9,10 +9,8 @@ sub EVENT_SAY {
 		#:: Match if Amiable or better for Deeppockets
 		if ($faction <= 4) {
 			quest::say("I have been tracked here by a bounty hunter named Slaythe. I have heard reports of his presence beyond the Great Wall. Please seek him out and bring me some body part of his as proof of his passing. Do this and the emerald shard is yours.");
-			$mob = $entity_list->GetMobByNpcTypeID(33146);
-         		if (!$mob) {
-				quest::spawn2(33146, 0, 0, 893.00, 664.00, -34.73, 0); # Spawn Slaythe
-			}
+			#:: Spawn a Misty Thicket >> Slaythe (33146)
+			quest::unique_spawn(33146, 0, 0, 893.00, 664.00, -34.73);
 		}
 		#:: Match if indifferent or better for Deeppockets
 		elsif ($faction <= 5) {
@@ -51,7 +49,7 @@ sub EVENT_ITEM {
 		quest::attack($name);
 	}
 	#:: Match if Amiable or better for Deeppockets and a 12192 - Froglok Leg
-	elsif (($faction <= 4) && (if plugin::takeItems(12192 => 1 )) {
+	elsif (($faction <= 4) && (plugin::takeItems(12192 => 1 ))) {
 		quest::say("So I see you have defeated Slaythe. I shall sleep much better now that he is gone. I placed the emerald shard in one of the Highkeep strongboxes in Highpass. Give the bank clerk's assistant, Kiolna this key. There is a [" . quest::saylink("second piece of the gem") . "] which I hid near Kelethin. You will need it to complete the gem. I hope it brings you better luck than I.");
 		#:: Give a 12193 - H.K. 106
 		quest::summonitem(12193);
@@ -65,9 +63,9 @@ sub EVENT_ITEM {
 		quest::faction(31, 10);		#:: + Carson McCabe
 	}
 	#:: Match if Indifferent or worse for Deeppockets and a 12192 - Froglok Leg
-	elsif (($faction >= 5) && if (plugin::takeItems(12192 => 1)) {
+	elsif (($faction > 4) && (plugin::takeItems(12192 => 1))) {
 		quest::say("You are no ally of the Rivervale Deeppockets!! Leave at once!!");
-		#:: Give a 12192 - Froglok Leg
+		#:: Give back a 12192 - Froglok Leg
 		quest::summonitem(12192);
 	}
 	#:: Return unused items
