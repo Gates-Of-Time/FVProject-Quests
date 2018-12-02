@@ -29,8 +29,8 @@ sub EVENT_ITEM {
 		quest::summonitem(2176); 
 		quest::say("Here is your Scarab breastplate!"); 
 	}
-	#:: Match a 13132 - Cracked Giant Scarab Carapace, two 13848 - Scarab Legs, and 17 gold
-	if (plugin::takeItemsCoin(0,0,17,0, 13132 => 1, 13848 => 2)) {
+	#:: Match a 13132 - Cracked Giant Scarab Carapace, two 13256 - Giant Scarab Legs, and 17 gold
+	if (plugin::takeItemsCoin(0,0,17,0, 13132 => 1, 13256 => 2)) {
 		#:: Give a 2177 - Small Scarab Boots
 		quest::summonitem(2177); 
 		quest::say("Here is your Scarab boots!"); 
