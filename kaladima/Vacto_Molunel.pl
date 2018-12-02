@@ -11,7 +11,7 @@ sub EVENT_SAY {
 	if ($text=~/scarab breastplates/i) {
 		quest::say("Ah..  A  scarab breastplate.. hmm.  Well, if you want to convince me to go though the trouble of crafting one of those, not only will you have to pay my fee of 23 gold pieces, you must provide me with a pristine giant scarab carapace.  I refuse to make a breastplate with cracked carapaces."); 
 	}
-	if ($text=~/boots/i) {
+	if ($text=~/scarab boots/i) {
 		quest::say("Ah..  Scarab Boots.. hmm.  Well, if you want to convince me to go though the trouble of crafting a pair of those, not only will you have to pay my fee of 17 gold pieces, you must provide me with a cracked giant scarab shell and 2 scarab legs."); 
 	}
 }
@@ -19,21 +19,45 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match two 13849 - Scarab Carapace and 5 gold
 	if (plugin::takeItemsCoin(0,0,5,0, 13849 => 2)) {
+		quest::say("Excellent. Here is your helm. Wear it with pride! And be sure to occasionally wipe out the insulating mucus that tends to build up on its underside. It will make your hair fall out. One more thing, would you be interested in [" . quest::saylink("scarab boots") . "] to match your helm?");
 		#:: Give a 2175 - Small Scarab Helm
 		quest::summonitem(2175); 
-		quest::say("Here is your Scarab Helm!"); 
-	}
-	#:: Match a 13133 - Pristine Giant Scarab Carapace and 23 gold
-	if (plugin::takeItemsCoin(0,0,23,0, 13133 => 1)) {
-		#:: Give a 2176 - Small Scarab Breastplate
-		quest::summonitem(2176); 
-		quest::say("Here is your Scarab breastplate!"); 
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(314, 2);		#:: + Storm Guard
+		quest::faction(169, 1);		#:: + Kazon Stormhammer
+		quest::faction(219, 1);		#:: + Miners Guild 249
+		quest::faction(215, 1);		#:: + Merchants of Kaladim
+		quest::faction(57, -1);		#:: - Craknek Warriors
 	}
 	#:: Match a 13132 - Cracked Giant Scarab Carapace, two 13256 - Giant Scarab Legs, and 17 gold
-	if (plugin::takeItemsCoin(0,0,17,0, 13132 => 1, 13256 => 2)) {
+	elsif (plugin::takeItemsCoin(0,0,17,0, 13132 => 1, 13256 => 2)) {
+		quest::say("Very good! Let me see here. Thread the legs around like this and... There you go. Wear them with pride!");
 		#:: Give a 2177 - Small Scarab Boots
-		quest::summonitem(2177); 
-		quest::say("Here is your Scarab boots!"); 
+		quest::summonitem(2177);
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(314, 3);		#:: + Storm Guard
+		quest::faction(169, 1);		#:: + Kazon Stormhammer
+		quest::faction(219, 1);		#:: + Miners Guild 249
+		quest::faction(215, 1);		#:: + Merchants of Kaladim
+		quest::faction(57, -1);		#:: - Craknek Warriors
+	}
+	#:: Match a 13133 - Pristine Giant Scarab Carapace and 23 gold
+	elsif (plugin::takeItemsCoin(0,0,23,0, 13133 => 1)) {
+		quest::say("If I do say so myself, this is one of the finest breastplates in all of Norrath. I am truly a master at my craft. You might want to wipe out some of the excess scarab goo before wearing it, though.");
+		#:: Give a 2176 - Small Scarab Breastplate
+		quest::summonitem(2176); 
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(314, 5);		#:: + Storm Guard
+		quest::faction(169, 1);		#:: + Kazon Stormhammer
+		quest::faction(219, 1);		#:: + Miners Guild 249
+		quest::faction(215, 1);		#:: + Merchants of Kaladim
+		quest::faction(57, -1);		#:: - Craknek Warriors
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
