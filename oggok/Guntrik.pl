@@ -61,7 +61,7 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(57, 15);	#:: + Craknek Warrior
+		quest::faction(57, 15);		#:: + Craknek Warrior
 		quest::faction(46, 2);		#:: + Clurg
 		quest::faction(128, -2);	#:: - Green Blood Knights
 	} 
