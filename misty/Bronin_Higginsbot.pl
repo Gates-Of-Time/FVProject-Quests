@@ -51,7 +51,7 @@ sub EVENT_ITEM {
 		quest::attack($name);
 	}
 	#:: Match if Amiable or better for Deeppockets and a 12192 - Froglok Leg
-	elsif (($faction <= 4) && (if (plugin::takeItems(12192 => 1 ))) {
+	elsif (($faction <= 4) && (if plugin::takeItems(12192 => 1 )) {
 		quest::say("So I see you have defeated Slaythe. I shall sleep much better now that he is gone. I placed the emerald shard in one of the Highkeep strongboxes in Highpass. Give the bank clerk's assistant, Kiolna this key. There is a [" . quest::saylink("second piece of the gem") . "] which I hid near Kelethin. You will need it to complete the gem. I hope it brings you better luck than I.");
 		#:: Give a 12193 - H.K. 106
 		quest::summonitem(12193);
@@ -65,7 +65,7 @@ sub EVENT_ITEM {
 		quest::faction(31, 10);		#:: + Carson McCabe
 	}
 	#:: Match if Indifferent or worse for Deeppockets and a 12192 - Froglok Leg
-	elsif (($faction >= 5) && (if (plugin::takeItems(12192 => 1 ))) {
+	elsif (($faction >= 5) && if (plugin::takeItems(12192 => 1)) {
 		quest::say("You are no ally of the Rivervale Deeppockets!! Leave at once!!");
 		#:: Give a 12192 - Froglok Leg
 		quest::summonitem(12192);
