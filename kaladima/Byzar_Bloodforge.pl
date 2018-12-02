@@ -52,6 +52,17 @@ sub EVENT_ITEM {
 		quest::faction(215, 15);	#:: + Merchants Of Kaladim
 		quest::faction(57,- 15);	#:: - Craknek Warriors
 	}
+	#:: Match if faction is Indifferent or worse and four 13931 - Runnyeye Warbeads
+	elsif (($faction > 4) && (plugin::takeItems(13931 => 4))) {
+		quest::say("Your shifty eyes tell me that you are no ally of the Stormguard.");
+		#:: Return a 13931 - Runnyeye Warbeads
+		quest::summonitem(13931);
+		#:: Return a 13931 - Runnyeye Warbeads
+		quest::summonitem(13931);
+		#:: Return a 13931 - Runnyeye Warbeads
+		quest::summonitem(13931);
+		#:: Return a 13931 - Runnyeye Warbeads
+	}
 	#:: Match if faction is amiable or better and a 13741 - Ogre Head and 13740 - Ogre Head
 	elsif (($faction <= 4) && (plugin::takeItems(13741 => 1, 13740 => 1))) {
 		quest::say("I underestimated you.  You are truly a great warrior.  I reward you with a piece of my own Bloodforge armor.  You would be fine Bloodforge Brigade material!  How would you like to [" . quest::saylink("take a little trip") . "] in the name of the Bloodforge Brigade?");
@@ -72,6 +83,14 @@ sub EVENT_ITEM {
 		quest::faction(215, 15);	#:: + Merchants Of Kaladim
 		quest::faction(57, -15);	#:: - Craknek Warriors
 	}
+	#:: Match if faction is Indifferent or worse and a 13741 - Ogre Head and 13740 - Ogre Head
+	elsif (($faction > 4) && (plugin::takeItems(13741 => 1, 13740 => 1))) {
+		quest::say("Your shifty eyes tell me that you are no ally of the Stormguard.");
+		#:: Return a 13741 - Ogre Head
+		quest::summonitem(13741);
+		#:: Return a 13740 - Ogre Head
+		quest::summonitem(13740);
+	}
 	#:: Match if faction is amiable or better and a 12136 - Dwarf Head
 	elsif (($faction <= 4) && (plugin::takeItems(12136 => 1))) {
 		quest::say("Ha!! His death brings me great happiness.  I owe you much.  Take this hammer.  It is the hammer of the Bloodforge Brigade.  May it serve you well.  Now go, so I can enjoy this moment of happiness alone.");
@@ -91,6 +110,12 @@ sub EVENT_ITEM {
 		quest::faction(219, 15);	#:: + Miners Guild 249
 		quest::faction(215, 15);	#:: + Merchants Of Kaladim
 		quest::faction(57, -15);	#:: - Craknek Warriors   
+	}
+	#:: Match if faction is Indifferent or worse and a 12136 - Dwarf Head
+	elsif (($faction > 4) && (plugin::takeItems(12136 => 1))) {
+		quest::say("Your shifty eyes tell me that you are no ally of the Stormguard.");
+ 		#:: Return a 12136 - Dwarf Head
+		quest::summonitem(12136);
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Warrior');
 	#:: Return unused items
