@@ -62,6 +62,7 @@ sub EVENT_ITEM {
 		#:: Return a 13931 - Runnyeye Warbeads
 		quest::summonitem(13931);
 		#:: Return a 13931 - Runnyeye Warbeads
+		quest::summonitem(13931);
 	}
 	#:: Match if faction is amiable or better and a 13741 - Ogre Head and 13740 - Ogre Head
 	elsif (($faction <= 4) && (plugin::takeItems(13741 => 1, 13740 => 1))) {
