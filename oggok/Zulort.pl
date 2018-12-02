@@ -61,7 +61,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match a 18788 - Tattered Note
 	elsif (plugin::takeItems(18788 => 1)) {
-		quest::say("Take, take.. You now Shaman of War.. Zulort make you majik, too.  When you [gonna help] you tell Zulort. You return to me and when you stronger, I teach you many things I know, including how to start working in the various [" . quest::saylink("trades") . "].");
+		quest::say("Take, take.. You now Shaman of War.. Zulort make you majik, too.  When you [" . quest::saylink("gonna help") . "] you tell Zulort. You return to me and when you stronger, I teach you many things I know, including how to start working in the various [" . quest::saylink("trades") . "].");
 		#:: Give a 13526 - Dirty Patched Fur Tunic*
 		quest::summonitem(13526);
 		#:: Ding!
