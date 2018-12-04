@@ -11,12 +11,20 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Match 13410 - Lizard Meat
-	if (plugin::check_handin(\%itemcount, 13410 => 4)) {
-		quest::say("Yous really did it. Mebbe you tuff Craknek after all.");
+	#:: Match four 13410 - Lizard Meat
+	if (plugin::takeItems(13410 => 4)) {
+		quest::say("No, I donut tink so. Who gived you? Bah, me most tuffest Craknek, but me no lier. Me help you be tuffer Craknek. Who gived you dese? Maybe you finded dead lizards, yes, dat it. Bah, taking dis and kills more tings. You learned much, com see me, I teaches you best Craknek ways. Keep eye on dem Greenbloods, dey nasty and not so tuff.");
+		#:: Give a 5025 - Rusty Two Handed Battle Axe
+		quest::summonitem(5025);
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(100);
 		#:: Set factions
-		quest::faction(46, 15);		#:: Clurg +15
-		quest::faction(57, 15);		#:: Craknek Warriors +15
+		quest::faction(46, 5);		#:: + Clurg
+		quest::faction(57, 1);		#:: + Craknek Warriors
+		quest::faction(128, -1);	#:: - Green Blood Knights
 	}
-	plugin::return_items(\%itemcount);
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
