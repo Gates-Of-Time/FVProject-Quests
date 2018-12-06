@@ -1,6 +1,6 @@
 sub EVENT_SAY {
   if ($text=~/hail/i) {
-    quest::say("Me Uglan. Mighty ogre. Member of Crakneks. We crush for dark elves. Do you [like dark elves] or they be [mean] to you?");
+    quest::say("Me Uglan. Mighty ogre. Member of Crakneks. We crush for dark elves. Do you like dark elves or they be mean to you?");
   }
 }
 
