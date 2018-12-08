@@ -12,7 +12,7 @@ sub EVENT_SAY {
 	}
 	if ($text=~/Emissary Glib/i) {
 		#:: dialogue made up.
-		quest::say("Run out to the Bouncer's keep near the entrance to Oggok--he was last seen there.")
+		quest::say("Run out to the Bouncer's keep near the entrance to Oggok--he was last seen there.");
 		#:: Spawn a Oggok >> Emissary_Glib (49127)
 		quest::unique_spawn(49127,0,0,383,-205.3,66.1);
 	}
