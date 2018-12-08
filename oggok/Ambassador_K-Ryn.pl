@@ -1,5 +1,5 @@
 sub EVENT_SAY {
-	if ($text =~ /hail/i ) {
+	if ($text=~/hail/i ) {
 		quest::say("Get your wretched hide away from me! Who knows what vile stench you have been rolling around in?! Do not speak with me unless you have some glimmer of intelligence!");
 	}
 }
