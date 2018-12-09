@@ -50,11 +50,11 @@ sub EVENT_ITEM {
 		#:: Grant a moderate amount of experience
 		quest::exp(3000);
 		#:: Set factions
-		quest::faction(46, 10);		#:: + Clurg
-		quest::faction(169, -30); 	#:: - Kazon Stormhammer
-		quest::faction(128, 10);	#:: + Green Blood Knights
-		quest::faction(57, 10);		#:: + Craknek Warriors
-		quest::faction(232, 10);	#:: + Oggok Guards
+		quest::faction(46, 50);		#:: + Clurg
+		quest::faction(169, -50); 	#:: - Kazon Stormhammer
+		quest::faction(128, 50);	#:: + Green Blood Knights
+		quest::faction(57, 50);		#:: + Craknek Warriors
+		quest::faction(232, 50);	#:: + Oggok Guards
 	}
 	#:: Match if faction is Indifferent or worse and a 13379 - Barkeep Compendium
 	if ($faction > 4 && plugin::takeItems(13379 => 1)) {
