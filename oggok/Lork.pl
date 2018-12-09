@@ -14,18 +14,8 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Match a 1717 - Sealed Letter
-	if (plugin::takeItems(1717 => 1)) {
-		quest::say("Arg! Dem damned Orcs and Dark Elves! To da hells with dem! I be wantin revenge! Bring me da hearts of da dark elf ammbassador's K'ryn who can be locat'd in da shamen tun'ls, and D'vinn who can be located in da crushbone with da orc emperor.");
-	}
-	#:: Match a 13227 - Black Heart
-	elsif (plugin::takeItems(13227 => 1)) {
-		quest::say("Ahahaha! Da basterds! Here be a reward for ye!");
-		#:: Give a 13355 - Crude Stein
-		quest::summonitem(13355);
-	}
 	#:: Match a 13356 - Ogre Arm
-	elsif (plugin::takeItems(13356 => 1)) {
+	if (plugin::takeItems(13356 => 1)) {
 		quest::say("Ahhh!! Boohoohoo. Nork!! That you arm. Me will take care of you now. Thank you for killing gator. You must be strong. Now you help Crakneks. We hear.. ohh, poor Nork, we hear trouble begins. Find ogre warrior [" . quest::saylink("Uglan") . "]. Give him this. It broken. He know where you from. Go. Nork.. Poor Nork.");
 		#:: Give a 13357 - Cracked Stein
 		quest::summonitem(13357);
