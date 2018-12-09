@@ -18,3 +18,7 @@ sub EVENT_ITEM {
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
+
+sub EVENT_DEATH {
+	quest::say("Start digging your grave. The Indigo Brotherhood shall find you.");
+}
