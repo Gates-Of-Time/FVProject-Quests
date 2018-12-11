@@ -52,7 +52,7 @@ sub EVENT_ITEM {
 		quest::faction(133, 15);	#:: + Guardians of the Vale
 	}
 	#:: Match a 13045 - Berries, two 13782 - Ruined Wolf Pelt, and a 13758 - Black Wolf Skin
-	elsif (plugin::takeItems(13045 => 1, 13782 => 1, 13782 => 1, 13758 => 1)) {
+	elsif (plugin::takeItems(13045 => 1, 13782 => 2, 13758 => 1)) {
 		quest::say("Hey, great! You found the materials! We'll get to work right away. If you find any more, please come by again. Here's a little something for your troubles, friend.");
 		#:: Give a random reward: 15014 - Spell: Strike, 15201 - Spell: Flash of Light, 15207 - Spell: Divine Aura, 15208 - Spell: Lull, 16303 - Spell: Gate
 		quest::summonitem(quest::ChooseRandom(15014,15201,15207,15208,16303));
