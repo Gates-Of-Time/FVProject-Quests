@@ -7,7 +7,7 @@ sub EVENT_SPAWN {
 
 sub EVENT_ENTER {
 	#:: Match a 18731 - Tattered Note
-	if (plugin::check_hasitem($client, 18713)) { 
+	if (plugin::check_hasitem($client, 18731)) { 
 		$client->Message(15,"A jovial yet commanding halfling speaks to you. 'Why hello there. friend! I am Beek Guinders, your new Guild Master. Read the note in your inventory and when you are ready to begin your training, hand it to me!'");
 	}
 }
