@@ -15,7 +15,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match ten gold pieces
-	if (plugin::takeCoin(0, 0, 10, 0) {
+	if (plugin::takeCoin(0, 0, 10, 0)) {
 		quest::say("May the swift and silent spirit of Fizzlethorpe Bristlebane smile upon your frail soul.");
 		#:: Cast 213 - Cure Disease
 		$npc->CastSpell(213,$userid);
