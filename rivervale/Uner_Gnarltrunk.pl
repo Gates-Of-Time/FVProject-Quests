@@ -1,6 +1,6 @@
 sub EVENT_SAY { 
 	if ($text=~/hail/i) {
-		quest::say(("Hello there, $name. Please watch where you are stepping when you're out in the field.  Nothing is more frustrating than having some fine jumjum ruined by our own careless feet. That reminds me, [" . quest::saylink("Deputy Tagil") . "] still owes us for that jumjum he stomped on the other day!");
+		quest::say("Hello there, $name. Please watch where you are stepping when you're out in the field.  Nothing is more frustrating than having some fine jumjum ruined by our own careless feet. That reminds me, [" . quest::saylink("Deputy Tagil") . "] still owes us for that jumjum he stomped on the other day!");
 	}
 	elsif ($text=~/deputy tagil/i) {
 		quest::say("Deputy Tagil is a fine young halfling who serves the vale well. But the other day, chasing that dirty Nillipuss, he trampled some fresh Jumjum.  He promised to make amends but it must have slipped his mind.  Please take this note to him as a friendly reminder.");
