@@ -38,7 +38,7 @@ sub EVENT_ITEM {
 		quest::ding();
 	}
 	#:: Match four 13974 - Jumjum Stalk
-	elsif (plugin::takeItems(13974 == 4)) {
+	elsif (plugin::takeItems(13974 => 4)) {
 		quest::say("Excellent!!  You must have taught ol' Nillipuss a great deal!  But he never seems to learn..  Oh well.  The Stormreapers and all of Rivervale owe you a debt of gratitude.  Please accept this token of our appreciation.");
 		#:: Give a random reward:  10308 - Anti-Poison Amulet, 8303 - Arrow of Contagion, 8304 - Arrow of Frost, 10302 - Earring of Disease Reflection, 10303 - Earring of Fire Reflection, 10304 - Earring of Frost Reflection, 10305 - Earring of Magic Reflection
 		#:: 10306 - Earring of Poison Reflection, 10309 - Eye of Disvan, 17302 - Pierce's Pouch of Storing, 12001 - Rod of Identification, 10301 - Runners Ring, 17301 - Travelers Pack, 17300 - Travelers Pouch, 12002 - Wand of Frost Bolts
@@ -58,7 +58,7 @@ sub EVENT_ITEM {
 		quest::faction(347, -1);	#:: - Unkempt Druids
 	}
 	#:: Match three 13974 - Jumjum Stalk
-	elsif (plugin::takeItems(13974 == 3)) {
+	elsif (plugin::takeItems(13974 => 3)) {
 		quest::say("Oh good! I see you have taugh that nasty Nillipuss a thing or two! Good. But it seems to me that he has stolen more jumjum than this. Perhaps he needs another lesson?");
 		#:: Give a 13974 - Jumjum Stalk
 		quest::summonitem(13974);
@@ -68,7 +68,7 @@ sub EVENT_ITEM {
 		quest::summonitem(13974);
 	}
 	#:: Match two 13974 - Jumjum Stalk
-	elsif (plugin::takeItems(13974 == 2)) {
+	elsif (plugin::takeItems(13974 => 2)) {
 		quest::say("Oh good! I see you have taugh that nasty Nillipuss a thing or two! Good. But it seems to me that he has stolen more jumjum than this. Perhaps he needs another lesson?");
 		#:: Give a 13974 - Jumjum Stalk
 		quest::summonitem(13974);
@@ -76,7 +76,7 @@ sub EVENT_ITEM {
 		quest::summonitem(13974);
 	}
 	#:: Match two 13974 - Jumjum Stalk
-	elsif (plugin::takeItems(13974 == 1)) {
+	elsif (plugin::takeItems(13974 => 1)) {
 		quest::say("Oh good! I see you have taugh that nasty Nillipuss a thing or two! Good. But it seems to me that he has stolen more jumjum than this. Perhaps he needs another lesson?");
 		#:: Give a 13974 - Jumjum Stalk
 		quest::summonitem(13974);
