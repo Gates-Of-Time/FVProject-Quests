@@ -5,7 +5,7 @@ sub EVENT_SAY {
 	elsif ($text=~/^karana$/i) {
 		quest::say("Karana is known as the Rainkeeper. It is through His will that our [" . quest::saylink("crops") . "] and our children grow big and healthy. He watches over us and protects us, calling down the fury of a tempest on those who wish harm upon His followers.");
 	}
-	elsif ($text=~/train to karana's wisdom/i) {
+	elsif ($text=~/trail to karana's wisdom/i) {
 		quest::say("Good. First you should learn that Karana's work is just that.. work. Karana provides us with the tools but it is by the sweat of our brows that we prosper. Common sense and hard work are two things that are highly prized by our people. Time for you to sweat, young one. Take this crate of carrots over to Blinza Toepopal in the Fool's Gold. They need our finest carrots for Mayor Gubbin's stew. When you return I will teach you a lesson of the Rainkeeper.");
 		#:: Give a 13971 - Crate of Rotten Carrots
 		quest::summonitem(13971);
