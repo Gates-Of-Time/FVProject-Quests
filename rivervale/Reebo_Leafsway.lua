@@ -35,7 +35,7 @@ sub EVENT_ITEM {
 		quest::say("These carrots are rotten. They were rotten when I gave them to you. Why would you waste time and energy on such a fool's errand? Because I asked you to? Many, even those you trust will ask you to do things which you should not. Use the common sense that Karana has blessed you with to know which tasks can benefit our people and which could harm them. Learn this lesson well. You will need it if you plan to adventure beyond the vale. Now take these fresh carrots to Blinza and apologize for your error. You may keep the donation she gives you as payment.");
 		#:: Give a 13958 - Crate of Carrots
 		quest::summonitem(13958);
-		e.other:Ding();
+		quest::ding();
 	}
 	#:: Match four 13974 - Jumjum Stalk
 	elsif (plugin::takeItems(13974 == 4)) {
