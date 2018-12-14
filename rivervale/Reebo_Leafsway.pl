@@ -24,7 +24,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 13971 - Crate of Rotten Carrots
 	if (plugin::takeItems(13971 => 1)) {
-		quet::say("Very good. Very good indeed. Karana does not need the blind obedience that so many deities require. Trust your instincts, they are more often right than not. Here, take this to Blinza. Hurry, she is expecting them. You may keep the donation she gives you in return.");
+		quest::say("Very good. Very good indeed. Karana does not need the blind obedience that so many deities require. Trust your instincts, they are more often right than not. Here, take this to Blinza. Hurry, she is expecting them. You may keep the donation she gives you in return.");
 		#:: Give a 13957 - Crate of Fine Carrots
 		quest::summonitem(13957);
 		#:: Ding!
