@@ -16,7 +16,7 @@ sub EVENT_TIMER {
 }
 
 sub EVENT_PROXIMITY_SAY {
-	if ($text=~/jillian/i) {	
+	if ($text=~/jillin/i) {	
 		quest::say("Jillin is my courier. He was supposed to take this pot of [" . quest::saylink("stew") . "] over to Deputy Lowmot in Guardian Stronghold. It is just about ready and Mayor Gubbin hates cold stew!");
 	}
 	elsif ($text=~/stew/i) {
