@@ -28,7 +28,7 @@ sub EVENT_PROXIMITY_SAY {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hello, $name.  Welcome to the Fool's Gold!  Cards are upstairs. drinks are down here.  Have fun!");
+		quest::say("Hello, $name.  Welcome to the Fool's Gold!  Cards are upstairs, drinks are down here.  Have fun!");
 	}
 }
 
