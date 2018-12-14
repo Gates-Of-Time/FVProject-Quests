@@ -73,7 +73,7 @@ sub EVENT_ITEM {
 	elsif (plugin::takeItems(13971 => 1)) {
 		quest::say("What are these?!  I am trying to make stew for the mayor and you bring me ROTTEN CARROTS?!  Have you no sense??  Take these back to Reebo.");
 		#:: Give a 13972 - Crate of Rotten Carrots
-		quest::summonitems(13972);
+		quest::summonitem(13972);
 		#:: Set factions				
 		quest::faction(77, -4);		#:: + Deeppockets
 		quest::faction(218, -4);	#:: + Merchants of Rivervale
