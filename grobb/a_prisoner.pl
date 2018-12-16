@@ -19,7 +19,7 @@ sub EVENT_ITEM {
 		quest::exp(500);
 	}
 	#:: Match a 13376 - Ochre Liquid
-	elsif (plugin::takeItems(13376
+	elsif (plugin::takeItems(13376 => 1)) {
 		quest::say("Grooak.. You have done much to help me. This will come in handy soon. Thank you. Here is Marda's information. Take it to her. They must know. Farewell.");
 		#:: Give a random reward: 18884 - Tattered Note or 18885 - Tattered Cloth Note
 		quest::summonitem(quest::ChooseRandom(18884,18885));
