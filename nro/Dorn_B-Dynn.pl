@@ -12,15 +12,15 @@ sub EVENT_SAY {
 		quest::say("I do not know if I could trust you. You certainly do not look as though you are from Grobb, although your stench does hint of that place. If you are truly sent by Zimbittle, what is the password?");
 	}	
 	if ($text=~/Mukk/i) {
-		# compares faction to is Amiable or Better to Indigo Brotherhood
+		#:: Match if faction is Amiable or better
 		if ($faction <= 4 ) {
 			quest::say("So you were sent by Zimbittle. Take this note to Kraagia of Da Bashers in Grobb. Do not lose the note. If it were to fall into the wrong hands of [" . quest::saylink("Goonda") . "], this whole plan could be disrupted. Now, leave, I can no longer tolerate you foul stench!");
 			#:: 18886 - A Sealed Letter (Letter from The Dead)
 			quest::summonitem(18886);
 		}
 		elsif ($faction > 4 ) {
-		#:: Made up text here - need real text if found.
-        quest::say("You may have been sent by Zimbittle, but I still don't trust you and can't abide by your foul stench. Don't return until you have proven allegiance to the Brotherhood ...sniff... and taken a bath!")
+			#:: Made up text here - need real text if found.
+			quest::say("You may have been sent by Zimbittle, but I still don't trust you and can't abide by your foul stench. Don't return until you have proven allegiance to the Brotherhood ...sniff... and taken a bath!")
 		}
 	}
 	if ($text=~/Goonda/i) {
