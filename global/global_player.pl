@@ -61,7 +61,7 @@ sub EVENT_CONNECT {
 	else {
 		quest::gmsay ("-----------------------------------------------------------------------------------------------", 14, 1);
 		quest::gmsay ("[GM:] New Connection [IP:".ConvertIP($client->GetIP())."]:", 11, 1);
-		if($uguild_id > 0) {
+		if ($uguild_id > 0) {
 			my $guildname = quest::getguildnamebyid($uguild_id);
 			quest::gmsay("($ulevel $class) $name ($race) <$guildname> ZONE: $zonesn", 11, 1);
 		}
@@ -78,7 +78,6 @@ sub EVENT_SAY {
 	if ($status >= 80) {
 		plugin::Doors_Manipulation_EVENT_SAY();
 		if ($text=~/#linked/i) {
-			quest::gmsay("someone used the linked command");
 			if ($client->GetTarget()->IsClient()) {
 				$client->Message(11, "-------------------------------------------------------------------------");
 				$client->Message(11, "[GM:] Showing Linked Accounts for Targetted Player");
@@ -117,4 +116,19 @@ sub EVENT_SAY {
 			}
 		}
 	}
+}
+
+sub ConvertIP {
+	my $longip = $_[0];
+	$firstoctet = $longip % 256;
+	$longip -= $firstoctet;
+	$longip /= 256;
+	$secondoctet = $longip % 256;
+	$longip -= $secondoctet;
+	$longip /= 256;
+	$thirdoctet = $longip % 256;
+	$longip -= $thirdoctet;
+	$longip /= 256;
+	my $convertedip = "$firstoctet.$secondoctet.$thirdoctet.$longip";
+	return $convertedip;
 }
