@@ -78,6 +78,7 @@ sub EVENT_SAY {
 	if ($status >= 80) {
 		plugin::Doors_Manipulation_EVENT_SAY();
 		if ($text=~/#linked/i) {
+			quest::gmsay("someone used the linked command");
 			if ($client->GetTarget()->IsClient()) {
 				$client->Message(11, "-------------------------------------------------------------------------");
 				$client->Message(11, "[GM:] Showing Linked Accounts for Targetted Player");
