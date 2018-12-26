@@ -115,6 +115,72 @@ sub EVENT_SAY {
 				}
 			}
 		}
+		elsif ($text=~/#gmwho/i) {
+			my %classhash = (
+				1 	=> "Warrior",
+				2 	=> "Cleric",
+				3 	=> "Paladin",
+				4 	=> "Ranger",
+				5 	=> "Shadow Knight",
+				6 	=> "Druid",
+				7 	=> "Monk",
+				8 	=> "Bard",
+				9 	=> "Rogue",
+				10	=> "Shaman",
+				11	=> "Necromancer",
+				12	=> "Wizard",
+				13	=> "Magician",
+				14	=> "Enchanter",
+				15	=> "Beastlord",
+				16	=> "Berserker",
+			);
+			my %racehash = (
+				1	=>	"Human",
+				2	=>	"Babarian",
+				3	=>	"Erudite",
+				4	=>	"Wood Elf",
+				5	=>	"High Elf",
+				6	=>	"Dark Elf",
+				7	=>	"Half Elf",
+				8	=>	"Dwarf",
+				9	=>	"Troll",
+				10	=>	"Ogre",
+				11	=>	"Halfling",
+				12	=>	"Gnome",
+				128	=>	"Iksar",
+				130	=>	"Vah Shir",
+				330	=>	"Froglok",
+			);
+			my %clientversionhash = (
+				1	=>	"P99",
+				2	=>	"Tit",
+				4	=>	"SoF",
+				8	=>	"SoD",
+				16	=>	"UF",
+				32	=>	"RoF",
+				64	=>	"RoF2",
+			);
+			$client->Message (11, "----------------------------------------");
+			$client->Message (11, "[GM:] Players in Zone:");
+			$client->Message (11, "----------------------------------------");
+			my @clientsarray = $entity_list->GetClientList();
+			foreach my $singleclient (@clientsarray) {
+				my $clientguildname;
+				if (quest::getguildnamebyid($singleclient->GuildID())) {
+					$clientguildname = "".quest::getguildnamebyid($singleclient->GuildID())."";
+				} 
+				else { 
+					$clientguildname = "NG"; 
+				}
+				my $wholist =	"[".$singleclient->GetLevel()." ".plugin::customclass($singleclient->GetClass(),$singleclient->GetDeity()).
+								"] ".$singleclient->GetName()." (".$classhash{$singleclient->GetClass()}.") (".
+								$racehash{$singleclient->GetRace()}.") <".$clientguildname."> [IP: ".ConvertIP($singleclient->GetIP())."] ".
+								"[Client: ".$clientversionhash{$client->GetClientVersionBit()}."]";
+				$client->Message (11, "".$wholist."");
+			}
+			$client->Message (11, "-------------------------------------------------------------------");
+			$client->Message (11, "There are ".scalar (@clientsarray)." players in zone!");
+		}
 	}
 }
 
