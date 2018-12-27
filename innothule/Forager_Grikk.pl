@@ -15,7 +15,7 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(106,20); #:: + Frogloks of Guk
+		quest::faction(106,20);		#:: + Frogloks of Guk
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
