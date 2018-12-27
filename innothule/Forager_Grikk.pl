@@ -9,7 +9,7 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(13375 => 1 )) {
 		quest::say("Grrrikk.. This is Groak's vial!! He must be in danger. Here. Return this liquid to him. Be quick!");
 		#:: Give item 13376 - Ochre Liquid
-		quest::summonitem(133376);
+		quest::summonitem(13376);
 		#:: Give a small amount of xp
 		quest::exp(500);
 		#:: Ding!
