@@ -24,6 +24,10 @@ sub EVENT_ITEM {
 		quest::faction(208, 1);		#:: + Mayor Gubbin
 		quest::faction(218, 1);		#:: + Merchants of Rivervale
 		quest::faction(347, -1);	#:: - Unkempt Druids
+		#:: Create a hash for storing cash - 100 to 500cp
+		my %cash = plugin::RandomCash(100,500);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
