@@ -5,7 +5,7 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	if (plugin::takeItems(13959 => 1) {
+	if (plugin::takeItems(13959 => 1)) {
 		quest::say("Oh good!  Hey.  You are not Jillin..  Helping out Blinza huh?  She is quite a woman..  Yes indeed.  Quite a woman..  ah..  Oh sorry.  Here you go.  Thanks again.  Mayor Gubbin will be pleased.");
 		#:: Ding!
 		quest::ding();
