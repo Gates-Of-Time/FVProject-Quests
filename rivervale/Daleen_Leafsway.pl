@@ -1,5 +1,9 @@
-#:: Set up a 50 unit distance
 sub EVENT_SPAWN {
+	#:: Create a proximity, 100 units across
+	$x = $npc->GetX();
+	$y = $npc->GetY();
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Create a timer that loops every 10 minutes
 	quest::set_timer("blurt", 600);
 }
 
@@ -9,14 +13,14 @@ sub EVENT_TIMER {
 		#:: Stop the timer "blurt"
 		quest::stoptimer("blurt");
 		quest::say("Oh Dear.. I can't believe I forgot.. He must be [" . quest::saylink("starving") . "]!");
-		#:: reset blurt timer
+		#:: Create a timer that loops every 10 minutes
 		quest::set_timer("blurt", 600);
 	}
 }
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings. $Name!  Welcome to Tagglefoot's Farm.  We grow nothing but the finest vegetables in our field.  We even manage to harvest the mystical jumjum stalk in our fields.  Karana has blessed us indeed, $Name.");
+		quest::say("Greetings. $name!  Welcome to Tagglefoot's Farm.  We grow nothing but the finest vegetables in our field.  We even manage to harvest the mystical jumjum stalk in our fields.  Karana has blessed us indeed, $name.");
 	}
 	if ($text=~/starving/i) {
 		quest::say("Deputy Eigon! I forgot! I was supposed to bring him some turnips to eat while he is on patrol! Oh... He asked so nicely, too. I feel bad that I forgot. If only someone would take these [" . quest::saylink("turnips") . "] to the Deputy.");
