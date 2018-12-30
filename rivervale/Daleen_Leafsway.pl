@@ -4,7 +4,7 @@ sub EVENT_SPAWN {
 	$y = $npc->GetY();
 	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
 	#:: Create a timer that loops every 10 minutes
-	quest::settimer("blurt", 600);
+	quest::settimer("blurt", 6);
 	quest::say("I set a blurt timer!");
 	#:: Enable proximity say
 	quest::enable_proximity_say();
@@ -18,7 +18,7 @@ sub EVENT_TIMER {
 		quest::stoptimer("blurt");
 		quest::say("Oh Dear.. I can't believe I forgot.. He must be [" . quest::saylink("starving") . "]!");
 		#:: Create a timer that loops every 10 minutes
-		quest::settimer("blurt", 600);
+		quest::settimer("blurt", 6);
 	}
 }
 
