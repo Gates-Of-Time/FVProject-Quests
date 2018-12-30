@@ -13,6 +13,7 @@ sub EVENT_SAY {
 		#:: Summon 18159 - Bardic Letter (Freeport) 
 		quest::summonitem(18159);
 	}	
+}
 	
 sub EVENT_ITEM {
 	#:: Return unused items
