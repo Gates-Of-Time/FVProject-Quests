@@ -19,6 +19,10 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Grant a small amount of experience
 		quest::exp(100);
+		#:: Create a hash for storing cash - 100 to 500cp
+		my %cash = plugin::RandomCash(100,500);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
 		quest::faction(316, 1);		#:: + Storm Reapers
 		quest::faction(208, 1);		#:: + Mayor Gubbin
