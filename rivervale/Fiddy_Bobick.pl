@@ -1,4 +1,3 @@
-
 sub EVENT_WAYPOINT_ARRIVE {
 	if (wp == 6) {
 		quest::say("When will Wickystick send help?!");
