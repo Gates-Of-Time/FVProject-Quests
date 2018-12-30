@@ -5,11 +5,13 @@ sub EVENT_SPAWN {
 	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
 	#:: Create a timer that loops every 10 minutes
 	quest::settimer("blurt", 600);
+	quest::say("I set a blurt timer!");
 	#:: Enable proximity say
 	quest::enable_proximity_say();
 }
 
 sub EVENT_TIMER {
+	quest::say("Event Timer has triggered!");
 	#:: Catch the "blurt" timer
 	if ($timer eq "blurt") {
 		#:: Stop the timer "blurt"
