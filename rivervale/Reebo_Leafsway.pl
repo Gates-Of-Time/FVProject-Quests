@@ -14,10 +14,10 @@ sub EVENT_SAY {
 		quest::say("The crops we grow here are mostly carrots, lettuce and squash. We also are the only place on all of Norrath where the soil can support the mystical Jumjum Stalk.");
 	}
 	elsif ($text=~/nillipuss/i) {		
-		quest::say("Nillipuss is a brownie that lives in the area who often steals and destroys our JumJum Stalk. Will you teach him a [" . quest::saylink("lesson") . "]?");
+		quest::say("Nillipuss? Oh that dirty brownie keeps stealing our jumjum for his own greedy uses. We certainly would not mind if someone taught him a painful [" . quest::saylink("lesson") . "]?");
 	}
 	elsif ($text=~/lesson/i) {
-		quest::say("Good. Bring me back some of the JumJum he has stolen and I will reward you for your trouble.");
+		quest::say("He needs to be taught not to steal our jumjum! If you find some jumjum on him, I would appreciate it if you would return it to me.");
 	}
 }
 
