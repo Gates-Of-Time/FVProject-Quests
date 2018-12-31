@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		qust::say("Welcome! Welcome to the Church o' the Tribunal! Do ye require healing or are ye [" . quest::saylink("new to the Shamans o' Justice") . "], then, eh?");
+		quest::say("Welcome! Welcome to the Church o' the Tribunal! Do ye require healing or are ye [" . quest::saylink("new to the Shamans o' Justice") . "], then, eh?");
 	}
 	elsif ($text=~/new to the Shamans/i) {
 		quest::say("Then I welcome ye into our noble order. Ye'll serve us well or spend an eternity in the dungeons o' the Tribunal. Are ye willing to [" . quest::saylink("contribute to our church") . "] or did ye just come to meditate within our walls?");
