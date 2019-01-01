@@ -9,7 +9,7 @@ sub EVENT_TIMER {
 	#:: Match if timer Nilly loops
 	if ($timer eq "nilly") {
 		#:: Create a scalar variable to store a random number from 1 - 2
-		my $radom_say = int(rand(2)) + 1;
+		my $random_say = int(rand(2)) + 1;
 		#:: Match if 1
 		if ($random_say == 1) {
 			quest::say("Nillipuss is my name. Stealing jumjum is my game. Think you can catch me? Let's see if you can! I'll always run faster than you ever ran.");
