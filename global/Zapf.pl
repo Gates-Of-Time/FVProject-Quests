@@ -1545,18 +1545,22 @@ sub EVENT_ITEM {
 	#:: Match 1 copper
 	if (plugin::takeCoin(1, 0, 0, 0)) {
 		$change_amount = -500;
+		quest::say("Now your faction will be adjusted by $change_amount points.");
 	}
 	#:: Match 1 silver
 	if (plugin::takeCoin(0, 1, 0, 0)) {
 		$change_amount = -100;
+		quest::say("Now your faction will be adjusted by $change_amount points.");
 	}
 	#:: Match 1 gold
 	if (plugin::takeCoin(0, 0, 1, 0)) {
 		$change_amount = 100;
+		quest::say("Now your faction will be adjusted by $change_amount points.");
 	}
 	#:: Match 1 platinum
 	if (plugin::takeCoin(0, 0, 0, 1)) {
 		$change_amount = 500;
+		quest::say("Now your faction will be adjusted by $change_amount points.");
 	}
 }
 
