@@ -7,14 +7,14 @@ sub EVENT_SPAWN {
 
 sub EVENT_TIMER {
 	#:: Create a scalar variable to store a random number from 1 - 2
-	my $random_say = int(rand(2));
+	my $random_say = int(rand(2)) + 1;
 	#:: Match if timer Nilly loops
 	if ($timer eq "nilly") {
-		#:: Match if 0
-		if ($random_say == 0) {
+		#:: Match if 1
+		if ($random_say == 1) {
 			quest::say("Nillipuss is my name. Stealing jumjum is my game. Think you can catch me? Let's see if you can! I'll always run faster than you ever ran.");
 		}
-		#:: Match if 1
+		#:: Match if 2
 		else {
 			quest::say("Look what I've found! What a great find! It used to be yours, but now it is mine!");
 		}
