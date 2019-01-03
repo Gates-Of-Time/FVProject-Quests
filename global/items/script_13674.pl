@@ -24,5 +24,6 @@ sub EVENT_ITEM_CLICK_CAST {
 	}
 	else {
 		$client->Message(13, "Item recast time not yet met.");
+		quest::summonitem($itemid);
 	}
 }
