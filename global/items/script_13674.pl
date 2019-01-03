@@ -5,8 +5,6 @@ sub EVENT_ITEM_CLICK_CAST {
 			$client->CastSpell(1824, 0, $slotid, 0, 0);
 			#:: Delete from inventory a 11668 - Vibrating Gauntlets of Infuse
 			$client->NukeItem(11668);
-			my $EndTime = plugin::GetEndTime("S5");
-			$client->SetEntityVariable("vib_time", $EndTime);
 			#:: Summon a 11669 - Vibrating Hammer of Infuse
 			quest::summonitem(11669);
 		}
@@ -15,8 +13,6 @@ sub EVENT_ITEM_CLICK_CAST {
 			$client->CastSpell(1823, 0, $slotid, 0, 0);
 			#:: Delete from inventory a 11669 - Vibrating Hammer of Infuse
 			$client->NukeItem(11669);
-			my $EndTime = plugin::GetEndTime("S5");
-			$client->SetEntityVariable("vib_time", $EndTime);
 			#:: Summon a 11668 - Vibrating Gauntlets of Infuse
 			quest::summonitem(11668);
 		}
