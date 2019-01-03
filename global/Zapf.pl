@@ -21,9 +21,6 @@ sub EVENT_SAY {
 	if ($text=~/train/i) {
 		Train();
 	}
-	if ($text=~/strength/i) {
-		quest::incstat(0, 10);
-	}
 	if ($text=~/faction/i) {
 		quest::say("I can adjust your faction.  Hand me 1 copper to lose 500, 1 silver to lose 100, 1 gold to gain 100, and 1 platinum to gain 500--then speak the faction number.");
 	}
