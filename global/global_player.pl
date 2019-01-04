@@ -75,6 +75,26 @@ sub EVENT_CONNECT {
 
 
 sub EVENT_SAY {
+	if ($text=~/hail/i && $faction <= 4 && $combat == 0 ) {
+		my %classInsults = (
+			"Enchanter" => [ "Your spells are as bad as your breath!", "Learn all the magic you want, not even a Charm spell could get YOU laid.", "I can see why you chose to be an enchanter--you wouldn't make a single copper as a prostitute." ],
+			"Necromancer" => [ "So are you the victim of some cruel curse or have you always looked like that?", 'zombie groper', "I'd like to say I'm glad you’re here; I'd like to say it." ],
+			"Paladin" => [ "Hey, it's Sir Clanksalot!", "Are you compensating for something with that big weapon?", "What are you, Paladin of the god of ugliness?" ],
+			"Ranger" => [ "It is good to see a willing sacrifice walking freely.", "I am sure you'll be fine for ressurection practice.", "Someday you'll find yourself, and will you be disappointed."],
+			"Rogue" => [ "Oh look--your weapons are so tiny!", "Oh, I'm sorry, with all your backstabbing I mistook you for a rogue.", "Why don't you hide and sneak away from me?" ],
+			"Shadowknight" => [ "That's a pretty big weapon! Are you compensating for something?", "Oh, that's your face? I mistook it for a gangrenous wound.", "Were you born or defecated?" ],
+			"Warrior" => [ "I see that your reservoir of courage is fed by the tributary running down your leg!", "I think you owe the blacksmith who made your weapon an apology!", "I wish we were better strangers." ],
+			"Wizard" => [ "Your spells are as bad as your breath!", "Someone should have given you a few more intelligence points!", "Someday you'll go far, and I hope you stay there." ]
+		);
+		my $insult;
+		if (exists($classInsults{$class}[0])) {
+			$insult = $classInsults{$class}[int(rand 3)];
+		}
+		else {
+			$insult = "Your mother is so fat she absorbed a gelatinous cube";
+		}
+		quest::say($insult);
+	}	
 	if ($status >= 80) {
 		plugin::Doors_Manipulation_EVENT_SAY();
 		if ($text=~/#linked/i) {
