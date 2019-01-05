@@ -90,3 +90,24 @@ sub EVENT_WAYPOINT_ARRIVE {
 		quest::emote("whistles a happy hafling tune.");
 	}
 }
+
+sub EVENT_SIGNAL { 
+#::Receive Signal 1 from Shakey Scarecrow - Rivervale
+if ($signal == 1) {
+quest::emote("Reebo Leafsway shakes his head sadly. 'Poor old  [" . quest::saylink("Shakey") . "] just isn't what he used to be.' ");
+}
+
+sub EVENT_PROXIMITY_SAY {
+	if ($text=~/Shakey/i) {	
+		quest::say("Shakey is our protector and friend. He is just getting old. Losing his [" . quest::saylink("stuffing") . "]. His head is getting very cracked and dry as well.");
+	}
+	elsif ($text=~/stuffing/i) {
+		quest::say("The hay he requires is difficult to obtain. It must have been harvested from the Plains of Karana, then cursed by a high priest of the Faceless, [" . quest::saylink("Cazic-Thule") . "]. Finally, you must cast the hay and a flask of blessed Oil of Life into an armorer's forge. Only then will the hay be ready. We Stormreapers will reward you greatly if you could accomplish this task. Remember, you must give the scarecrow stuffing to Shakey only after it has been properly prepared.");
+	}
+	elsif ($text=~/Cazic-Thule/i) {
+		quest::say("Cazic-Thule is the dark deity of fear. He is worshiped by many evil beings. There is believed to be a ruined temple dedicated to him deep in the [" . quest::saylink("Feerrott") . "]. That would be a good place to look for one of his high priests.");
+	}
+	elsif ($text=~/Feerrott/i) {
+		quest::say("The Feerrott is a vast rain forest in southwestern Antonica. It is home to many lizardman tribes");
+	}
+}
