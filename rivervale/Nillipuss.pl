@@ -19,4 +19,10 @@ sub EVENT_TIMER {
 			quest::say("Look what I've found! What a great find! It used to be yours, but now it is mine!");
 		}
 	}
+	#:: Stop the original timer from looping
+	quest::stoptimer("nilly");
+	#:: Create a scalar variable to store a random number from 1 - 750
+	my $random = int(rand(750)) + 1;
+	#:: Set a timer "nilly" that loops every 1 - 750 seconds at random
+	quest::settimer("nilly",$random);
 }
