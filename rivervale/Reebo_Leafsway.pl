@@ -1,3 +1,12 @@
+sub EVENT_SPAWN {
+	#:: Create a proximity, 200 units across
+	$x = $npc->GetX();
+	$y = $npc->GetY();
+	quest::set_proximity($x - 100, $x + 100, $y - 100, $y + 100);
+	#:: Enable proximity Say
+	quest::enable_proximity_say();
+}
+
 sub EVENT_SAY { 
 	if ($text=~/hail/i) {
 		quest::say("Greetings and salutations, $name! My name is Reebo Leafsway, loyal Druid of [" . quest::saylink("Karana") . "]. I am in charge of helping young druids who wish to get started down the [" . quest::saylink("trail to Karana's wisdom") . "]. I also do my share of tending the [" . quest::saylink("crops") . "].");
@@ -35,6 +44,7 @@ sub EVENT_ITEM {
 		quest::say("These carrots are rotten. They were rotten when I gave them to you. Why would you waste time and energy on such a fool's errand? Because I asked you to? Many, even those you trust will ask you to do things which you should not. Use the common sense that Karana has blessed you with to know which tasks can benefit our people and which could harm them. Learn this lesson well. You will need it if you plan to adventure beyond the vale. Now take these fresh carrots to Blinza and apologize for your error. You may keep the donation she gives you as payment.");
 		#:: Give a 13958 - Crate of Carrots
 		quest::summonitem(13958);
+		#:: Ding!
 		quest::ding();
 	}
 	#:: Match four 13974 - Jumjum Stalk
@@ -92,9 +102,9 @@ sub EVENT_WAYPOINT_ARRIVE {
 }
 
 sub EVENT_SIGNAL { 
-#::Receive Signal 1 from Shakey Scarecrow - Rivervale
-if ($signal == 1) {
-quest::emote("Reebo Leafsway shakes his head sadly. 'Poor old  [" . quest::saylink("Shakey") . "] just isn't what he used to be.' ");
+	#::Receive Signal 1 from Shakey Scarecrow - Rivervale
+	if ($signal == 1) {
+		quest::emote("Reebo Leafsway shakes his head sadly. 'Poor old  [" . quest::saylink("Shakey") . "] just isn't what he used to be.' ");
 }
 
 sub EVENT_PROXIMITY_SAY {
@@ -108,6 +118,6 @@ sub EVENT_PROXIMITY_SAY {
 		quest::say("Cazic-Thule is the dark deity of fear. He is worshiped by many evil beings. There is believed to be a ruined temple dedicated to him deep in the [" . quest::saylink("Feerrott") . "]. That would be a good place to look for one of his high priests.");
 	}
 	elsif ($text=~/Feerrott/i) {
-		quest::say("The Feerrott is a vast rain forest in southwestern Antonica. It is home to many lizardman tribes");
+		quest::say("The Feerrott is a vast rain forest in southwestern Antonica. It is home to many lizardman tribes.");
 	}
 }
