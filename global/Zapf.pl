@@ -4101,5 +4101,5 @@ sub Train {
 		$client->SetSkill( $skill, $maxSkill );
 	}
 	# scribe all spells for current level
-	quest::scribespells( $ulevel);
+	quest::scribespells($ulevel);
 }
