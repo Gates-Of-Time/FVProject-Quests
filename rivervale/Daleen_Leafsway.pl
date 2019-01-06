@@ -2,11 +2,12 @@ sub EVENT_SPAWN {
 	#:: Create a proximity, 100 units across
 	$x = $npc->GetX();
 	$y = $npc->GetY();
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	$z = $npc->GetZ();
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 1);
 	#:: Create a timer that loops every 5 minutes
 	quest::settimer("blurt", 300);
 	#:: Enable proximity say
-	quest::enable_proximity_say();
+	#quest::enable_proximity_say();
 }
 
 sub EVENT_TIMER {
