@@ -7,6 +7,10 @@ sub EVENT_SPAWN {
 	quest::enable_proximity_say();
 }
 
+sub EVENT_ENTER {
+	quest::say("It's not my proximity.");
+}
+
 sub EVENT_ITEM {
 	#:: Match a 13971 - Crate of Rotten Carrots
 	if (plugin::takeItems(13971 => 1)) {
@@ -78,24 +82,47 @@ sub EVENT_WAYPOINT_ARRIVE {
 	}
 }
 
-sub EVENT_SIGNAL { 
-	#::Receive Signal 1 from Shakey Scarecrow - Rivervale
+sub EVENT_SIGNAL {
+	#:: Receive Signal 1 from Shakey Scarecrow - Rivervale
 	if ($signal == 1) {
 		quest::emote("Reebo Leafsway shakes his head sadly. 'Poor old  [" . quest::saylink("Shakey") . "] just isn't what he used to be.' ");
 	}
 }
 
+sub EVENT_SAY {
+	if ($text=~/hail/i) {
+		quest::say("Greetings and salutations, $name! My name is Reebo Leafsway, loyal Druid of [" . quest::saylink("Karana") . "]. I am in charge of helping young druids who wish to get started down the [" . quest::saylink("trail to Karana's wisdom") . "]. I also do my share of tending the [" . quest::saylink("crops") . "].");
+	}
+	if ($text=~/^karana$/i) {
+		quest::say("Karana is known as the Rainkeeper. It is through His will that our [" . quest::saylink("crops") . "] and our children grow big and healthy. He watches over us and protects us, calling down the fury of a tempest on those who wish harm upon His followers.");
+	}
+	if ($text=~/trail to karana's wisdom/i) {
+		quest::say("Good. First you should learn that Karana's work is just that.. work. Karana provides us with the tools but it is by the sweat of our brows that we prosper. Common sense and hard work are two things that are highly prized by our people. Time for you to sweat, young one. Take this crate of carrots over to Blinza Toepopal in the Fool's Gold. They need our finest carrots for Mayor Gubbin's stew. When you return I will teach you a lesson of the Rainkeeper.");
+		#:: Give a 13971 - Crate of Rotten Carrots
+		quest::summonitem(13971);
+	}
+	if ($text=~/crops/i) {
+		quest::say("The crops we grow here are mostly carrots, lettuce and squash. We also are the only place on all of Norrath where the soil can support the mystical Jumjum Stalk.");
+	}
+	if ($text=~/nillipuss/i) {
+		quest::say("Nillipuss? Oh that dirty brownie keeps stealing our jumjum for his own greedy uses. We certainly would not mind if someone taught him a painful [" . quest::saylink("lesson") . "]?");
+	}
+	if ($text=~/lesson/i) {
+		quest::say("He needs to be taught not to steal our jumjum! If you find some jumjum on him, I would appreciate it if you would return it to me.");
+	}
+}
+
 sub EVENT_PROXIMITY_SAY {
-	if ($text=~/Shakey/i) {	
+	if ($text=~/Shakey/i) {
 		quest::say("Shakey is our protector and friend. He is just getting old. Losing his [" . quest::saylink("stuffing") . "]. His head is getting very cracked and dry as well.");
 	}
-	elsif ($text=~/stuffing/i) {
+	if ($text=~/stuffing/i) {
 		quest::say("The hay he requires is difficult to obtain. It must have been harvested from the Plains of Karana, then cursed by a high priest of the Faceless, [" . quest::saylink("Cazic-Thule") . "]. Finally, you must cast the hay and a flask of blessed Oil of Life into an armorer's forge. Only then will the hay be ready. We Stormreapers will reward you greatly if you could accomplish this task. Remember, you must give the scarecrow stuffing to Shakey only after it has been properly prepared.");
 	}
-	elsif ($text=~/Cazic-Thule/i) {
+	if ($text=~/Cazic-Thule/i) {
 		quest::say("Cazic-Thule is the dark deity of fear. He is worshiped by many evil beings. There is believed to be a ruined temple dedicated to him deep in the [" . quest::saylink("Feerrott") . "]. That would be a good place to look for one of his high priests.");
 	}
-	elsif ($text=~/Feerrott/i) {
+	if ($text=~/Feerrott/i) {
 		quest::say("The Feerrott is a vast rain forest in southwestern Antonica. It is home to many lizardman tribes.");
 	}
 }
