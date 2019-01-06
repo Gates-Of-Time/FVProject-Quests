@@ -12,16 +12,19 @@ sub EVENT_ITEM {
 		quest::emote("shakes his head around and beams a smile at you");
 		#:: Give item 13980 - Wee Harvester or 14031 - Belt of the River
 		quest::summonitem(quest::ChooseRandom(13980, 13980, 14031));
-		#:: Give a small amount of xp
-		quest::exp(500);
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
+		#:: Give a small amount of xp
+		quest::exp(500);
+		#:: Create a hash for storing cash - 4500 to 4600cp
+		my %cash = plugin::RandomCash(4500,4600);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Set factions
 		quest::faction(316, 10);	#:: + Storm Reapers
 		quest::faction(208, 1);		#:: + Mayor Gubbin
 		quest::faction(218, 1);		#:: + Merchants of Rivervale
 		quest::faction(347, -1);	#:: - Unkempt Druids
-		quest::givecash(1,1,5,4);	#:: Give a small amount of cash copper - plat
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
