@@ -1,13 +1,13 @@
 sub EVENT_SPAWN {
 	#:: Set a timer for 10 minutes
 	quest::settimer("jillin", 600);
-	#:: Set the proximity bounds around the NPC on spawn, 50 units across
+    	#:: Get current location
 	$x = $npc->GetX();
 	$y = $npc->GetY();
-	quest::set_proximity($x-25, $x+25, $y-25, $y+25);
-	quest::enable_proximity_say();
+	$z = $npc->GetZ();
+	#:: Create a proximity, 50 units across, 100 units tall, and enable proximity say
+	quest::set_proximity($x - 25, $x + 25, $y - 25, $y + 25, $z - 25, $z + 25, 1);
 }
-
 
 sub EVENT_TIMER {
 	if ($timer eq "jillin") {
