@@ -105,6 +105,7 @@ sub EVENT_SIGNAL {
 	#::Receive Signal 1 from Shakey Scarecrow - Rivervale
 	if ($signal == 1) {
 		quest::emote("Reebo Leafsway shakes his head sadly. 'Poor old  [" . quest::saylink("Shakey") . "] just isn't what he used to be.' ");
+	}
 }
 
 sub EVENT_PROXIMITY_SAY {
