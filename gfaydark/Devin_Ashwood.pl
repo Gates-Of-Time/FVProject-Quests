@@ -1,9 +1,10 @@
 sub EVENT_SPAWN {
-	#:: Set the proximity bounds around the NPC on spawn, 30 units across
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	quest::set_proximity($x-15,$x+15,$y-15,$y+15);
-	quest::enable_proximity_say();
+    #:: Get current location
+    $x = $npc->GetX();
+    $y = $npc->GetY();
+    $z = $npc->GetZ();
+    #:: Create a proximity, 30 units across, 30 units tall, and enable proximity say
+    quest::set_proximity($x - 15, $x + 15, $y - 15, $y + 15, $z - 15, $z + 15, 1);
 }
 
 sub EVENT_SAY { 
