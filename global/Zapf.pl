@@ -1,4 +1,4 @@
-my $change_amount = 0;
+$change_amount = 0;
 
 sub EVENT_SPAWN {
 	my $min = 1;
