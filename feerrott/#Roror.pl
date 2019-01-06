@@ -29,23 +29,18 @@ sub EVENT_SAY {
 }
 							
 sub EVENT_ITEM {
-	#:: Create a scalar variable for storing money
-	my $cash = 0;
-	$cash = ($platinum * 1000) + ($gold * 100) + ($silver * 10) + $copper;
-	#:: Match 13990 - Bale of Hay and 66gp
-	if ($cash >= 6600) {
-		if (plugin::check_handin(\%itemcount, 13990 => 1)) {
-			quest::say("'Whatsssss thisssss? You sssseek my blessssssssing? Heh heh heh... Very well... CAZIC-THULE! Take this fruit of Karana into horror'sss dark embrace. Fear and death made manifesssssst. A harvesssst of terror! Here, take your gift of blood and sssstraw. Use its dark powersssss in the name of the Fear Lord!' ");
-			#:: Give a 14320 - Sack of Cursed Hay
-			quest::summonitem(14320);
-			quest::exp(300);
-			quest::ding();
-			#:: Set Faction
-			quest::faction(18,10);		#:: +Beta Neutral
-		}
+	#:: Match 66gp and a 13990 - Bale of Hay
+	if (plugin::takeItemsCoin(0,0,66,0, 13990 => 1)) {
+		quest::say("'Whatsssss thisssss? You sssseek my blessssssssing? Heh heh heh... Very well... CAZIC-THULE! Take this fruit of Karana into horror'sss dark embrace. Fear and death made manifesssssst. A harvesssst of terror! Here, take your gift of blood and sssstraw. Use its dark powersssss in the name of the Fear Lord!' ");
+		#:: Give a 14320 - Sack of Cursed Hay
+		quest::summonitem(14320);
+		#:: Ding!
+		quest::ding();
+		#:: Give a small amount of experience
+		quest::exp(300);
+		#:: Set Faction
+		quest::faction(18, 10);		#:: +Beta Neutral
 	}
-	else {
-		quest::givecash($copper, $silver, $gold, $platinum);
-	}
-	plugin::return_items(\%itemcount);
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
