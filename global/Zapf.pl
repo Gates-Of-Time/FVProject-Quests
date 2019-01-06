@@ -4093,13 +4093,15 @@ sub EVENT_ITEM {
 
 sub Train {
 	$client->Message( 15, "Your experiences across the realm have infused you with increased power and knowledge..." );
-	# set all available skills to maximum for race/class at current level
+	#:: Set all available skills to maximum for race/class at current level
 	foreach my $skill ( 0 .. 74 ) {
 		next unless $client->CanHaveSkill($skill);
 		my $maxSkill = $client->MaxSkill( $skill, $client->GetClass(), $ulevel );
 		next unless $maxSkill > $client->GetRawSkill($skill);
 		$client->SetSkill( $skill, $maxSkill );
 	}
-	# scribe all spells for current level
-	quest::scribespells($ulevel);
+	#:: Clear out all old spells just in case
+	quest::unscribespells();
+	#:: Scribe all spells up to current level
+	quest::scribespells($ulevel,1);
 }
