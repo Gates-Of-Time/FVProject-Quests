@@ -4066,6 +4066,9 @@ sub EVENT_SAY {
 			}
 		}
 	}
+	else {
+		quest::say("You lack sufficient status to use these commands");
+	}
 }
 
 sub EVENT_ITEM {
