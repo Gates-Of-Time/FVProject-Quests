@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hello. $name.  I am Lanena Wickystick. marshal of all Vale concerns.  If there are any troubles brewing in our fine town which concern the Guardians of the Vale, please inform me.  You must be a [" . quest::saylink("new deputy") . "] or are you an [" . quest::saylink("outsider") . "]?");
+		quest::say("Hello, $name.  I am Lanena Wickystick. marshal of all Vale concerns.  If there are any troubles brewing in our fine town which concern the Guardians of the Vale, please inform me.  You must be a [" . quest::saylink("new deputy") . "] or are you an [" . quest::saylink("outsider") . "]?");
 	}
 	if ($text=~/new deputy/i) {
 		#:: Match if faction is better than indifferent
@@ -36,7 +36,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match a 13870 - Piranha Tooth
-	if (plugin::takeItems(13087 => 1)) {
+	if (plugin::takeItems(13870 => 1)) {
 		#:: Match if faction is better than indifferent
 		if ($faction < 5) {
 			quest::say("What was I thinking?!! Piranha are coming downstream and eating our supply of fish! We have never had a problem like this!!  Where are these little beasts coming from?  For now we must collect more. Take this bag. Collect enough teeth to fill the bag. Don't worry, if it takes a while I shall reward you with the [" . quest::saylink("Rantho Rapier") . "].  We will need to examine the teeth.");
@@ -46,7 +46,7 @@ sub EVENT_ITEM {
 			quest::ding();
 			#:: Grant a small amount of experience
 			quest::exp(200);
-			#:: Create a hash for storing cash - 9 to 11cp
+			#:: Create a hash for storing cash - 9 to 10cp
 			my %cash = plugin::RandomCash(9,10);
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
@@ -56,12 +56,11 @@ sub EVENT_ITEM {
 			quest::faction(316,10); 	#:: + Storm Reapers
 			quest::faction(218,10); 	#:: + Merchants of Rivervale
 			quest::faction(88,-10); 	#:: - Dreadguard Outer
-			quest::givecash(0,1,0,0);	#:: Give a small amount of cash copper - plat
 		}
 		else {
 			quest::say("You are not yet in good standing with the Guardians of the Vale. Continue with your good work and then we may speak.");
-			#:: Give a 13870 - Piranha Tooth
-			quest::summonitem(13087);
+			#:: Give back a 13870 - Piranha Tooth
+			quest::summonitem(13870);
 		}
 	}		
 	#:: Match a 12155 - Bag of Piranha Teeth
