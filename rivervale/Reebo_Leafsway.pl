@@ -3,8 +3,8 @@ sub EVENT_SPAWN {
 	$x = $npc->GetX();
 	$y = $npc->GetY();
 	$z = $npc->GetZ();
-	#:: Create a proximity, 100 units across, 100 units tall, and enable proximity say
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 1);
+	#:: Create a proximity, 200 units across, 200 units tall, and enable proximity say
+	quest::set_proximity($x - 100, $x + 100, $y - 100, $y + 100, $z - 100, $z + 100, 1);
 }
 
 sub EVENT_SAY {
