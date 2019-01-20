@@ -7,7 +7,7 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/true organizer/i) {
 		quest::say("Captain Hazran is the commander of the Freeport Militia. Lucan has no time to waste on relegating duties. Hazran is the one who keeps these brutes together as a militia. Stop him and maybe the militia will collapse. Find a way to return his head to me. That would surely bring great thanks from this temple.");
-	}	
+	}
 	elsif ($text=~/devoted to truth/i) {
 		#:: Match if faction is better than indifferent
 		if ($faction < 5) {
@@ -19,7 +19,7 @@ sub EVENT_SAY {
 			quest::say("Work on the ways of valor before we discuss such things. You are on the righteous path of the Truthbringer, but there is more work to do.");
 		}
 	}
-		elsif ($text=~/crush the freeport militia/i) {
+	elsif ($text=~/crush the freeport militia/i) {
 		#:: Match if faction is better than indifferent
 		if ($faction < 5) {
 			quest::say("Our goal is to end their rule. To retake our city in the name of Marr. Let it begin with their blood!! Slay the militia!! They have no souls and hail from the back alleys and prison cells of darkness and depravity. Thieves and murderers, nothing more. Slay any you can and, as proof, return their militia helms to me. We shall see what bounty you deserve.");
@@ -34,31 +34,31 @@ sub EVENT_ITEM {
 	#:: Turn in for 13921 - Damaged Militia Helm
 	if (plugin::takeItems(13921 => 1 )) {
 		quest::say("Bless you, my child. Marr is grateful, as are we. Here is our thanks. Let it bring you greater strength to defeat the Militia. Go and continue the crusade. Soon you will be strong enough to slay the [" . quest::saylink("true organizer") . "].");
-		#:: Give a small amount of xp
-		quest::exp(5000);
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
-		quest::faction(258,3); 		#:: + Priests of Marr
-		quest::faction(48,-10); 	#:: - Coalition of Tradefolk Underground
-		quest::faction(184,3); 		#:: + Knights of Truth
-		quest::faction(311,10); 	#:: + Steel Warriors
+		#:: Give a large amount of experience
+		quest::exp(5000);
+		#:: Set factions
+		quest::faction(258, 3); 		#:: + Priests of Marr
+		quest::faction(48, -10); 		#:: - Coalition of Tradefolk Underground
+		quest::faction(184, 3); 		#:: + Knights of Truth
+		quest::faction(311, 10); 		#:: + Steel Warriors
 	}
 	#:: Turn in for 12142 - Human Head
 	if (plugin::takeItems(12142 => 1 )) {
 		quest::say("We heard of your assault. We even attempted to slay Lucan. Alas, we failed. You have done your part and as such have earned our thanks. Beware of the Freeport Militia. They will no doubt be on the lookout for you. May Marr protect you. Perhaps you should speak with Valeron Dushire, paladin of the Knights of Truth. He seeks other to slay the fallen knight.");
 		#:: Choose random item 15560 - Spell: Furor, 15230 - Spell: Root, 15219 - Spell: Center, 15229 - Spell: Fear, 15222 - Spell: Invigor, 15012 - Spell: Healing
 		quest::summonitem(quest::ChooseRandom(15560,15230,15219,15229,15222,15012));
-		#:: Give a small amount of xp
-		quest::exp(5000);
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
-		quest::faction(258,3); 		#:: + Priests of Marr
-		quest::faction(48,-10); 	#:: - Coalition of Tradefolk Underground
-		quest::faction(184,3); 		#:: + Knights of Truth
-		quest::faction(311,10); 	#:: + Steel Warriors
-		quest::faction(105,-10); 	#:: - Freeport Militia
+		#:: Give a large amount of experience
+		quest::exp(5000);
+		#:: Set factions
+		quest::faction(258, 3); 		#:: + Priests of Marr
+		quest::faction(48, -10); 		#:: - Coalition of Tradefolk Underground
+		quest::faction(184, 3); 		#:: + Knights of Truth
+		quest::faction(311, 10);	 	#:: + Steel Warriors
+		quest::faction(105, -10); 		#:: - Freeport Militia
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
