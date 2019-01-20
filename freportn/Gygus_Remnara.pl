@@ -10,15 +10,15 @@ sub EVENT_ITEM {
 		quest::say("Welcome to the Sentries of Passion. We are the protectors of the Temple of Marr. Wear our tunic with pride, young knight! Find your wisdom within these walls and in the words of our priests. And remember to aid all who follow the twin deities, Mithaniel and Erollisi Marr.");
 		#:: Give item 13556 - White and Blue Tunic*
 		quest::summonitem(13556);
-		#:: Give a small amount of xp
-		quest::exp(100);
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
-		quest::faction(258,100); 	#:: + Priests of Marr
-		quest::faction(105,-10); 	#:: - The Freeport Militia
-		quest::faction(184,15); 	#:: + Knights of Truth
+		#:: Give a small amount of xp
+		quest::exp(100);
+		#:: Set factions
+		quest::faction(258, 100); 	#:: + Priests of Marr
+		quest::faction(105, -10); 	#:: - The Freeport Militia
+		quest::faction(184, 15); 	#:: + Knights of Truth
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
-}	
+}
