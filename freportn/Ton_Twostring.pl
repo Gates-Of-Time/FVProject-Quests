@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail. $name - Are you [" . quest::saylink("interested") . "] in helping the League of Antonican Bards by delivering some [" . quest::saylink("mail") . "]?");
+		quest::say("Hail, $name--are you [" . quest::saylink("interested") . "] in helping the League of Antonican Bards by delivering some [" . quest::saylink("mail") . "]?");
 	}
 	elsif ($text=~/mail/i) {
 		quest::say("The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more distant offices.  Are you [" . quest::saylink("interested") . "]?");
@@ -27,25 +27,25 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Turn in for 18164 or 18166 - both identify as Pouch of Mail (Freeport)
-	if (plugin::check_handin(\%itemcount, 18164 => 1 || 18166 => 1 )) {
+	if (plugin::takeItems(18164 => 1 || 18166 => 1 )) {
 		quest::say("More mail - you have done us a noteworthy service!  Please take this gold for your troubles.  If you are interested in more work, just ask me.");
-		#:: Give a small amount of xp
-		quest::exp(100);
-		#:: Ding!
-		quest::ding();
 		#:: Give item 13556 - White and Blue Tunic*
 		quest::summonitem(13556);
-		#:: Set faction
-		quest::faction(192,10); 		#:: + League of Antonican Bards
-		quest::faction(184,15); 		#:: + Knights of Truth
-		quest::faction(135,-10); 		#:: + Guard of Qeynos
-		quest::faction(273,-30); 		#:: - Ring of Scale
-		quest::faction(207,-30); 		#:: - Mayong Mistmoore
+		#:: Ding!
+		quest::ding();
+		#:: Give a small amount of experience
+		quest::exp(100);
 		#:: Create a hash for storing cash - 900 to 2000cp
 		my %cash = plugin::RandomCash(900,2000);
-			#:: Grant a random cash reward
-			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Set factions
+		quest::faction(192, 10);		#:: + League of Antonican Bards
+		quest::faction(184, 15);		#:: + Knights of Truth
+		quest::faction(135, -10);		#:: + Guard of Qeynos
+		quest::faction(273, -30);		#:: - Ring of Scale
+		quest::faction(207, -30);		#:: - Mayong Mistmoore
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
-}		
+}
