@@ -10,11 +10,11 @@ sub EVENT_SAY {
 	}
 	if ($text=~/smuggle/i) {
 		quest::say("Well, that depends. Do you want a [" . quest::saylink("job") . "]?");
-	}	
+	}
 	if ($text=~/job/i) {
 		quest::say("Should you choose to accept, you have to go to the ruins on the other side of the great wall, find Gunrich, and tell him that Dark Rivers Flow East.");
-	}		
-} 
+	}
+}
 
 sub EVENT_ITEM {
 	#:: Turn in for 13032 - Short Beer
@@ -22,28 +22,30 @@ sub EVENT_ITEM {
 		quest::say("Mmm. It's good, but not as good as [" . quest::saylink("Blackburrow Stout") . "].");
 		#:: Ding!
 		quest::ding();
-		#:: Give a small amount of xp
+		#:: Give a small amount of experience
 		quest::exp(100);
-		#:: Give a small amount of cash copper - plat
-		quest::givecash(5,0,0,0);	
+		#:: Create a hash for storing cash - 1 to 10cp
+		my %cash = plugin::RandomCash(1,10);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Turn in for 13131 - Case of Blackburrow Stout
 	elsif (plugin::takeItems(13131 => 1 )) {
 		quest::say("Heh heh! You did it! I thought the deputies would get you for sure! I mean... You did it! Heh! Here buy yourself a drink on me.");
 		#:: Ding!
 		quest::ding();
-		#:: Grant a large amount of xp
+		#:: Grant a large amount of experience
 		quest::exp(5000);
 		#:: Create a hash for storing cash - 1 to 20cp
 		my %cash = plugin::RandomCash(1,20);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set faction
-		quest::faction(77,10); 		#:: + Deeppockets
-		quest::faction(33,1); 		#:: + Circle of Unseen Hands
-		quest::faction(218,-1); 	#:: - Merchants of Rivervale
-		quest::faction(48,1); 		#:: + Coalition of Tradefolk Underground
-		quest::faction(31,1); 		#:: + Carson McCabe	
+		#:: Set factions
+		quest::faction(77, 10);		#:: + Deeppockets
+		quest::faction(33, 1);		#:: + Circle of Unseen Hands
+		quest::faction(218, -1); 	#:: - Merchants of Rivervale
+		quest::faction(48, 1);		#:: + Coalition of Tradefolk Underground
+		quest::faction(31, 1);		#:: + Carson McCabe	
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
