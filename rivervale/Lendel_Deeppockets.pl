@@ -1,5 +1,5 @@
-#:: Set up a 50 unit distance
 sub EVENT_SPAWN {
+	#:: Set a proximity 100 unit distance
 	$x = $npc->GetX();
 	$y = $npc->GetY();
 	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
@@ -28,30 +28,31 @@ sub EVENT_SAY {
 	}
 }
 
+sub EVENT_SIGNAL { 
+	#::Receive Signal 1 from Gaffin Deeppockets of Rivervale
+	if ($signal == 1) {
+		quest::say("Find somebody to go see what he wants. I don't like the idea of making Hanns mad at us, but I also don't like the idea of looking over my shoulder for Stanos. He is not somebody I would care to dance with, and I DO owe him.");
+	}
+}
+
+
 sub EVENT_ITEM {
 	#:: Turn in for 18732 - Tattered Note
 	if (plugin::takeItems(18732 => 1 )) {
 		quest::say("HA! I asked that fool Denry to send me a professional, and this is what I get?!? Oh diddlepicks! That crotchety old coot never liked me anyway. And after all I've done for him! Hrrmf! Ah well, let's get you started and see what ya got, huh, kid? Here, wear this. Maybe I'll have Toelia break you in, huh? Yeah, that'll work! Go find her, and she'll put you to work. Just remember, we all earn our keep around here, or else it's back to hay farm for you! Oh yeah, tell her you're the new dishwasher so she knows you are on the level. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
 		#:: Give item 13539 - Old Brown Vest*
 		quest::summonitem(13539);
-		#:: Give a small amount of xp
-		quest::exp(100);
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
+		#:: Give a small amount of experience
+		quest::exp(100);
+		#:: Set factions
 		quest::faction(77, 5);		#:: + Deeppockets
 		quest::faction(33, 5);		#:: + Circle of Unseen Hands
-		quest::faction(218,-5);		#:: - Merchants of Rivervale
+		quest::faction(218, -5);	#:: - Merchants of Rivervale
 		quest::faction(31, 5);		#:: + Carson McCabe
 		quest::faction(48, 5);		#:: + Coalition of Tradefolk Underground
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
-}
-
-sub EVENT_SIGNAL { 
-	#::Receive Signal 1 from Gaffin Deeppockets of Rivervale
-	if ($signal == 1) {
-		quest::say("Find somebody to go see what he wants. I don't like the idea of making Hanns mad at us, but I also don't like the idea of looking over my shoulder for Stanos. He is not somebody I would care to dance with, and I DO owe him.");
-	}
 }
