@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Oh. hi.  Listen. um.. $name. was it?  Listen. pal.  I really don't have time for the friendly-friendly. so why don't you just move on?");
+		quest::say("Oh, hi.  Listen, um.. $name, was it?  Listen, pal,  I really don't have time for the friendly-friendly, so why don't you just move on?");
 	}
 	if ($text=~/new dishwasher/i) {
 		#:: Match if faction is better than indifferent
@@ -13,7 +13,7 @@ sub EVENT_SAY {
 		}
 		#:: Match if faction is worse than indifferent
 		elsif ($faction > 5) {
-			quest::say("Oh. hi.  Listen. um.. $name. was it?  Listen. pal.  I really don't have time for the friendly-friendly. so why don't you just move on?");
+			quest::say("Oh, hi.  Listen, um.. $name, was it?  Listen, pal.  I really don't have time for the friendly-friendly, so why don't you just move on?");
 		}
 	}
 	if ($text=~/Chomper/i) {
@@ -27,7 +27,7 @@ sub EVENT_SAY {
 		}
 		#:: Match if faction is worse than indifferent
 		elsif ($faction > 5) {
-			quest::say("Oh. hi.  Listen. um.. $name. was it?  Listen. pal.  I really don't have time for the friendly-friendly. so why don't you just move on?");
+			quest::say("Oh, hi.  Listen, um.. $name, was it?  Listen, pal, I really don't have time for the friendly-friendly, so why don't you just move on?");
 		}
 	}
 }
@@ -55,7 +55,7 @@ sub EVENT_ITEM {
 		}
 		#:: Match if faction is worse than indifferent
 		elsif ($faction > 5) {
-			quest::say("Oh. hi.  Listen. um.. $name. was it?  Listen. pal.  I really don't have time for the friendly-friendly. so why don't you just move on?");
+			quest::say("Oh, hi.  Listen, um.. $name, was it?  Listen, pal,  I really don't have time for the friendly-friendly, so why don't you just move on?");
 			#:: Return a 13785 - Torn Old Pouch
 			quest::summonitem(13785);
 		}
@@ -82,7 +82,7 @@ sub EVENT_ITEM {
 		}
 		#:: Match if faction is worse than indifferent
 		elsif ($faction > 5) {
-			quest::say("Oh. hi.  Listen. um.. $name. was it?  Listen. pal.  I really don't have time for the friendly-friendly. so why don't you just move on?");
+			quest::say("Oh, hi.  Listen, um.. $name, was it?  Listen, pal, I really don't have time for the friendly-friendly, so why don't you just move on?");
 			#:: Give back a 13786 - Large Ruby
 			quest::summonitem(13786);
 		}
