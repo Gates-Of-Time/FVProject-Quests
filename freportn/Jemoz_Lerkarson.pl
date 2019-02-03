@@ -38,11 +38,16 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Give a large amount of experience
 		quest::exp(5000);
+		#:: Summon random item from the following: 15019 - Spell: Armor of Faith, 15013 - Spell: Complete Healing, 15045 - Spell: Pacify
+		(quest::summonitem(quest::ChooseRandom(15019,15013,15045));
 		#:: Set factions
 		quest::faction(258, 3); 		#:: + Priests of Marr
 		quest::faction(48, -10); 		#:: - Coalition of Tradefolk Underground
 		quest::faction(184, 3); 		#:: + Knights of Truth
 		quest::faction(311, 10); 		#:: + Steel Warriors
+		#:: Cast spell 12 - Healing
+		$npc->CastSpell(12,$userid);
+	}
 	}
 	#:: Turn in for 12142 - Human Head
 	if (plugin::takeItems(12142 => 1 )) {
