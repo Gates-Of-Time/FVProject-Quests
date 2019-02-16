@@ -7,8 +7,7 @@ sub EVENT_SAY {
 		if ($faction < 5) {
 			quest::say("I hope that you are indeed respectable and loyal to Halas and the Rogues of the White Rose. To do otherwise would bring the wrath of the Six Hammers down on you. But enough with talk! Our caravan to the frigid north leaves in less than two days, and we are short on mammoth calf hides. Return four of them and you will be given items that show your loyalty to our Clan.");
 			#:: Send a signal to Halas >> Ysanna_MacGibbon (29070)
-			quest::singalwith(29070,1,1);
-			quest::say("I must have sent a signal.");
+			quest::signalwith(29070,1,1);
 		}
 		else {
 			quest::say("The Order of the White Rose does not trust you with such a task.");
