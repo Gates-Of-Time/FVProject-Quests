@@ -19,7 +19,8 @@ sub EVENT_ITEM {
 	#:: Match four 5243 - Mammoth Calf Hide
 	if (plugin::takeItems(5243 => 4)) {
 		quest::say("You returned? We believed the gnoll pups got you. The caravan has already left, and these do me little good now. But, as I said before, one must remain respectable. Here is what I promised.");
-		quest::summonitem(quest::ChooseRandom(5238,5239,5242,5236,5233,5231,5240,5241,5234,5232,5235,5237));
+		#:: Give a random reward:  5238 - Black Wolf Armplates, 5239 - Black Wolf Bracers, 5242 - Black Wolf Boots, 5236 - Black Wolf Cape, 5233 - Black Wolf Collar, 5231 - Black Wolf Crown, 5240 - Black Wolf Gloves, 5241 - Black Wolf Legplates, 5234 - Black Wolf Mail, 5232 - Black Wolf Mask, 5235 - Black Wolf Pauldrons, 5237 - Black Wolf Waistband
+		quest::summonitem(quest::ChooseRandom(5238, 5239, 5242, 5236, 5233, 5231, 5240, 5241, 5234, 5232, 5235, 5237));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a moderate amount of experience
