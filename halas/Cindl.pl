@@ -31,7 +31,7 @@ sub EVENT_ITEM {
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set Factions
 		quest::faction(213, 5); 	#:: + Merchants of Halas
-		quest::faction(361, 3);		#:: +  Wolves of the North
+		quest::faction(361, 3);		#:: + Wolves of the North
 		quest::faction(294, 3);		#:: + Shamen of Justice
 		quest::faction(275, -5);	#:: + Rogues of the White Rose
 	}
@@ -50,7 +50,7 @@ sub EVENT_ITEM {
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set Factions
 		quest::faction(213, 10); 	#:: + Merchants of Halas
-		quest::faction(361, 7);		#:: +  Wolves of the North
+		quest::faction(361, 7);		#:: + Wolves of the North
 		quest::faction(294, 7);		#:: + Shamen of Justice
 		quest::faction(275, -5);	#:: + Rogues of the White Rose
 	}
