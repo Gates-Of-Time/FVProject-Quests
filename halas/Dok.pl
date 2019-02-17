@@ -30,7 +30,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 12222 - Full Honeycomb Jar
 	if (plugin::takeItems(12222 => 1)) {
-		quest::say("Great work!! Now I can make more candles! Here ye are, me fri. I call this the Everburn Candle. It has a wee bit o' magic in it. I hope ye like it.");
+		quest::say("Great work!! Now I can make more candles! Here ye are, me friend. I call this the Everburn Candle. It has a wee bit o' magic in it. I hope ye like it.");
 		#:: Give a 12220 - Everburn Candle
 		quest::summonitem(12220);
 		#:: Ding!
