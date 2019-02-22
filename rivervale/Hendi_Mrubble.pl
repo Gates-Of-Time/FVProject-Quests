@@ -32,6 +32,20 @@ sub EVENT_ITEM {
 		#:: Cast 12 - Healing
 		$npc->CastSpell(12,$userid);
 	}
+	#:: Match 13936 - Squad Ring
+	if (plugin::takeItems(13936 => 1)) {
+		#:: Match if faction is better than indifferent
+		if ($faction < 5) {
+			quest::say("May the swift and silent spirit of Fizzlethorpe Bristlebane smile upon your frail soul.");
+			#:: Give a 13936 - Squad Ring
+			quest::summonitem(13936);
+			#:: Ding!
+			quest::ding();
+		}
+		else {
+			quest::say("Fizzlethorpe Bristlebane only smiles upon the worthy, come back after your deeds have proven your worth.");
+			#:: Give back a 13936 - through return items plugin. 
+		}
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
