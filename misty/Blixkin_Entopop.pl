@@ -33,7 +33,7 @@ sub EVENT_SAY {
 		quest::say("There are many species of bugs out here. The most common are the fire beetles. If you are hunting them, make sure their queen is not around or you will be in deep trouble. Their eyes are a popular item for adventurers because they give off light as if they were on fire. I even had one warrior try to kill [" . quest::saylink("Ember") . "] for her eyes!!");
 	}
 	elsif ($text=~/bug collection/i) {
-		quest::say("I collect all kinds of bugs but most of the ones I have are dead. [Ember] is the only exception. I just like them for their pretty colors and I admire how loyal they are to each other. If you want to, you can help me complete my collection and I will reward you for your time. Here is a list of the bug parts I need for my collection. If you [" . quest::saylink("don't have a box") . "] to collect the bug parts in, just ask me for one. I think I have some extras.'");
+		quest::say("I collect all kinds of bugs but most of the ones I have are dead. [" . quest::saylink("Ember") . "] is the only exception. I just like them for their pretty colors and I admire how loyal they are to each other. If you want to, you can help me complete my collection and I will reward you for your time. Here is a list of the bug parts I need for my collection. If you [" . quest::saylink("don't have a box") . "] to collect the bug parts in, just ask me for one. I think I have some extras.'");
 	}
 	elsif ($text=~/don't have a box/i) {
 		quest::say("Here you go. Just follow the instructions on the [" . quest::saylink("list") . "] so you know what to collect and how to prepare the collection for me.");
@@ -68,7 +68,12 @@ sub EVENT_ITEM {
 		quest::faction(208, 12);	#:: + Mayor Gubbin
 		quest::faction(48, -15);	#:: - Coalition of Tradefolk Underground
 	}
+	#:: Match a 13268 - Complete Bug Collection
+	elsif (plugin::takeItems(13268 => 1) {
+		quest::say("Oh you have a complete collection for me?! Good! Good! Well done. But remember that I need the complete bug collection and you must return my want list before I can pay you.");
+		#:: Return the 13268 - Complete Bug Collection
+		quest::summonitem(13268);
+	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
-	quest::say("Oh you have a complete collection for me?! Good! Good! Well done. But remember that I need the complete bug collection and you must return my want list before I can pay you.");
 }
