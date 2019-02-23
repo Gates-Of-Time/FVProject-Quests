@@ -1,6 +1,8 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Hmph. Hello, $name, how are ye an' how do ye do? Now, what are ye planning to buy?");
+		#:: Send a signal to Halas >> Murtog_MacYee (29043)
+		quest::signalwith(29043,1,1);
 	}
 	elsif ($text=~/assist/i) {
 		#:: Match if faction is Amiable or better
