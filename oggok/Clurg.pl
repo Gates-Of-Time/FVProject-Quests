@@ -43,8 +43,8 @@ sub EVENT_ITEM {
 	#:: Match if faction is Amiable or better and a 13379 - Barkeep Compendium
 	if ($faction <= 4 && plugin::takeItems(13379 => 1)) {
 		quest::say("'Ahhh!! My Barkeep Compendium has been returned!! I am in your debt. I do not like to be in any man's debt. Let me offer you this as payment for your great service. Obtaining my book could not have been a simple task.");
-		#:: Give a 13380 - Stein of Moggok
-		quest::summonitem(13380);
+		#:: Give a 6359 - Stein of Moggok
+		quest::summonitem(6359);
 		#:: Ding!
 		quest::ding();    
 		#:: Grant a moderate amount of experience
