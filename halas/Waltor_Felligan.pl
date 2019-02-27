@@ -4,7 +4,7 @@ sub EVENT_SAY {
 	}
 	if ($text=~/bind wounds/i) {
 		#:: Match if faction is Indifferent or better
-		if ($faction < 6) {
+		if ($faction <= 5) {
 			quest::say("Before I bind yer wounds, ye must pay tribute to the Tribunal in the amount of ten gold coins.");
 		}
 		else {
