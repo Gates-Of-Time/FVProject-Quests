@@ -45,7 +45,7 @@ sub EVENT_ITEM {
 		quest::faction(213, 3);			#:: + Merchants of Halas
 		quest::faction(33, -3);			#:: - Circle of Unseen Hands
 		quest::faction(48, -3);			#:: - Coalition of Tradefolk Underground
-		quest::faction(90, -4);			#:: - Hall of the Ebon Mask
+		quest::faction(90, -4);			#:: - Ebon Mask
 	}
 	#:: Match a 18761 - Tattered Note
 	elsif (plugin::takeItems(18761 => 1)) {
@@ -59,9 +59,9 @@ sub EVENT_ITEM {
 		#:: Set Factions
 		quest::faction(294, 100);		#:: + Shamen of Justice
 		quest::faction(213, 15);		#:: + Merchants of Halas
-		quest::faction(33, -15);			#:: - Circle of Unseen Hands
+		quest::faction(33, -15);		#:: - Circle of Unseen Hands
 		quest::faction(48, -15);		#:: - Coalition of Tradefolk Underground
-		quest::faction(90, -20);		#:: - Hall of the Ebon Mask
+		quest::faction(90, -20);		#:: - Ebon Mask
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
