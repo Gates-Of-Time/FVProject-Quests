@@ -30,7 +30,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match a 12622 - List of Qeynos Most Wanted
 	elsif (plugin::takeItems(12622 => 1)) {
-		quest::say("Ye're learnin' to serve the church well, young Initiate Kinky. I grant ye yer holy symbol and the blessing o' the Tribunal that They may grant ye wisdom in serving Their will..");
+		quest::say("Ye're learnin' to serve the church well, young Initiate $name. I grant ye yer holy symbol and the blessing o' the Tribunal that They may grant ye wisdom in serving Their will..");
 		#:: Give a 1376 - Initiate Symbol of the Tribunal
 		quest::summonitem(1376);
 		#:: Ding!
