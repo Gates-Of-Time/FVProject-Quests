@@ -3,10 +3,8 @@ sub EVENT_SPAWN {
 	$x = $npc->GetX();
 	$y = $npc->GetY();
 	$z = $npc->GetZ();
-	#:: Create a proximity, 100 units across, 100 units tall, and enable proximity say
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 1);
-	#:: Also enable proximity say
-	quest::enable_proximity_say();
+	#:: Create a proximity, 100 units across, 100 units tall, and don't enable proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 0);
 }
 
 sub EVENT_ENTER {
@@ -37,6 +35,8 @@ sub EVENT_ITEM {
 		quest::summonitem(13513);
 		#:: Ding!
 		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(100);
 		#:: Set faction
 		quest::faction(275, 100);	#:: + Rogues of the White Rose
 	}
