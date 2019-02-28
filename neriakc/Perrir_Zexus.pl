@@ -50,16 +50,17 @@ sub EVENT_ITEM {
     quest::faction(257, -15);  #Priests of Life
     quest::faction(260, -400); #Primordial Malice
   }
-  if(plugin::check_handin(\%itemcount, 18148 => 1)) { #Letter of recommendation
-    quest::say("$name, eh? My sister has a keen perception for seeing into a person's soul. You may store an abundance of hate, but hate can be devoted to different ideals. Prove to me your devotion to our Lord Innoruuk by bringing me the skullcap of a Leatherfoot Raider who has invaded our forest. Go, $name, and do as I have requested!");
-    quest::ding();
-    quest::faction(256, 200);  #Priests of Innoruuk
-    quest::faction(43, -25);   #Clerics of Tunare
-    quest::faction(257, -15);  #Priests of Life
-    quest::faction(260, -400); #Primordial Malice
-    quest::faction(177, 15);   #King Naythox Thex
-    quest::faction(258, -35);  #Priests of Marr
-  }
+#:: This is a 2003-era item
+#:: if(plugin::check_handin(\%itemcount, 18148 => 1)) { #Letter of recommendation
+#::    quest::say("$name, eh? My sister has a keen perception for seeing into a person's soul. You may store an abundance of hate, but hate can be devoted to different ideals. Prove to me your devotion to our Lord Innoruuk by bringing me the skullcap of a Leatherfoot Raider who has invaded our forest. Go, $name, and do as I have requested!");
+#::    quest::ding();
+#::    quest::faction(256, 200);  #Priests of Innoruuk
+#::    quest::faction(43, -25);   #Clerics of Tunare
+#::    quest::faction(257, -15);  #Priests of Life
+#::    quest::faction(260, -400); #Primordial Malice
+#::    quest::faction(177, 15);   #King Naythox Thex
+#::    quest::faction(258, -35);  #Priests of Marr
+#::  }
   plugin::return_items(\%itemcount);
 }
 
