@@ -2,7 +2,7 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Peh! What am you wanted?! I am Basher Nanrum. You $name? Heh, you look for works? Hmm, me tinks you too weakling for [" . quest::saylink("job") . "] me need done. Hmm.. You might do, mebbe, $name.");
 	}
-	elsif ($text=~/job/i {
+	elsif ($text=~/job/i) {
 		quest::say("Me in charge of making torches for basher patrols. But Nanrum is much too mighty for such stupid job and Nanrum get idea. Dem fire bugses in da desert - dem eyes glowed. And dem don't burneded like torches. If $name getted Nanrum three fire beetle eyes me would giveded $name a shiny thingie dat you wanteded. Go ahed, $name, an' get me da eyes.");
 	}
 }
