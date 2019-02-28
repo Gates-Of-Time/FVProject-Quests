@@ -1,5 +1,5 @@
 sub EVENT_EQUIP_ITEM {
-	quest::we("You just put something in your shared bank")
+	quest::we("You just put something in your shared bank");
 }
 
 sub EVENT_ZONE {
