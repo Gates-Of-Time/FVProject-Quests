@@ -1,7 +1,5 @@
 sub EVENT_EQUIP_ITEM {
-	if ($slotid == 2500) || ($slotid ==2501) {
-		quest::we("You just put something in your shared bank")
-	}
+	quest::we("You just put something in your shared bank")
 }
 
 sub EVENT_ZONE {
