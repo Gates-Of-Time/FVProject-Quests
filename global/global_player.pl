@@ -1,7 +1,3 @@
-sub EVENT_EQUIP_ITEM {
-	quest::we("You just put something in your shared bank");
-}
-
 sub EVENT_ZONE {
 	#:: Figure out if the player has a pet and blow it up when they leave a zone
 	if ($client->GetPetID()) {
