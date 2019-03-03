@@ -46,6 +46,7 @@ sub EVENT_ITEM {
 			quest::say("Fizzlethorpe Bristlebane only smiles upon the worthy, come back after your deeds have proven your worth.");
 			#:: Give back a 13936 - through return items plugin. 
 		}
+	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
