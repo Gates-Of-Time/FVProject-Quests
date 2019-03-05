@@ -5,7 +5,7 @@ sub EVENT_SPAWN {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest:say("Sorry. Nothing to sell at this time. Maybe later. Good day.");
+		quest::say("Sorry. Nothing to sell at this time. Maybe later. Good day.");
 	}
 	elsif ($text=~/come back to the closet/i) {
 		quest::say("Back to the closet?!! I just got out. I would go back if I had a pair of Oven Mittens.");
