@@ -6,7 +6,7 @@ sub EVENT_SPAWN {
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::emote("stops playing a lively tune.");
-		quest:say("Come to enjoy my music?");
+		quest::say("Come to enjoy my music?");
 	}
 	elsif ($text=~/come back to the closet/i) {
 		quest::say("No!! I'm getting so good!! Even these trolls appreciate my music! <sigh>...fine I'll go. But before I do, can you do me a favor first? I'd like to study a new instrument. I hear that some lizardmen near the ogre city make an interesting instrument called a fife. If you can get me a few samples, say four, just to make sure I get a good quality one, I'll gladly go back in the closet.");
