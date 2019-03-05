@@ -14,7 +14,7 @@ sub EVENT_SAY {
 	elsif ($text=~/kaglari mana doll/i) {
 		quest::say("Kaglari catch many humans. He pull spirit from dem and force into dolls. Now deir spirit give shaman extra mana. Dey good power source. Now humans good for someting. Da mana dolls only for shaman power.");
 		#:: Spawn Grobb >> a_skeleton (52056)
-		quest::spawn2(52056,0,0,159.80,290.21,7.13,0);
+		quest::spawn2(52056,0,0,-290.21,159.80,7.13,0);
 	}
 }
 
