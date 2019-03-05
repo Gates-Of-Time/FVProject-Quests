@@ -17,3 +17,22 @@ sub EVENT_SAY {
 		quest::spawn2(52056,0,0,290.21,159.80,7.13,0);
 	}
 }
+
+sub EVENT_ITEM {
+	#:: Match 12213 - The Baker, 12214 - The Butcher, 12215 - The Captain, 12216 - The Minstrel
+	if (plugin::takeItems(12213 => 1, 12214 => 1, 12215 => 1, 12216 => 1)) {
+		quest::say("Ohh, tank you!! Kaglari not hafta do bad tings to Urako!! Me berry berry happy!! Oh, here is da doll, me tanks you a lot!!");
+		#:: Give a 12212 - Kaglari Mana Doll
+		quest::summonitem(12212);
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(100);
+		#:: Set factions
+		quest::faction(70, 10);		#:: + Dark Ones
+		quest::faction(291, 2);		#:: + Shadowknights of Night Keep
+		quest::faction(106, -1);	#:: - Frogloks of Guk
+	}
+	#:: Return unused items
+	plugin::returnUnusedItems();
+}
