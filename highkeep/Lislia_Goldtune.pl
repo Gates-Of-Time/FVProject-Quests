@@ -29,8 +29,6 @@ sub EVENT_ITEM {
 	#:: Match a 18164 - Pouch of Mail 
 	if (plugin::takeItems(18152 => 1)) {
 		quest::say("More mail - you have done us a noteworthy service!  Please take this gold for your troubles.  If you are interested in more work, just ask me.");
-		#:: Give item 13556 - White and Blue Tunic*
-		quest::summonitem(13556);
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
@@ -49,8 +47,6 @@ sub EVENT_ITEM {
 	#:: Match a 18166 - Pouch of Mail
 	if (plugin::takeItems(18156 => 1 )) {
 		quest::say("More mail - you have done us a noteworthy service!  Please take this gold for your troubles.  If you are interested in more work, just ask me.");
-		#:: Give item 13556 - White and Blue Tunic*
-		quest::summonitem(13556);
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
