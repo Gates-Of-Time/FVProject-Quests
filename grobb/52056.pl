@@ -16,7 +16,7 @@ sub EVENT_TIMER {
 	#:: Match the timer "despawn"
 	if ($timer eq "despawn") {
 		#:: Stop the timer from looping over and over
-		quest::stoptimer("despawn")
+		quest::stoptimer("despawn");
 		#:: Depop
 		quest::depop();
 	}
@@ -24,14 +24,14 @@ sub EVENT_TIMER {
 
 sub EVENT_ITEM {
 	#:: Match a 12211 - Grobb Oven Mittens
-	if (plugin::takeItems(12211 => 1) {
+	if (plugin::takeItems(12211 => 1)) {
 		quest::say("Ahh!! Oven Mittens!! Kinda' large, don't you think?!! Oh well, now I can bake all I want without burning my hands. OK!! Let's go. I overheard some Basher named Nanrum saying he spotted my friend, The Butcher. You should ask him [wheres the skeleton].");
 		#:: Give a 12213 - The Baker
 		quest::summonitem(12213);
 		#:: Ding!
 		quest::ding();
 		#:: Stop the timer from looping over and over
-		quest::stoptimer("despawn")
+		quest::stoptimer("despawn");
 		#:: Depop
 		quest::depop();
 	}
