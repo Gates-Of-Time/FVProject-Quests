@@ -5,7 +5,7 @@ sub EVENT_SPAWN {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest:say("Hello there!");
+		quest::say("Hello there!");
 	}
 	elsif ($text=~/come back to the closet/i) {
 		quest::say("Darn!! I was just starting to have fun. Tell you what. You find me a nice Ogre Butcher Apron and I will gladly go back to my cramped quarters.");
