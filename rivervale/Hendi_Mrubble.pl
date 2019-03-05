@@ -44,7 +44,8 @@ sub EVENT_ITEM {
 		}
 		else {
 			quest::say("Fizzlethorpe Bristlebane only smiles upon the worthy, come back after your deeds have proven your worth.");
-			#:: Give back a 13936 - through return items plugin. 
+			#:: Give back a 13936 - Squad Ring
+			quest::summonitem(13936);
 		}
 	}
 	#:: Return unused items
