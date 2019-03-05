@@ -5,6 +5,11 @@ sub EVENT_SAY {
 	elsif ($text=~/job/i) {
 		quest::say("Me in charge of making torches for basher patrols. But Nanrum is much too mighty for such stupid job and Nanrum get idea. Dem fire bugses in da desert - dem eyes glowed. And dem don't burneded like torches. If $name getted Nanrum three fire beetle eyes me would giveded $name a shiny thingie dat you wanteded. Go ahed, $name, an' get me da eyes.");
 	}
+	elsif ($text=~/wheres the skeleton/i) {
+		quest::say("Yeah!! Me see that bone man. He over by da Carver. He tink he butcher or sumting!!");
+		#:: Spawn Grobb >> a_skeleton (52118)
+		quest::spawn2(52118,0,0,-453.00,356.85,9.13,0);
+	}
 }
 
 sub EVENT_ITEM {
