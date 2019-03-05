@@ -17,7 +17,7 @@ sub EVENT_TIMER {
 	#:: Match the timer "despawn"
 	if ($timer eq "despawn") {
 		#:: Stop the timer from looping over and over
-		quest::stoptimer("despawn")
+		quest::stoptimer("despawn");
 		#:: Depop
 		quest::depop();
 	}
@@ -25,14 +25,14 @@ sub EVENT_TIMER {
 
 sub EVENT_ITEM {
 	#:: Match four 12198 - Lizardman Scout Fife
-	if (plugin::takeItems(12198 => 4) {
+	if (plugin::takeItems(12198 => 4)) {
 		quest::say("Oh good, you got four!! I hope at least one of them is of decent quality. Well, guess I should keep up my end of the bargain. Let's go.");
 		#:: Give a 12216 - The Minstrel
 		quest::summonitem(12216);
 		#:: Ding!
 		quest::ding();
 		#:: Stop the timer from looping over and over
-		quest::stoptimer("despawn")
+		quest::stoptimer("despawn");
 		#:: Depop
 		quest::depop();
 	}
