@@ -16,7 +16,7 @@ sub EVENT_TIMER {
 	#:: Match the timer "despawn"
 	if ($timer eq "despawn") {
 		#:: Stop the timer from looping over and over
-		quest::stoptimer("despawn")
+		quest::stoptimer("despawn");
 		#:: Depop
 		quest::depop();
 	}
@@ -24,14 +24,14 @@ sub EVENT_TIMER {
 
 sub EVENT_ITEM {
 	#:: Match a 12217 - Ogre Butcher Apron
-	if (plugin::takeItems(12217 => 1) {
+	if (plugin::takeItems(12217 => 1)) {
 		quest::say("Thanks!! Now I'm a real butcher just like Carver Cagrek!! Ok, before you take me back, we need to find my friend The Captain. Last I heard, he was boating around the swamp. Ask the guards outside if they have [seen the captain].");
 		#:: Give a 12214 - The Butcher
 		quest::summonitem(12214);
 		#:: Ding!
 		quest::ding();
 		#:: Stop the timer from looping over and over
-		quest::stoptimer("despawn")
+		quest::stoptimer("despawn");
 		#:: Depop
 		quest::depop();
 	}
