@@ -9,7 +9,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match a 12210 - Fungus Dung Pie
-	if (plugin::takeItems(12210 => 1) {
+	if (plugin::takeItems(12210 => 1)) {
 		quest::say("Mmmmm..Mm..Mmm!!! Dat smells gud!! Me gets more fat and get more strength. You dus gud job weekiling. Me gives you dis armer. Now gos away. Me no share pie wit weekling.");
 		#:: Give a random reward: 2125 - Large Tattered Skullcap, 2126 - Large Tattered Mask, 2127 - Large Tattered Gorget, 2129 - Large Tattered Shoulderpads, 2131 - Large Tattered Belt, 2133 - Large Tattered Wristbands, 2134 - Large Tattered Gloves, 2161 - Large Raw-hide Skullcap, 2162 - Large Raw-hide Mask
 		#:: 2163 - Large Raw-hide Gorget, 2164 - Large Raw-hide Tunic, 2165 - Large Raw-hide Shoulderpads, 2166 - Large Raw-hide Cloak, 2167 - Large Raw-hide Belt, 2168 - Large Raw-hide Sleeves, 2169 - Large Raw-hide Wristbands, 2170 - Large Raw-hide Gloves, 2171 - Large Raw-hide Leggings, 2172 - Large Raw-hide Boots
