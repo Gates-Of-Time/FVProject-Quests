@@ -28,7 +28,7 @@ sub EVENT_ITEM {
 		quest::faction(22, -10);	#:: - Broken Skull Clan
 	}
 	#:: Match four 12191 - Spore Mushroom
-	elsif (plugin::takeItem(12191 => 4)) {
+	elsif (plugin::takeItems(12191 => 4)) {
 		quest::say("Gud werk!! Me already, err, founds, dung part of meal. Here we go. One Fungus Dung Pie!! Enjoys.");
 		#:: Give a 12210 - Fungus Dung Pie
 		quest::summonitem(12210);
