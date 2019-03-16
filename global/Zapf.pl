@@ -4107,7 +4107,7 @@ sub EVENT_ITEM {
 	#:: Match a 66615 - Gold Ticket
 	if (plugin::takeItems(66615 => 1)) {
 		foreach $prizes (@prizes) {
-			next unless (!plugin::check_hasitem($client, $prize));
+			next unless (plugin::check_hasitem($client, $prize) == 0);
 			quest::summonitem($prize);
 			last;
 		}
