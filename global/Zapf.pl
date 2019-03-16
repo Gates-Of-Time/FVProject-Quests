@@ -4092,26 +4092,6 @@ sub EVENT_ITEM {
 		$change_amount = -500;
 		quest::say("Now your faction will be adjusted by $change_amount points.");
 	}
-	my $prizes = {
-		11668,	#:: 11668 - Vibrating Gauntlets of Infuse
-		59509,	#:: 59509 - Glowing Black Drum
-		24890,	#:: 24890 - Holgresh Elder Beads
-		10895,	#:: 10895 - Fungus Covered Great Staff
-		59504,	#:: 59504 - Glowing White Drum
-		11604,	#:: 11604 - Scimitar of the Mistwalker
-		6631,	#:: 6631 - Ton Po's Bo Stick of Understanding
-		5667,	#:: 5667 - Earthshaker
-		13401,	#:: 13401 - Manastone
-		147404, #:: 147404 - Barbarian Spiritist`s Hammer
-	};
-	#:: Match a 66615 - Gold Ticket
-	if (plugin::takeItems(66615 => 1)) {
-		foreach $prizes (@prizes) {
-			next unless (plugin::check_hasitem($client, $prize) == 0);
-			quest::summonitem($prize);
-			last;
-		}
-	}
 }
 
 sub Train {
