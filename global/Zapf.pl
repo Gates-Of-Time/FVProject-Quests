@@ -4092,6 +4092,15 @@ sub EVENT_ITEM {
 		$change_amount = -500;
 		quest::say("Now your faction will be adjusted by $change_amount points.");
 	}
+	#:: Match a 66615 - Gold Ticket
+	if (plugin::takeItems(66615 => 1)) {
+		my @prizes = (11668, 59509);
+		foreach $prizes (@prizes) {
+			next unless (plugin::check_hasitem($client, $prize) == 0);
+			quest::summonitem($prize);
+			last;
+		}
+	}
 }
 
 sub Train {
