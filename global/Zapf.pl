@@ -4096,8 +4096,8 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(66615 => 1)) {
 		my @prizes = (11668, 59509);
 		foreach $prizes (@prizes) {
-			next if (plugin::check_hasitem($client, $prize));
-			quest::summonitem($prize);
+			next if (plugin::check_hasitem($client, $prizes));
+			quest::summonitem($prizes);
 		}
 	}
 }
