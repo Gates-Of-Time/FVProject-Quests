@@ -4098,6 +4098,7 @@ sub EVENT_ITEM {
 		foreach $prizes (@prizes) {
 			next if (plugin::check_hasitem($client, $prizes));
 			quest::summonitem($prizes);
+			last;
 		}
 	}
 }
