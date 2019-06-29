@@ -11,22 +11,22 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Turn in for 13916 x2 - Deathfist Slashed Belt x2
+	#:: Turn in for 13916 - Deathfist Slashed Belt x2
 	if (plugin::takeItems(13916 => 2 )) {
 		quest::say("Very fine work $name. With your help, we shall soon rid the commonlands of the orcs. Then we can move on to a [" . quest::saylink("bigger problem") . "].");
-		#:: Give a small amount of xp
+		#:: Give a large amount of xp
 		quest::exp(28000);
 		#:: Ding!
 		quest::ding();
 		#:: Create a hash for storing cash - 4500 to 4600cp
-		my %cash = plugin::RandomCash(900,2000);
+		my %cash = plugin::RandomCash(4500,4600);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(105,5); 			#:: + Freeport Militia
-		quest::faction(258,-1); 		#:: - Priests of Marr
-		quest::faction(184,-1); 		#:: + Knights of Truth
-		quest::faction(48,1); 			#:: + Coalition of Trade Folk Underground
+		quest::faction(105, 5); 		#:: + Freeport Militia
+		quest::faction(258, -1); 		#:: - Priests of Marr
+		quest::faction(184, -1); 		#:: + Knights of Truth
+		quest::faction(48, 1); 			#:: + Coalition of Trade Folk Underground
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
