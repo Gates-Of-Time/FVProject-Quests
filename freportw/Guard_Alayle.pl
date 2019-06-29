@@ -11,21 +11,24 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Turn in for 18817 - Sealed Letter
-	if (plugin::takeItems(1797 => 3 )) {
+	if (plugin::takeItems(1797 => 1)) {
 		if ($class eq "Paladin") {
-		quest::say("This is not good news. I must leave immediately. Here. Take this to Kala.. I mean my father. I found it on the floor of Sir Lucan D'Lere's quarters. Thanks again, messenger. I got this just in time");
-		#:: Ding!
-		quest::ding();
-		#:: Summon 18818 A Tattered Flier
-		quest::summonitem(18818);
-		#:: Set faction
-		quest::faction(311,1); 			#:: + Steel Warriors
-		quest::faction(135,1); 			#:: + Guards of Qeynos
-		quest::faction(53,-1); 			#:: - Corrupt Qeynos Guards
-		quest::faction(105,-1); 		#:: - Freeport Militia
-		quest::faction(184,1); 			#:: + Knights of Truth
-		#:: Spawn Krazen Loosh
-		quest::spawn2(9143,87,0,-154,-55,-10,128);
+			quest::say("This is not good news. I must leave immediately. Here. Take this to Kala.. I mean my father. I found it on the floor of Sir Lucan D'Lere's quarters. Thanks again, messenger. I got this just in time");
+			#:: Ding!
+			quest::ding();
+			#:: Give a 18818 - A Tattered Flier
+			quest::summonitem(18818);
+			#:: Set factions
+			quest::faction(311, 1);		#:: + Steel Warriors
+			quest::faction(135, 1);		#:: + Guards of Qeynos
+			quest::faction(53, -1);		#:: - Corrupt Qeynos Guards
+			quest::faction(105, -1);	#:: - Freeport Militia
+			quest::faction(184, 1);		#:: + Knights of Truth
+			#:: Spawn Krazen Loosh
+			quest::spawn2(9143,87,0,-154,-55,-10,128);
+		}
+		else {
+			quest::say("I have no use for this item, $name. You can have it back.");
 		}
 	}
 	#:: Return unused items
