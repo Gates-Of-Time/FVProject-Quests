@@ -22,7 +22,7 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Create a hash for storing cash - 4500 to 4600cp
-		my %cash = plugin::RandomCash(900,2000);
+		my %cash = plugin::RandomCash(4500,4600);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
