@@ -8,17 +8,17 @@ sub EVENT_ITEM {
 	#:: Turn in for 12273 - Militia Armory Token
 	if (plugin::takeItems(12273 => 1 )) {
 		quest::say("Welcome to the Freeport Militia. As a reserve member we require you to wear this tunic and fight when, who and wherever Sir Lucan commands, no questions asked!! There is no turning back!! Remember to keep clear of North Freeport. You have made a wise decision. Hail Sir Lucan!!");
-		#:: Give a small amount of xp
+		#:: Grant a large amount of xp
 		quest::exp(10000);
 		#:: Ding!
 		quest::ding();
 		#:: Give item 3097 - Reserve Militia Tunic
 		quest::summonitem(3097);
 		#:: Set faction
-		quest::faction(105,10); 		#:: + Freeport Militia
-		quest::faction(48,10); 			#:: + Coalition of Tradefolk Underground
-		quest::faction(184,-30); 		#:: - Knights of Truth
-		quest::faction(258,-30); 		#:: - Priests of Marr
+		quest::faction(105, 10); 		#:: + Freeport Militia
+		quest::faction(48, 10); 		#:: + Coalition of Tradefolk Underground
+		quest::faction(184, -30); 		#:: - Knights of Truth
+		quest::faction(258, -30); 		#:: - Priests of Marr
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
