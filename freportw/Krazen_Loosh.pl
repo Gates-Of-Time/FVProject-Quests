@@ -10,7 +10,7 @@ sub EVENT_SAY {
 }
 
 #:: NPC speaks at waypoint 30 then speaks and runs at waypoint 42 
-sub EVENT_WAYPOINT_ARRIVE{
+sub EVENT_WAYPOINT_ARRIVE {
 	if ($wp == 8) {
 		quest::say("Hello, Alayle. We just got a message from Qeynos. I think you should come with me.");
 		#:: Signal Guard Alayle
@@ -20,7 +20,7 @@ sub EVENT_WAYPOINT_ARRIVE{
 	}
 } 
 
-sub EVENT_SIGNAL{ 
+sub EVENT_SIGNAL { 
 	#:: Receive Signal 1 from Guard Alayle
 	if ($signal == 1) {
 		quest::say("As you try to open penetrate the stone wall it is clearly being held in place by a powerful force.");
