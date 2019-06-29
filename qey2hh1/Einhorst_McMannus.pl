@@ -2,29 +2,30 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
-			quest::say("Greetings, ______. Welcome to the fishing village of Clan McMannus. We sell what we can here. Have a look around but, please do not buy too much. We must save most of our stock for delivery to our home");
+			quest::say("Greetings, $name. Welcome to the fishing village of Clan McMannus. We sell what we can here. Have a look around but, please do not buy too much. We must save most of our stock for delivery to our home");
 		}
-		#:: Match if faction is Indifferent
-		elsif ($faction == 5) {
+		#:: Match if faction is Indifferent or worse
+		elsif ($faction => 5) {
 			quest::say("Welcome to the village of McMannus. We sell many goods. Feel free to look around - just keep your hands to yourself. Good day.");
 		}
 	}
-	    if ($text=~/fugitive/i) {
+	if ($text=~/fugitive/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
 			quest::say("Searching for someone, eh? You will most likely never find them on the plains. This is a vast area. I could have Frostbite help you search. He is quite good at [" . quest::saylink("tracking prey") . "].");
 		}
-		#:: Match if faction is Indifferent
-		elsif ($faction == 5) {
+		#:: Match if faction is Indifferent or worse
+		elsif ($faction => 5) {
 			quest::say("I see they have sent someone to hunt the scoundrel down. I am afraid I haven't seen the barbarian thief in quite some time. You can search and search for him here in the western plains, but I doubt you shall find him. Good luck.");
 		}
 	}
-	 if ($text=~/tracking prey/i) {
+	if ($text=~/tracking prey/i) {
 	   	quest::say("Frostbite can track down anyone, be they man or beast. All one needs to do is obtain a SWEATY piece of clothing recently worn by the one you seek.");
      	}
-	 if ($text=~/lion meat shipment/i) {
-        	quest::say("Oh, yes, the lion meat shipment. Aye, it's here somewhere. Just a moment. Ah! Here you go. Apologize for the delay in this.");
-		quest::summonitem(17946); # Lion Meat Shipment
+	if ($text=~/lion meat shipment/i) {
+		quest::say("Oh, yes, the lion meat shipment. Aye, it's here somewhere. Just a moment. Ah! Here you go. Apologize for the delay in this.");
+		#:: Give a 17946 - Lion Meat Shipment
+		quest::summonitem(17946);
 	}
 }
 	
