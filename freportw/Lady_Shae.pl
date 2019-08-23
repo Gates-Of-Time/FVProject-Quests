@@ -66,7 +66,14 @@ sub EVENT_ITEM {
 	}					
 	#:: Match three 13030 - Red Wine
 	elsif (plugin::takeItems(13030 => 3)) {
-		if ($ItemCount => 1) {
+		if ($ItemCount == 0) {
+			quest::say("Thank you... Oh my! Another of these and I will be spilling my secrets.");
+			#:: Increment the item count variable
+			$ItemCount++;
+			$ItemCount++;
+			$ItemCount++;
+		}
+		else {
 			quest::say("Oh my.. You are so kind. I can not tell you the last time I had so much fine wine. Well, there was the time Antonius Bayle told me he no longer had the time for a committed relationship. Mister big ruler of the world. Make it to the top and find someone younger. I know his plan. I hate him. I will never trust another human again. After all that, he goes and asks me to hold on to this list for him. Well I am glad it was taken from me by that [" . quest::saylink("Dyllin") . "]. Antonius Bayle has no ties to me any more!! Good riddance! Oooooh! I love him.");
 			#:: Ding!
 			quest::ding();
@@ -79,43 +86,17 @@ sub EVENT_ITEM {
 			quest::exp(150);
 			#:: Reset item count
 			$ItemCount = 0;
-		}
-		else {
-			quest::say("Thank you... Oh my! Another of these and I will be spilling my secrets.");
-			#:: Increment the item count variable
-			$ItemCount = 3;
 		}
 	}
 	#:: Match two 13030 - Red Wine
 	elsif (plugin::takeItems(13030 => 2)) {
-		if ($ItemCount => 2) {
-			quest::say("Oh my.. You are so kind. I can not tell you the last time I had so much fine wine. Well, there was the time Antonius Bayle told me he no longer had the time for a committed relationship. Mister big ruler of the world. Make it to the top and find someone younger. I know his plan. I hate him. I will never trust another human again. After all that, he goes and asks me to hold on to this list for him. Well I am glad it was taken from me by that [" . quest::saylink("Dyllin") . "]. Antonius Bayle has no ties to me any more!! Good riddance! Oooooh! I love him.");
-			#:: Ding!
-			quest::ding();
-			#:: Set factions
-			quest::faction(92, 5);		#:: + Emerald Warriors
-			quest::faction(155, -1);	#:: - Indigo Brotherhood
-			quest::faction(212, 1);		#:: + Merchants of Felwithe
-			quest::faction(174, 1);		#:: + Kelethin Merchants
-			#:: Grant a small amount of experience
-			quest::exp(150);
-			#:: Reset item count
-			$ItemCount = 0;
-		}
-		elsif ($ItemCount == 1) {
-			quest::say("Thank you... Oh my! Another one of these and I will be spilling my secrets.");
-			#:: Increment the item count variable
-			$ItemCount = 3;
-		}
-		else {
+		if ($ItemCount <= 1) {
 			quest::say("Thank you... Oh my! A few more of these and I will be spilling my secrets.");
 			#:: Increment the item count variable
-			$ItemCount = 2;
+			$ItemCount++;
+			$ItemCount++;
 		}
-	}
-	#:: Match one 13030 - Red Wine
-	elsif (plugin::takeItems(13030 => 1)) {
-		if ($ItemCount => 3) {
+		else {
 			quest::say("Oh my.. You are so kind. I can not tell you the last time I had so much fine wine. Well, there was the time Antonius Bayle told me he no longer had the time for a committed relationship. Mister big ruler of the world. Make it to the top and find someone younger. I know his plan. I hate him. I will never trust another human again. After all that, he goes and asks me to hold on to this list for him. Well I am glad it was taken from me by that [" . quest::saylink("Dyllin") . "]. Antonius Bayle has no ties to me any more!! Good riddance! Oooooh! I love him.");
 			#:: Ding!
 			quest::ding();
@@ -129,20 +110,27 @@ sub EVENT_ITEM {
 			#:: Reset item count variable
 			$ItemCount = 0;
 		}
-		elsif ($ItemCount == 2) {
-			quest::say("Thank you... Oh my! Another one of these and I will be spilling my secrets.");
-			#:: Increment the item count variable
-			$ItemCount = 3;
-		}
-		elsif ($ItemCount == 1) {
+	}
+	#:: Match one 13030 - Red Wine
+	elsif (plugin::takeItems(13030 => 1)) {
+		if ($ItemCount <= 2) {
 			quest::say("Thank you... Oh my! A few more of these and I will be spilling my secrets.");
 			#:: Increment the item count variable
 			$ItemCount++;
 		}
 		else {
-			quest::say("Thank you... Oh my! A few more of these and I will be spilling my secrets.");
-			#:: Increment the item count variable
-			$ItemCount++;
+			quest::say("Oh my.. You are so kind. I can not tell you the last time I had so much fine wine. Well, there was the time Antonius Bayle told me he no longer had the time for a committed relationship. Mister big ruler of the world. Make it to the top and find someone younger. I know his plan. I hate him. I will never trust another human again. After all that, he goes and asks me to hold on to this list for him. Well I am glad it was taken from me by that [" . quest::saylink("Dyllin") . "]. Antonius Bayle has no ties to me any more!! Good riddance! Oooooh! I love him.");
+			#:: Ding!
+			quest::ding();
+			#:: Set factions
+			quest::faction(92, 5);		#:: + Emerald Warriors
+			quest::faction(155, -1);	#:: - Indigo Brotherhood
+			quest::faction(212, 1);		#:: + Merchants of Felwithe
+			quest::faction(174, 1);		#:: + Kelethin Merchants
+			#:: Grant a small amount of experience
+			quest::exp(150);
+			#:: Reset item count variable
+			$ItemCount = 0;
 		}
 	}
 	#:: Return unused items
