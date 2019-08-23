@@ -31,7 +31,7 @@ sub EVENT_ITEM {
 		#:: Create a hash for storing cash - 700 to 800cp
 		my %cash = plugin::RandomCash(700,800);
 		#:: Grant a random cash reward
-		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Match a 13825 - Poacher's Head
 	elsif (plugin::takeItems(13825 => 1)) {
@@ -48,7 +48,7 @@ sub EVENT_ITEM {
 		#:: Create a hash for storing cash - 400 to 500cp
 		my %cash = plugin::RandomCash(400,500);
 		#:: Grant a random cash reward
-		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
