@@ -2,7 +2,7 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Hail, $name - Are you [" . quest::saylink("interested") . "] in helping the League of Antonican Bards by delivering some [" . quest::saylink("mail") . "]?");
 	}
-	elsif ($text=~/mail/i) {
+	elsif ($text=~/^mail$/i) {
 		quest::say("The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more central offices.  Are you [" . quest::saylink("interested") . "]?");
 	}
 	elsif ($text=~/interested/i) {
