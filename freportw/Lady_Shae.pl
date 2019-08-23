@@ -62,7 +62,7 @@ sub EVENT_ITEM {
 		$ItemCount = 0;
 	}					
 	#:: Match three 13030 - Red Wine
-	elsif (plugin::takeItems(13030 == 3)) {
+	elsif (plugin::takeItems(13030 => 3)) {
 		if ($ItemCount => 1) {
 			quest::say("Oh my.. You are so kind. I can not tell you the last time I had so much fine wine. Well, there was the time Antonius Bayle told me he no longer had the time for a committed relationship. Mister big ruler of the world. Make it to the top and find someone younger. I know his plan. I hate him. I will never trust another human again. After all that, he goes and asks me to hold on to this list for him. Well I am glad it was taken from me by that [" . quest::saylink("Dyllin") . "]. Antonius Bayle has no ties to me any more!! Good riddance! Oooooh! I love him.");
 			#:: Ding!
@@ -84,7 +84,7 @@ sub EVENT_ITEM {
 		}
 	}
 	#:: Match two 13030 - Red Wine
-	elsif (plugin::takeItems(13030 == 2)) {
+	elsif (plugin::takeItems(13030 => 2)) {
 		if ($ItemCount => 2) {
 			quest::say("Oh my.. You are so kind. I can not tell you the last time I had so much fine wine. Well, there was the time Antonius Bayle told me he no longer had the time for a committed relationship. Mister big ruler of the world. Make it to the top and find someone younger. I know his plan. I hate him. I will never trust another human again. After all that, he goes and asks me to hold on to this list for him. Well I am glad it was taken from me by that [" . quest::saylink("Dyllin") . "]. Antonius Bayle has no ties to me any more!! Good riddance! Oooooh! I love him.");
 			#:: Ding!
@@ -111,7 +111,7 @@ sub EVENT_ITEM {
 		}
 	}
 	#:: Match one 13030 - Red Wine
-	elsif (plugin::takeItems(13030 == 1)) {
+	elsif (plugin::takeItems(13030 => 1)) {
 		if ($ItemCount => 3) {
 			quest::say("Oh my.. You are so kind. I can not tell you the last time I had so much fine wine. Well, there was the time Antonius Bayle told me he no longer had the time for a committed relationship. Mister big ruler of the world. Make it to the top and find someone younger. I know his plan. I hate him. I will never trust another human again. After all that, he goes and asks me to hold on to this list for him. Well I am glad it was taken from me by that [" . quest::saylink("Dyllin") . "]. Antonius Bayle has no ties to me any more!! Good riddance! Oooooh! I love him.");
 			#:: Ding!
