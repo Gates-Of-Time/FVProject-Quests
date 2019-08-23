@@ -30,6 +30,9 @@ sub EVENT_SAY {
 	elsif ($text=~/dyllin/i) {
 		quest::say("Dyllin was the name of a Qeynos guard who was sent to pick up the list I was holding for dear, sweet Antonius. He left just yesterday. If you wish to meet up with him, I heard him say he was going to stop at Highpass Hold.");
 	}
+	elsif ($text=~/itemcount/i) {
+		quest::say("My Item Count is $ItemCount.");
+	}
 }
 
 sub EVENT_ITEM {
