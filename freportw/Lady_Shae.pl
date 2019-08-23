@@ -77,7 +77,7 @@ sub EVENT_ITEM {
 			#:: Reset item count
 			$ItemCount = 0;
 		}
-		elsif ($ItemCount == 0) {
+		else {
 			quest::say("Thank you... Oh my! Another of these and I will be spilling my secrets.");
 			#:: Increment the item count variable
 			$ItemCount = 3;
@@ -104,7 +104,7 @@ sub EVENT_ITEM {
 			#:: Increment the item count variable
 			$ItemCount = 3;
 		}
-		elsif ($ItemCount == 0) {
+		else {
 			quest::say("Thank you... Oh my! A few more of these and I will be spilling my secrets.");
 			#:: Increment the item count variable
 			$ItemCount = 2;
@@ -136,7 +136,7 @@ sub EVENT_ITEM {
 			#:: Increment the item count variable
 			$ItemCount++;
 		}
-		elsif ($ItemCount == 0) {
+		else {
 			quest::say("Thank you... Oh my! A few more of these and I will be spilling my secrets.");
 			#:: Increment the item count variable
 			$ItemCount++;
