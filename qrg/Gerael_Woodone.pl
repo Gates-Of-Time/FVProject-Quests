@@ -34,19 +34,25 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
-	#:: Match a 12141 - Black Wood Chip
-	elsif (plugin::takeItems(12141 => 1)) {
+	#:: Match a 12141 - Black Wood Chip or 18864 - Sealed Letter
+	elsif (plugin::takeItems(12141 => 1|18864 => 1)) {
 		quest::say("So the Unkempt Druids are alive and well.  We shall keep a watchful eye out as should you.  Take this for your bravery and defense of the Jaggedpine.");
+		#:: Give a random reward: 6018 - Cracked Staff, 2006 - Leather Cloak, 2147 - Raw-hide Leggings, 9002 - Round Shield, 9006 - Wooden Shield, 15237 - Spell: Dance of the Fireflies, 15239 - Spell: Flame Lick, 15252 - Spell: Invoke Lightning, 15240 - Spell: Lull Animal, 15248 - Spell: Ward Summoned
+		quest::summonitem(quest::ChooseRandom(6018, 2006, 2147, 9002, 9006, 15237, 15239, 15252, 15240, 15248));
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(159, 15); 	#:: + Jaggedpine Treefolk
-		quest::faction(265, 3); 	#:: + Protectors of Pine
-		quest::faction(267, 2); 	#:: + QRG Protected Animals
-		quest::faction(347, -3); 	#:: - Unkempt Druids
-		quest::faction(135, 2); 	#:: + Guards of Qeynos
+		quest::faction(159, 20); 	#:: + Jaggedpine Treefolk
+		quest::faction(265, 5); 	#:: + Protectors of Pine
+		quest::faction(267, 3); 	#:: + QRG Protected Animals
+		quest::faction(347, -5); 	#:: - Unkempt Druids
+		quest::faction(135, 3); 	#:: + Guards of Qeynos
 		#:: Grant a small amount of experience
 		quest::exp(200);
+		#:: Create a hash for storing cash - 250 to 300cp
+		my %cash = plugin::RandomCash(250,300);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
