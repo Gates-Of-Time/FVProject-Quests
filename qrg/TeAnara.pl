@@ -78,10 +78,12 @@ sub EVENT_ITEM {
 		quest::faction(267, 10); 	#:: + QRG Protected Animals
 		quest::faction(347, -15); 	#:: - Unkempt Druids
 		quest::faction(135, 10); 	#:: + Guards of Qeynos
-		#:: Give a small amount of cash copper - plat
-		quest::givecash(0,2,8,0);
 		#:: Grant a moderate amount of experience
 		quest::exp(1600);
+		#:: Create a hash for storing cash - 1100 to 1200cp
+		my %cash = plugin::RandomCash(800,850);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
