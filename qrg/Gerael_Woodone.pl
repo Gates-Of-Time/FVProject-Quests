@@ -35,7 +35,7 @@ sub EVENT_ITEM {
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Match a 12141 - Black Wood Chip or 18864 - Sealed Letter
-	elsif (plugin::takeItems(12141 => 1|18864 => 1)) {
+	elsif ((plugin::takeItems(12141 => 1)) | (plugin::takeItems(18864 => 1))) {
 		quest::say("So the Unkempt Druids are alive and well.  We shall keep a watchful eye out as should you.  Take this for your bravery and defense of the Jaggedpine.");
 		#:: Give a random reward: 6018 - Cracked Staff, 2006 - Leather Cloak, 2147 - Raw-hide Leggings, 9002 - Round Shield, 9006 - Wooden Shield, 15237 - Spell: Dance of the Fireflies, 15239 - Spell: Flame Lick, 15252 - Spell: Invoke Lightning, 15240 - Spell: Lull Animal, 15248 - Spell: Ward Summoned
 		quest::summonitem(quest::ChooseRandom(6018, 2006, 2147, 9002, 9006, 15237, 15239, 15252, 15240, 15248));
