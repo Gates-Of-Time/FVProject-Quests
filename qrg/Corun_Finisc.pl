@@ -40,8 +40,9 @@ sub EVENT_ITEM {
 		my %cash = plugin::RandomCash(550,700);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+	}
 	#:: Match a 13231 - Bottom of Broken Staff and 13232 - Top of Broken Staff
-	if (plugin::takeItems(13231 => 1, 13232 =>)) {
+	elsif (plugin::takeItems(13231 => 1, 13232 =>)) {
 		quest::say("Excellent! Here is a Jaggedpine Crook of your own. Please use it only to defend yourself and never to attack one of Tunare's creatures. You will find that while wielding the crook, Tunare grants you a boon of strength and the power to smite enemies who would otherwise be impervious to physical attacks.");
 		#:: Give a 13230 - Jaggedpine Crook
 		quest::summonitem(13230);
