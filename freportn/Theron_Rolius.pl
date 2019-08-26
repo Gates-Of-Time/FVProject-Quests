@@ -2,6 +2,9 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Greetings, $name!  To enter these grounds is to proclaim your faith in the Truthbringer.  In this city you shall find no greater allies than the Knights of Truth.  We urge all knights and clerics who oppose the hand of the Freeport Militia to [" . quest::saylink("join the crusade") . "].");
 	}
+	elsif ($text=~/friend of arathur/i) {
+		quest::say("Oh! You hail from Qeynos, do you? How is old Arathur? He probably has told you about some of the troubles we are having here. Are you looking to [" . quest::saylink("join the crusade") . "] against the Freeport Militia?");
+	}
 	elsif ($text=~/join the crusade/i) {
 		quest::say("Then take arms against the Freeport Militia!  They serve no one save Sir Lucan, the fallen knight.  From this day forth, I put a bounty upon all militia members.  For every bashed milita helm, a reward!!  If you are not prepared to battle the militia just yet, you may [" . quest::saylink("assist in other areas") . "].");
 	}
@@ -28,8 +31,6 @@ sub EVENT_ITEM {
 	#:: Turn in for 13921 - Damaged Militia Helm
 	if (plugin::takeItems(13921 => 1 )) {
 		quest::say("Fantastic work, my young knight.  Here is a small token of the my appreciation.  I would offer you a sharkskin shield, but I have made only a few and the paladins are testing them.");
-		#:: Give a small amount of xp
-		quest::exp(1000);
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
@@ -38,16 +39,16 @@ sub EVENT_ITEM {
 		quest::faction(184,10); 		#:: + Knights of Truth
 		quest::faction(311,10); 		#:: + Steel Warriors
 		quest::faction(105,-30); 		#:: - Freeport Militia
+		#:: Give a moderate amount of xp
+		quest::exp(1000);
 		#:: Create a hash for storing cash - 900 to 2000cp
 		my %cash = plugin::RandomCash(900,2000);
-			#:: Grant a random cash reward
-			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Turn in for 13873 - Sack of Sharkskins
 	elsif (plugin::takeItems(13873 => 1 )) {
 		quest::say("Thanks for the hard work, here is a shield to help you in your duties.");
-		#:: Give a small amount of xp
-		quest::exp(500);
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
@@ -56,6 +57,8 @@ sub EVENT_ITEM {
 		quest::faction(184,10); 		#:: + Knights of Truth
 		quest::faction(311,10); 		#:: + Steel Warriors
 		quest::faction(105,-30); 		#:: - Freeport Militia
+		#:: Give a small amount of xp
+		quest::exp(500);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
