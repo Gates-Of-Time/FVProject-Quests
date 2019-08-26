@@ -1,14 +1,18 @@
-function event_trade(e)
-	local item_lib = require("items");
-
-	if(item_lib.check_turn_in(e.trade, {item1 = 12140})) then
-		e.other:SummonItem(18809);
-		e.other:Ding();
-		e.other:Faction(267, 10,0);
-		e.other:Faction(265, 10,0);
-		e.other:Faction(159, 10,0);
-		e.other:Faction(166, -30,0);
-		e.other:AddEXP(200);
-	end
-	item_lib.return_items(e.self, e.other, e.trade)
-end
+sub EVENT_ITEM {
+	#:: Turn in for 12140 - Regurgitonic
+	if (plugin::takeItems(12140 => 1)) {
+		#:: Give a 18809 - Bayle List II
+		quest::summonitem(18809);
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(267, 10);		#:: + QRG Protected Animals
+		quest::faction(265, 10);		#:: + Protectors of Pine
+		quest::faction(159, 10);		#:: + Jaggedpine Treefolk
+		quest::faction(166, -30);		#:: - Karana Bandits
+		#:: Grant a small amount of experience
+		quest::exp(200);
+	}
+	#:: Return unused items
+	plugin::returnUnusedItems();
+}
