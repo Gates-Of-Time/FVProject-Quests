@@ -1,5 +1,5 @@
 sub EVENT_SAY {
-	if ($text=~/hail/i) {
+	if (($text=~/hail/i) && ($langid == 6)) {
 		quest::say("Whats you wants!!  Me great master of da bashers.  Me tinks yooz must be lookin' fer trainin'.  Yooz looks like a weaklin'.  Me train yooz and yooz helps me get fatter.  Well!!  Are yooz gonna [" . quest::saylink("helps Hergor get fatter") . "]?!!",6);
 	}
 	elsif ($text=~/helps Hergor get fatter/i) {
