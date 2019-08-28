@@ -1,10 +1,17 @@
 sub EVENT_SAY {
 	if (($text=~/hail/i) && ($langid == 0)) {
+		quest::say("Whats you wants!!  Me great master of da bashers.  Me tinks yooz must be lookin' fer trainin'.  Yooz looks like a weaklin'.  Me train yooz and yooz helps me get fatter.  Well!!  Are yooz gonna [" . quest::saylink("helps Hergor get fatter") . "]?!!",0);
+	}
+	elsif (($text=~/hail/i) && ($langid == 6)) {
 		quest::say("Whats you wants!!  Me great master of da bashers.  Me tinks yooz must be lookin' fer trainin'.  Yooz looks like a weaklin'.  Me train yooz and yooz helps me get fatter.  Well!!  Are yooz gonna [" . quest::saylink("helps Hergor get fatter") . "]?!!",6);
 	}
 	elsif (($text=~/helps Hergor get fatter/i) & ($langid == 0)) {
+		quest::say("Yooz makes da good choice.  Me nevers get enuff ta eats.  Eats more and gets more stronger, me always say.  Yooz gos and speaks wit carver Cagrek.  Yooz tell him Hergor wants his [fungus dung pie].  Yooz duz dis and me gives you sum rawhide armer or tatters armer.",0);
+	}
+	elsif (($text=~/helps Hergor get fatter/i) & ($langid == 6)) {
 		quest::say("Yooz makes da good choice.  Me nevers get enuff ta eats.  Eats more and gets more stronger, me always say.  Yooz gos and speaks wit carver Cagrek.  Yooz tell him Hergor wants his [fungus dung pie].  Yooz duz dis and me gives you sum rawhide armer or tatters armer.",6);
 	}
+
 }
 
 sub EVENT_ITEM {
