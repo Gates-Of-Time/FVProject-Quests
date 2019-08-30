@@ -27,10 +27,10 @@ sub EVENT_ITEM {
 		#:: Give a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(86, -15);		#:: - Dismal Rage
-		quest::faction(184, 100);		#:: + Knights of Truth
-		quest::faction(105, -15);		#:: - The Freeport Militia
-		quest::faction(258, 20);		#:: + Priests of Marr
+		quest::faction(271, -15);		#:: - Dismal Rage
+		quest::faction(281, 100);		#:: + Knights of Truth
+		quest::faction(330, -15);		#:: - The Freeport Militia
+		quest::faction(362, 20);		#:: + Priests of Marr
 		quest::faction(311, 10);		#:: + Steel Warriors
 	}
 	#:: Turn in for 18827 - A Testimony of Truth
@@ -43,10 +43,10 @@ sub EVENT_ITEM {
 		#:: Give a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(86, -15);		#:: - Dismal Rage
-		quest::faction(184, 100);		#:: + Knights of Truth
-		quest::faction(105, -15);		#:: - The Freeport Militia
-		quest::faction(258, 20);		#:: + Priests of Marr
+		quest::faction(271, -15);		#:: - Dismal Rage
+		quest::faction(281, 100);		#:: + Knights of Truth
+		quest::faction(330, -15);		#:: - The Freeport Militia
+		quest::faction(362, 20);		#:: + Priests of Marr
 		quest::faction(311, 10);		#:: + Steel Warriors
 	}
 	#:: Return unused items

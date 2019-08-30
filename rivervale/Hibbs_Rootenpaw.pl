@@ -49,10 +49,10 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(316, 100);	#:: + Storm Reapers
-		quest::faction(208, 10);	#:: + Mayor Gubbin
-		quest::faction(218, 15);	#:: + Merchants of Rivervale
-		quest::faction(347, -15);	#:: - Unkempt Druids
+		quest::faction(355, 100);	#:: + Storm Reapers
+		quest::faction(286, 10);	#:: + Mayor Gubbin
+		quest::faction(292, 15);	#:: + Merchants of Rivervale
+		quest::faction(324, -15);	#:: - Unkempt Druids
 	}
 #POP	#:: Match a 19689 - Rusbek's Head
 #POP	elsif (plugin::takeItems(19689 => 1)) {
@@ -64,10 +64,10 @@ sub EVENT_ITEM {
 #POP		#:: Grant a small amount of experience
 #POP		quest::exp(100);
 #POP		#:: Set factions
-#POP		quest::faction(316, 10);	#:: + Storm Reapers
-#POP		quest::faction(208, 10);	#:: + Mayor Gubbin
-#POP		quest::faction(218, 10);	#:: + Merchants of Rivervale
-#POP		quest::faction(347, -15);	#:: - Unkempt Druids
+#POP		quest::faction(355, 10);	#:: + Storm Reapers
+#POP		quest::faction(286, 10);	#:: + Mayor Gubbin
+#POP		quest::faction(292, 10);	#:: + Merchants of Rivervale
+#POP		quest::faction(324, -15);	#:: - Unkempt Druids
 #POP	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

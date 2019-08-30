@@ -18,10 +18,10 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(8,10);	#:: + Anti-mage
-		quest::faction(174,10);	#:: + Kelethin Merchants
-		quest::faction(99,10);	#:: + Faydark's Champions
-		quest::faction(92,10);	#:: + Emerald Warriors
+		quest::faction(5001,10);	#:: + Anti-mage
+		quest::faction(276,10);	#:: + Kelethin Merchants
+		quest::faction(246,10);	#:: + Faydark's Champions
+		quest::faction(326,10);	#:: + Emerald Warriors
 	}
 	#:: Match two 13319 - Crushbone Shoulderpads, one 13318 - Crushbone Belt,, and one 16482 silk swatch 
 	if (plugin::takeItems(13319 => 2, 13318 => 1, 16482 => 1)) {
@@ -33,10 +33,10 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(8,10);	#:: + Anti-mage
-		quest::faction(174,10);	#:: + Kelethin Merchants
-		quest::faction(99,10);	#:: + Faydark's Champions
-		quest::faction(92,10);	#:: + Emerald Warriors
+		quest::faction(5001,10);	#:: + Anti-mage
+		quest::faction(276,10);	#:: + Kelethin Merchants
+		quest::faction(246,10);	#:: + Faydark's Champions
+		quest::faction(326,10);	#:: + Emerald Warriors
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

@@ -30,11 +30,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(77, 5);		#:: + Deeppockets
-		quest::faction(208, 5);		#:: + Mayor Gubbin
-		quest::faction(218, 5);		#:: + Merchants of Rivervale
-		quest::faction(133, 5);		#:: + Guardians of the Vale
-		quest::faction(48, -5);		#:: - Coalition of Tradefolk Underground
+		quest::faction(241, 5);		#:: + Deeppockets
+		quest::faction(286, 5);		#:: + Mayor Gubbin
+		quest::faction(292, 5);		#:: + Merchants of Rivervale
+		quest::faction(263, 5);		#:: + Guardians of the Vale
+		quest::faction(336, -5);		#:: - Coalition of Tradefolk Underground
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

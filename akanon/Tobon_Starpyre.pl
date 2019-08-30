@@ -53,11 +53,11 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(76,-5); 		#:: - The Dead
-		quest::faction(91,100); 	#:: + Eldritch Collective
-		quest::faction(71,-15); 	#:: - Dark Reflection
-		quest::faction(115,15); 	#:: + Gem Choppers
-		quest::faction(176,15); 	#:: + King Ak'anon	
+		quest::faction(240,-5); 		#:: - The Dead
+		quest::faction(245,100); 	#:: + Eldritch Collective
+		quest::faction(238,-15); 	#:: - Dark Reflection
+		quest::faction(255,15); 	#:: + Gem Choppers
+		quest::faction(333,15); 	#:: + King Ak'anon	
 	}
 	#:: Check for Telescope Lens x4
 	if (plugin::check_handin(\%itemcount, 13275 => 1, 13276 => 1, 13277 => 1, 13279 => 1)) {
@@ -73,11 +73,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(76,-5); 		#:: - The Dead
-		quest::faction(91,100); 	#:: + Eldritch Collective
-		quest::faction(71,-15); 	#:: - Dark Reflection
-		quest::faction(115,15); 	#:: + Gem Choppers
-		quest::faction(176,15); 	#:: + King Ak'anon
+		quest::faction(240,-5); 		#:: - The Dead
+		quest::faction(245,100); 	#:: + Eldritch Collective
+		quest::faction(238,-15); 	#:: - Dark Reflection
+		quest::faction(255,15); 	#:: + Gem Choppers
+		quest::faction(333,15); 	#:: + King Ak'anon
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

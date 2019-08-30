@@ -61,9 +61,9 @@ sub EVENT_ITEM {
 		#:: Give a 12304 - Mold of the Boots of Ro
 		quest::summonitem(12304);
 		#:: Set Faction
-		quest::faction(44,2);		# Clerics of Underfoot
-		quest::faction(169,2);		# Kazon Stormhammer
-		quest::faction(219,2);		# Miners guild 249
+		quest::faction(227,2);		# Clerics of Underfoot
+		quest::faction(274,2);		# Kazon Stormhammer
+		quest::faction(293,2);		# Miners guild 249
 		quest::exp(100000);
 	}
 	#:: Return unused items

@@ -18,9 +18,9 @@ sub EVENT_ITEM {
 		#:: Give item 13053 - Brass Ring
 		quest::summonitem(13053);
 		#:: Set faction
-		quest::faction(247,10);	 	#:: + Peace Keepers
-		quest::faction(145,5); 		#:: + High Council of Erudin
-		quest::faction(143,-10); 	#:: - Heretics
+		quest::faction(298,10);	 	#:: + Peace Keepers
+		quest::faction(266,5); 		#:: + High Council of Erudin
+		quest::faction(265,-10); 	#:: - Heretics
 	}
 	plugin::return_items(\%itemcount);
 }

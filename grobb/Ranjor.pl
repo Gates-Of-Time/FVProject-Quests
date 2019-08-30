@@ -34,8 +34,8 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(66, 100);		#:: + Da Bashers
-		quest::faction(22, -15);		#:: - Broken Skull Clan
+		quest::faction(235, 100);		#:: + Da Bashers
+		quest::faction(222, -15);		#:: - Broken Skull Clan
 	}
 	#:: Match a 13409 - Froglok Meat and two 13187 - Froglok Tadpole Flesh
 	elsif (plugin::takeItems(13409 => 1, 13187 => 2)) {
@@ -47,8 +47,8 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(250);
 		#:: Set factions
-		quest::faction(66, 5);			#:: + Da Bashers
-		quest::faction(22, -1);			#:: - Broken Skull Clan
+		quest::faction(235, 5);			#:: + Da Bashers
+		quest::faction(222, -1);			#:: - Broken Skull Clan
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

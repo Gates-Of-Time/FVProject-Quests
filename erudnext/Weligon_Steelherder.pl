@@ -131,9 +131,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(79,10);	 	#:: + Deepwater Knights
-		quest::faction(145,10); 	#:: + High Council of Erudin
-		quest::faction(143,-15); 	#:: - Heretics
+		quest::faction(242,10);	 	#:: + Deepwater Knights
+		quest::faction(266,10); 	#:: + High Council of Erudin
+		quest::faction(265,-15); 	#:: - Heretics
 	}
 	#:: Turn in for 13879 -  Full bag of pearls
 	if (plugin::check_handin(\%itemcount, 13879 => 1)) {
@@ -145,9 +145,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(79,10);	 	#:: + Deepwater Knights
-		quest::faction(145,10); 	#:: + High Council of Erudin
-		quest::faction(143,-15); 	#:: - Heretics
+		quest::faction(242,10);	 	#:: + Deepwater Knights
+		quest::faction(266,10); 	#:: + High Council of Erudin
+		quest::faction(265,-15); 	#:: - Heretics
 	}
 	#:: Turn in for  Bridge Quest Handin: 3 heads + sealed list
 	if (plugin::check_handin(\%itemcount, 18835 => 1, 13838 => 1, 13839 => 1, 13840 => 1)) {
@@ -159,9 +159,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(79,10);	 	#:: + Deepwater Knights
-		quest::faction(145,10); 	#:: + High Council of Erudin
-		quest::faction(143,-15); 	#:: - Heretics
+		quest::faction(242,10);	 	#:: + Deepwater Knights
+		quest::faction(266,10); 	#:: + High Council of Erudin
+		quest::faction(265,-15); 	#:: - Heretics
 	}
 	#:: Turn in for  18725 - tattered note
 	if (plugin::check_handin(\%itemcount, 18725 => 1)) {
@@ -173,9 +173,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(79,100);	 	#:: + Deepwater Knights
-		quest::faction(145,15); 	#:: + High Council of Erudin
-		quest::faction(143,-15); 	#:: - Heretics
+		quest::faction(242,100);	 	#:: + Deepwater Knights
+		quest::faction(266,15); 	#:: + High Council of Erudin
+		quest::faction(265,-15); 	#:: - Heretics
 	}
 	plugin::return_items(\%itemcount);
 }

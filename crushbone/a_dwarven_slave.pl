@@ -37,10 +37,10 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set faction
-			quest::faction(169,1); 		#:: + Kazon Stormhammer
-			quest::faction(314,1); 		#:: + Storm Guard
-			quest::faction(220,1); 		#:: + Miners Guild 628
-			quest::faction(215,1); 		#:: + Merchants of Kaladim
+			quest::faction(274,1); 		#:: + Kazon Stormhammer
+			quest::faction(312,1); 		#:: + Storm Guard
+			quest::faction(322,1); 		#:: + Miners Guild 628
+			quest::faction(290,1); 		#:: + Merchants of Kaladim
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
@@ -87,10 +87,10 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set faction
-			quest::faction(169,1); 		#:: + Kazon Stormhammer
-			quest::faction(314,1); 		#:: + Storm Guard
-			quest::faction(220,1); 		#:: + Miners Guild 628
-			quest::faction(215,1); 		#:: + Merchants of Kaladim
+			quest::faction(274,1); 		#:: + Kazon Stormhammer
+			quest::faction(312,1); 		#:: + Storm Guard
+			quest::faction(322,1); 		#:: + Miners Guild 628
+			quest::faction(290,1); 		#:: + Merchants of Kaladim
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}

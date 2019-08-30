@@ -50,10 +50,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(71,100); 	#:: + Dark Reflection
-		quest::faction(91,-10); 	#:: - Eldritch Collective
-		quest::faction(115,-10); 	#:: - Gem Choppers
-		quest::faction(76,-10); 	#:: - Deep Muses
+		quest::faction(238,100); 	#:: + Dark Reflection
+		quest::faction(245,-10); 	#:: - Eldritch Collective
+		quest::faction(255,-10); 	#:: - Gem Choppers
+		quest::faction(240,-10); 	#:: - Deep Muses
 	}
 	#:: Turn in for 10263 -  Empty Infectious Vial
 	if (plugin::check_handin(\%itemcount, 10263 => 1)) {
@@ -65,10 +65,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(71,3); 		#:: + Dark Reflection
-		quest::faction(91,-3); 		#:: - Eldritch Collective
-		quest::faction(115,-3); 	#:: - Gem Choppers
-		quest::faction(76,-3); 		#:: - Deep Muses
+		quest::faction(238,3); 		#:: + Dark Reflection
+		quest::faction(245,-3); 		#:: - Eldritch Collective
+		quest::faction(255,-3); 	#:: - Gem Choppers
+		quest::faction(240,-3); 		#:: - Deep Muses
 	}	
 	#:: Turn in for 10266 -  Container of Infectious Reagents
 	if (plugin::check_handin(\%itemcount, 10266 => 1)) {
@@ -80,11 +80,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(71,3); 		#:: + Dark Reflection
-		quest::faction(91,-3); 		#:: - Eldritch Collective
-		quest::faction(115,-3); 	#:: - Gem Choppers
-		quest::faction(176,-3); 	#:: - King A'Anon
-		quest::faction(322, 3); 	#:: + The Dead
+		quest::faction(238,3); 		#:: + Dark Reflection
+		quest::faction(245,-3); 		#:: - Eldritch Collective
+		quest::faction(255,-3); 	#:: - Gem Choppers
+		quest::faction(333,-3); 	#:: - King A'Anon
+		quest::faction(239, 3); 	#:: + The Dead
 	}
 	plugin::return_items(\%itemcount);
 }

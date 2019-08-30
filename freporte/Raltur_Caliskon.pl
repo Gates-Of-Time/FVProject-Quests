@@ -23,9 +23,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(235,1); 		#:: + Opal Dark Briar
-		quest::faction(86,1); 		#:: + Dismal Rage
-		quest::faction(184,-3); 	#:: - Knights of Truth
+		quest::faction(296,1); 		#:: + Opal Dark Briar
+		quest::faction(271,1); 		#:: + Dismal Rage
+		quest::faction(281,-3); 	#:: - Knights of Truth
 	}
 	#:: Turn in for 18810 -  Bayle List III
 	if (plugin::takeItems(18810 => 1)) {

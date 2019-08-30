@@ -32,10 +32,10 @@ sub EVENT_ITEM {
 		#:: Reward with 13518 - Tin Patched Tunic*
 		quest::summonitem(13518);
 		#:: Set factions
-		quest::faction(91,-10); 	# Eldritch Collective
-		quest::faction(76,-10); 	# Deep Muses
-		quest::faction(71,100); 	# Dark Reflection
-		quest::faction(115,-10); 	# Gem Choppers
+		quest::faction(245,-10); 	# Eldritch Collective
+		quest::faction(240,-10); 	# Deep Muses
+		quest::faction(238,100); 	# Dark Reflection
+		quest::faction(255,-10); 	# Gem Choppers
 		quest::ding();
 		quest::exp(100);
 	}

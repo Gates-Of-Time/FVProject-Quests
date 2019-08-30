@@ -29,11 +29,11 @@ sub EVENT_ITEM {
 		#:: Grant a moderate amount of experience
 		quest::exp(1000);
 		#:: Set factions
-		quest::faction(314,5);		#:: + Storm Guard
-		quest::faction(169,5);		#:: + Kazon Stormhammer
-		quest::faction(219,5);		#:: + Miners Guild 249
-		quest::faction(215,5);		#:: + Merchants of Kaladim
-		quest::faction(57,-5);		#:: - Craknek Warriors
+		quest::faction(312,5);		#:: + Storm Guard
+		quest::faction(274,5);		#:: + Kazon Stormhammer
+		quest::faction(293,5);		#:: + Miners Guild 249
+		quest::faction(290,5);		#:: + Merchants of Kaladim
+		quest::faction(232,-5);		#:: - Craknek Warriors
 		#:: Reset item count
 		$ItemCount = 0;
 	}
@@ -52,11 +52,11 @@ sub EVENT_ITEM {
 			#:: Grant a moderate amount of experience
 			quest::exp(1000);
 			#:: Set factions
-			quest::faction(314,5);		#:: + Storm Guard
-			quest::faction(169,5);		#:: + Kazon Stormhammer
-			quest::faction(219,5);		#:: + Miners Guild 249
-			quest::faction(215,5);		#:: + Merchants of Kaladim
-			quest::faction(57,-5);		#:: - Craknek Warriors
+			quest::faction(312,5);		#:: + Storm Guard
+			quest::faction(274,5);		#:: + Kazon Stormhammer
+			quest::faction(293,5);		#:: + Miners Guild 249
+			quest::faction(290,5);		#:: + Merchants of Kaladim
+			quest::faction(232,-5);		#:: - Craknek Warriors
 			#:: Reset item count
 			$ItemCount = 0;
 		}

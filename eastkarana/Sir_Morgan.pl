@@ -41,10 +41,10 @@ sub EVENT_ITEM {
 		#:: Give a random item from Patchwork cloak, Patchwork boots, Rusty Weapons, Silver Earring, Bloodstone, Halfling knife, Bronze Dagger, Belt pouch, Damask cap, Mountain Lion Cape, Highkeep Flask, Snakeskin Mask, Drom's Champagne
 		quest::summonitem(quest::ChooseRandom(2106,2112,2041,13944,2307,3829,1331,17002,7012,8306,10006,10019,5013,5019,5021,5022,6011,5023,7007,7008));
 		#:: Set Factions
-		quest::faction(135,1);		# Guards of Qeynos
-		quest::faction(167,1);		# Karana Residents
-		quest::faction(257,1);		# Priests of Life
-		quest::faction(183,1);		# Knights of Thunder
+		quest::faction(262,1);		# Guards of Qeynos
+		quest::faction(345,1);		# Karana Residents
+		quest::faction(341,1);		# Priests of Life
+		quest::faction(280,1);		# Knights of Thunder
 		#:: Give a small amount of XP
 		quest::exp(500);
 	}

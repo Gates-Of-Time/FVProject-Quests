@@ -36,11 +36,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(143,100);	# + Heretics
-		quest::faction(79,-100);	# - Deepwater Knights
-		quest::faction(112,-100);	# - Gate Callers
-		quest::faction(56,-100);	# - Craftkeepers
-		quest::faction(60,-100);	# - Crimson Hands
+		quest::faction(265,100);	# + Heretics
+		quest::faction(242,-100);	# - Deepwater Knights
+		quest::faction(254,-100);	# - Gate Callers
+		quest::faction(231,-100);	# - Craftkeepers
+		quest::faction(233,-100);	# - Crimson Hands
 		#:: Give a small amount of experience
 		quest::exp(100);
 	} 

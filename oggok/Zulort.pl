@@ -45,7 +45,7 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(295, 10);	#:: + Shamen of War
+		quest::faction(394, 10);	#:: + Shamen of War
 	}
 	#:: Match a 14199 - Allize Volew Medicine Bag and three 13367 - Mystic Doll
 	elsif (plugin::takeItems(14199 => 1, 13367 => 3)) {
@@ -57,7 +57,7 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(295, 10);	#:: + Shamen of War
+		quest::faction(394, 10);	#:: + Shamen of War
 	}
 	#:: Match a 18788 - Tattered Note
 	elsif (plugin::takeItems(18788 => 1)) {
@@ -69,7 +69,7 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(295, 100);	#:: + Shamen of War
+		quest::faction(394, 100);	#:: + Shamen of War
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

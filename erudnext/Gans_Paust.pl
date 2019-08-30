@@ -47,9 +47,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(79,100);		#:: + Deepwater Knights
-		quest::faction(145,15);		#:: + High Council of Erudin
-		quest::faction(143,-15);	#:: - Heretics
+		quest::faction(242,100);		#:: + Deepwater Knights
+		quest::faction(266,15);		#:: + High Council of Erudin
+		quest::faction(265,-15);	#:: - Heretics
 	}
 	#:: Match turn in for 1771 - Yelesom's Reports
 	if (plugin::check_handin(\%itemcount, 1771 => 1)) {
@@ -61,9 +61,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(79,25);		#:: + Deepwater Knights
-		quest::faction(145,3);		#:: + High Council of Erudin
-		quest::faction(143,-3);	#:: - Heretics
+		quest::faction(242,25);		#:: + Deepwater Knights
+		quest::faction(266,3);		#:: + High Council of Erudin
+		quest::faction(265,-3);	#:: - Heretics
 
 	}
 	plugin::return_items(\%itemcount);

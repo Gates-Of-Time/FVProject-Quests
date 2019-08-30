@@ -46,11 +46,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(314, 15);	#:: + Storm Guard
-		quest::faction(169, 15);	#:: + Kazon Stormhammer
-		quest::faction(219, 15);	#:: + Miners Guild 249
-		quest::faction(215, 15);	#:: + Merchants Of Kaladim
-		quest::faction(57,- 15);	#:: - Craknek Warriors
+		quest::faction(312, 15);	#:: + Storm Guard
+		quest::faction(274, 15);	#:: + Kazon Stormhammer
+		quest::faction(293, 15);	#:: + Miners Guild 249
+		quest::faction(290, 15);	#:: + Merchants Of Kaladim
+		quest::faction(232,- 15);	#:: - Craknek Warriors
 	}
 	#:: Match if faction is Indifferent or worse and four 13931 - Runnyeye Warbeads
 	elsif (($faction > 4) && (plugin::takeItems(13931 => 4))) {
@@ -78,11 +78,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(314, 15);	#:: + Storm Guard
-		quest::faction(169, 15);	#:: + Kazon Stormhammer
-		quest::faction(219, 15);	#:: + Miners Guild 249
-		quest::faction(215, 15);	#:: + Merchants Of Kaladim
-		quest::faction(57, -15);	#:: - Craknek Warriors
+		quest::faction(312, 15);	#:: + Storm Guard
+		quest::faction(274, 15);	#:: + Kazon Stormhammer
+		quest::faction(293, 15);	#:: + Miners Guild 249
+		quest::faction(290, 15);	#:: + Merchants Of Kaladim
+		quest::faction(232, -15);	#:: - Craknek Warriors
 	}
 	#:: Match if faction is Indifferent or worse and a 13741 - Ogre Head and 13740 - Ogre Head
 	elsif (($faction > 4) && (plugin::takeItems(13741 => 1, 13740 => 1))) {
@@ -106,11 +106,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(314, 15);	#:: + Storm Guard
-		quest::faction(169, 15);	#:: + Kazon Stormhammer
-		quest::faction(219, 15);	#:: + Miners Guild 249
-		quest::faction(215, 15);	#:: + Merchants Of Kaladim
-		quest::faction(57, -15);	#:: - Craknek Warriors   
+		quest::faction(312, 15);	#:: + Storm Guard
+		quest::faction(274, 15);	#:: + Kazon Stormhammer
+		quest::faction(293, 15);	#:: + Miners Guild 249
+		quest::faction(290, 15);	#:: + Merchants Of Kaladim
+		quest::faction(232, -15);	#:: - Craknek Warriors   
 	}
 	#:: Match if faction is Indifferent or worse and a 12136 - Dwarf Head
 	elsif (($faction > 4) && (plugin::takeItems(12136 => 1))) {

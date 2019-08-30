@@ -24,11 +24,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(192,30); 	#:: + League of Antonican Bards
-		quest::faction(184,30); 	#:: + Knights of Truth
-		quest::faction(135,30); 	#:: + Guards of Qeynos
-		quest::faction(273,-30); 	#:: - Ring of Scale
-		quest::faction(207,-30); 	#:: - Mayong Mistmoore
+		quest::faction(284,30); 	#:: + League of Antonican Bards
+		quest::faction(281,30); 	#:: + Knights of Truth
+		quest::faction(262,30); 	#:: + Guards of Qeynos
+		quest::faction(304,-30); 	#:: - Ring of Scale
+		quest::faction(285,-30); 	#:: - Mayong Mistmoore
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

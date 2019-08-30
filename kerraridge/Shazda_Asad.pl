@@ -22,7 +22,7 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(175,20);	# + Kerra Isle
+		quest::faction(382,20);	# + Kerra Isle
 	}
 	#:: Match a 12438 - Sentinel Creot's Head
 	if (plugin::check_handin(\%itemcount, 12438 => 1)) {
@@ -34,7 +34,7 @@ sub EVENT_ITEM {
 		#:: Grant a moderate experience award
 		quest::exp(6500);
 		#:: Set factions
-		quest::faction(175,30);	# + Kerra Isle
+		quest::faction(382,30);	# + Kerra Isle
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

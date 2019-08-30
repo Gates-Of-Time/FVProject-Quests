@@ -69,9 +69,9 @@ sub EVENT_ITEM {
 		#:: Give a small amount of xp
 		quest::exp(100);
 		#:: Set faction
-		quest::faction(43,100); 	#:: + Clerics of Tunare
-		quest::faction(178,100); 	#:: + King Tearis Thex
-		quest::faction(8,75); 		#:: + Anti-mage
+		quest::faction(226,100); 	#:: + Clerics of Tunare
+		quest::faction(279,100); 	#:: + King Tearis Thex
+		quest::faction(5001,75); 		#:: + Anti-mage
 	}
 	#:: Turn in for 13351 -  A Very Large Pelt
 	if (plugin::takeItems(13351 => 1)) {
@@ -83,9 +83,9 @@ sub EVENT_ITEM {
 			#:: Give a small amount of xp
 			quest::exp(150);
 			#:: Set faction
-			quest::faction(43,10); 		#:: + Clerics of Tunare
-			quest::faction(178,10); 	#:: + King Tearis Thex
-			quest::faction(8,10); 		#:: + Anti-mage
+			quest::faction(226,10); 		#:: + Clerics of Tunare
+			quest::faction(279,10); 	#:: + King Tearis Thex
+			quest::faction(5001,10); 		#:: + Anti-mage
 		}
 	}
 	#:: Return unused items

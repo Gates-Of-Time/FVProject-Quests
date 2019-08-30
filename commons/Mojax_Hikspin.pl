@@ -26,11 +26,11 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(13087 => 1 )) {
 		quest::say("Aaahhhh. Now that is refreshing. Just let me rest for a bit. The note is safe and sound in my bedroll inside the inn.");
 		#:: Set factions
-		quest::faction(184,1);	#:: Knights of Truth
-		quest::faction(86,-1);	#:: Dismal Rage
-		quest::faction(105,-1);	#:: Freeport Militia
+		quest::faction(281,1);	#:: Knights of Truth
+		quest::faction(271,-1);	#:: Dismal Rage
+		quest::faction(330,-1);	#:: Freeport Militia
 		quest::faction(311,1);	#:: Steel Warriors
-		quest::faction(258,1);	#:: Priests of Marr
+		quest::faction(362,1);	#:: Priests of Marr
 		#:: Start Grid 86 - Path to the nearby Inn
 		quest::start(86);
 	}

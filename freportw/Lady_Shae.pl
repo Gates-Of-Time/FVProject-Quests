@@ -39,10 +39,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(92, 1);		#:: + Emerald Warriors
-		quest::faction(155, -1);	#:: - Indigo Brotherhood
-		quest::faction(212, 1);		#:: + Merchants of Felwithe
-		quest::faction(174, 1);		#:: + Kelethin Merchants
+		quest::faction(326, 1);		#:: + Emerald Warriors
+		quest::faction(270, -1);	#:: - Indigo Brotherhood
+		quest::faction(325, 1);		#:: + Merchants of Felwithe
+		quest::faction(276, 1);		#:: + Kelethin Merchants
 		#:: Grant a small amount of experience
 		quest::exp(150);
 	}
@@ -52,10 +52,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(92, 5);		#:: + Emerald Warriors
-		quest::faction(155, -1);	#:: - Indigo Brotherhood
-		quest::faction(212, 1);		#:: + Merchants of Felwithe
-		quest::faction(174, 1);		#:: + Kelethin Merchants
+		quest::faction(326, 5);		#:: + Emerald Warriors
+		quest::faction(270, -1);	#:: - Indigo Brotherhood
+		quest::faction(325, 1);		#:: + Merchants of Felwithe
+		quest::faction(276, 1);		#:: + Kelethin Merchants
 		#:: Grant a small amount of experience
 		quest::exp(150);
 		#:: Reset item count
@@ -75,10 +75,10 @@ sub EVENT_ITEM {
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
-			quest::faction(92, 5);		#:: + Emerald Warriors
-			quest::faction(155, -1);	#:: - Indigo Brotherhood
-			quest::faction(212, 1);		#:: + Merchants of Felwithe
-			quest::faction(174, 1);		#:: + Kelethin Merchants
+			quest::faction(326, 5);		#:: + Emerald Warriors
+			quest::faction(270, -1);	#:: - Indigo Brotherhood
+			quest::faction(325, 1);		#:: + Merchants of Felwithe
+			quest::faction(276, 1);		#:: + Kelethin Merchants
 			#:: Grant a small amount of experience
 			quest::exp(150);
 			#:: Reset item count
@@ -98,10 +98,10 @@ sub EVENT_ITEM {
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
-			quest::faction(92, 5);		#:: + Emerald Warriors
-			quest::faction(155, -1);	#:: - Indigo Brotherhood
-			quest::faction(212, 1);		#:: + Merchants of Felwithe
-			quest::faction(174, 1);		#:: + Kelethin Merchants
+			quest::faction(326, 5);		#:: + Emerald Warriors
+			quest::faction(270, -1);	#:: - Indigo Brotherhood
+			quest::faction(325, 1);		#:: + Merchants of Felwithe
+			quest::faction(276, 1);		#:: + Kelethin Merchants
 			#:: Grant a small amount of experience
 			quest::exp(150);
 			#:: Reset item count variable
@@ -120,10 +120,10 @@ sub EVENT_ITEM {
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
-			quest::faction(92, 5);		#:: + Emerald Warriors
-			quest::faction(155, -1);	#:: - Indigo Brotherhood
-			quest::faction(212, 1);		#:: + Merchants of Felwithe
-			quest::faction(174, 1);		#:: + Kelethin Merchants
+			quest::faction(326, 5);		#:: + Emerald Warriors
+			quest::faction(270, -1);	#:: - Indigo Brotherhood
+			quest::faction(325, 1);		#:: + Merchants of Felwithe
+			quest::faction(276, 1);		#:: + Kelethin Merchants
 			#:: Grant a small amount of experience
 			quest::exp(150);
 			#:: Reset item count variable

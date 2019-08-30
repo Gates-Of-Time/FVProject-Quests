@@ -42,10 +42,10 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(316, 100); 	#:: + Storm Reapers
-		quest::faction(208, 10);	#:: + Mayor Gubbin
-		quest::faction(218, 15);	#:: + Merchants of Rivervale
-		quest::faction(347, -15);	#:: - Unkempt Druids
+		quest::faction(355, 100); 	#:: + Storm Reapers
+		quest::faction(286, 10);	#:: + Mayor Gubbin
+		quest::faction(292, 15);	#:: + Merchants of Rivervale
+		quest::faction(324, -15);	#:: - Unkempt Druids
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

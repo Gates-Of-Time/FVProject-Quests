@@ -41,10 +41,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(47,3); 	#:: + Coalition of Trade Folk
-		quest::faction(184,3); 	#:: + Knights of Truth
-		quest::faction(217,3); 	#:: + Merchants of Qeynos
-		quest::faction(48,3); 	#:: + Coalition of Tradefolk Underground
+		quest::faction(229,3); 	#:: + Coalition of Trade Folk
+		quest::faction(281,3); 	#:: + Knights of Truth
+		quest::faction(291,3); 	#:: + Merchants of Qeynos
+		quest::faction(336,3); 	#:: + Coalition of Tradefolk Underground
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

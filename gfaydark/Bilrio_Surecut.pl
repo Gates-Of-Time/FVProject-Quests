@@ -30,9 +30,9 @@ sub EVENT_ITEM {
 		#:: Grant a moderate amount of experience
 		quest::exp(1500);
 		#:: Set factions
-		quest::faction(92,1);		#:: + Emerald Warriors
-		quest::faction(99,1);		#:: + Faydark's Champions
-		quest::faction(8,2);		#:: + Anti-mage
-		quest::faction(174,10);		#:: + Kelethin Merchants
+		quest::faction(326,1);		#:: + Emerald Warriors
+		quest::faction(246,1);		#:: + Faydark's Champions
+		quest::faction(5001,2);		#:: + Anti-mage
+		quest::faction(276,10);		#:: + Kelethin Merchants
 	}
 }

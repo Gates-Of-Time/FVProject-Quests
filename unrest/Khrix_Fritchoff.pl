@@ -16,10 +16,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(71,1); 		#:: + Dark Reflection
-		quest::faction(91,-1); 		#:: - Eldritch Collective
-		quest::faction(115,-1); 	#:: - Gem Choppers
-		quest::faction(76,-1); 		#:: - Deep Muses
+		quest::faction(238,1); 		#:: + Dark Reflection
+		quest::faction(245,-1); 		#:: - Eldritch Collective
+		quest::faction(255,-1); 	#:: - Gem Choppers
+		quest::faction(240,-1); 		#:: - Deep Muses
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

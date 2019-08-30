@@ -41,9 +41,9 @@ sub EVENT_ITEM {
 		#:: Give a random reward: 15019 - Spell: Armor of Faith, 15013 - Spell: Complete Healing, 15045 - Spell: Pacify
 		quest::summonitem(quest::ChooseRandom(15019, 15013, 15045));
 		#:: Set factions
-		quest::faction(258, 3); 		#:: + Priests of Marr
-		quest::faction(48, -10); 		#:: - Coalition of Tradefolk Underground
-		quest::faction(184, 3); 		#:: + Knights of Truth
+		quest::faction(362, 3); 		#:: + Priests of Marr
+		quest::faction(336, -10); 		#:: - Coalition of Tradefolk Underground
+		quest::faction(281, 3); 		#:: + Knights of Truth
 		quest::faction(311, 10); 		#:: + Steel Warriors
 		#:: Cast spell 12 - Healing
 		$npc->CastSpell(12,$userid);
@@ -58,11 +58,11 @@ sub EVENT_ITEM {
 		#:: Grant a large amount of experience
 		quest::exp(5000);
 		#:: Set factions
-		quest::faction(258, 3); 		#:: + Priests of Marr
-		quest::faction(48, -10); 		#:: - Coalition of Tradefolk Underground
-		quest::faction(184, 3); 		#:: + Knights of Truth
+		quest::faction(362, 3); 		#:: + Priests of Marr
+		quest::faction(336, -10); 		#:: - Coalition of Tradefolk Underground
+		quest::faction(281, 3); 		#:: + Knights of Truth
 		quest::faction(311, 10);	 	#:: + Steel Warriors
-		quest::faction(105, -10); 		#:: - Freeport Militia
+		quest::faction(330, -10); 		#:: - Freeport Militia
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

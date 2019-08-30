@@ -36,10 +36,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(56,1);	 	#:: + Craftkeepers
-		quest::faction(147,1);	 	#:: + High Guard of Erudin
-		quest::faction(145,5); 	#:: + High Council of Erudin
-		quest::faction(143,-10); 	#:: - Heretics
+		quest::faction(231,1);	 	#:: + Craftkeepers
+		quest::faction(267,1);	 	#:: + High Guard of Erudin
+		quest::faction(266,5); 	#:: + High Council of Erudin
+		quest::faction(265,-10); 	#:: - Heretics
 	}
 	#:: Turn in for 13123 - Label of Erud's Tonic 
 	if (plugin::check_handin(\%itemcount, 13123 => 1)) {
@@ -51,10 +51,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(56,5);	 	#:: + Craftkeepers
-		quest::faction(147,5);	 	#:: + High Guard of Erudin
-		quest::faction(145,5);	 	#:: + High Council of Erudin
-		quest::faction(143,-10); 	#:: - Heretics
+		quest::faction(231,5);	 	#:: + Craftkeepers
+		quest::faction(267,5);	 	#:: + High Guard of Erudin
+		quest::faction(266,5);	 	#:: + High Council of Erudin
+		quest::faction(265,-10); 	#:: - Heretics
 	}
 	plugin::return_items(\%itemcount);
 }

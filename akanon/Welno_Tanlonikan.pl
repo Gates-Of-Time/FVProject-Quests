@@ -35,10 +35,10 @@ sub EVENT_ITEM {
 		#:: Give a 13519 - Scuffed Tunic*
 		quest::summonitem(13519); 
 		#:: Set faction
-		quest::faction(76,100); 	# Deep Muses
-		quest::faction(210,15); 	# Merchants of Ak'Anon
-		quest::faction(71,-15); 	# Dark Reflection
-		quest::faction(115,15); 	# Gem Choppers
+		quest::faction(240,100); 	# Deep Muses
+		quest::faction(288,15); 	# Merchants of Ak'Anon
+		quest::faction(238,-15); 	# Dark Reflection
+		quest::faction(255,15); 	# Gem Choppers
 		quest::ding();
 		quest::exp(100);
 	}

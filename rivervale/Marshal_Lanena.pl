@@ -51,11 +51,11 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set factions
-			quest::faction(133,10); 	#:: + Guardians of the Vale
-			quest::faction(208,10); 	#:: + Mayor Gubbin
-			quest::faction(316,10); 	#:: + Storm Reapers
-			quest::faction(218,10); 	#:: + Merchants of Rivervale
-			quest::faction(88,-10); 	#:: - Dreadguard Outer
+			quest::faction(263,10); 	#:: + Guardians of the Vale
+			quest::faction(286,10); 	#:: + Mayor Gubbin
+			quest::faction(355,10); 	#:: + Storm Reapers
+			quest::faction(292,10); 	#:: + Merchants of Rivervale
+			quest::faction(334,-10); 	#:: - Dreadguard Outer
 		}
 		else {
 			quest::say("You are not yet in good standing with the Guardians of the Vale. Continue with your good work and then we may speak.");
@@ -79,11 +79,11 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set factions
-			quest::faction(133,10); 	#:: + Guardians of the Vale
-			quest::faction(208,10); 	#:: + Mayor Gubbin
-			quest::faction(316,10); 	#:: + Storm Reapers
-			quest::faction(218,10); 	#:: + Merchants of Rivervale
-			quest::faction(88,-10); 	#:: - Dreadguard Outer
+			quest::faction(263,10); 	#:: + Guardians of the Vale
+			quest::faction(286,10); 	#:: + Mayor Gubbin
+			quest::faction(355,10); 	#:: + Storm Reapers
+			quest::faction(292,10); 	#:: + Merchants of Rivervale
+			quest::faction(334,-10); 	#:: - Dreadguard Outer
 		}
 		else {
 			quest::say("You are not yet in good standing with the Guardians of the Vale. Continue with your good work and then we may speak.");

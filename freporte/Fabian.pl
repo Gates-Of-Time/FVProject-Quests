@@ -11,11 +11,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(192,5);		#:: + League of Antonican Bards
-		quest::faction(184,5);		#:: + Knights of Truth
-		quest::faction(135,5);		#:: + Guards of Qeynos
-		quest::faction(273,-5);		#:: - Ring of Scale
-		quest::faction(207,-5);		#:: - Mayong Mistmoore
+		quest::faction(284,5);		#:: + League of Antonican Bards
+		quest::faction(281,5);		#:: + Knights of Truth
+		quest::faction(262,5);		#:: + Guards of Qeynos
+		quest::faction(304,-5);		#:: - Ring of Scale
+		quest::faction(285,-5);		#:: - Mayong Mistmoore
 	}
 	#:: Match 13709 - Lute Strings
 	if (plugin::takeItems(13709 => 1)) {
@@ -36,11 +36,11 @@ sub EVENT_ITEM {
 		%cash = plugin::RandomCash(900,2000);
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum}); 
 		#:: Set factions
-		quest::faction(192,5);		#:: + League of Antonican Bards
-		quest::faction(184,5);		#:: + Knights of Truth
-		quest::faction(135,5);		#:: + Guards of Qeynos
-		quest::faction(273,-5);		#:: - Ring of Scale
-		quest::faction(207,-5);		#:: - Mayong Mistmoore		
+		quest::faction(284,5);		#:: + League of Antonican Bards
+		quest::faction(281,5);		#:: + Knights of Truth
+		quest::faction(262,5);		#:: + Guards of Qeynos
+		quest::faction(304,-5);		#:: - Ring of Scale
+		quest::faction(285,-5);		#:: - Mayong Mistmoore		
 	}
 	#:: 2007 era quest addition Match a 13710 - Etched Silver Coin
 	#if (plugin::takeItems(13710 => 1)) {
@@ -55,11 +55,11 @@ sub EVENT_ITEM {
 		#%cash = plugin::RandomCash(900,2000);
 		#quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum}); 
 		#:: Set factions
-		#quest::faction(192,5);		#:: + League of Antonican Bards
-		#quest::faction(184,5);		#:: + Knights of Truth
-		#quest::faction(135,5);		#:: + Guards of Qeynos
-		#quest::faction(273,-5);	#:: - Ring of Scale
-		#quest::faction(207,-5);	#:: - Mayong Mistmoore
+		#quest::faction(284,5);		#:: + League of Antonican Bards
+		#quest::faction(281,5);		#:: + Knights of Truth
+		#quest::faction(262,5);		#:: + Guards of Qeynos
+		#quest::faction(304,-5);	#:: - Ring of Scale
+		#quest::faction(285,-5);	#:: - Mayong Mistmoore
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

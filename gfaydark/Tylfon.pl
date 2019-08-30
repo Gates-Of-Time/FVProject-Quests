@@ -93,7 +93,7 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set faction
-		quest::faction(283,100);	#:: + Tunare's Scouts
+		quest::faction(316,100);	#:: + Tunare's Scouts
 	}
 	#:: LoY quest
 	#:: Match 54019 - Encrypted Scout Note
@@ -119,7 +119,7 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(283,5);		#:: + Tunare's Scouts
+		quest::faction(316,5);		#:: + Tunare's Scouts
 	}
 	#:: Match a 13322 - Emerald Shard
 	elsif (plugin::takeItems(13322=> 1)) {
@@ -137,7 +137,7 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set faction
-			quest::faction(283,100);	#:: + Tunare's Scouts
+			quest::faction(316,100);	#:: + Tunare's Scouts
 		}
 		else {
 			#:: Return unused items

@@ -25,11 +25,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(314, 2);		#:: + Storm Guard
-		quest::faction(169, 1);		#:: + Kazon Stormhammer
-		quest::faction(219, 1);		#:: + Miners Guild 249
-		quest::faction(215, 1);		#:: + Merchants of Kaladim
-		quest::faction(57, -1);		#:: - Craknek Warriors
+		quest::faction(312, 2);		#:: + Storm Guard
+		quest::faction(274, 1);		#:: + Kazon Stormhammer
+		quest::faction(293, 1);		#:: + Miners Guild 249
+		quest::faction(290, 1);		#:: + Merchants of Kaladim
+		quest::faction(232, -1);		#:: - Craknek Warriors
 	}
 	#:: Match a 13132 - Cracked Giant Scarab Carapace, two 13256 - Giant Scarab Legs, and 17 gold
 	elsif (plugin::takeItemsCoin(0,0,17,0, 13132 => 1, 13256 => 2)) {
@@ -39,11 +39,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(314, 3);		#:: + Storm Guard
-		quest::faction(169, 1);		#:: + Kazon Stormhammer
-		quest::faction(219, 1);		#:: + Miners Guild 249
-		quest::faction(215, 1);		#:: + Merchants of Kaladim
-		quest::faction(57, -1);		#:: - Craknek Warriors
+		quest::faction(312, 3);		#:: + Storm Guard
+		quest::faction(274, 1);		#:: + Kazon Stormhammer
+		quest::faction(293, 1);		#:: + Miners Guild 249
+		quest::faction(290, 1);		#:: + Merchants of Kaladim
+		quest::faction(232, -1);		#:: - Craknek Warriors
 	}
 	#:: Match a 13133 - Pristine Giant Scarab Carapace and 23 gold
 	elsif (plugin::takeItemsCoin(0,0,23,0, 13133 => 1)) {
@@ -53,11 +53,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(314, 5);		#:: + Storm Guard
-		quest::faction(169, 1);		#:: + Kazon Stormhammer
-		quest::faction(219, 1);		#:: + Miners Guild 249
-		quest::faction(215, 1);		#:: + Merchants of Kaladim
-		quest::faction(57, -1);		#:: - Craknek Warriors
+		quest::faction(312, 5);		#:: + Storm Guard
+		quest::faction(274, 1);		#:: + Kazon Stormhammer
+		quest::faction(293, 1);		#:: + Miners Guild 249
+		quest::faction(290, 1);		#:: + Merchants of Kaladim
+		quest::faction(232, -1);		#:: - Craknek Warriors
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

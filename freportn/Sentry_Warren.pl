@@ -18,9 +18,9 @@ sub EVENT_ITEM {
 		#:: Give a small amount of xp
 		quest::exp(100);
 		#:: Set faction
-		quest::faction(258,5); 		#:: + Priests of Marr
-		quest::faction(105,-10); 	#:: - Freeport Militia
-		quest::faction(184,5); 		#:: + Knights of Truth	
+		quest::faction(362,5); 		#:: + Priests of Marr
+		quest::faction(330,-10); 	#:: - Freeport Militia
+		quest::faction(281,5); 		#:: + Knights of Truth	
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

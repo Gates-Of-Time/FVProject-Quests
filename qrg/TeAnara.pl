@@ -43,11 +43,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(159, 100); 	#:: + Jaggedpine Treefolk
-		quest::faction(265, 25); 	#:: + Protectors of Pine
-		quest::faction(267, 15); 	#:: + QRG Protected Animals
-		quest::faction(347, -25); 	#:: - Unkempt Druids
-		quest::faction(135, 15); 	#:: + Guards of Qeynos
+		quest::faction(272, 100); 	#:: + Jaggedpine Treefolk
+		quest::faction(302, 25); 	#:: + Protectors of Pine
+		quest::faction(343, 15); 	#:: + QRG Protected Animals
+		quest::faction(324, -25); 	#:: - Unkempt Druids
+		quest::faction(262, 15); 	#:: + Guards of Qeynos
 		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
@@ -59,11 +59,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(159, 10); 	#:: + Jaggedpine Treefolk
-		quest::faction(265, 10); 	#:: + Protectors of Pine
-		quest::faction(267, 10); 	#:: + QRG Protected Animals
-		quest::faction(347, -15); 	#:: - Unkempt Druids
-		quest::faction(135, 10); 	#:: + Guards of Qeynos
+		quest::faction(272, 10); 	#:: + Jaggedpine Treefolk
+		quest::faction(302, 10); 	#:: + Protectors of Pine
+		quest::faction(343, 10); 	#:: + QRG Protected Animals
+		quest::faction(324, -15); 	#:: - Unkempt Druids
+		quest::faction(262, 10); 	#:: + Guards of Qeynos
 		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
@@ -73,11 +73,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(159, 10); 	#:: + Jaggedpine Treefolk
-		quest::faction(265, 10); 	#:: + Protectors of Pine
-		quest::faction(267, 10); 	#:: + QRG Protected Animals
-		quest::faction(347, -15); 	#:: - Unkempt Druids
-		quest::faction(135, 10); 	#:: + Guards of Qeynos
+		quest::faction(272, 10); 	#:: + Jaggedpine Treefolk
+		quest::faction(302, 10); 	#:: + Protectors of Pine
+		quest::faction(343, 10); 	#:: + QRG Protected Animals
+		quest::faction(324, -15); 	#:: - Unkempt Druids
+		quest::faction(262, 10); 	#:: + Guards of Qeynos
 		#:: Grant a moderate amount of experience
 		quest::exp(1600);
 		#:: Create a hash for storing cash - 1100 to 1200cp

@@ -27,10 +27,10 @@ sub EVENT_ITEM {
 			#:: Grant a small amount of experience
 			quest::exp(500);
 			#:: Set factions - Note that these factions were bugged on live and 'fixed' here.
-			quest::faction(128, 5);		#:: + Green Blood Knights
-			quest::faction(46, 2);		#:: + Clurg
-			quest::faction(314, -1);	#:: - Storm Guard
-			quest::faction(292, -1);	#:: - Shadowknights of Night Keep
+			quest::faction(261, 5);		#:: + Green Blood Knights
+			quest::faction(228, 2);		#:: + Clurg
+			quest::faction(312, -1);	#:: - Storm Guard
+			quest::faction(308, -1);	#:: - Shadowknights of Night Keep
 		}
 		#:: Match if faction is Indifferent or worse
 		else {

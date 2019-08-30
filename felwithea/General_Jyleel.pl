@@ -34,9 +34,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(43,5); 		#:: + Clerics of Tunare
-		quest::faction(178,5); 		#:: + King Tearis Thex
-		quest::faction(8,25); 		#:: + Anti Mage
+		quest::faction(226,5); 		#:: + Clerics of Tunare
+		quest::faction(279,5); 		#:: + King Tearis Thex
+		quest::faction(5001,25); 		#:: + Anti Mage
 	}
 	#:: Turn in for the Orc Runner Quest , 13226 Runner Pouch
 	if (plugin::takeItems(13226=> 1)) {
@@ -50,9 +50,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(43,10); 		#:: + Clerics of Tunare
-		quest::faction(178,10); 	#:: + King Tearis Thex
-		quest::faction(8,7); 		#:: + Anti Mage
+		quest::faction(226,10); 		#:: + Clerics of Tunare
+		quest::faction(279,10); 	#:: + King Tearis Thex
+		quest::faction(5001,7); 		#:: + Anti Mage
 	}
 	#:: Turn in for the Orc Runner Quest , 18840 A Sealed Letter
 	if (plugin::takeItems(18840=> 1)) {
@@ -62,9 +62,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(43,5); 		#:: + Clerics of Tunare
-		quest::faction(178,5); 		#:: + King Tearis Thex
-		quest::faction(8,3); 		#:: + Anti Mage
+		quest::faction(226,5); 		#:: + Clerics of Tunare
+		quest::faction(279,5); 		#:: + King Tearis Thex
+		quest::faction(5001,3); 		#:: + Anti Mage
 	}
 	#:: Turn in for the Falchion Quest , 12330 A Large Locked Crate, 12329 Blue Orc Head, 13227 Black Heart
 	if (plugin::takeItems(12330 => 1, 12329 => 1, 13227 => 1)) {
@@ -76,9 +76,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(43,5); 		#:: + Clerics of Tunare
-		quest::faction(178,5); 		#:: + King Tearis Thex
-		quest::faction(8,3); 		#:: + Anti Mage
+		quest::faction(226,5); 		#:: + Clerics of Tunare
+		quest::faction(279,5); 		#:: + King Tearis Thex
+		quest::faction(5001,3); 		#:: + Anti Mage
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

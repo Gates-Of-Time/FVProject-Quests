@@ -32,10 +32,10 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(128, 10);	#:: + Green Blood Knights
-		quest::faction(46, 5);		#:: + Clurg
-		quest::faction(314, -1);	#:: - Storm Guard
-		quest::faction(292, -1);	#:: - Shadowknights of Night Keep
+		quest::faction(261, 10);	#:: + Green Blood Knights
+		quest::faction(228, 5);		#:: + Clurg
+		quest::faction(312, -1);	#:: - Storm Guard
+		quest::faction(308, -1);	#:: - Shadowknights of Night Keep
 	}
 	#:: Match two 13367 - Mystic Doll
 	elsif (plugin::takeItems(13367 => 2)) {
@@ -53,10 +53,10 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set factions
-			quest::faction(128, 10);	#:: + Green Blood Knights
-			quest::faction(46, 5);		#:: + Clurg
-			quest::faction(314, -1);	#:: - Storm Guard
-			quest::faction(292, -1);	#:: - Shadowknights of Night Keep
+			quest::faction(261, 10);	#:: + Green Blood Knights
+			quest::faction(228, 5);		#:: + Clurg
+			quest::faction(312, -1);	#:: - Storm Guard
+			quest::faction(308, -1);	#:: - Shadowknights of Night Keep
 		}
 		#:: Match if faction is Apprehensive or worse
 		else {

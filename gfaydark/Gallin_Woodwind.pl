@@ -24,10 +24,10 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(92,40);		#:: + Emerald Warriors
-		quest::faction(155,-6);		#:: - Indigo Brotherhood
-		quest::faction(212,4);		#:: + Merchants of Felwithe
-		quest::faction(174,4);		#:: + Kelethin Merchants
+		quest::faction(326,40);		#:: + Emerald Warriors
+		quest::faction(270,-6);		#:: - Indigo Brotherhood
+		quest::faction(325,4);		#:: + Merchants of Felwithe
+		quest::faction(276,4);		#:: + Kelethin Merchants
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

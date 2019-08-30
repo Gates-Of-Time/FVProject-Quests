@@ -36,10 +36,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(71,100); 	#:: + Dark Reflection
-		quest::faction(91,-10); 	#:: - Eldritch Collective
-		quest::faction(115,-10); 	#:: - Gem Choppers
-		quest::faction(76,-10); 	#:: - Deep Muses	
+		quest::faction(238,100); 	#:: + Dark Reflection
+		quest::faction(245,-10); 	#:: - Eldritch Collective
+		quest::faction(255,-10); 	#:: - Gem Choppers
+		quest::faction(240,-10); 	#:: - Deep Muses	
 	}
 	plugin::return_items(\%itemcount);
 }

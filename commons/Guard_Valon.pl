@@ -29,10 +29,10 @@ sub EVENT_ITEM {
 		#:: Give cash reward
 		quest::givecash(0,0,1,0);
 		#:: Set factions
-		quest::faction(105,10);		#:: Freeport Militia
-		quest::faction(48,10);		#:: Coalition of Tradefolk Underground
-		quest::faction(184,-30);	#:: Knights of Truth
-		quest::faction(258,-30);	#:: Priests of Marr
+		quest::faction(330,10);		#:: Freeport Militia
+		quest::faction(336,10);		#:: Coalition of Tradefolk Underground
+		quest::faction(281,-30);	#:: Knights of Truth
+		quest::faction(362,-30);	#:: Priests of Marr
 	}
 	#:: Match 12272 - Bag of Cutthroat Rings
  	if (plugin::check_handin(\%itemcount, 12272 => 1)) {
@@ -42,10 +42,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(105,10);		#:: Freeport Militia
-		quest::faction(48,10);		#:: Coalition of Tradefolk Underground
-		quest::faction(184,-30);	#:: Knights of Truth
-		quest::faction(258,-30);	#:: Priests of Marr
+		quest::faction(330,10);		#:: Freeport Militia
+		quest::faction(336,10);		#:: Coalition of Tradefolk Underground
+		quest::faction(281,-30);	#:: Knights of Truth
+		quest::faction(362,-30);	#:: Priests of Marr
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

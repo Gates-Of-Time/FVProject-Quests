@@ -26,10 +26,10 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(11,1); 			#:: + Arcane Scientists
-		quest::faction(235,-1); 		#:: - Knights of Truth
-		quest::faction(105,-1); 		#:: - Freeport Militia
-		quest::faction(184,1); 			#:: + Knights of Truth
+		quest::faction(220,1); 			#:: + Arcane Scientists
+		quest::faction(296,-1); 		#:: - Knights of Truth
+		quest::faction(330,-1); 		#:: - Freeport Militia
+		quest::faction(281,1); 			#:: + Knights of Truth
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

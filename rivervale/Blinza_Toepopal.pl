@@ -45,11 +45,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions				
-		quest::faction(77, 1);		#:: + Deeppockets
-		quest::faction(218, 1);		#:: + Merchants of Rivervale
-		quest::faction(31, -2);		#:: - Carson McCabe
-		quest::faction(33, -2);		#:: - Circle of Unseen Hands
-		quest::faction(48, -2);		#:: - Coalition of Tradefolk Underground
+		quest::faction(241, 1);		#:: + Deeppockets
+		quest::faction(292, 1);		#:: + Merchants of Rivervale
+		quest::faction(329, -2);		#:: - Carson McCabe
+		quest::faction(223, -2);		#:: - Circle of Unseen Hands
+		quest::faction(336, -2);		#:: - Coalition of Tradefolk Underground
 	}
 	#:: Match a 13957 - Crate of Fine Carrots
 	elsif (plugin::takeItems(13957 => 1)) {
@@ -63,11 +63,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions				
-		quest::faction(77, 5);		#:: + Deeppockets
-		quest::faction(218, 5);		#:: + Merchants of Rivervale
-		quest::faction(31, -10);	#:: - Carson McCabe
-		quest::faction(33, -10);	#:: - Circle of Unseen Hands
-		quest::faction(48, -10);	#:: - Coalition of Tradefolk Underground
+		quest::faction(241, 5);		#:: + Deeppockets
+		quest::faction(292, 5);		#:: + Merchants of Rivervale
+		quest::faction(329, -10);	#:: - Carson McCabe
+		quest::faction(223, -10);	#:: - Circle of Unseen Hands
+		quest::faction(336, -10);	#:: - Coalition of Tradefolk Underground
 	}
 	#:: Match a 13971 - Crate of Rotten Carrots
 	elsif (plugin::takeItems(13971 => 1)) {
@@ -75,11 +75,11 @@ sub EVENT_ITEM {
 		#:: Give a 13972 - Crate of Rotten Carrots
 		quest::summonitem(13972);
 		#:: Set factions				
-		quest::faction(77, -4);		#:: + Deeppockets
-		quest::faction(218, -4);	#:: + Merchants of Rivervale
-		quest::faction(31, 2);		#:: - Carson McCabe
-		quest::faction(33, 2);		#:: - Circle of Unseen Hands
-		quest::faction(48, 2);		#:: - Coalition of Tradefolk Underground
+		quest::faction(241, -4);		#:: + Deeppockets
+		quest::faction(292, -4);	#:: + Merchants of Rivervale
+		quest::faction(329, 2);		#:: - Carson McCabe
+		quest::faction(223, 2);		#:: - Circle of Unseen Hands
+		quest::faction(336, 2);		#:: - Coalition of Tradefolk Underground
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

@@ -21,9 +21,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(214,10); 	#:: + Merchants of Highpass
-		quest::faction(149,10); 	#:: + Highpass Guards
-		quest::faction(31,10); 		#:: + Carson McCabe
+		quest::faction(331,10); 	#:: + Merchants of Highpass
+		quest::faction(332,10); 	#:: + Highpass Guards
+		quest::faction(329,10); 		#:: + Carson McCabe
 	}
 	plugin::return_items(\%itemcount);
 }

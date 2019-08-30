@@ -32,10 +32,10 @@ sub EVENT_ITEM {
 		#:: Give a 13524 - Dark Gold Felt Robe*
 		quest::summonitem(13524);
 		#:: Set factions
-		quest::faction(76,-10); 	# Deep Muses
-		quest::faction(91,-10); 	# Eldritch Collective
-		quest::faction(71,100); 	# Dark Reflection
-		quest::faction(115,-10); 	# Gem Choppers
+		quest::faction(240,-10); 	# Deep Muses
+		quest::faction(245,-10); 	# Eldritch Collective
+		quest::faction(238,100); 	# Dark Reflection
+		quest::faction(255,-10); 	# Gem Choppers
 		quest::ding();
 		quest::exp(100);
 	}

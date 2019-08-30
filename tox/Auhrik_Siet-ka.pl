@@ -23,11 +23,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(143,5);	#:: + Heretics
-		quest::faction(79,-5);	#:: - Deepwater Knights
-		quest::faction(112,-5);	#:: - Gate Callers
-		quest::faction(56,-5);	#:: - Craftkeepers
-		quest::faction(60,-5);	#:: - Crimson Hands
+		quest::faction(265,5);	#:: + Heretics
+		quest::faction(242,-5);	#:: - Deepwater Knights
+		quest::faction(254,-5);	#:: - Gate Callers
+		quest::faction(231,-5);	#:: - Craftkeepers
+		quest::faction(233,-5);	#:: - Crimson Hands
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

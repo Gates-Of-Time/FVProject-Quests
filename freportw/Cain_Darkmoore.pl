@@ -26,9 +26,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(105,-1); 		#:: - Freeport Militia
+		quest::faction(330,-1); 		#:: - Freeport Militia
 		quest::faction(311,1); 			#:: + Steel Warriors
-		quest::faction(184,1); 			#:: + Knights of Truth
+		quest::faction(281,1); 			#:: + Knights of Truth
 	}
 	#:: Turn in for 18742 - A Tattered Note
 	if (plugin::takeItems(18742 => 1 )) {
@@ -40,11 +40,11 @@ sub EVENT_ITEM {
 		#:: Give item 13572 - Dirty Training Tunic
 		quest::summonitem(13572);
 		#:: Set faction
-		quest::faction(105,-15); 		#:: - Freeport Militia
+		quest::faction(330,-15); 		#:: - Freeport Militia
 		quest::faction(311,100); 		#:: + Steel Warriors
-		quest::faction(53,-15); 		#:: - Corrupt Qeynos Guards
-		quest::faction(135,20); 		#:: + Guards of Qeynos
-		quest::faction(184,1); 			#:: + Knights of Truth
+		quest::faction(230,-15); 		#:: - Corrupt Qeynos Guards
+		quest::faction(262,20); 		#:: + Guards of Qeynos
+		quest::faction(281,1); 			#:: + Knights of Truth
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

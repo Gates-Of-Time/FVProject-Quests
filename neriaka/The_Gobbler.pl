@@ -35,7 +35,7 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(150);
 		#:: Set faction
-		quest::faction(378,10);		#:: + Neriak Ogre
+		quest::faction(353,10);		#:: + Neriak Ogre
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

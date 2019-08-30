@@ -42,9 +42,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set Factions
-		quest::faction(213, 25); 	#:: + Merchants of Halas
-		quest::faction(361, 18);	#:: + Wolves of the North
-		quest::faction(294, 18);	#:: + Shamen of Justice
+		quest::faction(328, 25); 	#:: + Merchants of Halas
+		quest::faction(320, 18);	#:: + Wolves of the North
+		quest::faction(327, 18);	#:: + Shamen of Justice
 	}
 	#:: Match 12275 - Foot of Candlestick, 12276 - Stem of Candlestick, 12282 - Soil of Underfoot and 13953 - Honeycomb
 	if (plugin::takeItems(12275 => 1, 12276 => 1, 12282 => 1, 13953 => 1)) {
@@ -56,9 +56,9 @@ sub EVENT_ITEM {
 		#:: Grant a large amount of experience
 		quest::exp(50000);
 		#:: Set Faction
-		quest::faction(213, 3); 	#:: + Merchants of Halas
-		quest::faction(361, 3);		#:: + Wolves of the North
-		quest::faction(294, 3);		#:: + Shamen of Justice
+		quest::faction(328, 3); 	#:: + Merchants of Halas
+		quest::faction(320, 3);		#:: + Wolves of the North
+		quest::faction(327, 3);		#:: + Shamen of Justice
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

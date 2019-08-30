@@ -47,11 +47,11 @@ sub EVENT_ITEM {
 		#:: Give a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(77, 5);		#:: + Deeppockets
-		quest::faction(33, 5);		#:: + Circle of Unseen Hands
-		quest::faction(218, -5);	#:: - Merchants of Rivervale
-		quest::faction(31, 5);		#:: + Carson McCabe
-		quest::faction(48, 5);		#:: + Coalition of Tradefolk Underground
+		quest::faction(241, 5);		#:: + Deeppockets
+		quest::faction(223, 5);		#:: + Circle of Unseen Hands
+		quest::faction(292, -5);	#:: - Merchants of Rivervale
+		quest::faction(329, 5);		#:: + Carson McCabe
+		quest::faction(336, 5);		#:: + Coalition of Tradefolk Underground
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

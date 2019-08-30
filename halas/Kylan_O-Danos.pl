@@ -38,9 +38,9 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set faction
-		quest::faction(361, 100);	#:: + Wolves of the North
-		quest::faction(294, 20);	#:: + Shamen of Justice
-		quest::faction(213, 25);	#:: + Merchants of Halas
+		quest::faction(320, 100);	#:: + Wolves of the North
+		quest::faction(327, 20);	#:: + Shamen of Justice
+		quest::faction(328, 25);	#:: + Merchants of Halas
 		quest::faction(311, 5);		#:: + Steel Warriors
 	}
 	#:: Return unused items

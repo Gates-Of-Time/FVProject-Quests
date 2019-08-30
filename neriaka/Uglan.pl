@@ -15,12 +15,12 @@ sub EVENT_ITEM {
 			#:: Grant a small amount of experience
 			quest::exp(500);
 			#:: Set factions
-			quest::faction(322, 10);	#:: + The Dead
-			quest::faction(268, 10);	#:: + Queen Cristanos Thex
-			quest::faction(177, -10);	#:: - King Naythox Thex
-			quest::faction(170, -10);	#:: - Keepers of the Art
-			quest::faction(91, -10);	#:: - Eldritch Collective
-			quest::faction(260,-10);	#:: - Primordial Malice
+			quest::faction(239, 10);	#:: + The Dead
+			quest::faction(303, 10);	#:: + Queen Cristanos Thex
+			quest::faction(278, -10);	#:: - King Naythox Thex
+			quest::faction(275, -10);	#:: - Keepers of the Art
+			quest::faction(245, -10);	#:: - Eldritch Collective
+			quest::faction(1522,-10);	#:: - Primordial Malice
 		}
 		#:: Match if the player is any other race besides Ogre
 		else {
@@ -30,9 +30,9 @@ sub EVENT_ITEM {
 			#:: Grant a small amount of experience
 			quest::exp(500);
 			#:: Set factions
-			quest::faction(46, 10);		#:: + Clurg
-			quest::faction(57, 10);		#:: + Craknek Warriors
-			quest::faction(128, -10);	#:: - Green Blood Knights
+			quest::faction(228, 10);		#:: + Clurg
+			quest::faction(232, 10);		#:: + Craknek Warriors
+			quest::faction(261, -10);	#:: - Green Blood Knights
 		}
 	}
 	#:: Return unused items

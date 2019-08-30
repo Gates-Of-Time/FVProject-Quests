@@ -22,10 +22,10 @@ sub EVENT_ITEM {
 		quest::summonitem(13244);
 		quest::ding();
 		#:: Set factions
-		quest::faction(213,1);	#:: Merchants of Halas
-		quest::faction(294,1);	#:: Shaman of Justice
+		quest::faction(328,1);	#:: Merchants of Halas
+		quest::faction(327,1);	#:: Shaman of Justice
 		quest::faction(311,1);	#:: Steel Warriors
-		quest::faction(361,1);	#:: Wolves of the North
+		quest::faction(320,1);	#:: Wolves of the North
 		quest::exp(150);
 	}
 	#:: Return unused items

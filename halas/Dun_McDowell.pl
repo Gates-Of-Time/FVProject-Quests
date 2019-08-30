@@ -38,7 +38,7 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set faction
-		quest::faction(275, 100);	#:: + Rogues of the White Rose
+		quest::faction(305, 100);	#:: + Rogues of the White Rose
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

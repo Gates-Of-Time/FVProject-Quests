@@ -41,10 +41,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(361,1); 		#:: + Wolves of the North
-		quest::faction(294,1); 		#:: + Shaman of Justice
-		quest::faction(143,1); 		#:: + Heretics
-		quest::faction(147,1); 		#:: + High Guard of Erudin
+		quest::faction(320,1); 		#:: + Wolves of the North
+		quest::faction(327,1); 		#:: + Shaman of Justice
+		quest::faction(265,1); 		#:: + Heretics
+		quest::faction(267,1); 		#:: + High Guard of Erudin
 	}
 	#:: Turn in for 13814 -  L.S. Pouch
 	if (plugin::check_handin(\%itemcount, 13814=> 1)) {
@@ -58,11 +58,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(361,2); 		#:: + Wolves of the North
-		quest::faction(294,2); 		#:: + Shaman of Justice
-		quest::faction(213,2); 		#:: + Merchants of Halas
+		quest::faction(320,2); 		#:: + Wolves of the North
+		quest::faction(327,2); 		#:: + Shaman of Justice
+		quest::faction(328,2); 		#:: + Merchants of Halas
 		quest::faction(311,1); 		#:: + Steel Warriors
-		quest::faction(275,-2); 	#:: + Rogues of the White Rose
+		quest::faction(305,-2); 	#:: + Rogues of the White Rose
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

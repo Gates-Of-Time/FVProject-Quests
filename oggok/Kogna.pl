@@ -21,9 +21,9 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(46, 5);		#:: + Clurg
-		quest::faction(57, 1);		#:: + Craknek Warriors
-		quest::faction(128, -1);	#:: - Green Blood Knights
+		quest::faction(228, 5);		#:: + Clurg
+		quest::faction(232, 1);		#:: + Craknek Warriors
+		quest::faction(261, -1);	#:: - Green Blood Knights
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

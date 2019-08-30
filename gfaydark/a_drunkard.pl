@@ -32,9 +32,9 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(300);
 		#:: Set faction
-		quest::faction(8, 20);		#:: + Anti-Mage
-		quest::faction(43, 20);		#:: + Clerics of Tunare
-		quest::faction(178, 20);	#:: + King Tearis Thex
+		quest::faction(5001, 20);		#:: + Anti-Mage
+		quest::faction(226, 20);		#:: + Clerics of Tunare
+		quest::faction(279, 20);	#:: + King Tearis Thex
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

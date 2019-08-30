@@ -38,7 +38,7 @@ sub EVENT_SAY {
 			quest::ding();
 			#:: Give 13936 - Squad Ring
 			quest::summonitem(13936);
-			quest::faction(133,-500);  #:: - Guardians of the Vale
+			quest::faction(263,-500);  #:: - Guardians of the Vale
 		}
 		#:: Match if faction is indifferent
 		elsif ($faction < 5) {

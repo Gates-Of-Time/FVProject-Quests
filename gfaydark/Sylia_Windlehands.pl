@@ -42,7 +42,7 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set faction
-		quest::faction(306,100);	#:: + Song Weavers
+		quest::faction(401,100);	#:: + Song Weavers
 	}
 	#:: Match four 13099 - Spiderling Silk
 	if (plugin::takeItems(13099  => 4)) {
@@ -58,7 +58,7 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set faction
-		quest::faction(306,10);		#:: + Song Weavers
+		quest::faction(401,10);		#:: + Song Weavers
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

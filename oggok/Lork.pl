@@ -24,9 +24,9 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(50);
 		#:: Set factions
-		quest::faction(57,10);		#:: + Craknek Warriors
-		quest::faction(46,10);		#:: + Clurg
-		quest::faction(128,-10);	#:: - Green Blood Knights
+		quest::faction(232,10);		#:: + Craknek Warriors
+		quest::faction(228,10);		#:: + Clurg
+		quest::faction(261,-10);	#:: - Green Blood Knights
 	}
 	#:: Match a 18840 - Sealed Letter
 	elsif (plugin::takeItems(18840 => 1)) {
@@ -38,9 +38,9 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(57,10);		#:: + Craknek Warriors
-		quest::faction(46,10);		#:: + Clurg
-		quest::faction(128,-10);	#:: - Green Blood Knights
+		quest::faction(232,10);		#:: + Craknek Warriors
+		quest::faction(228,10);		#:: + Clurg
+		quest::faction(261,-10);	#:: - Green Blood Knights
 	}
 	#:: Match a 13358 - Black Heart and a 13227 - Black Heart
 	elsif (plugin::takeItems(13358 => 1, 13227 => 1)) {
@@ -52,9 +52,9 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(57,10);		#:: + Craknek Warriors
-		quest::faction(46,10);		#:: + Clurg
-		quest::faction(128,-10);	#:: - Green Blood Knights   
+		quest::faction(232,10);		#:: + Craknek Warriors
+		quest::faction(228,10);		#:: + Clurg
+		quest::faction(261,-10);	#:: - Green Blood Knights   
 	}
   	#:: Kunark turn in for 20523 - Dismembered Thumb
 	#:: if (plugin::takeItems(20523 => 1)) {

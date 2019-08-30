@@ -38,11 +38,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(192, 10); 		#:: + League of Antonican Bards
-		quest::faction(184, 15); 		#:: + Knights of Truth
-		quest::faction(135, -10); 		#:: + Guard of Qeynos
-		quest::faction(273, -30); 		#:: - Ring of Scale
-		quest::faction(207, -30); 		#:: - Mayong Mistmoore
+		quest::faction(284, 10); 		#:: + League of Antonican Bards
+		quest::faction(281, 15); 		#:: + Knights of Truth
+		quest::faction(262, -10); 		#:: + Guard of Qeynos
+		quest::faction(304, -30); 		#:: - Ring of Scale
+		quest::faction(285, -30); 		#:: - Mayong Mistmoore
 	}
 	#:: Match a 18166 - Pouch of Mail
 	if (plugin::takeItems(18156 => 1 )) {
@@ -56,11 +56,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(192, 10); 		#:: + League of Antonican Bards
-		quest::faction(184, 15); 		#:: + Knights of Truth
-		quest::faction(135, -10); 		#:: + Guard of Qeynos
-		quest::faction(273, -30); 		#:: - Ring of Scale
-		quest::faction(207, -30); 		#:: - Mayong Mistmoore
+		quest::faction(284, 10); 		#:: + League of Antonican Bards
+		quest::faction(281, 15); 		#:: + Knights of Truth
+		quest::faction(262, -10); 		#:: + Guard of Qeynos
+		quest::faction(304, -30); 		#:: - Ring of Scale
+		quest::faction(285, -30); 		#:: - Mayong Mistmoore
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

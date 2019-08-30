@@ -51,9 +51,9 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(44,100); 	#:: + Clerics of Underfoot
-		quest::faction(169,100); 	#:: + Kazon Stormhammer
-		quest::faction(219,75); 	#:: + Miners Guild 249
+		quest::faction(227,100); 	#:: + Clerics of Underfoot
+		quest::faction(274,100); 	#:: + Kazon Stormhammer
+		quest::faction(293,75); 	#:: + Miners Guild 249
 	}
 	#:: Match if faction is Amiable or better, and four 12106 - Fairy Dust 
 	elsif (($faction <= 4) && (plugin::takeItems(12106 => 4))) {
@@ -69,9 +69,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(44,2);		#:: + Clerics of Underfoot
-		quest::faction(169,2); 		#:: + Kazon Stormhammer
-		quest::faction(219,2); 		#:: + Miners Guild 249
+		quest::faction(227,2);		#:: + Clerics of Underfoot
+		quest::faction(274,2); 		#:: + Kazon Stormhammer
+		quest::faction(293,2); 		#:: + Miners Guild 249
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

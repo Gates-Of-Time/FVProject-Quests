@@ -23,11 +23,11 @@ sub EVENT_ITEM {
 		#:: Give a 13697 - Staff of the Abattoir Initiate
 		quest::summonitem(13697);
 		#:: Set factions
-		quest::faction(143,10);		# + Heretics
-		quest::faction(112,-30);	# - Gate Callers
-		quest::faction(79,-30);		# - Deepwater Knights
-		quest::faction(56,-30);		# - Craftkeepers
-		quest::faction(60,-30);		# - Crimson Hands
+		quest::faction(265,10);		# + Heretics
+		quest::faction(254,-30);	# - Gate Callers
+		quest::faction(242,-30);		# - Deepwater Knights
+		quest::faction(231,-30);		# - Craftkeepers
+		quest::faction(233,-30);		# - Crimson Hands
 	}
 	#:: Match a 9967 - Karran's Head
 	if (plugin::check_handin(\%itemcount, 9967 => 1)) {
@@ -41,11 +41,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(143,10);		# + Heretics
-		quest::faction(112,-30);	# - Gate Callers
-		quest::faction(79,-30);		# - Deepwater Knights
-		quest::faction(56,-30);		# - Craftkeepers
-		quest::faction(60,-30);		# - Crimson Hands
+		quest::faction(265,10);		# + Heretics
+		quest::faction(254,-30);	# - Gate Callers
+		quest::faction(242,-30);		# - Deepwater Knights
+		quest::faction(231,-30);		# - Craftkeepers
+		quest::faction(233,-30);		# - Crimson Hands
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

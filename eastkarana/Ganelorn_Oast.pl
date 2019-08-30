@@ -16,11 +16,11 @@ sub EVENT_ITEM {
 		quest::ding();
 		quest::exp(1000);
 		#:: Set factions
-		quest::faction(99,50);	#:: Faydark's Champions
-		quest::faction(178,50);	#:: King Tearis Thex
-		quest::faction(43,50);	#:: Clerics of Tunare
-		quest::faction(304,50);	#:: Soldiers of Tunare
-		quest::faction(63,-50);	#:: Crushbone Orcs
+		quest::faction(246,50);	#:: Faydark's Champions
+		quest::faction(279,50);	#:: King Tearis Thex
+		quest::faction(226,50);	#:: Clerics of Tunare
+		quest::faction(310,50);	#:: Soldiers of Tunare
+		quest::faction(234,-50);	#:: Crushbone Orcs
 	}
 	#:: Match 20878 - Symbol of Achievement
 	if (plugin::check_handin(\%itemcount, 20878 => 1)) {
@@ -38,11 +38,11 @@ sub EVENT_ITEM {
 		quest::ding();
 		quest::exp(1000);
 		#:: Set factions
-		quest::faction(99,50);	#:: Faydark's Champions
-		quest::faction(178,50);	#:: King Tearis Thex
-		quest::faction(43,50);	#:: Clerics of Tunare
-		quest::faction(304,50);	#:: Soldiers of Tunare
-		quest::faction(63,-50);	#:: Crushbone Orcs
+		quest::faction(246,50);	#:: Faydark's Champions
+		quest::faction(279,50);	#:: King Tearis Thex
+		quest::faction(226,50);	#:: Clerics of Tunare
+		quest::faction(310,50);	#:: Soldiers of Tunare
+		quest::faction(234,-50);	#:: Crushbone Orcs
 	}
 	#:: Match 20882 - Poacher's Head
 	if (plugin::check_handin(\%itemcount, 20882 => 1)) {
@@ -52,11 +52,11 @@ sub EVENT_ITEM {
 		quest::ding();
 		quest::exp(1000);
 		#:: Set factions
-		quest::faction(99,50);	#:: Faydark's Champions
-		quest::faction(178,50);	#:: King Tearis Thex
-		quest::faction(43,50);	#:: Clerics of Tunare
-		quest::faction(304,50);	#:: Soldiers of Tunare
-		quest::faction(63,-50);	#:: Crushbone Orcs
+		quest::faction(246,50);	#:: Faydark's Champions
+		quest::faction(279,50);	#:: King Tearis Thex
+		quest::faction(226,50);	#:: Clerics of Tunare
+		quest::faction(310,50);	#:: Soldiers of Tunare
+		quest::faction(234,-50);	#:: Crushbone Orcs
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

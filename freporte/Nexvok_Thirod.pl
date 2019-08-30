@@ -15,9 +15,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(86,100); 	#:: + Dismal Rage
-		quest::faction(184,-15); 	#:: - Knights of Truth
-		quest::faction(235,20); 	#:: + Opal Dark Briar
+		quest::faction(271,100); 	#:: + Dismal Rage
+		quest::faction(281,-15); 	#:: - Knights of Truth
+		quest::faction(296,20); 	#:: + Opal Dark Briar
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

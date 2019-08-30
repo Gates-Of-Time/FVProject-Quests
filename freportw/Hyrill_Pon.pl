@@ -14,10 +14,10 @@ sub EVENT_ITEM {
 			#:: Give a small amount of xp
 			quest::exp(1000);
 			#:: Set faction
-			quest::faction(51,3); 			#:: + Commons Residents
-			quest::faction(258,3); 			#:: + Priests of Marr
-			quest::faction(105,3); 			#:: + Freeport Militia
-			quest::faction(184,3); 			#:: + Knights of Truth
+			quest::faction(346,3); 			#:: + Commons Residents
+			quest::faction(362,3); 			#:: + Priests of Marr
+			quest::faction(330,3); 			#:: + Freeport Militia
+			quest::faction(281,3); 			#:: + Knights of Truth
 		}
 		else {
 			quest::say("I have no use for this item, $name.  You can have it back.");

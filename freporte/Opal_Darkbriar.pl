@@ -17,11 +17,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(235,100); 	#:: + Opal Dark Briar
-		quest::faction(86,25); 		#:: + Dismal Rage
-		quest::faction(322,25); 	#:: + The Dead
-		quest::faction(71,25); 		#:: + Dark Reflection
-		quest::faction(21,25); 		#:: + Bloodsabers		
+		quest::faction(296,100); 	#:: + Opal Dark Briar
+		quest::faction(271,25); 		#:: + Dismal Rage
+		quest::faction(239,25); 	#:: + The Dead
+		quest::faction(238,25); 		#:: + Dark Reflection
+		quest::faction(221,25); 		#:: + Bloodsabers		
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

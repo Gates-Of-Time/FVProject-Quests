@@ -84,11 +84,11 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(99,100);		#:: + Faydark's Champions
-		quest::faction(178,25);		#:: + King Tearis Thex
-		quest::faction(43,25);		#:: + Clerics of Tunare
-		quest::faction(304,25);		#:: + Soldiers of Tunare
-		quest::faction(63,-25);		#:: - Crushbone Orcs
+		quest::faction(246,100);		#:: + Faydark's Champions
+		quest::faction(279,25);		#:: + King Tearis Thex
+		quest::faction(226,25);		#:: + Clerics of Tunare
+		quest::faction(310,25);		#:: + Soldiers of Tunare
+		quest::faction(234,-25);		#:: - Crushbone Orcs
 	}
 	#:: Match 12112 - Pack of Materials
 	if (plugin::takeItems(12112 => 1)) {
@@ -102,11 +102,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(99,10);		#:: + Faydark's Champions
-		quest::faction(178,10);		#:: + King Tearis Thex
-		quest::faction(43,10);		#:: + Clerics of Tunare
-		quest::faction(304,10);		#:: + Soldiers of Tunare
-		quest::faction(63,-10);		#:: - Crushbone Orcs
+		quest::faction(246,10);		#:: + Faydark's Champions
+		quest::faction(279,10);		#:: + King Tearis Thex
+		quest::faction(226,10);		#:: + Clerics of Tunare
+		quest::faction(310,10);		#:: + Soldiers of Tunare
+		quest::faction(234,-10);		#:: - Crushbone Orcs
   	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

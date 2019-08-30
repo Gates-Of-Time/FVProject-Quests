@@ -53,9 +53,9 @@ sub EVENT_ITEM {
 		#:: Give item 13590 - Faded Gold Training Tunic*
 		quest::summonitem(13590);
 		#:: Set faction
-		quest::faction(43,100); 	#:: + Clerics of Tunare
-		quest::faction(178,100); 	#:: + King Tearis Thex
-		quest::faction(8,75); 		#:: + Anti-mage
+		quest::faction(226,100); 	#:: + Clerics of Tunare
+		quest::faction(279,100); 	#:: + King Tearis Thex
+		quest::faction(5001,75); 		#:: + Anti-mage
 	}
 	#:: Turn in for 13073 - Bone Chips x4
 	if (plugin::takeItems(13073 => 4)) {
@@ -67,9 +67,9 @@ sub EVENT_ITEM {
 		#:: Give item 15014 - Spell: Strike
 		quest::summonitem(15014);
 		#:: Set faction
-		quest::faction(43,15); 		#:: + Clerics of Tunare
-		quest::faction(178,15); 	#:: + King Tearis Thex
-		quest::faction(8,15); 		#:: + Anti-mage
+		quest::faction(226,15); 		#:: + Clerics of Tunare
+		quest::faction(279,15); 	#:: + King Tearis Thex
+		quest::faction(5001,15); 		#:: + Anti-mage
 	}
 	#:: Turn in for 10199 - Putrescent Heart x4
 	if (plugin::takeItems(10199 => 4)) {
@@ -81,9 +81,9 @@ sub EVENT_ITEM {
 		#:: Give item 1570 - Initiate Symbol of Tunare
 		quest::summonitem(1570);
 		#:: Set faction
-		quest::faction(43,15); 		#:: + Clerics of Tunare
-		quest::faction(178,15); 	#:: + King Tearis Thex
-		quest::faction(8,15); 		#:: + Anti-mage
+		quest::faction(226,15); 		#:: + Clerics of Tunare
+		quest::faction(279,15); 	#:: + King Tearis Thex
+		quest::faction(5001,15); 		#:: + Anti-mage
 	}
 	#:: Turn in for 1570, 12514, 19065, 12513 -  Initiate Symbol of Tunare, Larik Z`Vole's Head, Teir`Dal Couriers Head, Teir`Dal Crate
 	if (plugin::takeItems(1570 => 1, 12514 => 1, 19065 => 1, 12513 => 1)) {
@@ -95,9 +95,9 @@ sub EVENT_ITEM {
 		#:: Give item 1571 - Disciple Symbol of Tunare
 		quest::summonitem(1571);
 		#:: Set faction
-		quest::faction(43,15); 		#:: + Clerics of Tunare
-		quest::faction(178,15); 	#:: + King Tearis Thex
-		quest::faction(8,15); 		#:: + Anti-mage
+		quest::faction(226,15); 		#:: + Clerics of Tunare
+		quest::faction(279,15); 	#:: + King Tearis Thex
+		quest::faction(5001,15); 		#:: + Anti-mage
 	}
 	#:: Turn in for 1571, 1599 -  Disciple Symbol of Tunare, Powder of Unanimation
 	if (plugin::takeItems(1571 => 1, 1599 => 1)) {
@@ -109,9 +109,9 @@ sub EVENT_ITEM {
 		#:: Give item 1572 - Warden Symbol of Tunare
 		quest::summonitem(1572);
 		#:: Set faction
-		quest::faction(43,15); 		#:: + Clerics of Tunare
-		quest::faction(178,15); 	#:: + King Tearis Thex
-		quest::faction(8,15); 		#:: + Anti-mage
+		quest::faction(226,15); 		#:: + Clerics of Tunare
+		quest::faction(279,15); 	#:: + King Tearis Thex
+		quest::faction(5001,15); 		#:: + Anti-mage
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

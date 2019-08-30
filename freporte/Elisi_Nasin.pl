@@ -20,11 +20,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(48,100); 	#:: + Coalition of Tradefolk Underground
-		quest::faction(47,100); 	#:: + Coalition of Trade folk
-		quest::faction(31,10); 		#:: + Carson McCabe
-		quest::faction(53,5); 		#:: + Corrupt Qeynos Guards
-		quest::faction(105,15); 	#:: + The Freeport Militia
+		quest::faction(336,100); 	#:: + Coalition of Tradefolk Underground
+		quest::faction(229,100); 	#:: + Coalition of Trade folk
+		quest::faction(329,10); 		#:: + Carson McCabe
+		quest::faction(230,5); 		#:: + Corrupt Qeynos Guards
+		quest::faction(330,15); 	#:: + The Freeport Militia
 	}
 	plugin::return_items(\%itemcount);
 }

@@ -35,9 +35,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction( 8, 10);		# + Anti-mage
-		quest::faction( 43, 10);	# + Clerics of Tunare
-		quest::faction( 178, 10);	# + King Tearis Thex
+		quest::faction( 5001, 10);		# + Anti-mage
+		quest::faction( 226, 10);	# + Clerics of Tunare
+		quest::faction( 279, 10);	# + King Tearis Thex
 		#:: Grant a small amount of experience
 		quest::exp(500);
 		quest::depop();

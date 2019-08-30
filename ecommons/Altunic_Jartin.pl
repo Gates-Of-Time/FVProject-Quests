@@ -38,9 +38,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set Factions
-		quest::faction(105, -1);	#:: Freeport Militia Faction
+		quest::faction(330, -1);	#:: Freeport Militia Faction
 		quest::faction(311,1);		#:: Steel Warriors Factions
-		quest::faction(184,1);		#:: Knights of Truth Faction
+		quest::faction(281,1);		#:: Knights of Truth Faction
 	}
 	#:: Check for Cloth Shirt
 	if (plugin::check_handin(\%itemcount, 1004 => 1)) {
@@ -50,9 +50,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set Factions
-		quest::faction(105, -1);	#:: Freeport Militia Faction
+		quest::faction(330, -1);	#:: Freeport Militia Faction
 		quest::faction(311,1);		#:: Steel Warriors Faction
-		quest::faction(184,1);		#:: Knights of Truth Faction
+		quest::faction(281,1);		#:: Knights of Truth Faction
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

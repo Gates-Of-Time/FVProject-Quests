@@ -21,8 +21,8 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(176, 15);	# + King Ak'Anon
-		quest::faction(91, 15);		# + Eldrich COllective
+		quest::faction(333, 15);	# + King Ak'Anon
+		quest::faction(245, 15);		# + Eldrich COllective
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

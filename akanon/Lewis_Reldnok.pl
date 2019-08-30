@@ -32,10 +32,10 @@ sub EVENT_ITEM {
 		#:: Give a 13517 - Worn Felt Tunic reward
 		quest::summonitem(13517);
 		#:: Set factions
-		quest::faction(76,100); 	# Deep Muses
-		quest::faction(210,15); 	# Merchants of Ak'Anon
-		quest::faction(71,-15); 	# Dark Reflection
-		quest::faction(115,15); 	# Gem Choppers
+		quest::faction(240,100); 	# Deep Muses
+		quest::faction(288,15); 	# Merchants of Ak'Anon
+		quest::faction(238,-15); 	# Dark Reflection
+		quest::faction(255,15); 	# Gem Choppers
 		quest::ding();
 		quest::exp(100);
 	}

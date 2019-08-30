@@ -40,11 +40,11 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(13110 => 1 )) {
 		quest::say("AHH!! You have been sent by the Highkeep Guards!! You will never take Bronin Higginsbot alive!!");
 		#:: Set factions
-		quest::faction(77, -25);	#:: - Deeppockets
-		quest::faction(33, -25);	#:: - Circle Of Unseen Hands
-		quest::faction(218, 25);	#:: + Merchants of Rivervale
-		quest::faction(48, -25);	#:: - Coalition of Tradefolk Underground
-		quest::faction(31, -25);	#:: - Carson McCabe
+		quest::faction(241, -25);	#:: - Deeppockets
+		quest::faction(223, -25);	#:: - Circle Of Unseen Hands
+		quest::faction(292, 25);	#:: + Merchants of Rivervale
+		quest::faction(336, -25);	#:: - Coalition of Tradefolk Underground
+		quest::faction(329, -25);	#:: - Carson McCabe
 		#:: Attack the player that triggered this event
 		quest::attack($name);
 	}
@@ -56,11 +56,11 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(500);
 		#:: Set factions
-		quest::faction(77, 10);		#:: + Deeppockets
-		quest::faction(33, 10);		#:: + Circle Of Unseen Hands
-		quest::faction(218, -10);	#:: - Merchants of Rivervale
-		quest::faction(48, 10);		#:: + Coalition of Tradefolk Underground
-		quest::faction(31, 10);		#:: + Carson McCabe
+		quest::faction(241, 10);		#:: + Deeppockets
+		quest::faction(223, 10);		#:: + Circle Of Unseen Hands
+		quest::faction(292, -10);	#:: - Merchants of Rivervale
+		quest::faction(336, 10);		#:: + Coalition of Tradefolk Underground
+		quest::faction(329, 10);		#:: + Carson McCabe
 	}
 	#:: Match if Indifferent or worse for Deeppockets and a 12192 - Froglok Leg
 	elsif (($faction > 4) && (plugin::takeItems(12192 => 1))) {

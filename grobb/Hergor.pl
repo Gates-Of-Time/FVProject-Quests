@@ -30,8 +30,8 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(66, 10);		#:: + Da Bashers
-		quest::faction(22, -10);	#:: - Broken Skull Clan
+		quest::faction(235, 10);		#:: + Da Bashers
+		quest::faction(222, -10);	#:: - Broken Skull Clan
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

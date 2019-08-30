@@ -11,9 +11,9 @@ sub EVENT_ITEM {
 		#:: Give a 17917 - Peacekeeper Staff (container version)
 		quest::summonitem(17917);
 		#:: Set Factions
-		quest::faction(211,10);	# + Merchants of Erudin
-		quest::faction(145,10);	# + High Council of Erudin
-		quest::faction(147,10);	# + High Guard of Erudin
+		quest::faction(289,10);	# + Merchants of Erudin
+		quest::faction(266,10);	# + High Council of Erudin
+		quest::faction(267,10);	# + High Guard of Erudin
 		#:: Grant a small amount of experience
 		quest::exp(2432);
 	}
@@ -22,9 +22,9 @@ sub EVENT_ITEM {
 		quest::say("Wonderful work!! These shards will work nicely. Here you are then. I found a few flasks of treant resin in the back. You can have one. Thanks again. It kept me from having to go out and hunt treants.");
 		#:: Give a 13822 - Treant Resin
 		quest::summonitem(13822);
-		quest::faction(211,10);	# + Merchants of Erudin
-		quest::faction(145,10);	# + High Council of Erudin
-		quest::faction(147,10);	# + High Guard of Erudin
+		quest::faction(289,10);	# + Merchants of Erudin
+		quest::faction(266,10);	# + High Council of Erudin
+		quest::faction(267,10);	# + High Guard of Erudin
 		#:: Grant a small amount of experience
 		quest::exp(2432);
 	}

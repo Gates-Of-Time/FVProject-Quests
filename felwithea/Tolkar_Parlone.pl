@@ -21,10 +21,10 @@ sub EVENT_ITEM {
 		#:: Give item 1056 - Faded Cloak
 		quest::summonitem(1056);
 		#:: Set faction
-		quest::faction(170,5); 		#:: + Keepers of the Art
-		quest::faction(178,5); 		#:: + King Tearis Thex
-		quest::faction(99,5); 		#:: + Faydark's Champions
-		quest::faction(322,-5); 	#:: - The Dead
+		quest::faction(275,5); 		#:: + Keepers of the Art
+		quest::faction(279,5); 		#:: + King Tearis Thex
+		quest::faction(246,5); 		#:: + Faydark's Champions
+		quest::faction(239,-5); 	#:: - The Dead
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

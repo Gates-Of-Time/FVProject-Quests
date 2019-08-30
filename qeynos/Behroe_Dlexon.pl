@@ -19,11 +19,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(192, 8);		#:: + League of Antonican Bards
-		quest::faction(184, 1);		#:: + Knights of Truth
-		quest::faction(135, 1);		#:: + Guards of Qeynos
-		quest::faction(273, -1);	#:: - Ring of Scale
-		quest::faction(207, -1);	#:: - Mayong Mistmoore
+		quest::faction(284, 8);		#:: + League of Antonican Bards
+		quest::faction(281, 1);		#:: + Knights of Truth
+		quest::faction(262, 1);		#:: + Guards of Qeynos
+		quest::faction(304, -1);	#:: - Ring of Scale
+		quest::faction(285, -1);	#:: - Mayong Mistmoore
 		#:: Grant a small amount of experience
 		quest::exp(250);
 	}
@@ -35,11 +35,11 @@ sub EVENT_ITEM {
 		#:: Give a 18023 - Behroe's Report
 		quest::summonitem(18023);
 		#:: Set factions
-		quest::faction(192, 10);	#:: + League of Antonican Bards
-		quest::faction(184, 1);		#:: + Knights of Truth
-		quest::faction(135, 1);		#:: + Guards of Qeynos
-		quest::faction(273, -1);	#:: - Ring of Scale
-		quest::faction(207, -1);	#:: - Mayong Mistmoore
+		quest::faction(284, 10);	#:: + League of Antonican Bards
+		quest::faction(281, 1);		#:: + Knights of Truth
+		quest::faction(262, 1);		#:: + Guards of Qeynos
+		quest::faction(304, -1);	#:: - Ring of Scale
+		quest::faction(285, -1);	#:: - Mayong Mistmoore
 		#:: Grant a small amount of experience
 		quest::exp(250);
 	}

@@ -50,11 +50,11 @@ sub EVENT_ITEM {
 		#:: Grant a moderate amount of experience
 		quest::exp(3000);
 		#:: Set factions
-		quest::faction(46, 50);		#:: + Clurg
-		quest::faction(169, -50); 	#:: - Kazon Stormhammer
-		quest::faction(128, 50);	#:: + Green Blood Knights
-		quest::faction(57, 50);		#:: + Craknek Warriors
-		quest::faction(232, 50);	#:: + Oggok Guards
+		quest::faction(228, 50);		#:: + Clurg
+		quest::faction(274, -50); 	#:: - Kazon Stormhammer
+		quest::faction(261, 50);	#:: + Green Blood Knights
+		quest::faction(232, 50);		#:: + Craknek Warriors
+		quest::faction(337, 50);	#:: + Oggok Guards
 	}
 	#:: Match if faction is Indifferent or worse and a 13379 - Barkeep Compendium
 	if ($faction > 4 && plugin::takeItems(13379 => 1)) {
@@ -72,11 +72,11 @@ sub EVENT_ITEM {
 		#:: Grant a moderate amount of experience
 		quest::exp(6000);
 		#:: Set factions
-		quest::faction(46, 15);		#:: + Clurg
-		quest::faction(169, -15); 	#:: - Kazon Stormhammer
-		quest::faction(128, 15);	#:: + Green Blood Knights
-		quest::faction(57, 15);		#:: + Craknek Warriors
-		quest::faction(232, 15);	#:: + Oggok Guards
+		quest::faction(228, 15);		#:: + Clurg
+		quest::faction(274, -15); 	#:: - Kazon Stormhammer
+		quest::faction(261, 15);	#:: + Green Blood Knights
+		quest::faction(232, 15);		#:: + Craknek Warriors
+		quest::faction(337, 15);	#:: + Oggok Guards
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

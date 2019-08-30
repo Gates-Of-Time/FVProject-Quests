@@ -31,9 +31,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(44,10);		#:: + Clerics of Underfoot
-		quest::faction(169,10);		#:: + Kazon Stormhammer
-		quest::faction(219,10);		#:: + Miners Guild 249
+		quest::faction(227,10);		#:: + Clerics of Underfoot
+		quest::faction(274,10);		#:: + Kazon Stormhammer
+		quest::faction(293,10);		#:: + Miners Guild 249
 	}
 	#:: Match if faction is Amiable or better and a 13332 - Dwarf Bones
 	elsif (($faction <= 4) && (plugin::takeItems(13332 => 1))) {
@@ -49,9 +49,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(44,25);		#:: + Clerics of Underfoot
-		quest::faction(169,25);		#:: + Kazon Stormhammer
-		quest::faction(219,25);		#:: + Miners Guild 249
+		quest::faction(227,25);		#:: + Clerics of Underfoot
+		quest::faction(274,25);		#:: + Kazon Stormhammer
+		quest::faction(293,25);		#:: + Miners Guild 249
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Paladin');
 	#:: Return unused items

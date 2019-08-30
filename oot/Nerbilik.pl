@@ -32,8 +32,8 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(150);
 		#:: Set factions
-		quest::faction(66,10);	#:: + Da Bashers
-		quest::faction(22,10);	#:: + Broken Skull Clan
+		quest::faction(235,10);	#:: + Da Bashers
+		quest::faction(222,10);	#:: + Broken Skull Clan
 		#:: Update wrapper variable
 		$wrapper = 1;
 		#:: Add a 18940 - Tattered Recipe to loot

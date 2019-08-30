@@ -44,9 +44,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set Factions
-		quest::faction(361, 1);		#:: + Wolves of the North
-		quest::faction(294, 1);		#:: + Shamen of Justice
-		quest::faction(213, 1);		#:: + Merchants of Halas 
+		quest::faction(320, 1);		#:: + Wolves of the North
+		quest::faction(327, 1);		#:: + Shamen of Justice
+		quest::faction(328, 1);		#:: + Merchants of Halas 
 		quest::faction(311, 1);		#:: + Steel Warriors	
 	}
 	#:: Return unused items

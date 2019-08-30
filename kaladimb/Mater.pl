@@ -72,11 +72,11 @@ sub EVENT_ITEM {
 		#:: Grant a moderate amount of experience
 		quest::exp(5000);
 		#:: Set factions
-		quest::faction(220, 10);	#:: + Miners Guild 628
-		quest::faction(33, -10);	#:: - Circle Of Unseen Hands
-		quest::faction(29, -10);	#:: - Butcherblock Bandits
-		quest::faction(77, 10);		#:: + Deeppockets
-		quest::faction(90, -10);	#:: - Ebon Mask
+		quest::faction(322, 10);	#:: + Miners Guild 628
+		quest::faction(223, -10);	#:: - Circle Of Unseen Hands
+		quest::faction(379, -10);	#:: - Butcherblock Bandits
+		quest::faction(241, 10);		#:: + Deeppockets
+		quest::faction(244, -10);	#:: - Ebon Mask
 	}
 	#:: Match a 18767 - Small, Folded Note
 	elsif (plugin::takeItems(18767 => 1)) {
@@ -88,11 +88,11 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(220, 100);	#:: + Miners Guild 628
-		quest::faction(33, -5);		#:: - Circle Of Unseen Hands
-		quest::faction(29, -5);		#:: - Butcherblock Bandits
-		quest::faction(77, 5);		#:: + Deeppockets
-		quest::faction(90, -15);	#:: - Ebon Mask
+		quest::faction(322, 100);	#:: + Miners Guild 628
+		quest::faction(223, -5);		#:: - Circle Of Unseen Hands
+		quest::faction(379, -5);		#:: - Butcherblock Bandits
+		quest::faction(241, 5);		#:: + Deeppockets
+		quest::faction(244, -15);	#:: - Ebon Mask
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Rogue');
 	#:: Return unused items

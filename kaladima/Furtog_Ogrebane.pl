@@ -47,11 +47,11 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factiions
-		quest::faction(314, 100);	#:: + Storm Guard
-		quest::faction(169, 15);	#:: + Kazon Stormhammer
-		quest::faction(219, 15);	#:: + Miners Guild 249
-		quest::faction(215, 25);	#:: + Merchants of Kaladim
-		quest::faction(57, -25);	#:: - Craknek Warriors
+		quest::faction(312, 100);	#:: + Storm Guard
+		quest::faction(274, 15);	#:: + Kazon Stormhammer
+		quest::faction(293, 15);	#:: + Miners Guild 249
+		quest::faction(290, 25);	#:: + Merchants of Kaladim
+		quest::faction(232, -25);	#:: - Craknek Warriors
 	}
 	#:: Match a 13316 - Ogre Head and a 13317 - Ogre Head
 	elsif (plugin::takeItems(13316 => 1, 13317 => 1)) {
@@ -67,11 +67,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factiions
-		quest::faction(314, 25);	#:: + Storm Guard
-		quest::faction(169, 25);	#:: + Kazon Stormhammer
-		quest::faction(219, 25);	#:: + Miners Guild 249
-		quest::faction(215, 25);	#:: + Merchants of Kaladim
-		quest::faction(57, -25);	#:: - Craknek Warriors
+		quest::faction(312, 25);	#:: + Storm Guard
+		quest::faction(274, 25);	#:: + Kazon Stormhammer
+		quest::faction(293, 25);	#:: + Miners Guild 249
+		quest::faction(290, 25);	#:: + Merchants of Kaladim
+		quest::faction(232, -25);	#:: - Craknek Warriors
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Warrior');
 	#:: Return unused items

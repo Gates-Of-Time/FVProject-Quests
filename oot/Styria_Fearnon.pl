@@ -30,11 +30,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(99,5);		#:: + Faydarks Champions
-		quest::faction(178,5);		#:: + King Tearis Thex
-		quest::faction(304,5);		#:: + Soldiers of Tunare
-		quest::faction(43,5);		#:: + Clerics of Tunare
-		quest::faction(63,-10);		#:: - Crushbone Orcs
+		quest::faction(246,5);		#:: + Faydarks Champions
+		quest::faction(279,5);		#:: + King Tearis Thex
+		quest::faction(310,5);		#:: + Soldiers of Tunare
+		quest::faction(226,5);		#:: + Clerics of Tunare
+		quest::faction(234,-10);		#:: - Crushbone Orcs
 	}
 	#:: Match a 13336 - Pirate's Earring
 	if (plugin::takeItems(13336 => 1)) {
@@ -50,11 +50,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(99,5);		#:: + Faydarks Champions
-		quest::faction(178,5);		#:: + King Tearis Thex
-		quest::faction(304,5);		#:: + Soldiers of Tunare
-		quest::faction(43,5);		#:: + Clerics of Tunare
-		quest::faction(63,-10);		#:: - Crushbone Orcs
+		quest::faction(246,5);		#:: + Faydarks Champions
+		quest::faction(279,5);		#:: + King Tearis Thex
+		quest::faction(310,5);		#:: + Soldiers of Tunare
+		quest::faction(226,5);		#:: + Clerics of Tunare
+		quest::faction(234,-10);		#:: - Crushbone Orcs
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

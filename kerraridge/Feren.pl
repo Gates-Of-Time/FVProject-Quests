@@ -23,7 +23,7 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(175,10); 	# + Kerra Isle
+		quest::faction(382,10); 	# + Kerra Isle
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

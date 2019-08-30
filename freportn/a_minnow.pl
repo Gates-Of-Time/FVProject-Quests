@@ -7,10 +7,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(86, 1);			#:: + Dismal Rage
-		quest::faction(184, -2);		#:: - Knights of Truth
-		quest::faction(105, 1);			#:: + The Freeport Militia
-		quest::faction(258, -2);		#:: - Priests of Marr
+		quest::faction(271, 1);			#:: + Dismal Rage
+		quest::faction(281, -2);		#:: - Knights of Truth
+		quest::faction(330, 1);			#:: + The Freeport Militia
+		quest::faction(362, -2);		#:: - Priests of Marr
 		quest::faction(311, -2);		#:: - Steel Warriors
 	}
 	#:: Return unused items

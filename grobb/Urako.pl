@@ -29,9 +29,9 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(70, 10);		#:: + Dark Ones
-		quest::faction(291, 2);		#:: + Shadowknights of Night Keep
-		quest::faction(106, -1);	#:: - Frogloks of Guk
+		quest::faction(237, 10);		#:: + Dark Ones
+		quest::faction(416, 2);		#:: + Shadowknights of Night Keep
+		quest::faction(251, -1);	#:: - Frogloks of Guk
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

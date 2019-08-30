@@ -25,11 +25,11 @@ sub EVENT_ITEM {
 	if (plugin::check_handin(\%itemcount, 12997 => 1)) {
 		quest::say("Only a few years have passed and her heart has already forgotten me. No doubt she has found another to warm her bed. Go, find her new lover, and bring me nothing less than his head.");
 		#:: Set Factions
-		quest::faction(143,5);	# + Heretics
-		quest::faction(79,-5);	# - Deepwater Knights
-		quest::faction(112,-5);	# - Gate Callers
-		quest::faction(56,-5);	# - Craftkeepers
-		quest::faction(60,-5);	# - Crimson Hands
+		quest::faction(265,5);	# + Heretics
+		quest::faction(242,-5);	# - Deepwater Knights
+		quest::faction(254,-5);	# - Gate Callers
+		quest::faction(231,-5);	# - Craftkeepers
+		quest::faction(233,-5);	# - Crimson Hands
 	}
 	#:: Match a 12996 - Phaeril Nightshire's Head
 	if (plugin::check_handin(\%itemcount, 12996 => 1)) {
@@ -37,11 +37,11 @@ sub EVENT_ITEM {
 		#:: Give a 12995 - Locked Chest
 		quest::summonitem(12995);
 		#:: Set Factions
-		quest::faction(143,5);	# + Heretics
-		quest::faction(79,-5);	# - Deepwater Knights
-		quest::faction(112,-5);	# - Gate Callers
-		quest::faction(56,-5);	# - Craftkeepers
-		quest::faction(60,-5);	# - Crimson Hands
+		quest::faction(265,5);	# + Heretics
+		quest::faction(242,-5);	# - Deepwater Knights
+		quest::faction(254,-5);	# - Gate Callers
+		quest::faction(231,-5);	# - Craftkeepers
+		quest::faction(233,-5);	# - Crimson Hands
 	}
 	#:: Match a 12994 - Veisha Fathomwalker's Head
 	if (plugin::check_handin(\%itemcount, 12994 => 1)) {
@@ -51,11 +51,11 @@ sub EVENT_ITEM {
 		#:: Grant a moderate amount of experience
 		quest::exp(6000);
 		#:: Set Factions
-		quest::faction(143,5);  # + Heretics
-		quest::faction(79,-5);  # - Deepwater Knights
-		quest::faction(112,-5); # - Gate Callers
-		quest::faction(56,-5);  # - Craftkeepers
-		quest::faction(60,-5);  # - Crimson Hands
+		quest::faction(265,5);  # + Heretics
+		quest::faction(242,-5);  # - Deepwater Knights
+		quest::faction(254,-5); # - Gate Callers
+		quest::faction(231,-5);  # - Craftkeepers
+		quest::faction(233,-5);  # - Crimson Hands
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

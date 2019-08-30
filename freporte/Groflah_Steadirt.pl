@@ -27,10 +27,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(47,1); 		#:: + Coalition of Trade Folk
-		quest::faction(48,1); 		#:: + Coalition of Tradefolk Underground
-		quest::faction(184,1); 		#:: + Knights of Truth
-		quest::faction(217,1); 		#:: + Merchants of Qeynos
+		quest::faction(229,1); 		#:: + Coalition of Trade Folk
+		quest::faction(336,1); 		#:: + Coalition of Tradefolk Underground
+		quest::faction(281,1); 		#:: + Knights of Truth
+		quest::faction(291,1); 		#:: + Merchants of Qeynos
 	}
 	#:: Match four 12114 - Trumpy Tonic
 	if (plugin::takeItems(12114 => 4)) {
@@ -40,10 +40,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(47,4); 		#:: + Coalition of Trade Folk
-		quest::faction(48,4); 		#:: + Coalition of Tradefolk Underground
-		quest::faction(184,4); 		#:: + Knights of Truth
-		quest::faction(217,4); 		#:: + Merchants of Qeynos
+		quest::faction(229,4); 		#:: + Coalition of Trade Folk
+		quest::faction(336,4); 		#:: + Coalition of Tradefolk Underground
+		quest::faction(281,4); 		#:: + Knights of Truth
+		quest::faction(291,4); 		#:: + Merchants of Qeynos
 		#:: Create a hash for storing cash - 200 to 400cp
 		my %cash = plugin::RandomCash(200,400);
 		#:: Grant a random cash reward
@@ -57,10 +57,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(47,3); 		#:: + Coalition of Trade Folk
-		quest::faction(48,3); 		#:: + Coalition of Tradefolk Underground
-		quest::faction(184,3); 		#:: + Knights of Truth
-		quest::faction(217,3); 		#:: + Merchants of Qeynos
+		quest::faction(229,3); 		#:: + Coalition of Trade Folk
+		quest::faction(336,3); 		#:: + Coalition of Tradefolk Underground
+		quest::faction(281,3); 		#:: + Knights of Truth
+		quest::faction(291,3); 		#:: + Merchants of Qeynos
 		#:: Create a hash for storing cash - 100 to 300cp
 		my %cash = plugin::RandomCash(100,300);
 		#:: Grant a random cash reward
@@ -74,10 +74,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(47,2); 		#:: + Coalition of Trade Folk
-		quest::faction(48,2); 		#:: + Coalition of Tradefolk Underground
-		quest::faction(184,2); 		#:: + Knights of Truth
-		quest::faction(217,2); 		#:: + Merchants of Qeynos
+		quest::faction(229,2); 		#:: + Coalition of Trade Folk
+		quest::faction(336,2); 		#:: + Coalition of Tradefolk Underground
+		quest::faction(281,2); 		#:: + Knights of Truth
+		quest::faction(291,2); 		#:: + Merchants of Qeynos
 		#:: Create a hash for storing cash - 50 to 200cp
 		my %cash = plugin::RandomCash(50,200);
 		#:: Grant a random cash reward
@@ -91,10 +91,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(47,1); 		#:: + Coalition of Trade Folk
-		quest::faction(48,1); 		#:: + Coalition of Tradefolk Underground
-		quest::faction(184,1); 		#:: + Knights of Truth
-		quest::faction(217,1); 		#:: + Merchants of Qeynos
+		quest::faction(229,1); 		#:: + Coalition of Trade Folk
+		quest::faction(336,1); 		#:: + Coalition of Tradefolk Underground
+		quest::faction(281,1); 		#:: + Knights of Truth
+		quest::faction(291,1); 		#:: + Merchants of Qeynos
 		#:: Create a hash for storing cash - 1 to 100cp
 		my %cash = plugin::RandomCash(1,100);
 		#:: Grant a random cash reward

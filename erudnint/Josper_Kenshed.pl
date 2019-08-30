@@ -30,10 +30,10 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(60,10);		#:: + Crimson Hands
-		quest::faction(145,10);		#:: + High Council of Erudin
-		quest::faction(143,-30);	#:: - Heretics
-		quest::faction(147,10);		#:: + High Guard of Erudin							
+		quest::faction(233,10);		#:: + Crimson Hands
+		quest::faction(266,10);		#:: + High Council of Erudin
+		quest::faction(265,-30);	#:: - Heretics
+		quest::faction(267,10);		#:: + High Guard of Erudin							
 	}
 	#:: Match turn in for 12207 - Half of a Spell
 	if (plugin::check_handin(\%itemcount, 12207 => 1)) {
@@ -49,10 +49,10 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(60,10);		#:: + Crimson Hands
-		quest::faction(145,10);		#:: + High Council of Erudin
-		quest::faction(143,-30);	#:: - Heretics
-		quest::faction(147,10);		#:: + High Guard of Erudin							
+		quest::faction(233,10);		#:: + Crimson Hands
+		quest::faction(266,10);		#:: + High Council of Erudin
+		quest::faction(265,-30);	#:: - Heretics
+		quest::faction(267,10);		#:: + High Guard of Erudin							
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

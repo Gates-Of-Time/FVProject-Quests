@@ -35,11 +35,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(91,3); 		#Eldritch Collective +
-		quest::faction(71,-3); 		#Dark Reflection -
-		quest::faction(322,-3); 	#The Dead -
-		quest::faction(115,3); 		#Gem Choppers +
-		quest::faction(176,3); 		#King Ak'Anon
+		quest::faction(245,3); 		#Eldritch Collective +
+		quest::faction(238,-3); 		#Dark Reflection -
+		quest::faction(239,-3); 	#The Dead -
+		quest::faction(255,3); 		#Gem Choppers +
+		quest::faction(333,3); 		#King Ak'Anon
 	}		
 		#:: Turn in for 13387 -  Tergon's Spellbook
 	if (plugin::check_handin(\%itemcount, 13387 => 1)) {
@@ -51,11 +51,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(91,3); 		#Eldritch Collective +
-		quest::faction(71,-3); 		#Dark Reflection -
-		quest::faction(322,-3); 	#The Dead -
-		quest::faction(115,3); 		#Gem Choppers +
-		quest::faction(176,3); 		#King Ak'Anon
+		quest::faction(245,3); 		#Eldritch Collective +
+		quest::faction(238,-3); 		#Dark Reflection -
+		quest::faction(239,-3); 	#The Dead -
+		quest::faction(255,3); 		#Gem Choppers +
+		quest::faction(333,3); 		#King Ak'Anon
 	}		
 		#:: Turn in for 13388 -  Teir`Dal Head (Toko's Head Quest)
 	if (plugin::check_handin(\%itemcount, 13388 => 1)) {
@@ -67,11 +67,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(91,3); 		#Eldritch Collective +
-		quest::faction(71,-3); 		#Dark Reflection -
-		quest::faction(322,-3); 	#The Dead -
-		quest::faction(115,3); 		#Gem Choppers +
-		quest::faction(176,3); 		#King Ak'Anon
+		quest::faction(245,3); 		#Eldritch Collective +
+		quest::faction(238,-3); 		#Dark Reflection -
+		quest::faction(239,-3); 	#The Dead -
+		quest::faction(255,3); 		#Gem Choppers +
+		quest::faction(333,3); 		#King Ak'Anon
 	}
         plugin::return_items(\%itemcount);
 }

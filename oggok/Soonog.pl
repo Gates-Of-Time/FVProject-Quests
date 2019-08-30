@@ -42,10 +42,10 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set Factions
-		quest::faction(128, 100);	#:: + Green Blood Knights
-		quest::faction(46, 50);		#:: + Clurg
-		quest::faction(314, -15);	#:: -  Storm Guard
-		quest::faction(292,-15);	#:: - Shadowknights of Night Keep
+		quest::faction(261, 100);	#:: + Green Blood Knights
+		quest::faction(228, 50);		#:: + Clurg
+		quest::faction(312, -15);	#:: -  Storm Guard
+		quest::faction(308,-15);	#:: - Shadowknights of Night Keep
 	}
 	#:: Match four 13410 - Lizard Meat
 	elsif (plugin::takeItems(13410 => 4)) {
@@ -57,10 +57,10 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set Factions
-		quest::faction(128, 5);	#:: + Green Blood Knights
-		quest::faction(46, 5);		#:: + Clurg
-		quest::faction(314, -10);	#:: -  Storm Guard
-		quest::faction(292, -10);	#:: - Shadowknights of Night Keep
+		quest::faction(261, 5);	#:: + Green Blood Knights
+		quest::faction(228, 5);		#:: + Clurg
+		quest::faction(312, -10);	#:: -  Storm Guard
+		quest::faction(308, -10);	#:: - Shadowknights of Night Keep
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Shadowknight');
 	#:: Return unused items

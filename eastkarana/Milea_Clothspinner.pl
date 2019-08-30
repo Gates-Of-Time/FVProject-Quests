@@ -13,10 +13,10 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Set factions
 		quest::faction(311,10);		#:: Steel Warriors
-		quest::faction(135,100);	#:: Guards of Quenos
-		quest::faction(53,-10);		#:: Corrupt Qeynos Guards
-		quest::faction(105,-10);	#:: Freeport Militia
-		quest::faction(184,10);		#:: Knights of Truth
+		quest::faction(262,100);	#:: Guards of Quenos
+		quest::faction(230,-10);		#:: Corrupt Qeynos Guards
+		quest::faction(330,-10);	#:: Freeport Militia
+		quest::faction(281,10);		#:: Knights of Truth
 		#:: Spawn a 15193 - Eastern Plains of Karana >> #Guard_Elias, Grid 0, Guildwar 0, X, Y, Z, Heading
 		quest::unique_spawn2(15193,135,0,-5521,-1870,3,226);
 		quest::exp(2000);
@@ -28,10 +28,10 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(3040,5231,1037,17005,13003,10008,1005,8791,1336,2910));
 		quest::ding();
 		quest::faction(311,10);		#:: Steel Warriors
-		quest::faction(135,100);	#:: Guards of Quenos
-		quest::faction(53,-10);		#:: Corrupt Qeynos Guards
-		quest::faction(105,-10);	#:: Freeport Militia
-		quest::faction(184,10);		#:: Knights of Truth
+		quest::faction(262,100);	#:: Guards of Quenos
+		quest::faction(230,-10);		#:: Corrupt Qeynos Guards
+		quest::faction(330,-10);	#:: Freeport Militia
+		quest::faction(281,10);		#:: Knights of Truth
 		quest::exp(2000);
 	}
 	#:: Return unused items

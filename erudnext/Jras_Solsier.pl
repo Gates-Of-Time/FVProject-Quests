@@ -25,9 +25,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(247,20); 	#:: + Peace Keepers
-		quest::faction(145,20); 	#:: + High Council of Erudin
-		quest::faction(143,-20); 	#:: - Heretics
+		quest::faction(298,20); 	#:: + Peace Keepers
+		quest::faction(266,20); 	#:: + High Council of Erudin
+		quest::faction(265,-20); 	#:: - Heretics
 	}
 	#:: Turn in for 13913 -  Barbaria Head (Talym's Head)
 	if (plugin::check_handin(\%itemcount, 13913 => 1)) {
@@ -43,9 +43,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(247,20); 	#:: + Peace Keepers
-		quest::faction(145,20); 	#:: + High Council of Erudin
-		quest::faction(143,-20); 	#:: - Heretics
+		quest::faction(298,20); 	#:: + Peace Keepers
+		quest::faction(266,20); 	#:: + High Council of Erudin
+		quest::faction(265,-20); 	#:: - Heretics
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

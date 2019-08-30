@@ -31,9 +31,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(8,10); 		#:: + Anti-Mage
-		quest::faction(43,10); 		#:: + Clerics of Tunare
-		quest::faction(178,10); 	#:: + King Tearis Thex
+		quest::faction(5001,10); 		#:: + Anti-Mage
+		quest::faction(226,10); 		#:: + Clerics of Tunare
+		quest::faction(279,10); 	#:: + King Tearis Thex
 		#:: Set Depop Timer
 		quest::settimer("depop",240);
 	}

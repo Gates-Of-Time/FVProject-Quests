@@ -32,11 +32,11 @@ sub EVENT_ITEM {
 		#:: Reward 13524 - Dark Gold Felt Robe*
 		quest::summonitem(13524);
 		#:: Set factions
-		quest::faction(322,-5); 	# The Dead
-		quest::faction(91,100); 	# Eldrich Collective
-		quest::faction(71,-15); 	# Dark Reflection
-		quest::faction(115,15); 	# Gem Choppers
-		quest::faction(176,15); 	# King Ak'Anon		
+		quest::faction(239,-5); 	# The Dead
+		quest::faction(245,100); 	# Eldrich Collective
+		quest::faction(238,-15); 	# Dark Reflection
+		quest::faction(255,15); 	# Gem Choppers
+		quest::faction(333,15); 	# King Ak'Anon		
 		quest::ding();
 		quest::exp(100);
 	}

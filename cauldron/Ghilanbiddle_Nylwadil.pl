@@ -31,11 +31,11 @@ sub EVENT_ITEM {
 		#:: Give a 12277 - Candle of Bravery
 		quest::summonitem(12277);
 		#:: Set Factions
-		quest::faction(91,25);		# Eldritch Collective
-		quest::faction(71,-25);		# Dark Reflection
-		quest::faction(322,-25); 	# The Dead
-		quest::faction(115,25);		# Gem Choppers
-		quest::faction(176,25); 	# King Ak'Anon
+		quest::faction(245,25);		# Eldritch Collective
+		quest::faction(238,-25);		# Dark Reflection
+		quest::faction(239,-25); 	# The Dead
+		quest::faction(255,25);		# Gem Choppers
+		quest::faction(333,25); 	# King Ak'Anon
 		#:: Ding!
 		quest::ding();
 		#:: Give xp reward

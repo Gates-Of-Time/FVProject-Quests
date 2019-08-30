@@ -34,9 +34,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(259,20);		#:: + Priests of Mischief
-		quest::faction(208,20);		#:: + Mayor Gubbin
-		quest::faction(133,20);		#:: + Guardians of the Vale
+		quest::faction(300,20);		#:: + Priests of Mischief
+		quest::faction(286,20);		#:: + Mayor Gubbin
+		quest::faction(263,20);		#:: + Guardians of the Vale
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

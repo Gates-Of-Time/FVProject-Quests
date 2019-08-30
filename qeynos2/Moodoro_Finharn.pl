@@ -45,10 +45,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(60,20); 		#:: + Crimson Hands
-		quest::faction(145,20); 	#:: + High Council of Erudin
-		quest::faction(143,-20); 	#:: - Heretics
-		quest::faction(147,20); 	#:: + High Guard of Erudin
+		quest::faction(233,20); 		#:: + Crimson Hands
+		quest::faction(266,20); 	#:: + High Council of Erudin
+		quest::faction(265,-20); 	#:: - Heretics
+		quest::faction(267,20); 	#:: + High Guard of Erudin
 		#:: Give a small amount of cash copper - plat
 		quest::givecash(5,0,0,0);
 	}

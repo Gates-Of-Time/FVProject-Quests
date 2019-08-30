@@ -53,11 +53,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(115,100); 	#:: + Gem Cutters
-		quest::faction(210,25); 	#:: + Merchants of Ak'Anon
-		quest::faction(176,25); 	#:: + King Ak'Anon
-		quest::faction(71,-25); 	#:: - Dark Reflection
-		quest::faction(39,-5); 		#:: - Clan Grikbar
+		quest::faction(255,100); 	#:: + Gem Cutters
+		quest::faction(288,25); 	#:: + Merchants of Ak'Anon
+		quest::faction(333,25); 	#:: + King Ak'Anon
+		quest::faction(238,-25); 	#:: - Dark Reflection
+		quest::faction(1604,-5); 		#:: - Clan Grikbar
 	}
 	#:: Turn in for the Gearheart Quest, 13344 - Blackbox XIVD
 	if (plugin::check_handin(\%itemcount, 13344=> 1)) {
@@ -68,11 +68,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(115,100); 	#:: + Gem Cutters
-		quest::faction(210,25); 	#:: + Merchants of Ak'Anon
-		quest::faction(176,25); 	#:: + King Ak'Anon
-		quest::faction(71,-25); 	#:: - Dark Reflection
-		quest::faction(39,-10); 	#:: - Clan Grikbar
+		quest::faction(255,100); 	#:: + Gem Cutters
+		quest::faction(288,25); 	#:: + Merchants of Ak'Anon
+		quest::faction(333,25); 	#:: + King Ak'Anon
+		quest::faction(238,-25); 	#:: - Dark Reflection
+		quest::faction(1604,-10); 	#:: - Clan Grikbar
 	}
 	plugin::return_items(\%itemcount);
 }

@@ -39,7 +39,7 @@ sub EVENT_ITEM {
 		#:: Give a small amount of experience
 		quest::exp(300);
 		#:: Set Faction
-		quest::faction(18, 10);		#:: +Beta Neutral
+		quest::faction(344, 10);		#:: +Beta Neutral
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

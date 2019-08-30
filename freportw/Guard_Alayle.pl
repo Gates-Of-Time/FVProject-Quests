@@ -20,10 +20,10 @@ sub EVENT_ITEM {
 			quest::summonitem(18818);
 			#:: Set factions
 			quest::faction(311, 1);		#:: + Steel Warriors
-			quest::faction(135, 1);		#:: + Guards of Qeynos
-			quest::faction(53, -1);		#:: - Corrupt Qeynos Guards
-			quest::faction(105, -1);	#:: - Freeport Militia
-			quest::faction(184, 1);		#:: + Knights of Truth
+			quest::faction(262, 1);		#:: + Guards of Qeynos
+			quest::faction(230, -1);		#:: - Corrupt Qeynos Guards
+			quest::faction(330, -1);	#:: - Freeport Militia
+			quest::faction(281, 1);		#:: + Knights of Truth
 			#:: Spawn Krazen Loosh
 			quest::spawn2(9143,87,0,-154,-55,-10,128);
 		}

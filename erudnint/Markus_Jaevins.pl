@@ -50,10 +50,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(112,100);	#:: + Gate Callers
-		quest::faction(145,10);		#:: + High Council of Erudin
-		quest::faction(143,-15);	#:: - Heretics
-		quest::faction(147,15);		#:: + High Guard of Erudin
+		quest::faction(254,100);	#:: + Gate Callers
+		quest::faction(266,10);		#:: + High Council of Erudin
+		quest::faction(265,-15);	#:: - Heretics
+		quest::faction(267,15);		#:: + High Guard of Erudin
 	}
 	#:: Match turn in for 13128 - Bones
 	if (plugin::check_handin(\%itemcount, 13128 => 1)) {
@@ -63,10 +63,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(112,10);	#:: + Gate Callers
-		quest::faction(145,10);		#:: + High Council of Erudin
-		quest::faction(143,-30);	#:: - Heretics
-		quest::faction(147,10);		#:: + High Guard of Erudin
+		quest::faction(254,10);	#:: + Gate Callers
+		quest::faction(266,10);		#:: + High Council of Erudin
+		quest::faction(265,-30);	#:: - Heretics
+		quest::faction(267,10);		#:: + High Guard of Erudin
 	}
 	plugin::return_items(\%itemcount);
 }

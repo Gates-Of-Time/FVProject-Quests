@@ -26,7 +26,7 @@ sub EVENT_ITEM {
 		#:: Grant a moderate amount of experience
 		quest::exp(5000);
 		#:: Set faction
-		quest::faction(283,10);		#:: + Tunare's Scouts
+		quest::faction(316,10);		#:: + Tunare's Scouts
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

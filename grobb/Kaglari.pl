@@ -37,9 +37,9 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(70, 5);		#:: + Dark Ones
-		quest::faction(292, 5);		#:: + Shadowknights of Night Keep
-		quest::faction(106, -10);	#:: - Frogloks of Guk
+		quest::faction(237, 5);		#:: + Dark Ones
+		quest::faction(308, 5);		#:: + Shadowknights of Night Keep
+		quest::faction(251, -10);	#:: - Frogloks of Guk
 	}
 	#:: Match a 13916 - Deathfist Slashed Belt
 	elsif (plugin::takeItems(13916 => 1)) {
@@ -51,9 +51,9 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(150);
 		#:: Set factions
-		quest::faction(70, 5);		#:: + Dark Ones
-		quest::faction(292, 5);		#:: + Shadowknights of Night Keep
-		quest::faction(106, -10);	#:: - Frogloks of Guk
+		quest::faction(237, 5);		#:: + Dark Ones
+		quest::faction(308, 5);		#:: + Shadowknights of Night Keep
+		quest::faction(251, -10);	#:: - Frogloks of Guk
 	}							
 	#:: Match a 18791 - Tattered Note
 	elsif (plugin::takeItems(18791 => 1)) {
@@ -65,9 +65,9 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(70, 100);		#:: + Dark Ones
-		quest::faction(292, 25);		#:: + Shadowknights of Night Keep
-		quest::faction(106, -15);		#:: - Frogloks of Guk
+		quest::faction(237, 100);		#:: + Dark Ones
+		quest::faction(308, 25);		#:: + Shadowknights of Night Keep
+		quest::faction(251, -15);		#:: - Frogloks of Guk
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

@@ -23,11 +23,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(143,400);	# + Heretics
-		quest::faction(112,-400);	# - Gate Callers
-		quest::faction(79,-400);	# - Deepwater Knights
-		quest::faction(56,-400);	# - Craftkeepers
-		quest::faction(60,-400);	# - Crimson Hands
+		quest::faction(265,400);	# + Heretics
+		quest::faction(254,-400);	# - Gate Callers
+		quest::faction(242,-400);	# - Deepwater Knights
+		quest::faction(231,-400);	# - Craftkeepers
+		quest::faction(233,-400);	# - Crimson Hands
 		#:: Spawn an avatar_of_terror (75165)
 		quest::unique_spawn(75165,0,0,474,1230,-37,128);
 	}

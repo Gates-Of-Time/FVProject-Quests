@@ -51,9 +51,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(247,10);	 	#:: + Peace Keepers
-		quest::faction(145,5); 		#:: + High Council of Erudin
-		quest::faction(143,-10); 	#:: - Heretics
+		quest::faction(298,10);	 	#:: + Peace Keepers
+		quest::faction(266,5); 		#:: + High Council of Erudin
+		quest::faction(265,-10); 	#:: - Heretics
 	}
 	#:: Turn in for 13816 Peacekeeper staff
 	if (plugin::check_handin(\%itemcount, 13816 => 1)) {
@@ -69,9 +69,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(247,10);	 	#:: + Peace Keepers
-		quest::faction(145,5); 		#:: + High Council of Erudin
-		quest::faction(143,-10); 	#:: - Heretics
+		quest::faction(298,10);	 	#:: + Peace Keepers
+		quest::faction(266,5); 		#:: + High Council of Erudin
+		quest::faction(265,-10); 	#:: - Heretics
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

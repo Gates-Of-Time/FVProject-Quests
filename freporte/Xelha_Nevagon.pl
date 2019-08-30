@@ -20,9 +20,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(86,1); 		#:: + Dismal Rage
-		quest::faction(184,-1); 	#:: - Knights of Truth
-		quest::faction(235,1); 		#:: + Opal Dark Briar
+		quest::faction(271,1); 		#:: + Dismal Rage
+		quest::faction(281,-1); 	#:: - Knights of Truth
+		quest::faction(296,1); 		#:: + Opal Dark Briar
 	}
 	#:: Turn in for 10307 -  Fire Beetle Eye x4
 	if (plugin::check_handin(\%itemcount, 10307 => 4)) {
@@ -36,9 +36,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(86,1); 		#:: + Dismal Rage
-		quest::faction(184,-1); 	#:: - Knights of Truth
-		quest::faction(235,1); 		#:: + Opal Dark Briar		
+		quest::faction(271,1); 		#:: + Dismal Rage
+		quest::faction(281,-1); 	#:: - Knights of Truth
+		quest::faction(296,1); 		#:: + Opal Dark Briar		
 	}
 	#:: Turn in for 13073 -  Bone Chips x4
 	if (plugin::check_handin(\%itemcount, 13073 => 4)) {
@@ -50,9 +50,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(86,1); 		#:: + Dismal Rage
-		quest::faction(184,-1); 	#:: - Knights of Truth
-		quest::faction(235,1); 		#:: + Opal Dark Briar		
+		quest::faction(271,1); 		#:: + Dismal Rage
+		quest::faction(281,-1); 	#:: - Knights of Truth
+		quest::faction(296,1); 		#:: + Opal Dark Briar		
 	}
 	#:: Turn in for 13927 -  Cyclops Eye
 	if (plugin::check_handin(\%itemcount, 13927 => 1)) {
@@ -66,9 +66,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(86,1); 		#:: + Dismal Rage
-		quest::faction(184,-1); 	#:: - Knights of Truth
-		quest::faction(235,1); 		#:: + Opal Dark Briar		
+		quest::faction(271,1); 		#:: + Dismal Rage
+		quest::faction(281,-1); 	#:: - Knights of Truth
+		quest::faction(296,1); 		#:: + Opal Dark Briar		
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

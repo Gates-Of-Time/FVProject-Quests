@@ -30,11 +30,11 @@ sub EVENT_ITEM {
 		#:: Grant a moderate amount of experience
 		quest::exp(21000);
 		#:: Set factions
-		quest::faction(215, 4);		#:: + Merchants of Kaladim
-		quest::faction(220, -1);	#:: - Miner's Guild 628
-		quest::faction(219, 1); 	#:: + Miner's Guild 249
-		quest::faction(314, 1); 	#:: + Storm Guard
-		quest::faction(169, 1);		#:: + Kazon Stormhammer
+		quest::faction(290, 4);		#:: + Merchants of Kaladim
+		quest::faction(322, -1);	#:: - Miner's Guild 628
+		quest::faction(293, 1); 	#:: + Miner's Guild 249
+		quest::faction(312, 1); 	#:: + Storm Guard
+		quest::faction(274, 1);		#:: + Kazon Stormhammer
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

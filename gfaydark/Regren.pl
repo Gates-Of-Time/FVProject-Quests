@@ -39,10 +39,10 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(92,100);		#:: + Emerald Warriors
-		quest::faction(155,-15);	#:: - Indigo Brotherhood
-		quest::faction(212,10);		#:: + Merchants of Felwithe
-		quest::faction(174,10);		#:: + Kelethin Merchants
+		quest::faction(326,100);		#:: + Emerald Warriors
+		quest::faction(270,-15);	#:: - Indigo Brotherhood
+		quest::faction(325,10);		#:: + Merchants of Felwithe
+		quest::faction(276,10);		#:: + Kelethin Merchants
 	}
 	#:: Match 13073 - Bone Chips, 13782 - Ruined Wolf Pelt, 13253 - Spiderling Eye, 13069 - Bat Fur
 	if (plugin::takeItems(13073 => 1, 13782 => 1, 13253 => 1, 13069 => 1)) {
@@ -60,10 +60,10 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set factions
-			quest::faction(92,10);		#:: + Emerald Warriors
-			quest::faction(155,-10);	#:: - Indigo Brotherhood
-			quest::faction(174,10);		#:: + Kelethin Merchants
-			quest::faction(212,10);		#:: + Merchants of Felwithe
+			quest::faction(326,10);		#:: + Emerald Warriors
+			quest::faction(270,-10);	#:: - Indigo Brotherhood
+			quest::faction(276,10);		#:: + Kelethin Merchants
+			quest::faction(325,10);		#:: + Merchants of Felwithe
 		}
 		else {
 			quest::say("I will not aid beings like you.");

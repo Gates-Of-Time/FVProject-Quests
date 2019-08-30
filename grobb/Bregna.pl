@@ -28,9 +28,9 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(70, 10);		#:: + Dark Ones
-		quest::faction(106, -10);	#:: - Frogloks of Guk
-		quest::faction(292, 10);	#:: + Shadowknights of Night Keep
+		quest::faction(237, 10);		#:: + Dark Ones
+		quest::faction(251, -10);	#:: - Frogloks of Guk
+		quest::faction(308, 10);	#:: + Shadowknights of Night Keep
 	}
 #P	#:: Match a 26632 - Blood Raven Tailfeather, a 26640 - Wrulon Claw,  a 29921 - Arachnae Fangs, a 26662 - Swirling Banshee Essence
 #o	elsif (plugin::takeItems(26632 => 1, 26640 => 1, 29921 => 1, 26662 => 1)) {
@@ -42,9 +42,9 @@ sub EVENT_ITEM {
 #		#:: Grant a large amount of experience
 #Q		quest::exp(10000);
 #u		#:: Set factions
-#e		quest::faction(70, 10);		#:: + Dark Ones
-#s		quest::faction(106, -10);	#:: - Frogloks of Guk
-#t		quest::faction(292, 10);	#:: + Shadowknights of Night Keep
+#e		quest::faction(237, 10);		#:: + Dark Ones
+#s		quest::faction(251, -10);	#:: - Frogloks of Guk
+#t		quest::faction(308, 10);	#:: + Shadowknights of Night Keep
 #	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

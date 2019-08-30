@@ -30,10 +30,10 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set Factions
-		quest::faction(213, 5); 	#:: + Merchants of Halas
-		quest::faction(361, 3);		#:: + Wolves of the North
-		quest::faction(294, 3);		#:: + Shamen of Justice
-		quest::faction(275, -5);	#:: + Rogues of the White Rose
+		quest::faction(328, 5); 	#:: + Merchants of Halas
+		quest::faction(320, 3);		#:: + Wolves of the North
+		quest::faction(327, 3);		#:: + Shamen of Justice
+		quest::faction(305, -5);	#:: + Rogues of the White Rose
 	}
 	#:: Match two 12223 - Wrath Orc Wristbands
 	if (plugin::takeItems(12223 => 2)) {
@@ -49,10 +49,10 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set Factions
-		quest::faction(213, 10); 	#:: + Merchants of Halas
-		quest::faction(361, 7);		#:: + Wolves of the North
-		quest::faction(294, 7);		#:: + Shamen of Justice
-		quest::faction(275, -5);	#:: + Rogues of the White Rose
+		quest::faction(328, 10); 	#:: + Merchants of Halas
+		quest::faction(320, 7);		#:: + Wolves of the North
+		quest::faction(327, 7);		#:: + Shamen of Justice
+		quest::faction(305, -5);	#:: + Rogues of the White Rose
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

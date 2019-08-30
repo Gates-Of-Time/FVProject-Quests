@@ -45,11 +45,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(47,1); 		#:: + Coalition of Trade Folk
-		quest::faction(48,1); 		#:: + Coalition of Tradefolk Underground
-		quest::faction(31,1); 		#:: + Carson McCabe
-		quest::faction(53,1); 		#:: + Corrupt Qeynos Guards
-		quest::faction(105,1); 		#:: + Freeport Militia
+		quest::faction(229,1); 		#:: + Coalition of Trade Folk
+		quest::faction(336,1); 		#:: + Coalition of Tradefolk Underground
+		quest::faction(329,1); 		#:: + Carson McCabe
+		quest::faction(230,1); 		#:: + Corrupt Qeynos Guards
+		quest::faction(330,1); 		#:: + Freeport Militia
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

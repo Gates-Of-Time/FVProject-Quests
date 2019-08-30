@@ -40,10 +40,10 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(292, 20);		#:: + Shadowknights of Night Keep
-		quest::faction(128, -3);		#:: - Green Blood Knights
-		quest::faction(22, -5);			#:: - Broken Skull Clan
-		quest::faction(66, 1);			#:: + Da Bashers
+		quest::faction(308, 20);		#:: + Shadowknights of Night Keep
+		quest::faction(261, -3);		#:: - Green Blood Knights
+		quest::faction(222, -5);			#:: - Broken Skull Clan
+		quest::faction(235, 1);			#:: + Da Bashers
 	}
 	#:: Match three 13782 - Ruined Wolf Pelt and a 10307 - Fire Beetle Eye
 	elsif (plugin::takeItems(13782 => 3, 10307 => 1)) {
@@ -111,10 +111,10 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(292, 20);		#:: + Shadowknights of Night Keep
-		quest::faction(128, -3);		#:: - Green Blood Knights
-		quest::faction(22, -5);			#:: - Broken Skull Clan
-		quest::faction(66, 1);			#:: + Da Bashers
+		quest::faction(308, 20);		#:: + Shadowknights of Night Keep
+		quest::faction(261, -3);		#:: - Green Blood Knights
+		quest::faction(222, -5);			#:: - Broken Skull Clan
+		quest::faction(235, 1);			#:: + Da Bashers
 	}	
 	#:: Match one 12199 - Black Shadow Tunic
 	elsif (plugin::takeItems(12199 => 1)) {

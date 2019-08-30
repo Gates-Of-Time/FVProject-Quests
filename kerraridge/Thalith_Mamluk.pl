@@ -16,7 +16,7 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(175,10);	# + Kerra Isle
+		quest::faction(382,10);	# + Kerra Isle
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

@@ -53,9 +53,9 @@ sub EVENT_ITEM {
 		#:: Give a small amount of xp
 		quest::exp(100);
 		#:: Set faction
-		quest::faction(247,100); 	#:: + Peace Keepers
-		quest::faction(145,25); 	#:: + High Council of Erudin
-		quest::faction(143,-25); 	#:: - Heretics
+		quest::faction(298,100); 	#:: + Peace Keepers
+		quest::faction(266,25); 	#:: + High Council of Erudin
+		quest::faction(265,-25); 	#:: - Heretics
 	}
 	#:: Turn in for 2049 -  Rolled Up Strip of Cloth for Catman Alliance Quest (Warrens Expansion)
 	#if (plugin::check_handin(\%itemcount, 2049 => 1)) {
@@ -65,9 +65,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		#quest::ding();
 		#:: Set faction
-		#quest::faction(247,5); 	#:: + Peace Keepers
-		#quest::faction(145,5); 	#:: + High Council of Erudin
-		#quest::faction(143,-5); 	#:: - Heretics
+		#quest::faction(298,5); 	#:: + Peace Keepers
+		#quest::faction(266,5); 	#:: + High Council of Erudin
+		#quest::faction(265,-5); 	#:: - Heretics
 		#quest::givecash(8,2,0,0);	#:: Give a small amount of cash copper - plat
 	#}
 	#:: Turn in for 13883 -  Odd Kobold Paw
@@ -84,9 +84,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(247,20); 	#:: + Peace Keepers
-		quest::faction(145,20); 	#:: + High Council of Erudin
-		quest::faction(143,-20); 	#:: - Heretics
+		quest::faction(298,20); 	#:: + Peace Keepers
+		quest::faction(266,20); 	#:: + High Council of Erudin
+		quest::faction(265,-20); 	#:: - Heretics
 	}
 	#:: Turn in for 14582 -  Embroidered Bag of Bone Necklaces Quellious Disciple Quest - Stonebrunt/Warrens Expansion
 	#if (plugin::check_handin(\%itemcount, 14582 => 1)) {
@@ -104,9 +104,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		#quest::ding();
 		#:: Set faction
-		#quest::faction(247,20); 	#:: + Peace Keepers
-		#quest::faction(145,20); 	#:: + High Council of Erudin
-		#quest::faction(143,-20); 	#:: - Heretics
+		#quest::faction(298,20); 	#:: + Peace Keepers
+		#quest::faction(266,20); 	#:: + High Council of Erudin
+		#quest::faction(265,-20); 	#:: - Heretics
 	#}
 	#:: Turn in for 14585 -  Odd Cold Iron Necklace  Quellious Regent Quest - Stonebrunt/Warrens Expansion
 	#if (plugin::check_handin(\%itemcount, 14585 => 1)) {
@@ -125,9 +125,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		#quest::ding();
 		#:: Set faction
-		#quest::faction(247,20); 	#:: + Peace Keepers
-		#quest::faction(145,20); 	#:: + High Council of Erudin
-		#quest::faction(143,-20); 	#:: - Heretics
+		#quest::faction(298,20); 	#:: + Peace Keepers
+		#quest::faction(266,20); 	#:: + High Council of Erudin
+		#quest::faction(265,-20); 	#:: - Heretics
 	#}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

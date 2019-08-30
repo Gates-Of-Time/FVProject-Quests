@@ -62,11 +62,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(218, 12);	#:: + Merchants of Rivervale
-		quest::faction(77, 12);		#:: + Deeppockets
-		quest::faction(133, 12);	#:: + Guardians of the Vale
-		quest::faction(208, 12);	#:: + Mayor Gubbin
-		quest::faction(48, -15);	#:: - Coalition of Tradefolk Underground
+		quest::faction(292, 12);	#:: + Merchants of Rivervale
+		quest::faction(241, 12);		#:: + Deeppockets
+		quest::faction(263, 12);	#:: + Guardians of the Vale
+		quest::faction(286, 12);	#:: + Mayor Gubbin
+		quest::faction(336, -15);	#:: - Coalition of Tradefolk Underground
 	}
 	#:: Match a 13268 - Complete Bug Collection
 	elsif (plugin::takeItems(13268 => 1) {

@@ -31,9 +31,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(44,5);		#:: + Clerics of Underfoot
-		quest::faction(169,5);		#:: + Kazon Stormhammer
-		quest::faction(219,5);		#:: + Miners Guild 249
+		quest::faction(227,5);		#:: + Clerics of Underfoot
+		quest::faction(274,5);		#:: + Kazon Stormhammer
+		quest::faction(293,5);		#:: + Miners Guild 249
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

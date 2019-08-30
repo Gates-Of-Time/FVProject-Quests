@@ -42,10 +42,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(170,100); 	#:: + Keepers of the Art
-		quest::faction(178,25); 	#:: + King Tearis Thex
-		quest::faction(99,15); 		#:: + Faydark's Champions
-		quest::faction(322,-25); 	#:: - The Dead
+		quest::faction(275,100); 	#:: + Keepers of the Art
+		quest::faction(279,25); 	#:: + King Tearis Thex
+		quest::faction(246,15); 		#:: + Faydark's Champions
+		quest::faction(239,-25); 	#:: - The Dead
 	}
 	#:: Turn in for 13758-  Black Wolf Skin
 	if (plugin::check_handin(\%itemcount, 13758 => 1)) {
@@ -57,10 +57,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(170,10); 	#:: + Keepers of the Art
-		quest::faction(178,10); 	#:: + King Tearis Thex
-		quest::faction(99,10); 		#:: + Faydark's Champions
-		quest::faction(322,-10); 	#:: - The Dead
+		quest::faction(275,10); 	#:: + Keepers of the Art
+		quest::faction(279,10); 	#:: + King Tearis Thex
+		quest::faction(246,10); 		#:: + Faydark's Champions
+		quest::faction(239,-10); 	#:: - The Dead
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

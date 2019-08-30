@@ -16,11 +16,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(115,2); 		#:: + Gem Cutters
-		quest::faction(210,2); 		#:: + Merchants of Ak'Anon
-		quest::faction(176,2); 		#:: + King Ak'Anon
-		quest::faction(71,-2); 		#:: - Dark Reflection
-		quest::faction(39,-2); 		#:: - Clan Grikbar
+		quest::faction(255,2); 		#:: + Gem Cutters
+		quest::faction(288,2); 		#:: + Merchants of Ak'Anon
+		quest::faction(333,2); 		#:: + King Ak'Anon
+		quest::faction(238,-2); 		#:: - Dark Reflection
+		quest::faction(1604,-2); 		#:: - Clan Grikbar
 	}
 	#:: Turn in for 18838 -  Daily Log Initiating the second of two possible quest lines
 	if (plugin::check_handin(\%itemcount, 18838 => 1)) {
@@ -32,11 +32,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(115,2); 		#:: + Gem Cutters
-		quest::faction(210,2); 		#:: + Merchants of Ak'Anon
-		quest::faction(176,2); 		#:: + King Ak'Anon
-		quest::faction(71,-2); 		#:: - Dark Reflection
-		quest::faction(39,-2); 		#:: - Clan Grikbar
+		quest::faction(255,2); 		#:: + Gem Cutters
+		quest::faction(288,2); 		#:: + Merchants of Ak'Anon
+		quest::faction(333,2); 		#:: + King Ak'Anon
+		quest::faction(238,-2); 		#:: - Dark Reflection
+		quest::faction(1604,-2); 		#:: - Clan Grikbar
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

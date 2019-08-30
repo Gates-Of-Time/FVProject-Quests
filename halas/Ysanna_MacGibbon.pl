@@ -37,7 +37,7 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(275, 10);	#:: + Rogues of the White Rose
+		quest::faction(305, 10);	#:: + Rogues of the White Rose
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

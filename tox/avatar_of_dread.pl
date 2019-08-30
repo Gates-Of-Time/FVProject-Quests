@@ -25,11 +25,11 @@ sub EVENT_ITEM {
 		#:: Give a 14107 - Dread Forged Shield
 		quest::summonitem(14107);
 		#:: Set factions
-		quest::faction(143,50);		# + Heretics
-		quest::faction(112,-50);	# - Gate Callers
-		quest::faction(79,-50);		# - Deepwater Knights
-		quest::faction(56,-50);		# - Craftkeepers
-		quest::faction(60,-50);		# - Crimson Hands
+		quest::faction(265,50);		# + Heretics
+		quest::faction(254,-50);	# - Gate Callers
+		quest::faction(242,-50);		# - Deepwater Knights
+		quest::faction(231,-50);		# - Craftkeepers
+		quest::faction(233,-50);		# - Crimson Hands
 		#:: Despawn
 		quest::depop();
 	}

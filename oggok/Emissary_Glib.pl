@@ -20,7 +20,7 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(233,1);		#:: + Oggok Citizens
+		quest::faction(374,1);		#:: + Oggok Citizens
 	}
 	#:: Match a 13370 - Frog Eye Necklace
 	elsif (plugin::takeItems(13370 => 1)) {
@@ -36,7 +36,7 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(233,2);		#:: + Oggok Citizens
+		quest::faction(374,2);		#:: + Oggok Citizens
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

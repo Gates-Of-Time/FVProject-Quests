@@ -53,9 +53,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(258,5);		#:: + Priests of Marr
-		quest::faction(105,-10);	#:: - Freeport Militia
-		quest::faction(184,5);		#:: + Knights of Truth
+		quest::faction(362,5);		#:: + Priests of Marr
+		quest::faction(330,-10);	#:: - Freeport Militia
+		quest::faction(281,5);		#:: + Knights of Truth
 		#:: Set running to true
 		quest::SetRunning(1);
 		#:: Start grid 62

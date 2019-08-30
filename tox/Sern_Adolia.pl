@@ -54,11 +54,11 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(143,100);	#:: + Heretics
-		quest::faction(79,-100);	#:: - Deepwater Knights
-		quest::faction(112,-100);	#:: - Gate Callers
-		quest::faction(56,-100);	#:: - Craftkeepers
-		quest::faction(60,-100);	#:: - Crimson Hands
+		quest::faction(265,100);	#:: + Heretics
+		quest::faction(242,-100);	#:: - Deepwater Knights
+		quest::faction(254,-100);	#:: - Gate Callers
+		quest::faction(231,-100);	#:: - Craftkeepers
+		quest::faction(233,-100);	#:: - Crimson Hands
 	}
 	#:: Match four 13270 - Infected Rat Livers
 	if (plugin::check_handin(\%itemcount, 13270 => 4)) {
@@ -70,11 +70,11 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(200);
 		#:: Set factions
-		quest::faction(143, 10);	#:: + Heretics
-		quest::faction(56, -30);	#:: - Craftkeepers
-		quest::faction(60, -30);	#:: - Crimson Hands
-		quest::faction(79, -30);	#:: - Deepwater Knights
-		quest::faction(112, -30);	#:: - Gate Callers
+		quest::faction(265, 10);	#:: + Heretics
+		quest::faction(231, -30);	#:: - Craftkeepers
+		quest::faction(233, -30);	#:: - Crimson Hands
+		quest::faction(242, -30);	#:: - Deepwater Knights
+		quest::faction(254, -30);	#:: - Gate Callers
 	} 
 	#:: Match a 13074 - Zombie Skin, 16990 - Embalming Dust, 14102 - Charred Bone Chips, 14103 - Vial of Tunare's Breath
 	if (plugin::check_handin(\%itemcount, 13074 => 1, 16990 => 1, 14102 => 1, 14103 => 1)) {
@@ -90,11 +90,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(143, 150);	#:: + Heretics
-		quest::faction(56, -30);	#:: - Craftkeepers
-		quest::faction(60, -30);	#:: - Crimson Hands
-		quest::faction(79, -30);	#:: - Deepwater Knights
-		quest::faction(112, -30);	#:: - Gate Callers
+		quest::faction(265, 150);	#:: + Heretics
+		quest::faction(231, -30);	#:: - Craftkeepers
+		quest::faction(233, -30);	#:: - Crimson Hands
+		quest::faction(242, -30);	#:: - Deepwater Knights
+		quest::faction(254, -30);	#:: - Gate Callers
 		#:: Spawn an Avatar_of_Fright (38202)
 		quest::unique_spawn(38202,0,0,474,1230,-37,128);
 	}

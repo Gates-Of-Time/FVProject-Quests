@@ -34,9 +34,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(184,1); 		#:: + Knights of Truth
+		quest::faction(281,1); 		#:: + Knights of Truth
 		quest::faction(311,0); 	#:: + Steel Warriors
-		quest::faction(105,-1); 	#:: - Freeport Militia
+		quest::faction(330,-1); 	#:: - Freeport Militia
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

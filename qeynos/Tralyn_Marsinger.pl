@@ -13,11 +13,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(192,10); 	#:: + League of Antonican Bards
-		quest::faction(184,10); 	#:: + Knights of Truth
-		quest::faction(135,10); 	#:: + Guards of Qeynos
-		quest::faction(273,-30); 	#:: - Ring of Scale
-		quest::faction(207,-30); 	#:: - Mayong Mistmoore
+		quest::faction(284,10); 	#:: + League of Antonican Bards
+		quest::faction(281,10); 	#:: + Knights of Truth
+		quest::faction(262,10); 	#:: + Guards of Qeynos
+		quest::faction(304,-30); 	#:: - Ring of Scale
+		quest::faction(285,-30); 	#:: - Mayong Mistmoore
 		#:: Give random amount of cash
 		quest::givecash(0,0,quest::ChooseRandom(1,2,3,4,5,6),0);
 	}
@@ -29,11 +29,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(192,10); 	#:: + League of Antonican Bards
-		quest::faction(184,10); 	#:: + Knights of Truth
-		quest::faction(135,10); 	#:: + Guards of Qeynos
-		quest::faction(273,-30); 	#:: - Ring of Scale
-		quest::faction(207,-30); 	#:: - Mayong Mistmoore
+		quest::faction(284,10); 	#:: + League of Antonican Bards
+		quest::faction(281,10); 	#:: + Knights of Truth
+		quest::faction(262,10); 	#:: + Guards of Qeynos
+		quest::faction(304,-30); 	#:: - Ring of Scale
+		quest::faction(285,-30); 	#:: - Mayong Mistmoore
 		#:: Give random amount of cash
 		quest::givecash(0,0,quest::ChooseRandom(1,2,3,4,5,6),0);
 	}
@@ -45,11 +45,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(192,10); 	#:: + League of Antonican Bards
-		quest::faction(184,10); 	#:: + Knights of Truth
-		quest::faction(135,10); 	#:: + Guards of Qeynos
-		quest::faction(273,-30); 	#:: - Ring of Scale
-		quest::faction(207,-30); 	#:: - Mayong Mistmoore
+		quest::faction(284,10); 	#:: + League of Antonican Bards
+		quest::faction(281,10); 	#:: + Knights of Truth
+		quest::faction(262,10); 	#:: + Guards of Qeynos
+		quest::faction(304,-30); 	#:: - Ring of Scale
+		quest::faction(285,-30); 	#:: - Mayong Mistmoore
 		#:: Give random amount of cash
 		quest::givecash(0,0,quest::ChooseRandom(1,2,3,4,5,6,7,8,9,10,11,12),0);
 	}
@@ -61,11 +61,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(192,10); 	#:: + League of Antonican Bards
-		quest::faction(184,10); 	#:: + Knights of Truth
-		quest::faction(135,10); 	#:: + Guards of Qeynos
-		quest::faction(273,-30); 	#:: - Ring of Scale
-		quest::faction(207,-30); 	#:: - Mayong Mistmoore
+		quest::faction(284,10); 	#:: + League of Antonican Bards
+		quest::faction(281,10); 	#:: + Knights of Truth
+		quest::faction(262,10); 	#:: + Guards of Qeynos
+		quest::faction(304,-30); 	#:: - Ring of Scale
+		quest::faction(285,-30); 	#:: - Mayong Mistmoore
 		#:: Give random amount of cash
 		quest::givecash(0,0,quest::ChooseRandom(1,2,3,4,5,6,7,8,9,10,11,12),0);
 	}

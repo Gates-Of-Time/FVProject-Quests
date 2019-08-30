@@ -21,11 +21,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(217,10); 	#:: + Merchants of Qeynos
-		quest::faction(33,10); 		#:: + Circle of Unseen Hands
-		quest::faction(9,10); 		#:: + Antonius Bayle
-		quest::faction(47,10); 		#:: + Coalition of Tradefolk
-		quest::faction(135,10); 	#:: + Guards of Qeynos
+		quest::faction(291,10); 	#:: + Merchants of Qeynos
+		quest::faction(223,10); 		#:: + Circle of Unseen Hands
+		quest::faction(219,10); 		#:: + Antonius Bayle
+		quest::faction(229,10); 		#:: + Coalition of Tradefolk
+		quest::faction(262,10); 	#:: + Guards of Qeynos
 	}
 	plugin::return_items(\%itemcount);
 }

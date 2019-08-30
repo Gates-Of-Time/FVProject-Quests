@@ -47,11 +47,11 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set factions
-			quest::faction(77, 5);		#:: + Deeppockets
-			quest::faction(33, 5);		#:: + Circle of Unseen Hands
-			quest::faction(218, -5);	#:: - Merchants of Rivervale
-			quest::faction(31, 5);		#:: + Carson McCabe
-			quest::faction(48, 5);		#:: + Coalition of Tradefolk Underground
+			quest::faction(241, 5);		#:: + Deeppockets
+			quest::faction(223, 5);		#:: + Circle of Unseen Hands
+			quest::faction(292, -5);	#:: - Merchants of Rivervale
+			quest::faction(329, 5);		#:: + Carson McCabe
+			quest::faction(336, 5);		#:: + Coalition of Tradefolk Underground
 		}
 		#:: Match if faction is worse than indifferent
 		elsif ($faction > 5) {
@@ -74,11 +74,11 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set factions
-			quest::faction(77, 10);		#:: + Deeppockets
-			quest::faction(33, 10);		#:: + Circle of Unseen Hands
-			quest::faction(218, -10);	#:: - Merchants of Rivervale
-			quest::faction(31, 10);		#:: + Carson McCabe
-			quest::faction(48, 10);		#:: + Coalition of Tradefolk Underground
+			quest::faction(241, 10);		#:: + Deeppockets
+			quest::faction(223, 10);		#:: + Circle of Unseen Hands
+			quest::faction(292, -10);	#:: - Merchants of Rivervale
+			quest::faction(329, 10);		#:: + Carson McCabe
+			quest::faction(336, 10);		#:: + Coalition of Tradefolk Underground
 		}
 		#:: Match if faction is worse than indifferent
 		elsif ($faction > 5) {

@@ -15,10 +15,10 @@ sub EVENT_ITEM {
 		#:: Give item 3097 - Reserve Militia Tunic
 		quest::summonitem(3097);
 		#:: Set faction
-		quest::faction(105, 10); 		#:: + Freeport Militia
-		quest::faction(48, 10); 		#:: + Coalition of Tradefolk Underground
-		quest::faction(184, -30); 		#:: - Knights of Truth
-		quest::faction(258, -30); 		#:: - Priests of Marr
+		quest::faction(330, 10); 		#:: + Freeport Militia
+		quest::faction(336, 10); 		#:: + Coalition of Tradefolk Underground
+		quest::faction(281, -30); 		#:: - Knights of Truth
+		quest::faction(362, -30); 		#:: - Priests of Marr
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

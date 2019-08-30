@@ -38,11 +38,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(91,10); 		#:: + Eldritch Collective
-		quest::faction(115,10); 	#:: + Gem Choppers
-		quest::faction(176,10); 	#:: + King Ak'Anon
-		quest::faction(71,-30); 	#:: - Dark Reflection
-		quest::faction(322,-30); 	#:: - The Dead
+		quest::faction(245,10); 		#:: + Eldritch Collective
+		quest::faction(255,10); 	#:: + Gem Choppers
+		quest::faction(333,10); 	#:: + King Ak'Anon
+		quest::faction(238,-30); 	#:: - Dark Reflection
+		quest::faction(239,-30); 	#:: - The Dead
 	}
 	#:: Turn in for 13071 -  Air Tight Box
 	if (plugin::check_handin(\%itemcount, 13271 => 1)) {
@@ -58,11 +58,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(91,10); 		#:: + Eldritch Collective
-		quest::faction(115,10); 	#:: + Gem Choppers
-		quest::faction(176,10); 	#:: + King Ak'Anon
-		quest::faction(71,-30); 	#:: - Dark Reflection
-		quest::faction(322,-30); 	#:: - The Dead
+		quest::faction(245,10); 		#:: + Eldritch Collective
+		quest::faction(255,10); 	#:: + Gem Choppers
+		quest::faction(333,10); 	#:: + King Ak'Anon
+		quest::faction(238,-30); 	#:: - Dark Reflection
+		quest::faction(239,-30); 	#:: - The Dead
 	}
 	#:: Turn in for 12160 -  Basilisk Tongue
 	if (plugin::check_handin(\%itemcount, 12160 => 4)) {
@@ -78,11 +78,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(91,10); 		#:: + Eldritch Collective
-		quest::faction(115,10); 	#:: + Gem Choppers
-		quest::faction(176,10); 	#:: + King Ak'Anon
-		quest::faction(71,-30); 	#:: - Dark Reflection
-		quest::faction(322,-30); 	#:: - The Dead
+		quest::faction(245,10); 		#:: + Eldritch Collective
+		quest::faction(255,10); 	#:: + Gem Choppers
+		quest::faction(333,10); 	#:: + King Ak'Anon
+		quest::faction(238,-30); 	#:: - Dark Reflection
+		quest::faction(239,-30); 	#:: - The Dead
 	}
 	#:: Turn in for 12160 -  Bozinite Pestle
 	if (plugin::check_handin(\%itemcount, 13272 => 1)) {
@@ -98,11 +98,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(91,10); 		#:: + Eldritch Collective
-		quest::faction(115,10); 	#:: + Gem Choppers
-		quest::faction(176,10); 	#:: + King Ak'Anon
-		quest::faction(71,-30); 	#:: - Dark Reflection
-		quest::faction(322,-30); 	#:: - The Dead
+		quest::faction(245,10); 		#:: + Eldritch Collective
+		quest::faction(255,10); 	#:: + Gem Choppers
+		quest::faction(333,10); 	#:: + King Ak'Anon
+		quest::faction(238,-30); 	#:: - Dark Reflection
+		quest::faction(239,-30); 	#:: - The Dead
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

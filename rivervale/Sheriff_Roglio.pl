@@ -42,11 +42,11 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(133, 100); 	#:: + Guardians of the Vale
-		quest::faction(208, 15); 	#:: + Mayor Gubbin
-		quest::faction(316, 10); 	#:: + Storm Reapers
-		quest::faction(218, 15); 	#:: + Merchants of Rivervale
-		quest::faction(88, -15); 	#:: - Dreadguard Outer
+		quest::faction(263, 100); 	#:: + Guardians of the Vale
+		quest::faction(286, 15); 	#:: + Mayor Gubbin
+		quest::faction(355, 10); 	#:: + Storm Reapers
+		quest::faction(292, 15); 	#:: + Merchants of Rivervale
+		quest::faction(334, -15); 	#:: - Dreadguard Outer
 	}
 	#:: Match four 13931 - Runnyeye Warbeads
 	if (plugin::takeItems(13931 => 4 )) {
@@ -64,11 +64,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(133, 1); 	#:: + Guardians of the Vale
-		quest::faction(208, 1); 	#:: + Mayor Gubbin
-		quest::faction(316, 1); 	#:: + Storm Reapers
-		quest::faction(218, 1); 	#:: + Merchants of Rivervale
-		quest::faction(88, -1); 	#:: - Dreadguard Outer
+		quest::faction(263, 1); 	#:: + Guardians of the Vale
+		quest::faction(286, 1); 	#:: + Mayor Gubbin
+		quest::faction(355, 1); 	#:: + Storm Reapers
+		quest::faction(292, 1); 	#:: + Merchants of Rivervale
+		quest::faction(334, -1); 	#:: - Dreadguard Outer
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

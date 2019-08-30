@@ -22,11 +22,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(294, 1); 	#:: + Shamen of Justice
-		quest::faction(213, 1); 	#:: + Merchants of Halas
-		quest::faction(33, -1); 	#:: - Circle Of Unseen Hands
-		quest::faction(48, -1); 	#:: - Coalition of Tradefolk Underground
-		quest::faction(90, -1); 	#:: - Ebon Mask
+		quest::faction(327, 1); 	#:: + Shamen of Justice
+		quest::faction(328, 1); 	#:: + Merchants of Halas
+		quest::faction(223, -1); 	#:: - Circle Of Unseen Hands
+		quest::faction(336, -1); 	#:: - Coalition of Tradefolk Underground
+		quest::faction(244, -1); 	#:: - Ebon Mask
 	}
 	#:: Match a 12622 - List of Qeynos Most Wanted
 	elsif (plugin::takeItems(12622 => 1)) {
@@ -38,11 +38,11 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(294, 25); 	#:: + Shamen of Justice
-		quest::faction(213, 3); 	#:: + Merchants of Halas
-		quest::faction(33, -3); 	#:: - Circle Of Unseen Hands
-		quest::faction(48, -3); 	#:: - Coalition of Tradefolk Underground
-		quest::faction(90, -5); 	#:: - Ebon Mask
+		quest::faction(327, 25); 	#:: + Shamen of Justice
+		quest::faction(328, 3); 	#:: + Merchants of Halas
+		quest::faction(223, -3); 	#:: - Circle Of Unseen Hands
+		quest::faction(336, -3); 	#:: - Coalition of Tradefolk Underground
+		quest::faction(244, -5); 	#:: - Ebon Mask
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

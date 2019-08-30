@@ -26,40 +26,40 @@ sub EVENT_ITEM {
 			#:: Summon 4185 - Small Crafted Bracers
 			quest::summonitem(4185);
 			quest::say("Here is your armor. I hope it fits better now.");
-			quest::faction(47,10);	#:: Coalition of Tradefolk
-			quest::faction(184,10);	#:: Knights of Truth
-			quest::faction(217,10);	#:: Merchants of Qeynos
-			quest::faction(369,10);	#:: Coalition of Tradefolk III
+			quest::faction(229,10);	#:: Coalition of Tradefolk
+			quest::faction(281,10);	#:: Knights of Truth
+			quest::faction(291,10);	#:: Merchants of Qeynos
+			quest::faction(5015,10);	#:: Coalition of Tradefolk III
 		}
 		#:: Match 4179 - Crafted Greaves
 		if (plugin::check_handin(\%itemcount, 4179 => 1)) {
 			#:: Summon 4187 - Small Crafted Greaves
 			quest::summonitem(4187);
 			quest::say("Here is your armor. I hope it fits better now.");
-			quest::faction(47,10);	#:: Coalition of Tradefolk
-			quest::faction(184,10);	#:: Knights of Truth
-			quest::faction(217,10);	#:: Merchants of Qeynos
-			quest::faction(369,10);	#:: Coalition of Tradefolk III
+			quest::faction(229,10);	#:: Coalition of Tradefolk
+			quest::faction(281,10);	#:: Knights of Truth
+			quest::faction(291,10);	#:: Merchants of Qeynos
+			quest::faction(5015,10);	#:: Coalition of Tradefolk III
 		}
 		#:: Match 4175 - Crafted Pauldron
 		if (plugin::check_handin(\%itemcount, 4175 => 1)) {
 			#:: Summon 4183 - Small Crafted Pauldron
 			quest::summonitem(4183);
 			quest::say("Here is your armor. I hope it fits better now.");
-			quest::faction(47,10);	#:: Coalition of Tradefolk
-			quest::faction(184,10);	#:: Knights of Truth
-			quest::faction(217,10);	#:: Merchants of Qeynos
-			quest::faction(369,10);	#:: Coalition of Tradefolk III
+			quest::faction(229,10);	#:: Coalition of Tradefolk
+			quest::faction(281,10);	#:: Knights of Truth
+			quest::faction(291,10);	#:: Merchants of Qeynos
+			quest::faction(5015,10);	#:: Coalition of Tradefolk III
 		}
 		#:: Match 4174 - Crafted Breastplate
 		if (plugin::check_handin(\%itemcount, 4174 => 1)) {
 			#:: Summon 4182 - Small Crafted Breastplate
 			quest::summonitem(4182);
 			quest::say("Here is your armor. I hope it fits better now.");
-			quest::faction(47,10);	#:: Coalition of Tradefolk
-			quest::faction(184,10);	#:: Knights of Truth
-			quest::faction(217,10);	#:: Merchants of Qeynos
-			quest::faction(369,10);	#:: Coalition of Tradefolk III
+			quest::faction(229,10);	#:: Coalition of Tradefolk
+			quest::faction(281,10);	#:: Knights of Truth
+			quest::faction(291,10);	#:: Merchants of Qeynos
+			quest::faction(5015,10);	#:: Coalition of Tradefolk III
 		}
 	}
 	plugin::return_items(\%itemcount);

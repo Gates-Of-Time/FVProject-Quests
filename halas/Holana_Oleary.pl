@@ -45,11 +45,11 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set Factions
-			quest::faction(294, 10);	#:: + Shamen of Justice
-			quest::faction(213, 1);		#:: + Merchants of Halas
-			quest::faction(33, -1);		#:: - Circle of Unseen Hands  
-			quest::faction(48, -1);		#:: - Coalition of Tradefolk Underground 
-			quest::faction(90, -2);		#:: - Ebon Mask
+			quest::faction(327, 10);	#:: + Shamen of Justice
+			quest::faction(328, 1);		#:: + Merchants of Halas
+			quest::faction(223, -1);		#:: - Circle of Unseen Hands  
+			quest::faction(336, -1);		#:: - Coalition of Tradefolk Underground 
+			quest::faction(244, -2);		#:: - Ebon Mask
 		}
 		else {
 			quest::say("Run while ye still can!! The Wolves o' the North will not tolerate yer presence!");

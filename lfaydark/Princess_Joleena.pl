@@ -21,7 +21,7 @@ sub EVENT_ITEM {
 		#:: Grant a moderate amount of experience
 		quest::exp(1500);
 		#:: Set faction
-		quest::faction(97,100); 	#:: + Fairie
+		quest::faction(388,100); 	#:: + Fairie
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

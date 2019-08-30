@@ -34,11 +34,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(99,10);  	#:: + Faydark's Champions
-		quest::faction(178,2);		#:: + King Tearis Thex
-		quest::faction(43,2);		#:: + Clerics of Tunare
-		quest::faction(304,2);		#:: + Soldiers of Tunare
-		quest::faction(63,-2);		#:: - Crushbone Orcs
+		quest::faction(246,10);  	#:: + Faydark's Champions
+		quest::faction(279,2);		#:: + King Tearis Thex
+		quest::faction(226,2);		#:: + Clerics of Tunare
+		quest::faction(310,2);		#:: + Soldiers of Tunare
+		quest::faction(234,-2);		#:: - Crushbone Orcs
 	}
 	#:: Match one 12108 - Orc Hatchet
 	elsif (plugin::takeItems(12108 => 1)) {
@@ -60,11 +60,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(99,30);  	#:: + Faydark's Champions
-		quest::faction(178,7);		#:: + King Tearis Thex
-		quest::faction(43,7);		#:: + Clerics of Tunare
-		quest::faction(304,7);		#:: + Soldiers of Tunare
-		quest::faction(63,-7);		#:: - Crushbone Orcs
+		quest::faction(246,30);  	#:: + Faydark's Champions
+		quest::faction(279,7);		#:: + King Tearis Thex
+		quest::faction(226,7);		#:: + Clerics of Tunare
+		quest::faction(310,7);		#:: + Soldiers of Tunare
+		quest::faction(234,-7);		#:: - Crushbone Orcs
 	}
 	#:: Match a 13226 - Runner Pouch
 	elsif (plugin::takeItems(13226 => 1)) {
@@ -80,11 +80,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(99,20);  	#:: + Faydark's Champions
-		quest::faction(178,5);		#:: + King Tearis Thex
-		quest::faction(43,5);		#:: + Clerics of Tunare
-		quest::faction(304,5);		#:: + Soldiers of Tunare
-		quest::faction(63,-5);		#:: - Crushbone Orcs
+		quest::faction(246,20);  	#:: + Faydark's Champions
+		quest::faction(279,5);		#:: + King Tearis Thex
+		quest::faction(226,5);		#:: + Clerics of Tunare
+		quest::faction(310,5);		#:: + Soldiers of Tunare
+		quest::faction(234,-5);		#:: - Crushbone Orcs
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Ranger');
 	#:: Return unused items

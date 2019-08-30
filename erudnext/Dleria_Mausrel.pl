@@ -30,9 +30,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(79,10);		#:: + Deepwater Knights
-		quest::faction(145,10);		#:: + High Council of Erudin
-		quest::faction(143,-15);	#:: - Heretics
+		quest::faction(242,10);		#:: + Deepwater Knights
+		quest::faction(266,10);		#:: + High Council of Erudin
+		quest::faction(265,-15);	#:: - Heretics
 	}
 	#:: Match turn in for 13880 - Bag of Zombie Flesh
 	if (plugin::check_handin(\%itemcount, 13880 => 1)) {
@@ -46,9 +46,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(79,10);		#:: + Deepwater Knights
-		quest::faction(145,10);		#:: + High Council of Erudin
-		quest::faction(143,-15);	#:: - Heretics
+		quest::faction(242,10);		#:: + Deepwater Knights
+		quest::faction(266,10);		#:: + High Council of Erudin
+		quest::faction(265,-15);	#:: - Heretics
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

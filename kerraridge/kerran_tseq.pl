@@ -13,7 +13,7 @@ sub EVENT_ITEM {
 		quest::say("Rreeee! Great toy. Shiny. We not need this old toy anymore. You take. Now go way, this our toy, we play.");
 		#:: Give a 13748 - Kerran Toy
 		quest::summonitem(13748);
-		quest::faction( 175, 20);	# + Kerra Isle
+		quest::faction( 382, 20);	# + Kerra Isle
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

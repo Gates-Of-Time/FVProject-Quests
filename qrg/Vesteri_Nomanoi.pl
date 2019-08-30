@@ -16,11 +16,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(159, 5);		#:: + Jaggedpine Treefolk
-		quest::faction(265, 1);		#:: + Protectors of Pine
-		quest::faction(267, 1);		#:: + QRG Protected Animals
-		quest::faction(347, -1);	#:: - Unkempt Druids
-		quest::faction(135, 1);		#:: + Guards of Qeynos
+		quest::faction(272, 5);		#:: + Jaggedpine Treefolk
+		quest::faction(302, 1);		#:: + Protectors of Pine
+		quest::faction(343, 1);		#:: + QRG Protected Animals
+		quest::faction(324, -1);	#:: - Unkempt Druids
+		quest::faction(262, 1);		#:: + Guards of Qeynos
 		#:: Grant a small amount of experience
 		quest::exp(250);
 		#:: Create a hash for storing cash - 200 to 250cp

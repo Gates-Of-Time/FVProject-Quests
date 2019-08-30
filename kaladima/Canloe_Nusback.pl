@@ -36,11 +36,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(314,40);		#:: + Storm Guard
-		quest::faction(169,40);		#:: + Kazon Stormhammer
-		quest::faction(219,40);		#:: + Miners Guild 249
-		quest::faction(215,40);		#:: + Merchants of Kaladim
-		quest::faction(57,-120);	#:: - Craknek Warriors
+		quest::faction(312,40);		#:: + Storm Guard
+		quest::faction(274,40);		#:: + Kazon Stormhammer
+		quest::faction(293,40);		#:: + Miners Guild 249
+		quest::faction(290,40);		#:: + Merchants of Kaladim
+		quest::faction(232,-120);	#:: - Craknek Warriors
 	}
 	#:: Match three 13318 - Crushbone Belt
 	elsif (plugin::takeItems(13318 => 3)) {
@@ -60,11 +60,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(314,30);		#:: + Storm Guard
-		quest::faction(169,30);		#:: + Kazon Stormhammer
-		quest::faction(219,30);		#:: + Miners Guild 249
-		quest::faction(215,30);		#:: + Merchants of Kaladim
-		quest::faction(57,-90);		#:: - Craknek Warriors
+		quest::faction(312,30);		#:: + Storm Guard
+		quest::faction(274,30);		#:: + Kazon Stormhammer
+		quest::faction(293,30);		#:: + Miners Guild 249
+		quest::faction(290,30);		#:: + Merchants of Kaladim
+		quest::faction(232,-90);		#:: - Craknek Warriors
 	}
 	#:: Match two 13318 - Crushbone Belt
 	elsif (plugin::takeItems(13318 => 2)) {
@@ -83,11 +83,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(314,20);		#:: + Storm Guard
-		quest::faction(169,20);		#:: + Kazon Stormhammer
-		quest::faction(219,20);		#:: + Miners Guild 249
-		quest::faction(215,20);		#:: + Merchants of Kaladim
-		quest::faction(57,-60);		#:: - Craknek Warriors
+		quest::faction(312,20);		#:: + Storm Guard
+		quest::faction(274,20);		#:: + Kazon Stormhammer
+		quest::faction(293,20);		#:: + Miners Guild 249
+		quest::faction(290,20);		#:: + Merchants of Kaladim
+		quest::faction(232,-60);		#:: - Craknek Warriors
 	}
 	#:: Match one 13318 - Crushbone Belt
 	elsif (plugin::takeItems(13318 => 1)) {
@@ -105,11 +105,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(314,10);		#:: + Storm Guard
-		quest::faction(169,10);		#:: + Kazon Stormhammer
-		quest::faction(219,10);		#:: + Miners Guild 249
-		quest::faction(215,10);		#:: + Merchants of Kaladim
-		quest::faction(57,-30);		#:: - Craknek Warriors
+		quest::faction(312,10);		#:: + Storm Guard
+		quest::faction(274,10);		#:: + Kazon Stormhammer
+		quest::faction(293,10);		#:: + Miners Guild 249
+		quest::faction(290,10);		#:: + Merchants of Kaladim
+		quest::faction(232,-30);		#:: - Craknek Warriors
 	}
 	#:: Match four 13319 - Crushbone Shoulderpads
 	elsif (plugin::takeItems(13319 => 4)) {
@@ -125,11 +125,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(314,20);		#:: + Storm Guard
-		quest::faction(169,20);		#:: + Kazon Stormhammer
-		quest::faction(219,20);		#:: + Miners Guild 249
-		quest::faction(215,20);		#:: + Merchants of Kaladim
-		quest::faction(57,-60);		#:: - Craknek Warriors
+		quest::faction(312,20);		#:: + Storm Guard
+		quest::faction(274,20);		#:: + Kazon Stormhammer
+		quest::faction(293,20);		#:: + Miners Guild 249
+		quest::faction(290,20);		#:: + Merchants of Kaladim
+		quest::faction(232,-60);		#:: - Craknek Warriors
 	}
 	#:: Match two 13319 - Crushbone Shoulderpads
 	elsif (plugin::takeItems(13319 => 2)) {
@@ -145,11 +145,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(314,10);		#:: + Storm Guard
-		quest::faction(169,10);		#:: + Kazon Stormhammer
-		quest::faction(219,10);		#:: + Miners Guild 249
-		quest::faction(215,10);		#:: + Merchants of Kaladim
-		quest::faction(57,-30);		#:: - Craknek Warriors
+		quest::faction(312,10);		#:: + Storm Guard
+		quest::faction(274,10);		#:: + Kazon Stormhammer
+		quest::faction(293,10);		#:: + Miners Guild 249
+		quest::faction(290,10);		#:: + Merchants of Kaladim
+		quest::faction(232,-30);		#:: - Craknek Warriors
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Warrior');
 	#:: Return unused items

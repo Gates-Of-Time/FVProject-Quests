@@ -22,10 +22,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(56,1); 		#:: + Craftkeepers
-		quest::faction(145,1); 		#:: + High Council of Erudin
-		quest::faction(147,1); 		#:: + High Guard of Erudin
-		quest::faction(143,-1); 	#:: - Heretics
+		quest::faction(231,1); 		#:: + Craftkeepers
+		quest::faction(266,1); 		#:: + High Council of Erudin
+		quest::faction(267,1); 		#:: + High Guard of Erudin
+		quest::faction(265,-1); 	#:: - Heretics
 	}
 	#:: Turn in for 13818 -  Boat Beacon
 	if (plugin::check_handin(\%itemcount, 13818 => 4)) {
@@ -37,10 +37,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(56,1); 		#:: + Craftkeepers
-		quest::faction(145,1); 		#:: + High Council of Erudin
-		quest::faction(147,1); 		#:: + High Guard of Erudin
-		quest::faction(143,-1); 	#:: - Heretics		
+		quest::faction(231,1); 		#:: + Craftkeepers
+		quest::faction(266,1); 		#:: + High Council of Erudin
+		quest::faction(267,1); 		#:: + High Guard of Erudin
+		quest::faction(265,-1); 	#:: - Heretics		
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

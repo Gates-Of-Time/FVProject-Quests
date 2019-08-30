@@ -29,7 +29,7 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(500);
 		#:: Set faction
-		quest::faction(295,20);		#:: + Shamen of War
+		quest::faction(394,20);		#:: + Shamen of War
 	}
 	#:: Match a 18885 - Tattered Cloth Note
 	elsif (plugin::takeItems(18885 => 1)) {
@@ -41,7 +41,7 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(500);
 		#:: Set faction
-		quest::faction(295,20);		#:: + Shamen of War
+		quest::faction(394,20);		#:: + Shamen of War
 	}
 	#:: Match a 17929 - Zimbittle's Pouch
 	elsif (plugin::takeItems(17929 => 1)) {
@@ -53,7 +53,7 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(500);
 		#:: Set faction
-		quest::faction(295,20);		#:: + Shamen of War
+		quest::faction(394,20);		#:: + Shamen of War
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

@@ -19,7 +19,7 @@ function event_say(e)
 	--e.self:Say("charclass: " .. e.other:GetClass());
 	--e.self:Say("deity: " .. e.other:GetDeity());
 	--e.self:Say("DRF: " .. DarkReignFact);
-	local NKF=e.other:GetFactionLevel(e.other:GetID(), e.self:GetID(), e.other:GetBaseRace(), e.other:GetClass(), e.other:GetDeity(), 429, e.self);
+	local NKF=e.other:GetFactionLevel(e.other:GetID(), e.self:GetID(), e.other:GetBaseRace(), e.other:GetClass(), e.other:GetDeity(), 1023, e.self);
 	
 	if(e.message:findi("hail")) then
 		if (NKF >=5) then

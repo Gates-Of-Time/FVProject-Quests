@@ -23,8 +23,8 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(66, 10);		#:: + Da Bashers
-		quest::faction(22, -5);		#:: - Broken Skull Clan
+		quest::faction(235, 10);		#:: + Da Bashers
+		quest::faction(222, -5);		#:: - Broken Skull Clan
 	}
 	#:: Match two 10307 - Fire Beetle Eye
 	elsif (plugin::takeItems(10307 => 2)) {

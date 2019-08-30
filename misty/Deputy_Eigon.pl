@@ -21,11 +21,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(133, 5);		#:: + Guardians of the Vale
-		quest::faction(208, 1);		#:: + Mayor Gubbin
-		quest::faction(316, 1);		#:: + Storm Reapers
-		quest::faction(218, 1);		#:: + Merchants of Rivervale
-		quest::faction(88, -1);		#:: - Dreadguard Outer
+		quest::faction(263, 5);		#:: + Guardians of the Vale
+		quest::faction(286, 1);		#:: + Mayor Gubbin
+		quest::faction(355, 1);		#:: + Storm Reapers
+		quest::faction(292, 1);		#:: + Merchants of Rivervale
+		quest::faction(334, -1);		#:: - Dreadguard Outer
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

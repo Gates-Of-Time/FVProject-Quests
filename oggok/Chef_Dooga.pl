@@ -31,11 +31,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(46, 2);		#:: + Clurg
-		quest::faction(57, 2);		#:: + Craknek Warriors
-		quest::faction(128, 2);		#:: + Green Blood Knights
-		quest::faction(232, 2);		#:: + Oggok Gaurds
-		quest::faction(169,-2);		#:: + Kazon Stormhammer
+		quest::faction(228, 2);		#:: + Clurg
+		quest::faction(232, 2);		#:: + Craknek Warriors
+		quest::faction(261, 2);		#:: + Green Blood Knights
+		quest::faction(337, 2);		#:: + Oggok Gaurds
+		quest::faction(274,-2);		#:: + Kazon Stormhammer
 	}
 	#:: Match a 13365 - High Elf Flesh
 	elsif (plugin::takeItems(13365 => 1)) {
@@ -49,11 +49,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(46, 2);		#:: + Clurg
-		quest::faction(57, 2);		#:: + Craknek Warriors
-		quest::faction(128, 2);		#:: + Green Blood Knights
-		quest::faction(232, 2);		#:: + Oggok Gaurds
-		quest::faction(169,-2);		#:: + Kazon Stormhammer
+		quest::faction(228, 2);		#:: + Clurg
+		quest::faction(232, 2);		#:: + Craknek Warriors
+		quest::faction(261, 2);		#:: + Green Blood Knights
+		quest::faction(337, 2);		#:: + Oggok Gaurds
+		quest::faction(274,-2);		#:: + Kazon Stormhammer
 	}
 	#:: Match a 21964 - Erudite Meat
 	elsif (plugin::takeItems(21964 => 1)) {
@@ -67,11 +67,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(46, 2);		#:: + Clurg
-		quest::faction(57, 2);		#:: + Craknek Warriors
-		quest::faction(128, 2);		#:: + Green Blood Knights
-		quest::faction(232, 2);		#:: + Oggok Gaurds
-		quest::faction(169,-2);		#:: + Kazon Stormhammer
+		quest::faction(228, 2);		#:: + Clurg
+		quest::faction(232, 2);		#:: + Craknek Warriors
+		quest::faction(261, 2);		#:: + Green Blood Knights
+		quest::faction(337, 2);		#:: + Oggok Gaurds
+		quest::faction(274,-2);		#:: + Kazon Stormhammer
 	}
 	#:: Match three 13452 - Pickled Froglok and 10gp
 	elsif (plugin::takeItemsCoin(0,0,10,0, 13452 => 3)) {
@@ -87,11 +87,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(46, 5);		#:: + Clurg
-		quest::faction(57, 5);		#:: + Craknek Warriors
-		quest::faction(128, 5);		#:: + Green Blood Knights
-		quest::faction(232, 5);		#:: + Oggok Gaurds
-		quest::faction(169,-5);		#:: + Kazon Stormhammer
+		quest::faction(228, 5);		#:: + Clurg
+		quest::faction(232, 5);		#:: + Craknek Warriors
+		quest::faction(261, 5);		#:: + Green Blood Knights
+		quest::faction(337, 5);		#:: + Oggok Gaurds
+		quest::faction(274,-5);		#:: + Kazon Stormhammer
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

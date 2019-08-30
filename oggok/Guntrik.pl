@@ -47,9 +47,9 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(57, 100);	#:: + Craknek Warrior
-		quest::faction(46, 15);		#:: + Clurg
-		quest::faction(128, -15);	#:: - Green Blood Knights
+		quest::faction(232, 100);	#:: + Craknek Warrior
+		quest::faction(228, 15);		#:: + Clurg
+		quest::faction(261, -15);	#:: - Green Blood Knights
 	}
 	#:: Match a 13361 - Noble's Crest
 	elsif (plugin::takeItems(13361 => 1)) {
@@ -61,9 +61,9 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(57, 15);		#:: + Craknek Warrior
-		quest::faction(46, 2);		#:: + Clurg
-		quest::faction(128, -2);	#:: - Green Blood Knights
+		quest::faction(232, 15);		#:: + Craknek Warrior
+		quest::faction(228, 2);		#:: + Clurg
+		quest::faction(261, -2);	#:: - Green Blood Knights
 	} 
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Warrior');
 	#:: Return unused items

@@ -18,10 +18,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(47,1); 		#:: + Coalition of Tradefolk
-		quest::faction(184,1); 		#:: + Knights of Truth
-		quest::faction(217,1); 		#:: + Merchants of Qeynos
-		quest::faction(48,1); 		#:: + Coalition of Tradesfolk Underground
+		quest::faction(229,1); 		#:: + Coalition of Tradefolk
+		quest::faction(281,1); 		#:: + Knights of Truth
+		quest::faction(291,1); 		#:: + Merchants of Qeynos
+		quest::faction(336,1); 		#:: + Coalition of Tradesfolk Underground
 		quest::givecash(0,0,3,0);	#:: Give a small amount of cash copper - plat
 	}
 	plugin::return_items(\%itemcount);

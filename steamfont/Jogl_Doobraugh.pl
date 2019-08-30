@@ -28,11 +28,11 @@ sub EVENT_ITEM {
 		#:: Grant a moderate amount of experience
 		quest::exp(1000);
 		#:: Set factions
-		quest::faction(91,1);		#:: + Eldritch Collective
-		quest::faction(176,1);		#:: + King Ak'Anon
-		quest::faction(115,1);		#:: + Gem Choppers
-		quest::faction(209,-1);		#:: - Meldrath
-		quest::faction(322,-1);		#:: - The Dead
+		quest::faction(245,1);		#:: + Eldritch Collective
+		quest::faction(333,1);		#:: + King Ak'Anon
+		quest::faction(255,1);		#:: + Gem Choppers
+		quest::faction(287,-1);		#:: - Meldrath
+		quest::faction(239,-1);		#:: - The Dead
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

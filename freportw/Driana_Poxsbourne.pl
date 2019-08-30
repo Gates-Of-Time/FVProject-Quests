@@ -18,11 +18,11 @@ sub EVENT_ITEM {
 		#:: Summon 1793 Putrid Substance
 		quest::summonitem(1793);
 		#:: Set faction
-		quest::faction(21, 1); 			#:: + Bloodsabers
-		quest::faction(235, 1); 		#:: + Opal Dark Briar
-		quest::faction(53, 1); 			#:: + Corrupt Qeynos Guards
-		quest::faction(135, -1); 		#:: - Guards of Qeynos
-		quest::faction(257, -1); 		#:: - Priests of Life
+		quest::faction(221, 1); 			#:: + Bloodsabers
+		quest::faction(296, 1); 		#:: + Opal Dark Briar
+		quest::faction(230, 1); 			#:: + Corrupt Qeynos Guards
+		quest::faction(262, -1); 		#:: - Guards of Qeynos
+		quest::faction(341, -1); 		#:: - Priests of Life
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

@@ -31,11 +31,11 @@ sub EVENT_ITEM {
 		#:: Choose a random reward from 13005 - Iron Ration, 13007 - Ration, 13002 - Torch, 13006 - Water Flask
 		quest::summonitem(quest::ChooseRandom(13005, 13007, 13002, 13006));
 		#:: Set Factions
-		quest::faction(213,3); 		# Merchants of Halas
-		quest::faction(361,15);		# Wolves of the North
-		quest::faction(294,3);		# Shamen of Justice
+		quest::faction(328,3); 		# Merchants of Halas
+		quest::faction(320,15);		# Wolves of the North
+		quest::faction(327,3);		# Shamen of Justice
 		quest::faction(311,1);		# Steel Warriors
-		quest::faction(275,-5);		# Rogues of the White Rose
+		quest::faction(305,-5);		# Rogues of the White Rose
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
@@ -49,11 +49,11 @@ sub EVENT_ITEM {
 		#:: Give a 7322 - Seax
 		quest::summonitem(7322);
 		#:: Set Factions
-		quest::faction(213,5); 		# Merchants of Halas
-		quest::faction(361,20);		# Wolves of the North
-		quest::faction(294,4);		# Shamen of Justice
+		quest::faction(328,5); 		# Merchants of Halas
+		quest::faction(320,20);		# Wolves of the North
+		quest::faction(327,4);		# Shamen of Justice
 		quest::faction(311,1);		# Steel Warriors
-		quest::faction(275,-5);		# Rogues of the White Rose
+		quest::faction(305,-5);		# Rogues of the White Rose
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
@@ -67,11 +67,11 @@ sub EVENT_ITEM {
 		#:: Choose a random reward from 13005 - Iron Ration, 13007 - Ration, 13002 - Torch, 13006 - Water Flask, 13003 - Small Lantern
 		quest::summonitem(quest::ChooseRandom(13005, 13007, 13002, 13006, 13003));
 		#:: Set Factions
-		quest::faction(213,2); 		# Merchants of Halas
-		quest::faction(361,10);		# Wolves of the North
-		quest::faction(294,2);		# Shamen of Justice
+		quest::faction(328,2); 		# Merchants of Halas
+		quest::faction(320,10);		# Wolves of the North
+		quest::faction(327,2);		# Shamen of Justice
 		quest::faction(311,1);		# Steel Warriors
-		quest::faction(275,-5);		# Rogues of the White Rose
+		quest::faction(305,-5);		# Rogues of the White Rose
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience

@@ -49,10 +49,10 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set factions
-			quest::faction(213, 10);	#:: + Merchants of Halas
-			quest::faction(294, 10);	#:: + Shamen of Justice
+			quest::faction(328, 10);	#:: + Merchants of Halas
+			quest::faction(327, 10);	#:: + Shamen of Justice
 			quest::faction(311, 10);	#:: + Steel Warriors
-			quest::faction(361, 10);	#:: + Wolves of the North
+			quest::faction(320, 10);	#:: + Wolves of the North
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction == 5) {

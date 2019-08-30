@@ -22,11 +22,11 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(40);
 		#:: Set factions
-		quest::faction(218, 4);		#:: + Merchants of Rivervale
-		quest::faction(77, 4);		#:: + Deeppockets
-		quest::faction(133, 4);		#:: + Guardians of the Vale
-		quest::faction(208, 4);		#:: + Mayor Gubbin
-		quest::faction(48, -4);		#:: - Coalition of Tradefolk Underground
+		quest::faction(292, 4);		#:: + Merchants of Rivervale
+		quest::faction(241, 4);		#:: + Deeppockets
+		quest::faction(263, 4);		#:: + Guardians of the Vale
+		quest::faction(286, 4);		#:: + Mayor Gubbin
+		quest::faction(336, -4);		#:: - Coalition of Tradefolk Underground
 	}
 	#:: Match three 13009 - Bandages
 	elsif (plugin::takeItems(13009 => 3)) {
@@ -36,11 +36,11 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(30);
 		#:: Set factions
-		quest::faction(218, 3);		#:: + Merchants of Rivervale
-		quest::faction(77, 3);		#:: + Deeppockets
-		quest::faction(133, 3);		#:: + Guardians of the Vale
-		quest::faction(208, 3);		#:: + Mayor Gubbin
-		quest::faction(48, -3);		#:: - Coalition of Tradefolk Underground
+		quest::faction(292, 3);		#:: + Merchants of Rivervale
+		quest::faction(241, 3);		#:: + Deeppockets
+		quest::faction(263, 3);		#:: + Guardians of the Vale
+		quest::faction(286, 3);		#:: + Mayor Gubbin
+		quest::faction(336, -3);		#:: - Coalition of Tradefolk Underground
 	}
 	#:: Match two 13009 - Bandages
 	elsif (plugin::takeItems(13009 => 2)) {
@@ -50,11 +50,11 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(20);
 		#:: Set factions
-		quest::faction(218, 2);		#:: + Merchants of Rivervale
-		quest::faction(77, 2);		#:: + Deeppockets
-		quest::faction(133, 2);		#:: + Guardians of the Vale
-		quest::faction(208, 2);		#:: + Mayor Gubbin
-		quest::faction(48, -2);		#:: - Coalition of Tradefolk Underground
+		quest::faction(292, 2);		#:: + Merchants of Rivervale
+		quest::faction(241, 2);		#:: + Deeppockets
+		quest::faction(263, 2);		#:: + Guardians of the Vale
+		quest::faction(286, 2);		#:: + Mayor Gubbin
+		quest::faction(336, -2);		#:: - Coalition of Tradefolk Underground
 	}
 	#:: Match a 13009 - Bandages
 	elsif (plugin::takeItems(13009 => 1)) {
@@ -64,11 +64,11 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(10);
 		#:: Set factions
-		quest::faction(218, 1);		#:: + Merchants of Rivervale
-		quest::faction(77, 1);		#:: + Deeppockets
-		quest::faction(133, 1);		#:: + Guardians of the Vale
-		quest::faction(208, 1);		#:: + Mayor Gubbin
-		quest::faction(48, -1);		#:: - Coalition of Tradefolk Underground
+		quest::faction(292, 1);		#:: + Merchants of Rivervale
+		quest::faction(241, 1);		#:: + Deeppockets
+		quest::faction(263, 1);		#:: + Guardians of the Vale
+		quest::faction(286, 1);		#:: + Mayor Gubbin
+		quest::faction(336, -1);		#:: - Coalition of Tradefolk Underground
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

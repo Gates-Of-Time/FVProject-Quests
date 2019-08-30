@@ -18,7 +18,7 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(380,1); 	#:: + Erudite Citizen
+		quest::faction(694,1); 	#:: + Erudite Citizen
 	}
 	plugin::return_items(\%itemcount);
 }

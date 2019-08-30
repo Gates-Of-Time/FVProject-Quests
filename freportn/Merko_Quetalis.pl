@@ -35,11 +35,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(258,1); 		#:: + Priests of Marr
-		quest::faction(86,-1); 		#:: - Dismal Rage
-		quest::faction(184,1); 		#:: + Knights of Truth
+		quest::faction(362,1); 		#:: + Priests of Marr
+		quest::faction(271,-1); 		#:: - Dismal Rage
+		quest::faction(281,1); 		#:: + Knights of Truth
 		quest::faction(311,1); 		#:: + Steel Warriors
-		quest::faction(105,-1); 	#:: - Freeport Militia
+		quest::faction(330,-1); 	#:: - Freeport Militia
 	}
 	#:: Turn in for 12144 - Token of Bravery & 13865 - Token of Generosity
 	if (plugin::takeItems(12144 => 1, 13865 =>1 )) {
@@ -51,11 +51,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(258,1); 		#:: + Priests of Marr
-		quest::faction(86,-1); 		#:: - Dismal Rage
-		quest::faction(184,1); 		#:: + Knights of Truth
+		quest::faction(362,1); 		#:: + Priests of Marr
+		quest::faction(271,-1); 		#:: - Dismal Rage
+		quest::faction(281,1); 		#:: + Knights of Truth
 		quest::faction(311,1); 		#:: + Steel Warriors
-		quest::faction(105,-1); 	#:: - Freeport Militia
+		quest::faction(330,-1); 	#:: - Freeport Militia
 	}
 	#:: Turn in for 13866 - Token of Truth
 	if (plugin::takeItems(13866 => 1)) {
@@ -67,11 +67,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(258,1); 		#:: + Priests of Marr
-		quest::faction(86,-1); 		#:: - Dismal Rage
-		quest::faction(184,1); 		#:: + Knights of Truth
+		quest::faction(362,1); 		#:: + Priests of Marr
+		quest::faction(271,-1); 		#:: - Dismal Rage
+		quest::faction(281,1); 		#:: + Knights of Truth
 		quest::faction(311,1); 		#:: + Steel Warriors
-		quest::faction(105,-1); 	#:: - Freeport Militia
+		quest::faction(330,-1); 	#:: - Freeport Militia
 		#:: Create a hash for storing cash - 900 to 2000cp
 		my %cash = plugin::RandomCash(900,2000);
 			#:: Grant a random cash reward

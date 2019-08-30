@@ -42,10 +42,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(170,5);		#:: + Keepers of the Art
-		quest::faction(178,5);		#:: + King Tearis Thex
-		quest::faction(99,5);		#:: + Faydark's Champions
-		quest::faction(322,-10);	#:: - The Dead
+		quest::faction(275,5);		#:: + Keepers of the Art
+		quest::faction(279,5);		#:: + King Tearis Thex
+		quest::faction(246,5);		#:: + Faydark's Champions
+		quest::faction(239,-10);	#:: - The Dead
 	}
 	#:: Turn in for 18777 -  Enrollment Letter
 	if (plugin::check_handin(\%itemcount, 18777 => 1)) {
@@ -57,10 +57,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(170,100);	#:: + Keepers of the Art
-		quest::faction(178,25);		#:: + King Tearis Thex
-		quest::faction(99,15);		#:: + Faydark's Champions
-		quest::faction(322,-25);	#:: - The Dead
+		quest::faction(275,100);	#:: + Keepers of the Art
+		quest::faction(279,25);		#:: + King Tearis Thex
+		quest::faction(246,15);		#:: + Faydark's Champions
+		quest::faction(239,-25);	#:: - The Dead
 	}
 	#:: Turn in for 18902 -  Torn Drawing
 	if (plugin::check_handin(\%itemcount, 18902 => 1)) {

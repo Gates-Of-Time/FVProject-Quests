@@ -23,11 +23,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(169,5);		#:: + Kazon Stormhammer
-		quest::faction(215,5); 		#:: + Merchants of Kaladim
-		quest::faction(220,-5); 	#:: - Miners Guild 628
-		quest::faction(219,5); 		#:: + Miners Guild 249
-		quest::faction(314,5);		#:: + Storm Guard
+		quest::faction(274,5);		#:: + Kazon Stormhammer
+		quest::faction(290,5); 		#:: + Merchants of Kaladim
+		quest::faction(322,-5); 	#:: - Miners Guild 628
+		quest::faction(293,5); 		#:: + Miners Guild 249
+		quest::faction(312,5);		#:: + Storm Guard
 		#:: Spawn a North Kaladim >> Harnoff_Splitrock_ (67095)
 		quest::spawn2(67095,0,0,$x,$y,$z,$h);
 		#:: Disable spawn point
@@ -48,11 +48,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(169,5);		#:: + Kazon Stormhammer
-		quest::faction(215,5); 		#:: + Merchants of Kaladim
-		quest::faction(220,-5); 	#:: - Miners Guild 628
-		quest::faction(219,5); 		#:: + Miners Guild 249
-		quest::faction(314,5);		#:: + Storm Guard
+		quest::faction(274,5);		#:: + Kazon Stormhammer
+		quest::faction(290,5); 		#:: + Merchants of Kaladim
+		quest::faction(322,-5); 	#:: - Miners Guild 628
+		quest::faction(293,5); 		#:: + Miners Guild 249
+		quest::faction(312,5);		#:: + Storm Guard
 		#:: Spawn a North Kaladim >> Harnoff_Splitrock_ (67095)
 		quest::spawn2(67095,0,0,$x,$y,$z,$h);
 		#:: Depop and disable spawn point

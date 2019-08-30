@@ -18,11 +18,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(99,1); 		#:: + Faydark's Champions
-		quest::faction(178,1); 		#:: + King Tearis Thex
-		quest::faction(43,1); 		#:: + Clerics of Tunare
-		quest::faction(304,1); 		#:: + Soldiers of Tunare
-		quest::faction(63,-1); 		#:: - Crushbone Orcs
+		quest::faction(246,1); 		#:: + Faydark's Champions
+		quest::faction(279,1); 		#:: + King Tearis Thex
+		quest::faction(226,1); 		#:: + Clerics of Tunare
+		quest::faction(310,1); 		#:: + Soldiers of Tunare
+		quest::faction(234,-1); 		#:: - Crushbone Orcs
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

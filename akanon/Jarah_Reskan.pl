@@ -31,11 +31,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(115,15); 	#:: + Gem Cutters
-		quest::faction(210,15); 	#:: + Merchants of Ak'Anon
-		quest::faction(176,15); 	#:: + King Ak'Anon
-		quest::faction(71,-15); 	#:: - Dark Reflection
-		quest::faction(39,-15); 	#:: - Clan Grikbar
+		quest::faction(255,15); 	#:: + Gem Cutters
+		quest::faction(288,15); 	#:: + Merchants of Ak'Anon
+		quest::faction(333,15); 	#:: + King Ak'Anon
+		quest::faction(238,-15); 	#:: - Dark Reflection
+		quest::faction(1604,-15); 	#:: - Clan Grikbar
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

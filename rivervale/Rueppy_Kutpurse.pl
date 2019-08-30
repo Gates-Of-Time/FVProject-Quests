@@ -41,11 +41,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(77, 10);		#:: + Deeppockets
-		quest::faction(33, 1);		#:: + Circle of Unseen Hands
-		quest::faction(218, -1); 	#:: - Merchants of Rivervale
-		quest::faction(48, 1);		#:: + Coalition of Tradefolk Underground
-		quest::faction(31, 1);		#:: + Carson McCabe	
+		quest::faction(241, 10);		#:: + Deeppockets
+		quest::faction(223, 1);		#:: + Circle of Unseen Hands
+		quest::faction(292, -1); 	#:: - Merchants of Rivervale
+		quest::faction(336, 1);		#:: + Coalition of Tradefolk Underground
+		quest::faction(329, 1);		#:: + Carson McCabe	
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

@@ -29,9 +29,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(258,5); 		#:: + Priests of Marr
-		quest::faction(105,-10); 	#:: - Freeport Militia
-		quest::faction(184,5); 		#:: + Knights of Truth
+		quest::faction(362,5); 		#:: + Priests of Marr
+		quest::faction(330,-10); 	#:: - Freeport Militia
+		quest::faction(281,5); 		#:: + Knights of Truth
 	}
 	#:: Turn in for 13983 - Inert Potion 
 	if (plugin::takeItems(13983 => 1 )) {
@@ -41,9 +41,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(258,5); 		#:: + Priests of Marr
-		quest::faction(105,-10); 	#:: - Freeport Militia
-		quest::faction(184,5); 		#:: + Knights of Truth	
+		quest::faction(362,5); 		#:: + Priests of Marr
+		quest::faction(330,-10); 	#:: - Freeport Militia
+		quest::faction(281,5); 		#:: + Knights of Truth	
 	}
 	#:: Turn in for 12135- Empty Potion of Marr
 	if (plugin::takeItems(12135 => 1 )) {
@@ -55,9 +55,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(258,5); 		#:: + Priests of Marr
-		quest::faction(105,-10); 	#:: - Freeport Militia
-		quest::faction(184,5); 		#:: + Knights of Truth	
+		quest::faction(362,5); 		#:: + Priests of Marr
+		quest::faction(330,-10); 	#:: - Freeport Militia
+		quest::faction(281,5); 		#:: + Knights of Truth	
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

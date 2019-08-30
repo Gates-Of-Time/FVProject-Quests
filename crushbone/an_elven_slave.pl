@@ -51,8 +51,8 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set faction
-			quest::faction(170,1); 		#:: + Keepers of the Art
-			quest::faction(178,1); 		#:: + King Tearis Thex
+			quest::faction(275,1); 		#:: + Keepers of the Art
+			quest::faction(279,1); 		#:: + King Tearis Thex
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
@@ -134,8 +134,8 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set faction
-			quest::faction(170,1); 		#:: + Keepers of the Art
-			quest::faction(178,1); 		#:: + King Tearis Thex
+			quest::faction(275,1); 		#:: + Keepers of the Art
+			quest::faction(279,1); 		#:: + King Tearis Thex
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
@@ -163,9 +163,9 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set faction
-			quest::faction(99,1); 		#:: + Faydark's Champions
-			quest::faction(174,1); 		#:: + Kelethin Merchants
-			quest::faction(212,1); 		#:: + Merchants of Felwithe
+			quest::faction(246,1); 		#:: + Faydark's Champions
+			quest::faction(276,1); 		#:: + Kelethin Merchants
+			quest::faction(325,1); 		#:: + Merchants of Felwithe
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}
@@ -193,9 +193,9 @@ sub EVENT_ITEM {
 			#:: Give a small amount of xp
 			quest::exp(1000);
 			#:: Set faction
-			quest::faction(99,1); 		#:: + Faydark's Champions
-			quest::faction(174,1); 		#:: + Kelethin Merchants
-			quest::faction(212,1); 		#:: + Merchants of Felwithe
+			quest::faction(246,1); 		#:: + Faydark's Champions
+			quest::faction(276,1); 		#:: + Kelethin Merchants
+			quest::faction(325,1); 		#:: + Merchants of Felwithe
 			#:: Set Depop Timer
 			quest::settimer("depop",30);
 		}

@@ -25,10 +25,10 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(184,1); 		#:: + Knights of Truth
-		quest::faction(258,-1); 	#:: - Priests of Marr
-		quest::faction(105,-1); 	#:: - Freeport Militia
-		quest::faction(86,1); 		#:: + Dismal Rage
+		quest::faction(281,1); 		#:: + Knights of Truth
+		quest::faction(362,-1); 	#:: - Priests of Marr
+		quest::faction(330,-1); 	#:: - Freeport Militia
+		quest::faction(271,1); 		#:: + Dismal Rage
 		quest::faction(311,1); 		#:: + Steel Warriors
 	}
 	#:: Return unused items

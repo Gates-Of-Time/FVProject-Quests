@@ -32,10 +32,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(56,100);		#:: + Craftkeepers
-		quest::faction(145,10);		#:: + High Council of Erudin
-		quest::faction(143,-15);	#:: - Heretics
-		quest::faction(147,15);		#:: + High Guard of Erudin
+		quest::faction(231,100);		#:: + Craftkeepers
+		quest::faction(266,10);		#:: + High Council of Erudin
+		quest::faction(265,-15);	#:: - Heretics
+		quest::faction(267,15);		#:: + High Guard of Erudin
 	}
 	plugin::return_items(\%itemcount);
 }

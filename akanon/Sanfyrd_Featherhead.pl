@@ -30,11 +30,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(115,3); 		#:: + Gem Cutters
-		quest::faction(210,3); 		#:: + Merchants of Ak'Anon
-		quest::faction(176,3); 		#:: + King Ak'Anon
-		quest::faction(71,-3); 		#:: - Dark Reflection
-		quest::faction(39,-3); 		#:: - Clan Grikbar
+		quest::faction(255,3); 		#:: + Gem Cutters
+		quest::faction(288,3); 		#:: + Merchants of Ak'Anon
+		quest::faction(333,3); 		#:: + King Ak'Anon
+		quest::faction(238,-3); 		#:: - Dark Reflection
+		quest::faction(1604,-3); 		#:: - Clan Grikbar
 	}
 	#:: Turn in for the Aid Fimli Quest (POP) Bundle of Super Conductive Wires, Gold Tipped Boar Horn, Shard of Pure Energy, Silicorrosive Grease
 	#if (plugin::check_handin(\%itemcount, 9426 => 1, 28618 => 1, 29906 =>1, 28165 +>1)) {
@@ -57,11 +57,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(115,3); 		#:: + Gem Cutters
-		quest::faction(210,3); 		#:: + Merchants of Ak'Anon
-		quest::faction(176,3); 		#:: + King Ak'Anon
-		quest::faction(71,-3); 		#:: - Dark Reflection
-		quest::faction(39,-3); 		#:: - Clan Grikbar
+		quest::faction(255,3); 		#:: + Gem Cutters
+		quest::faction(288,3); 		#:: + Merchants of Ak'Anon
+		quest::faction(333,3); 		#:: + King Ak'Anon
+		quest::faction(238,-3); 		#:: - Dark Reflection
+		quest::faction(1604,-3); 		#:: - Clan Grikbar
 	}
 	#:: Turn in for the Rain Caller Quest - Mane Attraction
 	if (plugin::check_handin(\%itemcount, 12254 => 1)) {
@@ -77,11 +77,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(115,3); 		#:: + Gem Cutters
-		quest::faction(210,3); 		#:: + Merchants of Ak'Anon
-		quest::faction(176,3); 		#:: + King Ak'Anon
-		quest::faction(71,-3); 		#:: - Dark Reflection
-		quest::faction(39,-3); 		#:: - Clan Grikbar
+		quest::faction(255,3); 		#:: + Gem Cutters
+		quest::faction(288,3); 		#:: + Merchants of Ak'Anon
+		quest::faction(333,3); 		#:: + King Ak'Anon
+		quest::faction(238,-3); 		#:: - Dark Reflection
+		quest::faction(1604,-3); 		#:: - Clan Grikbar
 	}
 	#:: Turn in for the Duster Models Quest - Scrap Metal(Duster V Scrap Metal) and Scrap Metal (Duster X Scrap Metal)
 	if (plugin::check_handin(\%itemcount, 13216 => 1, 13217 =>1)) {
@@ -97,11 +97,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(115,3); 		#:: + Gem Cutters
-		quest::faction(210,3); 		#:: + Merchants of Ak'Anon
-		quest::faction(176,3); 		#:: + King Ak'Anon
-		quest::faction(71,-3); 		#:: - Dark Reflection
-		quest::faction(39,-3); 		#:: - Clan Grikbar
+		quest::faction(255,3); 		#:: + Gem Cutters
+		quest::faction(288,3); 		#:: + Merchants of Ak'Anon
+		quest::faction(333,3); 		#:: + King Ak'Anon
+		quest::faction(238,-3); 		#:: - Dark Reflection
+		quest::faction(1604,-3); 		#:: - Clan Grikbar
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

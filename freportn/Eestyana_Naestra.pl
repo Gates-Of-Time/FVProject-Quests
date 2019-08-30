@@ -22,10 +22,10 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(184,10); 	#:: + Knights of Truth
-		quest::faction(86,-15); 	#:: - Dismal Rage
-		quest::faction(105,-15); 	#:: - Freeport Militia
-		quest::faction(258,10); 	#:: + Priests of Marr
+		quest::faction(281,10); 	#:: + Knights of Truth
+		quest::faction(271,-15); 	#:: - Dismal Rage
+		quest::faction(330,-15); 	#:: - Freeport Militia
+		quest::faction(362,10); 	#:: + Priests of Marr
 		quest::faction(311,10); 	#:: + Steel Warriors
 	}
 	#:: Turn in for 18804 - A Tattered Note
@@ -42,10 +42,10 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(184,10); 	#:: + Knights of Truth
-		quest::faction(86,-15); 	#:: - Dismal Rage
-		quest::faction(105,-15); 	#:: - Freeport Militia
-		quest::faction(258,10); 	#:: + Priests of Marr
+		quest::faction(281,10); 	#:: + Knights of Truth
+		quest::faction(271,-15); 	#:: - Dismal Rage
+		quest::faction(330,-15); 	#:: - Freeport Militia
+		quest::faction(362,10); 	#:: + Priests of Marr
 		quest::faction(311,10); 	#:: + Steel Warriors
 	}
 	#:: Return unused items

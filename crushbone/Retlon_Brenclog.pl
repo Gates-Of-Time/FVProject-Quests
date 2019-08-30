@@ -23,10 +23,10 @@ sub EVENT_ITEM {
 		#:: Grant a moderate amount of experience
 		quest::exp(5000);
 		#:: Set faction
-		quest::faction(91,1); 		#:: + Eldritch Collective
-		quest::faction(176,1); 		#:: + King Ak'Anon
-		quest::faction(115,1); 		#:: + Gem Choppers
-		quest::faction(322,-2); 	#:: - The Dead	
+		quest::faction(245,1); 		#:: + Eldritch Collective
+		quest::faction(333,1); 		#:: + King Ak'Anon
+		quest::faction(255,1); 		#:: + Gem Choppers
+		quest::faction(239,-2); 	#:: - The Dead	
 		#:: Set Depop Timer
 		quest::settimer("depop",240);
 	}
@@ -42,10 +42,10 @@ sub EVENT_ITEM {
 		#:: Grant a moderate amount of experience
 		quest::exp(5000);
 		#:: Set faction
-		quest::faction(91,1); 		#:: + Eldritch Collective
-		quest::faction(176,1); 		#:: + King Ak'Anon
-		quest::faction(115,1); 		#:: + Gem Choppers
-		quest::faction(322,-2); 	#:: - The Dead	
+		quest::faction(245,1); 		#:: + Eldritch Collective
+		quest::faction(333,1); 		#:: + King Ak'Anon
+		quest::faction(255,1); 		#:: + Gem Choppers
+		quest::faction(239,-2); 	#:: - The Dead	
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

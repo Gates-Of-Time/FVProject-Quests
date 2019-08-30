@@ -31,11 +31,11 @@ sub EVENT_ITEM {
 		#:: Give a 13521 - Dusty Gold Robe*
 		quest::summonitem(13521);
 		#:: Set faction
-		quest::faction(91,100); 	# Eldritch Collective
-		quest::faction(71,-15); 	# Dark Reflection
-		quest::faction(322,-5); 	# The Dead
-		quest::faction(115,15); 	# Gem Choppers
-		quest::faction(176,15); 	# King Ak'Anon
+		quest::faction(245,100); 	# Eldritch Collective
+		quest::faction(238,-15); 	# Dark Reflection
+		quest::faction(239,-5); 	# The Dead
+		quest::faction(255,15); 	# Gem Choppers
+		quest::faction(333,15); 	# King Ak'Anon
 		quest::ding();
 		quest::exp(100);
 	}

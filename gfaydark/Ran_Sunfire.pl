@@ -28,11 +28,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(99,20);		#:: + Faydark's Champions
-		quest::faction(178,5);		#:: + King Tearis Thex
-		quest::faction(43,5);		#:: + Clerics of Tunare
-		quest::faction(304,5);		#:: + Soldiers of Tunare
-		quest::faction(63,-5);		#:: - Crushbone Orcs
+		quest::faction(246,20);		#:: + Faydark's Champions
+		quest::faction(279,5);		#:: + King Tearis Thex
+		quest::faction(226,5);		#:: + Clerics of Tunare
+		quest::faction(310,5);		#:: + Soldiers of Tunare
+		quest::faction(234,-5);		#:: - Crushbone Orcs
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Ranger');
 	#:: Return unused items

@@ -47,9 +47,9 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(259, 100);	#:: + Priests of Mischief
-		quest::faction(208, 15);	#:: + Mayor Gubbin
-		quest::faction(133, 15);	#:: + Guardians of the Vale
+		quest::faction(300, 100);	#:: + Priests of Mischief
+		quest::faction(286, 15);	#:: + Mayor Gubbin
+		quest::faction(263, 15);	#:: + Guardians of the Vale
 	}
 	#:: Match a 13045 - Berries, two 13782 - Ruined Wolf Pelt, and a 13758 - Black Wolf Skin
 	elsif (plugin::takeItems(13045 => 1, 13782 => 2, 13758 => 1)) {
@@ -65,9 +65,9 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(259, 10);	#:: + Priests of Mischief
-		quest::faction(208, 10);	#:: + Mayor Gubbin
-		quest::faction(133, 10);	#:: + Guardians of the Vale
+		quest::faction(300, 10);	#:: + Priests of Mischief
+		quest::faction(286, 10);	#:: + Mayor Gubbin
+		quest::faction(263, 10);	#:: + Guardians of the Vale
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

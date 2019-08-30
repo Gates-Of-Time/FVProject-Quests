@@ -21,10 +21,10 @@ sub EVENT_ITEM {
 		#:: Give xp
 		quest::exp(5000);
 		#:: Set factions
-		quest::faction(105,10); 	#:: + Freeport Militia
-		quest::faction(48,10); 		#:: + Coalition of Tradefolk Underground
-		quest::faction(184,-20); 	#:: - Knights of Truth
-		quest::faction(258,-20); 	#:: - Priests of Marr
+		quest::faction(330,10); 	#:: + Freeport Militia
+		quest::faction(336,10); 		#:: + Coalition of Tradefolk Underground
+		quest::faction(281,-20); 	#:: - Knights of Truth
+		quest::faction(362,-20); 	#:: - Priests of Marr
 	}
 	#:: Turn in for Slashed Militia Tunic
 	if (plugin::check_handin(\%itemcount, 13926=> 1)) {
@@ -38,10 +38,10 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(105,10); 	#:: + Freeport Militia
-		quest::faction(48,10); 		#:: + Coalition of Tradefolk Underground
-		quest::faction(184,-240); 	#:: - Knights of Truth
-		quest::faction(258,-40); 	#:: - Priests of Marr
+		quest::faction(330,10); 	#:: + Freeport Militia
+		quest::faction(336,10); 		#:: + Coalition of Tradefolk Underground
+		quest::faction(281,-240); 	#:: - Knights of Truth
+		quest::faction(362,-40); 	#:: - Priests of Marr
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

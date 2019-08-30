@@ -60,8 +60,8 @@ sub EVENT_ITEM {
 		#:: Grant a large amount of experience
 		quest::exp(72900);
 		#:: Set factions
-		quest::faction(236, 5);		#:: + Oracle of Karnon
-		quest::faction(237, -10);	#:: - Oracle of Marud
+		quest::faction(402, 5);		#:: + Oracle of Karnon
+		quest::faction(403, -10);	#:: - Oracle of Marud
 	}
 	plugin::return_items(\%itemcount);
 }

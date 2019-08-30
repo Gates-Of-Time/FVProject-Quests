@@ -57,10 +57,10 @@ sub EVENT_ITEM {
 		#:: Give a small amount of experience
 		quest::exp(100);
 		#:: Set faction
-		quest::faction(170,100);	#:: + Keepers of the Art
-		quest::faction(178,25);		#:: + Kin Tearis Thex
-		quest::faction(99,15);		#:: + Faydark's Champions
-		quest::faction(322,-25);	#:: - The Dead
+		quest::faction(275,100);	#:: + Keepers of the Art
+		quest::faction(279,25);		#:: + Kin Tearis Thex
+		quest::faction(246,15);		#:: + Faydark's Champions
+		quest::faction(239,-25);	#:: - The Dead
 	}
 	#:: Turn in for 12333 - Pouch of Gold Dust, 12334 - Wooden Heart, 8401 - Trueshot Longbow, Gold = 3000
 	elsif (plugin::takeItemsCoin(0,0,3000,0, 12333 => 1, 12334 => 1, 8401 => 1)) {

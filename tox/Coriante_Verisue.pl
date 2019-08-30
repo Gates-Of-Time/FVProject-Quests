@@ -39,11 +39,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(143,100);	# + Heretics
-		quest::faction(79,-100);	# - Deepwater Knights
-		quest::faction(112,-100);	# - Gate Callers
-		quest::faction(56,-100);	# - Craftkeepers
-		quest::faction(60,-100);	# - Crimson Hands
+		quest::faction(265,100);	# + Heretics
+		quest::faction(242,-100);	# - Deepwater Knights
+		quest::faction(254,-100);	# - Gate Callers
+		quest::faction(231,-100);	# - Craftkeepers
+		quest::faction(233,-100);	# - Crimson Hands
 		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
@@ -53,11 +53,11 @@ sub EVENT_ITEM {
 		#:: Give a 15338 - Spell: Cavorting Bones
 		quest::summonitem(15338); #Spell: Cavorting Bones
 		#:: Set factions
-		quest::faction(143,1);	# + Heretics
-		quest::faction(56,-1);	# - Craftkeepers
-		quest::faction(60,-1);	# - Crimson Hands
-		quest::faction(79,-1);	# - Deepwater Knights
-		quest::faction(112,-1);	# - Gate Callers
+		quest::faction(265,1);	# + Heretics
+		quest::faction(231,-1);	# - Craftkeepers
+		quest::faction(233,-1);	# - Crimson Hands
+		quest::faction(242,-1);	# - Deepwater Knights
+		quest::faction(254,-1);	# - Gate Callers
 		#:: Grant a small amount of experience
 		quest::exp(100);
 	}

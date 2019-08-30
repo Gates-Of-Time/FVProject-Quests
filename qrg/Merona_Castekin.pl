@@ -14,10 +14,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(265, 5);		#:: + Protectors of Pine
-		quest::faction(159, 1);		#:: + Jaggedpine Treefolk
-		quest::faction(279, -1);	#:: - Sabertooths of Blackburrow
-		quest::faction(135, 1);		#:: + Guards of Qeynos
+		quest::faction(302, 5);		#:: + Protectors of Pine
+		quest::faction(272, 1);		#:: + Jaggedpine Treefolk
+		quest::faction(306, -1);	#:: - Sabertooths of Blackburrow
+		quest::faction(262, 1);		#:: + Guards of Qeynos
 		#:: Grant a moderate amount of experience
 		quest::exp(1000);
 		#:: Give a random reward: 13184 - Band of Tunare, 8011 - Hunting Bow, 13004 - Large Lantern, 13015 - Loaf of Bread, 13185 - Ring of Pine, 13081 - Summoned: Bandages, 13006 - Water Flask

@@ -23,9 +23,9 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set Factions
-		quest::faction(44,100); 	#:: + Clerics of Underfoot
-		quest::faction(169,100); 	#:: + Kazon Stormhammer
-		quest::faction(219,75); 	#:: + Miners Guild 249
+		quest::faction(227,100); 	#:: + Clerics of Underfoot
+		quest::faction(274,100); 	#:: + Kazon Stormhammer
+		quest::faction(293,75); 	#:: + Miners Guild 249
 	}
 	#:: Match a 12279 - Chalice Case
 	if (plugin::takeItems(12279 => 1)) {
@@ -42,9 +42,9 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set Factions
-			quest::faction(44, 25);		#:: + Clerics of Underfoot
-			quest::faction(169, 25);	#:: + Kazon Stormhammer
-			quest::faction(219, 25);	#:: + Miners Guild 249
+			quest::faction(227, 25);		#:: + Clerics of Underfoot
+			quest::faction(274, 25);	#:: + Kazon Stormhammer
+			quest::faction(293, 25);	#:: + Miners Guild 249
 		} 
 		else {
 			quest::say("$name, you are no Dwarf! Leave this place at once!");

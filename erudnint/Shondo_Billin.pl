@@ -17,11 +17,11 @@ sub EVENT_ITEM {
 		quest::ding();
 		quest::exp(100);
 		#:: Set Factions
-		quest::faction(115,10);		#:: Gem Choppers +10
-		quest::faction(210,10);		#:: Merchants of Ak'Anon +10
-		quest::faction(176,10);		#:: King Ak'Anon +10
-		quest::faction(71,-30);		#:: Dark Reflection -30
-		quest::faction(39,-10);		#:: Clan Grikbar -10
+		quest::faction(255,10);		#:: Gem Choppers +10
+		quest::faction(288,10);		#:: Merchants of Ak'Anon +10
+		quest::faction(333,10);		#:: King Ak'Anon +10
+		quest::faction(238,-30);		#:: Dark Reflection -30
+		quest::faction(1604,-10);		#:: Clan Grikbar -10
 	}
 	plugin::return_items(\%itemcount);
 }

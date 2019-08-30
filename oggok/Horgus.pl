@@ -21,8 +21,8 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(500);
 		#:: Set factions
-		quest::faction(57, 10); 	#:: + Craknek Warriors
-		quest::faction(46, 1); 		#:: + Clurg
+		quest::faction(232, 10); 	#:: + Craknek Warriors
+		quest::faction(228, 1); 		#:: + Clurg
 		quest::faction(128 -1);		#:: - Green Blood Knights
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Warrior');

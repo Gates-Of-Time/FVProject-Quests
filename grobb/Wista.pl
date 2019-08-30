@@ -17,7 +17,7 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set faction
-		quest::faction(131, 10);		#:: + Grobb Merchants
+		quest::faction(376, 10);		#:: + Grobb Merchants
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

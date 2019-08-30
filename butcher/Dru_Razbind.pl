@@ -36,10 +36,10 @@ sub EVENT_ITEM {
 	if (plugin::check_handin(\%itemcount, 12281 => 1)) {
  		quest::say("I thank you, my friend. You are truly a great paladin and noble addition to our ranks. I now can walk in Kaladim. Take this as a reward. It is the Holy Partisan of Underfoot. It is now yours. I believe it still has a couple of charges. Use it wisely as the only cleric able to recharge it was lost amid the lava filled lands of Antonica.");
 		#:: Set factions
-		quest::faction(246,10); 	# Paladins of Underfoot
- 		quest::faction(169,7); 		# Kazon Stormhammer
-		quest::faction(44,10); 		# Clerics of Underfoot
-		quest::faction(351,1); 		# Veeshan
+		quest::faction(297,10); 	# Paladins of Underfoot
+ 		quest::faction(274,7); 		# Kazon Stormhammer
+		quest::faction(227,10); 		# Clerics of Underfoot
+		quest::faction(216,1); 		# Veeshan
 		quest::ding();
 		quest::exp(750);
 		#:: Give item 5376 -Holy Partison of Underfoot

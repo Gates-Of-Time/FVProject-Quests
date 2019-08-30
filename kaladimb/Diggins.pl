@@ -77,11 +77,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(220, 10);	#:: + Miners Guild 628
-		quest::faction(33, -10);	#:: - Circle Of Unseen Hands
-		quest::faction(29, -10);	#:: - Butcherblock Bandits
-		quest::faction(77, 10);		#:: + Deeppockets
-		quest::faction(90, -10);	#:: - Ebon Mask
+		quest::faction(322, 10);	#:: + Miners Guild 628
+		quest::faction(223, -10);	#:: - Circle Of Unseen Hands
+		quest::faction(379, -10);	#:: - Butcherblock Bandits
+		quest::faction(241, 10);		#:: + Deeppockets
+		quest::faction(244, -10);	#:: - Ebon Mask
 	}
 	#:: Match if faction is Amiable or better and 12170 - Crytil's Tongue, 12172 - Keldyn's Tongue, 12174 - Barma's Tongue, 12178 - Rondo's Tongue
 	elsif (($faction <= 4) && (plugin::takeItems(12170 => 1, 12172 => 1, 12174 => 1, 12178 => 1))) {
@@ -93,11 +93,11 @@ sub EVENT_ITEM {
 		#:: Reward a moderate amount of experience
 		quest::exp(5000);
 		#:: Set factions
-		quest::faction(220, 10);	#:: + Miners Guild 628
-		quest::faction(33, -10);	#:: - Circle Of Unseen Hands
-		quest::faction(29, -10);	#:: - Butcherblock Bandits
-		quest::faction(77, 10);		#:: + Deeppockets
-		quest::faction(90, -10);	#:: - Ebon Mask
+		quest::faction(322, 10);	#:: + Miners Guild 628
+		quest::faction(223, -10);	#:: - Circle Of Unseen Hands
+		quest::faction(379, -10);	#:: - Butcherblock Bandits
+		quest::faction(241, 10);		#:: + Deeppockets
+		quest::faction(244, -10);	#:: - Ebon Mask
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Rogue');
 	#:: Return unused items

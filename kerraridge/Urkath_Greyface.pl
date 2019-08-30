@@ -21,7 +21,7 @@ sub EVENT_ITEM {
 		#:: Grant a moderate amount of experience
 		quest::exp(2000);
 		#:: Set faction
-		quest::faction(175,30);	# + Kerra Isle
+		quest::faction(382,30);	# + Kerra Isle
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

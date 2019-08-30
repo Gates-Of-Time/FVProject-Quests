@@ -23,10 +23,10 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(105, 5); 		#:: + Freeport Militia
-		quest::faction(258, -1); 		#:: - Priests of Marr
-		quest::faction(184, -1); 		#:: + Knights of Truth
-		quest::faction(48, 1); 			#:: + Coalition of Trade Folk Underground
+		quest::faction(330, 5); 		#:: + Freeport Militia
+		quest::faction(362, -1); 		#:: - Priests of Marr
+		quest::faction(281, -1); 		#:: + Knights of Truth
+		quest::faction(336, 1); 			#:: + Coalition of Trade Folk Underground
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

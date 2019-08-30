@@ -36,9 +36,9 @@ sub EVENT_ITEM {
 		#:: Grant a moderate amount of experience
 		quest::exp(5000);
 		#:: Set factions
-		quest::faction(44, 20);		#:: + Clerics Of Underfoot
-		quest::faction(169, 20);	#:: + Kazon Stormhammer
-		quest::faction(219, 20);	#:: + Miner's Guild 249
+		quest::faction(227, 20);		#:: + Clerics Of Underfoot
+		quest::faction(274, 20);	#:: + Kazon Stormhammer
+		quest::faction(293, 20);	#:: + Miner's Guild 249
 	}
 	#:: Match if faction is Amiable or better and four 12158 - Aviak Talon
 	elsif (($faction <= 4) && (plugin::takeItems(12158 => 4))) {
@@ -54,9 +54,9 @@ sub EVENT_ITEM {
 		#:: Give a random reward: 2114 - Small tattered Mask, 6041 - Cast-iron Warhammer
 		quest::summonitem(quest::ChooseRandom(2114,6041));
 		#:: Set factions
-		quest::faction(44, 40);		#:: + Clerics Of Underfoot
-		quest::faction(169, 40);	#:: + Kazon Stormhammer
-		quest::faction(219, 40);	#:: + Miner's Guild 249
+		quest::faction(227, 40);		#:: + Clerics Of Underfoot
+		quest::faction(274, 40);	#:: + Kazon Stormhammer
+		quest::faction(293, 40);	#:: + Miner's Guild 249
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Paladin');
 	#:: Return unused items

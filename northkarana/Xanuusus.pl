@@ -19,10 +19,10 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(316, 10);	#:: + Storm Reapers
-		quest::faction(208, 1);		#:: + Mayor Gubbin
-		quest::faction(218, 1);		#:: + Merchants of Rivervale
-		quest::faction(31, -1);		#:: - Unkempt Druids
+		quest::faction(355, 10);	#:: + Storm Reapers
+		quest::faction(286, 1);		#:: + Mayor Gubbin
+		quest::faction(292, 1);		#:: + Merchants of Rivervale
+		quest::faction(329, -1);		#:: - Unkempt Druids
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

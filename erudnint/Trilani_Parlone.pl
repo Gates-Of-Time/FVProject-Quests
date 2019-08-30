@@ -28,10 +28,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(99,10);		#:: + Faydark's Champions
-		quest::faction(170,10);		#:: + Keepers of the Art
-		quest::faction(178,10);		#:: + King Tearis Thex
-		quest::faction(322,-30);	#:: - The Dead
+		quest::faction(246,10);		#:: + Faydark's Champions
+		quest::faction(275,10);		#:: + Keepers of the Art
+		quest::faction(279,10);		#:: + King Tearis Thex
+		quest::faction(239,-30);	#:: - The Dead
 	}
 	#:: Match a 1056 - Faded Cloak
 	if (plugin::check_handin(\%itemcount, 1056 => 1)) {
@@ -43,10 +43,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(99,10);		#:: + Faydark's Champions
-		quest::faction(170,10);		#:: + Keepers of the Art
-		quest::faction(178,10);		#:: + King Tearis Thex
-		quest::faction(322,-30);	#:: - The Dead
+		quest::faction(246,10);		#:: + Faydark's Champions
+		quest::faction(275,10);		#:: + Keepers of the Art
+		quest::faction(279,10);		#:: + King Tearis Thex
+		quest::faction(239,-30);	#:: - The Dead
 	}
 	plugin::return_items(\%itemcount);
 }

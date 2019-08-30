@@ -15,10 +15,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(105,1); 		#:: + Freeport Militia
-		quest::faction(48,1); 		#:: + Coalition of Tradefolk Underground
-		quest::faction(184,-1); 	#:: - Knights of Truth
-		quest::faction(258,-1); 	#:: - Priests of Marr		
+		quest::faction(330,1); 		#:: + Freeport Militia
+		quest::faction(336,1); 		#:: + Coalition of Tradefolk Underground
+		quest::faction(281,-1); 	#:: - Knights of Truth
+		quest::faction(362,-1); 	#:: - Priests of Marr		
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

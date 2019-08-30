@@ -17,10 +17,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(112,1);	# + Gate Callers
-		quest::faction(145,1);	# + High Council of Erudin
-		quest::faction(147,1);	# + High Guard of Erudin
-		quest::faction(143,-1);	# - Heretics
+		quest::faction(254,1);	# + Gate Callers
+		quest::faction(266,1);	# + High Council of Erudin
+		quest::faction(267,1);	# + High Guard of Erudin
+		quest::faction(265,-1);	# - Heretics
 	}
 	else {
 		#:: Return unused money

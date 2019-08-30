@@ -22,10 +22,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(265, 10);	#:: + Protectors of Pine
-		quest::faction(159, 10);	#:: + Jaggedpine Treefolk
-		quest::faction(279, -30);	#:: - Sabertooths of Blackburrow
-		quest::faction(135, 10);	#:: + Guards of Qeynos
+		quest::faction(302, 10);	#:: + Protectors of Pine
+		quest::faction(272, 10);	#:: + Jaggedpine Treefolk
+		quest::faction(306, -30);	#:: - Sabertooths of Blackburrow
+		quest::faction(262, 10);	#:: + Guards of Qeynos
 		#:: Grant a moderate amount of experience
 		quest::exp(500);
 		#:: Create a hash for storing cash - 550 to 650cp

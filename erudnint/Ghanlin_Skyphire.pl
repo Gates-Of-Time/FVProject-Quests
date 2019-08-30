@@ -23,10 +23,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(60,100);		#:: + Crimson Hands
-		quest::faction(145,10);		#:: + High Council of Erudin
-		quest::faction(143,-15);	#:: - Heretics
-		quest::faction(147,15);		#:: + High Guard of Erudin
+		quest::faction(233,100);		#:: + Crimson Hands
+		quest::faction(266,10);		#:: + High Council of Erudin
+		quest::faction(265,-15);	#:: - Heretics
+		quest::faction(267,15);		#:: + High Guard of Erudin
 	}
 	plugin::return_items(\%itemcount);
 }

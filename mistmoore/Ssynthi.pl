@@ -19,8 +19,8 @@ sub EVENT_ITEM {
 		#:: Give a 14364 - Scepter
 		quest::summonitem(14364);
 		#:: Set factions
-		quest::faction(320,15);		#:: Temple of Solusek Ro
-		quest::faction(291,-15);	#:: Shadowed Men
+		quest::faction(415,15);		#:: Temple of Solusek Ro
+		quest::faction(416,-15);	#:: Shadowed Men
 		quest::exp(1000);
 	}
 	plugin::return_items(\%itemcount);

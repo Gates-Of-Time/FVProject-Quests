@@ -43,10 +43,10 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Set factions
-		quest::faction(292, 100);		#:: + Shadowknights of Night Keep
-		quest::faction(128, -15);		#:: - Green Blood Knights
-		quest::faction(22, -25);		#:: - Broken Skull Clan
-		quest::faction(66, 5);			#:: - Da Bashers
+		quest::faction(308, 100);		#:: + Shadowknights of Night Keep
+		quest::faction(261, -15);		#:: - Green Blood Knights
+		quest::faction(222, -25);		#:: - Broken Skull Clan
+		quest::faction(235, 5);			#:: - Da Bashers
 	}
 	#:: Match four 13073 - Bone Chips
 	elsif (plugin::takeItems(13073 => 4)) {
@@ -56,10 +56,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(292, 10);		#:: + Shadowknights of Night Keep
-		quest::faction(128, -10);		#:: - Green Blood Knights
-		quest::faction(22, -25);		#:: - Broken Skull Clan
-		quest::faction(66, 10);			#:: - Da Bashers
+		quest::faction(308, 10);		#:: + Shadowknights of Night Keep
+		quest::faction(261, -10);		#:: - Green Blood Knights
+		quest::faction(222, -25);		#:: - Broken Skull Clan
+		quest::faction(235, 10);			#:: - Da Bashers
 	}
 	#:: Match a 12201 - Troll Head and 12202 - Happy Love Bracers
 	elsif (plugin::takeItems(12201 => 1, 12202 => 1)) {
@@ -71,10 +71,10 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(250);
 		#:: Set factions
-		quest::faction(292, 10);		#:: + Shadowknights of Night Keep
-		quest::faction(128, -10);		#:: - Green Blood Knights
-		quest::faction(22, -15);		#:: - Broken Skull Clan
-		quest::faction(66, 10);			#:: - Da Bashers
+		quest::faction(308, 10);		#:: + Shadowknights of Night Keep
+		quest::faction(261, -10);		#:: - Green Blood Knights
+		quest::faction(222, -15);		#:: - Broken Skull Clan
+		quest::faction(235, 10);			#:: - Da Bashers
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

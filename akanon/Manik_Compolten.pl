@@ -33,11 +33,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(115,3); 		#:: + Gem Choppers
-		quest::faction(210,10); 	#:: + Merchants of Ak'Anon
-		quest::faction(176,3); 		#:: + King Ak'Anon
-		quest::faction(71,-10); 	#:: - Dark Reflection
-		quest::faction(39,-10); 	#:: - Clan Grikbar
+		quest::faction(255,3); 		#:: + Gem Choppers
+		quest::faction(288,10); 	#:: + Merchants of Ak'Anon
+		quest::faction(333,3); 		#:: + King Ak'Anon
+		quest::faction(238,-10); 	#:: - Dark Reflection
+		quest::faction(1604,-10); 	#:: - Clan Grikbar
 	}
 	#:: Turn in for 13208 -  Series C Black Boxes Quest: Blackbox XIIC, Blackbox XXVIC, Blackbox XVIIC, Blackbox XXVIIC
 	if (plugin::check_handin(\%itemcount, 13212 => 1, 13211 => 1, 13213 =>1, 13214 =>1)) {
@@ -49,11 +49,11 @@ sub EVENT_ITEM {
 		#:: Give a moderate amount of xp
 		quest::exp(5000);
 		#:: Set faction
-		quest::faction(115,1); 		#:: + Gem Choppers
-		quest::faction(210,1); 		#:: + Merchants of Ak'Anon
-		quest::faction(176,1); 		#:: + King Ak'Anon
-		quest::faction(71,-1); 		#:: - Dark Reflection
-		quest::faction(39,-1); 		#:: - Clan Grikbar
+		quest::faction(255,1); 		#:: + Gem Choppers
+		quest::faction(288,1); 		#:: + Merchants of Ak'Anon
+		quest::faction(333,1); 		#:: + King Ak'Anon
+		quest::faction(238,-1); 		#:: - Dark Reflection
+		quest::faction(1604,-1); 		#:: - Clan Grikbar
 	}
 	#:: Turn in for 13215 -  Rusted Black Box - Red V Clockwork
 	if (plugin::check_handin(\%itemcount, 13215 => 1)) {
@@ -69,11 +69,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(115,1); 		#:: + Gem Choppers
-		quest::faction(210,1); 		#:: + Merchants of Ak'Anon
-		quest::faction(176,1); 		#:: + King Ak'Anon
-		quest::faction(71,-1); 		#:: - Dark Reflection
-		quest::faction(39,-1); 		#:: - Clan Grikbar
+		quest::faction(255,1); 		#:: + Gem Choppers
+		quest::faction(288,1); 		#:: + Merchants of Ak'Anon
+		quest::faction(333,1); 		#:: + King Ak'Anon
+		quest::faction(238,-1); 		#:: - Dark Reflection
+		quest::faction(1604,-1); 		#:: - Clan Grikbar
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);

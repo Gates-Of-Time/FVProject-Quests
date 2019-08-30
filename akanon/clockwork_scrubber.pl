@@ -29,7 +29,7 @@ sub EVENT_ITEM {
 		#:: Give one of the Gnome Take items
 		quest::summonitem($gnometake);
 		#:: Set faction
-		quest::faction(45,-10); 	#:: -10 Clockwork Gnome
+		quest::faction(695,-10); 	#:: -10 Clockwork Gnome
 		quest::ding();
 		quest::exp(500);
 	}

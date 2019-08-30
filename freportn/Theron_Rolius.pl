@@ -34,11 +34,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(258,10); 		#:: + Priests of Marr
-		quest::faction(86,-30); 		#:: - Dismal Rage
-		quest::faction(184,10); 		#:: + Knights of Truth
+		quest::faction(362,10); 		#:: + Priests of Marr
+		quest::faction(271,-30); 		#:: - Dismal Rage
+		quest::faction(281,10); 		#:: + Knights of Truth
 		quest::faction(311,10); 		#:: + Steel Warriors
-		quest::faction(105,-30); 		#:: - Freeport Militia
+		quest::faction(330,-30); 		#:: - Freeport Militia
 		#:: Give a moderate amount of xp
 		quest::exp(1000);
 		#:: Create a hash for storing cash - 900 to 2000cp
@@ -52,11 +52,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(258,10); 		#:: + Priests of Marr
-		quest::faction(86,-30); 		#:: - Dismal Rage
-		quest::faction(184,10); 		#:: + Knights of Truth
+		quest::faction(362,10); 		#:: + Priests of Marr
+		quest::faction(271,-30); 		#:: - Dismal Rage
+		quest::faction(281,10); 		#:: + Knights of Truth
 		quest::faction(311,10); 		#:: + Steel Warriors
-		quest::faction(105,-30); 		#:: - Freeport Militia
+		quest::faction(330,-30); 		#:: - Freeport Militia
 		#:: Give a small amount of xp
 		quest::exp(500);
 	}
