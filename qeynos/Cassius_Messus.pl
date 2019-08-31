@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail!  What do think of [" . quest::saylink("Lisera") . "]?  She aint' much to look at, but soon she will be singing again.");
+		quest::say("Hail!  What do think of [" . quest::saylink("Lisera") . "]?  She ain't much to look at, but soon she will be singing again.");
 	}
 	elsif ($text=~/lisera/i) {
 		quest::say("Lisera is my lute.  She sounds horrible.  I need to get her tuned by a master tuner, but the League's Master Tuner is in the Plains of Karana for a while.  If only..  hey!!  You look like a fellow bard...  You [" . quest::saylink("interested in the job") . "]?");
