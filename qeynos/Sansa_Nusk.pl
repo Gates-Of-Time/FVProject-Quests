@@ -29,6 +29,8 @@ sub EVENT_ITEM {
 		quest::faction(262,30); 	#:: + Guards of Qeynos
 		quest::faction(304,-30); 	#:: - Ring of Scale
 		quest::faction(285,-30); 	#:: - Mayong Mistmoore
+		#:: Send a signal "1" to South Qeynos >> Belious_Naliedin (1125) with a 0 second delay
+		quest::signalwith(1125,1,0);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
