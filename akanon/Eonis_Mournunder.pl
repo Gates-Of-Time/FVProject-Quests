@@ -1,8 +1,6 @@
 sub EVENT_SPAWN {
-	#:: Set up a 50 unit distance
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Create a proximity, 100 units across, 100 units tall, without proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 0);
 }
 
 sub EVENT_ENTER {
@@ -18,7 +16,7 @@ sub EVENT_SAY {
 		#:: Give a 51121 - Tradeskill Basics: Volume 1
 		quest::summonitem(51121);
 	}
-	if ($text=~/second book/i) {
+	elsif ($text=~/second book/i) {
 		quest::say("Here is the second volume of the book you requested, may it serve you well!");
 		#:: Give a 51122 - Tradeskill Basics: Volume II
 		quest::summonitem(51122);
@@ -26,20 +24,21 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Turn in for 18771 - Stained Letter
-	if (plugin::check_handin(\%itemcount, 18771 => 1)) {
+	#:: Match a 18771 - Stained Letter
+	if (plugin::takeItems(18771 => 1)) {
 		quest::say("Hmmm.. As you wish, we will train you in our dark ways, but, now this, our art carries a high price, and there is no turning back for you now. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you. Once you are ready to begin your training please make sure that you see Tilkzog Mournunder, he can assist you in developing your hunting and gathering skills.");
 		#:: Give item 13524 - Dark Gold Felt Robe*
 		quest::summonitem(13524);
-		#:: Give a small amount of xp
-		quest::exp(100);
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
+		#:: Set factions
 		quest::faction(238,100); 	#:: + Dark Reflection
 		quest::faction(245,-10); 	#:: - Eldritch Collective
 		quest::faction(255,-10); 	#:: - Gem Choppers
-		quest::faction(240,-10); 	#:: - Deep Muses	
+		quest::faction(240,-10); 	#:: - Deep Muses
+		#:: Grant a small amount of experience
+		quest::exp(100);
 	}
-	plugin::return_items(\%itemcount);
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
