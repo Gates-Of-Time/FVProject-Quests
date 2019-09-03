@@ -23,7 +23,7 @@ sub EVENT_SAY {
 
 sub EVENT_WAYPOINT_ARRIVE {
 	#:: Match when NPC arrives at waypoint 3
-	if ($WP == 3) {
+	if ($wp == 3) {
 		quest::emote("growls, revealing his fangs.");
 	}
 }
