@@ -1,8 +1,6 @@
 sub EVENT_SPAWN {
-	#:: Set up a 50 unit distance
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Create a proximity, 100 units across, 100 units tall, without proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 0);
 }
 
 sub EVENT_ENTER {
@@ -14,28 +12,30 @@ sub EVENT_ENTER {
 	
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("looks up irritably. 'I do not have time to speak with thee. I have a problem on my hands. Feel free to speak with any of my trainers.'");
+		quest::emote("looks up irritably.");
+		quest::say("I do not have time to speak with thee. I have a problem on my hands. Feel free to speak with any of my trainers.");
 	}
-	if ($text=~/problem/i) {
+	elsif ($text=~/problem/i) {
 		quest::say("My problems are of no concern of yours. but if you must know it deals with Nolusia's brother. I can tell you no more. Leave me be.");
 	}
 }
 	
 sub EVENT_ITEM {
 	#:: Match turn in for 18729 - Tattered Note
-	if (plugin::check_handin(\%itemcount, 18729 => 1)) {
+	if (plugin::takeItems(18729 => 1)) {
 		quest::say("Welcome to the Craft Keepers! You have much to learn. and I'm sure you are anxious to get started. Here's your training robe. Go see Nolusia. she'll give you your first lesson.");
 		#:: Give item 13549 - Old Patched Robe*
 		quest::summonitem(13549);
-		#:: Give a small amount of xp
-		quest::exp(100);
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(231,100);		#:: + Craftkeepers
-		quest::faction(266,10);		#:: + High Council of Erudin
-		quest::faction(265,-15);	#:: - Heretics
-		quest::faction(267,15);		#:: + High Guard of Erudin
+		quest::faction(231, 100);	#:: + Craftkeepers
+		quest::faction(266, 10);	#:: + High Council of Erudin
+		quest::faction(265, -15);	#:: - Heretics
+		quest::faction(267, 15);	#:: + High Guard of Erudin
+		#:: Give a small amount of xp
+		quest::exp(100);
 	}
-	plugin::return_items(\%itemcount);
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
