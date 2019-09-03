@@ -1,8 +1,6 @@
 sub EVENT_SPAWN {
-	#:: Set up a 50 unit distance
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Create a proximity, 100 units across, 100 units tall, without proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 0);
 }
 
 sub EVENT_ENTER {
@@ -18,7 +16,7 @@ sub EVENT_SAY {
 		#:: Give a 51121 - Tradeskill Basics: Volume 1
 		quest::summonitem(51121); 
 	}
-	if ($text=~/second book/i) { 
+	elsif ($text=~/second book/i) { 
 		quest::say("Here is the second volume of the book you requested, may it serve you well!");
 		#:: Give a 51122 - Tradeskill Basics: Volume II
 		quest::summonitem(51122); 
@@ -26,21 +24,21 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Check for 18775 - Tattered Note
-	if (plugin::check_handin(\%itemcount, 18775 => 1)) { 
+	#:: Match a 18775 - Tattered Note
+	if (plugin::takeItems(18775 => 1)) { 
 		quest::say("Welcome to the Abbey of Deep Musing.  Here you can train and raise your abilities to the peak of perfection. Take this tunic and wear it with pride. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
 		#:: Reward 13522 - Worn Felt Tunic
 		quest::summonitem(13522);
-		#:: Set factions
-		quest::faction(239,15); 	# Merchants of Ak'Anon
-		quest::faction(240,100); 	# Deep Muses
-		quest::faction(238,-15); 	# Dark Reflection
-		quest::faction(255,15); 	# Gem Choppers
+		#:: Ding!
 		quest::ding();
+		#:: Set factions
+		quest::faction(239, 15); 	#:: + Merchants of Ak'Anon
+		quest::faction(240, 100); 	#:: + Deep Muses
+		quest::faction(238, -15); 	#:: - Dark Reflection
+		quest::faction(255, 15); 	#:: + Gem Choppers
+		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
-
-# converted to Perl by SS
