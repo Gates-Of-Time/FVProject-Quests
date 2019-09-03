@@ -1,17 +1,32 @@
 sub EVENT_SAY {
-	if (($text=~/hail/i) && ($langid == 0)) {
-		quest::say("Whats you wants!!  Me great master of da bashers.  Me tinks yooz must be lookin' fer trainin'.  Yooz looks like a weaklin'.  Me train yooz and yooz helps me get fatter.  Well!!  Are yooz gonna [" . quest::saylink("helps Hergor get fatter") . "]?!!",0);
+	if ($text=~/hail/i) {
+		#:: Match if faction is better than indifferent
+		if ($faction < 5) {
+			quest::say("Whats you wants!!  Me great master of da bashers.  Me tinks yooz must be lookin' fer trainin'.  Yooz looks like a weaklin'.  Me train yooz and yooz helps me get fatter.  Well!!  Are yooz gonna [" . quest::saylink("helps Hergor get fatter") . "]?!!");
+		}
+		#:: Match if faction is indifferent
+		elsif ($faction == 5) {
+			quest::say("More service to da bashers, den me listen.");
+		}
+		#:: Match if faction is worse than indifferent
+		else {
+			quest::say("Me smell death coming your way!  Da bashers no like you. Hey!  Me am basher!");
+		}
 	}
-	elsif (($text=~/hail/i) && ($langid == 6)) {
-		quest::say("Whats you wants!!  Me great master of da bashers.  Me tinks yooz must be lookin' fer trainin'.  Yooz looks like a weaklin'.  Me train yooz and yooz helps me get fatter.  Well!!  Are yooz gonna [" . quest::saylink("helps Hergor get fatter") . "]?!!",6);
+	elsif ($text=~/helps Hergor get fatter/i) {
+		#:: Match if faction is better than indifferent
+		if ($faction < 5) {
+			quest::say("Yooz makes da good choice.  Me nevers get enuff ta eats.  Eats more and gets more stronger, me always say.  Yooz gos and speaks wit carver Cagrek.  Yooz tell him Hergor wants his [fungus dung pie].  Yooz duz dis and me gives you sum rawhide armer or tatters armer.");
+		}
+		#:: Match if faction is indifferent
+		elsif ($faction == 5) {
+			quest::say("More service to da bashers, den me listen.");
+		}
+		#:: Match if faction is worse than indifferent
+		else {
+			quest::say("Me smell death coming your way!  Da bashers no like you. Hey!  Me am basher!");
+		}
 	}
-	elsif (($text=~/helps Hergor get fatter/i) & ($langid == 0)) {
-		quest::say("Yooz makes da good choice.  Me nevers get enuff ta eats.  Eats more and gets more stronger, me always say.  Yooz gos and speaks wit carver Cagrek.  Yooz tell him Hergor wants his [fungus dung pie].  Yooz duz dis and me gives you sum rawhide armer or tatters armer.",0);
-	}
-	elsif (($text=~/helps Hergor get fatter/i) & ($langid == 6)) {
-		quest::say("Yooz makes da good choice.  Me nevers get enuff ta eats.  Eats more and gets more stronger, me always say.  Yooz gos and speaks wit carver Cagrek.  Yooz tell him Hergor wants his [fungus dung pie].  Yooz duz dis and me gives you sum rawhide armer or tatters armer.",6);
-	}
-
 }
 
 sub EVENT_ITEM {
@@ -24,14 +39,14 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
-		quest::exp(100);
+		quest::exp(145);
 		#:: Create a hash for storing cash - 150 to 250cp
 		my %cash = plugin::RandomCash(150,250);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(235, 10);		#:: + Da Bashers
-		quest::faction(222, -10);	#:: - Broken Skull Clan
+		quest::faction(235, 5);		#:: + Da Bashers
+		quest::faction(222, -1);	#:: - Broken Skull Clan
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
