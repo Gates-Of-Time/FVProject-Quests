@@ -1,8 +1,6 @@
 sub EVENT_SPAWN {
-	#:: Set up a 50 unit distance
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Create a proximity, 100 units across, 100 units tall, without proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 0);
 }
 
 sub EVENT_ENTER {
@@ -18,7 +16,7 @@ sub EVENT_SAY {
 		#:: Give item 51121 - Tradeskill Basics : Volume I
 		quest::summonitem(51121);
 	}
-	if ($text=~/second book/i) { 
+	elsif ($text=~/second book/i) { 
 		quest::say("Here is the second volume of the book you requested, may it serve you well!");
 		#:: Give item 51122 - Tradeskill Basics : Volume II
 		quest::summonitem(51122);
@@ -26,21 +24,21 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Match for 18434 - Gnome Shadowknight Note
-	if (plugin::check_handin(\%itemcount, 18434 => 1)) {
+	#:: Match a 18434 - Gnome Shadowknight Note
+	if (plugin::takeItems(18434 => 1)) {
 		quest::say("Welcome to the Dark Reflection, $name! Take this tunic as a gift for your desire to serve the will of Bertoxxulous, The Plague Lord. Beware of the followers of Brell Serilis, they would see us members of the Dark Reflection exiled from Ak'Anon.  Return to me when you have become more experienced in our art, I will be able to further train you, both in our art as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
 		#:: Reward with 13518 - Tin Patched Tunic*
 		quest::summonitem(13518);
-		#:: Set factions
-		quest::faction(245,-10); 	# Eldritch Collective
-		quest::faction(240,-10); 	# Deep Muses
-		quest::faction(238,100); 	# Dark Reflection
-		quest::faction(255,-10); 	# Gem Choppers
+		#:: Ding!
 		quest::ding();
+		#:: Set factions
+		quest::faction(245, -10); 	#:: - Eldritch Collective
+		quest::faction(240, -10); 	#:: - Deep Muses
+		quest::faction(238, 100); 	#:: + Dark Reflection
+		quest::faction(255, -10); 	#:: - Gem Choppers
+		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
-
-# converted to Perl by SS
