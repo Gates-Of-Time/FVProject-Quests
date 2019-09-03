@@ -1,9 +1,5 @@
 sub EVENT_SPAWN {
-	#:: Get current location
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	$z = $npc->GetZ();
-	#:: Create a proximity, 100 units across, 100 units tall, and don't enable proximity say
+	#:: Create a proximity, 100 units across, 100 units tall, without proximity say
 	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 0);
 }
 
@@ -35,13 +31,13 @@ sub EVENT_ITEM {
 		quest::summonitem(13511);
 		#:: Ding!
 		quest::ding();
-		#:: Grant a small amount of experience
-		quest::exp(100);
-		#:: Set faction
+		#:: Set factions
 		quest::faction(320, 100);	#:: + Wolves of the North
 		quest::faction(327, 20);	#:: + Shamen of Justice
 		quest::faction(328, 25);	#:: + Merchants of Halas
 		quest::faction(311, 5);		#:: + Steel Warriors
+		#:: Grant a small amount of experience
+		quest::exp(100);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
