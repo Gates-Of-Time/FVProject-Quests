@@ -1,8 +1,4 @@
 sub EVENT_SPAWN {
-	#:: Get current location
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	$z = $npc->GetZ();
 	#:: Create a proximity, 30 units across, 30 units tall, and enable proximity say
 	quest::set_proximity($x - 15, $x + 15, $y - 15, $y + 15, $z - 15, $z + 15, 1);
 }
@@ -38,19 +34,19 @@ sub EVENT_ITEM {
 		quest::summonitem(1054);
 		#:: Ding!
 		quest::ding();
+		#:: Set factions
+		quest::faction(336,20); 	#:: + Coalition of Tradefolk Underground
+		quest::faction(229,20); 	#:: + Coalition of Trade Folk
+		quest::faction(329,2); 		#:: + Carson McCabe
+		quest::faction(230,1); 		#:: + Corrupt Qeynos Guards
+		quest::faction(330,3); 		#:: + Freeport Militia
 		#:: Give a small amount of xp
 		quest::exp(100);
 		#:: Create a hash for storing cash - 5 to 7cp
 		my %cash = plugin::RandomCash(5,7);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set factions
-		quest::faction(229,1); 		#:: + Coalition of Trade Folk
-		quest::faction(336,1); 		#:: + Coalition of Tradefolk Underground
-		quest::faction(329,1); 		#:: + Carson McCabe
-		quest::faction(230,1); 		#:: + Corrupt Qeynos Guards
-		quest::faction(330,1); 		#:: + Freeport Militia
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
