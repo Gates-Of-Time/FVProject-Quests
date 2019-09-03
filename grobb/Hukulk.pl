@@ -1,8 +1,4 @@
 sub EVENT_SPAWN {
-	#:: Get current location
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	$z = $npc->GetZ();
 	#:: Create a proximity, 50 units across, 50 units tall, without proximity say
 	quest::set_proximity($x - 25, $x + 25, $y - 25, $y + 25, $z - 25, $z + 25, 0);
 }
@@ -40,13 +36,13 @@ sub EVENT_ITEM {
 		quest::summonitem(13530);
 		#:: Ding!
 		quest::ding();
+		#:: Set factions
+		quest::faction(308, 100);	#:: + Shadowknights of Night Keep
+		quest::faction(261, -15);	#:: - Green Blood Knights
+		quest::faction(222, -25);	#:: - Broken Skull Clan
+		quest::faction(235, 5);		#:: - Da Bashers
 		#:: Grant a small amount of experience
 		quest::exp(100);
-		#:: Set factions
-		quest::faction(308, 100);		#:: + Shadowknights of Night Keep
-		quest::faction(261, -15);		#:: - Green Blood Knights
-		quest::faction(222, -25);		#:: - Broken Skull Clan
-		quest::faction(235, 5);			#:: - Da Bashers
 	}
 	#:: Match four 13073 - Bone Chips
 	elsif (plugin::takeItems(13073 => 4)) {
@@ -59,7 +55,7 @@ sub EVENT_ITEM {
 		quest::faction(308, 10);		#:: + Shadowknights of Night Keep
 		quest::faction(261, -10);		#:: - Green Blood Knights
 		quest::faction(222, -25);		#:: - Broken Skull Clan
-		quest::faction(235, 10);			#:: - Da Bashers
+		quest::faction(235, 10);		#:: - Da Bashers
 	}
 	#:: Match a 12201 - Troll Head and 12202 - Happy Love Bracers
 	elsif (plugin::takeItems(12201 => 1, 12202 => 1)) {
@@ -68,13 +64,13 @@ sub EVENT_ITEM {
 		quest::summonitem(3316);
 		#:: Ding!
 		quest::ding();
-		#:: Grant a small amount of experience
-		quest::exp(250);
 		#:: Set factions
 		quest::faction(308, 10);		#:: + Shadowknights of Night Keep
 		quest::faction(261, -10);		#:: - Green Blood Knights
 		quest::faction(222, -15);		#:: - Broken Skull Clan
-		quest::faction(235, 10);			#:: - Da Bashers
+		quest::faction(235, 10);		#:: - Da Bashers
+		#:: Grant a small amount of experience
+		quest::exp(250);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
