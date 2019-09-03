@@ -9,13 +9,13 @@ sub EVENT_SAY {
 
 sub EVENT_WAYPOINT_ARRIVE {
 	#:: Match when NPC arrives at waypoint 1
-	if ($WP == 1) {
+	if ($WP == "1") {
 		quest::say("Belious, I'm working on this new tune I learned on my last trip to Kelethin. It's about Tunare. If you have a free ear, would you care to take a listen?");
 		#:: Send a signal "2" to South Qeynos >> Belious_Naliedin (1125) with 0 second delay
 		quest::signal(1125,2,0);
 	}
 	#:: Match when NPC arrives at waypoint 2
-	elsif ($WP == 2) {
+	elsif ($WP == "2") {
 		quest::say("Ahem. Tunare and the Pact, sung by Joffrey Clay.");
 		#:: Do animation 58 - Dance
 		quest::doanim(58);
