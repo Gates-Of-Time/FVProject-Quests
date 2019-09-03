@@ -1,8 +1,6 @@
 sub EVENT_SPAWN {
-	#:: Set up a 50 unit distance
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Create a proximity, 100 units across, 100 units tall, without proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 0);
 }
 
 sub EVENT_ENTER {
@@ -18,7 +16,7 @@ sub EVENT_SAY {
 		#:: Give a 51121 - Tradeskill Basics : Volume I
 		quest::summonitem(51121);
 	}
-	if ($text=~/second book/i) { 
+	elsif ($text=~/second book/i) { 
 		quest::say("Here is the second volume of the book you requested, may it serve you well!");
 		#:: Give a 51121 - Tradeskill Basics : Volume II
 		quest::summonitem(51122);
@@ -26,21 +24,22 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	if (plugin::check_handin(\%itemcount, 18772 => 1)) { #Recruitment Summons
+	#:: Match a 18772 - Registration Letter
+	if (plugin::takeItems(18772 => 1)) {
 		quest::say("Welcome to Library Mechanimagica. I am Master Magician Wuggan Azusphere. and I will help to teach you the ways of summoning. Here is our guild tunic, make us proud. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
 		#:: Give a 13521 - Dusty Gold Robe*
 		quest::summonitem(13521);
-		#:: Set faction
-		quest::faction(245,100); 	# Eldritch Collective
-		quest::faction(238,-15); 	# Dark Reflection
-		quest::faction(239,-5); 	# The Dead
-		quest::faction(255,15); 	# Gem Choppers
-		quest::faction(333,15); 	# King Ak'Anon
+		#:: Ding!
 		quest::ding();
+		#:: Set factions
+		quest::faction(245, 100); 	#:: + Eldritch Collective
+		quest::faction(238, -15); 	#:: - Dark Reflection
+		quest::faction(239, -5); 	#:: - The Dead
+		quest::faction(255, 15); 	#:: + Gem Choppers
+		quest::faction(333, 15); 	#:: + King Ak'Anon
+		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
-
-#converted to Perl by SS
