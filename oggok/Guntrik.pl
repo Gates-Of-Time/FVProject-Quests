@@ -1,8 +1,6 @@
 sub EVENT_SPAWN {
-	#:: Create a proximity, 100 units across
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Create a proximity, 100 units across, 100 units tall, without proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 0);
 }
 
 sub EVENT_ENTER {
@@ -16,20 +14,20 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Mmmph!!  Who you?  Oh. you $name.  You supposed to be promising Craknek.  Me need you.  There bad things in swamp.  You want [" . quest::saylink("help Crakneks") . "] or you [" . quest::saylink("want Guntrik bash your face") . "]!!?");
 	}
-	if ($text=~/help crakneks/i) {
+	elsif ($text=~/help crakneks/i) {
 		quest::say("Go to swamps. Find noble hunters of humans and elves. All have house crests. Return to me and I give things. If you find special item says where hunters sleep, give to me. If meat founded then give to Clurg's cook. She make fine stew and give coins for meat.");
 	}
-	if ($text=~/want guntrik bash your face|want guntrik bash my face/i) {
+	elsif ($text=~/want guntrik bash your face|want guntrik bash my face/i) {
 		quest::say("OK!! Me bash!!  You hurt!!");
 		#:: Attack the player who triggered the event
 		quest::attack();
 	}
-	if ($text=~/trades/i) {
+	elsif ($text=~/trades/i) {
 		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [" . quest::saylink("second book") . "], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
 		#:: Give a 51121 - Tradeskill Basics : Volume I
 		quest::summonitem(51121);
 	}
-	if ($text=~/second book/i) {
+	elsif ($text=~/second book/i) {
 		quest::say("Here is the second volume of the book you requested, may it serve you well!");
 		#:: Give a 51122 - Tradeskill Basics : Volume II
 		quest::summonitem(51122);
@@ -44,12 +42,12 @@ sub EVENT_ITEM {
 		quest::summonitem(13525);
 		#:: Ding!
 		quest::ding();
-		#:: Grant a small amount of experience
-		quest::exp(100);
 		#:: Set factions
 		quest::faction(232, 100);	#:: + Craknek Warrior
-		quest::faction(228, 15);		#:: + Clurg
+		quest::faction(228, 15);	#:: + Clurg
 		quest::faction(261, -15);	#:: - Green Blood Knights
+		#:: Grant a small amount of experience
+		quest::exp(100);
 	}
 	#:: Match a 13361 - Noble's Crest
 	elsif (plugin::takeItems(13361 => 1)) {
@@ -58,12 +56,13 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(5032, 5029, 5033, 5031, 13355));
 		#:: Ding!
 		quest::ding();
-		#:: Grant a small amount of experience
-		quest::exp(100);
+
 		#:: Set factions
-		quest::faction(232, 15);		#:: + Craknek Warrior
+		quest::faction(232, 15);	#:: + Craknek Warrior
 		quest::faction(228, 2);		#:: + Clurg
 		quest::faction(261, -2);	#:: - Green Blood Knights
+		#:: Grant a small amount of experience
+		quest::exp(100);
 	} 
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Warrior');
 	#:: Return unused items
