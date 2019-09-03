@@ -1,9 +1,5 @@
 sub EVENT_SPAWN {
-	#:: Get current location
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	$z = $npc->GetZ();
-	#:: Create a proximity, 1000 units across, 100 units tall, without proximity say
+	#:: Create a proximity, 100 units across, 100 units tall, without proximity say
 	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 0);
 }
 
@@ -31,11 +27,11 @@ sub EVENT_ITEM {
 		quest::summonitem(13528);
 		#:: Ding!
 		quest::ding();
+		#:: Set factions
+		quest::faction(235, 100);	#:: + Da Bashers
+		quest::faction(222, -15);	#:: - Broken Skull Clan
 		#:: Grant a small amount of experience
 		quest::exp(100);
-		#:: Set factions
-		quest::faction(235, 100);		#:: + Da Bashers
-		quest::faction(222, -15);		#:: - Broken Skull Clan
 	}
 	#:: Match a 13409 - Froglok Meat and two 13187 - Froglok Tadpole Flesh
 	elsif (plugin::takeItems(13409 => 1, 13187 => 2)) {
@@ -44,11 +40,11 @@ sub EVENT_ITEM {
 		quest::summonitem(5025);
 		#:: Ding!
 		quest::ding();
+		#:: Set factions
+		quest::faction(235, 5);		#:: + Da Bashers
+		quest::faction(222, -1);	#:: - Broken Skull Clan
 		#:: Grant a small amount of experience
 		quest::exp(250);
-		#:: Set factions
-		quest::faction(235, 5);			#:: + Da Bashers
-		quest::faction(222, -1);			#:: - Broken Skull Clan
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
