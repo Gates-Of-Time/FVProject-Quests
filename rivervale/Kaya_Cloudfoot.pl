@@ -1,8 +1,6 @@
 sub EVENT_SPAWN {
-	#:: Create a proximity, 100 units across
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Create a proximity, 100 units across, 100 units tall, without proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 0);
 }
 
 sub EVENT_ENTER {
@@ -39,13 +37,13 @@ sub EVENT_ITEM {
 		quest::summonitem(13541);
 		#:: Ding!
 		quest::ding();
-		#:: Grant a small amount of experience
-		quest::exp(100);
 		#:: Set factions
 		quest::faction(355, 100); 	#:: + Storm Reapers
 		quest::faction(286, 10);	#:: + Mayor Gubbin
 		quest::faction(292, 15);	#:: + Merchants of Rivervale
 		quest::faction(324, -15);	#:: - Unkempt Druids
+		#:: Grant a small amount of experience
+		quest::exp(100);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
