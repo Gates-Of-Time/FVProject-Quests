@@ -22,10 +22,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
-		quest::exp(100);
+		quest::exp(145);
 		#:: Set factions
-		quest::faction(235, 5);		#:: + Da Bashers
-		quest::faction(222, -10);	#:: - Broken Skull Clan
+		quest::faction(235, 2);		#:: + Da Bashers
+		quest::faction(222, -1);	#:: - Broken Skull Clan
 	}
 	#:: Match four 12191 - Spore Mushroom
 	elsif (plugin::takeItems(12191 => 4)) {
@@ -35,14 +35,14 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
-		quest::exp(100);
+		quest::exp(145);
 		#:: Create a hash for storing cash - 450 to 550cp
 		my %cash = plugin::RandomCash(450,550);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(235, 10);		#:: + Da Bashers
-		quest::faction(222, -10);	#:: - Broken Skull Clan
+		quest::faction(235, 5);		#:: + Da Bashers
+		quest::faction(222, -1);	#:: - Broken Skull Clan
 	}
 	#:: Match three 13368 - HEHE Meat and a 18940 - Tattered Recipe
 	elsif (plugin::takeItems(13368 => 3, 18940 => 1)) {
@@ -58,8 +58,8 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(235, 20);		#:: + Da Bashers
-		quest::faction(222, -10);	#:: - Broken Skull Clan
+		quest::faction(235, 30);		#:: + Da Bashers
+		quest::faction(222, -4);	#:: - Broken Skull Clan
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
