@@ -28,10 +28,6 @@ sub EVENT_SAY {
 }
 
 sub EVENT_WAYPOINT_DEPART {
-	#:: Get current location
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	$z = $npc->GetZ();
 	#:: Match if waypoint is 0 (spawn point)
 	if ($wp == 0 ) {
 		#:: Create a proximity, 20 units across, 20 units tall, without proximity say
@@ -57,6 +53,7 @@ sub EVENT_ENTER {
 	$client->Message(15,"A note on the ground catches your eye.");
 	#:: Give a 18835 - Sealed List
 	quest::summonitem(18835);
+	#:: Clear the NPC proximity setting
 	quest::clear_proximity;
 }
   
@@ -67,4 +64,9 @@ sub EVENT_TIMER {
 		quest::emote("picks up a discarded item from the ground.");
 		quest::say("Don't people have enough respect for our grand city to not throw things onto the streets?!");
 	}
+}
+
+sub EVENT_ITEM {
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
