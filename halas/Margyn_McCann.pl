@@ -1,9 +1,5 @@
 sub EVENT_SPAWN {
-	#:: Get current location
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	$z = $npc->GetZ();
-	#:: Create a proximity, 100 units across, 100 units tall, and don't enable proximity say
+	#:: Create a proximity, 100 units across, 100 units tall, without proximity say
 	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 0);
 }
 
@@ -34,18 +30,18 @@ sub EVENT_ITEM {
 		quest::summonitem(15279);
 		#:: Ding!
 		quest::ding();
+		#:: Set Factions
+		quest::faction(327, 20);	#:: + Shamen of Justice
+		quest::faction(328, 3);		#:: + Merchants of Halas
+		quest::faction(223, -3);	#:: - Circle of Unseen Hands
+		quest::faction(336, -3);	#:: - Coalition of Tradefolk Underground
+		quest::faction(244, -4);	#:: - Ebon Mask
 		#:: Grant a moderate amount of experience
 		quest::exp(1600);
 		#:: Create a hash for storing cash - 500 to 700cp
 		my %cash = plugin::RandomCash(500,700);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set Factions
-		quest::faction(327, 20);		#:: + Shamen of Justice
-		quest::faction(328, 3);			#:: + Merchants of Halas
-		quest::faction(223, -3);			#:: - Circle of Unseen Hands
-		quest::faction(336, -3);			#:: - Coalition of Tradefolk Underground
-		quest::faction(244, -4);			#:: - Ebon Mask
 	}
 	#:: Match a 18761 - Tattered Note
 	elsif (plugin::takeItems(18761 => 1)) {
@@ -54,14 +50,14 @@ sub EVENT_ITEM {
 		quest::summonitem(13512);
 		#:: Ding!
 		quest::ding();
+		#:: Set Factions
+		quest::faction(327, 100);	#:: + Shamen of Justice
+		quest::faction(328, 15);	#:: + Merchants of Halas
+		quest::faction(223, -15);	#:: - Circle of Unseen Hands
+		quest::faction(336, -15);	#:: - Coalition of Tradefolk Underground
+		quest::faction(244, -20);	#:: - Ebon Mask
 		#:: Grant a small amount of experience
 		quest::exp(100);
-		#:: Set Factions
-		quest::faction(327, 100);		#:: + Shamen of Justice
-		quest::faction(328, 15);		#:: + Merchants of Halas
-		quest::faction(223, -15);		#:: - Circle of Unseen Hands
-		quest::faction(336, -15);		#:: - Coalition of Tradefolk Underground
-		quest::faction(244, -20);		#:: - Ebon Mask
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
