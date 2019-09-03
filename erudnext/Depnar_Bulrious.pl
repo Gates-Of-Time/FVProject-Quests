@@ -1,8 +1,6 @@
 sub EVENT_SPAWN {
-	#:: Set up a 50 unit distance
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Create a proximity, 100 units across, 100 units tall, without proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 0);
 }
 
 sub EVENT_ENTER {
@@ -23,18 +21,19 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match turn in for 18726 -  tattered note
-	if (plugin::check_handin(\%itemcount, 18726 => 1)) {
+	if (plugin::takeItems(18726 => 1)) {
 		quest::say("Welcome to the Temple of Divine Light. I am Master Bulrious. Here. we study and spread the will of Quellious. Here is your guild tunic. Go find Jras Solsier. he will get you started with your first lesson.");
 		#:: Give item 13546 - Faded silver Tunic*
 		quest::summonitem(13546);
-		#:: Give a small amount of xp
-		quest::exp(100);
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(298,100);	#:: + Peace Keepers
-		quest::faction(266,25);		#:: + High Council of Erudin
-		quest::faction(265,-25);	#:: - Heretics
+		quest::faction(298, 100);	#:: + Peace Keepers
+		quest::faction(266, 25);	#:: + High Council of Erudin
+		quest::faction(265, -25);	#:: - Heretics
+		#:: Give a small amount of xp
+		quest::exp(100);
 	}
-	plugin::return_items(\%itemcount);
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
