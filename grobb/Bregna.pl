@@ -61,5 +61,4 @@ sub EVENT_ITEM {
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
-	plugin::Whisper("My expansion setting is $ExpansionSetting.");
 }
