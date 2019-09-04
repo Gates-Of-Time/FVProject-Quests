@@ -1,3 +1,17 @@
+sub EVENT_SAY {
+    #:: Match "fight", case insensitive, if the NPC is not aggro
+    if ($text=~/fight/i) {
+        quest::say("I don't like to fight!")
+    }
+}
+
+sub EVENT_AGGRO_SAY {
+    #:: Match "fight", case insensitive, if the NPC aggro
+    if ($text=~/fight/i) {
+        quest::say("I am fighting!")
+    }
+}
+
 sub EVENT_SPAWN {
 	#:: Set a timer "cough" to repeat every 350 seconds (5 min 50 sec)
 	quest::settimer("cough",350);
@@ -7,29 +21,6 @@ sub EVENT_TIMER {
 	#:: Match the "cough" timer
 	if ($timer eq "cough") {
 		quest::emote("coughs and wheezes.");
-	}
-}
-
-sub EVENT_SAY {
-	if ($text=~/hail/i) {
-		quest::say("Greetings, $name.  My name is Vicus Nonad. <cough>  I am the official tax collector for the fine city of Qeynos. <cough>  I serve the will of Antonius Bayle, our glorious leader.  <cough>  <cough>  Please excuse my [" . quest::saylink("cough") . "].  <cough>");
-	}
-	elsif ($text=~/cough/i) {
-		quest::say("Oh, <cough> I am sorry, but it seems I have fallen a bit ill.  I was caught out in the rain the other day and my chills have gotten the best of me. <cough>  If only someone would [" . quest::saylink("help with today's collections") . "]..  <cough>");
-	}
-	elsif ($text=~/help with today's collections/i) {
-		#:: Data bucket to verify quest has been started appropriately
-		$key = $client->CharacterID() . "-tax-collection";
-		#:: Set a data bucket, quest started
-		quest::set_data($key, 1);
-		quest::say("Oh thank <cough> you so <cough> <cough> much <cough>..  Here is the official collection box.  Please collect from each merchant on the <cough> [" . quest::saylink("list") . "].  Then bring me back the combined total of all your collections.");
-		#:: Give a 17012 - Tax Collection Box
-		quest::summonitem(17012);
-	}
-	elsif ($text=~/list/i) {
-		quest::say("Oh.  <cough>  I am sorry..  I forgot to give it to you.  Here you go.  Be sure to give that back when your job is finished.  <cough>");
-		#:: Give a 18009 - List of Debtors
-		quest::summonitem(18009);
 	}
 }
 
