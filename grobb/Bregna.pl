@@ -1,3 +1,5 @@
+my $ExpansionSetting = quest::get_rule("World:ExpansionSettings");
+
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Me says hi to you. What you want from me? Oh!! Me shaman trainer. You must be shaman. Are you [" . quest::saylink("shaman Darkone") . "]?");
@@ -32,20 +34,31 @@ sub EVENT_ITEM {
 		quest::faction(251, -10);	#:: - Frogloks of Guk
 		quest::faction(308, 10);	#:: + Shadowknights of Night Keep
 	}
-#P	#:: Match a 26632 - Blood Raven Tailfeather, a 26640 - Wrulon Claw,  a 29921 - Arachnae Fangs, a 26662 - Swirling Banshee Essence
-#o	elsif (plugin::takeItems(26632 => 1, 26640 => 1, 29921 => 1, 26662 => 1)) {
-#P		quest::say("Dis am gud. I see you've been talkin' to Garuuk. Methanks you fer da help. Take dis note back ta Garuuk so he knows you helped me. Tanks again!");
-#-		#:: Give a 28740 - Troll Receipt
-#E		quest::summonitem(28740);
-#r		#:: Ding!
-#a		quest::ding();
-#		#:: Grant a large amount of experience
-#Q		quest::exp(10000);
-#u		#:: Set factions
-#e		quest::faction(237, 10);		#:: + Dark Ones
-#s		quest::faction(251, -10);	#:: - Frogloks of Guk
-#t		quest::faction(308, 10);	#:: + Shadowknights of Night Keep
-#	}
+	#:: Match a 26632 - Blood Raven Tailfeather, a 26640 - Wrulon Claw,  a 29921 - Arachnae Fangs, a 26662 - Swirling Banshee Essence
+	elsif (plugin::takeItems(26632 => 1, 26640 => 1, 29921 => 1, 26662 => 1)) {
+		#:: Match if Expansion Setting is Planes of Power (8) or greater
+		if ($ExpansionSetting => 8) {
+			quest::say("Dis am gud. I see you've been talkin' to Garuuk. Methanks you fer da help. Take dis note back ta Garuuk so he knows you helped me. Tanks again!");
+			#:: Give a 28740 - Troll Receipt
+			quest::summonitem(28740);
+			#:: Ding!
+			quest::ding();
+			#:: Grant a large amount of experience
+			quest::exp(10000);
+			#:: Set factions
+			quest::faction(237, 10);		#:: + Dark Ones
+			quest::faction(251, -10);	#:: - Frogloks of Guk
+			quest::faction(308, 10);	#:: + Shadowknights of Night Keep
+		}
+		else {
+			quest::say("I have no use for these items, $name.  You can have them back.");
+			#:: Return Items
+			quest::summonitem(26632);
+			quest::summonitem(26640);
+			quest::summonitem(26621);
+			quest::summonitem(26662);
+		}
+	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
