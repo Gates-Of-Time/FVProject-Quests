@@ -21,6 +21,13 @@ sub EVENT_SAY {
 	}
 }
 
+sub EVENT_AGGRO_SAY {
+    #:: Match "fight", case insensitive, if the NPC is aggro
+    if ($text=~/fight/i) {
+        quest::say("I am fighting!");
+    }
+}
+
 sub EVENT_SPAWN {
 	#:: Set a timer "cough" to repeat every 350 seconds (5 min 50 sec)
 	quest::settimer("cough",350);
