@@ -1,4 +1,4 @@
-my $ExpansionSetting = quest::get_rule("World:ExpansionSettings");
+$ExpansionSetting = quest::get_rule("World:ExpansionSettings");
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
