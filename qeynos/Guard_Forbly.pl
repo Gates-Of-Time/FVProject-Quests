@@ -4,12 +4,6 @@ sub EVENT_SIGNAL {
 		quest::say("Yes, sir!");
 	}
 }
-	
-sub EVENT_SAY {
-	if ($text=~/expansion/i) {
-		plugin::Whisper(quest::get_rule("World:ExpansionSettings"));
-	}
-}
 
 sub EVENT_ITEM {
 	#:: Return unused items
