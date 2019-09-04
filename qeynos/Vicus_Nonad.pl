@@ -1,3 +1,19 @@
+sub EVENT_AGGRO_SAY {
+
+	if ($text=~/hate/i) {
+	my @hatelist = $npc->GetHateList();
+		foreach $ent (@hatelist) {
+			my $h_ent = $ent->GetEnt();
+			my $h_dmg = $ent->GetDamage();
+			my $h_hate = $ent->GetHate();
+			if ($h_ent) {
+				my $h_ent_name = $h_ent->GetCleanName();
+				quest::say("$h_ent_name is on my hate list with $h_hate hate and $h_dmg damage.");
+			}
+		}
+    	}
+}
+
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Greetings, $name.  My name is Vicus Nonad. <cough>  I am the official tax collector for the fine city of Qeynos. <cough>  I serve the will of Antonius Bayle, our glorious leader.  <cough>  <cough>  Please excuse my [" . quest::saylink("cough") . "].  <cough>");
