@@ -37,7 +37,7 @@ sub EVENT_ITEM {
 	#:: Match a 26632 - Blood Raven Tailfeather, a 26640 - Wrulon Claw,  a 29921 - Arachnae Fangs, a 26662 - Swirling Banshee Essence
 	elsif (plugin::takeItems(26632 => 1, 26640 => 1, 29921 => 1, 26662 => 1)) {
 		#:: Match if Expansion Setting is Planes of Power (8) or greater
-		if ($ExpansionSetting >= "8") {
+		if ($ExpansionSetting > "7") {
 			quest::say("Dis am gud. I see you've been talkin' to Garuuk. Methanks you fer da help. Take dis note back ta Garuuk so he knows you helped me. Tanks again!");
 			#:: Give a 28740 - Troll Receipt
 			quest::summonitem(28740);
