@@ -1,14 +1,14 @@
 sub EVENT_SAY {
     #:: Match "fight", case insensitive, if the NPC is not aggro
     if ($text=~/fight/i) {
-        quest::say("I don't like to fight!")
+        quest::say("I don't like to fight!");
     }
 }
 
 sub EVENT_AGGRO_SAY {
     #:: Match "fight", case insensitive, if the NPC aggro
     if ($text=~/fight/i) {
-        quest::say("I am fighting!")
+        quest::say("I am fighting!");
     }
 }
 
