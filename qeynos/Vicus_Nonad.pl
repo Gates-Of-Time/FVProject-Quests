@@ -31,6 +31,7 @@ sub EVENT_AGGRO_SAY {
 sub EVENT_SPAWN {
 	#:: Set a timer "cough" to repeat every 350 seconds (5 min 50 sec)
 	quest::settimer("cough",350);
+	quest::set_proximity($x-15,$x+15,$y-15,$y+15,$z+15,$z-15,1);
 }
 
 sub EVENT_TIMER {
