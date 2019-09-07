@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		qust::say("Spare 3 gold so I can get a decent meal for once, master?");
+		quest::say("Spare 3 gold so I can get a decent meal for once, master?");
 	}
 	elsif ($text=~/favor/i) {
 		quest::say("I found this pouch and do not know whose it is. I would be more than willing to part with it for 5 gold, since the owner would probably reward you more.");
