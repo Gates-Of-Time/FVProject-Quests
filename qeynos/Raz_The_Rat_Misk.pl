@@ -8,7 +8,8 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	if (plugin::takeCoin(0, 0, 5, 0) {
+	#:: Match five gold
+	if (plugin::takeCoin(0, 5, 0, 0) {
 		quest::ay("Very good, master! Best of luck in locating the proper owner. Maybe try giving it to ol' Crow in North Qeynos. Everyone knows if you need to fence.. er.. find something in Qeynos, Crow is your man. He always seems to know who's missing what. I am off to get some food.");
 		#:: Give a 17600 - Tattered Leather Pouch
 		quest::summonitem(17600);
@@ -21,7 +22,8 @@ sub EVENT_ITEM {
 		quest::faction(262, -1);	#:: + Guards of Qeynos
 		quest::faction(273, 1);		#:: + Kane Bayle
 		quest::exp(200);
-	elsif (plugin::takeCoin(0, 0, 3, 0) {
+	#:: Match 3 gold
+	elsif (plugin::takeCoin(0, 3, 0, 0) {
 		quest::say("Thank you, kind master. I don't wish to trouble you further but I do have another [" . quest::saylink("favor") . "] to ask..");
 		#:: Ding!
 		quest::ding()
