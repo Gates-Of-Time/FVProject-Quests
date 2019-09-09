@@ -32,7 +32,7 @@ sub EVENT_SAY {
 	elsif ($text=~/find him/i) {
 		quest:say("Yes, that might work. Please go to Freeport and find him. His name is Palatos Kynarn. Tell him that Danaria has sent you for the painting. And be quick about it! Thank you.");
 	}
-]
+}
 
 sub EVENT_ITEM {
 	#:: Return unused items
