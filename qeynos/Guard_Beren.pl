@@ -1,3 +1,8 @@
+sub EVENT_SPAWN {
+	#:: Create a proximity, 100 units across, 100 units tall, and enable proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 1);
+}
+
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("What do you want? Are you friends with that lousy [" . quest::saylink("dwarf") . "]?! You had better not be unless you want to spend the rest of the week bleeding!");
@@ -13,6 +18,12 @@ sub EVENT_SAY {
 	}
 }
 
+sub EVENT_PROXIMITY_SAY {
+	if ($text=~/brother/i) {
+		quest::say("My brother Faren is a fine fisherman just like our father was. He fishes out there on the East Dock just about every day.");
+	}
+}
+
 sub EVENT_WAYPOINT_ARRIVE {
 	#:: Match when NPC arrives at waypoint 5
 	if ($wp == 5) {
@@ -23,13 +34,21 @@ sub EVENT_WAYPOINT_ARRIVE {
 }
 
 sub EVENT_SIGNAL {
-	#:: Match signal from qeynos/Lieutenant_Arathur.pl
+	#:: Match signal 1 from qeynos/Lieutenant_Arathur.pl
 	if (($signal == 1) && ($x == -145 && $y == -247)) {
 		quest::say("Yes, sir!");
 	}
-	#:: Match signal from qeynos/Faren.pl
+	#:: Match signal 2 from qeynos/Faren.pl
 	elsif ($signal == 2) {
 		quest::say("Don't you worry about him! I will take care of Trumpy Irontoe once and for all!");
+	}
+	#:: Match signal 3 from qeynos/Trumpy_Irontoe.pl
+	elsif (($signal == 3) && ($x == -145 && $y == -247)) {
+		quest::say("Curse you, Trumpy!!!");
+	}
+	#:: Match signal 4 from qeynos/Trumpy_Irontoe.pl
+	elsif (($signal == 4) && ($x == -145 && $y == -247)) {
+		quest::say("If you ever talk that way about my [" . quest::saylink("brother") . "] again, I will throw your butt into the dungeon. I don't care who you know!");
 	}
 	#:: Match signal from qeynos/Guard_Corshin.pl
 	elsif (($signal == 5) && ($x == -145 && $y == -247)) {
