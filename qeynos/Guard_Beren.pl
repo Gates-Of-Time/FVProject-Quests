@@ -51,8 +51,10 @@ sub EVENT_SIGNAL {
 	#:: Match signal 4 from qeynos/Trumpy_Irontoe.pl
 	elsif (($signal == 4) && ($x == -145 && $y == -247)) {
 		quest::say("If you ever talk that way about my [" . quest::saylink("brother") . "] again, I will throw your butt into the dungeon. I don't care who you know!");
-		#:: Send a signal "2" to South Qeynos >> Guard_Corshin (1091) with no delay
-		quest::signalwith(1091,2,0);	
+		#:: Send a signal "2" to South Qeynos >> Trumpy_Irontoe (1042) with no delay
+		quest::signalwith(1042,2,0);
+		#:: Send a signal "2" to South Qeynos >> Guard_Corshin (1091) with 5 second delay
+		quest::signalwith(1091,2,5);
 	}
 	#:: Match signal from qeynos/Guard_Corshin.pl
 	elsif (($signal == 5) && ($x == -145 && $y == -247)) {
