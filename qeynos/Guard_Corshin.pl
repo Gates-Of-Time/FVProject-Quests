@@ -10,9 +10,13 @@ sub EVENT_SAY {
 }
 
 sub EVENT_SIGNAL {
-	#:: Match signal from qeynos/Lieutenant_Arathur.pl
+	#:: Match signal "1" from qeynos/Lieutenant_Arathur.pl
 	if ($signal == 1) {
 		quest::say("Yes, sir!");
+	}
+	#:: Match signal "2" from qeynos/Guard_Beren.pl
+	elsif ($signal == 2) {
+		quest::say("Shhhhh. What are you, crazy?! I saw Kane talking to him yesterday. I sure don't want to find you washed up under the docks because of that little gnoll dropping.");
 	}
 }
 
