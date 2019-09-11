@@ -54,6 +54,8 @@ sub EVENT_SIGNAL {
 	#:: Match signal "2" from qeynos/Trumpy_Irontoe.pl
 	elsif ($signal == 2) {
 		quest::say("Huh? What? My [" . quest::saylink("tacklebox") . "]!? You know I can't swim, you rotten [" . quest::saylink("dwarf") . "]!");
+		#:: Send a signal "1" to South Qeynos >> Trumpy_Irontoe (1042) with no delay
+		quest::signalwith(1042,1,0);
 	}
 	#:: Match signal "3" from qeynos/Trumpy_Irontoe.pl
 	elsif ($signal == 3) {
