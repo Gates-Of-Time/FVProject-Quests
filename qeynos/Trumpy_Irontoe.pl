@@ -181,7 +181,7 @@ sub EVENT_ITEM {
 	#:: Match one 13033 - Honey Mead
 	elsif (plugin::takeItems(13033 => 1)) {
 		if ($ItemCount <= 2) {
-			quest::say(""Beh! Thanks, Skippy. Why don't ya buy yourself one? And.. <gulp>.. <burp>.. get me another!");
+			quest::say("Beh! Thanks, Skippy. Why don't ya buy yourself one? And.. <gulp>.. <burp>.. get me another!");
 			#:: Increment the item count variable
 			$ItemCount++;
 		}
