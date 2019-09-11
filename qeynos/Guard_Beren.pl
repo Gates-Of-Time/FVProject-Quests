@@ -36,3 +36,8 @@ sub EVENT_SIGNAL {
 		quest::say("Heh, Speak for yourself, Corshin. That one looks like a troublemaker to me.");
 	}
 }
+
+sub EVENT_ITEM {
+	#:: Return unused items
+	plugin::returnUnusedItems();
+}
