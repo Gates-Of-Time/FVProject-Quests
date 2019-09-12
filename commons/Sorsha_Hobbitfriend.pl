@@ -1,5 +1,3 @@
-my $Number = 1;
-
 sub EVENT_SPAWN {
 	quest::say("Spawned!");
 	quest::settimer("timer", 2);
@@ -8,8 +6,8 @@ sub EVENT_SPAWN {
 
 sub EVENT_TIMER {
 	if ($timer eq "timer") {
-		#quest::spawn2(21059, 0, $x + 10, $y + 10, $z, 0);
-		$Number++;
+		quest::spawn2(21059, 0, $x + 10, $y + 10, $z, 0);
+		my $Number = int(rand(100));
 		quest::say("$Number");
 		quest::npcfeature("texture",$Number);
 		quest::npcfeature("helm",$Number);
