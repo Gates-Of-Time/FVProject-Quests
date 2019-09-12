@@ -1,4 +1,4 @@
-$number = 1;
+my $Number = 1;
 
 sub EVENT_SPAWN {
 	quest::say("Spawned!");
@@ -8,17 +8,17 @@ sub EVENT_SPAWN {
 
 sub EVENT_TIMER {
 	if ($timer eq "timer") {
-		quest::spawn2(21059, 0, $x + 10, $y + 10, $z, 0);
-		$number++;
-		quest::say("$number");
-		quest::npcfeature("texture",$number);
-		quest::npcfeature("helm",$number);
-		quest::npcfeature("haircolor",$number);
-		quest::npcfeature("beardcolor",$number);
-		quest::npcfeature("eyecolor1",$number);
-		quest::npcfeature("eyecolor2",$number);
-		quest::npcfeature("hair",$number);
-		quest::npcfeature("face",$number);
-		quest::npcfeature("beard",$number);
+		#quest::spawn2(21059, 0, $x + 10, $y + 10, $z, 0);
+		$Number++;
+		quest::say("$Number");
+		quest::npcfeature("texture",$Number);
+		quest::npcfeature("helm",$Number);
+		quest::npcfeature("haircolor",$Number);
+		quest::npcfeature("beardcolor",$Number);
+		quest::npcfeature("eyecolor1",$Number);
+		quest::npcfeature("eyecolor2",$Number);
+		quest::npcfeature("hair",$Number);
+		quest::npcfeature("face",$Number);
+		quest::npcfeature("beard",$Number);
 	}
 }
