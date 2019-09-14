@@ -5,7 +5,7 @@ sub EVENT_SPAWN {
 
 sub EVENT_ENTER {
 	#:: Match a 18720 - Tattered Note
-	if (plugin::check_hasitem($client, 18718)) {
+	if (plugin::check_hasitem($client, 18720)) {
 		$client->Message(15,"As you glance about the room, Mespha Tevalian greets you. 'Why hello there. Are you perhaps a new recruits? If you wish to learn the ways of the Enchanter, read the note in your inventory and hand me your note to start your training.'");
 	}
 }
