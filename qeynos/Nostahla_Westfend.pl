@@ -20,3 +20,8 @@ sub EVENT_WAYPOINT_ARRIVE {
 		quest::say("Gahlith, I'm going down to the docks to see if Ghul has anything new from overseas today. I'll be back in a little while.");
 	}
 }
+
+sub EVENT_ITEM {
+	#:: Return unused items
+	plugin::returnUnusedItems();
+}
