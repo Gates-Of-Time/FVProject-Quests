@@ -11,8 +11,10 @@ sub EVENT_ITEM {
 	#:: Match 13071 - Rat Whiskers, 13070 - Snake Scales and two 13068 - Bat Wing
 	if (plugin::takeItems(13071 => 1, 13070 => 1, 13068 => 2)) {
 		quest::say("All right, check this out. . . Maybe one day you'll be good enough to do this, too");
-		#:: Cast a random spell: 206 - Angry Bee, 214 - Ground Bloom Flower, 310 - Flare, 2186 - The Anti-Gulper, 2728 - Portal Effect
-		$npc->CastSpell(quest::ChooseRandom(206, 214, 310, 2186, 2728),$caster_id);
+		#:: Choose a random spell: 206 - Angry Bee, 214 - Ground Bloom Flower, 310 - Flare, 2186 - The Anti-Gulper, 2728 - Portal Effect
+		my $randomspell = quest::ChooseRandom(206, 214, 310, 2186, 2728);
+		#:: Cast the spell
+		$npc->CastSpell($randomspell,$caster_id);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
