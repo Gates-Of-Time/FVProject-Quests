@@ -10,6 +10,19 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/voleen/i) {
 		quest::say("Oh, it will be easier for us both if I just show you where it is. Follow me. But be quick about it, because I have to get back to my patrol.");
+		#:: Move to the specified location and guard 
+          	quest::moveto(-211.06, -186.83, 3.13, 260, 1);
+		#:: Create a timer "wait" that loops every 300 seconds (5 min)
+		quest::settimer("wait", 30);
+	}
+}
+
+sub EVENT_TIMER {
+	#:: Match the "wait" timer
+	if ($timer eq "wait") {
+		quest::stoptimer("wait");
+		#:: Begin pathing grid 42 again
+		quest::start(42);
 	}
 }
 
