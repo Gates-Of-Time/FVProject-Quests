@@ -13,14 +13,15 @@ sub EVENT_WAYPOINT_ARRIVE {
 			$following = 0;
 		}
 		else {
-			quest::say("Current waypoint setting is $wp.");
 			$wp--;
-			$wp--;
-			quest::say("Lower waypoint setting is $wp.");
 			$npc->UpdateWaypoint($wp);
-			quest::say("Updated waypoint setting to $wp.");
 		}
 	}
+}
+
+sub EVENT_WAYPOINT_DEPART {
+	$wp--;
+	$npc->UpdateWaypoint($wp);
 }
 
 sub EVENT_COMBAT {
