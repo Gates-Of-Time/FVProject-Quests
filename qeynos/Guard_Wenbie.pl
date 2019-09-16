@@ -1,6 +1,12 @@
 my $following;
 my $wenbie;
 
+sub EVENT_WAYPOINT_ARRIVE {
+	if ($following == 1) {
+		quest::stop();
+	}
+}
+
 sub EVENT_WAYPOINT_DEPART {
 	if ($following == 1) {
 		if ($wenbie == 47) {
