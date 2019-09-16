@@ -5,18 +5,17 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
-	quest::say("I have arrived at waypoint $wp.");	
 	if ($following == 1) {
-	quest::say("My following status is $following.");
 		if ($wp == 3) {
 			quest::say("Hey, waypoint 3!");
+			quest::stop();
 			$following = 0;
 		}
 		else {
 			quest::stop();
-			$npc->UpdateWaypoint($wp--);
+			$wp--;
+			mob->UpdateWaypoint($wp);
 			quest::start(42);
-			quest::say("$wp.");
 		}
 	}
 }
@@ -33,15 +32,10 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/voleen/i) {
 		quest::say("Oh, it will be easier for us both if I just show you where it is. Follow me. But be quick about it, because I have to get back to my patrol.");
+		quest::stop();
 		$following = 1;
-	}
-}
-
-sub EVENT_TIMER {
-	#:: Match the "wait" timer
-	if ($timer eq "wait") {
-		quest::stoptimer("wait");
-		#:: Begin pathing grid 42 again
+		$wp--;
+		mob->UpdateWaypoint($wp);
 		quest::start(42);
 	}
 }
