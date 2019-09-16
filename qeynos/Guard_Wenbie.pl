@@ -20,6 +20,8 @@ sub EVENT_WAYPOINT_ARRIVE {
 			quest::say("$wp.");
 			$npc->UpdateWaypoint($wp);
 			quest::say("$wp.");
+			quest::start(42);
+			quest::say("Sharted 42.");
 		}
 	}
 }
