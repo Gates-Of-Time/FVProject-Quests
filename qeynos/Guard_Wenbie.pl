@@ -13,11 +13,13 @@ sub EVENT_WAYPOINT_ARRIVE {
 			$following = 0;
 		}
 		else {
+			quest::stop();
 			quest::say("$wp.");
 			$wp--;
 			quest::say("$wp.");
 			$npc->UpdateWaypoint($wp);
 			quest::say("$wp.");
+			quest::start(42);
 		}
 	}
 }
