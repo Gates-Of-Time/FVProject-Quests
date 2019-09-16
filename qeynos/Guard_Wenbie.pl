@@ -9,7 +9,7 @@ sub EVENT_WAYPOINT_ARRIVE {
 			$following = 0;
 		}
 		else {
-			Follow;
+			Follow();
 		}
 	}
 }
@@ -27,7 +27,7 @@ sub EVENT_SAY {
 	elsif ($text=~/voleen/i) {
 		quest::say("Oh, it will be easier for us both if I just show you where it is. Follow me. But be quick about it, because I have to get back to my patrol.");
 		$following = 1;
-		Follow;
+		Follow();
 	}
 }
 
