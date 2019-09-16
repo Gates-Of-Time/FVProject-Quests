@@ -13,15 +13,15 @@ sub EVENT_WAYPOINT_ARRIVE {
 			$following = 0;
 		}
 		else {
+			quest::say("$wp.");
 			$wp--;
+			quest::say("$wp.");
+			$wp--;
+			quest::say("$wp.");
 			$npc->UpdateWaypoint($wp);
+			quest::say("$wp.");
 		}
 	}
-}
-
-sub EVENT_WAYPOINT_DEPART {
-	$wp--;
-	$npc->UpdateWaypoint($wp);
 }
 
 sub EVENT_COMBAT {
