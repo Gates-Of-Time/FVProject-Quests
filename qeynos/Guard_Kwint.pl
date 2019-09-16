@@ -14,6 +14,8 @@ sub EVENT_ITEM {
 	#:: Match a 18821 - Scrap of Parchment
  	if (plugin::takeItems(18821 => 1)) {
 		quest::say("Hey. Thanks! Sorry about that 'he's my brother' bit but I am sure you had a good time at the Lion's Mane anyway. I sure didn't lie to you about the quality of the ale there.");
+		#:: Ding!
+		quest::ding();
 		#:: Set factions
 		quest::faction(262, 5);		#:: + Guards of Qeynos
 		quest::faction(219, 1);		#:: + Antonius Bayle
