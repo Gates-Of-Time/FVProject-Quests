@@ -14,7 +14,7 @@ sub EVENT_WAYPOINT_ARRIVE {
 		}
 		else {
 			quest::say("Current waypoint setting is $wp.");
-			my $LowerWP = $wp;
+			$LowerWP = $wp;
 			$LowerWP--;
 			$LowerWP--;
 			quest::say("Lower waypoint setting is $LowerWP.");
