@@ -13,7 +13,10 @@ sub EVENT_WAYPOINT_ARRIVE {
 			$following = 0;
 		}
 		else {
-			Follow();
+			my $LowerWP = $wp;
+			$LowerWP--;
+			$LowerWP--;
+			$npc->UpdateWaypoint($LowerWP);
 		}
 	}
 }
@@ -31,7 +34,10 @@ sub EVENT_SAY {
 	elsif ($text=~/voleen/i) {
 		quest::say("Oh, it will be easier for us both if I just show you where it is. Follow me. But be quick about it, because I have to get back to my patrol.");
 		$following = 1;
-		Follow();
+		my $LowerWP = $wp;
+		$LowerWP--;
+		$LowerWP--;
+		$npc->UpdateWaypoint($LowerWP);
 	}
 }
 
@@ -84,15 +90,4 @@ sub EVENT_ITEM {
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
-}
-
-sub Follow {
-	quest::say("Sub routine follow.");
-	my $LowerWP = $wp;
-	quest::say("Current waypoint is $wp.  Current LowerWP is $LowerWP.");
-	$LowerWP--;
-	quest::say("Current waypoint is $wp.  Current LowerWP is $LowerWP.");
-	$npc->UpdateWaypoint($LowerWP);
-	quest::say("Current waypoint set to $wp.  Heading there now.");
-	$npc->SetWaypointPause(0);
 }
