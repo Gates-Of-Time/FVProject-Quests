@@ -1,3 +1,17 @@
+$following = 0;
+
+sub EVENT_WAYPOINT_ARRIVE {
+	if ($following == 1) {
+		if ($wp == 3) {
+			quest::say("Hey, waypoint 3!");
+			$following = 0;
+		}
+		else {
+			Follow;
+		}
+	}
+}
+
 sub EVENT_COMBAT {
 	if ($combat_state == 1) {
 		quest::say("Time to die $name!");
@@ -10,10 +24,8 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/voleen/i) {
 		quest::say("Oh, it will be easier for us both if I just show you where it is. Follow me. But be quick about it, because I have to get back to my patrol.");
-		#:: Move to the specified location and guard 
-          	quest::moveto(-211.06, -186.83, 3.13, 260, 1);
-		#:: Create a timer "wait" that loops every 300 seconds (5 min)
-		quest::settimer("wait", 30);
+		$following = 1;
+		Follow;
 	}
 }
 
@@ -66,4 +78,11 @@ sub EVENT_ITEM {
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
+}
+
+sub Follow {
+	$lower_wp = --$wp;
+	$npc->SetCurrentWP($lower_wp);
+	$npc->SetWaypointPause(0);
+	quest::start(42);
 }
