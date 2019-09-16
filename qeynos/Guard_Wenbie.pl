@@ -5,18 +5,21 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
-	quest::say("I have arrived at waypoint $wp.");
-	quest::say("My following status is $following.");
+	quest::say("I have arrived at waypoint $wp.");	
 	if ($following == 1) {
+	quest::say("My following status is $following.");
 		if ($wp == 3) {
 			quest::say("Hey, waypoint 3!");
 			$following = 0;
 		}
 		else {
+			quest::say("Current waypoint setting is $wp.");
 			my $LowerWP = $wp;
 			$LowerWP--;
 			$LowerWP--;
+			quest::say("Lower waypoint setting is $LowerWP.");
 			$npc->UpdateWaypoint($LowerWP);
+			quest::say("Updated waypoint setting to $wp.");
 		}
 	}
 }
