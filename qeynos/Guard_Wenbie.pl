@@ -14,12 +14,9 @@ sub EVENT_WAYPOINT_ARRIVE {
 		}
 		else {
 			quest::stop();
-			quest::say("$wp.");
-			$wp--;
-			quest::say("$wp.");
-			$npc->UpdateWaypoint($wp);
-			quest::say("$wp.");
+			$npc->UpdateWaypoint($wp--);
 			quest::start(42);
+			quest::say("$wp.");
 		}
 	}
 }
