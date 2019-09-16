@@ -84,7 +84,8 @@ sub EVENT_ITEM {
 
 sub Follow {
 	quest::say("Sub routine follow.");
-	$lower_wp = ($mob->GetWaypointID() - 1);
+	$lower_wp = $mob->GetWaypointID;
+	$lower_wp--;
 	quest::say("Current waypoint is $wp.  Last waypoint is $lower_wp.");
 	$npc->SetCurrentWP($lower_wp);
 	quest::say("Current waypoint is $wp.  Heading there now.");
