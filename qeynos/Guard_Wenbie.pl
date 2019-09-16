@@ -1,6 +1,8 @@
 $following = 0;
 
 sub EVENT_WAYPOINT_ARRIVE {
+	quest::say("I have arrived at waypoint $wp.");
+	quest::say("My following status is $following.");
 	if ($following == 1) {
 		if ($wp == 3) {
 			quest::say("Hey, waypoint 3!");
@@ -81,8 +83,10 @@ sub EVENT_ITEM {
 }
 
 sub Follow {
+	quest::say("Sub routine follow.");
 	$lower_wp = --$wp;
+	quest::say("Current waypoint is $wp.  Last waypoing is $lower_wp.");
 	$npc->SetCurrentWP($lower_wp);
+	quest::say("Current waypoint is $wp.  Heading there now.");
 	$npc->SetWaypointPause(0);
-	quest::start(42);
 }
