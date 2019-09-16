@@ -92,7 +92,7 @@ sub Follow {
 	quest::say("Current waypoint is $wp.  Current LowerWP is $LowerWP.");
 	$LowerWP--;
 	quest::say("Current waypoint is $wp.  Current LowerWP is $LowerWP.");
-	$npc->SetCurrentWP($LowerWP);
+	$npc->UpdateWaypoint($LowerWP);
 	quest::say("Current waypoint set to $wp.  Heading there now.");
 	$npc->SetWaypointPause(0);
 }
