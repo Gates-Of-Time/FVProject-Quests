@@ -16,12 +16,8 @@ sub EVENT_WAYPOINT_ARRIVE {
 			quest::say("$wp.");
 			$wp--;
 			quest::say("$wp.");
-			$wp--;
-			quest::say("$wp.");
 			$npc->UpdateWaypoint($wp);
 			quest::say("$wp.");
-			quest::start(42);
-			quest::say("Sharted 42.");
 		}
 	}
 }
@@ -39,10 +35,6 @@ sub EVENT_SAY {
 	elsif ($text=~/voleen/i) {
 		quest::say("Oh, it will be easier for us both if I just show you where it is. Follow me. But be quick about it, because I have to get back to my patrol.");
 		$following = 1;
-		my $LowerWP = $wp;
-		$LowerWP--;
-		$LowerWP--;
-		$npc->UpdateWaypoint($LowerWP);
 	}
 }
 
