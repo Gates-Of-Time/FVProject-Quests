@@ -21,7 +21,7 @@ sub EVENT_SAY {
 		#:: Move to Voleen's Fine Baked Goods
 		quest::moveto(-214,-215,3.13,506,1);
 		#:: Create a timer "pathagain" that loops every 300 seconds (5 min)
-		quest::starttimer("pathagain",300);
+		quest::settimer("pathagain",300);
 	}
 }
 
