@@ -19,7 +19,7 @@ sub EVENT_SAY {
 	elsif ($text=~/voleen/i) {
 		quest::say("Oh, it will be easier for us both if I just show you where it is. Follow me. But be quick about it, because I have to get back to my patrol.");
 		#:: Move to Voleen's Fine Baked Goods
-		quest::moveto(214,215,3.13,506,1);
+		quest::moveto(-214,-215,3.13,506,1);
 		#:: Create a timer "pathagain" that loops every 300 seconds (5 min)
 		quest::starttimer("pathagain",300);
 	}
