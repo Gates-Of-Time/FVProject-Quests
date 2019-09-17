@@ -220,7 +220,6 @@ sub EVENT_SAY {
 		quest::say("Oh, it will be easier for us both if I just show you where it is. Follow me. But be quick about it, because I have to get back to my patrol.");
 		$following = 1;
 		$wenbie = $wp;
-		quest::settimer("Wenbie",5);
 	}
 }
 
