@@ -10,6 +10,7 @@ sub EVENT_TIMER {
 
 sub EVENT_WAYPOINT_DEPART {
 	if ($following == 1) {
+		quest::stop();
 		if ($wenbie == 47) {
 			quest::moveto(-18.6621, 63.5473, 3.127);
 			$wenbie == 46;
