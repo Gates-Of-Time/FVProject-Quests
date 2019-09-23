@@ -95,7 +95,7 @@ sub EVENT_ITEM {
 		quest::exp(5000);
 	}
 	#:: Match a 13131 - Case of Blackburrow Stout
-	elsif (plugins::takeItems(13131 => 1)) {
+	elsif (plugin::takeItems(13131 => 1)) {
 		quest::say("Good work, pal. Here's a little dough to spend, just don't spend it at any other bar.");
 		#:: Ding!
 		quest::ding();
