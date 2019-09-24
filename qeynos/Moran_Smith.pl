@@ -20,10 +20,6 @@ sub EVENT_SIGNAL {
 		quest::start(60);
 		#:: Missing equivalent perl function for lua e.self:MerchantOpenShop();
 	}
-	#:: Match signal "3" from qeynos/Kazlo_Naedra.pl
-	elsif ($signal == 3) {
-		quest::say("Heh.. Why don't you try Freeport.. or Erudin.. ANYwhere but here!");
-	}
 }
 
 sub EVENT_ITEM {
