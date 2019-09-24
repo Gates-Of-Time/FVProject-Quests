@@ -90,6 +90,8 @@ sub EVENT_ITEM {
 			quest::say("You have done supremely well, my young acolyte of Thunder. For your great service to the Temple of Thunder. Now go and cast the storm into the populace of Antonica.");
 			#:: Give a 15218 - Spell: Ward Undead
 			quest::summonitem(15218);
+			#:: Ding!
+			quest::ding();
 			#:: Set factions
 			quest::faction(280, 10);		#:: + Knights of Thunder
 			quest::faction(221, -10);		#:: - Bloodsabers
