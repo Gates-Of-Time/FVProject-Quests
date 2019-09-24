@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings and blessings to you, $name. Karana offers you his protection and guidance. All who accept the offer shall find safe haven within our Temple of Thunder, If you are a cleric of Karana, you must have a [" . quest::saylink("desire to serve Karana's") . "] flock.");
+		quest::say("Greetings and blessings to you, $name. Karana offers you his protection and guidance. All who accept the offer shall find safe haven within our Temple of Thunder, If you are a cleric of Karana, you must have a [" . quest::saylink("desire to serve") . "] Karana's flock.");
 	}
 	elsif ($text=~/desire to serve/i) {
 		quest::say("If you are a young acolyte, you may [" . quest::saylink("deliver blessings to the flock") . "] and if you are a skilled cleric, we need you to [" . quest::saylink("hunt bandit binders") . "].");
@@ -13,7 +13,7 @@ sub EVENT_SAY {
 			quest::summonitem(12103);
 		}
 		#:: Match if faction is Indifferent or worse
-		elsif ($faction > 4 {
+		elsif ($faction > 4) {
 			quest::say("Well, friend, the Temple of Thunder has recognized and appreciates your past deeds for us. But this matter is of vital importance to us and we need more proof of your devotion to our cause.");
 		}
 	}
@@ -23,7 +23,7 @@ sub EVENT_SAY {
 			quest::say("Go to the Plains of Karana and seek out the Karana Bandits. Among them can be found their bandit binders. They are healers of sorts. Which evil deity granted them this power is unknown to us. Each carries a binder spectacle. I shall reward clerics for every two returned spectacles. Perhaps a new power may even be bestowed.");
 		}
 		#:: Match if faction is Indifferent or worse
-		elsif ($faction > 4 {
+		elsif ($faction > 4) {
 			quest::say("Well, friend, the Temple of Thunder has recognized and appreciates your past deeds for us. But this matter is of vital importance to us and we need more proof of your devotion to our cause.");
 		}
 	}
@@ -36,7 +36,7 @@ sub EVENT_ITEM {
 		if ($faction <= 4) {
 			quest::say("You have done a good service for the flock of Karana. Study the words upon this scroll and soon Karana shall keep you from thirst.");
 			#:: Give a random reward:  15211 - Spell: Summon Drink, 15201 - Spell: Flash of Light, 15207 - Spell: Divine Aura, 15050 - Spell: Summon Food, 15219 - Spell: Center
-			quest::summonitem(quest::ChooseRandom(15211, 15201, 15207, 15050,15219);
+			quest::summonitem(quest::ChooseRandom(15211, 15201, 15207, 15050,15219));
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
