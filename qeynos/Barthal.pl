@@ -10,6 +10,7 @@ sub EVENT_SIGNAL {
 		#:: Stop pathing grid 61
 		quest::stop();
 		#:: Missing equivalent perl function for lua e.self:MerchantCloseShop();
+	}
 	#:: Match signal "2" from qeynos/campday.pl
 	elsif ($signal == 2) {
 		#:: Assign grid 61
@@ -17,6 +18,7 @@ sub EVENT_SIGNAL {
 		#:: Start pathing on grid 61 waypoint 1
 		quest::start(1);
 		#:: Missing equivalent perl function for lua e.self:MerchantOpenShop();
+	}
 	#:: Match signal "3" from qeynos/Kazlo_Naedra.pl
 	elsif ($signal == 3) {
 		quest::say("Heh.. Why don't you try Freeport.. or Erudin.. ANYwhere but here!");
