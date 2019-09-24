@@ -36,7 +36,7 @@ sub EVENT_ITEM {
 		if ($faction <= 4) {
 			quest::say("You have done a good service for the flock of Karana. Study the words upon this scroll and soon Karana shall keep you from thirst.");
 			#:: Give a random reward:  15211 - Spell: Summon Drink, 15201 - Spell: Flash of Light, 15207 - Spell: Divine Aura, 15050 - Spell: Summon Food, 15219 - Spell: Center
-			quest::summonitem(quest::ChooseRandom(15211, 15201, 15207, 15050,15219));
+			quest::summonitem(quest::ChooseRandom(15211, 15201, 15207, 15050, 15219));
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
@@ -81,7 +81,7 @@ sub EVENT_ITEM {
 		if ($faction <= 4) {
 			quest::say("Excellent work. These foul men have no right to be proficient in the ways of healing. Here then is your bounty. Use it in your continued war against the Karana bandits.");
 			#:: Give a random reward:  15219 - Spell: Center, 15226 - Spell: Endure Disease, 15485 - Spell: Symbol of Transal, 15227 - Spell: Endure Poison
-			quest::giveitem(quest::ChooseRandom(15219, 15226, 15485, 15227));
+			quest::summonitem(quest::ChooseRandom(15219, 15226, 15485, 15227));
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
