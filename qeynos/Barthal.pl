@@ -13,10 +13,8 @@ sub EVENT_SIGNAL {
 	}
 	#:: Match signal "2" from qeynos/campday.pl
 	elsif ($signal == 2) {
-		#:: Assign grid 61
-		$npc->SetGrid(61);
-		#:: Start pathing on grid 61 waypoint 1
-		quest::start(1);
+		#:: Start pathing on grid 61
+		quest::start(61);
 		#:: Missing equivalent perl function for lua e.self:MerchantOpenShop();
 	}
 	#:: Match signal "3" from qeynos/Kazlo_Naedra.pl
