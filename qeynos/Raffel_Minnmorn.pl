@@ -21,7 +21,7 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/special delivery/i) {
 		#:: Attack the player who triggered the event
-		quest::attack($userid);
+		quest::attack($name);
 	}
 }
 
