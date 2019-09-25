@@ -6,8 +6,8 @@ sub EVENT_SIGNAL {
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
-	#:: Match waypoint 4
-	if ($wp == 4) {
+	#:: Match waypoint 3
+	if ($wp == 3) {
 		quest::say("Pardon me.  Have you seen a man named Gash Flockwalker?  He hails from Surefall Glade.");
 		#:: Send a signal "1" to South Qeynos >> Tasya_Huntlan (1104) with no delay
 		quest::signalwith(1104,1,0);
