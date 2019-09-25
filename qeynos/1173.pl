@@ -12,5 +12,5 @@ sub EVENT_WAYPOINT_ARRIVE {
 	
 sub EVENT_ENTER {
 	#:: Cast 2289 - Portal to Erud's Crossing
-	quest::castspell(2289,$userid);
+	$npc->CastSpell(2289,$userid);
 }
