@@ -16,6 +16,8 @@ sub EVENT_ITEM {
 	#:: Match four 13038 - Ogre Swill
 	if (plugin::takeItems(13038 => 4)) {
 		quest::say("Mmmm... <Burp!> Thank you. Here is a little dona... <Hic!> dona... <Hic!> mmmoney for your generosity.");
+		#:: Give a 13291 - Donation
+		quest::summonitem(13291);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
@@ -40,6 +42,8 @@ sub EVENT_ITEM {
 		}
 		else {
 			quest::say("Mmmm... <Burp!> Thank you. Here is a little dona... <Hic!> dona... <Hic!> mmmoney for your generosity.");
+			#:: Give a 13291 - Donation
+			quest::summonitem(13291);
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
@@ -64,6 +68,8 @@ sub EVENT_ITEM {
 		}
 		else {
 			quest::say("Mmmm... <Burp!> Thank you. Here is a little dona... <Hic!> dona... <Hic!> mmmoney for your generosity.");
+			#:: Give a 13291 - Donation
+			quest::summonitem(13291);			
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
@@ -87,6 +93,8 @@ sub EVENT_ITEM {
 		}
 		else {
 			quest::say("Mmmm... <Burp!> Thank you. Here is a little dona... <Hic!> dona... <Hic!> mmmoney for your generosity.");
+			#:: Give a 13291 - Donation
+			quest::summonitem(13291);
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
