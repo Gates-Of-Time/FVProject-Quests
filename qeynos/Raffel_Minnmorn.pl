@@ -1,6 +1,8 @@
-sub EVENT_SPAWN {
-	#:: Start pathing grid 68
-	quest::start(68);
+sub EVENT_SIGNAL {
+	#:: Match signal "1" from Qeynos/Gash_Flockwalker.pl
+	if ($signal == 1) {
+		quest::attacknpctype(1138);
+	}
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
