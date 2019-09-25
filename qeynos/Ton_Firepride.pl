@@ -3,7 +3,7 @@ sub EVENT_SAY {
 		quest::say("Greetings, adventurer!  A mighty warrior such as yourself deserves only the finest in armor and we here at Firepride's were trained by the finest dwarven smiths.  We shall be branching out and crafting [" . quest::saylink("other items") . "] soon, also.");
 	}
 	elsif ($text=~/other items/i) {
-		quest::say("Well, soon I shall be showing my fantastic art inweapons making. I would hate to have the good people of Qeynos continue purchasing inferior weapons from that so-called blacksmith at [" . quest::saylink("Ironforge Estates") . "].");
+		quest::say("Well, soon I shall be showing my fantastic art in weapons making. I would hate to have the good people of Qeynos continue purchasing inferior weapons from that so-called blacksmith at [" . quest::saylink("Ironforge Estates") . "].");
 	}
 	elsif ($text=~/ironforge estates/i) {
 		quest::say("The Ironforge family has called Qeynos their own for far too long. He was never trained in the dwarven techniques as I was. He will not be cornering the weapons market very much longer.");
