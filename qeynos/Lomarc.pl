@@ -6,7 +6,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match a 18793 - Lomarc's Payment
-	if (plugin::takeItems(18793 => 1) {
+	if (plugin::takeItems(18793 => 1)) {
 		quest::say("What the heck is this?!? No money at all? You'll pay for this you back-stabbing punk!");
 		quest::attack($name);
 	}
