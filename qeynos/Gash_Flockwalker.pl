@@ -13,13 +13,16 @@ sub EVENT_SAY {
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
-	if ($wp == 12) {
+	#:: Match waypoint 11
+	if ($wp == 11) {
 		#:: Send a signal "1" to South Qeynos >> Raffel_Minnmorn (1179) with no delay
 		quest::signalwith(1179,1,0);
 	}
+	#:: Match waypoint 17
 	elsif ($wp == 17) {
 		quest::say("Even the beauty of the ocean pales in comparison to the towering pines of Surefall Glade.");
 	}
+	#:: Match waypoint 27
 	elsif ($wp == 27) {
 		quest::say("I have had a tree sap from Surefall Glade which tastes better than this ale.");
 	}
