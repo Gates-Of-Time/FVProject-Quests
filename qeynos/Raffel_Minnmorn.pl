@@ -29,3 +29,8 @@ sub EVENT_ITEM {
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
+
+sub EVENT_DEATH_COMPLETE {
+	#:: Send a signal "1" to South Qeynos >> Gash_Flockwalker (1138) with no delay
+	quest::signalwith(1138,1,0);
+}
