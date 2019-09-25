@@ -10,6 +10,11 @@ sub EVENT_WAYPOINT_ARRIVE {
 		#:: Send a signal "1" to South Qeynos >> Tasya_Huntlan (1104) with no delay
 		quest::signalwith(1104,1,0);
 	}
+	#:: Match waypoint 7
+	elsif ($wp == 7) {
+		#:: Stop pathing grid 68
+		quest::stop();
+	}
 }
 
 sub EVENT_SAY {
