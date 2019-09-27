@@ -9,13 +9,15 @@ sub EVENT_SIGNAL {
 	if ($signal == 1) {
 		#:: Stop pathing grid 61
 		quest::stop();
-		#:: Missing equivalent perl function for lua e.self:MerchantCloseShop();
+		#:: Close up shop for the night
+		$npc->MerchantCloseShop();
 	}
 	#:: Match signal "2" from qeynos/campday.pl
 	elsif ($signal == 2) {
 		#:: Start pathing on grid 61
 		quest::start(61);
-		#:: Missing equivalent perl function for lua e.self:MerchantOpenShop();
+		#:: Open up shop for the day
+		$npc->MerchantOpenShop();
 	}
 	#:: Match signal "3" from qeynos/Kazlo_Naedra.pl
 	elsif ($signal == 3) {
