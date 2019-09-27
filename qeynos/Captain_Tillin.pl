@@ -21,7 +21,7 @@ sub EVENT_SIGNAL {
 
 sub EVENT_ITEM {
 	#:: Match a 18815 - Tattered Note
-	if (pluging::takeItems(18815 => 1)) {
+	if (plugin::takeItems(18815 => 1)) {
 		quest::say("I heard you were on your way. I have called for the state [" . quest::saylink("executioner") . "]. She should be on her way now. She will deal with our friend, McNeal Jocub. Thank you for your help, citizen.");
 		#:: Give a 13305 - Medal of Merit
 		quest::summonitem(13305);
