@@ -80,7 +80,7 @@ sub EVENT_ITEM {
 		quest::exp(500);
 	}
 	#:: Match four 13424 - Kobold Hide
-	elsif (plugin::takeItem(13424 => 4)) {
+	elsif (plugin::takeItems(13424 => 4)) {
 		#:: Match if faction is Indifferent or worse
 		if ($faction > 4) {
 			quest::say("The Steel Warriors have no cause to dislike you, but you have yet to truly prove your worth to this guild.");
