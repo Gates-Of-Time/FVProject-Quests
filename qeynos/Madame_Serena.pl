@@ -22,7 +22,7 @@ sub EVENT_TIMER {
 		quest::npctexture($Texture);
 		quest::gmsay("Set Texture to $Texture.");
 		$Texture++;
-		quest::say("Next Texture is $Texture.");
+		quest::gmsay("Next Texture is $Texture.");
 		if ($Texture > 6) {
 			$Gender++;
 			quest::gmsay("Next Gender is $Gender.");
