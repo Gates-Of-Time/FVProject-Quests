@@ -1,9 +1,9 @@
 sub EVENT_SPAWN {
     #:: Set race 71 - Qeynos Citizen
     quest::npcrace(71);
-    #:: Set gender 1 - Female
-    quest::npcgender(1);
-    #:: Set Texture 1 - Gypsy Clothes
+    #:: Set gender 2 - Neuter
+    quest::npcgender(2);
+    #:: Set Texture 0 - Gypsy Clothes
     quest::texture(0);
 }
 
