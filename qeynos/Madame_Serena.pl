@@ -4,7 +4,7 @@ sub EVENT_SPAWN {
     #:: Set gender 2 - Neuter
     quest::npcgender(2);
     #:: Set Texture 0 - Gypsy Clothes
-    quest::texture(1);
+    quest::texture(2);
 }
 
 sub EVENT_SAY {
