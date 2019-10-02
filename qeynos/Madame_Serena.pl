@@ -6,19 +6,21 @@ sub EVENT_SPAWN {
 	$Texture = 0;
 	#:: Set race 71 - Qeynos Citizen
 	quest::npcrace(71);
-	#:: Create a timer "outfit" that loops every 10 seconds
-	quest::settimer("outfit", 10);
+	#:: Create a timer "outfit" that loops every 3 seconds
+	quest::settimer("outfit", 3);
 }
 
 sub EVENT_TIMER {
 	if ($timer eq "outfit") {
-		if ($Texture < 5) {
-			quest::npcgender($Gender);
+		quest::npcgender($Gender);
+		quest::npctexture($Texture);
+		$Texture++;
+		if ($Texture > 6) {
 			$Gender++;
+			$Texture = 0;
 		}
-		else {
-			$Gender = 0;
-			$Texture++;
+		if ($Gender > 3) {
+			quest::stoptimer("outfit");
 		}
 	}
 }
