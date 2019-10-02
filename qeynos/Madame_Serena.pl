@@ -10,13 +10,14 @@ sub EVENT_SPAWN {
 	quest::gmsay("Gender set to $Gender.");
 	quest::npctexture($Texture);
 	quest::gmsay("Texture set to $Texture.");
-	#:: Create a timer "outfit" that loops every second
-	quest::settimer("outfit", 1);
+	#:: Create a timer "outfitchange" that loops every 2 seconds
+	quest::settimer("outfitchange", 2);
 	quest::gmsay("Timer Set.");
 }
 
 sub EVENT_TIMER {
-	if ($timer eq "outfit") {
+	if ($timer eq "outfitchange") {
+		quest::say("It's time to change outfits!");
 		quest::npcgender($Gender);
 		quest::gmsay("Set Gender to $Gender.");
 		quest::npctexture($Texture);
