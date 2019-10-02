@@ -4,7 +4,6 @@ function event_say(e)
 	elseif(e.message:findi("scrolls")) then
 		e.self:Say("Oh good! I can add them to my collection. We are preparing to make books you know. Bring me any of the scrolls you find in the old Splitpaw lair, and I would be happy to reward you handsomely.");
 	end
-	eq.world_emote(15, "" .. e.other:GetName() .. ", a " .. e.other:Class() .. ", has joined in the battle for Norrath! Current level of this hero is: " .. e.other:GetLevel() .. "!  He is a member of " .. eq.get_guild_name_by_id(e.other:GuildID()) .. ".");
 end
 
 function event_trade(e)
