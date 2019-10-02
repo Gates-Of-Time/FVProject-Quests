@@ -32,7 +32,7 @@ sub EVENT_TIMER {
 		}
 		if ($Gender > 3) {
 			quest::gmsay("There is no fourth gender.  Aborting.");
-			quest::stoptimer("outfit");
+			quest::stoptimer("outfitchange");
 		}
 	}
 }
