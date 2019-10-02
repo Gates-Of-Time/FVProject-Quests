@@ -11,7 +11,7 @@ sub EVENT_SPAWN {
 	#:: Set race 71 - Qeynos Citizen Human
 	quest::npcrace(71);
 	#:: Set gender 2 - Neuter
-	quest::npcgender(1);
+	quest::npcgender(0);
 }
 	
 sub EVENT_SAY {
