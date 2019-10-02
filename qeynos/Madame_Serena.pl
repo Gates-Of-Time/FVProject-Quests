@@ -1,3 +1,19 @@
+sub EVENT_SPAWN {
+	#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#
+	#:: Attempt to fix the Titanium Qeynos Citizen Female bug   ::#
+	#:: Race # 71 - Human, Plural 'Humans'                      ::#
+	#:: Model Codes:                                            ::#
+	#:: Male = QCM                                              ::#
+	#:: Female = QCN                                            ::#
+	#:: Neutral = QCF                                           ::#
+	#:: This should break the model for all other clients       ::#
+	#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#
+	#:: Set race 71 - Qeynos Citizen Human
+	quest::npcrace(71);
+	#:: Set gender 2 - Neuter
+	quest::npcgender(2);
+}
+	
 sub EVENT_SAY {
 	if ($text=~/follow/i) {
 		if ($text=~/bertoxxulous/i) {
