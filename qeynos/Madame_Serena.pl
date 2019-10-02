@@ -7,30 +7,30 @@ sub EVENT_SPAWN {
 	#:: Set race 71 - Qeynos Citizen
 	quest::npcrace(71);
 	quest::npcgender($Gender);
-	quest::say("Gender set to $Gender.");
+	quest::gmsay("Gender set to $Gender.");
 	quest::npctexture($Texture);
-	quest::say("Texture set to $Texture.");
+	quest::gmsay("Texture set to $Texture.");
 	#:: Create a timer "outfit" that loops every second
 	quest::settimer("outfit", 1);
-	quest::say("Timer Set.");
+	quest::gmsay("Timer Set.");
 }
 
 sub EVENT_TIMER {
 	if ($timer eq "outfit") {
 		quest::npcgender($Gender);
-		quest::say("Set Gender to $Gender.");
+		quest::gmsay("Set Gender to $Gender.");
 		quest::npctexture($Texture);
-		quest::say("Set Texture to $Texture.");
+		quest::gmsay("Set Texture to $Texture.");
 		$Texture++;
 		quest::say("Next Texture is $Texture.");
 		if ($Texture > 6) {
 			$Gender++;
-			quest::say("Next Gender is $Gender.");
+			quest::gmsay("Next Gender is $Gender.");
 			$Texture = 0;
-			quest::say("Texture reset to $Texture.");
+			quest::gmsay("Texture reset to $Texture.");
 		}
 		if ($Gender > 3) {
-			quest::say("There is no fourth gender.  Aborting.");
+			quest::gmsay("There is no fourth gender.  Aborting.");
 			quest::stoptimer("outfit");
 		}
 	}
