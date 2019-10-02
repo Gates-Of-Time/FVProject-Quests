@@ -1,3 +1,12 @@
+sub EVENT_SPAWN {
+    #:: Set race 71 - Qeynos Citizen
+    quest::npcrace(71);
+    #:: Set gender 1 - Female
+    quest::npcgender(1);
+    #:: Set Texture 1 - Gypsy Clothes
+    quest::texture(1);
+}
+
 sub EVENT_SAY {
 	if ($text=~/follow/i) {
 		if ($text=~/bertoxxulous/i) {
