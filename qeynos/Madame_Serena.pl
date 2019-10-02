@@ -1,10 +1,26 @@
+my $Gender;
+my $Texture;
+
 sub EVENT_SPAWN {
-    #:: Set race 71 - Qeynos Citizen
-    quest::npcrace(71);
-    #:: Set gender 1 - Female
-    quest::npcgender(1);
-    #:: Set Texture 0 - Gypsy Clothes
-    quest::npctexture(2);
+	$Gender = 0;
+	$Texture = 0;
+	#:: Set race 71 - Qeynos Citizen
+	quest::npcrace(71);
+	#:: Create a timer "outfit" that loops every 10 seconds
+	quest::settimer("outfit", 10);
+}
+
+sub EVENT_TIMER {
+	if ($timer eq "outfit") {
+		if ($Texture < 5) {
+			quest::npcgender($Gender);
+			$Gender++;
+		}
+		else {
+			$Gender = 0;
+			$Texture++;
+		}
+	}
 }
 
 sub EVENT_SAY {
