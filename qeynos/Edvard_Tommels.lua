@@ -1,10 +1,10 @@
 function event_say(e)
 	if(e.message:findi("hail")) then
 		e.self:Say(string.format("Greetings, %s. Thank you for stopping by. Had you heard I was looking for any and all information regarding the Tesch Val incursion? Perhaps you have come to help me gather knowledge? I seek the [Tesch Val scrolls]!",e.other:GetName()));
-		eq.world_emote(15,"Your guild is ".. eq.get_guild_name_by_id(tonumber(guildid)) .." !");
 	elseif(e.message:findi("scrolls")) then
 		e.self:Say("Oh good! I can add them to my collection. We are preparing to make books you know. Bring me any of the scrolls you find in the old Splitpaw lair, and I would be happy to reward you handsomely.");
 	end
+	eq.world_emote(15,"Your guild is ".. eq.get_guild_name_by_id(tonumber(guildid)) .." !");
 end
 
 function event_trade(e)
