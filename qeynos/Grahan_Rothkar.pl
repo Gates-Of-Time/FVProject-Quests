@@ -123,6 +123,10 @@ sub EVENT_ITEM {
 			quest::unique_spawn(1303, 0, 0, -442, -167, -24.87, 7);
 			#:: Create a timer to loop every 600 seconds (10 minutes)
 			quest::settimer("depop",600);
+			#:: Data bucket to verify quest has been started appropriately
+			$key = $client->CharacterID() . "-steel-warriors-final-test";
+			#:: Set a data bucket, quest started
+			quest::set_data($key, 1);
 		}
 	}
 	#:: Match a 13398 - Arena Lion Skin
@@ -143,6 +147,8 @@ sub EVENT_ITEM {
 			quest::faction(281, 5);		#:: + Knights of Truth
 			#:: Grant a large amount of experience
 			quest::exp(8000);
+			#:: Delete the data bucket
+			quest::delete_data($key);
 		}
 		else {
 			quest::say("The Steel Warriors have no cause to dislike you, but you have yet to truly prove your worth to this guild.");
