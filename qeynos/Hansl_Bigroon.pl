@@ -20,7 +20,7 @@ sub EVENT_SAY {
 	elsif ($text=~/where is it/i) {
 		quest::say("Do not concern yourself with the list. It is of no concern to you. I do not even have it. It is tucked away safely at home.");
 	}
-	elsif ($text=~/dontation/i) {
+	elsif ($text=~/donation/i) {
 		quest::say("I would be pleased to help out such a noble organization. Here you are, my good friend. See you at weekly services!");
 		#:: Give a 13290 - A Donation (*Donation 1)
 		quest::summonitem(13290);
