@@ -88,7 +88,7 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Delete the data bucket
-			$key = $client->CharacterID() . "-tescaped-prisoners";
+			$key = $client->CharacterID() . "-escaped-prisoners";
 			quest::delete_data($key);
 		}
 		else {
