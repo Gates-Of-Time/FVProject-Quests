@@ -35,7 +35,7 @@ sub EVENT_ITEM {
 		quest::faction(223, 1);		#:: + Circle Of Unseen Hands
 		quest::faction(291, -1);	#:: - Merchants of Qeynos
 		quest::faction(230, 1);		#:: + Corrupt Qeynos Guards
-		quest::faction(262, -1);	#:: - Corrupt Qeynos Guards
+		quest::faction(262, -1);	#:: - Guards of Qeynos
 		quest::faction(273, 1);		#:: + Kane Bayle
 		#:: Grant a small amount of experience
 		quest::exp(200);
@@ -49,7 +49,7 @@ sub EVENT_ITEM {
 		quest::faction(223, 10);	#:: + Circle Of Unseen Hands
 		quest::faction(291, -1);	#:: - Merchants of Qeynos
 		quest::faction(230, 1);		#:: + Corrupt Qeynos Guards
-		quest::faction(262, -1);	#:: - Corrupt Qeynos Guards
+		quest::faction(262, -1);	#:: - Guards of Qeynos
 		quest::faction(273, 1);		#:: + Kane Bayle
 		#:: Grant a small amount of experience
 		quest::exp(200);
@@ -65,7 +65,7 @@ sub EVENT_ITEM {
 		quest::faction(223, 20);	#:: + Circle Of Unseen Hands
 		quest::faction(291, -3);	#:: - Merchants of Qeynos
 		quest::faction(230, 3);		#:: + Corrupt Qeynos Guards
-		quest::faction(262, -3);	#:: - Corrupt Qeynos Guards
+		quest::faction(262, -3);	#:: - Guards of Qeynos
 		quest::faction(273, 2);		#:: + Kane Bayle
 		#:: Grant a moderate amount of experience
 		quest::exp(2000);
