@@ -108,7 +108,7 @@ sub EVENT_ITEM {
 		else {
 			quest::say("So you are ready to encounter your final test. I wish you well, young warrior. Take this key to the pen on the left along the wall with three doors. There you shall meet your final challenge. Return with proof of victory. Exit before it is at an end and I shall not help you.");
 			#:: Give a 20029 - Pen Key # 5
-			qust::summonitem(20029);
+			quest::summonitem(20029);
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
