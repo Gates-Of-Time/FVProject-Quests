@@ -120,7 +120,7 @@ sub EVENT_ITEM {
 			#:: Grant a large amount of experience
 			quest::exp(2000);
 			#:: Spawn one and only one South Qeynos >> a_young_lion (1303)
-			quest::unique_spawn(1303, 0, 0, -520, -120, -24.5);
+			quest::unique_spawn(1303, 0, 0, -442, -167, -24.87, 7);
 			#:: Create a timer to loop every 600 seconds (10 minutes)
 			quest::settimer("depop",600);
 		}
