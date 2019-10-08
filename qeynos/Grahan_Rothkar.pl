@@ -87,6 +87,9 @@ sub EVENT_ITEM {
 			my %cash = plugin::RandomCash(1000,2000);
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+			#:: Delete the data bucket
+			$key = $client->CharacterID() . "-tescaped-prisoners";
+			quest::delete_data($key);
 		}
 		else {
 			quest::say("Have you a report of the [" . quest::saylink("escaped catman") . "]?");
