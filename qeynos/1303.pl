@@ -4,10 +4,3 @@ sub EVENT_SIGNAL {
 		quest::depop();
 	}
 }
-
-sub EVENT_DEATH_COMPLETE {
-		#:: Data bucket to verify quest has been started appropriately
-		$key = killer_id() . "-steel-warriors-final-test";
-		#:: Set a data bucket, quest started
-		quest::set_data($key, 1);
-}
