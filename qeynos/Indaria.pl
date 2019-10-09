@@ -1,5 +1,5 @@
 sub EVENT_SAY {
-	if ($text=!/hail/i) {
+	if ($text=~/hail/i) {
 		quest::say("Hello, have you seen my daughter?");
 	}
 	elsif ($text=~/daughter/i) {
