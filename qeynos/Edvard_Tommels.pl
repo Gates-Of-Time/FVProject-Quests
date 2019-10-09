@@ -15,7 +15,7 @@ sub EVENT_ITEM {
 		#:: Create a scalar variable to store a random number 1-5
 		my $randomChance = quest::ChooseRandom(1,2,3,4,5);
 		#:: Match if greater than 4 (20 percent chance)
-		if ($randomChance > 3) {
+		if ($randomChance > 2) {
 			#:: Give a 12076 - Karana's Tear
 			quest::summonitem(12076);
 		}
