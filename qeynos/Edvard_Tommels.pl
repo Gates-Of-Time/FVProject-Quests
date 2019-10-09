@@ -31,7 +31,7 @@ sub EVENT_ITEM {
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Match a 18504 - Tanned Splitpaw Skin or a 18505 - Tanned Split Paw Skin or a 18506 - Tanned Split Paw Skin or a 18507 - Tanned Split Paw Skin
-	elsif (plugin::takeItems(18504 => 1 || 18505 => 1 || 18506 => 1 || 18507 => 1)) {
+	elsif (plugin::takeItems(18504 => 1) || plugin::takeItems(18505 => 1) || plugin::takeItems(18506 => 1) || plugin::takeItems(18507 => 1)) {
 		quest::say("Why thank you, $name. If you do happen to come across any more of these, please bring them to me.");
 		#:: "Sometimes" give a 12076 - Karana's Tear
 		#:: Create a scalar variable to store a random number 1-10
