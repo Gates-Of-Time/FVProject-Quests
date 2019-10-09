@@ -1,5 +1,8 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
+		quest::say("Steer clear of the [" . quest::saylink("aqueducts") . "], friend.");
+	}
+	elsif ($text=~/aqueducts/i) {
 		quest::say("Aye, the aqueducts are a horrible place. I have heard rumors of horrible [" . quest::saylink("beasts") . "] who live under the city in the water and just the other day, a child playing in the water just up and disappeared!");
 	}
 	elsif ($text=~/beast/i) {
@@ -24,8 +27,8 @@ sub EVENT_ITEM {
 		quest::faction(230, -1);		#:: + Corrupt Qeynos Guards
 		quest::faction(223, -1);		#:: - Circle Of Unseen Hands
 		quest::faction(291, 1);			#:: + Merchants of Qeynos
-		#:: Grant a small amount of experience
-		quest::exp(100);
+		#:: Grant a moderate amount of experience
+		quest::exp(5600);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
