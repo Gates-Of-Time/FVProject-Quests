@@ -1,6 +1,4 @@
 sub EVENT_SPAWN {
-	#:: Create a proximity, 100 units across, 100 units tall, and enable proximity say
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 1);
 	#:: Create a timer "paw" that loops every 600 seconds (10 min)
 	quest::settimer("paw", 600);
 }
@@ -16,20 +14,19 @@ sub EVENT_TIMER {
 
 sub EVENT_SIGNAL {
 	#:: Match a signal "1" from qeynos/Micc_Koter.pl
-	quest::say("Shut your hole, Micc, you dirty son of a kobold!");
-}	
-
-sub EVENT_PROXIMITY_SAY {
-	if ($text=~/paw of opolla/i) {
-		quest::say("Heh? Why don't you mind your own business bub?! Buzz off!");
-		#:: Send a signal "2" to South Qeynos >> Micc_Koter (1072) with no delay
-		quest::signalwith(1072, 2, 0);
+	if ($signal == 1) {
+		quest::say("Shut your hole, Micc, you dirty son of a kobold!");
 	}
 }
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Hey, $name!  Do I know you from somewhere?  Highpass?  Nah, you ain't who I thought you were.  If I were you I would just keep my trap shut and buy some drinks.");
+	}
+	elsif ($text=~/paw of opolla/i) {
+		quest::say("Heh? Why don't you mind your own business bub?! Buzz off!");
+		#:: Send a signal "2" to South Qeynos >> Micc_Koter (1072) with no delay
+		quest::signalwith(1072, 2, 0);
 	}
 }
 
