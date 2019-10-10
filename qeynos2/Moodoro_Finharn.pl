@@ -70,7 +70,7 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(13994,13993,13992,13995));
 	}
 	#:: Match 2 Gold
-	elsif (plugin:takeCoin(0, 0, 2, 0)) {
+	elsif (plugin::takeCoin(0, 0, 2, 0)) {
 		quest::say("HA!! I hope you enjoy the book. It is missing pages 30 and 34. It is nothing more than garbage without them. A rogue ripped them from their bindings and sold them to [" . quest::saylink("Ran") . "].");
 		#:: Ding!
 		quest::ding();
