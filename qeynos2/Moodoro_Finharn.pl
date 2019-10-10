@@ -18,7 +18,7 @@ sub EVENT_SAY {
 
 sub EVENT_WAYPOINT_ARRIVE {
 	#:: Match waypoint 6
-	if ($wp == 6){
+	if ($wp == 6) {
 		quest::say("<urp>.. I don't feel so well.");
 		#:: Send a signal to North Qeynos >> Flynn_Merrington (2091)
 		quest::signal(2091,1,1);
@@ -50,8 +50,10 @@ sub EVENT_ITEM {
 		quest::faction(267,20); 	#:: + High Guard of Erudin
 		#:: Give a small amount of experience
 		quest::exp(200);
-		#:: Give a small amount of cash copper - plat
-		quest::givecash(5,0,0,0);
+		#:: Create a hash for storing cash - 1 to 10cp
+		my %cash = plugin::RandomCash(1,10);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Match a 13994 - Jester
 	elsif (plugin::takeItems(13994 => 1)) {
