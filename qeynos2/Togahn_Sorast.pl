@@ -127,6 +127,9 @@ sub EVENT_SAY {
 			quest::say("I have been watching you, and appreciate the help you've given to the brothers and sisters of the Silent Fist. But, I feel that such a vital matter should be left to one of our more trusted members.");
 		}
 	}
+	elsif ($text=~/tomer/i) {
+		quest::say("Tomer? I think Seta needs someone to go find him.. Go ask her.");
+	}
 }
 
 sub EVENT_ITEM {
