@@ -28,13 +28,21 @@ sub EVENT_SAY {
 		$key = $client->CharacterID() . "-tomer-found";
 		#:: Match if the key exists
 		if (quest::get_data($key)) {
-			quest::say("Thank you, friend.. Now, can you [" . quest::saylink("lead me back to Master Seta") . "] of the Silent Fist Clan? ");
-			#:: Give a 20459 - Bag of Provisions
-			quest::summonitem(20459);
 			#:: Data bucket to verify quest has progressed appropriately
 			$key = $client->CharacterID() . "-tomer-backpack";
-			#:: Set a data bucket to a value of "1"
-			quest::set_data($key, 1);
+			#:: Match if the key exists
+			if (quest::get_data($key)) {
+				quest::say("Thank you, friend.. Now, can you [" . quest::saylink("lead me back to Master Seta") . "] of the Silent Fist Clan? ");
+			}
+			else {
+				quest::say("Thank you, friend.. Now, can you [" . quest::saylink("lead me back to Master Seta") . "] of the Silent Fist Clan? ");
+				#:: Give a 20459 - Bag of Provisions
+				quest::summonitem(20459);
+				#:: Data bucket to verify quest has progressed appropriately
+				$key = $client->CharacterID() . "-tomer-backpack";
+				#:: Set a data bucket to a value of "1"
+				quest::set_data($key, 1);
+			}
 		}
 	}
 	elsif (($text=~/lead you back to master seta/i) || ($text=~/lead me back to master seta/i)) {
@@ -66,7 +74,8 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(20459 => 1)) {
 		#:: Data bucket to verify quest has progressed appropriately
 		$key = $client->CharacterID() . "-tomer-backpack";
-		if (quest::get_data($key) == "2") {
+		#:: Match if the value of the Data bucket is "2"
+		if (quest::get_data($key) == 2) {
 			quest::say("Oh, you have the makings of a true hero.. The Silent Fist Clan is proud to have you as ally. May your soul guide and protect you through these chaotic times.");
 			#:: Ding!
 			quest::ding();
