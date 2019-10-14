@@ -65,7 +65,7 @@ sub EVENT_SIGNAL {
 		#:: Data bucket to verify quest has progressed appropriately
 		$key = $client->CharacterID() . "-tomer-backpack";
 		#:: Set a data bucket to a value of "2"
-		quest::set_data($key, 2);
+		quest::set_data($key, "2");
 	}
 }
 
