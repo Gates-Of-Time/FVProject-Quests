@@ -54,6 +54,8 @@ sub EVENT_ITEM {
 		my %cash = plugin::RandomCash(1,10);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Grant a moderate amount of experience
+		quest::exp(8000);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
