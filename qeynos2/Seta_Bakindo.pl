@@ -75,6 +75,10 @@ sub EVENT_SAY {
 			#:: Delete the data bucket
 			$key = $client->CharacterID() . "-tomer-found";
 			quest::delete_data($key);
+			#:: Data bucket to verify quest has progressed appropriately
+			$key = $client->CharacterID() . "-tomer-rescued";
+			#:: Set a data bucket
+			quest::set_data($key, 1);
 			#:: Send a signal "1" to North Qeynos >> Tomer_Instogle (2030) with no delay
 			quest::signalwith(2030, 1, 0);
 		}
