@@ -62,13 +62,6 @@ sub EVENT_SIGNAL {
 	if ($signal == 1) {
 		quest::say("I am now accepting quests.");
 		quest::say("Yes, he saved my life.. I owe him much thanks. Please return my pack to me now, good friend.");
-		#:: Delete the data bucket
-		$key = $client->CharacterID() . "-tomer-backpack";
-		quest::delete_data($key);
-		#:: Data bucket to verify quest has progressed appropriately
-#		$key = $client->CharacterID() . "-tomer-backpack";
-		#:: Set a data bucket to a value of "2"
-#		quest::set_data($key, 2);
 	}
 }
 
@@ -76,9 +69,9 @@ sub EVENT_ITEM {
 	#:: Match a 20459 - Bag of Provisions
 	if (plugin::takeItems(20459 => 1)) {
 		#:: Data bucket to verify quest has progressed appropriately
-		$key = $client->CharacterID() . "-tomer-backpack";
-		#:: Match if the value of the Data bucket is "2"
-		if (quest::get_data($key) == 2) {
+		$key = $client->CharacterID() . "-tomer-rescued";
+		#:: Match if the key exists
+		if (quest::get_data($key)) {
 			quest::say("Oh, you have the makings of a true hero.. The Silent Fist Clan is proud to have you as ally. May your soul guide and protect you through these chaotic times.");
 			#:: Ding!
 			quest::ding();
@@ -90,6 +83,9 @@ sub EVENT_ITEM {
 			quest::exp(100);
 			#:: Delete the data bucket
 			$key = $client->CharacterID() . "-tomer-backpack";
+			quest::delete_data($key);
+			#:: Delete the data bucket
+			$key = $client->CharacterID() . "-tomer-rescued";
 			quest::delete_data($key);
 			#:: Stop following the player who triggered this event
 			quest::sfollow();
