@@ -82,6 +82,12 @@ sub EVENT_ITEM {
 			#:: Stop following the player who triggered this event
 			quest::sfollow();
 		}
+		else {
+			#:: Made up based on prior response
+			quest::say("I am not accepting quests.");
+			#:: Return a 20459 - Bag of Provisions
+			quest::summonitem(20459);
+		}
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
