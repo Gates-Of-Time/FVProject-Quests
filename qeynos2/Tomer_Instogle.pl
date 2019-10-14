@@ -62,10 +62,13 @@ sub EVENT_SIGNAL {
 	if ($signal == 1) {
 		quest::say("I am now accepting quests.");
 		quest::say("Yes, he saved my life.. I owe him much thanks. Please return my pack to me now, good friend.");
+		#:: Delete the data bucket
+		$key = $client->CharacterID() . "-tomer-backpack";
+		quest::delete_data($key);
 		#:: Data bucket to verify quest has progressed appropriately
 		$key = $client->CharacterID() . "-tomer-backpack";
 		#:: Set a data bucket to a value of "2"
-		quest::set_data($key, "2");
+		quest::set_data($key, 2);
 	}
 }
 
