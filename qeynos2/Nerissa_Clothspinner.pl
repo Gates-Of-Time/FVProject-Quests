@@ -36,7 +36,7 @@ sub EVENT_WAYPOINT_ARRIVE {
 	}
 	#:: Match waypoint 43
 	elsif ($wp == 43) {
-		e.self:Say("Bartender! Some water, please.");
+		quest::say("Bartender! Some water, please.");
 	}
 }
 
