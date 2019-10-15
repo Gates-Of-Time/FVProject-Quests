@@ -20,8 +20,8 @@ sub EVENT_WAYPOINT_ARRIVE {
 	#:: Match waypoint 6
 	if ($wp == 6) {
 		quest::say("<urp>.. I don't feel so well.");
-		#:: Send a signal to North Qeynos >> Flynn_Merrington (2091)
-		quest::signal(2091,1,1);
+		#:: Send a signal "1" to North Qeynos >> Flynn_Merrington (2091) with no delay
+		quest::signalwith(2091, 1, 0);
 	}
 	#:: Match waypoint 14
 	elsif ($wp == 14) {
