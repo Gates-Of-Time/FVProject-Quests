@@ -15,6 +15,8 @@ sub EVENT_SIGNAL {
 	#:: Match a signal "2" from /qeynos2/Hanns_Krieghor.pl
 	elsif ($signal == 2) {
 		quest::say("[" . quest::saylink("Rujahn") . "] Tahslek, huh? I've never heard of him, but those bandits seem to have a new leader every month or so.");
+		#:: Send a signal "2" to North Qeynos >> Hanns_Krieghor (2074) with no delay
+		quest::signalwith(2074, 2, 0);
 	}
 	#:: Match a signal "3" from /qeynos2/Hanns_Krieghor.pl
 	elsif ($signal == 3) {
