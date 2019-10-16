@@ -32,10 +32,10 @@ sub EVENT_SAY {
 		quest::say("That's what they call me. Now quit bugging me, I have work to do.");
 	}
 	elsif ($text=~/renux/i) {
-		#:: Not found
+		quest::say("She is second in command around here. She and [" . quest::saylink("Hanns") . "] go way back, from what I hear.. Renux is probably the only person Hanns trusts.");
 	}
 	elsif ($text=~/hanns/i) {
-		#:: Not found
+		quest::say("Hanns, he runs things around here. Years ago, Hanns took over Ghil's old ring and started up the Circle of Unseen Hands. The Circle quickly took any market opposition out of Qeynos. We currently have connections in Erudin, Highpass and even Freeport.");
 	}
 	elsif ($text=~/rujahn/i) {
 		#:: Not found
