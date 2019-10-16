@@ -1,5 +1,5 @@
 sub EVENT_WAYPOINT_ARRIVE {
-	#:: Matcy waypoint 10
+	#:: Match waypoint 10
 	if ($wp == 10) {
 		quest::say("Hey Hanns.. Have you gotten word from Prak about the spy in Carson's guards?");
 		#:: Send a signal "1" to North Qeynos >> Hanns_Krieghor (2074) with no delay
