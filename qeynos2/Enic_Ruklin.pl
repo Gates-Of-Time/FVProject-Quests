@@ -25,17 +25,22 @@ sub EVENT_ITEM {
 	#:: Match a 13383 - Koalindl Fish
 	if (plugin::takeItems(13383 => 1)) {
 		quest::say("Thank you my friend! Every Koalindl must be accounted for, even the dead. Rodcet Nife shall be pleased and I shall reward you. Nothing much. Just a token of gratitude.");
+		#:: Grant a random reward:  13297 - Band of Rodcet Nife, 13296 - Prayer Beads
+		quest::summonitem(quest::ChooseRandom(13297, 13296);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		e.other:Faction(341,100); -- Priest of Life
-			e.other:Faction(280,30); -- Knight of Thunder
-			e.other:Faction(262,50); -- Guards of Qeynos
-			e.other:Faction(221,-25); -- Bloodsabers
-			e.other:Faction(219,15); -- Antonius Bayle
-			e.other:SummonItem(eq.ChooseRandom(13297,13296));
-			1plat, 3g reward
-			#:: Grant a small amount of experience
+		quest::faction(341, 100);		#:: + Priests of Life
+		quest::faction(280, 30);		#:: + Knights of Thunder
+		quest::faction(262, 50);		#:: + Guards of Qeynos
+		quest::faction(221, -25);		#:: - Bloodsabers
+		quest::faction(219, 15);		#:: + Antonius Bayle
+		#:: Create a hash for storing cash - 1200 to 1300cp
+		my %cash = plugin::RandomCash(1200,1300);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Grant a small amount of experience
+		quest::exp(400);
 	}	
 	#:: Return unused items
 	plugin::returnUnusedItems();
