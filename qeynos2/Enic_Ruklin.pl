@@ -26,7 +26,7 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(13383 => 1)) {
 		quest::say("Thank you my friend! Every Koalindl must be accounted for, even the dead. Rodcet Nife shall be pleased and I shall reward you. Nothing much. Just a token of gratitude.");
 		#:: Grant a random reward:  13297 - Band of Rodcet Nife, 13296 - Prayer Beads
-		quest::summonitem(quest::ChooseRandom(13297, 13296);
+		quest::summonitem(quest::ChooseRandom(13297, 13296));
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
