@@ -2,7 +2,7 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Hail, $name! My name is Roesager Thusten, Paladin of Life. I am a loyal servant of the Prime Healer and I seek to destroy all who wish to bring death and disease to the land of Norrath.");
 	}
-	elsif (($text=~/disease/i) || ($text=~/plaugebringers/i)) {
+	elsif (($text=~/disease/i) || ($text=~/plaguebringers/i)) {
 		quest::say("The Plaguebringers are followers of the disease lord, Bertoxxulous. We believe a sect of them now operates in Qeynos, but we need proof before we can act.");
 	}
 	elsif ($text=~/bertoxxulous/i) {
