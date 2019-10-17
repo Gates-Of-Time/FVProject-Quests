@@ -24,11 +24,11 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 13383 - Koalindl Fish
 	if (plugin::takeItems(13383 => 1)) {
-			quest::say("Thank you my friend! Every Koalindl must be accounted for, even the dead. Rodcet Nife shall be pleased and I shall reward you. Nothing much. Just a token of gratitude.");
-			#:: Ding!
-			quest::ding();
-			#:: Set factions
-			e.other:Faction(341,100); -- Priest of Life
+		quest::say("Thank you my friend! Every Koalindl must be accounted for, even the dead. Rodcet Nife shall be pleased and I shall reward you. Nothing much. Just a token of gratitude.");
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		e.other:Faction(341,100); -- Priest of Life
 			e.other:Faction(280,30); -- Knight of Thunder
 			e.other:Faction(262,50); -- Guards of Qeynos
 			e.other:Faction(221,-25); -- Bloodsabers
@@ -36,6 +36,11 @@ sub EVENT_ITEM {
 			e.other:SummonItem(eq.ChooseRandom(13297,13296));
 			1plat, 3g reward
 			#:: Grant a small amount of experience
-			quest::exp(400);
-		end
-	end	
+	}	
+	#:: Return unused items
+	plugin::returnUnusedItems();
+}
+
+sub EVENT_DEATH_COMPLETE {
+	quest::say("The Priests of Life will cleanse this city of evil ones like you soon enough. May Rodcet have mercy on all our souls.");
+}
