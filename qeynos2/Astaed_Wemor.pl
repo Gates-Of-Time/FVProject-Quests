@@ -36,7 +36,8 @@ sub EVENT_ITEM {
 			quest::say("So you have helped Nerissa. That is good. Here, then, is a small reward. May you find it useful. Keep fighting the good fight!");
 			#:: Give a 6022 - Bronze Warhammer
 			quest::summonitem(6022);
-			e.other:Ding();
+			#:: Ding!
+			quest::ding();
 			#:: Set factions
 			quest::faction(341, 5);			#:: + Priests of Life
 			quest::faction(280, 1);			#:: + Knights of Thunder
