@@ -20,7 +20,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Turn in for 10 Gold and 12126 - Shark Bones x3
-	if (plugin::takeItemsCoin(0,10,0,0, 12126 => 3)) {
+	if (plugin::takeItemsCoin(0,0,10,0, 12126 => 3)) {
 		quest::say("I thank you for your ten gold coins. Now we can pay the weekly oxygen tax imposed by the militia. Here is the shark powder.");
 		#:: Give item 12125 - shark Powder
 		quest::summonitem(12125);
