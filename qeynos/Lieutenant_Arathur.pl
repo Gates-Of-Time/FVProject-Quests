@@ -17,7 +17,7 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/mithaniel marr/i) {
 		#:: Response made up
-		quest::say("The Followers of Mithaniel Marr believe that valor is what separates civilized beings from beasts. His followers live by a strict moral code that prizes truth, honor, and charity.  I will not rest until the day when all of Norrath is cleansed in Mithaniel's light.");
+		quest::say("Mithaniel Marr is the Lord of Valor and my personal source of power and inspiration. You see I was orphaned as a small child and raised by the Priests of Marr in [" . quest::saylink("Freeport") . "]. I have dedicated my life to protecting the innocent. I now use the glorious powers that my faith in the Truthbringer has provided to help bring honor to the city of Qeynos.");
 	}
 	elsif ($text=~/freeport/i) {
 		quest::say("Freeport is the city of my birth. It is not what it once was, though. Thugs and bandits patrol its streets. My comrades in the Knights of Truth have managed to protect the northern parts of the city but I fear they are outnumbered and will soon have to flee Freeport altogether. If it were not for my sworn duty here, I would join their noble [" . quest::saylink("crusade") . "].");
