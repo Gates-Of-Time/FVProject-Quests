@@ -50,9 +50,7 @@ sub EVENT_ITEM {
 	#:: Match one 13034 - Brandy
 	elsif (plugin::takeItems(13034 => 1)) {
 		if ($ItemCount == 0) {
-			#:: Made up
-			quest::emote("drains his glass.");
-			quest::say("Oh, that was good.  What was it we were talking about?");
+			quest::say("Hey.. Better get me another one.. I can't quite remember.. Heh heh..");
 			#:: Increment the item count variable
 			$ItemCount++;
 		}
