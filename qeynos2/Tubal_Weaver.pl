@@ -1,3 +1,7 @@
+sub EVENT_AGGRO {
+	quest::say("Hey! I still remember enough from my days in Highpass to kick your weakling butt! Guards! Help!");
+}
+
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Hail, $name!  I am Tubal Weaver, humble merchant and retired guardsman of Highkeep.  I make a tidy living dealing with the throngs of adventurers who take it upon themselves to keep Qeynos beetle-free.  If you want some free advice, I recommend that you not deal with any of the merchants in town.  I can offer much lower prices than they because I do not have the overhead of a shop to maintain.");
