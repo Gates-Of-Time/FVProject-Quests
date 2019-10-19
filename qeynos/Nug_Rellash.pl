@@ -1,3 +1,9 @@
+sub EVENT_SAY {
+	if ($text=~/hail/i) {
+		quest::say("Hello $name. I am Nug Rellash, assistant brewer and barkeep at the Lion's Mane Tavern. Come in and enjoy the drinks.");
+	}
+}
+
 sub EVENT_ITEM {
 	#:: Match a 18821 - Scrap of Parchment
 	if (plugin::takeItems(18821 => 1)) {
