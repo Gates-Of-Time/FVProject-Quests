@@ -16,6 +16,8 @@ sub EVENT_ITEM {
 	#:: Match a 18027 - Letter to Behroe
 	if (plugin::takeItems(18027 => 1)) {
 		quest::say("Ah, thank you, kind $name.  You've made two foolish lovebirds very happy.  Please, take this..  Though it is not much, it will help keep you warm on those chilly Karana nights.  It is very good to have a friend such as yourself, and I will one day repay you for your kindness and generosity.");
+		#:: Give a 1055 - Shawl of the Wind Spirit
+		quest::summonitem(1055);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
