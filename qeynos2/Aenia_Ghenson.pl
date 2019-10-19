@@ -16,3 +16,8 @@ sub EVENT_ITEM {
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
+
+sub EVENT_DEATH_COMPLETE {
+	#:: This makes no sense based on her faction
+	quest::say("You can't break the Circle.. kill one, and.. there will always be another to take his place.. and.. take revenge.");
+}
