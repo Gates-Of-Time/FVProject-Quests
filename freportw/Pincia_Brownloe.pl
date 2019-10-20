@@ -4,20 +4,22 @@ sub EVENT_SAY {
 	}
 }
 
+sub EVENT_SIGNAL { 
+	#:: Match a signal "1" from /freportw/Pandos_Flintside.pl
+	if ($signal == 1) {
+		quest::say("You are in luck! I have a fresh batch that just came out of the oven!");
+		#:: Send a signal "1" to West Freeport >> Pandos_Flintside (9057) with a 10 second delay
+		quest::signalwith(9057, 1, 10);
+	}
+	#:: Match a signal "2" from /freportw/Pandos_Flintside.pl
+	elsif ($signal == 2) {
+		quest::say("Farewell, then. I will make sure to have them ready for you tomorrow!");
+		#:: Send a signal "2" to West Freeport >> Pandos_Flintside (9057) with a 10 second delay
+		quest::signalwith(9057, 2, 10);
+	}	
+}
+
 sub EVENT_ITEM {
 	#:: Return unused items
 	plugin::returnUnusedItems();
-}
-
-sub EVENT_SIGNAL { #::Receive Signal 1 from Pandos_Flintside of Freportw
-if ($signal == 1) {
-	quest::say("You are in luck! I have a fresh batch that just came out of the oven!");
-	#:: Signal Pandos Flintside of Freportw
-	quest::signalwith(9057, 1, 10);
-	}	
-	elsif ($signal == 2) {
-	quest::say("Farewell, then. I will make sure to have them ready for you tomorrow!");
-	#:: Signal Pandos Flintside of Freportw
-	quest::signalwith(9057, 2, 10);
-	}	
 }
