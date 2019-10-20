@@ -33,15 +33,21 @@ sub EVENT_SAY {
 		quest::say("Oh, please!!  Do not mention that horrid little person!  My stay here has turned into a nightmare because of her.  She gets mail delivered to her room every so often by dark elves, of all things.  I cannot stand the Teir'Dal!  I wonder what is in that mail.  If I just had her room key I could walk right up to the innkeeper and say, 'Mail for room two please.' That is all it would take.  But enough about her.  Let's talk about you buying me some drinks.");
 	}
 	#:: This is apparently an easter egg
-	elsif ($text=~/house of pancakes/i) {
+	elsif ($text=~/^house of pancakes$/i) {
 		quest::say("I can tell. You look like you ATE a house of pancakes.");
 	}
 	#:: This is apparently an easter egg
-	elsif ($text=~/house of style/i) {
+	elsif ($text=~/^house of style$/i) {
 		quest::say("I would of never guessed by the way you look.");
 	}
 	elsif ($text=~/dyllin/i) {
 		quest::say("Dyllin was the name of a Qeynos guard who was sent to pick up the list I was holding for dear, sweet Antonius. He left just yesterday. If you wish to meet up with him, I heard him say he was going to stop at Highpass Hold.");
+	}
+	elsif ($text=~/bayle list/i) {
+		quest::say("Bayle List!! Oh dear!! I would have to be dancing with pink mammoths before I discussed anything to do with Antonius Bayle!!");
+	}
+	elsif ($text=~/pandos/i) {
+		quest::say("Pandos is my body guard. He is alwayss around when I need him.");
 	}
 }
 
