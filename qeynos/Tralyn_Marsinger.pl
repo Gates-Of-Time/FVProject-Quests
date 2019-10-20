@@ -14,7 +14,6 @@ sub EVENT_ITEM {
 		quest::faction(284,10); 	#:: + League of Antonican Bards
 		quest::faction(281,10); 	#:: + Knights of Truth
 		quest::faction(262,10); 	#:: + Guards of Qeynos
-		quest::faction(304,-30); 	#:: - Ring of Scale
 		quest::faction(285,-30); 	#:: - Mayong Mistmoore
 		#:: Give a small amount of xp
 		quest::exp(100);
@@ -32,7 +31,6 @@ sub EVENT_ITEM {
 		quest::faction(284,10); 	#:: + League of Antonican Bards
 		quest::faction(281,10); 	#:: + Knights of Truth
 		quest::faction(262,10); 	#:: + Guards of Qeynos
-		quest::faction(304,-30); 	#:: - Ring of Scale
 		quest::faction(285,-30); 	#:: - Mayong Mistmoore
 		#:: Give a small amount of xp
 		quest::exp(100);
@@ -50,7 +48,6 @@ sub EVENT_ITEM {
 		quest::faction(284,10); 	#:: + League of Antonican Bards
 		quest::faction(281,10); 	#:: + Knights of Truth
 		quest::faction(262,10); 	#:: + Guards of Qeynos
-		quest::faction(304,-30); 	#:: - Ring of Scale
 		quest::faction(285,-30); 	#:: - Mayong Mistmoore
 		#:: Give a small amount of xp
 		quest::exp(100);
@@ -68,7 +65,6 @@ sub EVENT_ITEM {
 		quest::faction(284,10); 	#:: + League of Antonican Bards
 		quest::faction(281,10); 	#:: + Knights of Truth
 		quest::faction(262,10); 	#:: + Guards of Qeynos
-		quest::faction(304,-30); 	#:: - Ring of Scale
 		quest::faction(285,-30); 	#:: - Mayong Mistmoore
 		#:: Give a small amount of xp
 		quest::exp(100);
