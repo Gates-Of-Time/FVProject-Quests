@@ -6,6 +6,19 @@ sub EVENT_SPAWN {
 	$ItemCount = 0;
 }
 
+sub EVENT_AGGRO {
+	quest::say("Prepare to meet your maker!!");
+}
+
+sub EVENT_WAYPOINT_ARRIVE {
+	#:: When NPC arrives at waypoint 12
+	if ($wp == 12) {
+		quest::say("I will be back soon, Pandos.  Please keep an eye on my room for me.");
+		#:: Send a signal "3" to West Freeport >> Pandos_Flintside (9057) after 3 seconds
+		quest::signalwith(9057,3,3000);
+	}
+}
+
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Hello. It is always good to meet someone new. I am Lady Shae of the House of Dumas. And what [" . quest::saylink("house") . "] are you from?");
@@ -134,11 +147,6 @@ sub EVENT_ITEM {
 	plugin::returnUnusedItems();
 }
 
-sub EVENT_WAYPOINT_ARRIVE {
-	#:: When NPC arrives at waypoint 12
-	if ($wp == 12) {
-		quest::say("I will be back soon, Pandos.  Please keep an eye on my room for me.");
-		#:: Send a signal "3" to West Freeport >> Pandos_Flintside (9057) after 3 seconds
-		quest::signalwith(9057,3,3000);
-	}
+sub EVENT_DEATH_COMPLETE {
+	quest::say("The single death of a member of the Paladins of Tunare shall plague your wretched life.");
 }
