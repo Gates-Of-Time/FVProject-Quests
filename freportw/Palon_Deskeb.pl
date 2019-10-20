@@ -17,7 +17,7 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(13862 => 1 )) {
 		#:: Ding!
 		quest::ding();
-		#:: Give a small amount of xp
+		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
 	#:: Return unused items
