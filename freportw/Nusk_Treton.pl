@@ -5,82 +5,69 @@ sub EVENT_SAY {
 	elsif($text=~/arcane scientist/i) {
 		#:: Match if faction with Arcane Scientists is better than Indifferent
 		if ($faction < 5) {
-		quest::say("Grand!! I remember my younger days within this great academy. I have spent many years of research here in Freeport. I compiled a [" . quest::saylink("locked journal") . "] of my research. Alas, I am still awaiting its return.");
+			quest::say("Grand!! I remember my younger days within this great academy. I have spent many years of research here in Freeport. I compiled a [" . quest::saylink("locked journal") . "] of my research. Alas, I am still awaiting its return.");
 		}
-			else {
-			#:: Match if faction with Arcane Scientists is Indifferent
-			if ($faction < 5) {
+		#:: Match if faction with Arcane Scientists is Indifferent
+		elsif ($faction == 5) {
 			quest::say("The word of mouth in the Academy of Arcane Science is that you are no foe, but you have yet to prove your worth to us.  Perform a tasks for the great Tara Neklene.");
-			}
-			else {	
-			#:: Match if faction with Arcane Scientists worse than Indifferent
-			if ($faction > 5) {
+		}
+		#:: Match if faction with Arcane Scientists worse than Indifferent
+		else {
 			quest::say("You had best leave my sight.  I am a faithful member of the Academy of Arcane Science and you are no ally of ours.");
-			}
-			}
 		}
 	}
 	elsif($text=~/locked journal/i) {
 		#:: Match if faction with Arcane Scientists is better than Indifferent
 		if ($faction < 5) {
-		quest::say("I lent it to an old colleague of mine in Ak'Anon. He was to send it back aboard a private vessel. One Lenka Stoutheart was to return it to me. It has already been one month and counting. I wish there was a young wizard who could [" . quest::saylink("seek out Lenka") . "].");
+			quest::say("I lent it to an old colleague of mine in Ak'Anon. He was to send it back aboard a private vessel. One Lenka Stoutheart was to return it to me. It has already been one month and counting. I wish there was a young wizard who could [" . quest::saylink("seek out Lenka") . "].");
 		}
-			else {
-			#:: Match if faction with Arcane Scientists is Indifferent
-			if ($faction < 5) {
+		#:: Match if faction with Arcane Scientists is Indifferent
+		elsif ($faction == 5) {
 			quest::say("The word of mouth in the Academy of Arcane Science is that you are no foe, but you have yet to prove your worth to us.  Perform a tasks for the great Tara Neklene.");
-			}
-			else {
-			#:: Match if faction with Arcane Scientists worse than Indifferent
-			if ($faction > 5) {
+		}
+		#:: Match if faction with Arcane Scientists worse than Indifferent
+		else {
 			quest::say("You had best leave my sight.  I am a faithful member of the Academy of Arcane Science and you are no ally of ours.");
-			}
-			}
 		}
 	}
-	elsif($text=~/seek out Lenka/i) {
+	elsif($text=~/seek out lenka/i) {
 		#:: Match if faction with Arcane Scientists is better than Indifferent
 		if ($faction < 5) {
-		quest::say("What luck!! I would be most appreciative if you could find Lenka Stoutheart in Freeport and inquire where the journal strongbox might be. I do so look forward to its return.");
+			quest::say("What luck!! I would be most appreciative if you could find Lenka Stoutheart in Freeport and inquire where the journal strongbox might be. I do so look forward to its return.");
 		}
-			else {
-			#:: Match if faction with Arcane Scientists is Indifferent
-			if ($faction < 5) {
+		#:: Match if faction with Arcane Scientists is Indifferent
+		elsif ($faction == 5) {
 			quest::say("The word of mouth in the Academy of Arcane Science is that you are no foe, but you have yet to prove your worth to us.  Perform a tasks for the great Tara Neklene.");
-			}
-			else {
-			#:: Match if faction with Arcane Scientists worse than Indifferent
-			if ($faction > 5) {
+		}
+		#:: Match if faction with Arcane Scientists worse than Indifferent
+		else {
 			quest::say("You had best leave my sight.  I am a faithful member of the Academy of Arcane Science and you are no ally of ours.");
-			}
-			}
 		}
 	}
+}
 
 
 sub EVENT_ITEM {
-	#:: Turn in for 13860 - A Strongbox
-	if (plugin::takeItems(13860 => 1 )) {
+	#:: Match a 13860 - A Strongbox
+	if (plugin::takeItems(13860 => 1)) {
 		#:: Match if faction with Arcane Scientists is better than Indifferent	
 		if ($faction < 5) {
 			quest::say("Grand and fantastic!! You have made my day complete. Here is what little I can offer. Most of my money goes into my research. Thank you.");
 			#:: Ding!
 			quest::ding();
-			#:: Give a small amount of xp
-			quest::exp(150);
 			#:: Set faction
-			quest::faction(220,3);	 	#:: + Arcane Scientists
-			quest::faction(281,1); 		#:: + Knights of Truth
-			quest::faction(296,-5); 	#:: - Opal Darkbriar
-			quest::faction(330,-5); 	#:: - The Freeport Militia
-			#:: Create a hash for storing cash - 10 to 2000cp
-			my %cash = plugin::RandomCash(10,2000);
-				#:: Grant a random cash reward
-				quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+			quest::faction(220, 3);	 		#:: + Arcane Scientists
+			quest::faction(281, 1); 		#:: + Knights of Truth
+			quest::faction(296, -5); 		#:: - Opal Darkbriar
+			quest::faction(330, -5); 		#:: - The Freeport Militia
+			#:: Grant a small amount of experience
+			quest::exp(150);
+			#:: Create a hash for storing cash - 120 to 200cp
+			my %cash = plugin::RandomCash(120,200);
+			#:: Grant a random cash reward
+			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		}
 	}
-}
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
-}	
