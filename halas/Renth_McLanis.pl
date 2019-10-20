@@ -56,7 +56,7 @@ sub EVENT_SAY {
 			quest::say("Run while ye still can!! The Wolves o' the North will not tolerate yer presence!");
 		}
 	}
-	elsif ($text=~/Langseax/i) {
+	elsif ($text=~/langseax/i) {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
 			quest::say("The Langseax was crafted to be wielded by a warrior only.  Tis a one-handed slashing weapon with great balance to assist the warrior who masters it.");
@@ -77,23 +77,24 @@ sub EVENT_ITEM {
 			quest::summonitem::ChooseRandom(17001, 17002, 17003, 17004, 17009);
 			#:: Ding!
 			quest::ding();
+			#:: Set Factions
+			quest::faction(320, 20);		#:: + Wolves of the North 
+			quest::faction(328, 5);			#:: - Merchants of Halas 
+			quest::faction(327, 4);			#:: + Shamen of Justice
+			quest::faction(311, 1);			#:: - Steel Warriors
 			#:: Grant a moderate amount of experience
 			quest::exp(2000);
 			#:: Create a hash for storing cash - 500 to 900 cp
 			my %cash = plugin::RandomCash(500,900);
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-			#:: Set Factions
-			quest::faction(320, 20);		#:: + Wolves of the North 
-			quest::faction(328, 5);	#:: - Merchants of Halas 
-			quest::faction(327, 4);	#:: + Shamen of Justice
-			quest::faction(311, 1);	#:: - Steel Warriors
 		}
 		else {
 			quest::say("Run while ye still can!! The Wolves o' the North will not tolerate yer presence!");
 			#:: Return a 13246 - Box of Remains
 			quest::summonitem(13246);
 		}
+	}
 	#:: Match a 12227 - Barbarian head Identifies as Basil's Head
 	if (plugin::takeItems(12227 => 1)) {
 		#:: Match if faction is Indifferent or better
@@ -103,17 +104,17 @@ sub EVENT_ITEM {
 			quest::summonitem::ChooseRandom(5367, 5368);
 			#:: Ding!
 			quest::ding();
+			#:: Set Factions
+			quest::faction(320, 10); 		#:: + Wolves of the North 
+			quest::faction(328, 2);			#:: - Merchants of Halas 
+			quest::faction(327, 2);			#:: + Shamen of Justice
+			quest::faction(311, 1);			#:: - Steel Warriors
 			#:: Grant a moderate amount of experience
 			quest::exp(2000);
 			#:: Create a hash for storing cash - 500 to 900 cp
 			my %cash = plugin::RandomCash(500,900);
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-			#:: Set Factions
-			quest::faction(320, 10); #:: + Wolves of the North 
-			quest::faction(328, 2);	#:: - Merchants of Halas 
-			quest::faction(327, 2);	#:: + Shamen of Justice
-			quest::faction(311, 1);	#:: - Steel Warriors
 		}
 		else {
 			quest::say("Run while ye still can!! The Wolves o' the North will not tolerate yer presence!");
@@ -123,6 +124,5 @@ sub EVENT_ITEM {
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
-}
 }
 #:: Converted to Perl by SS
