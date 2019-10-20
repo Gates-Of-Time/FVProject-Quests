@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hello, me friend! I'm the resident healer o' Halas. Please inform me when ye've a need fer me talents to [" . quest::saylink("bind wounds") . "], [" . quest::saylink("cure disease") . "] or [" . quest::saylink("cure poison") . "]. Might I add, if ye're a young shaman o' Halas, ye can also [" . quest::saylink("assist in gathering fungus") . "]?");
+		quest::say("Hello, me friend! I'm the resident healer o' Halas. Please inform me when ye've a need fer me talents to [" . quest::saylink("bind wounds") . "], [" . quest::saylink("cure disease") . "] or [" . quest::saylink("cure poison") . "]. Might I add, if ye're a young shaman o' Halas, ye can also [" . quest::saylink("assist in gatherin' fungus") . "]?");
 	}
 	if ($text=~/bind wounds/i) {
 		#:: Match if faction is Indifferent or better
@@ -29,7 +29,7 @@ sub EVENT_SAY {
 			quest::say("The scales o' the Shamans o' Justice dinnae tip in yer favor. Ye'd best flee ye still have the chance.");
 		}
 	}
-	elsif ($text=~/assist in gathering fungus/i) {
+	elsif ($text=~/assist in gatherin' fungus/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
 			quest::say("As the wooly spiderlings get ready to molt, they'll carry wooly fungus. Oftentimes, one can find wooly fungus growing on their bellies. I use this in me healing practices. I'll reward ye if ye can fill this jar full o' the valuable fungus. Don't forget to combine them before ye return it to me. And have yerself some rations handy, or ye may find yerself snacking on this tasteless food source.");
@@ -63,7 +63,7 @@ sub EVENT_ITEM {
 	elsif (plugin::takeItems(13967 => 2) {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
-			quest::Say("Ah! Now I can cure yer malady.");
+			quest::Say("The scales have been balanced and the Tribunal has spoken. Yer body shall be saved.");
 			#:: Ding!
 			quest::ding();
 			#:: Cast 213 - Cure Disease
@@ -80,7 +80,7 @@ sub EVENT_ITEM {
 	elsif (plugin::takeItems(13445 => 1) {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
-			quest::Say("Aye! I will draw the poison from your veins!");
+			quest::Say("The scales have been balanced and the Tribunal has spoken. Yer body shall be saved.");
 			#:: Ding!
 			quest::ding();
 			#:: Cast 203 - Cure Poison
