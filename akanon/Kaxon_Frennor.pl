@@ -1,8 +1,6 @@
 sub EVENT_SPAWN {
-	#:: Set up a 50 unit distance
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Create a proximity, 100 units across, 100 units tall, without proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 0);
 }
 
 sub EVENT_ENTER {
@@ -18,7 +16,7 @@ sub EVENT_SAY {
 		#:: Give a 51121 - Tradeskill Basics : Volume I
 		quest::summonitem(51121);
 	}
-	if ($text=~/second book/i) { 
+	elsif ($text=~/second book/i) { 
 		quest::say("Here is the second volume of the book you requested, may it serve you well!");
 		#:: Give a 51122 - Tradeskill Basics : Volume II
 		quest::summonitem(51122);
@@ -27,20 +25,20 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Check for 18705 - Old Folded Letter
-	if (plugin::check_handin(\%itemcount, 18705 => 1)) {
+	if (plugin::takeItems(18705 => 1)) {
 		quest::say("A new rogue eh? Well put this tunic on and get to it! Once you are ready to begin your training please make sure that you see Morlan. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
-		#:: Reward item 13518 - Tin Patched Tunic
+		#:: Give a 13518 - Tin Patched Tunic*
 		quest::summonitem(13518);
-		#:: Set factions
-		quest::faction(240,-10); 	# Deep Muses
-		quest::faction(245,-10); 	# Eldrich Collective
-		quest::faction(238,100); 	# Dark Reflection
-		quest::faction(255,-10); 	# Gem Choppers
+		#:: Ding!
 		quest::ding();
+		#:: Set factions
+		quest::faction(240, -10); 	# Deep Muses
+		quest::faction(245, -10); 	# Eldrich Collective
+		quest::faction(238, 100); 	# Dark Reflection
+		quest::faction(255, -10); 	# Gem Choppers
+		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
-
-# converted to Perl by SS
