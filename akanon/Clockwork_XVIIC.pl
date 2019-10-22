@@ -1,5 +1,5 @@
 sub EVENT_ITEM {
-	#:: Turn in for 13844 - Shiny Card (for Series C Black Boxes Quest)
+	#:: Match a 13844 - Shiny Card (for Series C Black Boxes Quest)
 	if (plugin::takeItems(13844 => 1)) {
 		quest::say("Tick.. Pop.. Access granted.");
 		#:: Give item 13212 - Blackbox XVIIC
