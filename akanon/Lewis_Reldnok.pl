@@ -36,6 +36,7 @@ sub EVENT_ITEM {
 		quest::faction(288, 15); 		#:: + Merchants of Ak'Anon
 		quest::faction(238, -15); 		#:: - Dark Reflection
 		quest::faction(255, 15); 		#:: + Gem Choppers
+		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
 	#:: Return unused items
