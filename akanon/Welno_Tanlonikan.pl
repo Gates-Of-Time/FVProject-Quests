@@ -1,11 +1,6 @@
-# Ak'Anon (akanon) >> Welno_Tanlonikan (55128)
-# Newbie Recruitment Summons
-
 sub EVENT_SPAWN {
-	#:: Set up a 50 unit distance
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Create a proximity, 100 units across, 100 units tall, without proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 0);
 }
 
 sub EVENT_ENTER {
@@ -21,7 +16,7 @@ sub EVENT_SAY {
 		#:: GIve a 51121 - Tradeskill Basics : Volume I
 		quest::summonitem(51121);
 	}
-	if($text=~/second book/i){ 
+	elsif ($text=~/second book/i){ 
 		quest::say("Here is the second volume of the book you requested, may it serve you well!");
 		#:: GIve a 51122 - Tradeskill Basics : Volume I
 		quest::summonitem(51122);
@@ -29,19 +24,21 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: match for a 18776 - Recruitment Summons
-	if (plugin::check_handin(\%itemcount, 18776 => 1)) {
+	#:: Match a 18776 - Recruitment Summons
+	if (plugin::takeItems(18776 => 1)) {
 		quest::say("Yes, I just knew you'd see it my way, $name. Anyway, welcome to our little part of Ak'Anon's underworld. We have to pay a high price to keep our small orgainzation hidden, which keeps us all busy around here. Now throw this on, and let's put you to work. Once you are ready to begin your training please make sure that you come back to see me after collecting your initial supplies! I have many things to teach you that you would benefit from, from furthering your knowledge of our arts, to the various [" . quest::saylink("trades") . "] you will have available to you.");
 		#:: Give a 13519 - Scuffed Tunic*
 		quest::summonitem(13519); 
-		#:: Set faction
-		quest::faction(240,100); 	# Deep Muses
-		quest::faction(288,15); 	# Merchants of Ak'Anon
-		quest::faction(238,-15); 	# Dark Reflection
-		quest::faction(255,15); 	# Gem Choppers
+		#:: Ding!
 		quest::ding();
+		#:: Set factions
+		quest::faction(240, 100); 		#:: + Deep Muses
+		quest::faction(288, 15); 		#:: + Merchants of Ak'Anon
+		quest::faction(238, -15); 		#:: - Dark Reflection
+		quest::faction(255, 15); 		#:: + Gem Choppers
+		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
