@@ -15,7 +15,13 @@ sub EVENT_SAY {
 		quest::emote("Hail, $name. I invite you to serve the mighty state of Ak'Anon by becoming a Gemchopper. We gnomes are not known for our warrior skills, but those few who endure and survive to become elite amongst our warriors soon find that the technology of the gnomes has found its way into our halls. You must be a [" . quest::saylink("new recruit") . "] or [" . quest::saylink("an outsider") . "], perhaps?");
 	}
 	elsif ($text=~/new recruit/i) {
-		quest::say("Well, good to make your acquaintance, $name. Maybe someday you shall be a great Watchman. Until then, I have a task for you. Will you [" . quest::saylink("serve the Crown") . "] or has a yellow streak appeared upon your back?");
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
+			quest::say("Well, good to make your acquaintance, $name. Maybe someday you shall be a great Watchman. Until then, I have a task for you. Will you [" . quest::saylink("serve the Crown") . "] or has a yellow streak fallen upon your back?");
+		}
+		else {
+			quest::say("You must show a greater allegiance to the Gemchoppers before we can speak with you. Search the hills for Rogue Clockworks. Captain Compolten shall accept Two of their blackboxes and you shall prove your loyalty to our hall.");
+		}
 	}
 	elsif ($text=~/an outsider/i) {
 		quest::say("I should have guessed as much. You look the part.");
@@ -27,7 +33,7 @@ sub EVENT_SAY {
 		}
 		#:: Match over level five
 		else {
-			quest::say("Go quickly then $name, hunt down a stolen clockwork named Gearheart who has been taken by the Faeries in Lesser Faydark and return to me his blackbox.");
+			quest::say("Go to the Lesser Faydarks. There you will seek out a Fairy city. It seems as though the little pests have stolen one of our fabulous Clockworks. Destroy the Clockwork and bring me proof. Be very careful. The Fairy folk may be small, but they pack a punch.");
 		}	
 	}
 	elsif ($text=~/trades/i) {
