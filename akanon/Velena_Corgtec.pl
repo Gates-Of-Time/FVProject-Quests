@@ -1,12 +1,10 @@
 sub EVENT_SPAWN {
-	#:: Set up a 50 unit distance
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Create a proximity, 100 units across, 100 units tall, without proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 0);
 }
 
 sub EVENT_ENTER {
-	#:: Check for 18704 - Old Folded Letter
+	#:: Match a 18704 - Old Folded Letter
 	if (plugin::check_hasitem($client, 18704)) { 
 		$client->Message(15,"A diminutive, but powerful looking gnome stands before you. 'I am Velena Corgtec. The Dark Reflection has called you. Read the note in your inventory and hand it to me when you wish to begin your training. Your destiny awaits!'");
 	}
@@ -18,7 +16,7 @@ sub EVENT_SAY {
 		#:: Give a 51121 - Tradeskill Basics : Volume I
 		quest::summonitem(51121);
 	}
-	if ($text=~/second book/i) {
+	elsif ($text=~/second book/i) {
 		quest::say("Here is the second volume of the book you requested, may it serve you well!");
 		#:: Give a 51122 - Tradeskill Basics : Volume II
 		quest::summonitem(51122);
@@ -26,21 +24,21 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Match 18704 - Old Folded Letter
-	if (plugin::check_handin(\%itemcount, 18704 => 1)) {
+	#:: Match a 18704 - Old Folded Letter
+	if (plugin::takeItems(18704 => 1)) {
 		quest::say("A new wizard pledging to our cause is always welcome. Take this robe and see Tilkzog Mournumder when you are ready to begin your training. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
 		#:: Give a 13524 - Dark Gold Felt Robe*
 		quest::summonitem(13524);
-		#:: Set faction
-		quest::faction(240,-10); 	# Deep Muses
-		quest::faction(245,-10); 	# Eldritch Collective
-		quest::faction(238,100); 	# Dark Reflection
-		quest::faction(255,-10); 	# Gem Choppers
+		#:: Ding!
 		quest::ding();
+		#:: Set factions
+		quest::faction(240, -10); 		#:: - Deep Muses
+		quest::faction(245, -10); 		#:: - Eldritch Collective
+		quest::faction(238, 100); 		#:: + Dark Reflection
+		quest::faction(255, -10); 		#:: - Gem Choppers
+		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
-
-# converted to Perl by SS
