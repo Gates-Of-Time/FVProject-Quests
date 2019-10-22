@@ -1,8 +1,6 @@
 sub EVENT_SPAWN {
-	#:: Set up a 50 unit distance
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Create a proximity, 100 units across, 100 units tall, without proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 0);
 }
 
 sub EVENT_ENTER {
@@ -18,7 +16,7 @@ sub EVENT_SAY {
 		#:: Give them 51121 - Tradeskill Basics : Volume I
 		quest::summonitem(51121);
 	}
-	if ($text=~/second book/i) { 
+	elsif ($text=~/second book/i) { 
 		quest::say("Here is the second volume of the book you requested, may it serve you well!");
 		#:: Give them 51122 - Tradeskill Basics : Volume II
 		quest::summonitem(51122);
@@ -26,21 +24,21 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Match item 18703 - Old Folded Letter
-	if (plugin::check_handin(\%itemcount, 18703 => 1)) {
+	#:: Match a 18703 - Old Folded Letter
+	if (plugin::takeItems(18703 => 1)) {
 		quest::say("Ah.. Welcome, friend! I am Tobon Starpyre, Master Wizard of Library Mechanimagica. This is our tunic - wear it with pride. Study hard, master your skills, and make us proud. Once you are ready to begin your training please make sure that you see Xalirilan, he can assist you in developing your hunting and gathering skills. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
 		#:: Give item 13524 - Dark Gold Felt Robe*
 		quest::summonitem(13524);
-		#:: Set faction
-		quest::faction(240,-10); 	# Deep Muses
-		quest::faction(245,-10); 	# Eldritch Collective
-		quest::faction(238,100); 	# Dark Reflection
-		quest::faction(255,-10); 	# Gem Choppers
+		#:: Ding!
 		quest::ding();
+		#:: Set faction
+		quest::faction(240, -10); 		#:: - Deep Muses
+		quest::faction(245, -10); 		#:: - Eldritch Collective
+		quest::faction(238, 100); 		#:: + Dark Reflection
+		quest::faction(255, -10); 		#:: - Gem Choppers
+		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
-
-# converted to Perl by SS
