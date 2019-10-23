@@ -20,8 +20,8 @@ sub EVENT_ENTERZONE {
 		$PetID->Kill();
 	}
 	if ($name eq "TurmoilToad") {
-		quest::playerfeature("race", 27);
-		quest::playerfeature("size", 7);
+		quest::playerrace(27);
+		quest::playersize(7);
 	}
 }
 
