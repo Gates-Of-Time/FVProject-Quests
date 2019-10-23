@@ -6,3 +6,11 @@ sub EVENT_SAY {
 		quest::say("That is but a child's fairy tale.")
 	}
 }
+
+sub EVENT_SPAWN {
+	quest::settimer("race",5);
+}
+
+sub EVENT_TIMER {
+	quest::say("My race is $race")
+}
