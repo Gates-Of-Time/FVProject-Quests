@@ -12,6 +12,6 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_TIMER {
-	my $Race = $mob->GetBaseRace();
+	$Race = $mob->GetBaseRace();
 	quest::say("My race is $Race.");
 }
