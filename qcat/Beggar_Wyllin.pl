@@ -7,14 +7,7 @@ sub EVENT_SAY {
 	}
 }
 
-sub EVENT_SPAWN {
-	quest::settimer("race",5);
-}
-
-sub EVENT_TIMER {
-	if ($timer eq "race") {
-		quest::say("Timer Triggered.");
-		my $CurRace = $mob->GetRace();
-		quest::say("My race is $CurRace.");
-	}
+sub EVENT_ITEM {
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
