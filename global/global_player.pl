@@ -19,6 +19,9 @@ sub EVENT_ENTERZONE {
 		$PetID = $entity_list->GetMobByID($client->GetPetID());
 		$PetID->Kill();
 	}
+	if ($name eq "TurmoilToad") {
+		quest::playerrace(27);
+	}
 }
 
 sub EVENT_CONNECT {
