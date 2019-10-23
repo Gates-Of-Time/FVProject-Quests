@@ -12,5 +12,5 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_TIMER {
-	quest::say("My race is $race")
+	quest::say("My race is $race.");
 }
