@@ -12,6 +12,9 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_TIMER {
-	$Race = $mob->GetBaseRace();
-	quest::say("My race is $Race.");
+	if ($timer eq "race") {
+		quest::say("Timer Triggered.");
+		my $CurRace = $mob->GetRace();
+		quest::say("My race is $CurRace.");
+	}
 }
