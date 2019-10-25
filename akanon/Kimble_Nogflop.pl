@@ -10,7 +10,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Turn in check for 13945 - Flask of Nitrates
 	if (plugin::takeItems(13945 => 1)) {
-		quest::say("The flask of nitrates I sent for!! As was the deal, here is my [" . quest::saylink("Regurgitonic") . "]. Give it to whoever may need it and they will surely cough up whatever may be inside them with no harm to them whatsoever.");
+		quest::say("The flask of nitrates I sent for!! As was the deal, here is my [Regurgitonic]. Give it to whoever may need it and they will surely cough up whatever may be inside them with no harm to them whatsoever.");
 		#:: Give a 12140 - The Regurgitonic
 		quest::summonitem(12140);
 		#:: Ding!

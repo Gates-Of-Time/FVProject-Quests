@@ -10,7 +10,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 18837 - Daily Log
 	if (plugin::takeItems(18837 => 1)) {
-		quest::say("Why, thank you. Hey!! This log indicates some messy business is going on at the scrapyard. Something happened to a group of gnomes. They never came out!! Go check out the scrapyard! I believe the rumors of [" . quest::saylink("Red 5") . "] are true.");
+		quest::say("Why, thank you. Hey!! This log indicates some messy business is going on at the scrapyard. Something happened to a group of gnomes. They never came out!! Go check out the scrapyard! I believe the rumors of [Red 5] are true.");
 		#:: Ding!
 		quest::ding();
 		#:: Set factions

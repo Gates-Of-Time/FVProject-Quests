@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings! Welcome to the Library of Mechanimagica. You must be a [" . quest::saylink("current member of the Library") . "] or has my [" . quest::saylink("mind begun to slip") . "]?");
+		quest::say("Greetings! Welcome to the Library of Mechanimagica. You must be a [current member of the Library] or has my [mind begun to slip]?");
 	}
 	elsif ($text=~/mind begun to slip/i) {
-		quest::say("What!!? That was but a joke. I try to make you feel comfortable with a little levity and you proclaim my mind has gone the way of Meldrath's. Well.. enough frivolity. You will do your part to help in the menial tasks of the Collective. Do you want the [" . quest::saylink("clean tasks") . "] or the [" . quest::saylink("dirty tasks") . "]?");
+		quest::say("What!!? That was but a joke. I try to make you feel comfortable with a little levity and you proclaim my mind has gone the way of Meldrath's. Well.. enough frivolity. You will do your part to help in the menial tasks of the Collective. Do you want the [clean tasks] or the [dirty tasks]?");
 	}
 	elsif ($text=~/clean tasks/i) {
 		quest::say("Clean.. Dirty.. It matters not. You have upset me with your rude remarks. You will go to the Steamfont Mountains. There you will find Fodin and tell him I have sent you. He will have a nice tidy task for you. A bath!! Be on your way!?");
@@ -14,7 +14,7 @@ sub EVENT_SAY {
 	elsif ($text=~/current member of the Library/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
-			quest::say("Good. The last thing a member of the Eldritch Collective needs is to lose his mind. Look what happened to Meldrath. Enough chitchat. I am Larkon and it is not my job to teach you. It is my job to direct you to service. We require items and such to complete our studies. We need someone of moderate skill to [" . quest::saylink("gather minotaur horns") . "] and [" . quest::saylink("collect basilisk tongues") . "]?");
+			quest::say("Good. The last thing a member of the Eldritch Collective needs is to lose his mind. Look what happened to Meldrath. Enough chitchat. I am Larkon and it is not my job to teach you. It is my job to direct you to service. We require items and such to complete our studies. We need someone of moderate skill to [gather minotaur horns] and [collect basilisk tongues]?");
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction == 5) {
@@ -60,7 +60,7 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(13077 => 2)) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
-			quest::say("Fine work. You have earned the respect of the Library. Here is a small token of our appreciation. We shall have this ground down as soon as we find someone to go to [" . quest::saylink("Kaladim") . "].");
+			quest::say("Fine work. You have earned the respect of the Library. Here is a small token of our appreciation. We shall have this ground down as soon as we find someone to go to [Kaladim].");
 			#:: Ding!
 			quest::ding();
 			#:: Set factions

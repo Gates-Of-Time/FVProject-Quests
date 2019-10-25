@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/Hail/i) {
-		quest::say("Greetings, young one. I am Manik Compolten, High Watchman. Are you a [" . quest::saylink("new warrior") . "] or an [" . quest::saylink("experienced fighter") . "]?");
+		quest::say("Greetings, young one. I am Manik Compolten, High Watchman. Are you a [new warrior] or an [experienced fighter]?");
 	}
 	elsif ($text=~/new warrior/i) {
 		quest::say("It is always good to see new blood amongst the Gemchoppers. I have a small task for you. Take this keycard. I will give you only one at a time. Use each to obtain blackboxes for the C series clockworks. I am sure you are familiar with the clockworks. When you are done, bring them all to me. Let me know if you need another keycard.");
@@ -19,7 +19,7 @@ sub EVENT_SAY {
 		quest::say("They are the madmen of Meldrath. While he built the Titan they kept the Watchmen busy with frequent murders and senseless destruction. The Watchmen finally directed the Clockworks to destroy this band of madmen. Some may still be found praising the name of Meldrath as their dagger slices through innocent flesh.");
 	}
 	elsif ($text=~/meldrath/i) {
-		quest::say("Meldrath was once the leader of the Wizards of this guild. He was absorbed by his work on [" . quest::saylink("other worlds") . "]. It is said that he found something in the sky. Whatever he saw caused a madness, he soon took flight and formed the [" . quest::saylink("Asylum of the Mad") . "]. Most believe he is deceased, we know better. Tobon is intent on finding him.");
+		quest::say("Meldrath was once the leader of the Wizards of this guild. He was absorbed by his work on [other worlds]. It is said that he found something in the sky. Whatever he saw caused a madness, he soon took flight and formed the [Asylum of the Mad]. Most believe he is deceased, we know better. Tobon is intent on finding him.");
 	}
 	elsif ($text=~/other worlds/i) {
 		quest::say("We of the Eldritch Collective have been studying the skies for some time. Our Observers can be found scattered among the landscape. We believe there may be other worlds of great technology, but to reach there will require great technology.");

@@ -18,10 +18,10 @@ sub EVENT_SAY {
 		quest::say("Every clockwork carries a blackbox within it shell. These containers are used to store information. How this is done is no doubt a secret of the Eldritch Collective. I hear they pay for any blackbox which is found intact.");
 	}
 	elsif ($text=~/princess joleena/i) {
-		quest::say("No!! You cannot have my magic Fairie Wing!! I need it. I read somewhere within the great library that the magic wing from a fairie princess will restore my full head of hair. Look at me!! I am bald!! I have no [" . quest::saylink("friends") . "] at all.");
+		quest::say("No!! You cannot have my magic Fairie Wing!! I need it. I read somewhere within the great library that the magic wing from a fairie princess will restore my full head of hair. Look at me!! I am bald!! I have no [friends] at all.");
 	}
 	elsif ($text=~/friends/i) {
-		quest::say("Oh. You are just saying that so you can get my fairie wing. I will make you a deal. I cannot rely on this wing forever. I will trade it with you if you could get me a case of hair tonic. If you are a true friend you [" . quest::saylink("will fetch the hair tonic") . "] for me.");
+		quest::say("Oh. You are just saying that so you can get my fairie wing. I will make you a deal. I cannot rely on this wing forever. I will trade it with you if you could get me a case of hair tonic. If you are a true friend you [will fetch the hair tonic] for me.");
 	}
 	elsif ($text=~/will fetch the hair tonic/i) {
 		quest::say("Great!! Here you go, my friend. Take this crate and within you shall fill each slot with hair tonic. When all are combined within the crate, return it to me for your wing. I am not sure what the tonic was or where I got it. There is some writing on the crate, but I could not identify it.");

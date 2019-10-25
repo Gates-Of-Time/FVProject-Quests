@@ -1,12 +1,12 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings, child. Welcome to Gemchopper Hall. I trust that you are a [" . quest::saylink("warrior") . "], or perhaps you are [" . quest::saylink("lost") . "]..?");
+		quest::say("Greetings, child. Welcome to Gemchopper Hall. I trust that you are a [warrior], or perhaps you are [lost]..?");
 	}
 	elsif ($text=~/lost/i) {
 		quest::say("One can easily get lost in Ak'Anon. You must get your vision checked. If you are truly lost, I would advise speaking with a mechanical guide. There should be one close by on the main walkway.");
 	}
 	elsif ($text=~/warrior/i) {
-		quest::say("That is good news! We gnomes are not known for our love of battle so it is always good to bring new blood into our ranks. We shall prove our worth as warriors to all other races. For now. there is much to do in Ak'Anon. There are [" . quest::saylink("rogue clockworks") . "] and the [" . quest::saylink("cargo clockwork") . "].");
+		quest::say("That is good news! We gnomes are not known for our love of battle so it is always good to bring new blood into our ranks. We shall prove our worth as warriors to all other races. For now. there is much to do in Ak'Anon. There are [rogue clockworks] and the [cargo clockwork].");
 	}
 	elsif ($text=~/rogue clockworks/i) {
 		quest::say("The clockworks are the responsibility of Manik Compolten. Speak with him - I am sure he is here somewhere.");
