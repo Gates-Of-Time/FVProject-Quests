@@ -1,5 +1,3 @@
-#:: Not a Quest NPC - Just a Butcherblock resident
-
 sub EVENT_WAYPOINT_ARRIVE {
 	#::: When NPC arrives at waypoint 1 or 7
 	if ($wp == 55 || $wp == 117) {
