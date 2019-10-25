@@ -1,26 +1,31 @@
 sub EVENT_SAY {
-	#:: If faction is indifferent or better
-	if ($faction < 4) {
+	#:: Match if faction is Indifferent or better
+	if ($faction <= 5) {
 		if ($text=~/hail/i) {
 			quest::say("Greetings, my friend! You may rest here if you like. There are many dangers in this land. May Tunare watch over you when you depart our camp.");
-			#:: signal 7005 - Elmion Hendrys
-			quest::signal(70005,5);
+			#:: Send a signal "1" to Dagnor's Cauldron >> Elmion_Hendrys (70005) with a five second delay
+			quest::signalwith(70005, 1, 5);
 		}
-		if ($text=~/Healed/i) {
+		elsif ($text=~/healed/i) {
 			quest::say("I see. Then sit and rest a while. I must conserve my strength for our own interests. When you are ready to leave, go and ask Sigan to [escort you to the pass]. There, you can leave this dangerous land.");        
 		}
-		if ($text=~/faldor hendrys/i) {
+		elsif ($text=~/faldor hendrys/i) {
 			quest::say("Ha!! You seek my foul brother, Faldor Hendrys?!! He is my half brother and has left to live with the vile half of his ancestry in Qeynos. No doubt he has decided to lend his talents to the local thieves' guild. Good luck finding him.");
 		}
-	} else {
+	} 
+	else {
 		quest::say("You have some nerve to approach a loyal member of the Paladins of Tunare! Run, while you can!");
 	}
 }
+
 sub EVENT_SIGNAL {
-	#:: Signal sent from Ghilanbiddle_Nylwadil.pl
-	quest::say("Leave our new friend alone, Ghilanbiddle.  He is quite welcome to rest amongst us.");
+	#:: Match a signal "1" from Ghilanbiddle_Nylwadil.pl
+	if ($signal == 1) {
+		quest::say("Leave our new friend alone, Ghilanbiddle.  He is quite welcome to rest amongst us.");
+	}
 }
+
 sub EVENT_ITEM {
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
