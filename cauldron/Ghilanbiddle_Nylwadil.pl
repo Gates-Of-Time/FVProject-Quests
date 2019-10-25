@@ -22,11 +22,17 @@ sub EVENT_SAY {
 }
 
 sub EVENT_SIGNAL {
-	#:: Match a signal "1" from /cauldron/Sigan_Ilbirkun.pl
+	#:: Match a signal "1" from /cauldron/Nyrien_Lyrdarniel.pl
 	if ($signal == 1) {
 		quest::say("Ha!! One like that one stands no chance within this realm. The goblins shall skin him alive!!");
 		#:: Send a signal "1" to Dagnor's Cauldron >> Elmion_Hendrys (70005) with a five second delay
 		quest::signalwith(70005, 1, 5);
+	}
+	#:: Match a signal "2" from /cauldron/Sigan_Ilbirkun.pl
+	elsif ($signal == 2) {
+		quest::say("You're welcome to leave this camp at once!! We are not here to keep you warm and safe from harm!!");
+		#:: Send a signal "1" to Dagnor's Cauldron >> Nyrien_Lyrdarniel (70006) with a five second delay
+		quest::signalwith(70006, 1, 5);
 	}
 }
 
