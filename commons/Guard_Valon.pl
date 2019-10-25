@@ -9,14 +9,14 @@ sub EVENT_SAY {
 		quest::say("Sir Lucan would be proud!! Patrol the Commonlands and watch for any orc pawns. Should you find any orc pawn picks on them, I will pay you for every four you return to me. Be off, then! For the glory of Freeport!!");
 	} 
 	elsif ($text=~/hunt dervish cutthroats/i) {
-		#:: Match if faction is Indifferent or better
-		if ($faction <= 5) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
 			quest::say("You will make a fine reserve!! Take this bag and fill it with Dervish Cutthroat Insignia Rings. When they are combined and returned to me you shall be accepted into the Reserve Freeport Militia!!");
 			#:: Give a 17975 - Bag for Cutthroat Rings
 			quest::summonitem(17975);
 		}
 		else {
-			quest::say("Continue your good work and we may speak of this again.");
+			quest::say("A few less Orc Pawns and perhaps turning in Orc Pawn Picks to me may increase my trust in you.");
 		}
 	}
 }
@@ -39,16 +39,24 @@ sub EVENT_ITEM {
 	}
 	#:: Match a 12272 - Bag of Cutthroat Rings
  	elsif (plugin::takeItems(12272 => 1)) {
-		quest::say("Excellent work, $name!! You are quite formidable. Maybe soon you shall aid in our efforts to rid the Northern part of Freeport of the paladins!! Until then keep up the good work. Take this Armory Token to the Militia Armorer in the Militia House in Freeport to receive your tunic. He may not be there, but I assure you he will show up at some time. On the second floor. Hail Sir Lucan!!");
-		#:: Give a 12273 - Militia Armory Token
-		quest::summonitem(12273);
-		#:: Ding!
-		quest::ding();
-		#:: Set factions
-		quest::faction(330, 3);			#:: + Freeport Militia
-		quest::faction(336, 1);			#:: + Coalition of Tradefolk Underground
-		quest::faction(281, -1);		#:: - Knights of Truth
-		quest::faction(362, -1);		#:: - Priests of Marr
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
+			quest::say("Excellent work, $name!! You are quite formidable. Maybe soon you shall aid in our efforts to rid the Northern part of Freeport of the paladins!! Until then keep up the good work. Take this Armory Token to the Militia Armorer in the Militia House in Freeport to receive your tunic. He may not be there, but I assure you he will show up at some time. On the second floor. Hail Sir Lucan!!");
+			#:: Give a 12273 - Militia Armory Token
+			quest::summonitem(12273);
+			#:: Ding!
+			quest::ding();
+			#:: Set factions
+			quest::faction(330, 3);			#:: + Freeport Militia
+			quest::faction(336, 1);			#:: + Coalition of Tradefolk Underground
+			quest::faction(281, -1);		#:: - Knights of Truth
+			quest::faction(362, -1);		#:: - Priests of Marr
+		}
+		else {
+			quest::say("A few less Orc Pawns and perhaps turning in Orc Pawn Picks to me may increase my trust in you.");
+			#:: Return a 12272 - Bag of Cutthroat Rings
+			quest::summonitem(12272);
+		}
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
