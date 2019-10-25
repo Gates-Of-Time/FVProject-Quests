@@ -4,7 +4,7 @@ sub EVENT_SAY {
 		if ($text=~/hail/i) {
 			quest::say("Hail!! You are welcome to rest here.");
 			#:: Send a signal "1" to Dagnor's Cauldron >> Ghilanbiddle_Nylwadil (70007) with a five second delay
-			quest::signalwith(70007,1,5);
+			quest::signalwith(70007, 1, 5);
 		}
 		#:: Starts the escort player to Valley entrance
 		elsif ($text=~/escort/i) {
