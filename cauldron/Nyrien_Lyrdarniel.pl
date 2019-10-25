@@ -3,8 +3,8 @@ sub EVENT_SAY {
 	if ($faction <= 5) {
 		if ($text=~/hail/i) {
 			quest::say("Greetings, my friend! You may rest here if you like. There are many dangers in this land. May Tunare watch over you when you depart our camp.");
-			#:: Send a signal "1" to Dagnor's Cauldron >> Elmion_Hendrys (70005) with a five second delay
-			quest::signalwith(70005, 1, 5);
+			#:: Send a signal "1" to Dagnor's Cauldron >> Ghilanbiddle_Nylwadil (70007) with a five second delay
+			quest::signalwith(70007, 1, 5);
 		}
 		elsif ($text=~/healed/i) {
 			quest::say("I see. Then sit and rest a while. I must conserve my strength for our own interests. When you are ready to leave, go and ask Sigan to [escort you to the pass]. There, you can leave this dangerous land.");        
