@@ -21,9 +21,10 @@ sub EVENT_ITEM {
 	if ($faction <= 5) {
 		#:: Match 4178 - Crafted Gauntlets
 		if (plugin::takeItems(4178 => 1)) {
+			quest::say("Here is your armor. I hope it fits better now.");
 			#:: Give a 4186 - Small Crafted Gauntlets
 			quest::summonitem(4186);
-			quest::say("Here is your armor. I hope it fits better now.");
+			#:: Set factions
 			quest::faction(229, 10);		#:: + Coalition of Tradefolk
 			quest::faction(281, 10);		#:: + Knights of Truth
 			quest::faction(291, 10);		#:: + Merchants of Qeynos
@@ -31,9 +32,10 @@ sub EVENT_ITEM {
 		}
 		#:: Match a 4176 - Crafted Vambraces
 		elsif (plugin::takeItems(4176 => 1)) {
+			quest::say("Here is your armor. I hope it fits better now.");
 			#:: Give a 4184 - Small Crafted Vambraces
 			quest::summonitem(4184);
-			quest::say("Here is your armor. I hope it fits better now.");
+			#:: Set factions
 			quest::faction(229, 10);		#:: + Coalition of Tradefolk
 			quest::faction(281, 10);		#:: + Knights of Truth
 			quest::faction(291, 10);		#:: + Merchants of Qeynos
@@ -41,9 +43,10 @@ sub EVENT_ITEM {
 		}
 		#:: Match a 4173 - Crafted Helm
 		elsif (plugin::takeItems(4173 => 1)) {
+			quest::say("Here is your armor. I hope it fits better now.");
 			#:: Give a 4181 - Small Crafted Helm
 			quest::summonitem(4181);
-			quest::say("Here is your armor. I hope it fits better now.");
+			#:: Set factions
 			quest::faction(229, 10);		#:: + Coalition of Tradefolk
 			quest::faction(281, 10);		#:: + Knights of Truth
 			quest::faction(291, 10);		#:: + Merchants of Qeynos
@@ -51,9 +54,10 @@ sub EVENT_ITEM {
 		}
 		#:: Match 4180 - Crafted Plate Boots
 		elsif (plugin::takeItems(4180 => 1)) {
+			quest::say("Here is your armor. I hope it fits better now.");
 			#:: Give a 4188 - Small Crafted Plate Boots
 			quest::summonitem(4188);
-			quest::say("Here is your armor. I hope it fits better now.");
+			#:: Set factions
 			quest::faction(229, 10);		#:: + Coalition of Tradefolk
 			quest::faction(281, 10);		#:: + Knights of Truth
 			quest::faction(291, 10);		#:: + Merchants of Qeynos
