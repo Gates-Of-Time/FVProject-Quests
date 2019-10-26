@@ -14,10 +14,10 @@ sub EVENT_ENTER {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Welcome. my child.  I am Leraena Shelyrak. overseer of the Temple of Divine Light. Inside this temple. you may find the path to inner peace.  Introduce yourself to each of the priests and priestesses of the temple as well as the paladins. Together we shall put an end to such disruptive influences as the [" . quest::saylink("kobold shaman") . "].");
+		quest::say("Welcome. my child.  I am Leraena Shelyrak. overseer of the Temple of Divine Light. Inside this temple. you may find the path to inner peace.  Introduce yourself to each of the priests and priestesses of the temple as well as the paladins. Together we shall put an end to such disruptive influences as the [kobold shaman].");
 	}
 	if ($text=~/kobold shaman/i) {
-		quest::say("The primitive kobold race has begun to show signs of healing ability.  No doubt this was granted by some evil deity.  Since they are of little power compared to a much more superior race such as ours. we only require the talents of young priests to [" . quest::saylink("slay") . "] the kobold shaman.");
+		quest::say("The primitive kobold race has begun to show signs of healing ability.  No doubt this was granted by some evil deity.  Since they are of little power compared to a much more superior race such as ours. we only require the talents of young priests to [slay] the kobold shaman.");
 	}
 	if ($text=~/slay/i) {
 		quest::say("You are so young...  Go to Toxxulia and find these kobold shamans.  Cut off their paws and return them to me.  I require three paws as proof of your worth to our temple.");
@@ -72,7 +72,7 @@ sub EVENT_ITEM {
 	#}
 	#:: Turn in for 13883 -  Odd Kobold Paw
 	if (plugin::check_handin(\%itemcount, 13883 => 3)) {
-		quest::say("Fine work. They shall never lay hands upon another kobold again. I mean paws. Here is a small reward for a fine job. Unfortunatly we have recently learned that the shamen in the forest are merely underlings to more [" . quest::saylink("powerful kobold shaman") . "] that reside in the kobold warrens. Continue the work of Quellious.");
+		quest::say("Fine work. They shall never lay hands upon another kobold again. I mean paws. Here is a small reward for a fine job. Unfortunatly we have recently learned that the shamen in the forest are merely underlings to more [powerful kobold shaman] that reside in the kobold warrens. Continue the work of Quellious.");
 		#:: Randomly choose Spell: Cure Disease or Spell: Holy Armor
 		quest::summonitem(quest::ChooseRandom(15011,15213));
 		#:: Ding!
@@ -90,13 +90,13 @@ sub EVENT_ITEM {
 	}
 	#:: Turn in for 14582 -  Embroidered Bag of Bone Necklaces Quellious Disciple Quest - Stonebrunt/Warrens Expansion
 	#if (plugin::check_handin(\%itemcount, 14582 => 1)) {
-		#quest::say("I am unfamiliar with the markings that adorn these necklaces. You have done well thus far in hindering the kobolds worship of their evil deity. I award you the Initiate Symbol of Quellious. Return to me when you feel you are ready to deal with the [" . quest::saylink("greater kobold shaman") . "].");
+		#quest::say("I am unfamiliar with the markings that adorn these necklaces. You have done well thus far in hindering the kobolds worship of their evil deity. I award you the Initiate Symbol of Quellious. Return to me when you feel you are ready to deal with the [greater kobold shaman].");
 		#:: Give item 1564 - Initiate Symbol of Quellious
 		#quest::summonitem(1564);
 	#}
 	#:: Turn in for 1458 -  Embroidered bag of Bronze Symbols and 1564 Initiate Symbol of Quellious - Quellious Initiate Quest - Stonebrunt/Warrens Expansion
 	#if (plugin::check_handin(\%itemcount, 14583 => 1, 1565 =>1)) {
-		#quest::say("Your service to this temple is commendable. I award you the rank of Disciple for your devotions to The Tranquil. When you are [" . quest::saylink("ready to advance") . "] return to me and I will set you upon another task.");
+		#quest::say("Your service to this temple is commendable. I award you the rank of Disciple for your devotions to The Tranquil. When you are [ready to advance] return to me and I will set you upon another task.");
 		#:: Give item 1565 - Disciple Symbol of Quellious
 		#quest::summonitem(1565);
 		#:: Give a small amount of xp

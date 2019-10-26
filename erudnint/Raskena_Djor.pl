@@ -3,7 +3,7 @@ sub EVENT_SAY {
 		quest::say("Greetings. What brings you to Raskena? Did Ghanlin send you?");
 	}
 	if ($text=~/ghanlin/i) {
-		quest::say("Then let us begin your first task. I require some components for an experiment I have been meaning to conduct. If you could [" . quest::saylink("gather") . "] them for me, I will make sure that you are rewarded."); 
+		quest::say("Then let us begin your first task. I require some components for an experiment I have been meaning to conduct. If you could [gather] them for me, I will make sure that you are rewarded."); 
 	}
 	if ($text=~/gather/i) {
 		quest::say("In Toxxulia Forest you should be able to find some fire beetles. I require two fire beetle legs and two fire beetle eyes. Once you have collected them, bring them to me for your reward.");

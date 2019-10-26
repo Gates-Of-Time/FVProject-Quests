@@ -1,10 +1,10 @@
 sub EVENT_SAY {
 	#:: Quest Dialog for Slave Keys, Taskmaster Earring, and Clue to Screaming Mace quest initiation.
 	if ($text=~/hail/i) {
-		quest::say("Slavedrivers are just lackeys for the [" . quest::saylink("taskmaster") . "]. He is the real orc in charge.");
+		quest::say("Slavedrivers are just lackeys for the [taskmaster]. He is the real orc in charge.");
 	}
 	if ($text=~/taskmaster/i) {
-		quest::say("The taskmaster?? He is that large orc who runs around with that [" . quest::saylink("brass earring") . "] in his ear.");
+		quest::say("The taskmaster?? He is that large orc who runs around with that [brass earring] in his ear.");
 	}
 	if ($text=~/brass earring/i) {
 		quest::say("Yeah, a brass earring; He wears it like a newly crowned king. If I ever had that earring I know I would stand a chance at escape.");

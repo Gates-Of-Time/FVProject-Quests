@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/Hail/i) {
-		quest::say("Oh my word!! A rescuer!! Hurry! [" . quest::saylink("Get me out") . "] of these chains!! Go find the orc who has the keys!");
+		quest::say("Oh my word!! A rescuer!! Hurry! [Get me out] of these chains!! Go find the orc who has the keys!");
 	}
 	if ($text=~/Get me out/i) {
-		quest::say("I am from Ak'Anon! I must return a [" . quest::saylink("spellbook") . "] to the Eldritch Collective!");
+		quest::say("I am from Ak'Anon! I must return a [spellbook] to the Eldritch Collective!");
 	}
 	if ($text=~/spellbook/i) {
 		quest::say("What?! I am stuck here and you are worried about a spellbook?! Forget that! Just get the keys to my shackles from one of the orcs! HURRY!");

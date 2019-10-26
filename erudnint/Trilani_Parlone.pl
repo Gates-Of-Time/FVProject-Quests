@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail, good adventurer!  Do you bring word from my [" . quest::saylink("husband") . "]?");
+		quest::say("Hail, good adventurer!  Do you bring word from my [husband]?");
 	}
 	if ($text=~/husband/i) {
 		quest::say("Tolkar is his name. My beloved husband. He still lives in Felwithe while I study here. It must be hard on him.");

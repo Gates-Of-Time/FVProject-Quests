@@ -15,16 +15,16 @@ sub EVENT_SAY {
 		quest::say("I am the overseer of the great city of Erudin. You will address me in proper manner. HAIL!!");
 	}
 	elsif ($text=~/crime/i) {
-		quest::say("Oh, yes. We here in Erudin have no crime. Actually, it is a very low crime rate. Most of those crimes are committed by the defective brains of [" . quest::saylink("heretics") . "] or inferior, non-Erudite races.");
+		quest::say("Oh, yes. We here in Erudin have no crime. Actually, it is a very low crime rate. Most of those crimes are committed by the defective brains of [heretics] or inferior, non-Erudite races.");
 	}
 	elsif ($text=~/who are you?/i) {
 		quest::say("Markus Jaevins is the highest ranking official in Erudin");
 	}
 	elsif ($text=~/heretics/i) {
-		quest::say("The heretics are our sworn enemies. Their ancient origins are our own, however, they are the mad Erudites who chose the dark side of magic called necromancy. We, the magicians, caught one snooping in the palace just last week. He is now our [" . quest::saylink("prisoner") . "].");
+		quest::say("The heretics are our sworn enemies. Their ancient origins are our own, however, they are the mad Erudites who chose the dark side of magic called necromancy. We, the magicians, caught one snooping in the palace just last week. He is now our [prisoner].");
 	}
 	elsif ($text=~/prisoner/i) {
-		quest::say("The infidel was memorizing our spells to take to the rest of the heretic scum. He will finally be [" . quest::saylink("purged") . "] today. Could you please go to the cells here in the palace and ask  [" . quest::saylink("Jail Master Lius") . "] to give you the heretic's remains?");
+		quest::say("The infidel was memorizing our spells to take to the rest of the heretic scum. He will finally be [purged] today. Could you please go to the cells here in the palace and ask  [Jail Master Lius] to give you the heretic's remains?");
 	}
 	elsif ($text=~/purged/i) {
 		quest::say("To be purged is to take all the evil from ones body and set your soul free. Through magical means, the Erudite Cleansers pull the accused's organs out through the mouth. When all is done, you can be assured the body is cleansed of all evil.");

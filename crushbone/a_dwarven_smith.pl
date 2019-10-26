@@ -12,7 +12,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Turn in for 10351 -  Brass Earring
 	if (plugin::check_handin(\%itemcount, 10351 => 1)) {
-		quest::say("Outstanding! If you can kill the taskmaster, you might prove useful in recovering the items the orcs took from me when they caught me out in the Faydarks. [" . quest::saylink("Interested") . "] in helping me out?");
+		quest::say("Outstanding! If you can kill the taskmaster, you might prove useful in recovering the items the orcs took from me when they caught me out in the Faydarks. [Interested] in helping me out?");
 		#:: Give item 13850 - Unfinished Blade Mold
 		quest::summonitem(13850);
 		#:: Give a small amount of xp
@@ -22,7 +22,7 @@ sub EVENT_ITEM {
 	}
 	#:: Turn in for 9307 -  Shiny Brass Shield
 	if (plugin::check_handin(\%itemcount,9307 => 1)) {
-		quest::say("MY SHIELD!! Excellent, laddie! Next item on the list is my ringmail. Once I have my [" . quest::saylink("ringmail") . "], I am out of here for good. I will finally be able to leave!");
+		quest::say("MY SHIELD!! Excellent, laddie! Next item on the list is my ringmail. Once I have my [ringmail], I am out of here for good. I will finally be able to leave!");
 		#:: Give item 13850 - Unfinished Sledge Mold
 		quest::summonitem(13851);
 		#:: Give a small amount of xp

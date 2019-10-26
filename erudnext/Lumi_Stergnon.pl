@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Peace and tranquility be with you. $name.  Are you a [" . quest::saylink("new acolyte of peace") . "] or are you [" . quest::saylink("here to pay homage") . "] to the child of tranquility?");
+		quest::say("Peace and tranquility be with you. $name.  Are you a [new acolyte of peace] or are you [here to pay homage] to the child of tranquility?");
 	}
 	if ($text=~/new acolyte of peace/i) {
-		quest::say("Then you shall learn the ways of Quellious and learn to do as you are told by higher ranking members. It is time for you to do the lesser duties of a young priest. Which will it be? [" . quest::saylink("Retrieve the Peacekeeper staffs") . "] or [" . quest::saylink("battle the undead") . "]?");
+		quest::say("Then you shall learn the ways of Quellious and learn to do as you are told by higher ranking members. It is time for you to do the lesser duties of a young priest. Which will it be? [Retrieve the Peacekeeper staffs] or [battle the undead]?");
 	}
 	if ($text=~/Retrieve the Peacekeeper staffs/i) {
 		quest::say("Then take this note to the woodworker in Toxxulia Forest. His name is Emil Parsini. He shall have the staff to be returned to the temple.");
@@ -20,7 +20,7 @@ sub EVENT_SAY {
 	}
 	if ($text=~/important missions/i) {
 		if ($faction <= 4 ) {
-			quest::say("We have need of skilled priests. We have learned that a High Guard battle staff has been stolen. We require a priest to [" . quest::saylink("track down the staff") . "].");
+			quest::say("We have need of skilled priests. We have learned that a High Guard battle staff has been stolen. We require a priest to [track down the staff].");
 		}
 		elsif ($faction > 4 ) {
 			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
@@ -57,7 +57,7 @@ sub EVENT_ITEM {
 	}
 	#:: Turn in for 13816 Peacekeeper staff
 	if (plugin::check_handin(\%itemcount, 13816 => 1)) {
-		quest::say("You have done well, neophyte. Let me add the touch of harmony to finish the job.. Here, then. Take these supplies. I am sure you'll need them. Soon you may be able to assist us in [" . quest::saylink("important missions") . "]");
+		quest::say("You have done well, neophyte. Let me add the touch of harmony to finish the job.. Here, then. Take these supplies. I am sure you'll need them. Soon you may be able to assist us in [important missions]");
 		#:: Randomly choose a backpack, belt pouch, hematite, raw-hide armor pieces,rusty weapons
 		quest::summonitem(quest::ChooseRandom(17005,17002,10018,2144,2145,2146,6011,6016,6012));
 		#:: Ding!

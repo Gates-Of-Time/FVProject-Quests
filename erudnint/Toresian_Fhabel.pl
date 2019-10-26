@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Welcome. my friend! We are the Craftkeepers. We study the circle of magic called enchantment. What circle do you [" . quest::saylink("study") . "]?");
+		quest::say("Welcome. my friend! We are the Craftkeepers. We study the circle of magic called enchantment. What circle do you [study]?");
 	}
 	if ($text=~/study/i) {
-		quest::say("Then I welcome you into our circle. It is good to see new blood. I have a favor to ask of you. Do you wish to [" . quest::saylink("assist Toresian") . "] or do you not have the time?");
+		quest::say("Then I welcome you into our circle. It is good to see new blood. I have a favor to ask of you. Do you wish to [assist Toresian] or do you not have the time?");
 		#:: Match The Erudin Palace >> Slansin (23080) or The Erudin Palace >> Slansin (23001)
 		if (!$entity_list->IsMobSpawnedByNpcTypeID(23080) || !$entity_list->IsMobSpawnedByNpcTypeID(23001)) {
 			#:: Randomly spawn Slansin (23080) [Shopkeeper] or Slansin (23001) [Enchanter]

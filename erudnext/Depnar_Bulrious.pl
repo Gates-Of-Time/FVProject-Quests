@@ -12,7 +12,7 @@ sub EVENT_ENTER {
 
 sub EVENT_SAY {
 	if ($text=~/Hail/i) {
-		quest::say("Hail. $name! I am the master of the paladins among the Peacekeepers. Have you [" . quest::saylink("joined") . "] the harmony of the Peacekeepers or are you merely a visitor?");
+		quest::say("Hail. $name! I am the master of the paladins among the Peacekeepers. Have you [joined] the harmony of the Peacekeepers or are you merely a visitor?");
 	}
 	if ($text=~/joined/i) {
 		quest::say("Then go and speak with the other Peacekeepers. Do your part to promote the words of Quellious.");

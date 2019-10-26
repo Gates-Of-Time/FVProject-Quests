@@ -26,7 +26,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM { 
 	#:: Check for "A Note (Note To Altunic)".
 	if (plugin::check_handin(\%itemcount, 18896 => 1)) {
-		quest::say("You are the one they have sent? A squire?!! I hope you can help me. I gather items strewn upon the grounds of the Commonlands. I sell them at good prices. Lately, I have been terrorized by a human rogue named Narl. He will no doubt appear at my [" . quest::saylink("house") . "] soon. Bring his head to me.");
+		quest::say("You are the one they have sent? A squire?!! I hope you can help me. I gather items strewn upon the grounds of the Commonlands. I sell them at good prices. Lately, I have been terrorized by a human rogue named Narl. He will no doubt appear at my [house] soon. Bring his head to me.");
 	}
 	#:: Check for Human Head (Narl's Head)
 	if (plugin::check_handin(\%itemcount, 13867 => 1)) {

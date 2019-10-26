@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Come forward and speak.  What is it you seek within these walls?  Let it be the knowledge of wizardry, for that is what we are.  Only a [" . quest::saylink("servant of wizardry") . "] should be within these walls.");
+		quest::say("Come forward and speak.  What is it you seek within these walls?  Let it be the knowledge of wizardry, for that is what we are.  Only a [servant of wizardry] should be within these walls.");
 	}
 	if ($text=~/servant of wizardry/i) {
-		quest::say("A servant. you say?  If you be a young apprentice, perhaps you might assist me? I could use you to [" . quest::saylink("collect components") . "].  If you believe yourself to be beyond such things, you may wish to assist me with a [" . quest::saylink("special matter") . "].");
+		quest::say("A servant. you say?  If you be a young apprentice, perhaps you might assist me? I could use you to [collect components].  If you believe yourself to be beyond such things, you may wish to assist me with a [special matter].");
 	}
 	if ($text=~/collect components/i) {
 		quest::say("Of course you may assist me!! We have much need of a certain item which can only be found in the frigid peaks of Everfrost. There you shall find creatures called ice goblins. Take this bag and fill it with ice goblin beads and be sure to combine them before you return them. Well, then... Off with you!! And be quick about it and I shall give you a fine wizard's weapon. None of this rust-covered garbage offered by our associates!");

@@ -14,12 +14,12 @@ sub EVENT_ENTER {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail, $name! This is the Deepwater Temple. Here you shall find the wisdom and courage of Prexus, the Ocean Lord. I am glad to see you have an interest. Forgive me if I cut our conversation short, but I have many [" . quest::saylink("Deepwater tasks") . "] to complete.");
+		quest::say("Hail, $name! This is the Deepwater Temple. Here you shall find the wisdom and courage of Prexus, the Ocean Lord. I am glad to see you have an interest. Forgive me if I cut our conversation short, but I have many [Deepwater tasks] to complete.");
 	}
 	if ($text=~/Deepwater tasks/i) {
 		#:: Match if faction is Amiably or better
 		if ($faction < 5 ) {
-			quest::say("We here at the Deepwater Temple must tend to the [" . quest::saylink("Peacekeeper battlestaff") . "] and the [" . quest::saylink("Deepwater harpoon") . "] as well as other duties such as [" . quest::saylink("ocean protection") . "]. There is always something we must do.");
+			quest::say("We here at the Deepwater Temple must tend to the [Peacekeeper battlestaff] and the [Deepwater harpoon] as well as other duties such as [ocean protection]. There is always something we must do.");
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction = 5 ) {
@@ -33,7 +33,7 @@ sub EVENT_SAY {
 	if ($text=~/Peacekeeper battlestaff/i) {
 		#:: Match if faction is Amiably or better
 		if ($faction < 5 ) {
-			quest::say("Every sentinel in Erudin carries a High Guard battlestaff.  The creation of these weapons is the duty of the Deepwater Temple and the Temple of Divine Light.  Our portion of the task is to send young members to [" . quest::saylink("collect the Pearls of Odus") . "].  These are imbedded into the staff and used to store mystical power.");
+			quest::say("Every sentinel in Erudin carries a High Guard battlestaff.  The creation of these weapons is the duty of the Deepwater Temple and the Temple of Divine Light.  Our portion of the task is to send young members to [collect the Pearls of Odus].  These are imbedded into the staff and used to store mystical power.");
 		}
 		#:: Match if faction is Apprehensive or worse
 		elsif ($faction > 5 ) {
@@ -47,7 +47,7 @@ sub EVENT_SAY {
 	if ($text=~/ocean protection/i) {
 		#:: Match if faction is Amiably or better
 		if ($faction < 5) {
-			quest::say("In the name of Prexus, we are sworn to protect all ocean creatures.  We have heard reports of a shark carrying a deadly malady.  We believe she is pregnant.  If she delivers her young to the ocean, it will endanger all other creatures.  We need to find a young paladin to [" . quest::saylink("hunt the diseased shark") . "].");
+			quest::say("In the name of Prexus, we are sworn to protect all ocean creatures.  We have heard reports of a shark carrying a deadly malady.  We believe she is pregnant.  If she delivers her young to the ocean, it will endanger all other creatures.  We need to find a young paladin to [hunt the diseased shark].");
 		}
 		#:: Match if faction is Apprehensive or worse
 		elsif ($faction > 5 ) {
@@ -93,7 +93,7 @@ sub EVENT_SAY {
 	if ($text=~/Deepwater harpoon/i) {
 		#:: Match if faction is Amiably or better
 		if ($faction < 5 ) {
-			quest::say("We do not award the Deepwater harpoon to just any paladin. Nobility is all well and good, but you must still prove yourself. We have heard rumors of a very distressing matter. Perhaps it is your calling. Are you ready to [" . quest::saylink("prove allegiance to Erudin") . "] and earn the Deepwater harpoon?");
+			quest::say("We do not award the Deepwater harpoon to just any paladin. Nobility is all well and good, but you must still prove yourself. We have heard rumors of a very distressing matter. Perhaps it is your calling. Are you ready to [prove allegiance to Erudin] and earn the Deepwater harpoon?");
 		}
 		#:: Match if faction is Apprehensive or worse
 		elsif ($faction > 5 ) {
@@ -151,7 +151,7 @@ sub EVENT_ITEM {
 	}
 	#:: Turn in for  Bridge Quest Handin: 3 heads + sealed list
 	if (plugin::check_handin(\%itemcount, 18835 => 1, 13838 => 1, 13839 => 1, 13840 => 1)) {
-		quest::say("It is done!! I pray to Prexus that the knowledge of the bridge's design has departed from this world with the passing of these intelligent men. A pity they had to die. As for you, the other states may not tolerate your presence any longer, but you have proven that allegiance to Erudin is paramount among all Erudites. I am afraid the [" . quest::saylink("Deepwater harpoon") . "] is no more!! I bestow upon you Deep Six, my personal cutlass!! May you wield it in the name of Erudin.");
+		quest::say("It is done!! I pray to Prexus that the knowledge of the bridge's design has departed from this world with the passing of these intelligent men. A pity they had to die. As for you, the other states may not tolerate your presence any longer, but you have proven that allegiance to Erudin is paramount among all Erudites. I am afraid the [Deepwater harpoon] is no more!! I bestow upon you Deep Six, my personal cutlass!! May you wield it in the name of Erudin.");
 		#:: Give item 5377 - Deep Six Cutlass
 		quest::summonitem(5377);
 		#:: Give a small amount of xp
