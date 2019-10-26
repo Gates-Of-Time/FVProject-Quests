@@ -5,7 +5,7 @@ sub EVENT_SAY {
 	elsif ($text=~/clan deathfist/i) {
 		quest::say("The orcs of the Commonlands call themselves Clan Deathfist. They have committed many vile acts upon the residents of the Commonlands as well as persons traveling to and from Freeport. They must be destroyed. Go forth to slay them. I shall pay a bounty for every two Deathfist belts. If you are a true warrior of the bunker then perhaps you can begin with [The Green and Blue].");
 	}
-	elsif ($text=~/the green and blue/i) {
+	elsif ($text=~/green and blue/i) {
 		quest::say("The Green and Blue was a test for all skilled warriors. All one needed do was return to me four orc legionnaire shoulderpads. Two from the loathsome green skinned Deathfist Clan and two from the vile blue skinned Crushbone Clan. But we have no more bunker battle blades to spare. We must prepare for war!!");
 	}
 	elsif ($text=~/bigger problem/i) {
