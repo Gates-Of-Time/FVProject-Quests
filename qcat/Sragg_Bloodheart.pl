@@ -5,14 +5,14 @@ sub EVENT_SPAWN {
 
 sub EVENT_ENTER {
 	#:: Match a 18706 - Stained Cloth Note
-	if(plugin::check_hasitem($client, 18706)) { 
+	if (plugin::check_hasitem($client, 18706)) { 
 		$client->Message(15,"As you orient yourself amongst the filth and decay of the catacombs, a menacing figure turns to address you. 'I am Sragg Bloodheart. Should you wish to dedicate your pathetic life to the way of Bertoxxulous and learn the ways of the Shadowknight, read the note in your inventory and hand it to me to begin your training.'");
 	}
 }
 
 sub EVENT_ITEM {
 	#:: Match a 18706 - Stained Cloth Note
-	if(plugin::takeItems(18706  => 1)) {
+	if (plugin::takeItems(18706 => 1)) {
 		quest::say("Ah, another would-be soldier for the army of the Plaguebringer. Unmuz has just lost a few of his men, he'll have plenty of work for you. I'm sure. Begone!");
 		#:: Give a 13598 - Ruined Training Tunic*
 		quest::summonitem(13598);
