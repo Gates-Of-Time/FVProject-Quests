@@ -21,14 +21,16 @@ sub EVENT_ITEM {
 		quest::exp(100);
 		#:: Ding!
 		quest::ding();
-		#:: Create a hash for storing cash - 4500 to 4600cp
-		my %cash = plugin::RandomCash(4500,4600);
+		#:: Create a hash for storing cash - 100 to 800cp
+		my %cash = plugin::RandomCash(100,800);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(330,-1); 		#:: - Freeport Militia
+		quest::faction(230,-1); 		#:: - Corrupt Qeynos Guards
 		quest::faction(311,1); 			#:: + Steel Warriors
 		quest::faction(281,1); 			#:: + Knights of Truth
+		quest::faction(262,1); 			#:: + Guards of Qeynos
 	}
 	#:: Turn in for 18742 - A Tattered Note
 	if (plugin::takeItems(18742 => 1 )) {
