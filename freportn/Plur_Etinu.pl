@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Your soul is welcome in our temple. The Queen of Love, Erollisi Marr, desires more to join our ranks. This city of Freeport must not stay under the control of  the Freeport Militia. I am here to [" . quest::saylink("cure poison") . "] and [" . quest::saylink("cure disease") . "], or if any [" . quest::saylink("need healing") . "].");
+		quest::say("Your soul is welcome in our temple. The Queen of Love, Erollisi Marr, desires more to join our ranks. This city of Freeport must not stay under the control of  the Freeport Militia. I am here to [cure poison] and [cure disease], or if any [need healing].");
 	}
 	elsif ($text=~/cure poison/i) {
 		quest::say("Before the Queen of Passion can force the toxin from your system, I shall require 3 bixie stingers to perform the act.");

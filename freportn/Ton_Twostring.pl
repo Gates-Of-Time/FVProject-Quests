@@ -1,12 +1,12 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail, $name--are you [" . quest::saylink("interested") . "] in helping the League of Antonican Bards by delivering some [" . quest::saylink("mail") . "]?");
+		quest::say("Hail, $name--are you [interested] in helping the League of Antonican Bards by delivering some [mail]?");
 	}
 	elsif ($text=~/mail/i) {
-		quest::say("The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more distant offices.  Are you [" . quest::saylink("interested") . "]?");
+		quest::say("The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more distant offices.  Are you [interested]?");
 	}
 	elsif ($text=~/interested/i) {
-		quest::say("I have messages that need to go to Highpass, Kelethin, and Qeynos.  Will you deliver mail to [" . quest::saylink("Kelethin") . "], [" . quest::saylink("Highpass") . "], or [" . quest::saylink("Qeynos") . "] for me?");
+		quest::say("I have messages that need to go to Highpass, Kelethin, and Qeynos.  Will you deliver mail to [Kelethin], [Highpass], or [Qeynos] for me?");
 	}
 	elsif ($text=~/Kelethin/i) {
 		quest::say("Take this pouch to Idia in Kelethin.  You can find her at the bard guild hall.  I am sure she will compensate you for your troubles.");

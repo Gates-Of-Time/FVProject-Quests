@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Welcome to the shrine of the Dismal Rage.  May [" . quest::saylink("Innoruuk") . "] guide your every move in life.  Here. we will teach you to release your rage unto the world.  My priests are at your disposal.");
+		quest::say("Welcome to the shrine of the Dismal Rage.  May [Innoruuk] guide your every move in life.  Here. we will teach you to release your rage unto the world.  My priests are at your disposal.");
 	}
 	if ($text=~/Innoruuk/i) {
 		quest::say("You do not even know the name of the Prince of Hate! That is a crime in here. Our god Innoruuk speaks with Pietro Zarn himself. It was Innoruuk who told him to create the Dismal Rage. You should speak with our family. Perhaps someone will help you better understand our beliefs.");

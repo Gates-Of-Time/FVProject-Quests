@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings. Please look through my fine wares. I have spent my whole life practicing my skills in tailoring. I do my best to compete with the other local merchants, but I have yet to make A profit. I pray to Tunare that my [" . quest::saylink("Banded Orc Vests") . "] will finally bring me A few extra coins.");
+		quest::say("Greetings. Please look through my fine wares. I have spent my whole life practicing my skills in tailoring. I do my best to compete with the other local merchants, but I have yet to make A profit. I pray to Tunare that my [Banded Orc Vests] will finally bring me A few extra coins.");
 	}
 	elsif ($text=~/banded orc vests/i) {
 		#:: Match if faction with Kelethin Merchants is better than Apprehensive

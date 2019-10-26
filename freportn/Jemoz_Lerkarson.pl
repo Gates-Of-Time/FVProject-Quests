@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Bless you, my friend!  We always welcome new converts into our Hall of Truth.  The righteous army of the twin deities must assemble.  The battle draws near.  The blessings of the Truthbringer are passed to all who are [" . quest::saylink("devoted to truth") . "].");
+		quest::say("Bless you, my friend!  We always welcome new converts into our Hall of Truth.  The righteous army of the twin deities must assemble.  The battle draws near.  The blessings of the Truthbringer are passed to all who are [devoted to truth].");
 	}
 	elsif ($text=~/fallen knight/i) {
-		quest::say("The fallen knight is Sir Lucan D'Lere. The organizer and leader of the Freeport Militia. He once stood beside us. Now he shall burn!! We will end him. We shall [" . quest::saylink("crush the Freeport Militia") . "]. Truth shall reign once again.");
+		quest::say("The fallen knight is Sir Lucan D'Lere. The organizer and leader of the Freeport Militia. He once stood beside us. Now he shall burn!! We will end him. We shall [crush the Freeport Militia]. Truth shall reign once again.");
 	}
 	elsif ($text=~/true organizer/i) {
 		quest::say("Captain Hazran is the commander of the Freeport Militia. Lucan has no time to waste on relegating duties. Hazran is the one who keeps these brutes together as a militia. Stop him and maybe the militia will collapse. Find a way to return his head to me. That would surely bring great thanks from this temple.");
@@ -11,7 +11,7 @@ sub EVENT_SAY {
 	elsif ($text=~/devoted to truth/i) {
 		#:: Match if faction is better than indifferent
 		if ($faction < 5) {
-			quest::say("May the hand of Marr shield you from harm. Welcome to our world. The war begins here in Freeport. The [" . quest::saylink("fallen knight") . "] has masked the truth from the world, but he cannot mask his evil from the Truthbringer. He once followed our ways. Now he is our enemy and yours. We must end his rule. We must [" . quest::saylink("crush the Freeport Militia") . "]!!");
+			quest::say("May the hand of Marr shield you from harm. Welcome to our world. The war begins here in Freeport. The [fallen knight] has masked the truth from the world, but he cannot mask his evil from the Truthbringer. He once followed our ways. Now he is our enemy and yours. We must end his rule. We must [crush the Freeport Militia]!!");
 			#:: Cast spell 11 - Holy Armor
 			$npc->CastSpell(11,$userid);
 		}
@@ -33,7 +33,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Turn in for 13921 - Damaged Militia Helm
 	if (plugin::takeItems(13921 => 1 )) {
-		quest::say("Bless you, my child. Marr is grateful, as are we. Here is our thanks. Let it bring you greater strength to defeat the Militia. Go and continue the crusade. Soon you will be strong enough to slay the [" . quest::saylink("true organizer") . "].");
+		quest::say("Bless you, my child. Marr is grateful, as are we. Here is our thanks. Let it bring you greater strength to defeat the Militia. Go and continue the crusade. Soon you will be strong enough to slay the [true organizer].");
 		#:: Ding!
 		quest::ding();
 		#:: Grant a large amount of experience

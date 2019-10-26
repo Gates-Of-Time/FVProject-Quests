@@ -1,15 +1,15 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Sit down and name your poison!  I know we are lacking in originality. but I intend to create some [" . quest::saylink("exotic drinks") . "].");
+		quest::say("Sit down and name your poison!  I know we are lacking in originality. but I intend to create some [exotic drinks].");
 	}
 	if ($text=~/exotic drinks/i) {
-		quest::say("Interested in exotic drinks. are we?  I am attempting to create some of these drinks I read about in this book I found. It was called the [" . quest::saylink("Barkeep's Compendium") . "].  I will first need to get my hands on a few [" . quest::saylink("exotic ingredients") . "].");
+		quest::say("Interested in exotic drinks. are we?  I am attempting to create some of these drinks I read about in this book I found. It was called the [Barkeep's Compendium].  I will first need to get my hands on a few [exotic ingredients].");
 	}
 	if ($text=~/Barkeep's Compendium/i) {
-		quest::say("I found the book amongst some garbage littering the ground in Freeport East.  It appears to have been created by an ogre named [" . quest::saylink("Clurg") . "].  I am sure he wants it returned. but I will never part with it.  That is... unless I get a few [" . quest::saylink("exotic ingredients") . "] I need to experiment with.");
+		quest::say("I found the book amongst some garbage littering the ground in Freeport East.  It appears to have been created by an ogre named [Clurg].  I am sure he wants it returned. but I will never part with it.  That is... unless I get a few [exotic ingredients] I need to experiment with.");
 	}
 	if ($text=~/exotic ingredients/i) {
-		quest::say("I desire a [" . quest::saylink("kiola nut") . "]. [" . quest::saylink("Erud's Tonic") . "]. [" . quest::saylink("honey jum") . "] and a [" . quest::saylink("Koalindl fish") . "].  If I could get those. I would no longer need to hold on to the [" . quest::saylink("Barkeep's Compendium") . "].  Whoever returned the ingredients to me could have it!!");
+		quest::say("I desire a [kiola nut]. [Erud's Tonic]. [honey jum] and a [Koalindl fish].  If I could get those. I would no longer need to hold on to the [Barkeep's Compendium].  Whoever returned the ingredients to me could have it!!");
 	}
 	if ($text=~/kiola nut/i) {
 		quest::say("The kiola nut usually grows only in humid territories.  I hear there are some such lands between Qeynos and Erudin.  Some also have been found on the islands of the Ocean of Tears.");
@@ -31,7 +31,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Turn in for 13118. 13382, 13952, 13340 -  Erud's Tonic - Koalindl Fish - Honey Jum - Kiola Nut
 	if (plugin::check_handin(\%itemcount, 13118 => 1, 13383 => 1, 13952 => 1, 13340 => 1)) {
-		quest::say("Now I have every ingredient mentioned in the Barkeep Compendium. Here. You take it. <..click!.> Whoops!! I just closed it. It's magically sealed, I never closed it before. It's useless to you. I have no need for it any longer. Maybe you can return it to [" . quest::saylink("Clurg") . "] for some type of reward.");
+		quest::say("Now I have every ingredient mentioned in the Barkeep Compendium. Here. You take it. <..click!.> Whoops!! I just closed it. It's magically sealed, I never closed it before. It's useless to you. I have no need for it any longer. Maybe you can return it to [Clurg] for some type of reward.");
 		#:: Give item 13379 - Barkeep Compendium
 		quest::summonitem(13379);
 		#:: Give a small amount of xp

@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Good day to you $name I hope you yearn to become a Steel Warrior as we all are here in the Bunker. We are in need of more recruits to continue the [" . quest::saylink("war") . "].");
+		quest::say("Good day to you $name I hope you yearn to become a Steel Warrior as we all are here in the Bunker. We are in need of more recruits to continue the [war].");
 	}
 	elsif ($text=~/war/i) {
-		quest::say("The war I speak of is the one we Steel Warriors have sworn to wage agianst [" . quest::saylink("Clan Deathfist") . "] in the Commonlands. We are doing a fine job but we require more weapons. We are expecting a shipment of blades from Groflahs Forge. We require a warrior of the bunker to [" . quest::saylink("get our shipment") . "]. Maybe you?");
+		quest::say("The war I speak of is the one we Steel Warriors have sworn to wage agianst [Clan Deathfist] in the Commonlands. We are doing a fine job but we require more weapons. We are expecting a shipment of blades from Groflahs Forge. We require a warrior of the bunker to [get our shipment]. Maybe you?");
 	}
 	elsif ($text=~/clan deathfist/i) {
 		quest::say("If you do not know of Clan Deathfist go ask Cain who they are. He will not only tell you he will sign you up to help fight our war!");

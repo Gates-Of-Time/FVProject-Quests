@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail, $Name! We are the Militia of Freeport. Our training disciplines have created some of the finest guards ever to walk upon Norrath. To prove your loyalty and ability your first mission is to be the extermination of [" . quest::saylink("Clan Deathfist") . "].");
+		quest::say("Hail, $Name! We are the Militia of Freeport. Our training disciplines have created some of the finest guards ever to walk upon Norrath. To prove your loyalty and ability your first mission is to be the extermination of [Clan Deathfist].");
 	}
 	elsif ($text=~/Clan Deathfist/i) {
 		quest::say("The orcs of the Commonlands call themselves Clan Deathfist. They have committed many vile acts upon the residents of the Commonlands as well as persons traveling to and from Freeport. They must be destroyed. Go forth to slay them. I shall pay a bounty for every two Deathfist belts.");
@@ -13,7 +13,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Turn in for 13916 - Deathfist Slashed Belt x2
 	if (plugin::takeItems(13916 => 2 )) {
-		quest::say("Very fine work $name. With your help, we shall soon rid the commonlands of the orcs. Then we can move on to a [" . quest::saylink("bigger problem") . "].");
+		quest::say("Very fine work $name. With your help, we shall soon rid the commonlands of the orcs. Then we can move on to a [bigger problem].");
 		#:: Give a large amount of xp
 		quest::exp(28000);
 		#:: Ding!

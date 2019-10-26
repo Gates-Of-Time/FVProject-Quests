@@ -1,12 +1,12 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail. good citizen!  You have entered the Hall of Truth.  What is it you seek?  Many citizens come to request aid in dealing with the local rogues or the oppression of our sworn enemies. the Freeport Militia.  A few valiant ones have been [" . quest::saylink("summoned to the Hall of Truth") . "].");
+		quest::say("Hail. good citizen!  You have entered the Hall of Truth.  What is it you seek?  Many citizens come to request aid in dealing with the local rogues or the oppression of our sworn enemies. the Freeport Militia.  A few valiant ones have been [summoned to the Hall of Truth].");
 	}
 	elsif ($text=~/summoned to the Hall of Truth/i) {
-		quest::say("You have been summoned? You do not have the look of nobility. You must be a [" . quest::saylink("squire") . "]. There are many squires who have been summoned to our Hall. Not all pass the [" . quest::saylink("Test of Truth") . "].");
+		quest::say("You have been summoned? You do not have the look of nobility. You must be a [squire]. There are many squires who have been summoned to our Hall. Not all pass the [Test of Truth].");
 	}
 	elsif ($text=~/squire/i) {
-		quest::say("Then I welcome you, Squire . Being a squire is the first step to becoming a true knight of the Hall of Truth. Remember always to protect and serve the meek. I have a [" . quest::saylink("small task") . "] which suits a squire perfectly.");
+		quest::say("Then I welcome you, Squire . Being a squire is the first step to becoming a true knight of the Hall of Truth. Remember always to protect and serve the meek. I have a [small task] which suits a squire perfectly.");
 	}
 	elsif ($text=~/small task/i) {
 		quest::say("Venture to the Commonlands and seek out our noble friend Altunic Jartin. He lives and works out of his home. Hand him this note.");
@@ -17,7 +17,7 @@ sub EVENT_SAY {
 		quest::say("Go to the deserts of North Ro. Seek out the desert tarantulas. Stand and face this dreaded creature. If you are lucky, you will find a venom sac. This is what I require. When you return, hand it to me.");
 	}
 	elsif ($text=~/test of truth/i) {
-		quest::say("Only when a [" . quest::saylink("squire") . "] is ready, may he tempt his fate. All he need do is hand the tokens of bravery and generosity to me. If the squire survives his ordeal, then he or she shall enter the order of the Knights of Truth. The squire will be given the Testimony of Truth and become a respected knight.");
+		quest::say("Only when a [squire] is ready, may he tempt his fate. All he need do is hand the tokens of bravery and generosity to me. If the squire survives his ordeal, then he or she shall enter the order of the Knights of Truth. The squire will be given the Testimony of Truth and become a respected knight.");
 	}
 	elsif ($text=~/Who is willia/i) {
 		quest::say("She is my niece. Lucan ordered her to kill my wife.. She did. She now belongs to the Freeport Militia. As part of the militia, she must die!! Let no militia member stand in the way of nobility.");

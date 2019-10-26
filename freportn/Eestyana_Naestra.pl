@@ -30,7 +30,7 @@ sub EVENT_ITEM {
 	}
 	#:: Turn in for 18804 - A Tattered Note
 	if (plugin::takeItems(18804 => 1 )) {
-		quest::say("Thank you, defender of Karana! We have heard rumors of the followers of Bertoxxulous gaining knowledge of our knight who infiltrated the ranks of the [" . quest::saylink("Militia") . "]. They would have tried to sell the information to the Militia. We will inform our knight immediately. As for you, here is a donation to your journey's expenses. Stay clear of the Freeport Militia. There is no doubt they have learned of your alliance with us.");
+		quest::say("Thank you, defender of Karana! We have heard rumors of the followers of Bertoxxulous gaining knowledge of our knight who infiltrated the ranks of the [Militia]. They would have tried to sell the information to the Militia. We will inform our knight immediately. As for you, here is a donation to your journey's expenses. Stay clear of the Freeport Militia. There is no doubt they have learned of your alliance with us.");
 		#:: Give a small amount of xp
 		quest::exp(500);
 		#:: Ding!

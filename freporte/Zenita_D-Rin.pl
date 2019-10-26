@@ -3,7 +3,7 @@ sub EVENT_SAY {
 		quest::say("Greetings. I would love to chat with you, but I just realized something.. I do not waste time with whelps.");
 	}
 	if ($text=~/lens/i) {
-		quest::say("So you seek the Spare Lens. Yes. I have it. There are only two ways you can obtain it, [" . quest::saylink("fight") . "] the great Zenita or [" . quest::saylink("play a game of chance") . "].");
+		quest::say("So you seek the Spare Lens. Yes. I have it. There are only two ways you can obtain it, [fight] the great Zenita or [play a game of chance].");
 	}
 	if ($text=~/play a game of chance/i) {
 		quest::say("Great. It is rather simple. I have five cards and only one is King Naythox. Find it. In order to get one card all you need to do is buy me a bottle of Innoruuks Kiss of Death from the barkeep in Chops N Hops. One bottle for one card. Return the King Naythox card to me and you shall get the Spare Lens.");

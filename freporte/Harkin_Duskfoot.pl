@@ -22,7 +22,7 @@ sub EVENT_PROXIMITY_SAY {
 sub EVENT_SIGNAL {
 	#:: Signal From freporte/Beur_Tenlah.pl
 	if ($signal == 1) {
-		quest::say("Bah! Don't listen to this fool. Listen, I've something a little more important for you to do than buy ales. I need you to take a [" . quest::saylink("message") . "] to my friend Janam over in West Freeport.");
+		quest::say("Bah! Don't listen to this fool. Listen, I've something a little more important for you to do than buy ales. I need you to take a [message] to my friend Janam over in West Freeport.");
 	}
 }
 

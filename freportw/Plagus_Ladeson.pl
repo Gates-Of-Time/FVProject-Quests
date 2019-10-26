@@ -1,11 +1,11 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings $Name, and welcome to the Bunker. Are you a [" . quest::saylink("new warrior") . "] or [" . quest::saylink("veteran") . "]?");
+		quest::say("Greetings $Name, and welcome to the Bunker. Are you a [new warrior] or [veteran]?");
 	}
 	elsif ($text=~/new warrior/i) {
 		#:: Match if faction with Steel Warriors is better than Indifferent
 		if ($faction < 5) {
-			quest::say("Good to know you chose the Bunker to train you. It is the home of The Steel Warriors. We find our inner strengths grow through battles and deeds to further our growth. Do you [" . quest::saylink("seek deeds") . "] or [" . quest::saylink("crave battle") . "]?");
+			quest::say("Good to know you chose the Bunker to train you. It is the home of The Steel Warriors. We find our inner strengths grow through battles and deeds to further our growth. Do you [seek deeds] or [crave battle]?");
 		}
 		#:: Match if faction with Steel Warriors is Indifferent
 		elsif ($faction == 5) {
@@ -19,7 +19,7 @@ sub EVENT_SAY {
 	elsif ($text=~/veteran/i) {
 		#:: Match if faction with Steel Warriors is better than Indifferent
 		if ($faction < 5) {
-			quest::say("I apologize for not knowing. I am new to the Bunker. I was a trainer at the Hall of Steel in Qeynos before this.  I left Qeynos in search of [" . quest::saylink("Milea") . "] and instead found myself joining the bunker's weaponmasters.");
+			quest::say("I apologize for not knowing. I am new to the Bunker. I was a trainer at the Hall of Steel in Qeynos before this.  I left Qeynos in search of [Milea] and instead found myself joining the bunker's weaponmasters.");
 		}
 		#:: Match if faction with Steel Warriors is Indifferent
 		elsif ($faction == 5) {
@@ -59,7 +59,7 @@ sub EVENT_SAY {
 		}
 	}
 	elsif ($text=~/milea/i) {
-		quest::say("Milea Clothspinner. She was my one true love. She, too, is a Steel Warrior. When she left Qeynos to find adventure, my heart left also. I never saw her again, but I decided to transfer my skills to Freeport. It is probably best that I did not find her. She was in love with adventure. <sigh> The women I am attracted to are always in love with another. Just like [" . quest::saylink("Toala") . "].");
+		quest::say("Milea Clothspinner. She was my one true love. She, too, is a Steel Warrior. When she left Qeynos to find adventure, my heart left also. I never saw her again, but I decided to transfer my skills to Freeport. It is probably best that I did not find her. She was in love with adventure. <sigh> The women I am attracted to are always in love with another. Just like [Toala].");
 	}
 	elsif ($text=~/toala/i) {
 		quest::say("Toala is supreme when it comes to the blade, but in the art of passion she chooses to leans toward Cain Darkmoore. I do not get it. She is a very beautiful and strong-hearted warrior. Why Cain does not like her is a mystery to me. Why does she waste her time when she could have me? After all, we men of Qeynos are known as the most romantic in all of Norrath.");

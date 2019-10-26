@@ -1,12 +1,12 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings, $class! Join in the [" . quest::saylink("celebration") . "]! Have a few drinks. Alas, there are no [" . quest::saylink("Tumpy Tonics") . "], $name");
+		quest::say("Greetings, $class! Join in the [celebration]! Have a few drinks. Alas, there are no [Tumpy Tonics], $name");
 	}
 	if ($text=~/celebration/i) {
 		quest::say("The Freeport Militia now has a bar to themselves. Luckily, it is not this one. Ahh... I tell you, I just don't feel up to much right now. I have had so much grog, my great grandma could best me!");
 	}
 	if ($text=~/ariska/i) {
-		quest::say("Ariska Zimel was my best friend. He and I learned our knowledge of metal from such places as Halas and Kaladim. When he disappeared, it seemed to involve foul play. He must be alive somewhere in the city. I pray this is not the work of [" . quest::saylink("Pietro Zarn") . "].");
+		quest::say("Ariska Zimel was my best friend. He and I learned our knowledge of metal from such places as Halas and Kaladim. When he disappeared, it seemed to involve foul play. He must be alive somewhere in the city. I pray this is not the work of [Pietro Zarn].");
 	}
 	if ($text=~/pietro zarn/i) {
 		quest::say("While we were traveling through the Lavastorm Mountains, we happened upon a caravan. They wore emblems in honor of the evil god, Innoruuk. They did not see us, but we saw them. And most importantly of all, Ariska saw the apparent leader's sword. It was glowing with great energy. Suddenly, the evil knights were in a battle. The knights gave chase, leaving their camp unattended. The knight who owned the sword left it behind, opting to fight with another, leading me to believe it was not his to begin with. It was at this point that Ariska ran down and grabbed the sword. A few weeks later, we were to learn that the knight was a powerful man by the name of Pietro Zarn and that he was looking for a sword stolen from him. He called it .. Soulfire. I believe Zarn must have finally found Ariska.");
@@ -19,7 +19,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 18818 - Tattered Flier
 	if (plugin::takeItems(18818 => 1)) {
-		quest::say("This used to be hanging in Zimel's Blades. It is the price list. It is badly faded though. There was a fire in Zimel's Blades and I was on the scene just afterward. I did not see this hanging. I wonder who took it . . . Hmmmm.. oh, yes.. the markings on the list! It is a code! Here. I will fill it in. Read it. You probably do not even know who [" . quest::saylink("Ariska") . "] is.");
+		quest::say("This used to be hanging in Zimel's Blades. It is the price list. It is badly faded though. There was a fire in Zimel's Blades and I was on the scene just afterward. I did not see this hanging. I wonder who took it . . . Hmmmm.. oh, yes.. the markings on the list! It is a code! Here. I will fill it in. Read it. You probably do not even know who [Ariska] is.");
 		#:: Give item 18818 - Tattered Flier
 		quest::summonitem(18818);
 		#:: Give a small amount of xp

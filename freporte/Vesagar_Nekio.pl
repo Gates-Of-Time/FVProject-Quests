@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::emote("Welcome into our church of rage.  I am Vesagar Nekio. servant of Innoruuk.  If you should need me to [" . quest::saylink("cure poison") . "]. [" . quest::saylink("cure disease") . "]. or if you [" . quest::saylink("require healing") . "]. just let me know.");		
+		quest::emote("Welcome into our church of rage.  I am Vesagar Nekio. servant of Innoruuk.  If you should need me to [cure poison]. [cure disease]. or if you [require healing]. just let me know.");		
 	}
 	if ($text=~/require healing/i) {
 		#::  Match if Amiable or better

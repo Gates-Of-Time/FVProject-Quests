@@ -1,12 +1,12 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("What do you want?  Can't you see that I wish to be alone?!  I have no need nor desire to speak with anyone.  I have a minor dilemma to ponder and the only person I wish to speak with is the [" . quest::saylink("captain") . "].");
+		quest::say("What do you want?  Can't you see that I wish to be alone?!  I have no need nor desire to speak with anyone.  I have a minor dilemma to ponder and the only person I wish to speak with is the [captain].");
 	}
 	if ($text=~/captain/i) {
 		quest::say("If you have to ask that. you should not be in this fine establishment.");
 	}
 	if ($text=~/danaria sent me/i) {
-		quest::say("If you are working for Danaria, you have been misguided. You will go back to her empty handed. Now leave. The [" . quest::saylink("captain") . "] and I have some business to discuss.");
+		quest::say("If you are working for Danaria, you have been misguided. You will go back to her empty handed. Now leave. The [captain] and I have some business to discuss.");
 	}
 }
 

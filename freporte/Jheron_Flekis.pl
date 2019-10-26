@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Ah, greetings, traveler! Settled into one of these rooms, have you? Well, this room is mine, so get out! Hey, wait! You aren't here to deliver a [" . quest::saylink("shipment of books") . "] to me, are you?");
+		quest::say("Ah, greetings, traveler! Settled into one of these rooms, have you? Well, this room is mine, so get out! Hey, wait! You aren't here to deliver a [shipment of books] to me, are you?");
 	}
 	if ($text=~/shipment of books/i) {
 		quest::say("Oh, I typically receive monthly shipments of books from Umvera Dekash. I hear he has recently been promoted to senior librarian in Erudin. What a vaulted position! I could only aspire. I'm not going to be binding books forever, you know!");

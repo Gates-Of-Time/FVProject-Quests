@@ -10,7 +10,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Turn in for 19917 -  Bent Playing Card
 	if (plugin::check_handin(\%itemcount, 19917 => 1)) {
-		quest::say("Excellent I've been waiting for the Coalition to send me some assistance. I have an associate waiting for some supplies that have not yet been collected. I need you to acquire a [" . quest::saylink("crate of pick heads") . "] and a [" . quest::saylink("bundle of hardwood shafts") . "] and bring them to me so that I may prepare them for delivery to my associate.");
+		quest::say("Excellent I've been waiting for the Coalition to send me some assistance. I have an associate waiting for some supplies that have not yet been collected. I need you to acquire a [crate of pick heads] and a [bundle of hardwood shafts] and bring them to me so that I may prepare them for delivery to my associate.");
 	}
 	#:: Turn in for 19931 and 19929 -  Bundle of Hardwood Staves and Crate of Pick Axe Heads
 	if (plugin::check_handin(\%itemcount, 19931 => 1, 19929 => 1)) {

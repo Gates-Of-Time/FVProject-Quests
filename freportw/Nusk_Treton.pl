@@ -1,11 +1,11 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Freeport!!  Great trade city of Norrath!!  What a wondrous place!  How do you do?  You are an [" . quest::saylink("arcane scientist") . "]. are you not?");
+		quest::say("Freeport!!  Great trade city of Norrath!!  What a wondrous place!  How do you do?  You are an [arcane scientist]. are you not?");
 	}
 	elsif($text=~/arcane scientist/i) {
 		#:: Match if faction with Arcane Scientists is better than Indifferent
 		if ($faction < 5) {
-			quest::say("Grand!! I remember my younger days within this great academy. I have spent many years of research here in Freeport. I compiled a [" . quest::saylink("locked journal") . "] of my research. Alas, I am still awaiting its return.");
+			quest::say("Grand!! I remember my younger days within this great academy. I have spent many years of research here in Freeport. I compiled a [locked journal] of my research. Alas, I am still awaiting its return.");
 		}
 		#:: Match if faction with Arcane Scientists is Indifferent
 		elsif ($faction == 5) {
@@ -19,7 +19,7 @@ sub EVENT_SAY {
 	elsif($text=~/locked journal/i) {
 		#:: Match if faction with Arcane Scientists is better than Indifferent
 		if ($faction < 5) {
-			quest::say("I lent it to an old colleague of mine in Ak'Anon. He was to send it back aboard a private vessel. One Lenka Stoutheart was to return it to me. It has already been one month and counting. I wish there was a young wizard who could [" . quest::saylink("seek out Lenka") . "].");
+			quest::say("I lent it to an old colleague of mine in Ak'Anon. He was to send it back aboard a private vessel. One Lenka Stoutheart was to return it to me. It has already been one month and counting. I wish there was a young wizard who could [seek out Lenka].");
 		}
 		#:: Match if faction with Arcane Scientists is Indifferent
 		elsif ($faction == 5) {

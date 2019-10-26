@@ -5,7 +5,7 @@ sub EVENT_SAY {
 	elsif ($text=~/treant fists/i) {
 		#:: Match if faction with Ashen Order is Amiable or better
 		if ($faction <= 4) {
-			quest::say("You desire the treant fists?  I have them and I will offer them to any [" . quest::saylink("skilled monk of the Ashen House") . "].");
+			quest::say("You desire the treant fists?  I have them and I will offer them to any [skilled monk of the Ashen House].");
 		}
 	}
 	elsif ($text=~/clawfist/i) {
@@ -23,7 +23,7 @@ sub EVENT_SAY {
 	elsif ($text=~/skilled monk of the Ashen House/i) {
 		#:: Match if faction with Ashen Order is Amiable or better
 		if ($faction <= 4) {
-			quest::say("Then you shall aid our family. My former pupil [" . quest::saylink("skilled monk of the Clawfist") . "] has been banished by his people. You will go to him and hand him this token as proof of your origin. He shall be expecting you.");
+			quest::say("Then you shall aid our family. My former pupil [skilled monk of the Clawfist] has been banished by his people. You will go to him and hand him this token as proof of your origin. He shall be expecting you.");
 			#:: Give a 12369 - Puab's Token
 			quest::summonitem(12369);
 		}

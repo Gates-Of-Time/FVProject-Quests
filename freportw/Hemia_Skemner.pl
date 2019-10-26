@@ -1,12 +1,12 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("How are you? Welcome to the Academy of Arcane Science. Please feel free to roam. May knowledge be your goal. Be you a [" . quest::saylink("fellow scientist") . "] or visitor, I am sure you will find whatever you seek.");
+		quest::say("How are you? Welcome to the Academy of Arcane Science. Please feel free to roam. May knowledge be your goal. Be you a [fellow scientist] or visitor, I am sure you will find whatever you seek.");
 	}
 	elsif ($text=~/fellow scientist/i) {
-		quest::say("That is good. I hope you can handle the knowledge of arcane science. Some have gone mad conducting research. Such a person is [" . quest::saylink("Lydl Mastat") . "].");
+		quest::say("That is good. I hope you can handle the knowledge of arcane science. Some have gone mad conducting research. Such a person is [Lydl Mastat].");
 	}	
 	elsif ($text=~/lydl mastat/i) {
-		quest::say("Lydl Mastat is nothing more than a young apprentice of mine. He went mad working on a formula for deep water breathing. He now roams the outskirts of Freeport boasting of power he does not have. Someone should [" . quest::saylink("teach Lydl a lesson") . "].");
+		quest::say("Lydl Mastat is nothing more than a young apprentice of mine. He went mad working on a formula for deep water breathing. He now roams the outskirts of Freeport boasting of power he does not have. Someone should [teach Lydl a lesson].");
 	}	
 	elsif ($text=~/teach Lydl a lesson/i) {
 		quest::say("Then go. He appears near the gates of Freeport from time to time. He is not powerful, but he has a secret. Nothing save magic can harm him. This was the result of an experimental potion he drank. Slay him and return his locked spellbook to me.");
