@@ -1,18 +1,18 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Welcome to the Shrine of Bertoxxulous! You appear to be [" . quest::saylink("new to the shrine") . "]. I do not remember seeing you around.");
+		quest::say("Welcome to the Shrine of Bertoxxulous! You appear to be [new to the shrine]. I do not remember seeing you around.");
 	}
 	elsif ($text=~/new to the shrine/i) {
-		quest::say("New blood to spread Bertoxxulous' disease? We presently need the help of a [" . quest::saylink("young shadowknight") . "]. There are certain deeds which must be carried out.");
+		quest::say("New blood to spread Bertoxxulous' disease? We presently need the help of a [young shadowknight]. There are certain deeds which must be carried out.");
 	}
 	elsif ($text=~/young shadowknight/i) {
-		quest::say("Then let your supreme task be the extermination of the Priests of Life. Know that they threaten the will of our Lord Bertoxxulous. For every fallen paladin and cleric of the Temple of Life. you shall rise within our ranks.  So... do you [" . quest::saylink("loathe paladins") . "]?");
+		quest::say("Then let your supreme task be the extermination of the Priests of Life. Know that they threaten the will of our Lord Bertoxxulous. For every fallen paladin and cleric of the Temple of Life. you shall rise within our ranks.  So... do you [loathe paladins]?");
 	}
 	elsif ($text=~/loathe paladins/i) {
-		quest::say("As do we all. The paladins of Qeynos come from either the Hall of Thunder or the Temple of Life. We have put a bounty upon their heads. Destroy these knights and return either the Order of Thunder or the prayer beads of these inferior men. There has even been a report from [" . quest::saylink("Commander Kane") . "].");
+		quest::say("As do we all. The paladins of Qeynos come from either the Hall of Thunder or the Temple of Life. We have put a bounty upon their heads. Destroy these knights and return either the Order of Thunder or the prayer beads of these inferior men. There has even been a report from [Commander Kane].");
 	}
 	elsif ($text=~/commander kane/i) {
-		quest::say("Kane Bayle is the Commander of the Qeynos Guard. He has found it advantageous to befriend the Bloodsabers. We share a [" . quest::saylink("common goal") . "]. He assists us in many ways. He has some new information to reveal.  Go and tell him you are a Bloodsaber. Do not speak with him while he is [" . quest::saylink("on duty") . "]!!");
+		quest::say("Kane Bayle is the Commander of the Qeynos Guard. He has found it advantageous to befriend the Bloodsabers. We share a [common goal]. He assists us in many ways. He has some new information to reveal.  Go and tell him you are a Bloodsaber. Do not speak with him while he is [on duty]!!");
 	}
 	elsif ($text=~/common goal/i) {
 		quest::say("Kane Bayle and the leaders of this shrine all wish to overthrow the rule of Antonius Bayle. He, for power, and we for the glory of Bertoxxulous. From this city, our diseased lord shall appear and tread across the land spitting death from his mouth and deforming the land. His glory shall be eternal!");

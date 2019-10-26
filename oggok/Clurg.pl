@@ -1,12 +1,12 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hello, friend. Have a drink. I have some [" . quest::saylink("unique drinks") . "]. Try one. And remember. You get rowdy, the [" . quest::saylink("Bouncers") . "] crush you.");
+		quest::say("Hello, friend. Have a drink. I have some [unique drinks]. Try one. And remember. You get rowdy, the [Bouncers] crush you.");
 	}
 	if ($text=~/unique drinks/i) {
-		quest::say("I have been all over Norrath and even served with some very great [" . quest::saylink("barkeeps in Freeport") . "]. I am the creator of both [" . quest::saylink("Flaming Clurg") . "] and Ogre Swill.");
+		quest::say("I have been all over Norrath and even served with some very great [barkeeps in Freeport]. I am the creator of both [Flaming Clurg] and Ogre Swill.");
 	}
 	if ($text=~/barkeeps in freeport/i) {
-		quest::say("Yes. I have journeyed to many taverns, but it was in Freeport that I acquired most of my art. I compiled all my drink recipes in a [" . quest::saylink("special book") . "]");
+		quest::say("Yes. I have journeyed to many taverns, but it was in Freeport that I acquired most of my art. I compiled all my drink recipes in a [special book]");
 	}
 	if ($text=~/special book/i) {
 		#:: Match if faction is Amiable or better
@@ -19,10 +19,10 @@ sub EVENT_SAY {
 		}
 	} 
 	if ($text=~/bouncers/i) {
-		quest::say("The Bouncers were organized by me. As I traveled to many of the world's taverns I encountered great enforcers called bouncers. It was their duty to keep order amongst chaos. When I returned and rose to greatness after the creation of the [" . quest::saylink("Flaming Clurg") . "]. I organized the Oggok Bouncers to keep order amongst the [" . quest::saylink("rival guilds") . "].");
+		quest::say("The Bouncers were organized by me. As I traveled to many of the world's taverns I encountered great enforcers called bouncers. It was their duty to keep order amongst chaos. When I returned and rose to greatness after the creation of the [Flaming Clurg]. I organized the Oggok Bouncers to keep order amongst the [rival guilds].");
 	}
 	if ($text=~/flaming clurg/i) {
-		quest::say("The Flaming Clurg was my greatest creation. It brought me great respect in Oggok. Unfortunately, I have heard tales of an [" . quest::saylink("imposter drink") . "].");
+		quest::say("The Flaming Clurg was my greatest creation. It brought me great respect in Oggok. Unfortunately, I have heard tales of an [imposter drink].");
 	}
 	if ($text=~/imposter drink/i) {
 		#:: Match if faction is Amiable or better

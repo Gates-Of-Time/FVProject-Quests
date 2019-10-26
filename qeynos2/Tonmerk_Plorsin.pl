@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hello, child. Welcome to the Temple of Life. Here, you may pay homage to the [" . quest::saylink("Prime Healer") . "], [" . quest::saylink("Rodcet Nife") . "]. If you are in need of [" . quest::saylink("healing") . "] or require me to [" . quest::saylink("cure disease") . "] or [" . quest::saylink("cure poison") . "], please inform me. I am the resident healer of all Qeynos citizens.");
+		quest::say("Hello, child. Welcome to the Temple of Life. Here, you may pay homage to the [Prime Healer], [Rodcet Nife]. If you are in need of [healing] or require me to [cure disease] or [cure poison], please inform me. I am the resident healer of all Qeynos citizens.");
 	}
 	elsif (($text=~/prime healer/i) || ($text=~/rodcet nife/i)) {
-		quest::say("He is the sustaining force of all life.  It is in honor of Him that the Temple of Life was built.  Engineered with the help of the [" . quest::saylink("Academy of Arcane Science") . "].");
+		quest::say("He is the sustaining force of all life.  It is in honor of Him that the Temple of Life was built.  Engineered with the help of the [Academy of Arcane Science].");
 	}
 	elsif ($text=~/healing/i) {
 		quest::say("You must pay a tribute of five gold coins before I perform the binding of your wounds.");
@@ -15,10 +15,10 @@ sub EVENT_SAY {
 		quest::say("To cast the poison from your body I require one snake fang. The fang will contain a hint of poison which will help me focus my casting.");
 	}
 	elsif ($text=~/academy of arcane science/i) {
-		quest::say("The Academy of Arcane Science is the greatest school of magic in Antonica. It houses a wealth of resources and knowledge pertaining to any of the circles of magic. It is also a marvel of magical engineering. If you should ever visit Freeport, be sure to let me know. I seek a faithful cleric to [" . quest::saylink("pickup a reagent") . "].");
+		quest::say("The Academy of Arcane Science is the greatest school of magic in Antonica. It houses a wealth of resources and knowledge pertaining to any of the circles of magic. It is also a marvel of magical engineering. If you should ever visit Freeport, be sure to let me know. I seek a faithful cleric to [pickup a reagent].");
 	}
 	elsif (($text=~/pickup a reagent/i) || ($text=~/pick up a reagent/i)) {
-		quest::say("That would be grand!! It is a long journey to Freeport. I am lucky to find one who can endure the trip. Go to Freeport and seek out the Temple of Marr. Within, you shall find a cleric named [" . quest::saylink("Serna Tasknon") . "]. Give her this flask. It is an inert potion which she can use. In exchange she will give you the [" . quest::saylink("shark powder") . "] to return to me. Do this and I shall grant you the ability to call upon the power of life and smite thy foes.");
+		quest::say("That would be grand!! It is a long journey to Freeport. I am lucky to find one who can endure the trip. Go to Freeport and seek out the Temple of Marr. Within, you shall find a cleric named [Serna Tasknon]. Give her this flask. It is an inert potion which she can use. In exchange she will give you the [shark powder] to return to me. Do this and I shall grant you the ability to call upon the power of life and smite thy foes.");
 		#:: Give a 13983 - Inert Potion
 		quest::summonitem(13983);
 	}

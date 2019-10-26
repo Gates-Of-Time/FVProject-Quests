@@ -1,11 +1,11 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings!  Allow me to introduce myself.  I am Marshal Ghobber Truppack.  Marshal of the Great Wall Patrol.  Are you [" . quest::saylink("new to the squad") . "]?");
+		quest::say("Greetings!  Allow me to introduce myself.  I am Marshal Ghobber Truppack.  Marshal of the Great Wall Patrol.  Are you [new to the squad]?");
 	}
 	if ($text=~/new to the squad/i) {
 		#:: Match if faction is better than indifferent
 		if ($faction < 5) {
-			quest::say("Great!!! We require more deputies in this squad. We are suffering great losses to the [" . quest::saylink("new threat") . "]. Welcome to the Great Wall Patrol where our motto is, 'United we shall defend.' It will be some time before you can earn your squad ring - first you must prove your strength in battle. Report to the squad leader. He is Deputy Budo. You can find him at the Great Wall of Serilis in the Misty Thicket. Go to him at once and tell him you are reporting for duty.");
+			quest::say("Great!!! We require more deputies in this squad. We are suffering great losses to the [new threat]. Welcome to the Great Wall Patrol where our motto is, 'United we shall defend.' It will be some time before you can earn your squad ring - first you must prove your strength in battle. Report to the squad leader. He is Deputy Budo. You can find him at the Great Wall of Serilis in the Misty Thicket. Go to him at once and tell him you are reporting for duty.");
 		}
 		#:: Match if faction is indifferent
 		elsif ($faction == 5) {

@@ -3,7 +3,7 @@ sub EVENT_SAY {
 		quest::say("Greetings. $name!  You look like you could use some new footwear.");
 	}
 	elsif ($text=~/treant wood/i) {
-		quest::say("What is all this talk of Treant Wood? I can get you some. In about two months, I shall have a new stock. Perhaps I may have some to trade... if you do me a [" . quest::saylink("favor") . "]...");
+		quest::say("What is all this talk of Treant Wood? I can get you some. In about two months, I shall have a new stock. Perhaps I may have some to trade... if you do me a [favor]...");
 	}
 	elsif ($text=~/favor/i) {
 		quest::say("I will be glad to part with some Treant Wood for an Odus Pearl from the waters surrounding Erudin. On second thought... make that four Odus Pearls.");

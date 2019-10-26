@@ -5,7 +5,7 @@ sub EVENT_SAY {
 	if ($text=~/new dishwasher/i) {
 		#:: Match if faction is better than indifferent
 		if ($faction < 5) {
-			quest::say("Dishwasher, huh?  You must not mind getting your feet wet then, huh?  Well, I do have a job for you.  It seems one of our younger employees got a little nevous around a Deputy and ditched his um..  recent purchase into the river.  We sent the fool after it but ol' [" . quest::saylink("Chomper") . "] got him.  He said he had dropped it off the docks but the currents might have moved it from there.  It should be in an old pouch.  Return the merchandise to me.  Well?  Get going!");
+			quest::say("Dishwasher, huh?  You must not mind getting your feet wet then, huh?  Well, I do have a job for you.  It seems one of our younger employees got a little nevous around a Deputy and ditched his um..  recent purchase into the river.  We sent the fool after it but ol' [Chomper] got him.  He said he had dropped it off the docks but the currents might have moved it from there.  It should be in an old pouch.  Return the merchandise to me.  Well?  Get going!");
 		}
 		#:: Match if faction is indifferent
 		elsif ($faction == 5) {
@@ -37,7 +37,7 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(13785 => 1 )) {
 		#:: Match if faction is better than indifferent
 		if ($faction < 5) {		
-			quest::say("What is this?  The pouch is empty!  Where is the Ruby?!  What do you mean you don't have it?  Oh no.  I bet [" . quest::saylink("Chomper") . "] swallowed it!  Get it back and bring it to me.");
+			quest::say("What is this?  The pouch is empty!  Where is the Ruby?!  What do you mean you don't have it?  Oh no.  I bet [Chomper] swallowed it!  Get it back and bring it to me.");
 			#:: Ding!
 			quest::ding();
 			#:: Give a moderate amount of experience

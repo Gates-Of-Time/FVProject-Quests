@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("May the power of Underfoot be with you. Welcome. I am here to serve the will of the king as should you. If you [" . quest::saylink("need healing") . "], then speak. Or perhaps you are here to [" . quest::saylink("return skunk glands") . "]?");
+		quest::say("May the power of Underfoot be with you. Welcome. I am here to serve the will of the king as should you. If you [need healing], then speak. Or perhaps you are here to [return skunk glands]?");
 	}
 	if ($text=~/need healing/i) {
 		quest::say("Before the power of Underfoot can attempt to bind your wounds you must pay tribute. Three gold coins!!");

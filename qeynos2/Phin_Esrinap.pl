@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hello, my name is Phin. Practice, practice, practice.. That's my motto. It is my responsibility to train our members, and help them to advance their skills and abilities. I also reward our members with colored [" . quest::saylink("headbands") . "] for completing certain tasks.");
+		quest::say("Hello, my name is Phin. Practice, practice, practice.. That's my motto. It is my responsibility to train our members, and help them to advance their skills and abilities. I also reward our members with colored [headbands] for completing certain tasks.");
 	}
 	elsif ($text=~/headbands/i) {
-		quest::say("Yes, I give the [" . quest::saylink("White") . "], [" . quest::saylink("Yellow") . "], and [" . quest::saylink("Orange") . "] Headbands to our newer members, and Togahn gives out Red, Purple, and Blue Headbands to our elder members.");
+		quest::say("Yes, I give the [White], [Yellow], and [Orange] Headbands to our newer members, and Togahn gives out Red, Purple, and Blue Headbands to our elder members.");
 	}
 	elsif ($text=~/tomer/i) {
 		quest::say("Tomer? I think Seta needs someone to go find him... Go ask her.");
@@ -11,7 +11,7 @@ sub EVENT_SAY {
 	elsif ($text=~/white/i) {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
-			quest::say("That is our training headband.. Beginning students can earn this by slaying four [" . quest::saylink("gnoll") . "] pups, and bringing their scalps back to me.");
+			quest::say("That is our training headband.. Beginning students can earn this by slaying four [gnoll] pups, and bringing their scalps back to me.");
 		}
 		else {
 			quest::say("I have been watching you, and appreciate the help you've given to the brothers and sisters of the Silent Fist. But, I feel that such a vital matter should be left to one of our more trusted members.");

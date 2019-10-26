@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hello, $name. I am Sneed Galliway, merchant and citizen. I run the only general store in all of Qeynos, serving the needs of the many adventurers who call Qeynos home. If only one of them would take the time to help me with my er... [" . quest::saylink("problem") . "]...");
+		quest::say("Hello, $name. I am Sneed Galliway, merchant and citizen. I run the only general store in all of Qeynos, serving the needs of the many adventurers who call Qeynos home. If only one of them would take the time to help me with my er... [problem]...");
 	}
 	elsif ($text=~/problem/i) {
 		quest::say("Shhh.. Keep it down. It seems I have a little rodent problem in my store. A mangy rat keeps digging into my crates of rations. He looks as if he is diseased. If you help me by killing this pest, I will make it worth your while. Bring me his head as proof it is done.");

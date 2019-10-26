@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("State your business!!  I have no time for chitchat.  Well..  speak up, toad!!  What?!!..  Have you come here to [" . quest::saylink("return goblin beads") . "]?");
+		quest::say("State your business!!  I have no time for chitchat.  Well..  speak up, toad!!  What?!!..  Have you come here to [return goblin beads]?");
 	}
 	if ($text=~/return goblin beads/i) {
 		#:: Match if faction is amiable or better
@@ -66,7 +66,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match if faction is amiable or better and a 13741 - Ogre Head and 13740 - Ogre Head
 	elsif (($faction <= 4) && (plugin::takeItems(13741 => 1, 13740 => 1))) {
-		quest::say("I underestimated you.  You are truly a great warrior.  I reward you with a piece of my own Bloodforge armor.  You would be fine Bloodforge Brigade material!  How would you like to [" . quest::saylink("take a little trip") . "] in the name of the Bloodforge Brigade?");
+		quest::say("I underestimated you.  You are truly a great warrior.  I reward you with a piece of my own Bloodforge armor.  You would be fine Bloodforge Brigade material!  How would you like to [take a little trip] in the name of the Bloodforge Brigade?");
 		#:: Reward a 3090 - Bloodforge Helm, 3091 - Bloodforge Mail, 3092 - Bloodforge Armplates, 3093 - Bloodforge Bracers, 3094 - Bloodforge Gauntlets, 3095 - Bloodforge Legplates, 3096 - Bloodforge Boots
 		quest::summonitem(quest::ChooseRandom(3090,3090,3090,3090,3090,3090,3091,3092,3093,3094,3095,3096));
 		#:: Ding!

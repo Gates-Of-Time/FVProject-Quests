@@ -1,15 +1,15 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Welcome to the Temple of Life, $name.  It is here that you may pay tribute to the Prime Healer. Does not your heart beat with the sound of life? It is He who makes it so. Do not let the hand of Bertoxxulous and his [" . quest::saylink("new disease") . "] lay upon your soul or, like so many, you shall meet your fate at the end of my sword!");
+		quest::say("Welcome to the Temple of Life, $name.  It is here that you may pay tribute to the Prime Healer. Does not your heart beat with the sound of life? It is He who makes it so. Do not let the hand of Bertoxxulous and his [new disease] lay upon your soul or, like so many, you shall meet your fate at the end of my sword!");
 	}
 	elsif ($text=~/new disease/i) {
-		quest::say("The new disease I speak of is called the [" . quest::saylink("Bloodsabers") . "]. They are the loyal followers of Bertoxxulous and as such have been condemned by our temple. Do you wish to [" . quest::saylink("join the fight") . "]?");
+		quest::say("The new disease I speak of is called the [Bloodsabers]. They are the loyal followers of Bertoxxulous and as such have been condemned by our temple. Do you wish to [join the fight]?");
 	}
 	elsif ($text=~/bloodsabers/i) {
 		quest::say("If I knew where they were, there would be no reason to employ your talents. They would be extinct!");
 	}
 	elsif ($text=~/join the fight/i) {
-		quest::say("Then seek out those who worship the Plaguebringer. End their threat!! Each member has upon them the mark of the Bloodsabers, a [" . quest::saylink("rat-shaped ring") . "]. I shall reward all those who return such rings to me.");
+		quest::say("Then seek out those who worship the Plaguebringer. End their threat!! Each member has upon them the mark of the Bloodsabers, a [rat-shaped ring]. I shall reward all those who return such rings to me.");
 	}
 	elsif ($text=~/rat-shaped ring/i) {
 		#:: Made up

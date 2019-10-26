@@ -3,7 +3,7 @@ sub EVENT_SAY {
 		quest::say("Good day to you. Your city of stone walls is quite magnificent. Still, the glory of Surefall Glade puts this city to shame.");
 	}
 	elsif ($text=~/assassin/i) {
-		quest::say("What!!?  Must be an Unkempt Druid Assassin nearby!!  Find him and slay him.  I am sure he stands to make a FORTUNE!  I believe the assassin may be carrying some sort of [" . quest::saylink("black wood chip") . "].");
+		quest::say("What!!?  Must be an Unkempt Druid Assassin nearby!!  Find him and slay him.  I am sure he stands to make a FORTUNE!  I believe the assassin may be carrying some sort of [black wood chip].");
 		#:: Spawn one and only one South Qeynos >> Raffel_Minnmorn (1179) on grid 68
 		quest::unique_spawn(1179, 68, 0, -100, 222, 3, 128);
 	}

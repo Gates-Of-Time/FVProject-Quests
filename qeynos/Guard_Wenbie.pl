@@ -14,7 +14,7 @@ sub EVENT_COMBAT {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hello, $name. What brings you to Qeynos? Must be the mighty fine muffins over at [" . quest::saylink("Voleen's Bakery") . "]. I just love those muffins!");
+		quest::say("Hello, $name. What brings you to Qeynos? Must be the mighty fine muffins over at [Voleen's Bakery]. I just love those muffins!");
 	}
 	elsif ($text=~/voleen/i) {
 		quest::say("Oh, it will be easier for us both if I just show you where it is. Follow me. But be quick about it, because I have to get back to my patrol.");

@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Need new members we do not. Powerful enough are we with Grevak. Still, peons needed. Are you a [" . quest::saylink("new peon") . "] or are you an [" . quest::saylink("outsider") . "]? Speak up!! Fool!! No time Grevak has!!");
+		quest::say("Need new members we do not. Powerful enough are we with Grevak. Still, peons needed. Are you a [new peon] or are you an [outsider]? Speak up!! Fool!! No time Grevak has!!");
 	}
 	if ($text=~/new peon/i) {
 		#:: Match if faction is Indifferent or better

@@ -3,7 +3,7 @@ sub EVENT_SAY {
 		quest::say("Hail, $name! Spend your time wisely in the city of Qeynos. Do not let your mind wander to thoughts of bravado or crime. My guards can easily put to rest any outbreaks. Good day to you, citizen!");
 	}
 	elsif ($text=~/executioner/i) {
-		quest::say("The executioner is quite an exceptional person. [" . quest::saylink("Field Marshal Ralem") . "] happened upon her while on a secret operation in Everfrost Peaks. They fought side by side against some creature the locals named Iceberg. The creature escaped. Ralem was grateful and eventually recruited her when she decided to separate from the guards of Halas.");
+		quest::say("The executioner is quite an exceptional person. [Field Marshal Ralem] happened upon her while on a secret operation in Everfrost Peaks. They fought side by side against some creature the locals named Iceberg. The creature escaped. Ralem was grateful and eventually recruited her when she decided to separate from the guards of Halas.");
 	}
 	elsif ($text=~/field marshal ralem/i) {
 		quest::say("Field Marshall Ralem Christof is in charge of a brigade of roving rangers, druids and warriors. He hails from the Jaggedpine. He is quite an exceptional ranger. No one is ever really sure where he is. His brigade is constantly on the move.");
@@ -22,7 +22,7 @@ sub EVENT_SIGNAL {
 sub EVENT_ITEM {
 	#:: Match a 18815 - Tattered Note
 	if (plugin::takeItems(18815 => 1)) {
-		quest::say("I heard you were on your way. I have called for the state [" . quest::saylink("executioner") . "]. She should be on her way now. She will deal with our friend, McNeal Jocub. Thank you for your help, citizen.");
+		quest::say("I heard you were on your way. I have called for the state [executioner]. She should be on her way now. She will deal with our friend, McNeal Jocub. Thank you for your help, citizen.");
 		#:: Give a 13305 - Medal of Merit
 		quest::summonitem(13305);
 		#:: Ding!

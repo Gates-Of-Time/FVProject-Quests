@@ -1,19 +1,19 @@
 sub EVENT_WAYPOINT_ARRIVE {
 	#:: Match if waypoint is 16, 43 or 70
 	if (($wp == 16) || ($wp == 43) || ($wp == 70)) {
-		quest::say("Psst.. Hey, you there.. Yeah, you.. You need some [" . quest::saylink("blank scroll sheets") . "].. I just got a special shipment of things in.. Come on, it's just what you're looking for.. I know you.");
+		quest::say("Psst.. Hey, you there.. Yeah, you.. You need some [blank scroll sheets].. I just got a special shipment of things in.. Come on, it's just what you're looking for.. I know you.");
 	}
 }
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Oh, hey there.. How ya doing? My name's Den. I work for ol' [" . quest::saylink("Rohand") . "] here, unloading the [" . quest::saylink("shipments") . "] that come in from overseas.");
+		quest::say("Oh, hey there.. How ya doing? My name's Den. I work for ol' [Rohand] here, unloading the [shipments] that come in from overseas.");
 	}
 	elsif ($text=~/rohand/i) {
-		quest::say("Ol' Captain Rohand is the owner of the Mermaid's Lure. He trades goods with sailors and sea [" . quest::saylink("merchants") . "]. I think that old man was even born at sea.. And he's got more stories than fish have scales.");	
+		quest::say("Ol' Captain Rohand is the owner of the Mermaid's Lure. He trades goods with sailors and sea [merchants]. I think that old man was even born at sea.. And he's got more stories than fish have scales.");	
 	}
 	elsif (($text=~/shipments/i) || ($text=~/merchants/i)) {
-		quest::say("Yeah.. We get merchants and traders with goods from here to [" . quest::saylink("Odus") . "].");
+		quest::say("Yeah.. We get merchants and traders with goods from here to [Odus].");
 	}
 	elsif ($text=~/blank scroll sheets/i) {
 		quest::say("Blank scroll sheets, huh? You know, there seems to be a shortage of these around here lately. But, hey friend, ol' Denny-boy here would never steer you wrong. I'll sell you some for 2 gold. I know, I'm too kind.");

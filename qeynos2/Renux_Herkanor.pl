@@ -16,7 +16,7 @@ sub EVENT_WAYPOINT_ARRIVE {
 sub EVENT_SIGNAL {
 	#:: Match a signal "1" from /qeynos2/Hanns_Krieghor.pl
 	if ($signal == 1) {
-		quest::say("Ok, I'll send someone out to meet [" . quest::saylink("Lomarc") . "] behind the [" . quest::saylink("Mermaid's Lure") . "] tonight.");
+		quest::say("Ok, I'll send someone out to meet [Lomarc] behind the [Mermaid's Lure] tonight.");
 	}
 	#:: Match a signal "1" from /qeynos2/Hanns_Krieghor.pl
 	elsif ($signal == 2) {
@@ -31,7 +31,7 @@ sub EVENT_SAY {
 	elsif ($text=~/lomarc/i) {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
-			quest::say("Lomarc? He's a small time smuggler who runs from here to Odus. He got sloppy on his last run, and now the guards are on to him. We need to have someone [" . quest::saylink("meet him behind the Mermaid's Lure") . "] tonight to pick up a package.");
+			quest::say("Lomarc? He's a small time smuggler who runs from here to Odus. He got sloppy on his last run, and now the guards are on to him. We need to have someone [meet him behind the Mermaid's Lure] tonight to pick up a package.");
 		}
 		else {
 			quest::say("Heh... With all you've done, I'm surprised you're still alive.");

@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail, noble $name. Remember to spread the words of Karana throughout the faraway lands on which you shall tread. We of the Temple of Thunder are looking for new members - good people who [" . quest::saylink("wish to join the cause") . "]. Let the call go out!");
+		quest::say("Hail, noble $name. Remember to spread the words of Karana throughout the faraway lands on which you shall tread. We of the Temple of Thunder are looking for new members - good people who [wish to join the cause]. Let the call go out!");
 	}
 	elsif ($text=~/join the cause/i) {
-		quest::say("That IS good news! If you walk the righteous path of the Rainkeeper, Karana, then you are truly noble. I have need of someone like that. I must find someone to perform a [" . quest::saylink("dangerous mission") . "] or perhaps you would rather seek out the [" . quest::saylink("Rat King") . "] or [" . quest::saylink("crush the undead") . "].");
+		quest::say("That IS good news! If you walk the righteous path of the Rainkeeper, Karana, then you are truly noble. I have need of someone like that. I must find someone to perform a [dangerous mission] or perhaps you would rather seek out the [Rat King] or [crush the undead].");
 	}
 	elsif ($text=~/dangerous mission/i) {
 		quest::say("You must go into the catacombs and find a man named Drosco Finlayer. Pass him this note. He has been deep undercover in the Shrine of Bertoxxulous and will have directions to that vile place. To do this will surely show your allegiance to this temple.");

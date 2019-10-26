@@ -9,20 +9,20 @@ sub EVENT_TIMER {
 		my $randomChance = quest::ChooseRandom(1,2,3,4,5);
 		#:: Match if greater than 4 (20 percent chance)
 		if ($randomChance > 4) {
-			quest::say("Clean the [" . quest::saylink("aqueducts") . "] they tell me. Peh, they don't pay me enough to climb into that filth!");
+			quest::say("Clean the [aqueducts] they tell me. Peh, they don't pay me enough to climb into that filth!");
 		}
 	}
 }
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings, good $name.  My name is Zamel and I have the much coveted duty of pulling sludge up out of the pools and [" . quest::saylink("aqueducts") . "] of Qeynos..");
+		quest::say("Greetings, good $name.  My name is Zamel and I have the much coveted duty of pulling sludge up out of the pools and [aqueducts] of Qeynos..");
 	}
 	elsif ($text=~/aqueducts/i) {
-		quest::say("Aye, the aqueducts are a horrible place. I have heard rumors of horrible [" . quest::saylink("beasts") . "] who live under the city in the water and just the other day, a child playing in the water just up and disappeared!");
+		quest::say("Aye, the aqueducts are a horrible place. I have heard rumors of horrible [beasts] who live under the city in the water and just the other day, a child playing in the water just up and disappeared!");
 	}
 	elsif ($text=~/beast/i) {
-		quest::say("I know nothing of what or where they may be, just rumors, friend. However, should you foolishly choose to enter the waters to brave the possibilities and return with some evidence of the [" . quest::saylink("child's") . "] fate, I would be most appreciative.");
+		quest::say("I know nothing of what or where they may be, just rumors, friend. However, should you foolishly choose to enter the waters to brave the possibilities and return with some evidence of the [child's] fate, I would be most appreciative.");
 	}
 	elsif ($text=~/child's/i) {
 		quest::say("The daughter of one of our own guardsmen is missing. He has offered me a reward for any information about her disappearance. So, if you find out anything, let me know and I will cut you in on the reward.");

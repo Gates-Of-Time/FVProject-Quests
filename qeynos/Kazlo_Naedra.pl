@@ -1,11 +1,11 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail, $name.  I'm Kazlo Naedra of the Order of Three.  We always seem to be running out of [" . quest::saylink("supplies") . "] around here, which is, of course, very distracting to our studies.");
+		quest::say("Hail, $name.  I'm Kazlo Naedra of the Order of Three.  We always seem to be running out of [supplies] around here, which is, of course, very distracting to our studies.");
 	}
 	elsif ($text=~/supplies/i) {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
-			quest::say("Yes, we're almost out of [" . quest::saylink("blank scroll sheets") . "]. Gahlith will be very upset, unless I can replenish our inventory soon.");
+			quest::say("Yes, we're almost out of [blank scroll sheets]. Gahlith will be very upset, unless I can replenish our inventory soon.");
 		}
 		else {
 			quest::say("The Order of Three has been monitoring your recent activities, and we are appalled by you and your actions! Now, begone!");

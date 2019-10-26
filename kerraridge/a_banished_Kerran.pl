@@ -10,7 +10,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 12369 - Puab's Token
 	if (plugin::check_handin(\%itemcount, 12369 => 1)) {
-		quest::say("Ashen Order!!  Prrr.. My order.  I have been expecting one of us.  Prrr.. Help me rejoin my native land.  Take this box.  Combine all the [" . quest::saylink("remains of Thipt") . "] within the box and return it to me.  This shall aid me in my redemption.");
+		quest::say("Ashen Order!!  Prrr.. My order.  I have been expecting one of us.  Prrr.. Help me rejoin my native land.  Take this box.  Combine all the [remains of Thipt] within the box and return it to me.  This shall aid me in my redemption.");
 		#:: Give a 17985 - Box With Pawprints
 		quest::summonitem(17985);
 	}

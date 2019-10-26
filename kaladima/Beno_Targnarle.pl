@@ -1,11 +1,11 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Step forth, young $name! I heard that you have come of age! The spirit of adventure has entered your body. That is good. Go and speak with the others. They shall help you. I am afraid I have no time to spend conversing. There is much I have to [" . quest::saylink("ponder") . "].");
+		quest::say("Step forth, young $name! I heard that you have come of age! The spirit of adventure has entered your body. That is good. Go and speak with the others. They shall help you. I am afraid I have no time to spend conversing. There is much I have to [ponder].");
 	}
 	elsif ($text=~/ponder/i) {
 		#:: Match if faction is amiable or better
 		if ($faction <= 4) {
-			quest::say("Must you know everyone's business? Hmm.. Maybe you can be of assistance. You see, I have been instructed by Furtog to tend to a matter of extreme urgency, which is keeping me from clearing the mines of rats. Will you assist and [" . quest::saylink("exterminate the rats") . "]?");
+			quest::say("Must you know everyone's business? Hmm.. Maybe you can be of assistance. You see, I have been instructed by Furtog to tend to a matter of extreme urgency, which is keeping me from clearing the mines of rats. Will you assist and [exterminate the rats]?");
 		}
 		#:: Match if faction is indifferent or better
 		elsif ($faction <= 5) {
@@ -18,7 +18,7 @@ sub EVENT_SAY {
 	elsif ($text=~/exterminate the rats/i) {
 		#:: Match if faction is amiable or better
 		if ($faction <= 4) {
-			quest::say("Very good! I shall reward you for every four giant rat pelts returned to me. And be on the lookout for a [" . quest::saylink("metal rats") . "]!");
+			quest::say("Very good! I shall reward you for every four giant rat pelts returned to me. And be on the lookout for a [metal rats]!");
 		}
 		#:: Match if faction is indifferent or better
 		elsif ($faction <= 5) {
@@ -44,7 +44,7 @@ sub EVENT_SAY {
 	elsif ($text=~/important stormguard matter/i) {
 		#:: Match if faction is amiable or better
 		if ($faction <= 4) {
-			quest::say("I am apprehensive about sending one who is so young out into the world, but I have a good feeling about you, $name. Someone has stolen the [" . quest::saylink("Eye of Stormhammer") . "]. You must journey to Antonica and go to a place called Highpass Hold. The rogue who has it is locked up in the prison. We have arranged for his extradition to Kaladim. Please give the jail clerk this note of release.");
+			quest::say("I am apprehensive about sending one who is so young out into the world, but I have a good feeling about you, $name. Someone has stolen the [Eye of Stormhammer]. You must journey to Antonica and go to a place called Highpass Hold. The rogue who has it is locked up in the prison. We have arranged for his extradition to Kaladim. Please give the jail clerk this note of release.");
 			#:: Give a 18935 - Sealed Note
 			quest::summonitem(18935);
 		}
@@ -59,7 +59,7 @@ sub EVENT_SAY {
 	elsif ($text=~/eye of stormhammer/i) {
 		#:: Match if faction is indifferent or better
 		if ($faction <= 5) {
-			quest::say("The great statue of Kazon Stormhammer was once encrusted with two great gems from the mines of Butcherblock. So big were they that it took the magic of the high elves to assist us in lifting them to the statue's face. In the year 2995, somehow, someone stole one of the eyes. We decided to keep the remaining eye in the vault. Now, even that has been stolen from us! Only the most trusted warriors may be involved in this [" . quest::saylink("important Stormguard matter") . "].");
+			quest::say("The great statue of Kazon Stormhammer was once encrusted with two great gems from the mines of Butcherblock. So big were they that it took the magic of the high elves to assist us in lifting them to the statue's face. In the year 2995, somehow, someone stole one of the eyes. We decided to keep the remaining eye in the vault. Now, even that has been stolen from us! Only the most trusted warriors may be involved in this [important Stormguard matter].");
 		}
 		else {
 			quest::say("Your shifty eyes tell me that you are no ally of the Stormguard.");
@@ -88,7 +88,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match if faction is amiable or better and four 13054 - Giant Rat Pelt
 	if (($faction <= 4) && (plugin::takeItems(13054 => 4))) {
-		quest::say("Great work, young one! We shall soon rid our mines of these pests. Keep a lookout for that [" . quest::saylink("metal rat") . "]. Here is a small reward for such fine work. Soon, you shall be know as Kaladim's resident exterminator.");
+		quest::say("Great work, young one! We shall soon rid our mines of these pests. Keep a lookout for that [metal rat]. Here is a small reward for such fine work. Soon, you shall be know as Kaladim's resident exterminator.");
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
@@ -106,7 +106,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match if faction is amiable or better and a 13282 - Scrap Metal
 	elsif (($faction <= 4) && (plugin::takeItems(13282 => 1))) {
-		quest::say("I thank you, my friend. I was to destroy this metal monster months ago. I could never find him. Please accept this reward for such good service. Oh yes.. And take this card to a man named [" . quest::saylink("Doran Vargnus") . "]. He is a fine blacksmith. I am sure he will reward you with one of his finest suits of armor. Perhaps you may now assist in an [" . quest::saylink("important Stormguard matter") . "].");
+		quest::say("I thank you, my friend. I was to destroy this metal monster months ago. I could never find him. Please accept this reward for such good service. Oh yes.. And take this card to a man named [Doran Vargnus]. He is a fine blacksmith. I am sure he will reward you with one of his finest suits of armor. Perhaps you may now assist in an [important Stormguard matter].");
 		#:: Give a 13995 - Knight
 		quest::summonitem(13995);
 		#:: Ding!
@@ -126,7 +126,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match if faction is amiable or better and a 13321 - Eye of Stormhammer
 	elsif (($faction <= 4) && (plugin::takeItems(13321 => 1))) {
-		quest::say("You have returned the Eye of Stormhammer!! We almost gave up on your return. You do not look like the young pint you once were. You have grown. For your great deed the Stormguard would like to offer you this as a reward. It was designed by the ancient Stormguard hero, [" . quest::saylink("Jendl Mizebrite") . "]. It is a warriors true weapon. May it help you on your way to becoming a great warrior.");
+		quest::say("You have returned the Eye of Stormhammer!! We almost gave up on your return. You do not look like the young pint you once were. You have grown. For your great deed the Stormguard would like to offer you this as a reward. It was designed by the ancient Stormguard hero, [Jendl Mizebrite]. It is a warriors true weapon. May it help you on your way to becoming a great warrior.");
 		#:: Give a 5415 - Avenger Battle Axe
 		quest::summonitem(5415);
 		#:: Ding!

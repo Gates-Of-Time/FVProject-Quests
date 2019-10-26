@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hi, do ya likes eatin', or puhaps Hukulk sent ya? I makes many gud eats. Doh, sum I can'ts make cause sum tings I ain't gots. I cud makes some berry tastie stuff wid only [" . quest::saylink("sum wolf meat") . "].");
+		quest::say("Hi, do ya likes eatin', or puhaps Hukulk sent ya? I makes many gud eats. Doh, sum I can'ts make cause sum tings I ain't gots. I cud makes some berry tastie stuff wid only [sum wolf meat].");
 	}
 	elsif ($text=~/sum wolf meat/i) {
 		quest::say("Gets me two wolf meats sos I cans makes me foods. I gib ya sumting.");

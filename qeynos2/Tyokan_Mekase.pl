@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Please look around. We have many items exclusively for the members of the Temple of Life. We also have [" . quest::saylink("scroll strongboxes") . "]. If you are unsure of what an item is, feel free to ask me.");
+		quest::say("Please look around. We have many items exclusively for the members of the Temple of Life. We also have [scroll strongboxes]. If you are unsure of what an item is, feel free to ask me.");
 	}
 	elsif ($text=~/scroll strongbox/i) {
-		quest::say("The scroll strongboxes are merely personal safes. Most of the members use them. I am afraid all are taken, but if you are here to remove a scroll, merely hand me your key and I shall get it for you. I handle all 20 numbered keys and [" . quest::saylink("Whysia") . "] handles all 30 and 40 numbered keys.");
+		quest::say("The scroll strongboxes are merely personal safes. Most of the members use them. I am afraid all are taken, but if you are here to remove a scroll, merely hand me your key and I shall get it for you. I handle all 20 numbered keys and [Whysia] handles all 30 and 40 numbered keys.");
 	}
 	elsif ($text=~/whysia/i) {
 		quest::say("Whysia Flock is the night merchant here at the temple shop. She usually arrives around eight at night or so.");

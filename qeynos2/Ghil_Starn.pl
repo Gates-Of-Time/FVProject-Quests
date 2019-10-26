@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("I'm Ghil.. I used to run a small business before I hooked up with Hanns. Together, we muscled our competition out of Qeynos. But I'm getting too old for the rough stuff anymore, so I just lay low down here and peddle my goods. Anyway, I gotta get back to work and pack up this shipment for ol' [" . quest::saylink("Denny-boy") . "]");
+		quest::say("I'm Ghil.. I used to run a small business before I hooked up with Hanns. Together, we muscled our competition out of Qeynos. But I'm getting too old for the rough stuff anymore, so I just lay low down here and peddle my goods. Anyway, I gotta get back to work and pack up this shipment for ol' [Denny-boy]");
 	}
 	elsif ($text=~/denny/i) {
-		quest::say("Den Magason works for ol' [" . quest::saylink("Captain Rohand") . "] down at the Qeynos docks. I need to find someone to take a [" . quest::saylink("package") . "] to him, so it can be shipped to Erudin.");
+		quest::say("Den Magason works for ol' [Captain Rohand] down at the Qeynos docks. I need to find someone to take a [package] to him, so it can be shipped to Erudin.");
 	}
 	elsif ($text=~/captain rohand/i) {
 		quest::say("Captain Rohand runs the Mermaid's Lure and trades goods with the sea merchants from Odus.");

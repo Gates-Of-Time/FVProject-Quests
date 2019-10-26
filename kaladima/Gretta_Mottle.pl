@@ -1,9 +1,9 @@
 sub EVENT_SAY { 
 	if ($text=~/Hail/i) {
-		quest::say("Greetings. $name.  I'm Gretta Mottle.  Tumpy has been kind enough to let me to set up my bakery in his fine establishment here.  Unfortunately. with that nasty plague corruptin' the crops in the Plains of Karana, things are goin' a bit slow for me.  I keep runnin' out of bread and muffins to sell.  Because of flour bein' easily spoiled now, it takes longer to make 'em just right.  My assistant Buggle is still learnin' how to cook.  Hehe.. All he can make is Meat Pie.  If I don't get any [" . quest::saylink("help to bake") . "] soon I won't be able to keep the supply up with the demand.");
+		quest::say("Greetings. $name.  I'm Gretta Mottle.  Tumpy has been kind enough to let me to set up my bakery in his fine establishment here.  Unfortunately. with that nasty plague corruptin' the crops in the Plains of Karana, things are goin' a bit slow for me.  I keep runnin' out of bread and muffins to sell.  Because of flour bein' easily spoiled now, it takes longer to make 'em just right.  My assistant Buggle is still learnin' how to cook.  Hehe.. All he can make is Meat Pie.  If I don't get any [help to bake] soon I won't be able to keep the supply up with the demand.");
 	}
 	if ($text=~/help to bake/i) {
-		quest::say("Glad to hear it.  Are ye thinkin' of helpin' me to [" . quest::saylink("bake muffins") . "] or did ye want to [" . quest::saylink("fetch some bread") . "] for me?");
+		quest::say("Glad to hear it.  Are ye thinkin' of helpin' me to [bake muffins] or did ye want to [fetch some bread] for me?");
 	}
 	#:: Could not find original dialogue - jwe
 	if ($text=~/bake muffins/i) {

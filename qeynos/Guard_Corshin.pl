@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail, $name!  Guard Corshin Kiniss, at your service. You should be careful in Qeynos after dark. We have had several [" . quest::saylink("bodies") . "] wash up under the docks over the past few weeks. We wouldn't want anything to happen to you.");
+		quest::say("Hail, $name!  Guard Corshin Kiniss, at your service. You should be careful in Qeynos after dark. We have had several [bodies] wash up under the docks over the past few weeks. We wouldn't want anything to happen to you.");
 		#:: Send a signal "5" to South Qeynos >> Guard_Beren (1090) with no delay
 		quest::signalwith(1090,5,0);
 	}

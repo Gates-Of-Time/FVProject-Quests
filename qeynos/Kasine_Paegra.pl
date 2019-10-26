@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("May the blessings of the Rainkeeper protect you in your travels. I am Kasine Paegra, keeper of the [" . quest::saylink("Order of Thunder") . "] medallions.");
+		quest::say("May the blessings of the Rainkeeper protect you in your travels. I am Kasine Paegra, keeper of the [Order of Thunder] medallions.");
 	}
 	elsif ($text=~/order of thunder/i) {
 		quest::say("The Order of Thunder is the medal awarded to a Knight of Thunder who has proven himself superior to the average warrior. All knights and priests of Thunder have one, save for the youngest members. Along with the medal comes great respect. You might say the wearer becomes more charismatic. Should you find one, please return it to Kasine Paegra, unless told otherwise.");

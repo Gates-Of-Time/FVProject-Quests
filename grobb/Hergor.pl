@@ -2,7 +2,7 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		#:: Match if faction is better than indifferent
 		if ($faction < 5) {
-			quest::say("Whats you wants!!  Me great master of da bashers.  Me tinks yooz must be lookin' fer trainin'.  Yooz looks like a weaklin'.  Me train yooz and yooz helps me get fatter.  Well!!  Are yooz gonna [" . quest::saylink("helps Hergor get fatter") . "]?!!");
+			quest::say("Whats you wants!!  Me great master of da bashers.  Me tinks yooz must be lookin' fer trainin'.  Yooz looks like a weaklin'.  Me train yooz and yooz helps me get fatter.  Well!!  Are yooz gonna [helps Hergor get fatter]?!!");
 		}
 		#:: Match if faction is indifferent
 		elsif ($faction == 5) {

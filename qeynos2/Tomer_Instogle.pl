@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Ahhhgggg.. Those mangy [" . quest::saylink("dogs") . "] put up a tough fight.. If I don't make it back to the [" . quest::saylink("Clan House") . "] soon, it'll all be over for me.");
+		quest::say("Ahhhgggg.. Those mangy [dogs] put up a tough fight.. If I don't make it back to the [Clan House] soon, it'll all be over for me.");
 	}
 	elsif (($text=~/dogs/i) || ($text=~/mutts/i)) {
 		quest::say("It's those Darkpaws.. They've beat me pretty badly.. but they'll get theirs soon enough!");
@@ -13,7 +13,7 @@ sub EVENT_SAY {
 		$key = $client->CharacterID() . "-tomer-find";
 		#:: Match if the key exists
 		if (quest::get_data($key)) {
-			quest::say("Oh.. Thank goodness you found me.. I'm lost and weak, those [" . quest::saylink("mutts") . "] are a vicious lot.. Can you carry my [" . quest::saylink("backpack") . "] for me?");
+			quest::say("Oh.. Thank goodness you found me.. I'm lost and weak, those [mutts] are a vicious lot.. Can you carry my [backpack] for me?");
 			#:: Delete the data bucket
 			$key = $client->CharacterID() . "-tomer-find";
 			quest::delete_data($key);
@@ -32,10 +32,10 @@ sub EVENT_SAY {
 			$key = $client->CharacterID() . "-tomer-backpack";
 			#:: Match if the key exists
 			if (quest::get_data($key)) {
-				quest::say("Thank you, friend.. Now, can you [" . quest::saylink("lead me back to Master Seta") . "] of the Silent Fist Clan? ");
+				quest::say("Thank you, friend.. Now, can you [lead me back to Master Seta] of the Silent Fist Clan? ");
 			}
 			else {
-				quest::say("Thank you, friend.. Now, can you [" . quest::saylink("lead me back to Master Seta") . "] of the Silent Fist Clan? ");
+				quest::say("Thank you, friend.. Now, can you [lead me back to Master Seta] of the Silent Fist Clan? ");
 				#:: Give a 20459 - Bag of Provisions
 				quest::summonitem(20459);
 				#:: Data bucket to verify quest has progressed appropriately

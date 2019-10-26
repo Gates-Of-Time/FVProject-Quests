@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings, fine citizen of Qeynos, what can I make for you today?  How about a genuine, handmade [" . quest::saylink("rat fur cap") . "]?  Or maybe a lovely [" . quest::saylink("rat pelt cape") . "]?  Maybe you'd like a necklace?  For a small fee. I can make a nice [" . quest::saylink("snake fang necklace") . "] or a [" . quest::saylink("lucky rat's foot necklace") . "].");
+		quest::say("Greetings, fine citizen of Qeynos, what can I make for you today?  How about a genuine, handmade [rat fur cap]?  Or maybe a lovely [rat pelt cape]?  Maybe you'd like a necklace?  For a small fee. I can make a nice [snake fang necklace] or a [lucky rat's foot necklace].");
 	}
 	elsif ($text=~/rat fur cap/i) {
 		quest::say("Rat fur cap?  You're in luck, that happens to be my specialty, $name.  Just bring me 2 pieces of rat fur and 3 gold, and I'll make one up for you while you wait.");

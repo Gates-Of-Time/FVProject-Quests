@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("What?  What?!!  Are we a [" . quest::saylink("young steel warrior") . "]..  Or another [" . quest::saylink("spectator") . "] for the Arena?");
+		quest::say("What?  What?!!  Are we a [young steel warrior]..  Or another [spectator] for the Arena?");
 	}
 	elsif ($text=~/young steel warrior/i) {
 		#:: Match if faction is Indifferent or worse

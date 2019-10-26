@@ -10,29 +10,29 @@ sub EVENT_WAYPOINT_ARRIVE {
 sub EVENT_SIGNAL {
 	#:: Match signal "1" from /qeynos2/Knargon_Lanenda.pl
 	if (($signal == 1) && ($x == 163) && ($y == 144)) {
-		quest::say("Yeah, whatever, Knarg. If I were you, I wouldn't mess around with [" . quest::saylink("Renux") . "]. She's in tight with [" . quest::saylink("Hanns") . "], and you know how he is.");
+		quest::say("Yeah, whatever, Knarg. If I were you, I wouldn't mess around with [Renux]. She's in tight with [Hanns], and you know how he is.");
 	}
 	#:: Match a signal "2" from /qeynos2/Hanns_Krieghor.pl
 	elsif ($signal == 2) {
-		quest::say("[" . quest::saylink("Rujahn") . "] Tahslek, huh? I've never heard of him, but those bandits seem to have a new leader every month or so.");
+		quest::say("[Rujahn] Tahslek, huh? I've never heard of him, but those bandits seem to have a new leader every month or so.");
 		#:: Send a signal "2" to North Qeynos >> Hanns_Krieghor (2074) with no delay
 		quest::signalwith(2074, 2, 0);
 	}
 	#:: Match a signal "3" from /qeynos2/Hanns_Krieghor.pl
 	elsif ($signal == 3) {
-		quest::say("I'll send one of our best men to Highpass and eliminate [" . quest::saylink("Rujahn") . "]'s spy.");
+		quest::say("I'll send one of our best men to Highpass and eliminate [Rujahn]'s spy.");
 	}
 }
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hey..  My name's Zannsin, but you can call me [" . quest::saylink("Zan") . "].");
+		quest::say("Hey..  My name's Zannsin, but you can call me [Zan].");
 	}
 	elsif ($text=~/zan/i) {
 		quest::say("That's what they call me. Now quit bugging me, I have work to do.");
 	}
 	elsif ($text=~/renux/i) {
-		quest::say("She is second in command around here. She and [" . quest::saylink("Hanns") . "] go way back, from what I hear.. Renux is probably the only person Hanns trusts.");
+		quest::say("She is second in command around here. She and [Hanns] go way back, from what I hear.. Renux is probably the only person Hanns trusts.");
 	}
 	elsif ($text=~/hanns/i) {
 		quest::say("Hanns, he runs things around here. Years ago, Hanns took over Ghil's old ring and started up the Circle of Unseen Hands. The Circle quickly took any market opposition out of Qeynos. We currently have connections in Erudin, Highpass and even Freeport.");

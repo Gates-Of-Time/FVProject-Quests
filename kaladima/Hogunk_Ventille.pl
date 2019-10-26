@@ -1,6 +1,6 @@
 sub EVENT_SAY { 
 	if ($text=~/Hail/i) {
-		quest::say("Hail, and welcome to Stormguard Hall, home to all great warriors! Are you also a [" . quest::saylink("warrior of the Stormguard") . "] or do you [" . quest::saylink("follow another guild") . "]?");
+		quest::say("Hail, and welcome to Stormguard Hall, home to all great warriors! Are you also a [warrior of the Stormguard] or do you [follow another guild]?");
 	}
 	if ($text=~/warrior of the stormguard/i) {
 		quest::say("As I thought. You do not appear to be one who relies on wits rather than brawn. No offense. I have word that a Stormguard on duty has deserted his post at one of the guardposts in the Butcherblocks. I want you to go and seek him out. He is Guard Bundin. Return his Stormguard axe to me, along with his head. There shall be no cowards in the Stormguard!!");

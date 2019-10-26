@@ -9,7 +9,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 14041 - Rolled Up Note
 	if (plugin::check_handin(\%itemcount, 14041 => 1)) {
-		quest::say("Why are you giving this to me? Oh I see. I forgot that rats don't know how to read. Haha! Well, then. I shall read it for you. You do [" . quest::saylink("understand common") . "] don't you? Haha.");
+		quest::say("Why are you giving this to me? Oh I see. I forgot that rats don't know how to read. Haha! Well, then. I shall read it for you. You do [understand common] don't you? Haha.");
 	}
 	#:: Match a 12993 - Small Sealed Bag
 	if (plugin::check_handin(\%itemcount, 12993 => 1)) {

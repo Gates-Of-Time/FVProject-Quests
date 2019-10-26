@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hello, hairrrrless one.  Welcome to the ourrrrr island. As you browse my wares please tell me if you would like to see my [" . quest::saylink("shiny tings") . "] that I have gathered from all over the world.");
+		quest::say("Hello, hairrrrless one.  Welcome to the ourrrrr island. As you browse my wares please tell me if you would like to see my [shiny tings] that I have gathered from all over the world.");
 	}
 	if ($text=~/shiny tings/i) {
-		quest::say("I thought you looked like one who is would be interested in them.  I have a [" . quest::saylink("dull ring") . "], a [" . quest::saylink("kinda shiny ring") . "] and a [" . quest::saylink("really shiny ring") . "].  These are just a few of the items that I have collected in my jourrrrneies, but I would be willing to parrrrt with them for a prrrrice");
+		quest::say("I thought you looked like one who is would be interested in them.  I have a [dull ring], a [kinda shiny ring] and a [really shiny ring].  These are just a few of the items that I have collected in my jourrrrneies, but I would be willing to parrrrt with them for a prrrrice");
 	}
 	if ($text=~/dull ring/i) {
 		quest::say("Rrrrrow, I see that you are looking at my dull ring.  I will give it to you if you can bring me a bracket mildew");

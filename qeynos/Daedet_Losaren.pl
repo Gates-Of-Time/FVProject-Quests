@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Welcome, $name. I am Deadet Losaren, faithful priest of Karana. You appear to be in search of [" . quest::saylink("guidance") . "] or perhaps you are merely a [" . quest::saylink("visitor to the temple of thunder") . "] wishing the blessing of [" . quest::saylink("holy armor") . "]?");
+		quest::say("Welcome, $name. I am Deadet Losaren, faithful priest of Karana. You appear to be in search of [guidance] or perhaps you are merely a [visitor to the temple of thunder] wishing the blessing of [holy armor]?");
 	}
 	elsif ($text=~/guidance/i) {
-		quest::say("So it is guidance you seek. You will begin on the bottom rung. There is much more to our temple than the bashing of foes. We will need you to [" . quest::saylink("collect donations") . "].");
+		quest::say("So it is guidance you seek. You will begin on the bottom rung. There is much more to our temple than the bashing of foes. We will need you to [collect donations].");
 	}
 	elsif ($text=~/collect donations/i) {
 		#:: Match if faction is Indifferent or better
@@ -20,15 +20,15 @@ sub EVENT_SAY {
 		quest::say("Then feel free to look around and speak with the priests and paladins of Thunder. May you find ways to serve the Rainkeeper.");
 	}
 	elsif ($text=~/holy armor/i) {
-		quest::say("Holy Armor? I offer the blessing of Holy Armor to members in good standing of the Knights of Thunder. I must charge ten gold for the service. [" . quest::saylink("Components") . "] are expensive these days!");
+		quest::say("Holy Armor? I offer the blessing of Holy Armor to members in good standing of the Knights of Thunder. I must charge ten gold for the service. [Components] are expensive these days!");
 	}
 	elsif ($text=~/components/i) {
-		quest::say("Components are required for my daily tribute to the Rainkeeper. It is he whose power flows from my body. I require a faithful acolyte to [" . quest::saylink("gather the required items") . "].");
+		quest::say("Components are required for my daily tribute to the Rainkeeper. It is he whose power flows from my body. I require a faithful acolyte to [gather the required items].");
 	}
 	elsif ($text=~/gather the required items/i) {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
-			quest::say("Very noble of you. Take this chest. I will require it to be filled with flame beetle eyes. Four normal beetles and four [" . quest::saylink("Kerra Isle beetles") . "]. Combine these items within the chest and return it to me. I shall reward you with the protection of Holy Armor.");
+			quest::say("Very noble of you. Take this chest. I will require it to be filled with flame beetle eyes. Four normal beetles and four [Kerra Isle beetles]. Combine these items within the chest and return it to me. I shall reward you with the protection of Holy Armor.");
 			#:: Give a 17934 - Beetle Eye Chest
 			quest::summonitem(17934);
 		}

@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Welcome to Ironforge's.  We are the makers of all things fine. Would you care to view my wares, or have you come to learn the fine art of crafting [" . quest::saylink("Antonian Weapons") . "]?");
+		quest::say("Welcome to Ironforge's.  We are the makers of all things fine. Would you care to view my wares, or have you come to learn the fine art of crafting [Antonian Weapons]?");
 	}
 	elsif ($text=~/antonian weapons/i) {
-		quest::say("I teach the process of crafting [" . quest::saylink("Antonian javelins") . "] and [" . quest::saylink("Antonian long swords") . "], weapons of superb craftsmanship used by the greatest knights and the personal guards of Antonius Bayle! You'll find nothing like them in all of Norrath since they can only be forged here in Qeynos at the Royal Qeynos forge.");
+		quest::say("I teach the process of crafting [Antonian javelins] and [Antonian long swords], weapons of superb craftsmanship used by the greatest knights and the personal guards of Antonius Bayle! You'll find nothing like them in all of Norrath since they can only be forged here in Qeynos at the Royal Qeynos forge.");
 	}
 	elsif ($text=~/antonian javelins/i) {
 		quest::say("The Antonian javelin is crafted from a medium quality sheet of metal, a flask of water, and a javelin mold. They are light and precise, perfect for use in battle or in competitions of skill.");

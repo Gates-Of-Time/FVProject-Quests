@@ -12,13 +12,13 @@ sub EVENT_ENTER {
 
 sub EVENT_SAY { 
 	if ($text=~/hail/i) {
-		quest::say("A pleasure to make your acquaintance $name. I am Kaya Cloudfoot, first Paladin of the Storm Reapers. I traveled long ago when I was just a wee sprout to the city of Qeynos far to the West. It was there I grew under the tutelage of the Knights of Thunder, a noble order of paladins loyal to Karana, the Storm Lord. I have returned now to Rivervale to teach interested young halflings the ways of a Knight of the Storm Reapers so that we may defend Karanas people and lands from the [" . quest::saylink("evil forces") . "] that would see it destroyed.");
+		quest::say("A pleasure to make your acquaintance $name. I am Kaya Cloudfoot, first Paladin of the Storm Reapers. I traveled long ago when I was just a wee sprout to the city of Qeynos far to the West. It was there I grew under the tutelage of the Knights of Thunder, a noble order of paladins loyal to Karana, the Storm Lord. I have returned now to Rivervale to teach interested young halflings the ways of a Knight of the Storm Reapers so that we may defend Karanas people and lands from the [evil forces] that would see it destroyed.");
 	}
 	elsif ($text=~/evil forces/i) {
 		quest::say("There are many problems and creatures that trouble Karanas people throughout Norrath and threaten our otherwise peaceful ways of life. Our common folk here in Rivervale are troubled by the wicked Teir`Dal, the Death Fist Orcs, and the Goblins of Clan Runnyeye and Pickclaw. It is the calling and duty of a Knight of the Storm Reapers to defend the common folk from these enemies of Rivervale.");
 	}
 	elsif ($text=~/trades/i) {
-		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [" . quest::saylink("second book") . "], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
+		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [second book], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
 		#:: Give a 51121 - Tradeskill Basics : Volume I
 		quest::summonitem(51121);
 	}
@@ -32,7 +32,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 18431 - Halfling Paladin Note
 	if (plugin::takeItems(18431)) {
-		quest::say("Karana smiles upon you young $name! Take this tunic to keep you warm through the storms you must face. There is evil encroaching upon the lands of Karana's faithful. The wicked minions of Bertoxxulous and the Teir'Dal children of Hate corrupt the lands to the west and east, and the Deathfist Clan of Orcs are waging war on this region while destoying the wilderness for lumber and stone. It is Karana's will that we defend our lands and way of life from these evil threats. When you are ready to begin adventuring, I will be happy to advise you on how to help us deal with the [" . quest::saylink("evil forces") . "]. I also posses knowledge of various [" . quest::saylink("trades") . "], seek me out when you wish to learn about them.");
+		quest::say("Karana smiles upon you young $name! Take this tunic to keep you warm through the storms you must face. There is evil encroaching upon the lands of Karana's faithful. The wicked minions of Bertoxxulous and the Teir'Dal children of Hate corrupt the lands to the west and east, and the Deathfist Clan of Orcs are waging war on this region while destoying the wilderness for lumber and stone. It is Karana's will that we defend our lands and way of life from these evil threats. When you are ready to begin adventuring, I will be happy to advise you on how to help us deal with the [evil forces]. I also posses knowledge of various [trades], seek me out when you wish to learn about them.");
 		#:: Give a 13541 - Jumjum Sack Tunic*
 		quest::summonitem(13541);
 		#:: Ding!

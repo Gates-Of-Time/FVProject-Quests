@@ -2,7 +2,7 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		#:: Match if faction is dubious or better
 		if ($faction <= 7) {
-			quest::say("How is life treating you, bud? What are you doing around the mines? Either you are a [" . quest::saylink("member of 628") . "] or you are lost. If you are lost, I can't help you. I ain't no guide.");
+			quest::say("How is life treating you, bud? What are you doing around the mines? Either you are a [member of 628] or you are lost. If you are lost, I can't help you. I ain't no guide.");
 		}
 		else {
 			quest::say("The word around the mines is that you are not to be trusted. You'd best leave before my dagger finds a new home in your back.");
@@ -11,7 +11,7 @@ sub EVENT_SAY {
 	elsif ($text=~/member of 628/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
-			quest::say("It's my duty to assign [" . quest::saylink("guild tasks") . "] to all new members of Mining Guild 628.");
+			quest::say("It's my duty to assign [guild tasks] to all new members of Mining Guild 628.");
 		}
 		#:: Match if faction is Indifferent or better
 		elsif ($faction <= 5) {
@@ -37,7 +37,7 @@ sub EVENT_SAY {
 	elsif ($text=~/earn a parrying pick/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
-			quest::say("So you want to earn a parrying pick? Consider it an honor that I am even speaking of this with you. The guild had these picks made just for us. It is a magic item used to fend off attacks. Before you can have one, you will have to do me a [" . quest::saylink("great favor") . "].");
+			quest::say("So you want to earn a parrying pick? Consider it an honor that I am even speaking of this with you. The guild had these picks made just for us. It is a magic item used to fend off attacks. Before you can have one, you will have to do me a [great favor].");
 		}
 		#:: Match if faction is Indifferent or better
 		elsif ($faction <= 5) {
@@ -65,7 +65,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match four 13931 - Runnyeye Warbeads
 	if (plugin::takeItems(13931 => 4)) {
-		quest::say("Good work. We shall add these to the stash. Here is your reward, as promised. Be happy with it and continue your work. Maybe soon you shall be able to [" . quest::saylink("earn a parrying pick") . "].");
+		quest::say("Good work. We shall add these to the stash. Here is your reward, as promised. Be happy with it and continue your work. Maybe soon you shall be able to [earn a parrying pick].");
 		#:: Give a random reward: 7007 - Rusty Dagger, 7008 - Rusty Rapier, 7009 - Rusty Spear, 7010 - Rusty Shortened Spear
 		quest::summonitem(quest::ChooseRandom(7007,7008,7009,7010));
 		#:: Ding!

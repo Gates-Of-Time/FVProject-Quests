@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Welcome to the holy Temple of Life. Your presence shows an interest in our ways. We are the followers of the [" . quest::saylink("Prime Healer") . "] and would gladly open our arms to any who [" . quest::saylink("serve Rodcet Nife") . "]. Do we not all owe our lives to the sustaining force of the Prime Healer?");
+		quest::say("Welcome to the holy Temple of Life. Your presence shows an interest in our ways. We are the followers of the [Prime Healer] and would gladly open our arms to any who [serve Rodcet Nife]. Do we not all owe our lives to the sustaining force of the Prime Healer?");
 	}
 	elsif (($text=~/^prime healer$/i) || ($text=~/^rodcet nife$/i)) {
-		quest::say("The Prime Healer is Rodcet Nife. The one whose power flows through your body. He is the air that you breathe. To serve Him is to serve every living creature. Do you wish to [" . quest::saylink("serve the Prime Healer") . "] or do you [" . quest::saylink("need more time for contemplation") . "]?");
+		quest::say("The Prime Healer is Rodcet Nife. The one whose power flows through your body. He is the air that you breathe. To serve Him is to serve every living creature. Do you wish to [serve the Prime Healer] or do you [need more time for contemplation]?");
 	}
 	elsif ($text=~/serve/i) {
 		#:: Match if faction is Amiable or better

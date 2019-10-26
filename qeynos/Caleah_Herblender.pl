@@ -17,7 +17,7 @@ sub EVENT_TIMER {
 sub EVENT_SIGNAL {
 	#:: Match a signal "1" from qeynos/Drawna_Opimsor.pl
 	if ($signal == 1) {
-		quest::say("Hmmm.. Let's see if we can find someone to help replenish our stock of [" . quest::saylink("rat whiskers") . "] and [" . quest::saylink("bat fur") . "]. I need these items for a new little experiment I'm working on.");
+		quest::say("Hmmm.. Let's see if we can find someone to help replenish our stock of [rat whiskers] and [bat fur]. I need these items for a new little experiment I'm working on.");
 	}
 }
 
@@ -31,7 +31,7 @@ sub EVENT_PROXIMITY_SAY {
 	if (($text=~/bat fur/i) || ($text=~/rat whiskers/i) || ($text=~/beetle eye/i)) {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
-			quest::say("I need someone to gather up the three ingredients for a new spell I'm working on. I need some [" . quest::saylink("rat whiskers") . "], a [" . quest::saylink("fire beetle eye") . "], and a patch of [" . quest::saylink("bat fur") . "]. Thanks for helping me, young $name.");
+			quest::say("I need someone to gather up the three ingredients for a new spell I'm working on. I need some [rat whiskers], a [fire beetle eye], and a patch of [bat fur]. Thanks for helping me, young $name.");
 		}
 		else {
 			quest::say("The Order of Three has been monitoring your recent activities, and we are appalled by you and your actions! Now, begone!");

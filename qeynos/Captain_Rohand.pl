@@ -8,15 +8,15 @@ sub EVENT_SPAWN {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings, friend, and welcome to the Mermaid's Lure. Here, we sell fishing supplies and some imported goods from far-off lands. And, if you've got a few minutes, I could even tell you a [" . quest::saylink("story") . "] or two.");
+		quest::say("Greetings, friend, and welcome to the Mermaid's Lure. Here, we sell fishing supplies and some imported goods from far-off lands. And, if you've got a few minutes, I could even tell you a [story] or two.");
 	}
 	elsif ($text=~/story/i) {
-		quest::say("Stories? Stories? I saw more adventure before I was ten years tall than you'll see in your whole miserable existence. I've been everywhere, [" . quest::saylink("Odus") . "], [" . quest::saylink("Faydwer") . "], [" . quest::saylink("Kunark") . "]. . . You name it, and I can tell ya a little something 'bout it. . . If you buy me a sip of brandy, of course!");
+		quest::say("Stories? Stories? I saw more adventure before I was ten years tall than you'll see in your whole miserable existence. I've been everywhere, [Odus], [Faydwer], [Kunark]. . . You name it, and I can tell ya a little something 'bout it. . . If you buy me a sip of brandy, of course!");
 	}
 	elsif ($text=~/odus/i) {
 		if ($ItemCount == 0) {
 			#:: Made up
-			quest::say("I'll tell you about [" . quest::saylink("Odus") . "] if you give me that sip of brandy.");
+			quest::say("I'll tell you about [Odus] if you give me that sip of brandy.");
 		}
 		else {
 			quest::say("You haven't lived until you've seen Odus. Erud was the first human to cross the sea, and he founded the great city of Erudin. The trade routes from here to Odus are busy and prosperous, but can also be very dangerous.");
@@ -27,7 +27,7 @@ sub EVENT_SAY {
 	elsif ($text=~/faydwer/i) {
 		if ($ItemCount == 0) {
 			#:: Made up
-			quest::say("I'll tell you about [" . quest::saylink("Faydwer") . "] if you give me that sip of brandy.");
+			quest::say("I'll tell you about [Faydwer] if you give me that sip of brandy.");
 		}
 		else {
 			quest::say("I call Faydwer the home of the little people. They say the continent was named by the high elves when they landed on its shores long ago. I've even heard tales of an ancient elven vampire who lives there. . . Just another Felwithe legend, I'll bet!");
@@ -38,7 +38,7 @@ sub EVENT_SAY {
 	elsif ($text=~/kunark/i) {
 		if ($ItemCount == 0) {
 			#:: Made up
-			quest::say("I'll tell you about [" . quest::saylink("Kunark") . "] if you give me that sip of brandy.");
+			quest::say("I'll tell you about [Kunark] if you give me that sip of brandy.");
 		}
 		else {
 			quest::say("Even I can't tell you much about that continent. Kunark is a tough place, populated by even tougher creatures. I hear the high elves of Faydwer have been trying for years to establish a small port on Kunark's hostile shores.");

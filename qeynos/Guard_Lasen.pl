@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings, $name! Whew! I sure get parched out here on patrol. Even when it rains I can't help but build up a [" . quest::saylink("thirst") . "] defending the good people of Qeynos.");
+		quest::say("Greetings, $name! Whew! I sure get parched out here on patrol. Even when it rains I can't help but build up a [thirst] defending the good people of Qeynos.");
 	}
 	elsif ($text=~/thirst/i) {
 		quest::say("Well, I have a bit of a belly sickness so the only thing I can drink is normal water. I can't even keep down the stuff our local magicians summon and call water. If you would bring me a water flask, I would be most grateful.");

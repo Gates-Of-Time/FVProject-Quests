@@ -11,27 +11,27 @@ sub EVENT_WAYPOINT_ARRIVE {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail, $name. My name is Weleth Nagoh. In addition to my patrol, I am in charge of keeping the guardhouse [" . quest::saylink("stocked with supplies") . "]. I must get back to my duties. Farewell.");
+		quest::say("Hail, $name. My name is Weleth Nagoh. In addition to my patrol, I am in charge of keeping the guardhouse [stocked with supplies]. I must get back to my duties. Farewell.");
 	}
 	elsif ($text=~/supplies/i) {
-		qeust::say("I must keep the guardhouses here stocked with arrows, rations and water. That reminds me.. I still have to return that blasted [" . quest::saylink("crate") . "].");
+		qeust::say("I must keep the guardhouses here stocked with arrows, rations and water. That reminds me.. I still have to return that blasted [crate].");
 	}
 	elsif ($text=~/duties/i) {
-		quest::say("I must keep the guardhouses here stocked with arrows, rations and water. That reminds me.. I still have to return that blasted [" . quest::saylink("crate") . "].");
+		quest::say("I must keep the guardhouses here stocked with arrows, rations and water. That reminds me.. I still have to return that blasted [crate].");
 	}
 	elsif ($text=~/crate/i) {
-		quest::say("Oh, we just received a shipment of arrows from [" . quest::saylink("Nesiff") . "] in South Qeynos. The [" . quest::saylink("arrows") . "] in this box are missing their fletchings and I can't leave my patrol to take them back.");
+		quest::say("Oh, we just received a shipment of arrows from [Nesiff] in South Qeynos. The [arrows] in this box are missing their fletchings and I can't leave my patrol to take them back.");
 	}
 	elsif ($text=~/nesiff/i) {
 		quest::say("Nesiff Tallaherd owns the wooden weapons shop in Merchant's Square in South Qeynos.");
 	}
 	elsif ($text=~/arrows/i) {
-		quest::say("Oh, thank you! Here is the crate. Make sure [" . quest::saylink("Nesiff") . "] sends me back a new invoice. [" . quest::saylink("Lieutenant Dagarok") . "] would have my head if he found out this happened again!");
+		quest::say("Oh, thank you! Here is the crate. Make sure [Nesiff] sends me back a new invoice. [Lieutenant Dagarok] would have my head if he found out this happened again!");
 		#:: Give a 13925 - Crate of Defective Arrows
 		quest::summonitem(13925);
 	}
 	elsif ($text=~/lieutenant dagarok/i) {
-		quest::say("Lieutenant Dagarok is the officer in charge of all of North Qeynos. He is difficult to get along with and I [" . quest::saylink("do not trust") . "] him.");
+		quest::say("Lieutenant Dagarok is the officer in charge of all of North Qeynos. He is difficult to get along with and I [do not trust] him.");
 	}
 	elsif ($text=~/trust/i) {
 		quest::say("Late one night not long ago, after I was off duty, I witnessed Lieutenant Dagarok and a few others slay someone they claimed was a suspected necromancer. I had met their victim the day before and I know he was an innocent paladin from Freeport. What really shocked me was that Dagarok was bathed in an evil green glow as their victim crumpled to the ground. I don't know who to trust any more!");
@@ -41,7 +41,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 18824 - Slip of Parchment
 	if (plugin::takeItems(18824 => 1)) {
-		quest::say("Thank you so much for the favor. Please be careful here in Qeynos. I have come to suspect that even some of my fellow guards are not to be trusted - [" . quest::saylink("Lieutenant Dagarok") . "], for one.");
+		quest::say("Thank you so much for the favor. Please be careful here in Qeynos. I have come to suspect that even some of my fellow guards are not to be trusted - [Lieutenant Dagarok], for one.");
 		#:: Ding!
 		quest::ding();
 		#:: Set factions

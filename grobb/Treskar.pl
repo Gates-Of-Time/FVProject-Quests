@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("You dare speak to Master Treskar!! You be [" . quest::saylink("sent by Hukulk") . "] or you be hurtin'!! Me have no time to waste with ugly one like you!!");
+		quest::say("You dare speak to Master Treskar!! You be [sent by Hukulk] or you be hurtin'!! Me have no time to waste with ugly one like you!!");
 	}
 	elsif ($text=~/sent by hukulk/i) {
-		quest::say("Ha!! Hukulk accept puny troll now?!! Ha!! You join us and you join fight. Nightkeep enemy is $name enemy!! You help smash [" . quest::saylink("other weak shadowknights") . "]. Them weak. We true power!! You bash good and maybe you do [" . quest::saylink("secret mission") . "] for Treskar. Or I has sum other [" . quest::saylink("work") . "] fer you.");
+		quest::say("Ha!! Hukulk accept puny troll now?!! Ha!! You join us and you join fight. Nightkeep enemy is $name enemy!! You help smash [other weak shadowknights]. Them weak. We true power!! You bash good and maybe you do [secret mission] for Treskar. Or I has sum other [work] fer you.");
 	}
 	elsif ($text=~/other weak shadowknights/i) {
 		quest::say("Other shadowknights is ogre shadowknights! They name is Greenbloods. They no match for Nightkeep! We tear arms from ogre bodies. You not as powerful as Treskar so you smash young Greenbloods. You hunt YOUNG members of Greenblood shadowknights. You bring me black shadow tunic and me share treasures from Nightkeep vault with puny Burai. Go!");
@@ -47,7 +47,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match three 13782 - Ruined Wolf Pelt and a 10307 - Fire Beetle Eye
 	elsif (plugin::takeItems(13782 => 3, 10307 => 1)) {
-		quest::say("Dats gud, here take dis armor to helps you be stronger. Come sees me when you want [" . quest::saylink("another") . "] job");
+		quest::say("Dats gud, here take dis armor to helps you be stronger. Come sees me when you want [another] job");
 		#:: Give a 2104 - Patchwork Tunic
 		quest::summonitem(2104);
 		#:: Ding!
@@ -57,7 +57,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match two 13088 - Snake Egg
 	elsif (plugin::takeItems(13088 => 2)) {
-		quest::say("Dis is good.  I go make a pie now. Here is sumting for your help. Come see me agin when you want your [" . quest::saylink("next") . "] job.");
+		quest::say("Dis is good.  I go make a pie now. Here is sumting for your help. Come see me agin when you want your [next] job.");
 		#:: Give a random reward: 2145 - Raw-hide Wristbands, 2140 - Raw-hide Tunic, 2144 - Raw-hide Sleeves, 2137 - Raw-hide Skullcap, 2138 - Raw-hide Mask, 2147 - Raw-hide Leggings, 2139 - Raw-hide Gorget, 2146 - Raw-hide Gloves, 2142 - Raw-hide Cloak, 2148 - Raw-hide Boots, 2143 - Raw-hide Belt
 		quest::summonitem(quest::ChooseRandom(2145, 2140, 2144, 2137, 2138, 2147, 2139, 2146, 2142, 2148, 2143));
 		#:: Ding!
@@ -71,7 +71,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match three 13916 - Deathfist Slashed Belt
 	elsif (plugin::takeItems(13916 => 3)) {
-		quest::say("Very good! We turn you into a basher yet. Here you go. Come see me when you want your [" . quest::saylink("final") . "] task.");
+		quest::say("Very good! We turn you into a basher yet. Here you go. Come see me when you want your [final] task.");
 		#:: Give a random reward: 6031 - Tarnished Warhammer, 5070 - Tarnished Two Handed Sword, 5071 - Tarnished Two Handed Battle Axe, 7024 - Tarnished Spear, 5042 - Tarnished Short Sword, 5047 - Tarnished Scimitar, 6033 - Tarnished Morning Star
 		quest::summonitem(quest::ChooseRandom(6031, 5070, 5071, 7024, 5042, 5047, 6033));
 		#:: Ding!
@@ -99,7 +99,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match three 12199 - Black Shadow Tunic and two gold
 	elsif (plugin::takeItemsCoin(0,0,2,0, 12199 => 3)) {
-		quest::say("Hmm... You do good job. You surprise Treskar. Maybe you good after all. Maybe Treskar give you [" . quest::saylink("secret mission") . "]. Maybe not.");
+		quest::say("Hmm... You do good job. You surprise Treskar. Maybe you good after all. Maybe Treskar give you [secret mission]. Maybe not.");
 		#:: Give a random reward: 5071 - Tarnished Two Handed Battle Axe, 5025 - Rusty Two Handed Battle Axe, 5037 - Bronze Two Handed Battle Axe
 		quest::summonitem(quest::ChooseRandom(5071, 5025, 5037, 5025, 5071));
 		#:: Ding!

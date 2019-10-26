@@ -1,21 +1,21 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings, $name! Are you a [" . quest::saylink("citizen of Qeynos") . "] or are you a [" . quest::saylink("traveler of sorts") . "]?");
+		quest::say("Greetings, $name! Are you a [citizen of Qeynos] or are you a [traveler of sorts]?");
 	}
 	elsif ($text=~/traveler of sorts/i) {
-		quest::say("Ah, yes! Traveling can be truly dangerous. Have you ever been to [" . quest::saylink("Erudin") . "] or do you not care for that place?");
+		quest::say("Ah, yes! Traveling can be truly dangerous. Have you ever been to [Erudin] or do you not care for that place?");
 	}
 	elsif ($text=~/erudin/i) {
-		quest::say("The trip to Erudin takes far too long. I have been designing a [" . quest::saylink("titanic bridge") . "] which will shorten the trip. Well, I cannot take full credit, most of the plans are being designed by [" . quest::saylink("three great engineers") . "].");
+		quest::say("The trip to Erudin takes far too long. I have been designing a [titanic bridge] which will shorten the trip. Well, I cannot take full credit, most of the plans are being designed by [three great engineers].");
 	}
 	elsif ($text=~/citizen of Qeynos/i) {
-		quest::say("Then you are aware of how few ships come and go to the continent of Erudin. The port authority is even planning to tax all passage aboard the ships. You will be happy to know that a few other engineers and I are designing a [" . quest::saylink("titanic bridge") . "].");
+		quest::say("Then you are aware of how few ships come and go to the continent of Erudin. The port authority is even planning to tax all passage aboard the ships. You will be happy to know that a few other engineers and I are designing a [titanic bridge].");
 	}
 	elsif ($text=~/titanic bridge/i) {
 		quest::say("My grand plan has always been to erect a bridge which would span the distance between Qeynos and Odus. It would bypass the city of Erudin. Antonius Bayle would take full control of the bridge and its adjacent territories. This has had some opposition in Erudin, but for the most part, they just believe it is impossible to build such a bridge.");
 	}
 	elsif ($text=~/three great engineers/i) {
-		quest::say("They are some of the finest engineers in all of Norrath. Young, they may be, but as smart as the wisest architects I have ever met. That reminds me.. I must have a list of the engineers somewhere.. [" . quest::saylink("Where is it") . "]?");
+		quest::say("They are some of the finest engineers in all of Norrath. Young, they may be, but as smart as the wisest architects I have ever met. That reminds me.. I must have a list of the engineers somewhere.. [Where is it]?");
 	}
 	elsif ($text=~/where is it/i) {
 		quest::say("Do not concern yourself with the list. It is of no concern to you. I do not even have it. It is tucked away safely at home.");

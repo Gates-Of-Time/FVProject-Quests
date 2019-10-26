@@ -2,13 +2,13 @@ $ExpansionSetting = quest::get_rule("World:ExpansionSettings");
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Me says hi to you. What you want from me? Oh!! Me shaman trainer. You must be shaman. Are you [" . quest::saylink("shaman Darkone") . "]?");
+		quest::say("Me says hi to you. What you want from me? Oh!! Me shaman trainer. You must be shaman. Are you [shaman Darkone]?");
 	}
 	elsif ($text=~/shaman darkone/i) {
-		quest::say("You choose rite if you bes a shaman. We's da best. You remember ta not get in Kaglari way. She get mad berry easy. She gets berry mad at Bregna if she finds out me make [" . quest::saylink("big mistake") . "].");
+		quest::say("You choose rite if you bes a shaman. We's da best. You remember ta not get in Kaglari way. She get mad berry easy. She gets berry mad at Bregna if she finds out me make [big mistake].");
 	}
 	elsif ($text=~/big mistake/i) {
-		quest::say("Kaglari make me do the tasks for her. She tolds me to take crate of speshal poshuns to sumwun in Nektoolos forust. But I make mistake. I fall asleep under da trees becuz I was so tired. I wake up and poshuns are gone! Sumwun take the poshuns frum me. Dey leave dis note wit me. Me tinks dey play trick on me. Me tinks it be da stinkin' Halflings. Me needs ta gets dem back before Kaglari find out. I need sumwun to help me [" . quest::saylink("find da poshuns") . "].");
+		quest::say("Kaglari make me do the tasks for her. She tolds me to take crate of speshal poshuns to sumwun in Nektoolos forust. But I make mistake. I fall asleep under da trees becuz I was so tired. I wake up and poshuns are gone! Sumwun take the poshuns frum me. Dey leave dis note wit me. Me tinks dey play trick on me. Me tinks it be da stinkin' Halflings. Me needs ta gets dem back before Kaglari find out. I need sumwun to help me [find da poshuns].");
 	}
 	elsif ($text=~/find da poshuns/i) {
 		quest::say("Take dis as it be all me know.");

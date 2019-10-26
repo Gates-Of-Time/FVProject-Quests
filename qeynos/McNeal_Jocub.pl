@@ -3,10 +3,10 @@ sub EVENT_SAY {
 		quest::say("Good ta see ya! Now start showin' these poodlewalkers how a real fish drinks!");
 	}
 	elsif ($text=~/low/i) {
-		quest::say("This is going to sound crazy, but my main supplier of [" . quest::saylink("Blackburrow Stout") . "] is one of the brewers themselves. I have run too low on the fine brew and need someone to [" . quest::saylink("pick up my shipment") . "].");
+		quest::say("This is going to sound crazy, but my main supplier of [Blackburrow Stout] is one of the brewers themselves. I have run too low on the fine brew and need someone to [pick up my shipment].");
 	}
 	elsif ($text=~/blackburrow stout/i) {
-		quest::say("Keep it down!! So you've heard of Blackburrow Stout? We sell it here in Fish's Backroom. If the Qeynos Guards knew, well.. it wouldn't be such a good thing. The stout is illegal, It's made by the gnolls. It is one of the finest brews you will ever taste. If you want any.. slide me a [" . quest::saylink("moonstone") . "].");
+		quest::say("Keep it down!! So you've heard of Blackburrow Stout? We sell it here in Fish's Backroom. If the Qeynos Guards knew, well.. it wouldn't be such a good thing. The stout is illegal, It's made by the gnolls. It is one of the finest brews you will ever taste. If you want any.. slide me a [moonstone].");
 	}
 	elsif ($text=~/shipment/i) {
 		quest::say("Take this note to the Qeynos Hills. Somewhere there, you shall find a gnoll at night called Gnasher. Give him the note. Now, get moving!");
@@ -20,7 +20,7 @@ sub EVENT_SAY {
 
 sub EVENT_WAYPOINT_ARRIVE {
 	if ($wp == 5) {
-		quest::say("Blast!! We are running [" . quest::saylink("low") . "]!!");
+		quest::say("Blast!! We are running [low]!!");
 	}
 }
 

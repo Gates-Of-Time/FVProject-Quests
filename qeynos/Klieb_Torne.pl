@@ -6,7 +6,7 @@ sub EVENT_SPAWN {
 sub EVENT_TIMER {
 	#:: Match timer "paw"
 	if ($timer eq "paw") {
-		quest::say("Can you believe that? That guy actually thinks he is going to find the [" . quest::saylink("Paw of Opolla") . "]! Bwah ha ha ha!");
+		quest::say("Can you believe that? That guy actually thinks he is going to find the [Paw of Opolla]! Bwah ha ha ha!");
 		#:: Send a signal "1" to South Qeynos >> Micc_Koter (1072) with no delay
 		quest::signalwith(1072, 1, 0);
 	}

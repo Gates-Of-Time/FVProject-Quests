@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Ah, greetings, $name!  How are you this evening?  Hopefully, you are faring much better than I..  I'm stuck on the night watch here, and never get to see my lovely [" . quest::saylink("Aenia") . "].  Ah..  she is so sweet..  I wrote her this beautiful [" . quest::saylink("ballad") . "], but I fear she may never hear it.");
+		quest::say("Ah, greetings, $name!  How are you this evening?  Hopefully, you are faring much better than I..  I'm stuck on the night watch here, and never get to see my lovely [Aenia].  Ah..  she is so sweet..  I wrote her this beautiful [ballad], but I fear she may never hear it.");
 	}
 	elsif ($text=~/aenia/i) {
 		quest::say("Aenia lives in North Qeynos in a little blue house near the Temple of Life with her overprotective father.  Last time he caught me there, he nearly killed me!");

@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Rrraaarrr! Hello furless. You come to study from [" . quest::saylink("mighty warrior") . "] yes?");
+		quest::say("Rrraaarrr! Hello furless. You come to study from [mighty warrior] yes?");
 	}
 	if ($text=~/mighty warrior/i) {
-		quest::say("Errr. Well, Allix not yet mighty warrior but soon yes. Allix just come of age and soon will enter training to become mighty Pasdar. Errr. Allix little nervous. Allix missing [" . quest::saylink("one thing") . "] to become mighty Pasdar.");
+		quest::say("Errr. Well, Allix not yet mighty warrior but soon yes. Allix just come of age and soon will enter training to become mighty Pasdar. Errr. Allix little nervous. Allix missing [one thing] to become mighty Pasdar.");
 	}
 	if ($text=~/one thing/i) {
 		quest::say("Well, Allix not have to have but is good. Is leaf. Ajrah leaf. Powerful magic in the leaf. Pasdar hold's next to body, keep's body strong and mind clear. Not have to have but Pasdar without Ajrah Leaf is poor Pasdar. Someday Allix travel to the mighty plains of East Karana and get one from trees.");

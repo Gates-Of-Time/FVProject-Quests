@@ -1,12 +1,12 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Stand at attention!! You don't look fit enough to toe-wrestle my grandma!! You cannot be in my squad!! Are you [" . quest::saylink("petitioning") . "] or are you a [" . quest::saylink("visitor") . "]?");
+		quest::say("Stand at attention!! You don't look fit enough to toe-wrestle my grandma!! You cannot be in my squad!! Are you [petitioning] or are you a [visitor]?");
 	}
 	if ($text=~/visitor/i) {
-		quest::say("Well, why didn't you say so?! Forgive me for hollering. Allow me to introduce myself. I am Marshal Anrey Leadladle, commander of the [" . quest::saylink("Leatherfoot Raiders") . "].");
+		quest::say("Well, why didn't you say so?! Forgive me for hollering. Allow me to introduce myself. I am Marshal Anrey Leadladle, commander of the [Leatherfoot Raiders].");
 	}
 	if ($text=~/petitioning/i) {
-		quest::say("So you want to be a [" . quest::saylink("Leatherfoot Raider") . "]? What kind of joke is this? Look at you! You're a mess! Where are you [" . quest::saylink("from") . "]?");
+		quest::say("So you want to be a [Leatherfoot Raider]? What kind of joke is this? Look at you! You're a mess! Where are you [from]?");
 	}
 	if ($text=~/Leatherfoot Raider/i) {
 		quest::say("You must be a visitor. The Leatherfoot Raiders are the elite force of the Guardians of the Vale. I command them. It is good to meet an outsider.");

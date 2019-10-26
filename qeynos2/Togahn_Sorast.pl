@@ -8,12 +8,12 @@ sub EVENT_WAYPOINT_ARRIVE {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings.. I am Second Master Togahn Sorast. I am here to teach the ways of our guild. For our more advanced members, I will give out [" . quest::saylink("headbands") . "] as a reward for their contribution to the clan.");
+		quest::say("Greetings.. I am Second Master Togahn Sorast. I am here to teach the ways of our guild. For our more advanced members, I will give out [headbands] as a reward for their contribution to the clan.");
 	}
 	elsif ($text=~/headbands/i) {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
-			quest::say("The Silent Fist Clan gives out colored Headbands for various deeds completed by our students. Phin gives out the White, Yellow, and Orange Headbands.. and I give out the [" . quest::saylink("Red") . "], [" . quest::saylink("Purple") . "], and [" . quest::saylink("Blue") . "].");
+			quest::say("The Silent Fist Clan gives out colored Headbands for various deeds completed by our students. Phin gives out the White, Yellow, and Orange Headbands.. and I give out the [Red], [Purple], and [Blue].");
 		}
 		else {
 			quest::say("I have been watching you, and appreciate the help you've given to the brothers and sisters of the Silent Fist. But, I feel that such a vital matter should be left to one of our more trusted members.");
@@ -22,7 +22,7 @@ sub EVENT_SAY {
 	elsif ($text=~/red/i) {
 		#:: Match if faction is Kindly or better
 		if ($faction <= 3) {
-			quest::say("Ah, you think you are skilled enough to earn the red headband of the Silent Fist Clan, $name? Hmmm.. Well, if you can help us find [" . quest::saylink("Brother Dareb") . "], you would certainly deserve the honor of wearing the red headband.");
+			quest::say("Ah, you think you are skilled enough to earn the red headband of the Silent Fist Clan, $name? Hmmm.. Well, if you can help us find [Brother Dareb], you would certainly deserve the honor of wearing the red headband.");
 		}
 		else {
 			quest::say("I have been watching you, and appreciate the help you've given to the brothers and sisters of the Silent Fist. But, I feel that such a vital matter should be left to one of our more trusted members.");
@@ -31,7 +31,7 @@ sub EVENT_SAY {
 	elsif ($text=~/purple/i) {
 		#:: Match if faction is Kindly or better
 		if ($faction <= 3) {
-			quest::say("Ah, you think you are now skilled enough to deserve the purple headband of the Silent Fist Clan? Very well, $name, I have a task for you that will prove whether or not you are worthy of this honor. I have heard recent rumors of ancient evils surfacing once again throughout Antonica. These evil groups have discovered some items that are giving them mystical and dangerous powers. These items must be destroyed, or else the evils of Norrath may gain control of the world's future. Bring me these [" . quest::saylink("evil items") . "], and turn in your red headband, and you will have proven yourself a mighty spirit and dedicated member of the Silent Fist.");
+			quest::say("Ah, you think you are now skilled enough to deserve the purple headband of the Silent Fist Clan? Very well, $name, I have a task for you that will prove whether or not you are worthy of this honor. I have heard recent rumors of ancient evils surfacing once again throughout Antonica. These evil groups have discovered some items that are giving them mystical and dangerous powers. These items must be destroyed, or else the evils of Norrath may gain control of the world's future. Bring me these [evil items], and turn in your red headband, and you will have proven yourself a mighty spirit and dedicated member of the Silent Fist.");
 		}
 		else {
 			quest::say("I have been watching you, and appreciate the help you've given to the brothers and sisters of the Silent Fist. But, I feel that such a vital matter should be left to one of our more trusted members.");
@@ -49,7 +49,7 @@ sub EVENT_SAY {
 	elsif ($text=~/brother dareb/i) {
 		#:: Match if faction is Kindly or better
 		if ($faction <= 3) {
-			quest::say("Yes, brother Dareb was last heard from over two weeks ago. He was out in the Plains of South Karana, and then just disappeared. We fear that those vile gnolls fleeing Splitpaw may have captured him or worse. We sent brother Shen to go search the Karanas and look for Dareb over three days ago, but haven't heard from him, either. I fear the worst for both of them, especially if the [" . quest::saylink("Splitpaws") . "] are involved. Please, $name, find and return our lost brothers to us. If they are not alive, bring back their remains so we may give them a proper burial.. and, if it is that evil [" . quest::saylink("Ghanex Drah") . "]'s doing, bring me his head as well, for the honor of the clan. You do this for us, $name, and turn in your orange headband, and I will reward you with the red headband of the Silent Fist. Good luck.");
+			quest::say("Yes, brother Dareb was last heard from over two weeks ago. He was out in the Plains of South Karana, and then just disappeared. We fear that those vile gnolls fleeing Splitpaw may have captured him or worse. We sent brother Shen to go search the Karanas and look for Dareb over three days ago, but haven't heard from him, either. I fear the worst for both of them, especially if the [Splitpaws] are involved. Please, $name, find and return our lost brothers to us. If they are not alive, bring back their remains so we may give them a proper burial.. and, if it is that evil [Ghanex Drah]'s doing, bring me his head as well, for the honor of the clan. You do this for us, $name, and turn in your orange headband, and I will reward you with the red headband of the Silent Fist. Good luck.");
 		}
 		else {
 			quest::say("I have been watching you, and appreciate the help you've given to the brothers and sisters of the Silent Fist. But, I feel that such a vital matter should be left to one of our more trusted members.");
@@ -58,7 +58,7 @@ sub EVENT_SAY {
 	elsif ($text=~/evil items/i) {
 		#:: Match if faction is Kindly or better
 		if ($faction <= 3) {
-			quest::say("These evil creations have been found all over Antonica, and no one knows, or at least no one admits to knowing, where exactly they were found, but we do know that they are currently in the wrong hands and must be destroyed. Please, $name, seek out the [" . quest::saylink("Skull of Jhen'Tra") . "], the [" . quest::saylink("Dagger of Marnek") . "], and the [" . quest::saylink("Coronet of Buried Blood") . "], and bring them to me.");
+			quest::say("These evil creations have been found all over Antonica, and no one knows, or at least no one admits to knowing, where exactly they were found, but we do know that they are currently in the wrong hands and must be destroyed. Please, $name, seek out the [Skull of Jhen'Tra], the [Dagger of Marnek], and the [Coronet of Buried Blood], and bring them to me.");
 		}
 		else {
 			quest::say("I have been watching you, and appreciate the help you've given to the brothers and sisters of the Silent Fist. But, I feel that such a vital matter should be left to one of our more trusted members.");
@@ -112,7 +112,7 @@ sub EVENT_SAY {
 	elsif ($text=~/black headband/i) {
 		#:: Match if faction is Kindly or better
 		if ($faction <= 3) {
-			quest::say("The black headband is one of the highest honors of our guild.. [" . quest::saylink("Lu'Sun") . "] only gives those out for great acts of heroism and devotion to the clan.");
+			quest::say("The black headband is one of the highest honors of our guild.. [Lu'Sun] only gives those out for great acts of heroism and devotion to the clan.");
 		}
 		else {
 			quest::say("I have been watching you, and appreciate the help you've given to the brothers and sisters of the Silent Fist. But, I feel that such a vital matter should be left to one of our more trusted members.");

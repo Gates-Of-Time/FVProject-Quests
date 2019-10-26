@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings. Perhaps within that husk you call a body there is some worth? Are you [" . quest::saylink("experienced") . "] in your craft, young one, or are you a [" . quest::saylink("neonate") . "]?");
+		quest::say("Greetings. Perhaps within that husk you call a body there is some worth? Are you [experienced] in your craft, young one, or are you a [neonate]?");
 	}
 	if ($text=~/neonate/i) {
-		quest::say("Well then, child, I may still have a task for you. Will you [" . quest::saylink("make use of") . "] your pathetic cowardice, then, eh?");
+		quest::say("Well then, child, I may still have a task for you. Will you [make use of] your pathetic cowardice, then, eh?");
 	}
 	if ($text=~/make use of/i) {
 		quest::say("I see. This will not be the first time for you, I am sure. Take this list to Auhrik Siet`ka. His writing has become illegible in his old age, but he shall clarify what it is he needs you to do. Do as he says, child, and perhaps you will prove yourself a bit more worthy than the rotting flesh he will most likely have you return to him.");
@@ -11,7 +11,7 @@ sub EVENT_SAY {
 		quest::summonitem(14041);
 	}
 	if ($text=~/experienced/i) {
-		quest::say("Ahhhh, a youth doth approach me with such confidence! That is to be commended in and of itself. Ordinarily, I would turn you away without a second glance, but perhaps you can be of some use. Tell me, child, are you [" . quest::saylink("willing to assist") . "] me in a small, yet important, task?");
+		quest::say("Ahhhh, a youth doth approach me with such confidence! That is to be commended in and of itself. Ordinarily, I would turn you away without a second glance, but perhaps you can be of some use. Tell me, child, are you [willing to assist] me in a small, yet important, task?");
 	}
 	if ($text=~/willing to assist/i) {
 		quest::say("Good, child. Deliver this note to Veisha Fathomwalker. You shall find her patrolling the outer regions of Toxxulia Forest. I trust that you will keep your eyes to yourself in this matter. Now go, and please travel within the veil of night, so you will not be seen by those whose minds are still clouded with delusions of Erudin's grandeur.");

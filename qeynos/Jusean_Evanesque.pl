@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Why, hello there, $name! I am Jusean, loyal member of the League of Antonican Bards. You look like the reliable sort, maybe you could help me out for a bit, huh? It's about time for our field agents to turn in their [" . quest::saylink("watch reports") . "], and I need someone to go pick them up for me.");
+		quest::say("Why, hello there, $name! I am Jusean, loyal member of the League of Antonican Bards. You look like the reliable sort, maybe you could help me out for a bit, huh? It's about time for our field agents to turn in their [watch reports], and I need someone to go pick them up for me.");
 	}
 	elsif ($text=~/watch reports/i) {
-		quest::say("We always have someone stationed on watch duty at the two main entries to the city to keep an eye on what is happening around Qeynos. We have [" . quest::saylink("Anehan and Behroe") . "] down at the docks, and [" . quest::saylink("Leanon and Quinon") . "] working the North Gate.");
+		quest::say("We always have someone stationed on watch duty at the two main entries to the city to keep an eye on what is happening around Qeynos. We have [Anehan and Behroe] down at the docks, and [Leanon and Quinon] working the North Gate.");
 	}
 	elsif ($text=~/anehan and behroe/i) {
 		quest::say("Here, if you take this to Anehan or Behroe down at the docks, and then return their report to me as soon as you can, I will give you a small reward.");

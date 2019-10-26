@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings and blessings to you, $name. Karana offers you his protection and guidance. All who accept the offer shall find safe haven within our Temple of Thunder, If you are a cleric of Karana, you must have a [" . quest::saylink("desire to serve") . "] Karana's flock.");
+		quest::say("Greetings and blessings to you, $name. Karana offers you his protection and guidance. All who accept the offer shall find safe haven within our Temple of Thunder, If you are a cleric of Karana, you must have a [desire to serve] Karana's flock.");
 	}
 	elsif ($text=~/desire to serve/i) {
-		quest::say("If you are a young acolyte, you may [" . quest::saylink("deliver blessings to the flock") . "] and if you are a skilled cleric, we need you to [" . quest::saylink("hunt bandit binders") . "].");
+		quest::say("If you are a young acolyte, you may [deliver blessings to the flock] and if you are a skilled cleric, we need you to [hunt bandit binders].");
 	}
 	elsif ($text=~/deliver blessings/i) {
 		#:: Match if faction is Amiable or better

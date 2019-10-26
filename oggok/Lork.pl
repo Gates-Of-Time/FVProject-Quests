@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("You $name. We hear of you. We need help. You [" . quest::saylink("help Crakneks") . "] or you [" . quest::saylink("help self") . "]?");
+		quest::say("You $name. We hear of you. We need help. You [help Crakneks] or you [help self]?");
 	}
 	if ($text=~/help crakneks/i) {
 		quest::say("Ha!! We hear of great adventurer. You?!! Me no think so. You prove self to Crakneks before you help us. Go to Innoth.. Innotu.. Innooth.. Arghh!! You go to outside Oggok. Find fat alligator bit Lork brother in two. Bring brother, Nork, body back. Then me know you strong.");
@@ -16,7 +16,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 13356 - Ogre Arm
 	if (plugin::takeItems(13356 => 1)) {
-		quest::say("Ahhh!! Boohoohoo. Nork!! That you arm. Me will take care of you now. Thank you for killing gator. You must be strong. Now you help Crakneks. We hear.. ohh, poor Nork, we hear trouble begins. Find ogre warrior [" . quest::saylink("Uglan") . "]. Give him this. It broken. He know where you from. Go. Nork.. Poor Nork.");
+		quest::say("Ahhh!! Boohoohoo. Nork!! That you arm. Me will take care of you now. Thank you for killing gator. You must be strong. Now you help Crakneks. We hear.. ohh, poor Nork, we hear trouble begins. Find ogre warrior [Uglan]. Give him this. It broken. He know where you from. Go. Nork.. Poor Nork.");
 		#:: Give a 13357 - Cracked Stein
 		quest::summonitem(13357);
 		#:: Ding!

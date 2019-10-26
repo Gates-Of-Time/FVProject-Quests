@@ -1,16 +1,16 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings, $name.  My name is Vicus Nonad. <cough>  I am the official tax collector for the fine city of Qeynos. <cough>  I serve the will of Antonius Bayle, our glorious leader.  <cough>  <cough>  Please excuse my [" . quest::saylink("cough") . "].  <cough>");
+		quest::say("Greetings, $name.  My name is Vicus Nonad. <cough>  I am the official tax collector for the fine city of Qeynos. <cough>  I serve the will of Antonius Bayle, our glorious leader.  <cough>  <cough>  Please excuse my [cough].  <cough>");
 	}
 	elsif ($text=~/cough/i) {
-		quest::say("Oh, <cough> I am sorry, but it seems I have fallen a bit ill.  I was caught out in the rain the other day and my chills have gotten the best of me. <cough>  If only someone would [" . quest::saylink("help with today's collections") . "]..  <cough>");
+		quest::say("Oh, <cough> I am sorry, but it seems I have fallen a bit ill.  I was caught out in the rain the other day and my chills have gotten the best of me. <cough>  If only someone would [help with today's collections]..  <cough>");
 	}
 	elsif ($text=~/help with today's collections/i) {
 		#:: Data bucket to verify quest has been started appropriately
 		$key = $client->CharacterID() . "-tax-collection";
 		#:: Set a data bucket, quest started
 		quest::set_data($key, 1);
-		quest::say("Oh thank <cough> you so <cough> <cough> much <cough>..  Here is the official collection box.  Please collect from each merchant on the <cough> [" . quest::saylink("list") . "].  Then bring me back the combined total of all your collections.");
+		quest::say("Oh thank <cough> you so <cough> <cough> much <cough>..  Here is the official collection box.  Please collect from each merchant on the <cough> [list].  Then bring me back the combined total of all your collections.");
 		#:: Give a 17012 - Tax Collection Box
 		quest::summonitem(17012);
 	}
@@ -59,13 +59,13 @@ sub EVENT_ITEM {
 	}
 	#:: Match a 13181 - Full Tax Collection Box
 	elsif (plugin::takeItems(13181 => 1)) {
-		quest::say("Very good <cough> work. But I need both the full tax collection box and the list of debtors. You did get the [" . quest::saylink("list") . "] from me before you left, right? <cough>");
+		quest::say("Very good <cough> work. But I need both the full tax collection box and the list of debtors. You did get the [list] from me before you left, right? <cough>");
 		#:: Return a 13181 - Full Tax Collection Box
 		quest::summonitem(13181);
 	}
 	#:: Match a 18009 - List of Debtors
 	elsif (plugin::takeItems(18009 => 1)) {
-		quest::say("Very good <cough> work. But I need both the full tax collection box and the list of debtors. You did get the [" . quest::saylink("list") . "] from me before you left, right? <cough>");
+		quest::say("Very good <cough> work. But I need both the full tax collection box and the list of debtors. You did get the [list] from me before you left, right? <cough>");
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();

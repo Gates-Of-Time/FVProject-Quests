@@ -3,7 +3,7 @@ sub EVENT_SAY {
 		quest::say("You'd better run along, if ya know what's best for ya!");
 	}
 	elsif ($text=~/lovely night for a stroll/i) {
-		quest::say("Yes, it is a lovely night for a walk, especially with a good friend. Tell me, are you a [" . quest::saylink("friend") . "]?");
+		quest::say("Yes, it is a lovely night for a walk, especially with a good friend. Tell me, are you a [friend]?");
 	}
 	elsif ($text=~/friend/i) {
 		quest::say("My memory is a bit fuzzy. If you are a friend, prove it to me.");

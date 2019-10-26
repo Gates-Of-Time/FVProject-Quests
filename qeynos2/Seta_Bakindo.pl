@@ -57,7 +57,7 @@ sub EVENT_SAY {
 #::		quest::say("Konem Matse is my friend and mentor, he resides in Qeynos Hills providing security for the Sayers there. Lately though I have heard reports of guards demanding he pay them tax or else. This tax they speak of does not exist. I need you to go to the hills and help Konem. Rid the lands of these corrupt guards and bring me their heads as proof. I will also need 1 High Quality Gnoll Fur for a tailoring project I have been working on. Return to me with these items and you will be rewarded for your troubles.");
 #::	}
 	elsif ($text=~/tomer instogle/i) {
-		quest::say("Oh, Tomer? We haven't heard from him in days, I'm really starting to worry. . . We need to have someone go [" . quest::saylink("find him") . "].");
+		quest::say("Oh, Tomer? We haven't heard from him in days, I'm really starting to worry. . . We need to have someone go [find him].");
 	}
 	elsif($text=~/find him/i) {
 		quest::say("One of our clan brothers has not reported back in over three days. He was sent to help defend the Qeynos Gates, and we haven't heard from him since. We need you to find him, if he is still alive. Tell him that Seta has sent you to find him, and escort him back to our guild. Good luck.");

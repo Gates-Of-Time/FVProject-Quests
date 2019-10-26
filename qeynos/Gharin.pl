@@ -8,19 +8,19 @@ sub EVENT_SPAWN {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Good day! I see they have good stock for the future armies of Qeynos. I, myself, wish to be a soldier one day instead of doing this [" . quest::saylink("job") . "].");
+		quest::say("Good day! I see they have good stock for the future armies of Qeynos. I, myself, wish to be a soldier one day instead of doing this [job].");
 	}
 	elsif ($text=~/job/i) {
-		quest::say("I am a [" . quest::saylink("messenger") . "] for Antonius Bayle. Not big enough to fight, but light enough to run all the way to the [" . quest::saylink("Jaggedpine") . "] tomorrow morning. I sort of wish I did not have to go. I'd rather be at the Lion's Mane.");
+		quest::say("I am a [messenger] for Antonius Bayle. Not big enough to fight, but light enough to run all the way to the [Jaggedpine] tomorrow morning. I sort of wish I did not have to go. I'd rather be at the Lion's Mane.");
 	}
 	elsif ($text=~/messenger/i) {
-		quest::say("I will be taking a private note to the head druid of the Jaggedpine Treefolk. Matter of fact, I am carrying the note right now. But enough about that, if it were not for the mission tomorrow, I could be doing something at the [" . quest::saylink("Lion's Mane") . "].");
+		quest::say("I will be taking a private note to the head druid of the Jaggedpine Treefolk. Matter of fact, I am carrying the note right now. But enough about that, if it were not for the mission tomorrow, I could be doing something at the [Lion's Mane].");
 	}
 	elsif ($text=~/jaggedpine/i) {
-		quest::say("I will be taking a private note to the head druid of the Jaggedpine Treefolk. Matter of fact, I am carrying the note right now. But enough about that, if it were not for the mission tomorrow, I could be doing something at the [" . quest::saylink("Lion's Mane") . "].");
+		quest::say("I will be taking a private note to the head druid of the Jaggedpine Treefolk. Matter of fact, I am carrying the note right now. But enough about that, if it were not for the mission tomorrow, I could be doing something at the [Lion's Mane].");
 	}
 	elsif ($text=~/lion's mane/i) {
-		quest::say("Ahh. The Lion's Mane. If I were there, I would be enjoying a stein of Crow's [" . quest::saylink("special brew") . "]. They are expecting their first shipment of the brew. I believe if I had a few or more of those lagers, I would be very ill. I would probably have to have someone else deliver the note for me. Still, I wish I had one of those fine brews.");
+		quest::say("Ahh. The Lion's Mane. If I were there, I would be enjoying a stein of Crow's [special brew]. They are expecting their first shipment of the brew. I believe if I had a few or more of those lagers, I would be very ill. I would probably have to have someone else deliver the note for me. Still, I wish I had one of those fine brews.");
 	}
 	elsif ($text=~/special brew/i) {
 		quest::say("Crow's special brew is one of the finest lagers anywhere. It used to be sold only at Crow's bar, but apparently Crow is allowing it into other bars. For a hefty price, too, I assume. This deal is good for decent citizens considering that the other two bars in Qeynos cater to pretty rough crowds.");

@@ -2,7 +2,7 @@ sub EVENT_SAY  {
 	if ($text=~/hail/i) {
 		#:: Match if faction is Dubious or better
 		if ($faction <= 7) {
-			quest::say("What business do you have here?!! This here is the mine and that means if you ain't a [" . quest::saylink("member of Miner's Guild 628") . "], you'd best be moving on!!");
+			quest::say("What business do you have here?!! This here is the mine and that means if you ain't a [member of Miner's Guild 628], you'd best be moving on!!");
 		}
 		else {
 			quest::say("The word around the mines is that you are not to be trusted. You'd best leave before my dagger finds a new home in your back.");
@@ -11,7 +11,7 @@ sub EVENT_SAY  {
 	elsif (($text=~/member of miner's guild 628/i)) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
-			quest::say("Well, then, get off yer rump and give us a hand! If you don't have a mining pick, then get down there and use your fingernails!! If you're new and you want to earn a pick, you can [" . quest::saylink("volunteer to exterminate the rats") . "] that have been infesting the mines!!");
+			quest::say("Well, then, get off yer rump and give us a hand! If you don't have a mining pick, then get down there and use your fingernails!! If you're new and you want to earn a pick, you can [volunteer to exterminate the rats] that have been infesting the mines!!");
 		}
 		#:: Match if faction is Indifferent 
 		elsif ($faction == 5) {
@@ -24,7 +24,7 @@ sub EVENT_SAY  {
 	elsif (($text=~/volunteer to exterminate the rats/i)) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
-			quest::say("Well, someone has to do the dirty work around here. Let it be you new miners. Go patrol the mines and if you see any rats, bash them good!! Return to me with four rat pelts and I will give you some armor as payment. If you want a 628 mining cap, yer gonna have to smash that infernal [" . quest::saylink("cleaner") . "]!!");
+			quest::say("Well, someone has to do the dirty work around here. Let it be you new miners. Go patrol the mines and if you see any rats, bash them good!! Return to me with four rat pelts and I will give you some armor as payment. If you want a 628 mining cap, yer gonna have to smash that infernal [cleaner]!!");
 		}
 		#:: Match if faction is Indifferent 
 		elsif ($faction == 5) {
@@ -37,7 +37,7 @@ sub EVENT_SAY  {
 	elsif (($text=~/run to the gnome city/i)) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
-			quest::say("Well, as you most likely know, we are a non-profit organization, at least here in Kaladim. We need to make our profit elsewhere and that means a little bit of thieving. Presently we need loyal members to [" . quest::saylink("collect the gnome profit") . "].");
+			quest::say("Well, as you most likely know, we are a non-profit organization, at least here in Kaladim. We need to make our profit elsewhere and that means a little bit of thieving. Presently we need loyal members to [collect the gnome profit].");
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction == 5) {
@@ -80,7 +80,7 @@ sub EVENT_SAY  {
 sub EVENT_ITEM {
 	#:: Match four 13054 - Giant Rat Pelt
 	if (plugin::takeItems(13054 => 4)) {
-		quest::say("It's about time you managed to smash these four!! Here. You do good work. We could use someone like you to [" . quest::saylink("run to the gnome city") . "]."); 
+		quest::say("It's about time you managed to smash these four!! Here. You do good work. We could use someone like you to [run to the gnome city]."); 
 		#:: Give a random reward: 2117 - Small tattered shoulderpads, 2119 - Small tattered Belt, 2122 - Small tattered gloves, 2115 - Small Tattered Gorget, 2114 - Small Tattered Mask, 2113 - Small tattered skullcap, 2121 Small Tattered Wristbands
 		quest::summonitem(quest::ChooseRandom(2117,2119,2122,2115,2114,2113,2121));
 		#:: Ding!

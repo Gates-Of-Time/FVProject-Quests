@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("My scroll must find my [" . quest::saylink("scroll") . "] so I may finish my research.");
+		quest::say("My scroll must find my [scroll] so I may finish my research.");
 	}
 	if ($text=~/scroll/i) {
 		quest::say("Kobold! Kobold!");

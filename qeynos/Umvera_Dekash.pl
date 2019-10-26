@@ -1,12 +1,12 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("What, $name? Do I look like a merchant to you? Just because all these merchants are in my library, it doesn't mean that I am one. If you are [" . quest::saylink("interested") . "] in something other than spell scrolls, then, we can talk.");
+		quest::say("What, $name? Do I look like a merchant to you? Just because all these merchants are in my library, it doesn't mean that I am one. If you are [interested] in something other than spell scrolls, then, we can talk.");
 	}
 	elsif ($text=~/interested/i) {
-		quest::say("Ah, so you do have half a wit about you! Very well. As you can clearly see, I am the librarian here. I keep track of all of the mystic tomes that enter this divine building. I also take care of all of the purchasing. Have you something to [" . quest::saylink("offer") . "]?");
+		quest::say("Ah, so you do have half a wit about you! Very well. As you can clearly see, I am the librarian here. I keep track of all of the mystic tomes that enter this divine building. I also take care of all of the purchasing. Have you something to [offer]?");
 	}
 	elsif ($text=~/offer/i) {
-		quest::say("Excellent! You have no idea how difficult it is to get good help these days. Do you think you would have the time to gather some [" . quest::saylink("information") . "] for me? ");
+		quest::say("Excellent! You have no idea how difficult it is to get good help these days. Do you think you would have the time to gather some [information] for me? ");
 	}
 	elsif ($text=~/information/i) {
 		quest::say("Even better! Well, it has been some time since the Tesch Val gnolls moved in on the Split Paw. That being said, we still know little to nothing of their origins. If you can bring me back the four scrolls that our diviners speak of, I believe I can reward you well.");

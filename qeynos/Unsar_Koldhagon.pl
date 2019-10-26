@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hello, $name, I am Unsar, student of Mespha. I am working on a spell. . . I call it [" . quest::saylink("Unsar's Glory") . "]. Great name, huh?");
+		quest::say("Hello, $name, I am Unsar, student of Mespha. I am working on a spell. . . I call it [Unsar's Glory]. Great name, huh?");
 	}
 	elsif ($text=~/glory/i) {
 		quest::say("Ah, Unsar's Glory. . . Mind you, I haven't perfected it yet, but bring me some rat whiskers, snake scales, and two bat wings, and I'll show you how it works.");

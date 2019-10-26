@@ -5,10 +5,10 @@ sub EVENT_SPAWN {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("What do you want? Are you friends with that lousy [" . quest::saylink("dwarf") . "]?! You had better not be unless you want to spend the rest of the week bleeding!");
+		quest::say("What do you want? Are you friends with that lousy [dwarf]?! You had better not be unless you want to spend the rest of the week bleeding!");
 	}
 	elsif ($text=~/dwarf/i) {
-		quest::say("That dwarf, Trumpy, who Corshin here thinks is a friend of Commander Bayle's, keeps pestering my poor brother Faren. I have had just about enough of him and [" . quest::saylink("his kind") . "].");
+		quest::say("That dwarf, Trumpy, who Corshin here thinks is a friend of Commander Bayle's, keeps pestering my poor brother Faren. I have had just about enough of him and [his kind].");
 	}
 	elsif ($text=~/his kind/i) {
 		quest::say("You know... thieves, drunks and murderers. Decent folk just don't have a chance anymore.");
@@ -50,7 +50,7 @@ sub EVENT_SIGNAL {
 	}
 	#:: Match signal 4 from qeynos/Trumpy_Irontoe.pl
 	elsif (($signal == 4) && ($x == -145 && $y == -247)) {
-		quest::say("If you ever talk that way about my [" . quest::saylink("brother") . "] again, I will throw your butt into the dungeon. I don't care who you know!");
+		quest::say("If you ever talk that way about my [brother] again, I will throw your butt into the dungeon. I don't care who you know!");
 		#:: Send a signal "2" to South Qeynos >> Trumpy_Irontoe (1042) with no delay
 		quest::signalwith(1042,2,0);
 		#:: Send a signal "2" to South Qeynos >> Guard_Corshin (1091) with 5 second delay

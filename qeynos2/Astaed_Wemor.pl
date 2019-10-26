@@ -1,12 +1,12 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings. I am Astaed Wemor of the Paladins of the Temple of Life. We are the defenders of the all-giving Prime Healer.  Are you [" . quest::saylink("here to pray") . "] or are you [" . quest::saylink("here to assist the temple") . "]?");
+		quest::say("Greetings. I am Astaed Wemor of the Paladins of the Temple of Life. We are the defenders of the all-giving Prime Healer.  Are you [here to pray] or are you [here to assist the temple]?");
 	}
 	elsif ($text=~/here to pray/i) {
 		quest::say("Then pray long and silently, $name.  Fill your soul with the breath of life.");
 	}
 	elsif ($text=~/assist the temple/i) {
-		quest::say("Good.  There are a few in the congregation who require assistance.  Will you be [" . quest::saylink("traveling afar") . "] or are you [" . quest::saylink("staying close to Qeynos") . "]?");
+		quest::say("Good.  There are a few in the congregation who require assistance.  Will you be [traveling afar] or are you [staying close to Qeynos]?");
 	}
 	elsif ($text=~/traveling afar/i) {
 		#:: Match if faction is Amiable or better

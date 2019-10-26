@@ -13,14 +13,14 @@ sub EVENT_PROXIMITY_SAY {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail, $name! Lieutenant Arathur Swelnik at your service. I take great pride in keeping Qeynos safe and proper. I also try to bring the word of [" . quest::saylink("Mithaniel Marr") . "] to the people of this fine city.");
+		quest::say("Hail, $name! Lieutenant Arathur Swelnik at your service. I take great pride in keeping Qeynos safe and proper. I also try to bring the word of [Mithaniel Marr] to the people of this fine city.");
 	}
 	elsif ($text=~/mithaniel marr/i) {
 		#:: Response made up
-		quest::say("Mithaniel Marr is the Lord of Valor and my personal source of power and inspiration. You see I was orphaned as a small child and raised by the Priests of Marr in [" . quest::saylink("Freeport") . "]. I have dedicated my life to protecting the innocent. I now use the glorious powers that my faith in the Truthbringer has provided to help bring honor to the city of Qeynos.");
+		quest::say("Mithaniel Marr is the Lord of Valor and my personal source of power and inspiration. You see I was orphaned as a small child and raised by the Priests of Marr in [Freeport]. I have dedicated my life to protecting the innocent. I now use the glorious powers that my faith in the Truthbringer has provided to help bring honor to the city of Qeynos.");
 	}
 	elsif ($text=~/freeport/i) {
-		quest::say("Freeport is the city of my birth. It is not what it once was, though. Thugs and bandits patrol its streets. My comrades in the Knights of Truth have managed to protect the northern parts of the city but I fear they are outnumbered and will soon have to flee Freeport altogether. If it were not for my sworn duty here, I would join their noble [" . quest::saylink("crusade") . "].");
+		quest::say("Freeport is the city of my birth. It is not what it once was, though. Thugs and bandits patrol its streets. My comrades in the Knights of Truth have managed to protect the northern parts of the city but I fear they are outnumbered and will soon have to flee Freeport altogether. If it were not for my sworn duty here, I would join their noble [crusade].");
 	}
 	elsif ($text=~/crusade/i) {
 		quest::say("The Knights of Truth fight a neverending battle against the corrupt and vicious Freeport Milita. If you are going to Freeport, you might want to meet up with Knight Rolius and let him know you are a [friend of Arathur]. They can always use another able body.");

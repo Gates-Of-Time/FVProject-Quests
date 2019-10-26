@@ -25,7 +25,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match 3 gold
 	elsif (plugin::takeCoin(0, 0, 3, 0)) {
-		quest::say("Thank you, kind master. I don't wish to trouble you further but I do have another [" . quest::saylink("favor") . "] to ask..");
+		quest::say("Thank you, kind master. I don't wish to trouble you further but I do have another [favor] to ask..");
 		#:: Ding!
 		quest::ding();
 		#:: Set factions

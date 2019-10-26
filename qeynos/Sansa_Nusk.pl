@@ -3,10 +3,10 @@ sub EVENT_SAY {
 		quest::say("Hello..  Welcome to the Wind Spirit's Song.  I'm Sansa, and I help out the local bards here.");
 	}
 	if ($text=~/fabian/i) {
-		quest::say("Ahh - jolly Fabian. He is one of our best customers! That is, of course, due to the fact that he has the heaviest fingers of any bard I know. Anyhow, down to business. I assume he sent you for a new set of strings. Unfortunately, I have not been able to procure any of the [" . quest::saylink("special - uhh - things") . "] needed to make his strings lately.");
+		quest::say("Ahh - jolly Fabian. He is one of our best customers! That is, of course, due to the fact that he has the heaviest fingers of any bard I know. Anyhow, down to business. I assume he sent you for a new set of strings. Unfortunately, I have not been able to procure any of the [special - uhh - things] needed to make his strings lately.");
 	}
 	if ($text=~/special - uhh - things/i) {
-		quest::say("Uhh - ummm - uhhh - Fabian does not know this, but his strings are - uh - made of - uh - [" . quest::saylink("troll guts") . "].");
+		quest::say("Uhh - ummm - uhhh - Fabian does not know this, but his strings are - uh - made of - uh - [troll guts].");
 	}
 	if ($text=~/troll guts/i) {
 		quest::say("Well, Fabian likes the thick resonance that only troll gut strings can provide. Trouble is, trolls are scarce around these parts,thank the gods, but Fabian breaks his strings as fast as I find suppliers. Trolls sometimes wander the Karanas in search of food but that is so rare, to see one there. Anyhow, if you find one out in the Karanas, bring me his guts and I can make the strings to take to Fabian.");

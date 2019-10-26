@@ -16,7 +16,7 @@ sub EVENT_SAY {
 		quest::say("Welcome, my name is Belious Naliedin of the League of Antonican Bards.  I used to work as one of the King's private entertainers, but now I pass my time-earned wisdom and skills on to others.  Do you have a note for me?");
 	}
 	elsif ($text=~/trades/i) {
-		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [" . quest::saylink("second book") . "], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
+		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [second book], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
 		#:: Give a 51121 - Tradeskill Basics : Volume I
 		quest::summonitem(51121);
 	}
@@ -27,13 +27,13 @@ sub EVENT_SAY {
 	}
 #########:: Ykesha-era quest:  Custom Naliedin Lute
 #	if ($text=~/hail/i) {
-#		quest::say("Welcome, my name is Belious Naliedin of the League of Antonican Bards. A few years ago, I had finally saved up the money, and I bought this place. I settled in, and have been [" . quest::saylink("working") . "] here ever since.");
+#		quest::say("Welcome, my name is Belious Naliedin of the League of Antonican Bards. A few years ago, I had finally saved up the money, and I bought this place. I settled in, and have been [working] here ever since.");
 #	}
 #	elsif ($text=~/working/i) {
-#		quest::say("Ah, this is my shop. I am a musician, well known for my ability both in tuning, and [" . quest::saylink("building instruments") . "]");
+#		quest::say("Ah, this is my shop. I am a musician, well known for my ability both in tuning, and [building instruments]");
 #	}
 #	elsif ($text=~/building instruments/i) {
-#		quest::say("Young bards are often not the wealthiest people in Norrath, and oftentimes, they have nothing to accompany their beautiful voices when they sing. If young bards are able to locate, and bring to me the [" . quest::saylink("various parts") . "] to assemble a lute with, I provide the labor for free.");
+#		quest::say("Young bards are often not the wealthiest people in Norrath, and oftentimes, they have nothing to accompany their beautiful voices when they sing. If young bards are able to locate, and bring to me the [various parts] to assemble a lute with, I provide the labor for free.");
 #	}
 #	elsif ($text=~/various parts/i) {
 #		quest::say("If you are able to find an unfinished lute body, an unfinished lute neck, a box of lute strings, and a set of fine lute tuners I will be able to craft for you one of the best sounding lutes that you have ever heard in your young life, and it will be yours, free of charge. It has long been my desire to help out any young men and women who wish to explore the bardic arts.");
@@ -66,7 +66,7 @@ sub EVENT_SIGNAL {
 sub EVENT_ITEM {
 	#:: Match a 18717 - Tattered Note
 	if (plugin::takeItems(18717 => 1)) {
-		quest::say("Good day friend, and welcome to the Wind Spirit's Song. Thank you for joining our cause. Go speak with Jusean Evanesque. I'm sure you'll fit in well. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
+		quest::say("Good day friend, and welcome to the Wind Spirit's Song. Thank you for joining our cause. Go speak with Jusean Evanesque. I'm sure you'll fit in well. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [trades] you will have available to you.");
 		#:: Give a 13502 - Brown Tunic*
 		quest::summonitem(13502);
 		#:: Ding!

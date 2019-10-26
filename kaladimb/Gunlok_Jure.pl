@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail, $name!  Bow before the greatness of the Clerics of Underfoot!  It is good to be a paladin in such an order as ours - to fight the good fight and defend Kaladim from the evil and undead.  If you be a paladin, then I pray you find the [" . quest::saylink("courage to battle the undead") . "].");
+		quest::say("Hail, $name!  Bow before the greatness of the Clerics of Underfoot!  It is good to be a paladin in such an order as ours - to fight the good fight and defend Kaladim from the evil and undead.  If you be a paladin, then I pray you find the [courage to battle the undead].");
 	}
 	elsif ($text=~/courage to battle the undead/i) {
 		quest::say("Yes!!  To battle the undead is our greatest call.  There has been a rise in the number of dwarven skeletons seen in the Butcherblocks.  If you are a true member of this order, I shall reward you for the return of four bone chips.  We shall defend our land from evil!");
@@ -19,7 +19,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match four 13073 - Bone Chips
 	if (plugin::takeItems(13073 => 4)) {
-		quest::say("You have done well. We thank you for your deed with this humble reward. The power behind the raising of our dead shall soon be found. You will earn more respect with more bone chips. I only wish you could assist in the return of the [" . quest::saylink("remains of Cromil") . "].");
+		quest::say("You have done well. We thank you for your deed with this humble reward. The power behind the raising of our dead shall soon be found. You will earn more respect with more bone chips. I only wish you could assist in the return of the [remains of Cromil].");
 		#:: Give a random reward: 2116 - Small Patchwork Tunic, 2122 - Small Tattered Gloves, 5013 - Rusty Short Sword, 5014 - Rusty Axe, 5016 - Rusty Broad Sword, 5023 - Rusty Two Handed Sword, 6011 - Rusty Mace, 13002 - Torch, 13003 - Small Lantern
 		quest::summonitem(quest::ChooseRandom(2116,2122,5013,5014,5016,5023,6011,13002,13003));
 		#:: Ding!

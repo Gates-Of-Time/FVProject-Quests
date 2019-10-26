@@ -1,6 +1,6 @@
 sub EVENT_SAY { 
 	if ($text=~/hail/i) {
-		quest::say("Shadowknight master me be!!  $name prove to me that $name be worthy to be one with Greenblood and me give $name black shadow tunic.  You want [" . quest::saylink("black shadow tunic") . "]?");
+		quest::say("Shadowknight master me be!!  $name prove to me that $name be worthy to be one with Greenblood and me give $name black shadow tunic.  You want [black shadow tunic]?");
 	}
 	if ($text=~/black shadow tunic/i) {
 		#:: Match if faction is Amiable or better

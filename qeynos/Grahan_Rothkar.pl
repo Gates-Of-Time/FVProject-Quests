@@ -1,12 +1,12 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail, $name! What business do you have in the pens of the Qeynos Arena? Have you a report of the [" . quest::saylink("escaped catman") . "]?");
+		quest::say("Hail, $name! What business do you have in the pens of the Qeynos Arena? Have you a report of the [escaped catman]?");
 	}
 	elsif ($text=~/escaped catman/i) {
-		quest::say("We had a catman imprisoned here for use in future gladiator battles. He escaped. In the process, he bit off my assistant's hand which held the key to pen number seven. I now seek to hire a warrior to [" . quest::saylink("retrieve key seven") . "].");
+		quest::say("We had a catman imprisoned here for use in future gladiator battles. He escaped. In the process, he bit off my assistant's hand which held the key to pen number seven. I now seek to hire a warrior to [retrieve key seven].");
 	}
 	elsif ($text=~/retrieve key seven/i) {
-		quest::say("Hmmm. You seem a bit young, but I shall give you a chance. Seek out the catman named Nomala. He most likely returned to [" . quest::saylink("Kerra Isle") . "]. He is not very powerful, but his people are surely watching over him. Retrieve the key for me and be rewarded.");
+		quest::say("Hmmm. You seem a bit young, but I shall give you a chance. Seek out the catman named Nomala. He most likely returned to [Kerra Isle]. He is not very powerful, but his people are surely watching over him. Retrieve the key for me and be rewarded.");
 	}
 	elsif ($text=~/kerra isle/i) {
 		quest::say("Kerra Isle is a dangerous place. The Kerra are not a friendly race. There is an island between Erudin and Qeynos which is inhabited by a more docile tribe of Kerra. I hear they took some of their Kerra beetles along with them to the island, too.");
@@ -18,7 +18,7 @@ sub EVENT_SAY {
 			quest::say("It appears our prize gladiator has escaped. He is a minotaur hero!! Trained by our best. He took down five of our greatest warriors during his escape. Rumor has it he fled to his homeland in the Steamfont Mountains. They say he is an outcast and does not live with his people. He appears during times of great need to champion the minotaurs. Return his shackles to me and glory is yours!!");
 		}
 		else {
-			quest::say("Have you a report of the [" . quest::saylink("escaped catman") . "]?");
+			quest::say("Have you a report of the [escaped catman]?");
 		}
 	}
 }
@@ -42,7 +42,7 @@ sub EVENT_ITEM {
 			quest::summonitem(20031);
 		}
 		else {
-			quest::say("I thank you. I must admit I had my doubts, but you have proven yourself a true warrior. I salute you. You can be of some assistance to me. It see ms as though there has been a [" . quest::saylink("second escaped gladiator") . "] and I have a reward waiting for a human warrior.");
+			quest::say("I thank you. I must admit I had my doubts, but you have proven yourself a true warrior. I salute you. You can be of some assistance to me. It see ms as though there has been a [second escaped gladiator] and I have a reward waiting for a human warrior.");
 			#:: Give a 5033 - Bronze Broad Sword
 			quest::summonitem(5033);
 			#:: Ding!
@@ -92,7 +92,7 @@ sub EVENT_ITEM {
 			quest::delete_data($key);
 		}
 		else {
-			quest::say("Have you a report of the [" . quest::saylink("escaped catman") . "]?");
+			quest::say("Have you a report of the [escaped catman]?");
 			#:: Return a 12188 - Minotaur Hero Shackles
 			quest::summonitem(12188);
 		}

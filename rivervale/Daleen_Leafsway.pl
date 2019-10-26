@@ -12,7 +12,7 @@ sub EVENT_TIMER {
 	if ($timer eq "blurt") {
 		#:: Stop the timer "blurt"
 		quest::stoptimer("blurt");
-		quest::say("Oh Dear.. I can't believe I forgot.. He must be [" . quest::saylink("starving") . "]!");
+		quest::say("Oh Dear.. I can't believe I forgot.. He must be [starving]!");
 		#:: Create a timer that loops every 5 minutes
 		quest::settimer("blurt", 300);
 	}
@@ -26,7 +26,7 @@ sub EVENT_SAY {
 
 sub EVENT_PROXIMITY_SAY {
 	if ($text=~/starving/i) {
-		quest::say("Deputy Eigon! I forgot! I was supposed to bring him some turnips to eat while he is on patrol! Oh... He asked so nicely, too. I feel bad that I forgot. If only someone would take these [" . quest::saylink("turnips") . "] to the Deputy.");
+		quest::say("Deputy Eigon! I forgot! I was supposed to bring him some turnips to eat while he is on patrol! Oh... He asked so nicely, too. I feel bad that I forgot. If only someone would take these [turnips] to the Deputy.");
 	}
 	if ($text=~/turnips/i) {
 		quest::say("Oh, thank you so much! You can keep any payment he gives you. Be sure to tell him I'm sorry.");

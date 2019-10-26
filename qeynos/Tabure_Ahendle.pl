@@ -12,7 +12,7 @@ sub EVENT_ENTER {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("What have we here?  Perhaps a future Ebon Strongbear?  A [" . quest::saylink("member of the Steel Warriors") . "]?  If the way of the warrior is not to your liking, might I suggest joining the League of Antonican Bards?  The only damage you might take there is a sore throat! HAHAHA!");
+		quest::say("What have we here?  Perhaps a future Ebon Strongbear?  A [member of the Steel Warriors]?  If the way of the warrior is not to your liking, might I suggest joining the League of Antonican Bards?  The only damage you might take there is a sore throat! HAHAHA!");
 	}
 	elsif ($text=~/steel warriors/i) {
 		#:: Match if faction is Indifferent or worse
@@ -20,7 +20,7 @@ sub EVENT_SAY {
 			quest::say("The Steel Warriors have no cause to dislike you, but you have yet to truly prove your worth to this guild.");
 		}
 		else {
-			quest::say("A warrior, you say? I have never met you. You must be from the [" . quest::saylink("bunker") . "] or perhaps just a new recruit. You should test your skills with Brin Stolunger. When you have done that, then, maybe you could [" . quest::saylink("assist") . "] me.");
+			quest::say("A warrior, you say? I have never met you. You must be from the [bunker] or perhaps just a new recruit. You should test your skills with Brin Stolunger. When you have done that, then, maybe you could [assist] me.");
 		}
 	}
 	elsif ($text=~/bunker/i) {
@@ -51,7 +51,7 @@ sub EVENT_SAY {
 		}
 	}
 	elsif ($text=~/trades/i) {
-		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [" . quest::saylink("second book") . "], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
+		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [second book], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
 		#:: Give a 51121 - Tradeskill Basics : Volume I
 		quest::summonitem(51121);
 	}
@@ -65,7 +65,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 18707 - Recruitment Flyer
 	if (plugin::takeItems(18707 => 1)) {
-		quest::say("Welcome to the Hall of Steel, our swords are strong, and our warriors stronger. Here is our guild tunic. Brin Stolunger is in charge of our new recruits. Go see him, and he'll teach the basics. You look like you'll make a fine addition to our guild. Once you are ready to pave your path to glory return to me for some initial armor quests. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
+		quest::say("Welcome to the Hall of Steel, our swords are strong, and our warriors stronger. Here is our guild tunic. Brin Stolunger is in charge of our new recruits. Go see him, and he'll teach the basics. You look like you'll make a fine addition to our guild. Once you are ready to pave your path to glory return to me for some initial armor quests. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [trades] you will have available to you.");
 		#:: Give a 13572 - Dirty Training Tunic*
 		quest::summonitem(13572);
 		#:: Ding!
@@ -91,7 +91,7 @@ sub EVENT_ITEM {
 			quest::summonitem(13424);
 		}	
 		else {
-			quest::say("Incredible!! Such grand tones. It shall make a fine rug. You have shown me that you cannot always judge a book by its cover. You are quite skilled. Would you like to perform a [" . quest::saylink("dangrous task") . "] for me?");
+			quest::say("Incredible!! Such grand tones. It shall make a fine rug. You have shown me that you cannot always judge a book by its cover. You are quite skilled. Would you like to perform a [dangrous task] for me?");
 			#:: Give a random reward: 2147 - Raw-hide Leggings, 2140 - Raw-hide Tunic, 9002 - Round Shield
 			quest::summonitem(quest::ChooseRandom(2147, 2140, 2147, 2140, 9002));
 			#:: Ding!

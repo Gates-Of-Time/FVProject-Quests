@@ -12,7 +12,7 @@ sub EVENT_ENTER {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("<SNORT!>  HHUUUUCCCSSH..  Peh!  You speak at Kaglari, High Priestess of Dark Ones.  Children of Hate.  Spawn of Innoruuk.  $name, speak or be gone!  <SNORT!>  You [" . quest::saylink("wish majik power") . "]?");
+		quest::say("<SNORT!>  HHUUUUCCCSSH..  Peh!  You speak at Kaglari, High Priestess of Dark Ones.  Children of Hate.  Spawn of Innoruuk.  $name, speak or be gone!  <SNORT!>  You [wish majik power]?");
 	}
 	elsif ($text=~/wish majik power/i) {
 		quest::say("GOOD! <SNORT> Innoruuk needs more childrens.  You show majik skill or I give you to Innoruuk.  You bring two snake scales and two bone chips ..<SNORT>..  from old bones.  I teach you majik.  GO!  <SNORT!!>");
@@ -25,7 +25,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match two 13073 - Bone Chips and two 13070 - Snake Scales
 	if (plugin::takeItems(13073 => 2, 13070 => 2)) {
-		quest::say("Good. Innoruuk get special gift. Not you, dis time. Here. Learning majik wid dis. You more want to [" . quest::saylink("help Innoruuk") . "]?");
+		quest::say("Good. Innoruuk get special gift. Not you, dis time. Here. Learning majik wid dis. You more want to [help Innoruuk]?");
 		#:: Give a 15093 - Spell: Burst of Flame
 		quest::summonitem(15093);
 		#:: Ding!

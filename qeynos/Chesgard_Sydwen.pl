@@ -1,24 +1,24 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("May Karana guide your strengths.  Are you a [" . quest::saylink("citizen of Qeynos") . "] or a visitor?");
+		quest::say("May Karana guide your strengths.  Are you a [citizen of Qeynos] or a visitor?");
 	}
 	elsif ($text=~/citizen of qeynos/i) {
-		quest::say("Then I would urge you to attend daily services in the Temple of Thunder.  You are a [" . quest::saylink("member of Thunder") . "] are you not?  Or maybe I am mistaken and you are just [" . quest::saylink("lost") . "].");
+		quest::say("Then I would urge you to attend daily services in the Temple of Thunder.  You are a [member of Thunder] are you not?  Or maybe I am mistaken and you are just [lost].");
 	}
 	elsif ($text=~/visitor/i) {
-		quest::say("Then study and spread the words of Karana the Rainkeeper. May all the storms in your heart be controlled by the Rainkeeper. You are young to the world just as [" . quest::saylink("Cheslin") . "] is."); 
+		quest::say("Then study and spread the words of Karana the Rainkeeper. May all the storms in your heart be controlled by the Rainkeeper. You are young to the world just as [Cheslin] is."); 
 	}
 	elsif ($text=~/member of thunder/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
-			quest::say("I welcome you. Karana cares for all of His flock. He bestows a touch of His power upon the souls of the Clerics and Paladins of our temple. We look after His flock. Speaking of which, I require the assistance of a young paladin to [" . quest::saylink("deliver provisions to needy members") . "].");
+			quest::say("I welcome you. Karana cares for all of His flock. He bestows a touch of His power upon the souls of the Clerics and Paladins of our temple. We look after His flock. Speaking of which, I require the assistance of a young paladin to [deliver provisions to needy members].");
 		}
 		else {
 			quest::say("Well, friend, the Temple of Thunder has recognized and appreciates your past deeds for us.  But this matter is of vital importance to us and we need more proof of your devotion to our cause.");
 		}
 	}
 	elsif ($text=~/lost/i) {
-		quest::say("Then study and spread the words of Karana the Rainkeeper.  May all the storms in your heart be controlled by the Rainkeeper.  You are young to the world just as [" . quest::saylink("Cheslin") . "] is.");
+		quest::say("Then study and spread the words of Karana the Rainkeeper.  May all the storms in your heart be controlled by the Rainkeeper.  You are young to the world just as [Cheslin] is.");
 	}
 	elsif ($text=~/cheslin/i) {
 		quest::say("My son, Cheslin, is currently in training to be a Qeynos Guard.  I fear it was not his calling.  He is not quite in our realm of reality.  He spent too many years of playing games of warriors and dragons.  He will be doing his first patrols in Qeynos Hills this week.  If you are near there, I would appreciate it if you would watch and see him safely through his first patrols.  Tell him I sent you.");
@@ -42,7 +42,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 12100 - Bandit Sash
 	if (plugin::takeItems(12100 => 1)) {
-		quest::say("Good work knight. The [" . quest::saylink("Karana bandits") . "] have been plaguing the Rainkeepers flock for some time.  Take this as a small reward for your devotion.  Continue the fight against the Karana Bandits.  Ahh... I wish [" . quest::saylink("Cheslin") . "] was equally as skilled.");
+		quest::say("Good work knight. The [Karana bandits] have been plaguing the Rainkeepers flock for some time.  Take this as a small reward for your devotion.  Continue the fight against the Karana Bandits.  Ahh... I wish [Cheslin] was equally as skilled.");
 		#:: Give a random reward: 6019 - Bronze Mace, 6021 - Bronze Two Handed Hammer, 6022 - Bronze Warhammer, 6023 - Bronze Flail, 6024 - Bronze Morning Star, 6025 - Bronze Warclub, 9002 - Round Shield
 		quest::summonitem(quest::ChooseRandom(6019, 6021, 6022, 6023, 6024, 6025, 9002));
 		#:: Ding!

@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Welcome, $name. The Cathedral of Underfoot welcomes all good persons. May you find peace from the dangers of Butcherblock within these walls. The paladins of this holy place are very much aware of the evils outside Kaladim. The threat of goblins and [" . quest::saylink("birdmen") . "] has increased.");
+		quest::say("Welcome, $name. The Cathedral of Underfoot welcomes all good persons. May you find peace from the dangers of Butcherblock within these walls. The paladins of this holy place are very much aware of the evils outside Kaladim. The threat of goblins and [birdmen] has increased.");
 	}
 	elsif ($text=~/birdmen/i) {
-		quest::say("The birdmen I speak of are the aviak krags. These vile creatures have desecrated our land. They have dared to perch upon our great statue. The king has instructed all noble paladins in this order to [" . quest::saylink("destroy the krag chicks") . "].");
+		quest::say("The birdmen I speak of are the aviak krags. These vile creatures have desecrated our land. They have dared to perch upon our great statue. The king has instructed all noble paladins in this order to [destroy the krag chicks].");
 	}
 	elsif ($text=~/destroy the krag chicks/i) {
 		#:: Match if faction is Amiable or better
@@ -28,7 +28,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match if faction is Amiable or better and four 12157 - Aviak Chick Talon
 	if (($faction <= 4) && (plugin::takeItems(12157 => 4))) {
-		quest::say("You have done well. Your deeds shall be recorded within our journals. Here, then, is your reward. May you strive to serve us to the full extent of your powers. The [" . quest::saylink("elders") . "] must also die.");
+		quest::say("You have done well. Your deeds shall be recorded within our journals. Here, then, is your reward. May you strive to serve us to the full extent of your powers. The [elders] must also die.");
 		#:: Give a random reward: 2116 - Small Patchwork Tunic, 2118 - Small Patchwork Cloak, 2120 - Small Patchwork Sleeves, 2123 - Small Patchwork Pants, 2124 - Small Patchwork Boots
 		quest::summonitem(quest::ChooseRandom(2116,2118,2120,2123,2124));
 		#:: Ding!

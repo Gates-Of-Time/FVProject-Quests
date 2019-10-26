@@ -1,15 +1,15 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hello, $Name. Rueppy's my name. Why don't you buy us something to [" . quest::saylink("drink") . "] and we can talk?");
+		quest::say("Hello, $Name. Rueppy's my name. Why don't you buy us something to [drink] and we can talk?");
 	}
 	if ($text=~/drink/i) {
 		quest::say("How about a short beer? That sounds good.");
 	}
 	if ($text=~/blackburrow stout/i) {
-		quest::say("Oh, well we can't get that here. However, you can always [" . quest::saylink("smuggle") . "] it in...");
+		quest::say("Oh, well we can't get that here. However, you can always [smuggle] it in...");
 	}
 	if ($text=~/smuggle/i) {
-		quest::say("Well, that depends. Do you want a [" . quest::saylink("job") . "]?");
+		quest::say("Well, that depends. Do you want a [job]?");
 	}
 	if ($text=~/job/i) {
 		quest::say("Should you choose to accept, you have to go to the ruins on the other side of the great wall, find Gunrich, and tell him that Dark Rivers Flow East.");
@@ -19,7 +19,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Turn in for 13032 - Short Beer
 	if (plugin::takeItems(13032 => 1 )) {
-		quest::say("Mmm. It's good, but not as good as [" . quest::saylink("Blackburrow Stout") . "].");
+		quest::say("Mmm. It's good, but not as good as [Blackburrow Stout].");
 		#:: Ding!
 		quest::ding();
 		#:: Give a small amount of experience

@@ -7,13 +7,13 @@ sub EVENT_SPAWN {
 
 sub EVENT_TIMER {
 	if ($timer eq "jillin") {
-		quest::say("[" . quest::saylink("Jillin") . "]? Jillin? Where did he go? Hrumph!");
+		quest::say("[Jillin]? Jillin? Where did he go? Hrumph!");
 	}
 }
 
 sub EVENT_PROXIMITY_SAY {
 	if ($text=~/jillin/i) {	
-		quest::say("Jillin is my courier. He was supposed to take this pot of [" . quest::saylink("stew") . "] over to Deputy Lowmot in Guardian Stronghold. It is just about ready and Mayor Gubbin hates cold stew!");
+		quest::say("Jillin is my courier. He was supposed to take this pot of [stew] over to Deputy Lowmot in Guardian Stronghold. It is just about ready and Mayor Gubbin hates cold stew!");
 	}
 	elsif ($text=~/stew/i) {
 		quest::say("Here. Take it to Lowmot. The stew is already paid for but the good Deputy usually tips Jillin quite well. Hurry! It's getting cold!");
@@ -31,7 +31,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 13958 - Crate of Carrots
 	if (plugin::takeItems(13958 => 1)) {
-		quest::say("Well it is about time!  The mayor gets very upset if he does not have the freshest of carrots in his stew.  Here is the money for the carrots.  Be off with you.  Now, where the heck did [" . quest::saylink("Jillin") . "] go?");
+		quest::say("Well it is about time!  The mayor gets very upset if he does not have the freshest of carrots in his stew.  Here is the money for the carrots.  Be off with you.  Now, where the heck did [Jillin] go?");
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
@@ -49,7 +49,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match a 13957 - Crate of Fine Carrots
 	elsif (plugin::takeItems(13957 => 1)) {
-		quest::say("Oh excellent! These carrots are perfect! The finest Reebo has ever sent us. The mayor will be so pleased. Here is the payment for the carrots. Excuse me, but I must finish preparing the stew. Hmm. Where the heck did [" . quest::saylink("Jillin") . "] go?");
+		quest::say("Oh excellent! These carrots are perfect! The finest Reebo has ever sent us. The mayor will be so pleased. Here is the payment for the carrots. Excuse me, but I must finish preparing the stew. Hmm. Where the heck did [Jillin] go?");
 		#:: Ding!
 		quest::ding();
 		#:: Set factions

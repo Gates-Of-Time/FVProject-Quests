@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hey..  What's up? My name's Knargon Lanenda. I just came over here from [" . quest::saylink("Freeport") . "] a couple of months ago. I used to run a big business importing goods from [" . quest::saylink("Faydwer") . "]. If you've been to [" . quest::saylink("Freeport") . "]. I'm sure you've heard of me.");
+		quest::say("Hey..  What's up? My name's Knargon Lanenda. I just came over here from [Freeport] a couple of months ago. I used to run a big business importing goods from [Faydwer]. If you've been to [Freeport]. I'm sure you've heard of me.");
 	}
 	elsif ($text=~/freeport/i) {
 		quest::say("It's a long way from here. . .which is a good thing for me.");
@@ -9,10 +9,10 @@ sub EVENT_SAY {
 		quest::say("It's a long way from here. . .which is a good thing for me.");
 	}
 	elsif ($text=~/jracol/i) {
-		quest::say("I don't know why [" . quest::saylink("Carson") . "] likes that guy ... he's certainly been nothing but trouble for me.");
+		quest::say("I don't know why [Carson] likes that guy ... he's certainly been nothing but trouble for me.");
 	}
 	elsif (($text=~/carson/i) || ($text=~/mccabe/i))  {
-		quest::say("Carson McCabe? He runs that sham of a fortress called [" . quest::saylink("Highpass Hold") . "]. We've been dealing with him for a few years, now. But, lately he seems to be losing control of his business. [" . quest::saylink("Hanns") . "] will whip him into shape pretty soon though, I bet.");
+		quest::say("Carson McCabe? He runs that sham of a fortress called [Highpass Hold]. We've been dealing with him for a few years, now. But, lately he seems to be losing control of his business. [Hanns] will whip him into shape pretty soon though, I bet.");
 	}
 	elsif ($text=~/highpass hold/i) {
 		quest::say("It's a long way from here. . .which is a good thing for me.");
@@ -21,12 +21,12 @@ sub EVENT_SAY {
 		quest::say("He is genuinely dangerous. If you think otherwise, you won't be thinking for long.");
 	}
 	elsif ($text=~/shipment/i) {
-		quest::say("We have a small shipment of goods coming in later tonight. The [" . quest::saylink("courier") . "] will be waiting outside the city gates. Casually tell the courier [Lovely night for a stroll], and give him this old card as proof that you work for us. Make certain that you are not followed, and return the shipment to me.");
+		quest::say("We have a small shipment of goods coming in later tonight. The [courier] will be waiting outside the city gates. Casually tell the courier [Lovely night for a stroll], and give him this old card as proof that you work for us. Make certain that you are not followed, and return the shipment to me.");
 		#:: Give a 13903 - Bent Playing Card
 		quest::summonitem(13903);
 	}
 	elsif ($text=~/courier/i) {
-		quest::say("The courier that usually runs [" . quest::saylink("McCabe") . "]'s shipment, is that good for nothing J'Racol. I don't trust his kind.");
+		quest::say("The courier that usually runs [McCabe]'s shipment, is that good for nothing J'Racol. I don't trust his kind.");
 	}
 }
 

@@ -1,6 +1,6 @@
 sub EVENT_SAY { 
 	if ($text=~/hail/i) {
-		quest::say("Why. hello there!!  Welcome to the Church of Mischief.  I am Hendi Mrubble. The 'R' is silent.  I am the resident healer of the church. so if you are in need of [" . quest::saylink("healing") . "], or want me to [" . quest::saylink("cure poison") . "] or [" . quest::saylink("cure disease") . "], let me know.  If you've got a touch of the crazy brain. I can't do a thing for you.");
+		quest::say("Why. hello there!!  Welcome to the Church of Mischief.  I am Hendi Mrubble. The 'R' is silent.  I am the resident healer of the church. so if you are in need of [healing], or want me to [cure poison] or [cure disease], let me know.  If you've got a touch of the crazy brain. I can't do a thing for you.");
 	}
 	elsif ($text=~/healing/i) {
 		quest::say("Hmmm.  I would love to help you with that. but you will have to make a donation to the temple.  The Guardians asked me to charge one of the Rivervale piranha teeth.");
