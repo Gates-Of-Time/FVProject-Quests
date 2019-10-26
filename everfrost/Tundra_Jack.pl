@@ -1,18 +1,18 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Good mining to you, kid! What are you doing way out here? You're gonna catch frostbite. The name's Tundra Jack, prospector supreme. Trained by the finest miners in Kaladim!! Me 'n [" . quest::saylink("Iceberg") . "] have been out here for three years now, searchin' fer fortune.");
+		quest::say("Good mining to you, kid! What are you doing way out here? You're gonna catch frostbite. The name's Tundra Jack, prospector supreme. Trained by the finest miners in Kaladim!! Me 'n [Iceberg] have been out here for three years now, searchin' fer fortune.");
 	}
 	if ($text=~/Iceberg/i) {
-		quest::say("Iceberg used to be a beast.  He terrorized Halas for some time, then he met me.  I tamed the beast and now he watches my back.  You never know when the ice giants may go for a stroll from [" . quest::saylink("Permafrost") . "].");
+		quest::say("Iceberg used to be a beast.  He terrorized Halas for some time, then he met me.  I tamed the beast and now he watches my back.  You never know when the ice giants may go for a stroll from [Permafrost].");
 	}
 	if ($text=~/Permafrost/i) {
 		quest::say("If I knew that, I would be swinging my picks inside it already!  The entrance is said to be somewhere out here in Everfrost Peaks.");
 	}
 	if ($text=~/sweaty shirt/i) {
-		quest::say("Looking fer that blasted shirt, huh?  Well, as you can smell, I didn't get to washing it, but I wrapped it onto Iceberg's collar. I'd say you can have it, but Iceberg kind of likes it now.  The only way you're gonna be able to grab it from him is to feed him his [" . quest::saylink("favorite meal") . "].");
+		quest::say("Looking fer that blasted shirt, huh?  Well, as you can smell, I didn't get to washing it, but I wrapped it onto Iceberg's collar. I'd say you can have it, but Iceberg kind of likes it now.  The only way you're gonna be able to grab it from him is to feed him his [favorite meal].");
 	}
 	if ($text=~/favorite meal/i) {
-		quest::say("Iceberg has some picky eating habits.  If he can't catch any goblins, he prefers [" . quest::saylink("Lion Delight") . "].  Lion Delight is his favorite.");
+		quest::say("Iceberg has some picky eating habits.  If he can't catch any goblins, he prefers [Lion Delight].  Lion Delight is his favorite.");
 	}
 	if ($text=~/Lion Delight/i) {
 		quest::say("I usually get Lion Delight from Teria O'Danos in Halas.");
