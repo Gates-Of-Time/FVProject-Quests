@@ -14,10 +14,10 @@ sub EVENT_ENTER {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail noble, $name!  Can you be of [" . quest::saylink("service to the Clerics of Tunare") . "] or are you not from our order?");
+		quest::say("Hail noble, $name!  Can you be of [service to the Clerics of Tunare] or are you not from our order?");
 	}
 	if ($text=~/trades/i) {
-		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [" . quest::saylink("second book") . "], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
+		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [second book], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
 		#:: Give item 51121 - Tradeskill Basics: Volume I
 		quest::summonitem(51121);
 	}
@@ -29,7 +29,7 @@ sub EVENT_SAY {
 	if ($text=~/service to the clerics of tunare/i) {
 		#:: Match if faction is better than indifferent
 		if ($faction < 5) {
-			quest::say("That is good. Prove yourself, then.  Are you [" . quest::saylink("new to Felwithe") . "] or have I been conversing with a [" . quest::saylink("veteran of the good fight") . "]?");
+			quest::say("That is good. Prove yourself, then.  Are you [new to Felwithe] or have I been conversing with a [veteran of the good fight]?");
 		}
 		#:: Match if faction is Indifferent or worse
 		else {
@@ -61,7 +61,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Turn in for 18781 -  A Tattered Note
 	if (plugin::takeItems(18781 => 1)) {
-		quest::say("Greetings. young paladin!  I am Master Tynkale of the Clerics of Tunare.  Here, we shall teach and train you in the skills needed to defeat our evil and diseased enemies.  Take this, our guild tunic - it will help protect you.  Once you are ready to begin your training please make sure that you see Seria Woodwind, she can assist you in experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
+		quest::say("Greetings. young paladin!  I am Master Tynkale of the Clerics of Tunare.  Here, we shall teach and train you in the skills needed to defeat our evil and diseased enemies.  Take this, our guild tunic - it will help protect you.  Once you are ready to begin your training please make sure that you see Seria Woodwind, she can assist you in experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [trades] you will have available to you.");
 		#:: Give item 13591 - Used Gold Training Tunic*
 		quest::summonitem(13591);
 		#:: Ding!

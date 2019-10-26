@@ -1,15 +1,15 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Stand at attention!!  I am General Jyleel. of the Koada'Vie. defenders of Felwithe.  Do you [" . quest::saylink("follow Tunare") . "]. the Mother of All. or do you still [" . quest::saylink("seek enlightenment") . "]?");
+		quest::say("Stand at attention!!  I am General Jyleel. of the Koada'Vie. defenders of Felwithe.  Do you [follow Tunare]. the Mother of All. or do you still [seek enlightenment]?");
 	}
 	if ($text=~/follow Tunare/i) {
-		quest::say("Then you are wise indeed.  Would you like to [" . quest::saylink("assist the defenders") . "] in our conflicts or have you other business to attend to?");
+		quest::say("Then you are wise indeed.  Would you like to [assist the defenders] in our conflicts or have you other business to attend to?");
 	}
 	if ($text=~/seek enlightenment/i) {
 		quest::say("Then seek it within these walls.  We welcome all fine upstanding Koada'Dal.");
 	}
 	if ($text=~/assist the defenders/i) {
-		quest::say("Seek out the Crushbone orcs of the Faydarks.  We must have their oracle scrolls.  They are illegible to you, but we will study them here in Felwithe.  Only the orc oracles will carry them, so be very careful.  There is also the problem with the [" . quest::saylink("Crushbone runners") . "]");
+		quest::say("Seek out the Crushbone orcs of the Faydarks.  We must have their oracle scrolls.  They are illegible to you, but we will study them here in Felwithe.  Only the orc oracles will carry them, so be very careful.  There is also the problem with the [Crushbone runners]");
 	}
 	if ($text=~/Crushbone runners/i) {
 		quest::say("The Crushbone orcs are sending messages across the Ocean of Tears to Antonica.  Why. we do not know.  The runner is usually spotted on the open pathways of Butcherblock. running toward the docks.  Find him. kill him. and return his note pouch.");
@@ -56,7 +56,7 @@ sub EVENT_ITEM {
 	}
 	#:: Turn in for the Orc Runner Quest , 18840 A Sealed Letter
 	if (plugin::takeItems(18840=> 1)) {
-		quest::say("So, the Teir'Dal are behind the recent advances of the orcs?!! Your news has shed light on their union. It is time to step forth and prove yourself a [" . quest::saylink("faithful paladin of this court") . "].");
+		quest::say("So, the Teir'Dal are behind the recent advances of the orcs?!! Your news has shed light on their union. It is time to step forth and prove yourself a [faithful paladin of this court].");
 		#:: Give a little xp
 		quest::exp(500);
 		#:: Ding!

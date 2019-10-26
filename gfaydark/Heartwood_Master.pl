@@ -15,7 +15,7 @@ sub EVENT_SAY {
 		quest::say("Greetings, child of Tunare. As druids of The Mother of All, we may only use blunt weapons, and the scimitar, all other blades are forbidden. Prove your devotion by bringing me a rusty short sword, a rusty long sword, a rusty broad sword, and a rusty bastard sword. I will destroy them and reward your faith.");
 	}
 	elsif ($text=~/trades/i) {
-		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [" . quest::saylink("second book") . "], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
+		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [second book], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
 		#:: Give a 51121 - Tradeskill Basics : Volume I
 		quest::summonitem(51121);
 	}
@@ -29,7 +29,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 18786 - Tattered Note
 	if (plugin::takeItems(18786 => 1)) {
-		quest::say("Welcome! We are the Soldiers of Tunare, the sworn protectors of Faydark. I thank you for joining our cause, we can always use the help. Once you are ready to begin your training please make sure that you see Aliafya Mistrunner, she can assist you in developing your hunting and gathering skills. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
+		quest::say("Welcome! We are the Soldiers of Tunare, the sworn protectors of Faydark. I thank you for joining our cause, we can always use the help. Once you are ready to begin your training please make sure that you see Aliafya Mistrunner, she can assist you in developing your hunting and gathering skills. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [trades] you will have available to you.");
 		#:: Give a 13537 - Green and Tan Tunic*
 		quest::summonitem(13537);
 		#:: Ding!

@@ -14,7 +14,7 @@ sub EVENT_COMBAT {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greeetingsssssssssss. What brings sssssuch asssss you to the heart of the Feerrott? Do you know [" . quest::saylink("know fear") . "]?");
+		quest::say("Greeetingsssssssssss. What brings sssssuch asssss you to the heart of the Feerrott? Do you know [know fear]?");
 	}
 	if ($text=~/know fear/i) {
 		quest::say("Yesssss. I can tassssste the fear in your pitiful heart. I am Roror, High Priessst of Cazic-Thule! I sssseek to sssssspread terror acrossssss all of Norrath! I ssssshall let you live thisss day so you can sssshare the fear that liessss within you.");

@@ -5,11 +5,11 @@ sub EVENT_SPAWN {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hello there, $name. You wouldn't by chance happen to be a [" . quest::saylink("ranger") . "], would you?'");
+		quest::say("Hello there, $name. You wouldn't by chance happen to be a [ranger], would you?'");
 	}
 	if ($text=~/ranger/i) {
 		#:: "Ganelorn Oast" is matched by gfaydark/Devin_Ashwood.pl
-		quest::say("I sure love a strong ranger. Especially [" . quest::saylink("Ganelorn Oast") . "]. He's so dreamy and handsome. I think one day he's going to ask me to marry him.");
+		quest::say("I sure love a strong ranger. Especially [Ganelorn Oast]. He's so dreamy and handsome. I think one day he's going to ask me to marry him.");
 		#:: Send a signal to The Greater Faydark >> Devin_Ashwood (54085)
 		quest::signalwith(54085, 1, 3)
 	}
@@ -30,6 +30,6 @@ sub EVENT_SIGNAL {
 		quest::emote("sulks");
 	}
 	if ($signal == 2) {
-		quest::say("Oh! If you're going to see him, would you please take this  [" . quest::saylink("letter") . "] to him? I trust you, since you're a ranger and all.");
+		quest::say("Oh! If you're going to see him, would you please take this  [letter] to him? I trust you, since you're a ranger and all.");
 	}
 }

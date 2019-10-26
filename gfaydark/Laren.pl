@@ -5,7 +5,7 @@ sub EVENT_SAY {
 			quest::say("Welcome, my friend! What is it you seek from Laren and the Scouts of Tunare?");
 		}
 		if ($text=~/scouts blade/i) {
-			quest::say("So you have heard of the dagger created especially for the rogues of Kelethin! The creator of these blades has since passed away. We mourn his death. And, I am sorry to say, we have no more to offer our new scouts. There is a way though.. A way to gain a blade and a way to [" . quest::saylink("avenge the craftsman") . "].");
+			quest::say("So you have heard of the dagger created especially for the rogues of Kelethin! The creator of these blades has since passed away. We mourn his death. And, I am sorry to say, we have no more to offer our new scouts. There is a way though.. A way to gain a blade and a way to [avenge the craftsman].");
 		}
 		if ($text=~/avenge the craftsman/i) {
 			quest::say("You must journey to Antonica. Seek out a castle high in the Serpent's Spine. A castle called Highkeep. Search for a man named Fenn Kaedrick. Give him this token and he shall know why you were sent. Perhaps the merchants will know of his whereabouts. Go at once. I have faith in you. Good luck, $name.");

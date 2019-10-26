@@ -18,7 +18,7 @@ sub EVENT_SAY {
 	if ($text=~/the glory of the mother shines bright/i) {
 		#:: Match if faction is Amiably or better
 		if ($faction < 5) {
-			quest::say("So you're the slayer of Jojongua. Funny, I thought you would be taller. I guess you will have to do. I am Tolon Nurbyte of the Silent Watch. We do all the dirty work of King Tearis Thex. No one knows of us. So I hope you accept this mission or I will have to kill you. Do you [" . quest::saylink("accept the mission") . "] or do you [" . quest::saylink("wish to leave") . "]?");
+			quest::say("So you're the slayer of Jojongua. Funny, I thought you would be taller. I guess you will have to do. I am Tolon Nurbyte of the Silent Watch. We do all the dirty work of King Tearis Thex. No one knows of us. So I hope you accept this mission or I will have to kill you. Do you [accept the mission] or do you [wish to leave]?");
 		}
 		#:: Match if faction is Indifferent or worse
 		else {

@@ -15,7 +15,7 @@ sub EVENT_ENTER {
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		if ($class eq "Ranger") {
-			quest::say("Welcome to Kelethin, $name! I am Maesyn Trueshot, commander of Faydark's Champions. We are the finest marksmen in all of Norrath. With our trusty [" . quest::saylink("Trueshot longbows") . "] we can miss no target regardless of the distance or the conditions.");
+			quest::say("Welcome to Kelethin, $name! I am Maesyn Trueshot, commander of Faydark's Champions. We are the finest marksmen in all of Norrath. With our trusty [Trueshot longbows] we can miss no target regardless of the distance or the conditions.");
 		}
 		else {
 			quest::say("Welcome to Kelethin, $name! I am Maesyn Trueshot, commander of Faydark's Champions. We are the finest marksmen in all of Norrath. With our trusty Trueshot longbows we can miss no target regardless of the distance or the conditions.");
@@ -23,7 +23,7 @@ sub EVENT_SAY {
 	}
 	if ($text=~/trueshot longbows/i) {
 		if ($class eq "Ranger") {
-			quest::say("The Trueshot Longbow was created by my famed father, Eldin Trueshot. It is quite accurate and takes a ranger's skill to wield. We use our new recruits to [" . quest::saylink("gather materials") . "] needed by my father.  We shall soon begin to release the formula to good elves so all may fletch such a bow.");
+			quest::say("The Trueshot Longbow was created by my famed father, Eldin Trueshot. It is quite accurate and takes a ranger's skill to wield. We use our new recruits to [gather materials] needed by my father.  We shall soon begin to release the formula to good elves so all may fletch such a bow.");
 		} 
 		else {
 			quest::say("The Trueshot Longbow was created by my famed father, Eldin Trueshot. It is quite accurate and takes a ranger's skill to wield.");
@@ -62,7 +62,7 @@ sub EVENT_SAY {
 		}
 	}
 	if ($text=~/trades/i) {
-		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [" . quest::saylink("second book") . "], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
+		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [second book], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
 		#:: Give a 51121 - Tradeskill Basics : Volume I
 		quest::summonitem(51121);
 	}
@@ -76,7 +76,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match 18785 - Tattered Note
 	if (plugin::takeItems(18785 => 1)) {
-		quest::say("Hail, $name, and welcome.. I am Maesyn Trueshot, leader of Faydark's Champions. I will teach and train you, as I have done for many others. Let's get started.. Here, put this on.. it'll help protect you from the elements. Once you are ready to begin your training please make sure that you see Samatansyn Flamecaller, he can assist you in developing your hunting and gathering skills. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [" . quest::saylink("trades") . "] you will have available to you.");
+		quest::say("Hail, $name, and welcome.. I am Maesyn Trueshot, leader of Faydark's Champions. I will teach and train you, as I have done for many others. Let's get started.. Here, put this on.. it'll help protect you from the elements. Once you are ready to begin your training please make sure that you see Samatansyn Flamecaller, he can assist you in developing your hunting and gathering skills. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [trades] you will have available to you.");
 		#:: Give a 13536 - Dirty Green Tunic*
 		quest::summonitem(13536);
 		#:: Ding!
@@ -92,7 +92,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match 12112 - Pack of Materials
 	if (plugin::takeItems(12112 => 1)) {
-		quest::say("I shall see that my father gets the materials. I hope this can be of use to you. It will serve as your starting point toward fletching a Trueshot longbow. It is unfortunate that we are unable to enchant the bow to its [" . quest::saylink("next incarnation") . "], but it is still a fine weapon. You do know the [" . quest::saylink("correct components") . "] needed for fletching such a bow, do you not?");
+		quest::say("I shall see that my father gets the materials. I hope this can be of use to you. It will serve as your starting point toward fletching a Trueshot longbow. It is unfortunate that we are unable to enchant the bow to its [next incarnation], but it is still a fine weapon. You do know the [correct components] needed for fletching such a bow, do you not?");
 		#:: Give a 8091 - Treant Bow Staff
 		quest::summonitem(8091);
 		#:: Ding!

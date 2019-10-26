@@ -1,12 +1,12 @@
 sub EVENT_SAY { 
 	if ($text=~/Hail/i) {
-		quest::say("Hail. $name - Are you [" . quest::saylink("interested") . "] in helping the League of Antonican Bards by delivering some [" . quest::saylink("mail") . "]?");
+		quest::say("Hail. $name - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?");
 	}
 	if ($text=~/interested/i) {
-		quest::say("I have messages that need to go to - well. right now I have one that needs to go to Freeport.  Will you deliver mail to [" . quest::saylink("Freeport") . "] for me?");
+		quest::say("I have messages that need to go to - well. right now I have one that needs to go to Freeport.  Will you deliver mail to [Freeport] for me?");
 	}
 	if ($text=~/mail/i) {
-		quest::say("The League of Antonican Bards has a courier system made up of travelers, adventurers, and [" . quest::saylink("agents") . "].  We pay good gold to anyone who will take messages from bards such as myself to one of our more distant offices.  Are you [" . quest::saylink("interested") . "]?");
+		quest::say("The League of Antonican Bards has a courier system made up of travelers, adventurers, and [agents].  We pay good gold to anyone who will take messages from bards such as myself to one of our more distant offices.  Are you [interested]?");
 	}
 	if ($text=~/agents/i) {
 		quest::say("Lyra Lyrestringer, Tacar Tissleplay, Kilam Oresinger and Siltria Marwind all report to Jakum Webdancer.");

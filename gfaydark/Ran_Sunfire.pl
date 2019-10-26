@@ -1,9 +1,9 @@
 sub EVENT_SAY { 
 	if ($text=~/Hail/i) {
-		quest::say("Hail, $name! I trust you are not afraid of heights. Kelethin is a grand city, but it is also a safe haven from predators and evil beings. About the only thing to fear are the [" . quest::saylink("pixie tricksters") . "].");
+		quest::say("Hail, $name! I trust you are not afraid of heights. Kelethin is a grand city, but it is also a safe haven from predators and evil beings. About the only thing to fear are the [pixie tricksters].");
 	}
 	if ($text=~/pixie tricksters/i) {
-		quest::say("An irritating lot of fairy folk. They have been starting fires in our great forest. They may just burn our grand community down. We will have to [" . quest::saylink("exterminate the pixies") . "]. It is unfortunate. but it is for the good of the entire forest.");
+		quest::say("An irritating lot of fairy folk. They have been starting fires in our great forest. They may just burn our grand community down. We will have to [exterminate the pixies]. It is unfortunate. but it is for the good of the entire forest.");
 	}
 	if ($text=~/exterminate the pixies/i) {
 		quest::say("Then I give you this pouch. Should you fill and combine it with pixie dust, I shall pay you greatly for your deeds. We may even find a use for the dust itself. Careful, small though they may be, many are quite strong. Search for the weak ones for now.");

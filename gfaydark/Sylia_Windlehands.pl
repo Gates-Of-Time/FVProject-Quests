@@ -12,13 +12,13 @@ sub EVENT_ENTER {
 
 sub EVENT_SAY { 
 	if ($text=~/hail/i) {
-		quest::say("Salutations! The Song Weavers are always glad to add a new voice to the choir.  In addition to your voice. will you also [" . quest::saylink("fetch spiderling silk") . "]?  We need some to replace our worn lute strings.  Carry out this task in high tempo and we will show our gratitude.");
+		quest::say("Salutations! The Song Weavers are always glad to add a new voice to the choir.  In addition to your voice. will you also [fetch spiderling silk]?  We need some to replace our worn lute strings.  Carry out this task in high tempo and we will show our gratitude.");
 	}
 	elsif ($text=~/fetch spiderling silk/i) {
 		quest::say("Very spirited of you!!  Gather four spiderling silk and return them to me.  Good hunting, my friend!!");
 	}
 	elsif ($text=~/trades/i) {
-		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [" . quest::saylink("second book") . "], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
+		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [second book], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
 		#:: Give a 51121 - Tradeskill Basics : Volume I
 		quest::summonitem(51121);
 	}
