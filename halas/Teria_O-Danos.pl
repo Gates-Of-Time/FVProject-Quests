@@ -1,22 +1,22 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Good day to ye! Ye look a wee bit hungrry. I sell many fine foods. Please have a look. Might I suggest the [" . quest::saylink("lion roast") . "]? It is a wee bit expensive, but well worth it.");
+		quest::say("Good day to ye! Ye look a wee bit hungrry. I sell many fine foods. Please have a look. Might I suggest the [lion roast]? It is a wee bit expensive, but well worth it.");
 	}
 	elsif ($text=~/lion roast/i) {
-		quest::say("The lion roast is quite good. Tis me specialty. Ah marinate the lion meat in mammoth fat fer two days before roasting it. Lion meat isn't common around here. I'll purchase what I can from strangers but I rely mostly on shipments from the Plains o' Karana. I'm presently searching fer someone to pick up me [" . quest::saylink("lion meat shipment") . "].");
+		quest::say("The lion roast is quite good. Tis me specialty. Ah marinate the lion meat in mammoth fat fer two days before roasting it. Lion meat isn't common around here. I'll purchase what I can from strangers but I rely mostly on shipments from the Plains o' Karana. I'm presently searching fer someone to pick up me [lion meat shipment].");
 	}
 	elsif ($text=~/lion meat shipment/i) {
-		quest::say("It'd be grand o' ye to pick up me lion meat shipment. Ye must travel to the Plains o' Karana. Search fer a Northman fishing village. It should be Clan McMannus. Speak with the chieftain, Einhorst. Tell him ye're there to pick up the lion meat shipment for Halas. When ye return, I'll pay ye at least three gold. I look forward to yer return.");
+		quest::say("It'd be grand o' ye to pick up me lion meat shipment. Ye must travel to the Plains o' Karana. Search fer a Northman fishing village. It should be Clan McMannus. Speak with the chieftain, Einhorst. Tell him ye're there to [pick up the lion meat shipment for Halas]. When ye return, I'll pay ye at least three gold. I look forward to yer return.");
 	}
 	elsif ($text=~/lion delight/i) {
-		quest::say("Lion Delight is a trade secrret and brings me much praise. I'll allow only one per customer. I'll also honor all as will pick up the [" . quest::saylink("lion meat shipment") . "] with a fine portion.");
+		quest::say("Lion Delight is a trade secrret and brings me much praise. I'll allow only one per customer. I'll also honor all as will pick up the [lion meat shipment] with a fine portion.");
 	}
 }
 
 sub EVENT_ITEM {
 	#:: Match a 13961 - Lion Meat Shipment
 	if (plugin::takeItems(13961 => 1)) {
-		quest::say("Ye've returned!! How wonderful! The people o' Halas thank ye! It isn't often we get to indulge ourselves in the delicacies o' warmer climates. Here ye go, me friend. Ye've completed the delivery in good time. I hope ye deliver more often. Here, try some of me new creation.. [" . quest::saylink("Lion Delight") . "].");
+		quest::say("Ye've returned!! How wonderful! The people o' Halas thank ye! It isn't often we get to indulge ourselves in the delicacies o' warmer climates. Here ye go, me friend. Ye've completed the delivery in good time. I hope ye deliver more often. Here, try some of me new creation.. Lion Delight.");
 		#:: Give a 12221 - Lion Delight
 		quest::summonitem(12221);
 		#:: Ding!
