@@ -25,3 +25,7 @@ sub EVENT_ITEM {
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
+
+sub EVENT_DEATH_COMPLETE {
+	quest::say("Fear the Deepwater Knights. My brothers shall avenge me.");
+}
