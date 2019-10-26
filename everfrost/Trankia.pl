@@ -10,7 +10,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match 10528 - Shadowed Ball
 	if (plugin::check_handin(\%itemcount, 10528 => 1)) {
-		quest::say("You must be another one from Vilissia. I will tell you what I tell all the others--you must help me [" . quest::saylink("avenge my brother") . "] before I will help you attain Tishan's Kilt.");
+		quest::say("You must be another one from Vilissia. I will tell you what I tell all the others--you must help me [avenge my brother] before I will help you attain Tishan's Kilt.");
 		#:: Give a 18797 - Tattered Note
 		quest::summonitem(18797);
 		quest::ding();

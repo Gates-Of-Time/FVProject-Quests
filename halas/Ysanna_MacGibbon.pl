@@ -14,7 +14,7 @@ sub EVENT_PROXIMITY_SAY {
 sub EVENT_SIGNAL {
 	#:: Match signal sent from halas/Cappi_McTarnigal.pl
 	if ($signal == 1) {
-		quest::say("The mammoth calf hides are used to shield our beasts of burden from the icy wind. You are probably now asking what shields us Northmen from that same icy wind eh? Well, along with many other furs and leathers, we have come to find that [" . quest::saylink("gnoll fur") . "] of all things is a good insulator against the cold. Look at their tiny bodies and it's obvious their fur does something good.");
+		quest::say("The mammoth calf hides are used to shield our beasts of burden from the icy wind. You are probably now asking what shields us Northmen from that same icy wind eh? Well, along with many other furs and leathers, we have come to find that [gnoll fur] of all things is a good insulator against the cold. Look at their tiny bodies and it's obvious their fur does something good.");
 	}
 }
 

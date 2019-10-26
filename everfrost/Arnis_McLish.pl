@@ -4,7 +4,7 @@ sub EVENT_SAY {
 			quest::say("I heard she got lost on the plains. You should go ask her dog, Snowflake, where she is. I hear she is somewhere around the pass to Halas.");
 		}
 		elsif ($faction == 5) {
-			quest::say("The Wolves o' the North show ye no ill will, but there's much ye must do t' earn our trust.  Perhaps ye should speak with Lysbith and inquire o' the [" . quest::saylink("gnoll bounty") . "].");
+			quest::say("The Wolves o' the North show ye no ill will, but there's much ye must do t' earn our trust.  Perhaps ye should speak with Lysbith and inquire o' the [gnoll bounty].");
 		}
 		elsif ($faction >= 6) {
 			quest::say("Run while ye still can!! The Wolves o' the North will not tolerate yer presence!");
@@ -17,7 +17,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match 13243 - One Half of Elixir
 	if (plugin::check_handin(\%itemcount, 13243 => 1)) {
-		quest::say("Mmmm.. Thank you stranger. I feel a lot warmer now. You should now go and find [" . quest::saylink("Megan") . "] O'Reilly.");
+		quest::say("Mmmm.. Thank you stranger. I feel a lot warmer now. You should now go and find [Megan] O'Reilly.");
 		#:: Give a 13244 - One Quarter of Elixir
 		quest::summonitem(13244);
 		quest::ding();

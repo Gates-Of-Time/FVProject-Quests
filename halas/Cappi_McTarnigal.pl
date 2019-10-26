@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail there, $name! If you are not a [" . quest::saylink("member of the White Rose") . "], then it be best that you stay on the lower level. This here floor is for honest ...ermm respectable rogues only.");
+		quest::say("Hail there, $name! If you are not a [member of the White Rose], then it be best that you stay on the lower level. This here floor is for honest ...ermm respectable rogues only.");
 	}
 	elsif ($text=~/member of the white rose/i) {
 		#:: Match if faction is better than indifferent

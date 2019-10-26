@@ -1,11 +1,11 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail, mighty $name! I assume ye must be a [" . quest::saylink("warrior o' the Wolves") . "]. Why else would ye approach a trainer such as meself, then?");
+		quest::say("Hail, mighty $name! I assume ye must be a [warrior o' the Wolves]. Why else would ye approach a trainer such as meself, then?");
 	}
 	elsif ($text=~/the wolves/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
-			quest::say("Aye, 'tis as I thought. I'm glad t' see we've warriors such as yerself amongst the Wolves o' the North. Lately, Kylan's been allowing too many scrawny warriors in, methinks. Nor have they fared well in Everfrrost. Many frreeze to death, ye know... Will ye assist me and [" . quest::saylink("deliver an elixir") . "] to young warriors in Everfrost?");
+			quest::say("Aye, 'tis as I thought. I'm glad t' see we've warriors such as yerself amongst the Wolves o' the North. Lately, Kylan's been allowing too many scrawny warriors in, methinks. Nor have they fared well in Everfrrost. Many frreeze to death, ye know... Will ye assist me and [deliver an elixir] to young warriors in Everfrost?");
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction == 5) {

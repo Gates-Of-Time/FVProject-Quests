@@ -1,12 +1,12 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail, traveler! Would you happen to know the location of any of the spokes of [" . quest::saylink("Tarton's Wheel") . "]?' ");
+		quest::say("Hail, traveler! Would you happen to know the location of any of the spokes of [Tarton's Wheel]?' ");
 	}
 	if ($text=~/Tarton's Wheel/i) {
-		quest::say("Tarton's Wheel was a device that Tarton constructed to let him travel through the planes. If you are [" . quest::saylink("interested") . "] in helping me reassemble it, I will reward you well.");
+		quest::say("Tarton's Wheel was a device that Tarton constructed to let him travel through the planes. If you are [interested] in helping me reassemble it, I will reward you well.");
 	}	
 	if ($text=~/intersted/i) {
-		quest::say("Tarton's Wheel was split into 10 separate pieces. These pieces were then scattered across the face of Norrath. I have a [" . quest::saylink("tome") . "] that I can give you, detailing the wheel of Tarton, as well as a [" . quest::saylink("wheel case") . "] that you can have when you are ready to assemble the pieces.");
+		quest::say("Tarton's Wheel was split into 10 separate pieces. These pieces were then scattered across the face of Norrath. I have a [tome] that I can give you, detailing the wheel of Tarton, as well as a [wheel case] that you can have when you are ready to assemble the pieces.");
 	}
 	if ($text=~/tome/i) {
 		quest::say("This tome details the wheel of Tarton, and the lore on where the pieces of it may be found. Use it in good faith.");		

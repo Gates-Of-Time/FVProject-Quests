@@ -2,7 +2,7 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
-			quest::say("Hail, $name! Have ye come to train? I train all warriors. All Wolves o' the North must be strong warriors and swift as well. Are ye a young wolf, then? If so, maybe ye can [" . quest::saylink("assist Renth") . "] with his wee problem, eh?");
+			quest::say("Hail, $name! Have ye come to train? I train all warriors. All Wolves o' the North must be strong warriors and swift as well. Are ye a young wolf, then? If so, maybe ye can [assist Renth] with his wee problem, eh?");
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction == 5) {
@@ -15,7 +15,7 @@ sub EVENT_SAY {
 	elsif ($text=~/assist Renth/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
-			quest::say("I was ordered by Kylan O'Danos to personally escort a young warrior sent to fetch the remains of his cousin, Ivan McMannus. I forgot and spent me greater time testing out the fine spirits. Now I must find the courier and the remains. Will ye [" . quest::saylink("search for the courier") . "]?");
+			quest::say("I was ordered by Kylan O'Danos to personally escort a young warrior sent to fetch the remains of his cousin, Ivan McMannus. I forgot and spent me greater time testing out the fine spirits. Now I must find the courier and the remains. Will ye [search for the courier]?");
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction == 5) {
@@ -41,7 +41,7 @@ sub EVENT_SAY {
 	elsif ($text=~/dangerous matter/i) {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
-			quest::say("A murder was done in Halas recently.  A couple were killed by a pair o' rogues fer a mere pouch o' copper.  The shaman gave chase and the main rogue, Paglan, fell beneath an ice floe.  One got away.  We must [" . quest::saylink("hunt the murderer") . "].  Will ye help?");
+			quest::say("A murder was done in Halas recently.  A couple were killed by a pair o' rogues fer a mere pouch o' copper.  The shaman gave chase and the main rogue, Paglan, fell beneath an ice floe.  One got away.  We must [hunt the murderer].  Will ye help?");
 		}
 		else {
 			quest::say("Run while ye still can!! The Wolves o' the North will not tolerate yer presence!");
@@ -50,7 +50,7 @@ sub EVENT_SAY {
 	elsif ($text=~/hunt the murderer/i) {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
-			quest::say("Twas good old Dok whose brother and wife were slain.  Speak with him at his shop.  Ask him if he has any information about the crime.  Return the head of the murderer and I'll give ye a [" . quest::saylink("Langseax") . "].");
+			quest::say("Twas good old Dok whose brother and wife were slain.  Speak with him at his shop.  Ask him if he has any information about the crime.  Return the head of the murderer and I'll give ye a [Langseax].");
 		}
 		else {
 			quest::say("Run while ye still can!! The Wolves o' the North will not tolerate yer presence!");
@@ -72,7 +72,7 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(13246 => 1)) {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
-			quest::Say("Good work!! Kylan will never know o' me negligence. I owe ye one, young warrior. Let's call it even with this. Twas found by one of our foraging parties. It is still useful. And... I believe ye can assist with a more [" . quest::saylink("dangerous matter") . "] as well");
+			quest::Say("Good work!! Kylan will never know o' me negligence. I owe ye one, young warrior. Let's call it even with this. Twas found by one of our foraging parties. It is still useful. And... I believe ye can assist with a more [dangerous matter] as well");
 			#:: Give a random reward: 17001 - Wrist Pouch, 17002 - Belt Pouch, 17003 - Small Bag, 17009 - Purse
 			quest::summonitem::ChooseRandom(17001, 17002, 17003, 17004, 17009);
 			#:: Ding!

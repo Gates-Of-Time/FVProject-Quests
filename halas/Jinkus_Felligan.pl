@@ -1,12 +1,12 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Welcome! Welcome to the Church o' the Tribunal! Do ye require healing or are ye [" . quest::saylink("new to the Shamans o' Justice") . "], then, eh?");
+		quest::say("Welcome! Welcome to the Church o' the Tribunal! Do ye require healing or are ye [new to the Shamans o' Justice], then, eh?");
 	}
 	elsif ($text=~/new to the Shamans/i) {
-		quest::say("Then I welcome ye into our noble order. Ye'll serve us well or spend an eternity in the dungeons o' the Tribunal. Are ye willing to [" . quest::saylink("contribute to our church") . "] or did ye just come to meditate within our walls?");
+		quest::say("Then I welcome ye into our noble order. Ye'll serve us well or spend an eternity in the dungeons o' the Tribunal. Are ye willing to [contribute to our church] or did ye just come to meditate within our walls?");
 	}
 	elsif ($text=~/contribute to our church/i) {
-		quest::say("Ye'll help all o' Halas by doing the bidding o' this church. Go to Holana. Tell her Jinkus sent ye to assist her. She'll have work fer ye. Perhaps, if ye're planning on passing near Qeynos, ye can [" . quest::saylink("make a delivery") . "] as well?");
+		quest::say("Ye'll help all o' Halas by doing the bidding o' this church. Go to Holana. Tell her Jinkus sent ye to assist her. She'll have work fer ye. Perhaps, if ye're planning on passing near Qeynos, ye can [make a delivery] as well?");
 	}
 	elsif ($text=~/make a delivery/i) {
 		quest::say("The Church of the Tribunal works with the Qeynos Guards to apprehend fugitives. There's a new criminal on the loose, so we must send a wanted poster to Qeynos for them to display on the walls of their bank. Speak with Cindl about a piece o' mammoth hide parchment and with Greta Terrilon about some ink and I'll prepare the bounty poster.");

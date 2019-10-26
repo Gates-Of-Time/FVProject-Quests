@@ -7,7 +7,7 @@ sub EVENT_SAY {
 	elsif ($text=~/assist/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
-			quest::say("So, ye're the next to be tested, then, eh?! I pray ye're able to return. Ye'll need to take this note to Einhorst in Clan McMannus' fishing village in the Plains o' Karana. He'll hand ye the monthly Karana clover shipment to be returned to me. Just remember, dinnae stop running! Do ye [" . quest::saylink("need directions to Clan McMannus") . "]?");
+			quest::say("So, ye're the next to be tested, then, eh?! I pray ye're able to return. Ye'll need to take this note to Einhorst in Clan McMannus' fishing village in the Plains o' Karana. He'll hand ye the monthly Karana clover shipment to be returned to me. Just remember, dinnae stop running! Do ye [need directions to Clan McMannus]?");
 			#:: Give a 18831 - Tattered Note
 			quest::summonitem(18831);
 		}

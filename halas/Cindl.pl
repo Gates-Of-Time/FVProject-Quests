@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Welcome to my humble shop. I offer fine items fashioned from the skins of the beasts of Everfrost. Leather is my specialty and I can always use [" . quest::saylink("extra hides") . "].");
+		quest::say("Welcome to my humble shop. I offer fine items fashioned from the skins of the beasts of Everfrost. Leather is my specialty and I can always use [extra hides].");
 	}
 	elsif ($text=~/extra hides/i) {
 		quest::say("I will offer any hunter some used Tattered Armor for every Polar Bear Skin. I am sure that even you can wrestle the skins from the back of a polar bear cub.");
@@ -18,7 +18,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 13761 - Polar Bear Skin
 	if (plugin::takeItems(13761 => 1)) {
-		quest::say("This is much appreciated.  Please accept this used armor in return and also a gold piece for yer troubles.  You have done well! I may have a [" . quest::saylink("second job") . "] fer ye, if ye like?");
+		quest::say("This is much appreciated.  Please accept this used armor in return and also a gold piece for yer troubles.  You have done well! I may have a [second job] fer ye, if ye like?");
 		#:: Give a random item: 2130 - Large Patchwork Cloak, 2131 - Large Tattered Belt, 2132 - Large Patchwork Sleeves, 2134 - Large Tattered Gloves, 2135 - Large Patchwork Pants, 2136 - Large Patchwork Boots, 2127 - Large Tattered Gorget, 2126 - Large Tattered Mask, 2128 - Large Patchwork Tunic, 2129 - Large Tattered Shoulderpads, 2125 - Large Tattered Skullcap, 2133 - Large Tattered Wristbands
 		quest::summonitem(quest::ChooseRandom(2130, 2131, 2132, 2134, 2135, 2136, 2127, 2126, 2128, 2129, 2125, 2133));
 		#:: Ding!

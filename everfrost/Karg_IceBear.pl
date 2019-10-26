@@ -16,13 +16,13 @@ sub EVENT_SAY {
 		quest::say("Hail, traveller! I am Karg of Clan Icebear, lone hunter of the Everfrost Peaks. Have you seen any polar bears about?");
 	}
 	if ($text=~/yes/i) {
-		quest::say("I hunt polar bears and furnish cloaks from their [" . quest::saylink("pelts") . "]. They keep you warm in this cold weather.");
+		quest::say("I hunt polar bears and furnish cloaks from their [pelts]. They keep you warm in this cold weather.");
 	}
 	if ($text=~/pelts/i) {
 		quest::say("Have you some polar bear pelts? You know I can furnish warm cloaks from them, and for you I will do it for the measly sum of 5 platinum pieces.");
 	}
 	if ($text=~/werewolf/i) {
-		quest::say("Werewolf?! I have not seen a werewolf in years. Have you slain one and collected its [" . quest::saylink("skin") . "] or [" . quest::saylink("claws") . "]?");
+		quest::say("Werewolf?! I have not seen a werewolf in years. Have you slain one and collected its [skin] or [claws]?");
 	}
 	if ($text=~/skin/i) {
 		quest::say("You have managed to procure a werewolf skin?? Amazing! Well then, I will let you know that for a fee of 100 platinum, I can craft a hearty cloak for you if you leave the skin and the coin with me.");

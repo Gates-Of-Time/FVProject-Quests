@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hello, me friend! I'm the resident healer o' Halas. Please inform me when ye've a need fer me talents to [" . quest::saylink("bind wounds") . "], [" . quest::saylink("cure disease") . "] or [" . quest::saylink("cure poison") . "]. Might I add, if ye're a young shaman o' Halas, ye can also [" . quest::saylink("assist in gatherin' fungus") . "]?");
+		quest::say("Hello, me friend! I'm the resident healer o' Halas. Please inform me when ye've a need fer me talents to [bind wounds], [cure disease] or [cure poison]. Might I add, if ye're a young shaman o' Halas, ye can also [assist in gatherin' fungus]?");
 	}
 	if ($text=~/bind wounds/i) {
 		#:: Match if faction is Indifferent or better
