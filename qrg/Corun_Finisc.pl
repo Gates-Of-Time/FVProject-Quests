@@ -1,21 +1,21 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hello. My name is Corun Finisc and I am one of the Jaggedpine Treefolk. It is our divine responsibility to watch over and protect Surefall Glade and its [" . quest::saylink("inhabitants") . "] from those who seek to [" . quest::saylink("destroy") . "] them.");
+		quest::say("Hello. My name is Corun Finisc and I am one of the Jaggedpine Treefolk. It is our divine responsibility to watch over and protect Surefall Glade and its [inhabitants] from those who seek to [destroy] them.");
 	}
 	elsif ($text=~/inhabitants/i) {
-		quest::say("The bears of Surefall Glade are our brothers. We are all children of [" . quest::saylink("Tunare") . "]. We would gladly die in their defense.");
+		quest::say("The bears of Surefall Glade are our brothers. We are all children of [Tunare]. We would gladly die in their defense.");
 	}
 	elsif ($text=~/destroy/i) {
-		quest::say("Poachers in seach of bear skins and gnolls who attack us unprovoked. We are doing all we can to stop them. May [" . quest::saylink("Tunare") . "] give me the strength needed to smite them dead with my [" . quest::saylink("crook") . "].");
+		quest::say("Poachers in seach of bear skins and gnolls who attack us unprovoked. We are doing all we can to stop them. May [Tunare] give me the strength needed to smite them dead with my [crook].");
 	}
 	elsif ($text=~/tunare/i) {
 		quest::say("Tunare is the Mother of All. It is though Her will that we protect this land and its many creatures.");
 	}
 	elsif ($text=~/crook/i) {	
-		quest::say("My crook? The Jaggedpine crook is an enchanted weapon of the Jaggedpine Treefolk. The [" . quest::saylink("Sabertooths") . "] take great pleasure in destroying the crooks of any Treefolk they manage to slay. If you were to recover the pieces of a broken crook, I would gladly mend it for you.");
+		quest::say("My crook? The Jaggedpine crook is an enchanted weapon of the Jaggedpine Treefolk. The [Sabertooths] take great pleasure in destroying the crooks of any Treefolk they manage to slay. If you were to recover the pieces of a broken crook, I would gladly mend it for you.");
 	}
 	elsif ($text=~/sabertooths/i) {
-		quest::say("The Sabertooths are a vicious band of gnolls who live in Blackburrow, to the east of Surefall Glade. They constantly attack us when we only seek to share this land with them. They also send many patrols out into the Qeynos Hills to the south. We have even seen a Sabertooth skulking about in the caves behind Grizzly Falls. There is a [" . quest::saylink("reward") . "] for his hide.");
+		quest::say("The Sabertooths are a vicious band of gnolls who live in Blackburrow, to the east of Surefall Glade. They constantly attack us when we only seek to share this land with them. They also send many patrols out into the Qeynos Hills to the south. We have even seen a Sabertooth skulking about in the caves behind Grizzly Falls. There is a [reward] for his hide.");
 	}
 	elsif ($text=~/reward/i) {
 		quest::say("Yes. We are offering a small reward for slaying the skulking gnoll in the bear caves. Bring me his paw to claim your bounty. The Jaggedpine Treefolk remember well those who aid their cause.");

@@ -1,9 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Welcome, friend. Welcome to Surefall Glade. I need not remind you about [" . quest::saylink("poaching") . "], I hope");
+		quest::say("Welcome, friend. Welcome to Surefall Glade. I need not remind you about [poaching], I hope");
 	}
 	elsif ($text=~/poaching/i) {
-		quest::say("Poaching is illegal. We here are the Protectors of the Pine, rangers sworn to protect our land and all its inhabitants. This includes the wildlife. We spend a lot of time hunting poachers. If you want to [" . quest::saylink("join the hunt") . "], just let me know.");
+		quest::say("Poaching is illegal. We here are the Protectors of the Pine, rangers sworn to protect our land and all its inhabitants. This includes the wildlife. We spend a lot of time hunting poachers. If you want to [join the hunt], just let me know.");
 	}
 	elsif ($text=~/join the hunt/i) {
 		quest::say("Very good, friend. Be on the lookout for poachers in Surefall Glade or Qeynos Hills, especially in the nearby caves. The poachers are not always human. Often times we find ourselves a Blackburrow gnoll or two. Bring me back their heads. Let's see how they look mounted above the mantle! Be on your way, then.");
@@ -35,7 +35,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match a 13825 - Poacher's Head
 	elsif (plugin::takeItems(13825 => 1)) {
-		quest::say("Your deeds are great indeed. We shall cleanse our land of these poachers once and for all. A report has surfaced of a [" . quest::saylink("master poacher") . "].");
+		quest::say("Your deeds are great indeed. We shall cleanse our land of these poachers once and for all. A report has surfaced of a [master poacher].");
 		#:: Ding!
 		quest::ding();
 		#:: Set factions

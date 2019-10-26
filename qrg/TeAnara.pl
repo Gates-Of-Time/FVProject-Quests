@@ -16,16 +16,16 @@ sub EVENT_ENTER {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Welcome, friend! I hope your stay in Surefall Glade will ease your mind and soothe your soul. While you are here, we ask you to abide by the [" . quest::saylink("laws of the Jaggedpine") . "].");
+		quest::say("Welcome, friend! I hope your stay in Surefall Glade will ease your mind and soothe your soul. While you are here, we ask you to abide by the [laws of the Jaggedpine].");
 	}
 	elsif ($text=~/laws of the jaggedpine/i) {
-		quest::say("We ask that you do not start campfires on our land. Do not litter our land with any items. Do not chop down our pines or tread upon any foliage. Please do not take more than a bellyful of fish. Do not harm any other wildlife and stay clear of [" . quest::saylink("the great bear") . "]!");
+		quest::say("We ask that you do not start campfires on our land. Do not litter our land with any items. Do not chop down our pines or tread upon any foliage. Please do not take more than a bellyful of fish. Do not harm any other wildlife and stay clear of [the great bear]!");
 	}
 	elsif ($text=~/the great bear/i) {
-		quest::say("The great bear I speak of is Mammoth. He has lived among us for over a century. Tunare has truly blessed us with his presence. As long as Mammoth lives, so too does Surefall Glade. We are currently worried. Corun has reported that there is something [" . quest::saylink("wrong with Mammoth") . "].");
+		quest::say("The great bear I speak of is Mammoth. He has lived among us for over a century. Tunare has truly blessed us with his presence. As long as Mammoth lives, so too does Surefall Glade. We are currently worried. Corun has reported that there is something [wrong with Mammoth].");
 	}
 	elsif ($text=~/wrong with mammoth/i) {
-		quest::say("Mammoth is not eating. We believe something is lodged in his throat. We require a young druid to [" . quest::saylink("fetch a special potion") . "]");
+		quest::say("Mammoth is not eating. We believe something is lodged in his throat. We require a young druid to [fetch a special potion]");
 	}
 	elsif ($text=~/fetch a special potion/i) {
 		quest::say("Go to the gnome city of Ak'Anon on the continent of Faydwer. With their great zoo, you will find a gnome named Kimble Nogflop. Give him this flask of nitrates and he shall hand you a special potion which will force Mammoth to cough up whatever may be stuck inside his throat. Be sure to show me what you find inside his throat upon your return.");

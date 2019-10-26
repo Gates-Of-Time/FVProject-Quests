@@ -12,7 +12,7 @@ sub EVENT_SAY {
 	if ($text=~/fugitive/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
-			quest::say("Searching for someone, eh? You will most likely never find them on the plains. This is a vast area. I could have Frostbite help you search. He is quite good at [" . quest::saylink("tracking prey") . "].");
+			quest::say("Searching for someone, eh? You will most likely never find them on the plains. This is a vast area. I could have Frostbite help you search. He is quite good at [tracking prey].");
 		}
 		#:: Match if faction is Indifferent or worse
 		elsif ($faction => 5) {

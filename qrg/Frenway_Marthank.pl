@@ -1,12 +1,12 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings. stranger. Please excuse my melancholy state.  I have had some [" . quest::saylink("bad news") . "] that has brought me great sorrow.");
+		quest::say("Greetings. stranger. Please excuse my melancholy state.  I have had some [bad news] that has brought me great sorrow.");
 	}
 	elsif ($text=~/bad news/i) {
 		quest::say("My youngest son was devoured by a grizzly bear while playing near the caves. It was an unfortunate accident. The great bear was just protecting its territory. Now, could you please just leave me be? <sniff>");
 	}
 	elsif ($text=~/toe needs the bayle list/i) {
-		quest::say("The Bayle List is gone. It lies inside the belly of that beast, [" . quest::saylink("Mammoth") . "]");
+		quest::say("The Bayle List is gone. It lies inside the belly of that beast, [Mammoth]");
 	}
 	elsif ($text=~/mammoth/i) {
 		quest::say("Mammoth is the great bear which inhabits the caves. It was he that swallowed my son whole. My son was using the scroll case as a play sword when Mammoth approached. I know you need the list but my vows as a Protector of the Pine forbid me to harm the bear. Help me ease my pain. Kill Mammoth and bring me his hide. You will find the list inside the beast.");
