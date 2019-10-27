@@ -32,7 +32,6 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		#:: Set factions
 		quest::faction(221, 100);		#:: + Bloodsabers
 		quest::faction(262, -15);		#:: - Guards of Qeynos
 		quest::faction(296, 10);		#:: + Opal Darkbriar
