@@ -6,6 +6,8 @@ sub EVENT_SPAWN {
 	my $randomspawn = int(rand($range)) + $min;
 	plugin::RandomRoam(250, 250);
 	quest::settimer("move",$randomspawn);
+	#:: Spawn ding_bat too!
+	quest::spawn2(2160, 0, 0, $x, $y, $z, 0);
 }
 
 sub EVENT_TIMER {
