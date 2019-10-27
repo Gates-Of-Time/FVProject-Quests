@@ -72,7 +72,7 @@ sub EVENT_SAY {
 			Train();
 		}
 		elsif ($text=~/faction/i) {
-			quest::say("I can adjust your faction.  Hand me 1 copper to lose 500, 1 silver to lose 100, 1 gold to gain 100, and 1 platinum to gain 500--then speak the faction number.");
+			quest::say("I can adjust your faction.  Hand me 1 copper to lose 500, 1 silver to lose 100, 1 gold to gain 100, and 1 platinum to gain 500--then speak the faction number, or the faction name.");
 		}
 		elsif (!$client->GetGM()) {
 			if ($text=~/\bGrobb Merchants\b/) {	#:: 376
@@ -12692,6 +12692,9 @@ sub EVENT_SAY {
 			}
 			elsif ($text=~/\b2047\b/) {	#:: Faction2047
 				quest::faction(2047, $change_amount);
+			}
+			else {
+				quest::say("Are you sure you're giving me the right name or number?  CaPiTaLiZaTiOn CoUnTs, so don't tell me 'banker' if you mean 'Banker'.");
 			}
 		}
 		else {
