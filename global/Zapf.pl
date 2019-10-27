@@ -16849,6 +16849,16830 @@ sub EVENT_SAY {
 				quest::faction(2047, $change_amount);
 			}
 		}
+		elsif ($text=~/\bGrobb Merchants\b/) {	#:: 376
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(376, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDeath Fist Orcs (good)\b/) {	#:: 375
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(375, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOggok Resident\b/) {	#:: 374
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(374, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMucktail Gnolls\b/) {	#:: 373
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(373, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAnti-mage\b/) {	#:: 5001
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5001, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNajena\b/) {	#:: 372
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(372, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNeriak Ghoul\b/) {	#:: 371
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(371, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDreadguard Inner\b/) {	#:: 370
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(370, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTimmerain Darkbrow\b/) {	#:: 369
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(369, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBanker\b/) {	#:: 5002
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5002, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDervish Cutthroats\b/) {	#:: 368
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(368, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDonovon\b/) {	#:: 367
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(367, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKarana Bandits\b/) {	#:: 366
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(366, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPickclaw Goblins\b/) {	#:: 365
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(365, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShralok Orcs\b/) {	#:: 364
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(364, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Spurned\b/) {	#:: 363
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(363, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPriests of Marr\b/) {	#:: 362
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(362, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAshen Order\b/) {	#:: 361
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(361, $change_amount);
+			}
+		}
+		elsif ($text=~/\bIskar\b/) {	#:: 360
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(360, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDefenders of Luclin\b/) {	#:: 359
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(359, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCorrupt Akhevan\b/) {	#:: 358
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(358, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAkhevan (Plane of Shadow)\b/) {	#:: 357
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(357, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDiseased Animal\b/) {	#:: 356
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(356, $change_amount);
+			}
+		}
+		elsif ($text=~/\bStorm Reapers\b/) {	#:: 355
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(355, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNeriak Troll\b/) {	#:: 354
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(354, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNeriak Ogre\b/) {	#:: 353
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(353, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNeriak Inner\b/) {	#:: 352
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(352, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNeriak Outer\b/) {	#:: 351
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(351, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRunnyeye C\b/) {	#:: 350
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(350, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRunnyeye B\b/) {	#:: 349
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(349, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRunnyeye A\b/) {	#:: 348
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(348, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShark\b/) {	#:: 347
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(347, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCommons Residents\b/) {	#:: 346
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(346, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKarana Residents\b/) {	#:: 345
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(345, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta Neutral\b/) {	#:: 344
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(344, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSurefall Protected Animals\b/) {	#:: 343
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(343, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOrder of Three\b/) {	#:: 342
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(342, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPriests of Life\b/) {	#:: 341
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(341, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPriests of Innoruuk\b/) {	#:: 340
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(340, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBonethrowers\b/) {	#:: 339
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(339, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMerchants of Oggok\b/) {	#:: 338
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(338, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOggok Guards\b/) {	#:: 337
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(337, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCoalition of Tradefolk Underground\b/) {	#:: 336
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(336, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThoughtbleeders of Fear\b/) {	#:: 335
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(335, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDreadguard Outer\b/) {	#:: 334
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(334, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKing Ak`Anon\b/) {	#:: 333
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(333, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHighpass Guards\b/) {	#:: 332
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(332, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMerchants of Highpass\b/) {	#:: 331
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(331, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Freeport Militia\b/) {	#:: 330
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(330, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCarson McCabe\b/) {	#:: 329
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(329, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMerchants of Halas\b/) {	#:: 328
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(328, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShamen of Justice\b/) {	#:: 327
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(327, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEmerald Warriors\b/) {	#:: 326
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(326, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMerchants of Felwithe\b/) {	#:: 325
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(325, $change_amount);
+			}
+		}
+		elsif ($text=~/\bUnkempt Druids\b/) {	#:: 324
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(324, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSolusek Mining Co.\b/) {	#:: 323
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(323, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMiners Guild 628\b/) {	#:: 322
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(322, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSplit Paw Clan\b/) {	#:: 321
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(321, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDefenders of the Haven\b/) {	#:: 5003
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5003, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDenizens of Fear\b/) {	#:: 5004
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5004, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWolves of the North\b/) {	#:: 320
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(320, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVox\b/) {	#:: 319
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(319, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVenril Sathir\b/) {	#:: 318
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(318, $change_amount);
+			}
+		}
+		elsif ($text=~/\bUndead Frogloks of Guk\b/) {	#:: 317
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(317, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTunare's Scouts\b/) {	#:: 316
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(316, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTrakanon\b/) {	#:: 315
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(315, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSyth of Permafrost\b/) {	#:: 314
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(314, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPirates of Gunthak\b/) {	#:: 313
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(313, $change_amount);
+			}
+		}
+		elsif ($text=~/\bStorm Guard\b/) {	#:: 312
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(312, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSteel Warriors\b/) {	#:: 311
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(311, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSoldiers of Tunare\b/) {	#:: 310
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(310, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSilent Fist Clan\b/) {	#:: 309
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(309, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFizzlethorpe\b/) {	#:: 5005
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5005, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShadowknights of Night Keep\b/) {	#:: 308
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(308, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSarnak Collective\b/) {	#:: 307
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(307, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSabertooths of Blackburrow\b/) {	#:: 306
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(306, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRogues of the White Rose\b/) {	#:: 305
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(305, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRing of Scale\b/) {	#:: 304
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(304, $change_amount);
+			}
+		}
+		elsif ($text=~/\bQueen Cristanos Thex\b/) {	#:: 303
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(303, $change_amount);
+			}
+		}
+		elsif ($text=~/\bProtectors of Pine\b/) {	#:: 302
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(302, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPriests of Nagafen\b/) {	#:: 301
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(301, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPriests of Mischief\b/) {	#:: 300
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(300, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPhinigel Autropos\b/) {	#:: 299
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(299, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPeace Keepers\b/) {	#:: 298
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(298, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPaladins of Underfoot\b/) {	#:: 297
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(297, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOpal Darkbriar\b/) {	#:: 296
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(296, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Kromdek\b/) {	#:: 295
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(295, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMiragul\b/) {	#:: 294
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(294, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMiners Guild 249\b/) {	#:: 293
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(293, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMerchants of Rivervale\b/) {	#:: 292
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(292, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMerchants of Qeynos\b/) {	#:: 291
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(291, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMerchants of Kaladim\b/) {	#:: 290
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(290, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMerchants of Erudin\b/) {	#:: 289
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(289, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMerchants of Ak`Anon\b/) {	#:: 288
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(288, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMeldrath\b/) {	#:: 287
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(287, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMayor Gubbin\b/) {	#:: 286
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(286, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMayong Mistmoore\b/) {	#:: 285
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(285, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLeague of Antonican Bards\b/) {	#:: 284
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(284, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPack of Tomar\b/) {	#:: 283
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(283, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHall of the Ebon Mask\b/) {	#:: 5006
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5006, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKobolds of Fire Pit\b/) {	#:: 282
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(282, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKnights of Truth\b/) {	#:: 281
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(281, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKnights of Thunder\b/) {	#:: 280
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(280, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKing Tearis Thex\b/) {	#:: 279
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(279, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKing Naythox Thex\b/) {	#:: 278
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(278, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKerra of Barren Coast\b/) {	#:: 277
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(277, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKelethin Merchants\b/) {	#:: 276
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(276, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKeepers of the Art\b/) {	#:: 275
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(275, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKazon Stormhammer\b/) {	#:: 274
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(274, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKane Bayle\b/) {	#:: 273
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(273, $change_amount);
+			}
+		}
+		elsif ($text=~/\bJaggedpine Treefolk\b/) {	#:: 272
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(272, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDismal Rage\b/) {	#:: 271
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(271, $change_amount);
+			}
+		}
+		elsif ($text=~/\bIndigo Brotherhood\b/) {	#:: 270
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(270, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKithicor Residents\b/) {	#:: 269
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(269, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCombine Empire\b/) {	#:: 268
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(268, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHigh Guard of Erudin\b/) {	#:: 267
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(267, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHigh Council of Erudin\b/) {	#:: 266
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(266, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHeretics\b/) {	#:: 265
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(265, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWhistling Fist Brotherhood\b/) {	#:: 264
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(264, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuardians of the Vale\b/) {	#:: 263
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(263, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuards of Qeynos\b/) {	#:: 262
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(262, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGreen Blood Knights\b/) {	#:: 261
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(261, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGnarled Fist\b/) {	#:: 260
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(260, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGoblins of Mountain Death\b/) {	#:: 259
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(259, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGoblins of Fire Peak\b/) {	#:: 258
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(258, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKeepers of the Claw\b/) {	#:: 5007
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5007, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKejekan\b/) {	#:: 5008
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5008, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGoblins of Cleaving Tooth\b/) {	#:: 257
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(257, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBloodgills\b/) {	#:: 256
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(256, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGem Choppers\b/) {	#:: 255
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(255, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGate Callers\b/) {	#:: 254
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(254, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBurynai Legion\b/) {	#:: 253
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(253, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFrogloks of Kunark\b/) {	#:: 252
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(252, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFrogloks of Guk\b/) {	#:: 251
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(251, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Kromdul\b/) {	#:: 250
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(250, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNagafen\b/) {	#:: 249
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(249, $change_amount);
+			}
+		}
+		elsif ($text=~/\bInhabitants of Firiona Vie\b/) {	#:: 248
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(248, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHorde of Xalgoz\b/) {	#:: 247
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(247, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaydarks Champions\b/) {	#:: 246
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(246, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKunark Fire Giants\b/) {	#:: 5009
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5009, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEldritch Collective\b/) {	#:: 245
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(245, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEbon Mask\b/) {	#:: 244
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(244, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDrafling\b/) {	#:: 243
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(243, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDeepwater Knights\b/) {	#:: 242
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(242, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDeeppockets\b/) {	#:: 241
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(241, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDeepmuses\b/) {	#:: 240
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(240, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Dead\b/) {	#:: 239
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(239, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDark Reflection\b/) {	#:: 238
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(238, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDark Ones\b/) {	#:: 237
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(237, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDark Bargainers\b/) {	#:: 236
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(236, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDaBashers\b/) {	#:: 235
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(235, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCrushbone Orcs\b/) {	#:: 234
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(234, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCrimson Hands\b/) {	#:: 233
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(233, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCraknek Warriors\b/) {	#:: 232
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(232, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCraftkeepers\b/) {	#:: 231
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(231, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCorrupt Qeynos Guards\b/) {	#:: 230
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(230, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCoalition of Tradefolk\b/) {	#:: 229
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(229, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClurg\b/) {	#:: 228
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(228, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClerics of Underfoot\b/) {	#:: 227
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(227, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClerics of Tunare\b/) {	#:: 226
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(226, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClan Runnyeye\b/) {	#:: 225
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(225, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClan Drippycan\b/) {	#:: 224
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(224, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCircle of Unseen Hands\b/) {	#:: 223
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(223, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBroken Skull Clan\b/) {	#:: 222
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(222, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBloodsabers\b/) {	#:: 221
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(221, $change_amount);
+			}
+		}
+		elsif ($text=~/\bArcane Scientists\b/) {	#:: 220
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(220, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAntonius Bayle\b/) {	#:: 219
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(219, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAllize Taeew\b/) {	#:: 218
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(218, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAllize Volew\b/) {	#:: 217
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(217, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVeeshan\b/) {	#:: 216
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(216, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTunare\b/) {	#:: 215
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(215, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTribunal\b/) {	#:: 214
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(214, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSolusek Ro\b/) {	#:: 213
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(213, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRodcet Nife\b/) {	#:: 212
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(212, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRallos Zek\b/) {	#:: 211
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(211, $change_amount);
+			}
+		}
+		elsif ($text=~/\bQuellious\b/) {	#:: 210
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(210, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPrexus\b/) {	#:: 209
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(209, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMithaniel Marr\b/) {	#:: 208
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(208, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKarana\b/) {	#:: 207
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(207, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOgre Warriors\b/) {	#:: 5010
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5010, $change_amount);
+			}
+		}
+		elsif ($text=~/\bInnoruuk\b/) {	#:: 206
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(206, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFizzlethorp\b/) {	#:: 205
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(205, $change_amount);
+			}
+		}
+		elsif ($text=~/\bErollisi Marr\b/) {	#:: 204
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(204, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCazic-Thule\b/) {	#:: 203
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(203, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBrell Serilis\b/) {	#:: 202
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(202, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBertoxxulous\b/) {	#:: 201
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(201, $change_amount);
+			}
+		}
+		elsif ($text=~/\bErollisi Marr (Race)\b/) {	#:: 200
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(200, $change_amount);
+			}
+		}
+		elsif ($text=~/\bIksar Scorpion\b/) {	#:: 199
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(199, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKunark Fish\b/) {	#:: 198
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(198, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSpectral Iksar\b/) {	#:: 197
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(197, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSpectral Sarnak\b/) {	#:: 196
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(196, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGoo\b/) {	#:: 195
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(195, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBurynai\b/) {	#:: 194
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(194, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRace Faction (193)\b/) {	#:: 193
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(193, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRace Faction (192)\b/) {	#:: 192
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(192, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBoat\b/) {	#:: 191
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(191, $change_amount);
+			}
+		}
+		elsif ($text=~/\bForest Giant\b/) {	#:: 190
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(190, $change_amount);
+			}
+		}
+		elsif ($text=~/\bIksar Citizen\b/) {	#:: 189
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(189, $change_amount);
+			}
+		}
+		elsif ($text=~/\bYeti\b/) {	#:: 188
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(188, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKunark Goblin\b/) {	#:: 187
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(187, $change_amount);
+			}
+		}
+		elsif ($text=~/\bXalgoz Race\b/) {	#:: 186
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(186, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRhino\b/) {	#:: 185
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(185, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMosquito\b/) {	#:: 184
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(184, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLycanthrope\b/) {	#:: 183
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(183, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDraglok Invalid Race\b/) {	#:: 182
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(182, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSarnak\b/) {	#:: 181
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(181, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVah Shir\b/) {	#:: 180
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(180, $change_amount);
+			}
+		}
+		elsif ($text=~/\bScorpion\b/) {	#:: 179
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(179, $change_amount);
+			}
+		}
+		elsif ($text=~/\bIksar\b/) {	#:: 178
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(178, $change_amount);
+			}
+		}
+		elsif ($text=~/\bInvisible Man\b/) {	#:: 177
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(177, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDjinn (Race)\b/) {	#:: 176
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(176, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPegasus\b/) {	#:: 175
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(175, $change_amount);
+			}
+		}
+		elsif ($text=~/\bResidents of Karanas\b/) {	#:: 5011
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5011, $change_amount);
+			}
+		}
+		elsif ($text=~/\bUnicorn Nightmare\b/) {	#:: 174
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(174, $change_amount);
+			}
+		}
+		elsif ($text=~/\bInnoruuk (Race)\b/) {	#:: 173
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(173, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDragon Skeleton\b/) {	#:: 172
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(172, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRoot of Innuruuk\b/) {	#:: 5012
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5012, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGorgon\b/) {	#:: 171
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(171, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSpiritWolf\b/) {	#:: 170
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(170, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSaber-toothed Cat\b/) {	#:: 169
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(169, $change_amount);
+			}
+		}
+		elsif ($text=~/\bErudite Ghost\b/) {	#:: 168
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(168, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGhost Dwarf\b/) {	#:: 167
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(167, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSea Horse\b/) {	#:: 166
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(166, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClam\b/) {	#:: 165
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(165, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGhost Ship\b/) {	#:: 164
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(164, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDrixie\b/) {	#:: 163
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(163, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFayguard\b/) {	#:: 162
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(162, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHarpie\b/) {	#:: 161
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(161, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMermaid\b/) {	#:: 160
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(160, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWasp\b/) {	#:: 159
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(159, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEye of Zomm\b/) {	#:: 158
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(158, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMammoth\b/) {	#:: 157
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(157, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFel Guard\b/) {	#:: 156
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(156, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSword Fish\b/) {	#:: 155
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(155, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLeech\b/) {	#:: 154
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(154, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKedge\b/) {	#:: 153
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(153, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFroglok Tadpole\b/) {	#:: 152
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(152, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEfreeti\b/) {	#:: 151
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(151, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDervish\b/) {	#:: 150
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(150, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAmygdalan\b/) {	#:: 149
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(149, $change_amount);
+			}
+		}
+		elsif ($text=~/\bElf Vampire\b/) {	#:: 148
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(148, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDiasy Men\b/) {	#:: 147
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(147, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCockatrice\b/) {	#:: 146
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(146, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCazic-Thule (Race)\b/) {	#:: 145
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(145, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKaladim Citizens\b/) {	#:: 144
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(144, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOggok Citizen\b/) {	#:: 143
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(143, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGrobb Citizen\b/) {	#:: 142
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(142, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAlligator\b/) {	#:: 141
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(141, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHalas Citizen\b/) {	#:: 140
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(140, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDrake\b/) {	#:: 139
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(139, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClockworks of Ak`Anon\b/) {	#:: 138
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(138, $change_amount);
+			}
+		}
+		elsif ($text=~/\bArmadillo\b/) {	#:: 137
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(137, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSphinx\b/) {	#:: 136
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(136, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSpectre\b/) {	#:: 135
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(135, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSnake Elemental\b/) {	#:: 134
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(134, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSkunk\b/) {	#:: 133
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(133, $change_amount);
+			}
+		}
+		elsif ($text=~/\bScarecrow\b/) {	#:: 132
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(132, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRivervale Guard\b/) {	#:: 131
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(131, $change_amount);
+			}
+		}
+		elsif ($text=~/\bReanimated Hand\b/) {	#:: 130
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(130, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBixie\b/) {	#:: 129
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(129, $change_amount);
+			}
+		}
+		elsif ($text=~/\bErudin Citizens\b/) {	#:: 128
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(128, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNeriak Citizen\b/) {	#:: 127
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(127, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPuma\b/) {	#:: 126
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(126, $change_amount);
+			}
+		}
+		elsif ($text=~/\bElemental\b/) {	#:: 125
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(125, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPiranha\b/) {	#:: 124
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(124, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLaunch\b/) {	#:: 123
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(123, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShip\b/) {	#:: 122
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(122, $change_amount);
+			}
+		}
+		elsif ($text=~/\bQeynos Citizens\b/) {	#:: 121
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(121, $change_amount);
+			}
+		}
+		elsif ($text=~/\bZombie\b/) {	#:: 120
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(120, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWill-O-Wisp\b/) {	#:: 119
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(119, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTentacle\b/) {	#:: 118
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(118, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHigh Hold Citizen\b/) {	#:: 117
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(117, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRallos Zek (Race)\b/) {	#:: 116
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(116, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVampire\b/) {	#:: 115
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(115, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTreant\b/) {	#:: 114
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(114, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTiger\b/) {	#:: 113
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(113, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTunare (Race)\b/) {	#:: 112
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(112, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShark (Race)\b/) {	#:: 111
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(111, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSkeleton\b/) {	#:: 110
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(110, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKunark Goblin (Race)\b/) {	#:: 109
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(109, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSolusek Ro (Race)\b/) {	#:: 108
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(108, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDrachnid (Race)\b/) {	#:: 107
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(107, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPixies of Faydwer\b/) {	#:: 106
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(106, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHuman Beggar\b/) {	#:: 105
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(105, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOrc\b/) {	#:: 104
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(104, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMinotaur\b/) {	#:: 103
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(103, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMimic\b/) {	#:: 102
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(102, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLizard Man\b/) {	#:: 101
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(101, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLion\b/) {	#:: 100
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(100, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLava Dragon\b/) {	#:: 99
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(99, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKobold\b/) {	#:: 98
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(98, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGriffon\b/) {	#:: 97
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(97, $change_amount);
+			}
+		}
+		elsif ($text=~/\bImp\b/) {	#:: 96
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(96, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDemi Lich (Race)\b/) {	#:: 95
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(95, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHuman Guard (Race)\b/) {	#:: 94
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(94, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBear\b/) {	#:: 93
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(93, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWolf\b/) {	#:: 92
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(92, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGorilla\b/) {	#:: 91
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(91, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGoblin\b/) {	#:: 90
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(90, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGnoll\b/) {	#:: 89
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(89, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKOS\b/) {	#:: 5013
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5013, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKOS_animal\b/) {	#:: 5014
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5014, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCoalition of TradeFolk III\b/) {	#:: 5015
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5015, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSwamp Giants of Kunark\b/) {	#:: 5016
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5016, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGiant Spider\b/) {	#:: 88
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(88, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMurrissa Sandwhisper\b/) {	#:: 5017
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5017, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGiant Snake\b/) {	#:: 87
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(87, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGiant Rat\b/) {	#:: 86
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(86, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMermaids\b/) {	#:: 5018
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5018, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta KOS Copy 9\b/) {	#:: 85
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(85, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGiant Bat\b/) {	#:: 84
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(84, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKing Aythox Thex\b/) {	#:: 5019
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5019, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGhoul\b/) {	#:: 83
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(83, $change_amount);
+			}
+		}
+		elsif ($text=~/\bUndead Residents of Kithicor\b/) {	#:: 5020
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5020, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGhost\b/) {	#:: 82
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(82, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCleaving Tooth Clan\b/) {	#:: 5021
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5021, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMountain Death Clan\b/) {	#:: 5022
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5022, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGelatinous Cube\b/) {	#:: 81
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(81, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRace Faction (80)\b/) {	#:: 80
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(80, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGargoyle\b/) {	#:: 79
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(79, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFungus Man\b/) {	#:: 78
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(78, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFroglok Ghoul\b/) {	#:: 77
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(77, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFroglok\b/) {	#:: 76
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(76, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFairy (Race)\b/) {	#:: 75
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(75, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNoobie Monsters KOS to Guards\b/) {	#:: 5023
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5023, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFish\b/) {	#:: 74
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(74, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKerran (Race)\b/) {	#:: 73
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(73, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFire Beetle\b/) {	#:: 72
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(72, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEvil Eye\b/) {	#:: 71
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(71, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVenril Sathir (Race)\b/) {	#:: 70
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(70, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTrakanon (Race)\b/) {	#:: 69
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(69, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCyclops\b/) {	#:: 68
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(68, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClay Golem\b/) {	#:: 67
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(67, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCentaur\b/) {	#:: 66
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(66, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDeath Fist Orcs\b/) {	#:: 5024
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5024, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBrownies of Faydwer\b/) {	#:: 65
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(65, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWerewolf\b/) {	#:: 64
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(64, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAviak\b/) {	#:: 63
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(63, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGnome\b/) {	#:: 62
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(62, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHalfling\b/) {	#:: 61
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(61, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOgre\b/) {	#:: 60
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(60, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTroll\b/) {	#:: 59
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(59, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDwarf\b/) {	#:: 58
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(58, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHalf Elf\b/) {	#:: 57
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(57, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDark Elf\b/) {	#:: 56
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(56, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHigh Elf\b/) {	#:: 55
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(55, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWood Elf\b/) {	#:: 54
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(54, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKaladim Merchants\b/) {	#:: 5025
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5025, $change_amount);
+			}
+		}
+		elsif ($text=~/\bErudite\b/) {	#:: 53
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(53, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBarbarian\b/) {	#:: 52
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(52, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHuman\b/) {	#:: 51
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(51, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClass50\b/) {	#:: 50
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(50, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClass49\b/) {	#:: 49
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(49, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClass48\b/) {	#:: 48
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(48, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClass47\b/) {	#:: 47
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(47, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClass46\b/) {	#:: 46
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(46, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClass45\b/) {	#:: 45
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(45, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClass44\b/) {	#:: 44
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(44, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOgguk Residents\b/) {	#:: 5026
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5026, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClass43\b/) {	#:: 43
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(43, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClass42\b/) {	#:: 42
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(42, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPhingel Autropos\b/) {	#:: 5027
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5027, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClass41\b/) {	#:: 41
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(41, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClass40\b/) {	#:: 40
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(40, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClass39\b/) {	#:: 39
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(39, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClass38\b/) {	#:: 38
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(38, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClass37\b/) {	#:: 37
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(37, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSky Talons\b/) {	#:: 5028
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5028, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClass36\b/) {	#:: 36
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(36, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClass35\b/) {	#:: 35
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(35, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTemple Of Sol Ro\b/) {	#:: 5029
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5029, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClass34\b/) {	#:: 34
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(34, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClass33\b/) {	#:: 33
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(33, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMerchant\b/) {	#:: 32
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(32, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClass31\b/) {	#:: 31
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(31, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGUILDMASTERENCHANTER\b/) {	#:: 30
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(30, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGUILDMASTERMAGICIAN\b/) {	#:: 29
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(29, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGUILDMASTERWIZARD\b/) {	#:: 28
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(28, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGUILDMASTERNECRO\b/) {	#:: 27
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(27, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGUILDMASTERSHAMAN\b/) {	#:: 26
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(26, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGUILDMASTERROGUE\b/) {	#:: 25
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(25, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDulaks Clan\b/) {	#:: 5030
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5030, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNeedlite\b/) {	#:: 5031
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5031, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGUILDMASTERBARD\b/) {	#:: 24
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(24, $change_amount);
+			}
+		}
+		elsif ($text=~/\bIndifferent\b/) {	#:: 5032
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5032, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGUILDMASTERMONK\b/) {	#:: 23
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(23, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGUILDMASTERDRUID\b/) {	#:: 22
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(22, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGUILDMASTERSK\b/) {	#:: 21
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(21, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKOS Plane of Nightmare\b/) {	#:: 5033
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5033, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKOS Plane of Innovation\b/) {	#:: 5034
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5034, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWehateThelin\b/) {	#:: 5035
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5035, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHoHMaiden\b/) {	#:: 5036
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5036, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNadox Clan\b/) {	#:: 5037
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5037, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGUILDMASTERRANGER\b/) {	#:: 20
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(20, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNitram\b/) {	#:: 5038
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5038, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGUILDMASTERPALADIN\b/) {	#:: 19
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(19, $change_amount);
+			}
+		}
+		elsif ($text=~/\bResidents of Gloomingdeep\b/) {	#:: 5039
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5039, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMadmen\b/) {	#:: 5040
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5040, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGUILDMASTERCLERIC\b/) {	#:: 18
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(18, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVillagerRoom\b/) {	#:: 5041
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5041, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGUILDMASTERWARRIOR\b/) {	#:: 17
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(17, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBerserker\b/) {	#:: 16
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(16, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOmensBatRat\b/) {	#:: 5042
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5042, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNeriak Merchants\b/) {	#:: 5043
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5043, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeastlord\b/) {	#:: 15
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(15, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPlanes_Neutral\b/) {	#:: 5044
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5044, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKOS Plane of Storms\b/) {	#:: 5045
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5045, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPaludal_Mushrooms\b/) {	#:: 5046
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5046, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPaludal_Underbulk\b/) {	#:: 5047
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5047, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe_Angry_Sambata\b/) {	#:: 5048
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5048, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCrescent Guards\b/) {	#:: 5049
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5049, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEnchanter\b/) {	#:: 14
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(14, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMagician\b/) {	#:: 13
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(13, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWizard\b/) {	#:: 12
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(12, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNecromancer\b/) {	#:: 11
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(11, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShaman\b/) {	#:: 10
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(10, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRogue\b/) {	#:: 9
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(9, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBard\b/) {	#:: 8
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(8, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMonk\b/) {	#:: 7
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(7, $change_amount);
+			}
+		}
+		elsif ($text=~/\bInvaders of the Moor\b/) {	#:: 5050
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5050, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDruid\b/) {	#:: 6
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(6, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShadowKnight\b/) {	#:: 5
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRanger\b/) {	#:: 4
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(4, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPaladin\b/) {	#:: 3
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(3, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCleric\b/) {	#:: 2
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAsylum of Anguish\b/) {	#:: 5051
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5051, $change_amount);
+			}
+		}
+		elsif ($text=~/\bdubious\b/) {	#:: 5052
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5052, $change_amount);
+			}
+		}
+		elsif ($text=~/\bdubious-storms\b/) {	#:: 5053
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5053, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWarrior\b/) {	#:: 1
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1, $change_amount);
+			}
+		}
+		elsif ($text=~/\bScout_Guke\b/) {	#:: 5054
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5054, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDark_Reign_Guard\b/) {	#:: 5055
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(5055, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNoFaction\b/) {	#:: 0
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(0, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGrobb Guard\b/) {	#:: 377
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(377, $change_amount);
+			}
+		}
+		elsif ($text=~/\bStone Hive Bixies\b/) {	#:: 378
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(378, $change_amount);
+			}
+		}
+		elsif ($text=~/\bButcherblock Bandits\b/) {	#:: 379
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(379, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWood Elf Bards\b/) {	#:: 380
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(380, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTunare's Martyrs 2\b/) {	#:: 381
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(381, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKerra Isle\b/) {	#:: 382
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(382, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThunder Hooves\b/) {	#:: 383
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(383, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFay Scout\b/) {	#:: 384
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(384, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDefective Clockwork\b/) {	#:: 385
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(385, $change_amount);
+			}
+		}
+		elsif ($text=~/\bUnrest Inhabitants\b/) {	#:: 386
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(386, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBefallen Inhabitants\b/) {	#:: 387
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(387, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFairie\b/) {	#:: 388
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(388, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGolem\b/) {	#:: 389
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(389, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNew Combine Guards\b/) {	#:: 390
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(390, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNew Combine\b/) {	#:: 391
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(391, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction392\b/) {	#:: 392
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(392, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDjinn\b/) {	#:: 393
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(393, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShamen of War\b/) {	#:: 394
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(394, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMorawk\b/) {	#:: 395
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(395, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAgnostic\b/) {	#:: 396
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(396, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSky Talons (good)\b/) {	#:: 397
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(397, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRiptide Goblins\b/) {	#:: 398
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(398, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSea Furies\b/) {	#:: 399
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(399, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCult of Fear\b/) {	#:: 400
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(400, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSong Weavers\b/) {	#:: 401
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(401, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOracle of K`Arnon\b/) {	#:: 402
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(402, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOracle of Marud\b/) {	#:: 403
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(403, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTruespirit\b/) {	#:: 404
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(404, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDain Frostreaver IV\b/) {	#:: 405
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(405, $change_amount);
+			}
+		}
+		elsif ($text=~/\bColdain\b/) {	#:: 406
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(406, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRy`Gorr Clan Snow Orcs\b/) {	#:: 407
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(407, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction408\b/) {	#:: 408
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(408, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTserrina Syl`Tor\b/) {	#:: 409
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(409, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuide1\b/) {	#:: 410
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(410, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuide2\b/) {	#:: 411
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(411, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKrag\b/) {	#:: 412
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(412, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuide3\b/) {	#:: 413
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(413, $change_amount);
+			}
+		}
+		elsif ($text=~/\bResidents of Fear\b/) {	#:: 414
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(414, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTemple of Solusek Ro\b/) {	#:: 415
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(415, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShadowed Men\b/) {	#:: 416
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(416, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAnkhefenmut\b/) {	#:: 417
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(417, $change_amount);
+			}
+		}
+		elsif ($text=~/\bZazamoukh\b/) {	#:: 418
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(418, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKromrif\b/) {	#:: 419
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(419, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFallen of Bloody Kithicor\b/) {	#:: 420
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(420, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAggressors of Kithicor\b/) {	#:: 421
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(421, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDefenders of Kithicor\b/) {	#:: 422
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(422, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVerish Mal\b/) {	#:: 423
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(423, $change_amount);
+			}
+		}
+		elsif ($text=~/\bInhabitants of Sky\b/) {	#:: 424
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(424, $change_amount);
+			}
+		}
+		elsif ($text=~/\bInhabitants of Hate\b/) {	#:: 425
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(425, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAgents of Mistmoore\b/) {	#:: 426
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(426, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSpirocs of Timorous\b/) {	#:: 427
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(427, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMinions of Underfoot\b/) {	#:: 428
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(428, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKing Tormax\b/) {	#:: 429
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(429, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClaws of Veeshan\b/) {	#:: 430
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(430, $change_amount);
+			}
+		}
+		elsif ($text=~/\bUlthork\b/) {	#:: 431
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(431, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOthmir\b/) {	#:: 432
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(432, $change_amount);
+			}
+		}
+		elsif ($text=~/\bJaled Dar\b/) {	#:: 433
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(433, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSirens of the Grotto\b/) {	#:: 434
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(434, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVelketor\b/) {	#:: 435
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(435, $change_amount);
+			}
+		}
+		elsif ($text=~/\bYelinak\b/) {	#:: 436
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(436, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDenizens of Mischief\b/) {	#:: 437
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(437, $change_amount);
+			}
+		}
+		elsif ($text=~/\bServants of Tunare\b/) {	#:: 438
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(438, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSnowfang Gnolls\b/) {	#:: 439
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(439, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCabilis Residents\b/) {	#:: 440
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(440, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLegion of Cabilis\b/) {	#:: 441
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(441, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCrusaders of Greenmist\b/) {	#:: 442
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(442, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBrood of Kotiz\b/) {	#:: 443
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(443, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSwift Tails\b/) {	#:: 444
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(444, $change_amount);
+			}
+		}
+		elsif ($text=~/\bScaled Mystics\b/) {	#:: 445
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(445, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Forsaken\b/) {	#:: 446
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(446, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPirates of Iceclad\b/) {	#:: 447
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(447, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKromzek\b/) {	#:: 448
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(448, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTunarean Court\b/) {	#:: 449
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(449, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThrall of Kly\b/) {	#:: 450
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(450, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBrood of Di`Zok\b/) {	#:: 451
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(451, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Hotwingz\b/) {	#:: 452
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(452, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCitizens of Torsis\b/) {	#:: 453
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(453, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDrusella Sathir\b/) {	#:: 454
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(454, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMinions of Scale\b/) {	#:: 455
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(455, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGelistial\b/) {	#:: 456
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(456, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHolgresh\b/) {	#:: 457
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(457, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGeonid Collective\b/) {	#:: 458
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(458, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLithiniath\b/) {	#:: 459
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(459, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCitizens of Froststone\b/) {	#:: 460
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(460, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCrystal Denizens\b/) {	#:: 461
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(461, $change_amount);
+			}
+		}
+		elsif ($text=~/\bChetari\b/) {	#:: 462
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(462, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPaebala\b/) {	#:: 463
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(463, $change_amount);
+			}
+		}
+		elsif ($text=~/\bZlandicar\b/) {	#:: 464
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(464, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTizmak Clan\b/) {	#:: 465
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(465, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuardians of the Shrine\b/) {	#:: 466
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(466, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuardians of Veeshan\b/) {	#:: 467
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(467, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Sleeper\b/) {	#:: 468
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(468, $change_amount);
+			}
+		}
+		elsif ($text=~/\bProtectors of Growth\b/) {	#:: 469
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(469, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPeoples Republic of Thurgadin\b/) {	#:: 470
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(470, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClan Kolbok\b/) {	#:: 471
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(471, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWarders of The Claw\b/) {	#:: 472
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(472, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKejek Village\b/) {	#:: 473
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(473, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSporali\b/) {	#:: 474
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(474, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKing Xorbb\b/) {	#:: 475
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(475, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta Good\b/) {	#:: 476
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(476, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta Evil\b/) {	#:: 477
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(477, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta Warmly\b/) {	#:: 478
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(478, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta KOS\b/) {	#:: 479
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(479, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction480\b/) {	#:: 480
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(480, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction481\b/) {	#:: 481
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(481, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTribunal (Race)\b/) {	#:: 482
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(482, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBertoxxulous (Race)\b/) {	#:: 483
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(483, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBristlebane (Race)\b/) {	#:: 484
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(484, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaydrake\b/) {	#:: 485
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(485, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSarnak Skeleton\b/) {	#:: 486
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(486, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRatman\b/) {	#:: 487
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(487, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWyvern\b/) {	#:: 488
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(488, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWurm\b/) {	#:: 489
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(489, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDevourer\b/) {	#:: 490
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(490, $change_amount);
+			}
+		}
+		elsif ($text=~/\bIksar Golem\b/) {	#:: 491
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(491, $change_amount);
+			}
+		}
+		elsif ($text=~/\bIksar Skeleton\b/) {	#:: 492
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(492, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMan-Eating Plant\b/) {	#:: 493
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(493, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRaptor\b/) {	#:: 494
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(494, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSarnak Golem\b/) {	#:: 495
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(495, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWater Dragon\b/) {	#:: 496
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(496, $change_amount);
+			}
+		}
+		elsif ($text=~/\bIksar Hand\b/) {	#:: 497
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(497, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCactus Man\b/) {	#:: 498
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(498, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFlying Monkey\b/) {	#:: 499
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(499, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBrontotherium\b/) {	#:: 500
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(500, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSnow Dervish\b/) {	#:: 501
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(501, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDire Wolf\b/) {	#:: 502
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(502, $change_amount);
+			}
+		}
+		elsif ($text=~/\bManticore\b/) {	#:: 503
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(503, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTotem Man\b/) {	#:: 504
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(504, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCold Spectre\b/) {	#:: 505
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(505, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEnchanted Armor\b/) {	#:: 506
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(506, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSnow Bunny\b/) {	#:: 507
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(507, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWalrus\b/) {	#:: 508
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(508, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRock Gem Man\b/) {	#:: 509
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(509, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRace Faction (510)\b/) {	#:: 510
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(510, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRace Faction (511)\b/) {	#:: 511
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(511, $change_amount);
+			}
+		}
+		elsif ($text=~/\bYakman\b/) {	#:: 512
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(512, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaun\b/) {	#:: 513
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(513, $change_amount);
+			}
+		}
+		elsif ($text=~/\bColdain (Race)\b/) {	#:: 514
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(514, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVelious Dragon\b/) {	#:: 515
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(515, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHag\b/) {	#:: 516
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(516, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHippogriff\b/) {	#:: 517
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(517, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSiren\b/) {	#:: 518
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(518, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFrost Giant\b/) {	#:: 519
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(519, $change_amount);
+			}
+		}
+		elsif ($text=~/\bStorm Giant\b/) {	#:: 520
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(520, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOtter Man\b/) {	#:: 521
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(521, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWalrus Man\b/) {	#:: 522
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(522, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClockwork Dragon\b/) {	#:: 523
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(523, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAbhorrent\b/) {	#:: 524
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(524, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSea Turtle\b/) {	#:: 525
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(525, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBandWdragons\b/) {	#:: 526
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(526, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGhost Dragon\b/) {	#:: 527
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(527, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRace Faction (528)\b/) {	#:: 528
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(528, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPrismatic Dragon\b/) {	#:: 529
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(529, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShik Nar of Fungus Grove\b/) {	#:: 530
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(530, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRockhopper\b/) {	#:: 531
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(531, $change_amount);
+			}
+		}
+		elsif ($text=~/\bUnderbulk\b/) {	#:: 532
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(532, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGrimling\b/) {	#:: 533
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(533, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVacuum Worm\b/) {	#:: 534
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(534, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRace Faction (535)\b/) {	#:: 535
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(535, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKahli Shah\b/) {	#:: 536
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(536, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOwlbear\b/) {	#:: 537
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(537, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRhino Beetle\b/) {	#:: 538
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(538, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVampyre\b/) {	#:: 539
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(539, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEarth Elemental (Race)\b/) {	#:: 540
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(540, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAir Elemental (Race)\b/) {	#:: 541
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(541, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWater Elemental (Race)\b/) {	#:: 542
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(542, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFire Elemental (Race)\b/) {	#:: 543
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(543, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWetfang Minnow\b/) {	#:: 544
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(544, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThought Horror\b/) {	#:: 545
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(545, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTegi\b/) {	#:: 546
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(546, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHorse\b/) {	#:: 547
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(547, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShissar of Chelsith\b/) {	#:: 548
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(548, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFungal Fiend\b/) {	#:: 549
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(549, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVampire Volatalis\b/) {	#:: 550
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(550, $change_amount);
+			}
+		}
+		elsif ($text=~/\bStonegrabber\b/) {	#:: 551
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(551, $change_amount);
+			}
+		}
+		elsif ($text=~/\bScarlet Cheetah\b/) {	#:: 552
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(552, $change_amount);
+			}
+		}
+		elsif ($text=~/\bZelniak\b/) {	#:: 553
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(553, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLightcrawler\b/) {	#:: 554
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(554, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShade\b/) {	#:: 555
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(555, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSunflower\b/) {	#:: 556
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(556, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSun Revenant\b/) {	#:: 557
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(557, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShrieker\b/) {	#:: 558
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(558, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGalorian\b/) {	#:: 559
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(559, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNetherbian\b/) {	#:: 560
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(560, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAkheva (Race Type)\b/) {	#:: 561
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(561, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSpire Spirit\b/) {	#:: 562
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(562, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSonic Wolf\b/) {	#:: 563
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(563, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGround Shaker\b/) {	#:: 564
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(564, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVah Shir Skeleton\b/) {	#:: 565
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(565, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMutant Humanoid\b/) {	#:: 566
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(566, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSeru Race\b/) {	#:: 567
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(567, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRecuso\b/) {	#:: 568
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(568, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVah Shir King (Race)\b/) {	#:: 569
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(569, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVah Shir Guard (Race)\b/) {	#:: 570
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(570, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPortal Man (Race)\b/) {	#:: 571
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(571, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLujein\b/) {	#:: 572
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(572, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPotamide\b/) {	#:: 573
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(573, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDryad\b/) {	#:: 574
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(574, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEvil Treant\b/) {	#:: 575
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(575, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMutant Fly\b/) {	#:: 576
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(576, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTarew Marr\b/) {	#:: 577
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(577, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSolusek Ro New\b/) {	#:: 578
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(578, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClockwork Golem\b/) {	#:: 579
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(579, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClockwork Brain\b/) {	#:: 580
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(580, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSpectral Banshee\b/) {	#:: 581
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(581, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuard of Justice Race\b/) {	#:: 582
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(582, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMischief Castle\b/) {	#:: 583
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(583, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDisease Boss\b/) {	#:: 584
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(584, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSol Ro Guard\b/) {	#:: 585
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(585, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBertoxxulous Race\b/) {	#:: 586
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(586, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTribunal Race\b/) {	#:: 587
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(587, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTerris-Thule\b/) {	#:: 588
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(588, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVegerog\b/) {	#:: 589
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(589, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCrocodile\b/) {	#:: 590
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(590, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPOP Bat\b/) {	#:: 591
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(591, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSlarghilug\b/) {	#:: 592
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(592, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTranquilion\b/) {	#:: 593
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(593, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTin Soldier\b/) {	#:: 594
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(594, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNightmare Wraith\b/) {	#:: 595
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(595, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMalarian\b/) {	#:: 596
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(596, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKnight of Pestilence\b/) {	#:: 597
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(597, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLepertoloth\b/) {	#:: 598
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(598, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBubonian Boss\b/) {	#:: 599
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(599, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBubonian Underling\b/) {	#:: 600
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(600, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPusling\b/) {	#:: 601
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(601, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMephit\b/) {	#:: 602
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(602, $change_amount);
+			}
+		}
+		elsif ($text=~/\bStormrider\b/) {	#:: 603
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(603, $change_amount);
+			}
+		}
+		elsif ($text=~/\bJunk Beast\b/) {	#:: 604
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(604, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBroken Clockwork\b/) {	#:: 605
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(605, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGiant Clockwork\b/) {	#:: 606
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(606, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClockwork Beetle\b/) {	#:: 607
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(607, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNightmare Goblin\b/) {	#:: 608
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(608, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKarana Race\b/) {	#:: 609
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(609, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBlood Raven\b/) {	#:: 610
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(610, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNightmare Gargoyle\b/) {	#:: 611
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(611, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMouths of Insanity\b/) {	#:: 612
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(612, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSkeletal Horse\b/) {	#:: 613
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(613, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSaryrn Race\b/) {	#:: 614
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(614, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFennin Ro\b/) {	#:: 615
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(615, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTormentor\b/) {	#:: 616
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(616, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNecromancer Priest\b/) {	#:: 617
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(617, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNightmare, Planar\b/) {	#:: 618
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(618, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRallos Zek Race Faction\b/) {	#:: 619
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(619, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVallon Zek Race Faction\b/) {	#:: 620
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(620, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTallon Zek Race Faction\b/) {	#:: 621
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(621, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAir Mephit\b/) {	#:: 622
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(622, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEarth Mephit\b/) {	#:: 623
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(623, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFire Mephit\b/) {	#:: 624
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(624, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNightmare Mephit\b/) {	#:: 625
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(625, $change_amount);
+			}
+		}
+		elsif ($text=~/\bZebuxoruk\b/) {	#:: 626
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(626, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMithaniel Marr (Race)\b/) {	#:: 627
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(627, $change_amount);
+			}
+		}
+		elsif ($text=~/\bUndead Knight\b/) {	#:: 628
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(628, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Rathe\b/) {	#:: 629
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(629, $change_amount);
+			}
+		}
+		elsif ($text=~/\bXegony\b/) {	#:: 630
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(630, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGreater Fiend\b/) {	#:: 631
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(631, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRace Faction (632)\b/) {	#:: 632
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(632, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCrab\b/) {	#:: 633
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(633, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPhoenix\b/) {	#:: 634
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(634, $change_amount);
+			}
+		}
+		elsif ($text=~/\bQuarm (Race)\b/) {	#:: 635
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(635, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBear PoP\b/) {	#:: 636
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(636, $change_amount);
+			}
+		}
+		elsif ($text=~/\bStorm Taarid\b/) {	#:: 637
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(637, $change_amount);
+			}
+		}
+		elsif ($text=~/\bStorm Satuur\b/) {	#:: 638
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(638, $change_amount);
+			}
+		}
+		elsif ($text=~/\bStorm Kuraaln\b/) {	#:: 639
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(639, $change_amount);
+			}
+		}
+		elsif ($text=~/\bStorm Volaas\b/) {	#:: 640
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(640, $change_amount);
+			}
+		}
+		elsif ($text=~/\bStorm Mana\b/) {	#:: 641
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(641, $change_amount);
+			}
+		}
+		elsif ($text=~/\bStorm Fire\b/) {	#:: 642
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(642, $change_amount);
+			}
+		}
+		elsif ($text=~/\bStorm Celestial\b/) {	#:: 643
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(643, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWar Wraith\b/) {	#:: 644
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(644, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWrulon\b/) {	#:: 645
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(645, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKraken\b/) {	#:: 646
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(646, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPoison Frog\b/) {	#:: 647
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(647, $change_amount);
+			}
+		}
+		elsif ($text=~/\bQueztocoatal\b/) {	#:: 648
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(648, $change_amount);
+			}
+		}
+		elsif ($text=~/\bValorian (War Soldier)\b/) {	#:: 649
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(649, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWar Boar\b/) {	#:: 650
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(650, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEfreeti PoP\b/) {	#:: 651
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(651, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWar Boar Unarmored\b/) {	#:: 652
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(652, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBlack Knight\b/) {	#:: 653
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(653, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAnimated Armor\b/) {	#:: 654
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(654, $change_amount);
+			}
+		}
+		elsif ($text=~/\bUndead Footman\b/) {	#:: 655
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(655, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRallos Zek Minion\b/) {	#:: 656
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(656, $change_amount);
+			}
+		}
+		elsif ($text=~/\bArachnid - PoP\b/) {	#:: 657
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(657, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCrystal Spider (Race)\b/) {	#:: 658
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(658, $change_amount);
+			}
+		}
+		elsif ($text=~/\bZebuxoruk's Cage (Race)\b/) {	#:: 659
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(659, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBastion of Thunder Portal (Race)\b/) {	#:: 660
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(660, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuktan\b/) {	#:: 661
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(661, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTroll Buccaneer\b/) {	#:: 662
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(662, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTroll Freebooter\b/) {	#:: 663
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(663, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTroll Sea Rover\b/) {	#:: 664
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(664, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSpectre Pirate Boss\b/) {	#:: 665
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(665, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPirate Boss\b/) {	#:: 666
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(666, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPirate Dark Shaman\b/) {	#:: 667
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(667, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPirate Officer\b/) {	#:: 668
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(668, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGnome Pirate\b/) {	#:: 669
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(669, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDark Elf Pirate\b/) {	#:: 670
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(670, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOgre Pirate\b/) {	#:: 671
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(671, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHuman Pirate\b/) {	#:: 672
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(672, $change_amount);
+			}
+		}
+		elsif ($text=~/\bErudite Pirate\b/) {	#:: 673
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(673, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPoison Arrow Frog\b/) {	#:: 674
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(674, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTroll Zombie\b/) {	#:: 675
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(675, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLuggald\b/) {	#:: 676
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(676, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLuggald Armored\b/) {	#:: 677
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(677, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLuggald Robed\b/) {	#:: 678
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(678, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDrogmor (Race)\b/) {	#:: 679
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(679, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDream Delvers\b/) {	#:: 680
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(680, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta Ally\b/) {	#:: 681
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(681, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta Warmly\b/) {	#:: 682
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(682, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta Kindly\b/) {	#:: 683
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(683, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta Amiable\b/) {	#:: 684
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(684, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta Apprehensive\b/) {	#:: 685
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(685, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta Dubious\b/) {	#:: 686
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(686, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta Threatening\b/) {	#:: 687
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(687, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShissar (Race)\b/) {	#:: 688
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(688, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShik Nar (Race)\b/) {	#:: 689
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(689, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShik Nar of Mons Letalis\b/) {	#:: 690
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(690, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBrownie (Race)\b/) {	#:: 691
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(691, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPixie (Race)\b/) {	#:: 692
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(692, $change_amount);
+			}
+		}
+		elsif ($text=~/\bQeynos Citizen (Race)\b/) {	#:: 693
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(693, $change_amount);
+			}
+		}
+		elsif ($text=~/\bErudite Citizen (Race)\b/) {	#:: 694
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(694, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClockwork Gnome (Race)\b/) {	#:: 695
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(695, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKaladim Citizen (Race)\b/) {	#:: 696
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(696, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction697\b/) {	#:: 697
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(697, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction698\b/) {	#:: 698
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(698, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction699\b/) {	#:: 699
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(699, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMercenary Coalition\b/) {	#:: 700
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(700, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta KOS Copy 1\b/) {	#:: 701
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(701, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta KOS Copy 2\b/) {	#:: 702
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(702, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta KOS Copy 3\b/) {	#:: 703
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(703, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta KOS Copy 4\b/) {	#:: 704
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(704, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta KOS Copy 5\b/) {	#:: 705
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(705, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta KOS Copy 6\b/) {	#:: 706
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(706, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta KOS Copy 7\b/) {	#:: 707
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(707, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta KOS Copy 8\b/) {	#:: 708
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(708, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Yendan\b/) {	#:: 709
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(709, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuardians of War\b/) {	#:: 710
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(710, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCastle Rulnavis\b/) {	#:: 711
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(711, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCastle Tamrel\b/) {	#:: 712
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(712, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSoldiers of Tallon\b/) {	#:: 713
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(713, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSoldiers of Vallon\b/) {	#:: 714
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(714, $change_amount);
+			}
+		}
+		elsif ($text=~/\bInhabitants of Rulnavis\b/) {	#:: 715
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(715, $change_amount);
+			}
+		}
+		elsif ($text=~/\bInhabitants of Tamrel\b/) {	#:: 716
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(716, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKeepers of Narikor\b/) {	#:: 717
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(717, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Disgraced\b/) {	#:: 718
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(718, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMinions of Rot\b/) {	#:: 719
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(719, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMemorial Gnomelike\b/) {	#:: 720
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(720, $change_amount);
+			}
+		}
+		elsif ($text=~/\bIron Legion\b/) {	#:: 721
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(721, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction722\b/) {	#:: 722
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(722, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction723\b/) {	#:: 723
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(723, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction724\b/) {	#:: 724
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(724, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction725\b/) {	#:: 725
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(725, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction726\b/) {	#:: 726
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(726, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction727\b/) {	#:: 727
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(727, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction728\b/) {	#:: 728
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(728, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction729\b/) {	#:: 729
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(729, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction730\b/) {	#:: 730
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(730, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction731\b/) {	#:: 731
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(731, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction732\b/) {	#:: 732
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(732, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction733\b/) {	#:: 733
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(733, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction734\b/) {	#:: 734
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(734, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction735\b/) {	#:: 735
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(735, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction736\b/) {	#:: 736
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(736, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction737\b/) {	#:: 737
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(737, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction738\b/) {	#:: 738
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(738, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction739\b/) {	#:: 739
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(739, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction740\b/) {	#:: 740
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(740, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction741\b/) {	#:: 741
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(741, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction742\b/) {	#:: 742
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(742, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction743\b/) {	#:: 743
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(743, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction744\b/) {	#:: 744
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(744, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction745\b/) {	#:: 745
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(745, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction746\b/) {	#:: 746
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(746, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction747\b/) {	#:: 747
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(747, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction748\b/) {	#:: 748
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(748, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction749\b/) {	#:: 749
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(749, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction750\b/) {	#:: 750
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(750, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction751\b/) {	#:: 751
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(751, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction752\b/) {	#:: 752
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(752, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction753\b/) {	#:: 753
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(753, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction754\b/) {	#:: 754
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(754, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction755\b/) {	#:: 755
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(755, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction756\b/) {	#:: 756
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(756, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction757\b/) {	#:: 757
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(757, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction758\b/) {	#:: 758
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(758, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction759\b/) {	#:: 759
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(759, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction760\b/) {	#:: 760
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(760, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction761\b/) {	#:: 761
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(761, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction762\b/) {	#:: 762
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(762, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction763\b/) {	#:: 763
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(763, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction764\b/) {	#:: 764
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(764, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction765\b/) {	#:: 765
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(765, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction766\b/) {	#:: 766
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(766, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction767\b/) {	#:: 767
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(767, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction768\b/) {	#:: 768
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(768, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction769\b/) {	#:: 769
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(769, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction770\b/) {	#:: 770
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(770, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction771\b/) {	#:: 771
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(771, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction772\b/) {	#:: 772
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(772, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction773\b/) {	#:: 773
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(773, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction774\b/) {	#:: 774
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(774, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction775\b/) {	#:: 775
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(775, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction776\b/) {	#:: 776
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(776, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction777\b/) {	#:: 777
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(777, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction778\b/) {	#:: 778
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(778, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction779\b/) {	#:: 779
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(779, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction780\b/) {	#:: 780
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(780, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction781\b/) {	#:: 781
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(781, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction782\b/) {	#:: 782
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(782, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction783\b/) {	#:: 783
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(783, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction784\b/) {	#:: 784
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(784, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction785\b/) {	#:: 785
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(785, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction786\b/) {	#:: 786
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(786, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction787\b/) {	#:: 787
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(787, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction788\b/) {	#:: 788
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(788, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction789\b/) {	#:: 789
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(789, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction790\b/) {	#:: 790
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(790, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction791\b/) {	#:: 791
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(791, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction792\b/) {	#:: 792
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(792, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction793\b/) {	#:: 793
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(793, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction794\b/) {	#:: 794
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(794, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction795\b/) {	#:: 795
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(795, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction796\b/) {	#:: 796
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(796, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction797\b/) {	#:: 797
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(797, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction798\b/) {	#:: 798
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(798, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction799\b/) {	#:: 799
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(799, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction800\b/) {	#:: 800
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(800, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction801\b/) {	#:: 801
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(801, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction802\b/) {	#:: 802
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(802, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction803\b/) {	#:: 803
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(803, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction804\b/) {	#:: 804
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(804, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction805\b/) {	#:: 805
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(805, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction806\b/) {	#:: 806
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(806, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction807\b/) {	#:: 807
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(807, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction808\b/) {	#:: 808
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(808, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction809\b/) {	#:: 809
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(809, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction810\b/) {	#:: 810
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(810, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction811\b/) {	#:: 811
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(811, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction812\b/) {	#:: 812
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(812, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction813\b/) {	#:: 813
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(813, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction814\b/) {	#:: 814
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(814, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction815\b/) {	#:: 815
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(815, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction816\b/) {	#:: 816
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(816, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction817\b/) {	#:: 817
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(817, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction818\b/) {	#:: 818
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(818, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction819\b/) {	#:: 819
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(819, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction820\b/) {	#:: 820
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(820, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction821\b/) {	#:: 821
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(821, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction822\b/) {	#:: 822
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(822, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction823\b/) {	#:: 823
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(823, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction824\b/) {	#:: 824
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(824, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction825\b/) {	#:: 825
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(825, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction826\b/) {	#:: 826
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(826, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction827\b/) {	#:: 827
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(827, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction828\b/) {	#:: 828
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(828, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction829\b/) {	#:: 829
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(829, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction830\b/) {	#:: 830
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(830, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction831\b/) {	#:: 831
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(831, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction832\b/) {	#:: 832
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(832, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction833\b/) {	#:: 833
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(833, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction834\b/) {	#:: 834
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(834, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction835\b/) {	#:: 835
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(835, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction836\b/) {	#:: 836
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(836, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction837\b/) {	#:: 837
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(837, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction838\b/) {	#:: 838
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(838, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction839\b/) {	#:: 839
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(839, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction840\b/) {	#:: 840
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(840, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction841\b/) {	#:: 841
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(841, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction842\b/) {	#:: 842
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(842, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction843\b/) {	#:: 843
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(843, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction844\b/) {	#:: 844
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(844, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction845\b/) {	#:: 845
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(845, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction846\b/) {	#:: 846
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(846, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction847\b/) {	#:: 847
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(847, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction848\b/) {	#:: 848
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(848, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction849\b/) {	#:: 849
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(849, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction850\b/) {	#:: 850
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(850, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction851\b/) {	#:: 851
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(851, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction852\b/) {	#:: 852
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(852, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction853\b/) {	#:: 853
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(853, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction854\b/) {	#:: 854
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(854, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction855\b/) {	#:: 855
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(855, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction856\b/) {	#:: 856
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(856, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction857\b/) {	#:: 857
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(857, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction858\b/) {	#:: 858
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(858, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction859\b/) {	#:: 859
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(859, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction860\b/) {	#:: 860
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(860, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction861\b/) {	#:: 861
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(861, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction862\b/) {	#:: 862
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(862, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction863\b/) {	#:: 863
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(863, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction864\b/) {	#:: 864
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(864, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction865\b/) {	#:: 865
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(865, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction866\b/) {	#:: 866
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(866, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction867\b/) {	#:: 867
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(867, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction868\b/) {	#:: 868
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(868, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction869\b/) {	#:: 869
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(869, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction870\b/) {	#:: 870
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(870, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction871\b/) {	#:: 871
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(871, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction872\b/) {	#:: 872
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(872, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction873\b/) {	#:: 873
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(873, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction874\b/) {	#:: 874
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(874, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction875\b/) {	#:: 875
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(875, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction876\b/) {	#:: 876
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(876, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction877\b/) {	#:: 877
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(877, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction878\b/) {	#:: 878
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(878, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction879\b/) {	#:: 879
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(879, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction880\b/) {	#:: 880
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(880, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction881\b/) {	#:: 881
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(881, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction882\b/) {	#:: 882
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(882, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction883\b/) {	#:: 883
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(883, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction884\b/) {	#:: 884
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(884, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction885\b/) {	#:: 885
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(885, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction886\b/) {	#:: 886
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(886, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction887\b/) {	#:: 887
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(887, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction888\b/) {	#:: 888
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(888, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction889\b/) {	#:: 889
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(889, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction890\b/) {	#:: 890
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(890, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction891\b/) {	#:: 891
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(891, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction892\b/) {	#:: 892
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(892, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction893\b/) {	#:: 893
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(893, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction894\b/) {	#:: 894
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(894, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction895\b/) {	#:: 895
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(895, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction896\b/) {	#:: 896
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(896, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction897\b/) {	#:: 897
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(897, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction898\b/) {	#:: 898
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(898, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction899\b/) {	#:: 899
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(899, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction900\b/) {	#:: 900
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(900, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction901\b/) {	#:: 901
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(901, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction902\b/) {	#:: 902
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(902, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction903\b/) {	#:: 903
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(903, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction904\b/) {	#:: 904
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(904, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction905\b/) {	#:: 905
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(905, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction906\b/) {	#:: 906
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(906, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction907\b/) {	#:: 907
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(907, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction908\b/) {	#:: 908
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(908, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction909\b/) {	#:: 909
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(909, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction910\b/) {	#:: 910
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(910, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction911\b/) {	#:: 911
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(911, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction912\b/) {	#:: 912
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(912, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction913\b/) {	#:: 913
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(913, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction914\b/) {	#:: 914
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(914, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction915\b/) {	#:: 915
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(915, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction916\b/) {	#:: 916
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(916, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction917\b/) {	#:: 917
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(917, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction918\b/) {	#:: 918
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(918, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction919\b/) {	#:: 919
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(919, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction920\b/) {	#:: 920
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(920, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction921\b/) {	#:: 921
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(921, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction922\b/) {	#:: 922
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(922, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction923\b/) {	#:: 923
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(923, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction924\b/) {	#:: 924
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(924, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction925\b/) {	#:: 925
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(925, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction926\b/) {	#:: 926
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(926, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction927\b/) {	#:: 927
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(927, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction928\b/) {	#:: 928
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(928, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction929\b/) {	#:: 929
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(929, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction930\b/) {	#:: 930
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(930, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction931\b/) {	#:: 931
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(931, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction932\b/) {	#:: 932
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(932, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction933\b/) {	#:: 933
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(933, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction934\b/) {	#:: 934
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(934, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction935\b/) {	#:: 935
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(935, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction936\b/) {	#:: 936
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(936, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction937\b/) {	#:: 937
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(937, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction938\b/) {	#:: 938
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(938, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction939\b/) {	#:: 939
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(939, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction940\b/) {	#:: 940
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(940, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction941\b/) {	#:: 941
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(941, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction942\b/) {	#:: 942
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(942, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction943\b/) {	#:: 943
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(943, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction944\b/) {	#:: 944
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(944, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction945\b/) {	#:: 945
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(945, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction946\b/) {	#:: 946
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(946, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction947\b/) {	#:: 947
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(947, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction948\b/) {	#:: 948
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(948, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction949\b/) {	#:: 949
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(949, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction950\b/) {	#:: 950
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(950, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction951\b/) {	#:: 951
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(951, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction952\b/) {	#:: 952
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(952, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction953\b/) {	#:: 953
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(953, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction954\b/) {	#:: 954
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(954, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction955\b/) {	#:: 955
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(955, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction956\b/) {	#:: 956
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(956, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction957\b/) {	#:: 957
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(957, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction958\b/) {	#:: 958
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(958, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction959\b/) {	#:: 959
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(959, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction960\b/) {	#:: 960
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(960, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction961\b/) {	#:: 961
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(961, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction962\b/) {	#:: 962
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(962, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction963\b/) {	#:: 963
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(963, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction964\b/) {	#:: 964
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(964, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction965\b/) {	#:: 965
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(965, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction966\b/) {	#:: 966
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(966, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction967\b/) {	#:: 967
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(967, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction968\b/) {	#:: 968
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(968, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction969\b/) {	#:: 969
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(969, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction970\b/) {	#:: 970
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(970, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction971\b/) {	#:: 971
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(971, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction972\b/) {	#:: 972
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(972, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction973\b/) {	#:: 973
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(973, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction974\b/) {	#:: 974
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(974, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction975\b/) {	#:: 975
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(975, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction976\b/) {	#:: 976
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(976, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction977\b/) {	#:: 977
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(977, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction978\b/) {	#:: 978
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(978, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction979\b/) {	#:: 979
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(979, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction980\b/) {	#:: 980
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(980, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction981\b/) {	#:: 981
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(981, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction982\b/) {	#:: 982
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(982, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction983\b/) {	#:: 983
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(983, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction984\b/) {	#:: 984
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(984, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction985\b/) {	#:: 985
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(985, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction986\b/) {	#:: 986
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(986, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction987\b/) {	#:: 987
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(987, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction988\b/) {	#:: 988
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(988, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction989\b/) {	#:: 989
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(989, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction990\b/) {	#:: 990
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(990, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction991\b/) {	#:: 991
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(991, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction992\b/) {	#:: 992
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(992, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction993\b/) {	#:: 993
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(993, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction994\b/) {	#:: 994
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(994, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction995\b/) {	#:: 995
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(995, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction996\b/) {	#:: 996
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(996, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction997\b/) {	#:: 997
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(997, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction998\b/) {	#:: 998
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(998, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction999\b/) {	#:: 999
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(999, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSlaves of Gloomingdeep\b/) {	#:: 1000
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1000, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKobolds of Gloomingdeep\b/) {	#:: 1001
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1001, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCreatures of Gloomingdeep\b/) {	#:: 1002
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1002, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuards of Gloomingdeep\b/) {	#:: 1003
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1003, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAnimals of Taelosia\b/) {	#:: 1004
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1004, $change_amount);
+			}
+		}
+		elsif ($text=~/\bQeynos Elite Watch\b/) {	#:: 1005
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1005, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTroupe of Free Speakers\b/) {	#:: 1006
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1006, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRiftseekers\b/) {	#:: 1007
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1007, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDiscordant Creatures of Kuua\b/) {	#:: 1008
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1008, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDenizens of Discord\b/) {	#:: 1009
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1009, $change_amount);
+			}
+		}
+		elsif ($text=~/\bChildren of Dranik\b/) {	#:: 1010
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1010, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFollowers of Mekvidarsh\b/) {	#:: 1011
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1011, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFollowers of Loschryre\b/) {	#:: 1012
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1012, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOverlord Mata Muram\b/) {	#:: 1013
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1013, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBetaOmensNPCKOS\b/) {	#:: 1014
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1014, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCreatures of Kuua\b/) {	#:: 1015
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1015, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDranik Loyalists\b/) {	#:: 1016
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1016, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSenior Guides of Norrath\b/) {	#:: 1017
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1017, $change_amount);
+			}
+		}
+		elsif ($text=~/\bChildren of Mistmoore\b/) {	#:: 1018
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1018, $change_amount);
+			}
+		}
+		elsif ($text=~/\bElemental Invaders\b/) {	#:: 1019
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1019, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLanys T`Vyl\b/) {	#:: 1020
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1020, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDark Reign\b/) {	#:: 1021
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1021, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFiriona Vie\b/) {	#:: 1022
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1022, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNorrath's Keepers\b/) {	#:: 1023
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1023, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTirranun\b/) {	#:: 1024
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1024, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMinions of Tirranun\b/) {	#:: 1025
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1025, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVolkara\b/) {	#:: 1026
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1026, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVolkara's Brood\b/) {	#:: 1027
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1027, $change_amount);
+			}
+		}
+		elsif ($text=~/\bYar`lir\b/) {	#:: 1028
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1028, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThunder Guardians\b/) {	#:: 1029
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1029, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKessdona\b/) {	#:: 1030
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1030, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRikkukin\b/) {	#:: 1031
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1031, $change_amount);
+			}
+		}
+		elsif ($text=~/\bStillmoon Acolytes\b/) {	#:: 1032
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1032, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVishimtar\b/) {	#:: 1033
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1033, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNest Guardians\b/) {	#:: 1034
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1034, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCursed Drakes\b/) {	#:: 1035
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1035, $change_amount);
+			}
+		}
+		elsif ($text=~/\bScorchclaw Goblins\b/) {	#:: 1036
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1036, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFrostflake Goblins\b/) {	#:: 1037
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1037, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWhitecap Goblins\b/) {	#:: 1038
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1038, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDirtdigger Goblins\b/) {	#:: 1039
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1039, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGreenfoot Goblins\b/) {	#:: 1040
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1040, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGrel\b/) {	#:: 1041
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1041, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDefenders of the Broodlands\b/) {	#:: 1042
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1042, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBetaNPCKOS-PC\b/) {	#:: 1043
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1043, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Guardians\b/) {	#:: 1044
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1044, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Guardian's Alliance\b/) {	#:: 1045
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1045, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Dark Alliance\b/) {	#:: 1046
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1046, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Dark Suppliers\b/) {	#:: 1047
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1047, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSporali Collective\b/) {	#:: 1048
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1048, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDeep Sporali\b/) {	#:: 1049
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1049, $change_amount);
+			}
+		}
+		elsif ($text=~/\bExpedition 328\b/) {	#:: 1050
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1050, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCreep Reapers\b/) {	#:: 1051
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1051, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShadowmane\b/) {	#:: 1052
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1052, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRagepaw\b/) {	#:: 1053
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1053, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShiliskin Empire\b/) {	#:: 1054
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1054, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFree Traders of Malgrinnor\b/) {	#:: 1055
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1055, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFallen Guard of Illsalin\b/) {	#:: 1056
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1056, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDisciples of Jarzarrad\b/) {	#:: 1057
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1057, $change_amount);
+			}
+		}
+		elsif ($text=~/\bScions of Dreadspire\b/) {	#:: 1058
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1058, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAgents of Dreadspire\b/) {	#:: 1059
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1059, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCreatures of Darkhollow\b/) {	#:: 1060
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1060, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBetaNPCKOS-NPC\b/) {	#:: 1061
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1061, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAssistants of the Scribe\b/) {	#:: 1062
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1062, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCitizens of Freeport\b/) {	#:: 1063
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1063, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSpirits of Arcstone\b/) {	#:: 1064
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1064, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFledgling Scrykin\b/) {	#:: 1065
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1065, $change_amount);
+			}
+		}
+		elsif ($text=~/\bElder Scrykin\b/) {	#:: 1066
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1066, $change_amount);
+			}
+		}
+		elsif ($text=~/\bConstructs of Relic\b/) {	#:: 1067
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1067, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLegions of Sverag\b/) {	#:: 1068
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1068, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRavenous Undead\b/) {	#:: 1069
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1069, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWildfang\b/) {	#:: 1070
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1070, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRedfist Legionnaires\b/) {	#:: 1071
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1071, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Irebound\b/) {	#:: 1072
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1072, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRagefang\b/) {	#:: 1073
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1073, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Venom Swarm\b/) {	#:: 1074
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1074, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDeathshed Legion\b/) {	#:: 1075
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1075, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBlood Furies\b/) {	#:: 1076
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1076, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFuries of the North\b/) {	#:: 1077
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1077, $change_amount);
+			}
+		}
+		elsif ($text=~/\bStormbreaker Furies\b/) {	#:: 1078
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1078, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBonecracker Furies\b/) {	#:: 1079
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1079, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFuries of Shir\b/) {	#:: 1080
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1080, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Wall-Borne\b/) {	#:: 1081
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1081, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLegion of Rage\b/) {	#:: 1082
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1082, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Wretched\b/) {	#:: 1083
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1083, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTrueblood Coven\b/) {	#:: 1084
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1084, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCitizens of Takish-Hiz\b/) {	#:: 1085
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1085, $change_amount);
+			}
+		}
+		elsif ($text=~/\bInsurgents of Ro\b/) {	#:: 1086
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1086, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCreatures of Elddar\b/) {	#:: 1087
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1087, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClan Vorzek\b/) {	#:: 1088
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1088, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTribe of the Nogdha\b/) {	#:: 1089
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1089, $change_amount);
+			}
+		}
+		elsif ($text=~/\bServants of the Compact\b/) {	#:: 1090
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1090, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCreatures of Sandflow\b/) {	#:: 1091
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1091, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBlood of Ro\b/) {	#:: 1092
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1092, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDirewind Gnolls\b/) {	#:: 1093
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1093, $change_amount);
+			}
+		}
+		elsif ($text=~/\bForces of Dyn'leth\b/) {	#:: 1094
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1094, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCrusade of the Scale\b/) {	#:: 1095
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1095, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBlackfeather Harpies\b/) {	#:: 1096
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1096, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBlackfeather Royalty\b/) {	#:: 1097
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1097, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBlackfeather Animals\b/) {	#:: 1098
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1098, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBlackfeather Spiders\b/) {	#:: 1099
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1099, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShades of Zek\b/) {	#:: 1100
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1100, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAncestors of Valdeholm\b/) {	#:: 1101
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1101, $change_amount);
+			}
+		}
+		elsif ($text=~/\bConverts of Valdeholm\b/) {	#:: 1102
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1102, $change_amount);
+			}
+		}
+		elsif ($text=~/\bValdeholm Citizens\b/) {	#:: 1103
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1103, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWraithguard\b/) {	#:: 1104
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1104, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWraithguard Leadership\b/) {	#:: 1105
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1105, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDrakkin\b/) {	#:: 1106
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1106, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTuffein\b/) {	#:: 1107
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1107, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTuffein Leadership\b/) {	#:: 1108
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1108, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMinohten\b/) {	#:: 1109
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1109, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNymphs of the Windwillow\b/) {	#:: 1110
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1110, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNymphs of the Darkwater\b/) {	#:: 1111
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1111, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBlackfeather Raiders\b/) {	#:: 1112
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1112, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDromrek\b/) {	#:: 1113
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1113, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLost of the Windwillow\b/) {	#:: 1114
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1114, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFoulblood Fieldstrider Centaur\b/) {	#:: 1115
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1115, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFieldstrider Centaur\b/) {	#:: 1116
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1116, $change_amount);
+			}
+		}
+		elsif ($text=~/\bStonemight Goblins\b/) {	#:: 1117
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1117, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDarkfell Clan\b/) {	#:: 1118
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1118, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuardians of the Grove\b/) {	#:: 1119
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1119, $change_amount);
+			}
+		}
+		elsif ($text=~/\bColdeye Clan\b/) {	#:: 1120
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1120, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNightmoon Kobolds\b/) {	#:: 1121
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1121, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFrostbite Clan\b/) {	#:: 1122
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1122, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDrones of Stonehive\b/) {	#:: 1123
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1123, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLegion of Stonehive\b/) {	#:: 1124
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1124, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSpirits of Nokk\b/) {	#:: 1125
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1125, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuardians of the Dark Tower\b/) {	#:: 1126
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1126, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Blightfire Tainted\b/) {	#:: 1127
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1127, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMadcaps - Mushroom Men\b/) {	#:: 1128
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1128, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCircle of the Crystalwing\b/) {	#:: 1129
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1129, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSelay\b/) {	#:: 1130
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1130, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDyn`leth\b/) {	#:: 1131
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1131, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLethar\b/) {	#:: 1132
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1132, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVergalid\b/) {	#:: 1133
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1133, $change_amount);
+			}
+		}
+		elsif ($text=~/\bScholars of Solusek\b/) {	#:: 1134
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1134, $change_amount);
+			}
+		}
+		elsif ($text=~/\bInfiltrators and Traitors of Ashengate\b/) {	#:: 1135
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1135, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNature Animal\b/) {	#:: 1136
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1136, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCrescent Reach Guards\b/) {	#:: 1137
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1137, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGreater Shades of Zek\b/) {	#:: 1138
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1138, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNewbie Guard\b/) {	#:: 1139
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1139, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDrowned Dead\b/) {	#:: 1140
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1140, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSharpeye's Reef Runners\b/) {	#:: 1141
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1141, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBlacksail Pirates\b/) {	#:: 1142
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1142, $change_amount);
+			}
+		}
+		elsif ($text=~/\bStormscape Aviaks\b/) {	#:: 1143
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1143, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGaligaba\b/) {	#:: 1144
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1144, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKing Peleke\b/) {	#:: 1145
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1145, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSunstone Goblins\b/) {	#:: 1146
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1146, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKing Vigdos\b/) {	#:: 1147
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1147, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTidewater Goblins\b/) {	#:: 1148
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1148, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKing Tondra\b/) {	#:: 1149
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1149, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPlatinum Efreeti\b/) {	#:: 1150
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1150, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSphinx of Atiiki\b/) {	#:: 1151
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1151, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNature Animal - Snake\b/) {	#:: 1152
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1152, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNature Animal - Crocodile\b/) {	#:: 1153
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1153, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNature Animal - Basilisk\b/) {	#:: 1154
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1154, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNature Animal - Shark\b/) {	#:: 1155
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1155, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNature Animal - Spider\b/) {	#:: 1156
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1156, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNature Animal - Wolf\b/) {	#:: 1157
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1157, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNature Animal - Bear\b/) {	#:: 1158
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1158, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNature Animal - Beetle\b/) {	#:: 1159
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1159, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNature Animal - Fish\b/) {	#:: 1160
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1160, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCombine Citizens\b/) {	#:: 1161
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1161, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDisciples of Zhisza\b/) {	#:: 1162
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1162, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBrood of Vaakiszh\b/) {	#:: 1163
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1163, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFangs of Saarisz\b/) {	#:: 1164
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1164, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKatta Elementals\b/) {	#:: 1165
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1165, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSirens of Maiden's Grave\b/) {	#:: 1166
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1166, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Cursed of Monkey Rock\b/) {	#:: 1167
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1167, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMinions of Solusek Ro\b/) {	#:: 1168
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1168, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBlacksail Smugglers\b/) {	#:: 1169
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1169, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCombine Empire Merchants\b/) {	#:: 1170
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1170, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta Enemy\b/) {	#:: 1171
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1171, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta Friend\b/) {	#:: 1172
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1172, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeta Neutral 2\b/) {	#:: 1173
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1173, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Cursed of Monkey Rock (Instance)\b/) {	#:: 1174
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1174, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCaptains of Dyn`leth\b/) {	#:: 1175
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1175, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBlood of Solusek\b/) {	#:: 1176
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1176, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuardian \b/) {	#:: 1177
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1177, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWorkshop Workers Union\b/) {	#:: 1178
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1178, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBlackwater\b/) {	#:: 1179
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1179, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKirathas\b/) {	#:: 1180
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1180, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Borrowers\b/) {	#:: 1181
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1181, $change_amount);
+			}
+		}
+		elsif ($text=~/\bErollisi's Scorned\b/) {	#:: 1182
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1182, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBertoxxulous' Chosen\b/) {	#:: 1183
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1183, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCamp Valor\b/) {	#:: 1184
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1184, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLadies of the Light\b/) {	#:: 1185
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1185, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLoyalists of Kerafyrm\b/) {	#:: 1186
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1186, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEmissaries of Claws of Veeshan\b/) {	#:: 1187
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1187, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCrusaders of Veeshan\b/) {	#:: 1188
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1188, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBrownie Rebels\b/) {	#:: 1189
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1189, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAk`Anon Strike Force V\b/) {	#:: 1190
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1190, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFang Breakers\b/) {	#:: 1191
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1191, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Fallen\b/) {	#:: 1192
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1192, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAncestors of the Crypt\b/) {	#:: 1193
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1193, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMinions of Meldrath\b/) {	#:: 1194
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1194, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBloodmoon Were-Orcs\b/) {	#:: 1195
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1195, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDarkvine Villagers\b/) {	#:: 1196
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1196, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWind Nymphs\b/) {	#:: 1197
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1197, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuardian Defense Forces\b/) {	#:: 1198
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1198, $change_amount);
+			}
+		}
+		elsif ($text=~/\bResidents of the Glade\b/) {	#:: 1199
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1199, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBayle's Irregulars\b/) {	#:: 1200
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1200, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPlaguebringer Parishioners\b/) {	#:: 1201
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1201, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBlackburrow Gnolls\b/) {	#:: 1202
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1202, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDarkpaw Gnolls\b/) {	#:: 1203
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1203, $change_amount);
+			}
+		}
+		elsif ($text=~/\bArmy of Light \b/) {	#:: 1204
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1204, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThaulen Teir'Duuren\b/) {	#:: 1205
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1205, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKithicor Irregulars\b/) {	#:: 1206
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1206, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPrisoners of the Dark Elves\b/) {	#:: 1207
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1207, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDiscordant Agents\b/) {	#:: 1208
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1208, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDragorn Forces\b/) {	#:: 1209
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1209, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDiscordant Army\b/) {	#:: 1210
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1210, $change_amount);
+			}
+		}
+		elsif ($text=~/\bToskirakk Slaves\b/) {	#:: 1211
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1211, $change_amount);
+			}
+		}
+		elsif ($text=~/\bToskirakk Slavers\b/) {	#:: 1212
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1212, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRallosian Guards\b/) {	#:: 1213
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1213, $change_amount);
+			}
+		}
+		elsif ($text=~/\bToskirakk Merchants\b/) {	#:: 1214
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1214, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRathe Council\b/) {	#:: 1215
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1215, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRallosian Invaders\b/) {	#:: 1216
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1216, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRathe Living Heaps\b/) {	#:: 1217
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1217, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRathe Council Defenders\b/) {	#:: 1218
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1218, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDarkhammer Dwarves\b/) {	#:: 1219
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1219, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPrimal Crystallines\b/) {	#:: 1220
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1220, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOceangreen Residents\b/) {	#:: 1221
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1221, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCirtan, Bayle's Herald\b/) {	#:: 1222
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1222, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSilla Herald\b/) {	#:: 1223
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1223, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTynoc, Herald of Scale\b/) {	#:: 1224
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1224, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMitius, Herald of Change\b/) {	#:: 1225
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1225, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHerald Argoth\b/) {	#:: 1226
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1226, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHerald of Druzzil Ro\b/) {	#:: 1227
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1227, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAncient Blackburrow Gnolls\b/) {	#:: 1228
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1228, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSebilisian Empire\b/) {	#:: 1229
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1229, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDiscordant Armies\b/) {	#:: 1230
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1230, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTanglefuse's Clockworks\b/) {	#:: 1231
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1231, $change_amount);
+			}
+		}
+		elsif ($text=~/\bUnderfoot Citizens\b/) {	#:: 1232
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1232, $change_amount);
+			}
+		}
+		elsif ($text=~/\bUnderfoot Autarchs\b/) {	#:: 1233
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1233, $change_amount);
+			}
+		}
+		elsif ($text=~/\bUnderfoot Denizens\b/) {	#:: 1234
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1234, $change_amount);
+			}
+		}
+		elsif ($text=~/\bUnderfoot Protectors\b/) {	#:: 1235
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1235, $change_amount);
+			}
+		}
+		elsif ($text=~/\bUnderfoot Devout\b/) {	#:: 1236
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1236, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCliknar\b/) {	#:: 1237
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1237, $change_amount);
+			}
+		}
+		elsif ($text=~/\bUnderfoot Subversionists\b/) {	#:: 1238
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1238, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClockwork Magma Meter\b/) {	#:: 1239
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1239, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMorell-Thule\b/) {	#:: 1240
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1240, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDegmar's Loyalists\b/) {	#:: 1241
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1241, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDegmar's Commoners\b/) {	#:: 1242
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1242, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDegmar's Haunts\b/) {	#:: 1243
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1243, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBrother Island Residents\b/) {	#:: 1244
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1244, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBrother Island Animal\b/) {	#:: 1245
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1245, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSirens of the Endless Cavern\b/) {	#:: 1246
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1246, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1247\b/) {	#:: 1247
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1247, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1248\b/) {	#:: 1248
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1248, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1249\b/) {	#:: 1249
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1249, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1250\b/) {	#:: 1250
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1250, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1251\b/) {	#:: 1251
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1251, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1252\b/) {	#:: 1252
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1252, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1253\b/) {	#:: 1253
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1253, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1254\b/) {	#:: 1254
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1254, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1255\b/) {	#:: 1255
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1255, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1256\b/) {	#:: 1256
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1256, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1257\b/) {	#:: 1257
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1257, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1258\b/) {	#:: 1258
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1258, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1259\b/) {	#:: 1259
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1259, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1260\b/) {	#:: 1260
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1260, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1261\b/) {	#:: 1261
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1261, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1262\b/) {	#:: 1262
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1262, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1263\b/) {	#:: 1263
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1263, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1264\b/) {	#:: 1264
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1264, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1265\b/) {	#:: 1265
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1265, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1266\b/) {	#:: 1266
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1266, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1267\b/) {	#:: 1267
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1267, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1268\b/) {	#:: 1268
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1268, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1269\b/) {	#:: 1269
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1269, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1270\b/) {	#:: 1270
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1270, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1271\b/) {	#:: 1271
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1271, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1272\b/) {	#:: 1272
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1272, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1273\b/) {	#:: 1273
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1273, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1274\b/) {	#:: 1274
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1274, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1275\b/) {	#:: 1275
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1275, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1276\b/) {	#:: 1276
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1276, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1277\b/) {	#:: 1277
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1277, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1278\b/) {	#:: 1278
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1278, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1279\b/) {	#:: 1279
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1279, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1280\b/) {	#:: 1280
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1280, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1281\b/) {	#:: 1281
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1281, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1282\b/) {	#:: 1282
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1282, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1283\b/) {	#:: 1283
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1283, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1284\b/) {	#:: 1284
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1284, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1285\b/) {	#:: 1285
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1285, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1286\b/) {	#:: 1286
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1286, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1287\b/) {	#:: 1287
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1287, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1288\b/) {	#:: 1288
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1288, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1289\b/) {	#:: 1289
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1289, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1290\b/) {	#:: 1290
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1290, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1291\b/) {	#:: 1291
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1291, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1292\b/) {	#:: 1292
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1292, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1293\b/) {	#:: 1293
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1293, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1294\b/) {	#:: 1294
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1294, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1295\b/) {	#:: 1295
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1295, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1296\b/) {	#:: 1296
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1296, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1297\b/) {	#:: 1297
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1297, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1298\b/) {	#:: 1298
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1298, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1299\b/) {	#:: 1299
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1299, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1300\b/) {	#:: 1300
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1300, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1301\b/) {	#:: 1301
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1301, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1302\b/) {	#:: 1302
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1302, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1303\b/) {	#:: 1303
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1303, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1304\b/) {	#:: 1304
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1304, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1305\b/) {	#:: 1305
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1305, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1306\b/) {	#:: 1306
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1306, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1307\b/) {	#:: 1307
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1307, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1308\b/) {	#:: 1308
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1308, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1309\b/) {	#:: 1309
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1309, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1310\b/) {	#:: 1310
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1310, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1311\b/) {	#:: 1311
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1311, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1312\b/) {	#:: 1312
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1312, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1313\b/) {	#:: 1313
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1313, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1314\b/) {	#:: 1314
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1314, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1315\b/) {	#:: 1315
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1315, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1316\b/) {	#:: 1316
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1316, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1317\b/) {	#:: 1317
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1317, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1318\b/) {	#:: 1318
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1318, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1319\b/) {	#:: 1319
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1319, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1320\b/) {	#:: 1320
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1320, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1321\b/) {	#:: 1321
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1321, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1322\b/) {	#:: 1322
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1322, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1323\b/) {	#:: 1323
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1323, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1324\b/) {	#:: 1324
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1324, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1325\b/) {	#:: 1325
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1325, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1326\b/) {	#:: 1326
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1326, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1327\b/) {	#:: 1327
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1327, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1328\b/) {	#:: 1328
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1328, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1329\b/) {	#:: 1329
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1329, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1330\b/) {	#:: 1330
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1330, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1331\b/) {	#:: 1331
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1331, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1332\b/) {	#:: 1332
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1332, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1333\b/) {	#:: 1333
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1333, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1334\b/) {	#:: 1334
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1334, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1335\b/) {	#:: 1335
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1335, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1336\b/) {	#:: 1336
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1336, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1337\b/) {	#:: 1337
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1337, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1338\b/) {	#:: 1338
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1338, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1339\b/) {	#:: 1339
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1339, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1340\b/) {	#:: 1340
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1340, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1341\b/) {	#:: 1341
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1341, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1342\b/) {	#:: 1342
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1342, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1343\b/) {	#:: 1343
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1343, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1344\b/) {	#:: 1344
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1344, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1345\b/) {	#:: 1345
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1345, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1346\b/) {	#:: 1346
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1346, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1347\b/) {	#:: 1347
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1347, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1348\b/) {	#:: 1348
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1348, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1349\b/) {	#:: 1349
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1349, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1350\b/) {	#:: 1350
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1350, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1351\b/) {	#:: 1351
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1351, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1352\b/) {	#:: 1352
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1352, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1353\b/) {	#:: 1353
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1353, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1354\b/) {	#:: 1354
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1354, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1355\b/) {	#:: 1355
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1355, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1356\b/) {	#:: 1356
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1356, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1357\b/) {	#:: 1357
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1357, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1358\b/) {	#:: 1358
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1358, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1359\b/) {	#:: 1359
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1359, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1360\b/) {	#:: 1360
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1360, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1361\b/) {	#:: 1361
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1361, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1362\b/) {	#:: 1362
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1362, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1363\b/) {	#:: 1363
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1363, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1364\b/) {	#:: 1364
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1364, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1365\b/) {	#:: 1365
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1365, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1366\b/) {	#:: 1366
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1366, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1367\b/) {	#:: 1367
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1367, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1368\b/) {	#:: 1368
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1368, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1369\b/) {	#:: 1369
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1369, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1370\b/) {	#:: 1370
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1370, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1371\b/) {	#:: 1371
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1371, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1372\b/) {	#:: 1372
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1372, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1373\b/) {	#:: 1373
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1373, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1374\b/) {	#:: 1374
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1374, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1375\b/) {	#:: 1375
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1375, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1376\b/) {	#:: 1376
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1376, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1377\b/) {	#:: 1377
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1377, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1378\b/) {	#:: 1378
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1378, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1379\b/) {	#:: 1379
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1379, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1380\b/) {	#:: 1380
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1380, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1381\b/) {	#:: 1381
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1381, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1382\b/) {	#:: 1382
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1382, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1383\b/) {	#:: 1383
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1383, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1384\b/) {	#:: 1384
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1384, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1385\b/) {	#:: 1385
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1385, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1386\b/) {	#:: 1386
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1386, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1387\b/) {	#:: 1387
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1387, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1388\b/) {	#:: 1388
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1388, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1389\b/) {	#:: 1389
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1389, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1390\b/) {	#:: 1390
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1390, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1391\b/) {	#:: 1391
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1391, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1392\b/) {	#:: 1392
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1392, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1393\b/) {	#:: 1393
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1393, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1394\b/) {	#:: 1394
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1394, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1395\b/) {	#:: 1395
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1395, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1396\b/) {	#:: 1396
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1396, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1397\b/) {	#:: 1397
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1397, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1398\b/) {	#:: 1398
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1398, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1399\b/) {	#:: 1399
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1399, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1400\b/) {	#:: 1400
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1400, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1401\b/) {	#:: 1401
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1401, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1402\b/) {	#:: 1402
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1402, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1403\b/) {	#:: 1403
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1403, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1404\b/) {	#:: 1404
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1404, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1405\b/) {	#:: 1405
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1405, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1406\b/) {	#:: 1406
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1406, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1407\b/) {	#:: 1407
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1407, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1408\b/) {	#:: 1408
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1408, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1409\b/) {	#:: 1409
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1409, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1410\b/) {	#:: 1410
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1410, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1411\b/) {	#:: 1411
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1411, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1412\b/) {	#:: 1412
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1412, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1413\b/) {	#:: 1413
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1413, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1414\b/) {	#:: 1414
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1414, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1415\b/) {	#:: 1415
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1415, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1416\b/) {	#:: 1416
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1416, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1417\b/) {	#:: 1417
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1417, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1418\b/) {	#:: 1418
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1418, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1419\b/) {	#:: 1419
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1419, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1420\b/) {	#:: 1420
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1420, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1421\b/) {	#:: 1421
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1421, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1422\b/) {	#:: 1422
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1422, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1423\b/) {	#:: 1423
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1423, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1424\b/) {	#:: 1424
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1424, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1425\b/) {	#:: 1425
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1425, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1426\b/) {	#:: 1426
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1426, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1427\b/) {	#:: 1427
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1427, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1428\b/) {	#:: 1428
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1428, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1429\b/) {	#:: 1429
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1429, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1430\b/) {	#:: 1430
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1430, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1431\b/) {	#:: 1431
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1431, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1432\b/) {	#:: 1432
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1432, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1433\b/) {	#:: 1433
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1433, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1434\b/) {	#:: 1434
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1434, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1435\b/) {	#:: 1435
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1435, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1436\b/) {	#:: 1436
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1436, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1437\b/) {	#:: 1437
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1437, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1438\b/) {	#:: 1438
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1438, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1439\b/) {	#:: 1439
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1439, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1440\b/) {	#:: 1440
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1440, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1441\b/) {	#:: 1441
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1441, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1442\b/) {	#:: 1442
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1442, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1443\b/) {	#:: 1443
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1443, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1444\b/) {	#:: 1444
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1444, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1445\b/) {	#:: 1445
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1445, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1446\b/) {	#:: 1446
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1446, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1447\b/) {	#:: 1447
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1447, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1448\b/) {	#:: 1448
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1448, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1449\b/) {	#:: 1449
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1449, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1450\b/) {	#:: 1450
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1450, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1451\b/) {	#:: 1451
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1451, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1452\b/) {	#:: 1452
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1452, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1453\b/) {	#:: 1453
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1453, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1454\b/) {	#:: 1454
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1454, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1455\b/) {	#:: 1455
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1455, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1456\b/) {	#:: 1456
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1456, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1457\b/) {	#:: 1457
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1457, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1458\b/) {	#:: 1458
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1458, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1459\b/) {	#:: 1459
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1459, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1460\b/) {	#:: 1460
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1460, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1461\b/) {	#:: 1461
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1461, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1462\b/) {	#:: 1462
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1462, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1463\b/) {	#:: 1463
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1463, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1464\b/) {	#:: 1464
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1464, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1465\b/) {	#:: 1465
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1465, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1466\b/) {	#:: 1466
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1466, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1467\b/) {	#:: 1467
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1467, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1468\b/) {	#:: 1468
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1468, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1469\b/) {	#:: 1469
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1469, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1470\b/) {	#:: 1470
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1470, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1471\b/) {	#:: 1471
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1471, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1472\b/) {	#:: 1472
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1472, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1473\b/) {	#:: 1473
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1473, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1474\b/) {	#:: 1474
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1474, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1475\b/) {	#:: 1475
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1475, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1476\b/) {	#:: 1476
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1476, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1477\b/) {	#:: 1477
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1477, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1478\b/) {	#:: 1478
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1478, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1479\b/) {	#:: 1479
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1479, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1480\b/) {	#:: 1480
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1480, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1481\b/) {	#:: 1481
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1481, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1482\b/) {	#:: 1482
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1482, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSeru\b/) {	#:: 1483
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1483, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHand of Seru\b/) {	#:: 1484
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1484, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEye of Seru\b/) {	#:: 1485
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1485, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHeart of Seru\b/) {	#:: 1486
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1486, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShoulders of Seru\b/) {	#:: 1487
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1487, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Recuso\b/) {	#:: 1488
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1488, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGladiators and Slaves of Sanctus Seru\b/) {	#:: 1489
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1489, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGrimlings of the Moor\b/) {	#:: 1490
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1490, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSonic Wolves of the Moor\b/) {	#:: 1491
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1491, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOwlbears of the Moor\b/) {	#:: 1492
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1492, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGrimling Invaders\b/) {	#:: 1493
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1493, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOwlbear Invaders\b/) {	#:: 1494
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1494, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSonic Wolf Invaders\b/) {	#:: 1495
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1495, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGrimling Defenders\b/) {	#:: 1496
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1496, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOwlbear Defenders\b/) {	#:: 1497
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1497, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSonic Wolf Defenders\b/) {	#:: 1498
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1498, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCitizens of Seru\b/) {	#:: 1499
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1499, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGor Taku\b/) {	#:: 1500
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1500, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShak Dratha\b/) {	#:: 1501
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1501, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKatta Castellum Citizens\b/) {	#:: 1502
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1502, $change_amount);
+			}
+		}
+		elsif ($text=~/\bValidus Custodus\b/) {	#:: 1503
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1503, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMagus Conlegium\b/) {	#:: 1504
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1504, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNathyn Illuminious\b/) {	#:: 1505
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1505, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCoterie of the Eternal Night\b/) {	#:: 1506
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1506, $change_amount);
+			}
+		}
+		elsif ($text=~/\bValdanov Zevfeer\b/) {	#:: 1507
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1507, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTraders of the Haven\b/) {	#:: 1508
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1508, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHaven Defenders\b/) {	#:: 1509
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1509, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHouse of Fordel\b/) {	#:: 1510
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1510, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHouse of Midst\b/) {	#:: 1511
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1511, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHouse of Stout\b/) {	#:: 1512
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1512, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuardians of Shar Vahl\b/) {	#:: 1513
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1513, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTestfaction\b/) {	#:: 1514
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1514, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDark Forest Denizens\b/) {	#:: 1515
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1515, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGrimlings of the Forest\b/) {	#:: 1516
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1516, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDeepwood Owlbears\b/) {	#:: 1517
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1517, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPack of the Great Moon\b/) {	#:: 1518
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1518, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLodikai\b/) {	#:: 1519
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1519, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWhisperling\b/) {	#:: 1520
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1520, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAkheva\b/) {	#:: 1521
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1521, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPrimordial Malice\b/) {	#:: 1522
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1522, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFeast of the Burrowers\b/) {	#:: 1523
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1523, $change_amount);
+			}
+		}
+		elsif ($text=~/\bJohanius Barleou\b/) {	#:: 1524
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1524, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCoterie Elite\b/) {	#:: 1525
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1525, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOld Disciples of Kerafyrm\b/) {	#:: 1526
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1526, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSpire Spirits\b/) {	#:: 1527
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1527, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThought Leeches\b/) {	#:: 1528
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1528, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKhala Dun\b/) {	#:: 1529
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1529, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTaruun\b/) {	#:: 1530
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1530, $change_amount);
+			}
+		}
+		elsif ($text=~/\bJharin\b/) {	#:: 1531
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1531, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKhati Sha\b/) {	#:: 1532
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1532, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDar Khura\b/) {	#:: 1533
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1533, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLuclin Monsters\b/) {	#:: 1534
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1534, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBrood of Ssraeshza\b/) {	#:: 1535
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1535, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEmperor Ssraeshza\b/) {	#:: 1536
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1536, $change_amount);
+			}
+		}
+		elsif ($text=~/\bIksar Temple Slaves\b/) {	#:: 1537
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1537, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSpirits of Katta Castellum\b/) {	#:: 1538
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1538, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNetherbians\b/) {	#:: 1539
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1539, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTroglodytes\b/) {	#:: 1540
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1540, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHand Legionnaries\b/) {	#:: 1541
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1541, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHaven Smugglers\b/) {	#:: 1542
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1542, $change_amount);
+			}
+		}
+		elsif ($text=~/\bServants of Aero\b/) {	#:: 1543
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1543, $change_amount);
+			}
+		}
+		elsif ($text=~/\bServants of Terra\b/) {	#:: 1544
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1544, $change_amount);
+			}
+		}
+		elsif ($text=~/\bServants of Inferno\b/) {	#:: 1545
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1545, $change_amount);
+			}
+		}
+		elsif ($text=~/\bServants of Hydro\b/) {	#:: 1546
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1546, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVornol Transon\b/) {	#:: 1547
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1547, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Vas Ren Clan\b/) {	#:: 1548
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1548, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Grol Baku Clan\b/) {	#:: 1549
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1549, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Cral Ligi Clan\b/) {	#:: 1550
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1550, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Tro Jeg Clan\b/) {	#:: 1551
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1551, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVah Shir Crusaders\b/) {	#:: 1552
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1552, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNetherbian Ambush\b/) {	#:: 1553
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1553, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNetherbian Caravan\b/) {	#:: 1554
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1554, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGrieg\b/) {	#:: 1555
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1555, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLuclin\b/) {	#:: 1556
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1556, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDark Sendings\b/) {	#:: 1557
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1557, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGrimling Captives\b/) {	#:: 1558
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1558, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLake Recondite Bandits\b/) {	#:: 1559
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1559, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKanaad\b/) {	#:: 1560
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1560, $change_amount);
+			}
+		}
+		elsif ($text=~/\bConcilium Universus\b/) {	#:: 1561
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1561, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDisciples of Rhag`Zadune\b/) {	#:: 1562
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1562, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Sambata Tribe\b/) {	#:: 1563
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1563, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDawnhoppers\b/) {	#:: 1564
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1564, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTarmok Tribe\b/) {	#:: 1565
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1565, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNetok Tribe\b/) {	#:: 1566
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1566, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKatta Traitors\b/) {	#:: 1567
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1567, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDeepshade Collective\b/) {	#:: 1568
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1568, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDeklean Korgad\b/) {	#:: 1569
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1569, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOrder of Autarkic Umbrage\b/) {	#:: 1570
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1570, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShei Vinitras\b/) {	#:: 1571
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1571, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAnti Vinitras\b/) {	#:: 1572
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1572, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Bloodtribe\b/) {	#:: 1573
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1573, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMinions of the Sunlord\b/) {	#:: 1574
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1574, $change_amount);
+			}
+		}
+		elsif ($text=~/\bImps\b/) {	#:: 1575
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1575, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKingdom of Above and Below\b/) {	#:: 1576
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1576, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Truth\b/) {	#:: 1577
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1577, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDeklean Korgad\b/) {	#:: 1578
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1578, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDroga Goblins\b/) {	#:: 1579
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1579, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNurga Goblins\b/) {	#:: 1580
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1580, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLuclin Friendly Monsters\b/) {	#:: 1581
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1581, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOutcasts and Mutants\b/) {	#:: 1582
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1582, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCult of the Great Saprophyte\b/) {	#:: 1583
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1583, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCitizens of Shar Vahl\b/) {	#:: 1584
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1584, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFiends of the Grove\b/) {	#:: 1585
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1585, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSavage Spirit\b/) {	#:: 1586
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1586, $change_amount);
+			}
+		}
+		elsif ($text=~/\bZordak Ragefire\b/) {	#:: 1587
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1587, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCaptain Cruikshanks\b/) {	#:: 1588
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1588, $change_amount);
+			}
+		}
+		elsif ($text=~/\bScourge\b/) {	#:: 1589
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1589, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCaptain Stottal\b/) {	#:: 1590
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1590, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCaptain Smythe\b/) {	#:: 1591
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1591, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCaptain Dorian Dulein\b/) {	#:: 1592
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1592, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFrogloks of Krup\b/) {	#:: 1593
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1593, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCult of the Arisen\b/) {	#:: 1594
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1594, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNew Alliance of Stone\b/) {	#:: 1595
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1595, $change_amount);
+			}
+		}
+		elsif ($text=~/\bIdelia the Serene\b/) {	#:: 1596
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1596, $change_amount);
+			}
+		}
+		elsif ($text=~/\bResidents of Jaggedpine\b/) {	#:: 1597
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1597, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAnchorites of Brell Serilis\b/) {	#:: 1598
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1598, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDarkpaws of Jaggedpine\b/) {	#:: 1599
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1599, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuardians of the Hatchling\b/) {	#:: 1600
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1600, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPirates of the Pine\b/) {	#:: 1601
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1601, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCritters of Jaggedpine\b/) {	#:: 1602
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1602, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDryads of the Grove\b/) {	#:: 1603
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1603, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClan Grikbar\b/) {	#:: 1604
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1604, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHaven Smuggler Associates\b/) {	#:: 1605
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1605, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKOS to Beta Neutral\b/) {	#:: 1606
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1606, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPlague Bringer\b/) {	#:: 1607
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1607, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSpirits of Lxanvom\b/) {	#:: 1608
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1608, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAskr the Lost\b/) {	#:: 1609
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1609, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGreater Jord Giants\b/) {	#:: 1610
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1610, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGreater Brann Giants\b/) {	#:: 1611
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1611, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGreater Vind Giants\b/) {	#:: 1612
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1612, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGreater Vann Giants\b/) {	#:: 1613
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1613, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLesser Jord Giants\b/) {	#:: 1614
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1614, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLesser Brann Giants\b/) {	#:: 1615
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1615, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLesser Vind Giants\b/) {	#:: 1616
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1616, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLesser Vann Giants\b/) {	#:: 1617
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1617, $change_amount);
+			}
+		}
+		elsif ($text=~/\bStorm Guardians\b/) {	#:: 1618
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1618, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Rainkeeper\b/) {	#:: 1619
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1619, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTreants of Jaggedpine\b/) {	#:: 1620
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1620, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAgnarr\b/) {	#:: 1621
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1621, $change_amount);
+			}
+		}
+		elsif ($text=~/\bArboreans of the Faydark\b/) {	#:: 1622
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1622, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDisciples of Kerafyrm\b/) {	#:: 1623
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1623, $change_amount);
+			}
+		}
+		elsif ($text=~/\bServants of Saryrn\b/) {	#:: 1624
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1624, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuardians of Justice\b/) {	#:: 1625
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1625, $change_amount);
+			}
+		}
+		elsif ($text=~/\bJacosh Steldenn\b/) {	#:: 1626
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1626, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPrisoners of Justice\b/) {	#:: 1627
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1627, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCreatures of Justice\b/) {	#:: 1628
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1628, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGralloks\b/) {	#:: 1629
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1629, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBurning Dead\b/) {	#:: 1630
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1630, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKOS All PC And Beta Neutral\b/) {	#:: 1631
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1631, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDenizens of Water\b/) {	#:: 1632
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1632, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMinions of Coirnav\b/) {	#:: 1633
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1633, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFish Lords\b/) {	#:: 1634
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1634, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDwellers of the Deep\b/) {	#:: 1635
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1635, $change_amount);
+			}
+		}
+		elsif ($text=~/\bInhabitants of Tanaan\b/) {	#:: 1636
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1636, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTruespirit Companion\b/) {	#:: 1637
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1637, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRallos Zek, The Warlord\b/) {	#:: 1638
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1638, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTallon Zek\b/) {	#:: 1639
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1639, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVallon Zek\b/) {	#:: 1640
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1640, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEriak\b/) {	#:: 1641
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1641, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Damned of Narikor\b/) {	#:: 1642
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1642, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Diaku\b/) {	#:: 1643
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1643, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Gindan\b/) {	#:: 1644
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1644, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Hendin\b/) {	#:: 1645
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1645, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Decorus\b/) {	#:: 1646
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1646, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGladiators of Drunder\b/) {	#:: 1647
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1647, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDenizens of Fire\b/) {	#:: 1648
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1648, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMinions of Fennin Ro\b/) {	#:: 1649
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1649, $change_amount);
+			}
+		}
+		elsif ($text=~/\bInhabitants of Tranquility\b/) {	#:: 1650
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1650, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVictim of Torment\b/) {	#:: 1651
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1651, $change_amount);
+			}
+		}
+		elsif ($text=~/\bStampeding War Boar\b/) {	#:: 1652
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1652, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWar Boar Piglet\b/) {	#:: 1653
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1653, $change_amount);
+			}
+		}
+		elsif ($text=~/\bInhabitants of Disease\b/) {	#:: 1654
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1654, $change_amount);
+			}
+		}
+		elsif ($text=~/\bInhabitants of Valor\b/) {	#:: 1655
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1655, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBattalion of Marr\b/) {	#:: 1656
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1656, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRats of Justice\b/) {	#:: 1657
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1657, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDenizens of Storm\b/) {	#:: 1658
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1658, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLost Kingdom of Lok\b/) {	#:: 1659
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1659, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKoka'Vor Tribe\b/) {	#:: 1660
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1660, $change_amount);
+			}
+		}
+		elsif ($text=~/\bInhabitants of Air\b/) {	#:: 1661
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1661, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuardians of the Living Earth\b/) {	#:: 1662
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1662, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Protectorate of the Twelve\b/) {	#:: 1663
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1663, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEino\b/) {	#:: 1664
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1664, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFrogloks of Sebilis\b/) {	#:: 1665
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1665, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFrogloks of Ykesha\b/) {	#:: 1666
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1666, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFallen Follies of Mischief\b/) {	#:: 1667
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1667, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLhranc the Disgraced\b/) {	#:: 1668
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1668, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMinions of Enmity\b/) {	#:: 1669
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1669, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMinions of Hope\b/) {	#:: 1670
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1670, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAgents of the Pillars\b/) {	#:: 1671
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1671, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFriends of Zordak Ragefire\b/) {	#:: 1672
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1672, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEnemies of Zordak Ragefire\b/) {	#:: 1673
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1673, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKyle Bayle\b/) {	#:: 1674
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1674, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKyle Bayle's Royal Guard\b/) {	#:: 1675
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1675, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHills Revenant\b/) {	#:: 1676
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1676, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDead Hills Archaeologists\b/) {	#:: 1677
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1677, $change_amount);
+			}
+		}
+		elsif ($text=~/\bXulous of the Dead Hills\b/) {	#:: 1678
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1678, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Kromtus\b/) {	#:: 1679
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1679, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBloodfeather Aviaks\b/) {	#:: 1680
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1680, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Thaell Ew\b/) {	#:: 1681
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1681, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1682\b/) {	#:: 1682
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1682, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1683\b/) {	#:: 1683
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1683, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1684\b/) {	#:: 1684
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1684, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1685\b/) {	#:: 1685
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1685, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1686\b/) {	#:: 1686
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1686, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1687\b/) {	#:: 1687
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1687, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1688\b/) {	#:: 1688
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1688, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1689\b/) {	#:: 1689
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1689, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1690\b/) {	#:: 1690
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1690, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1691\b/) {	#:: 1691
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1691, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1692\b/) {	#:: 1692
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1692, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1693\b/) {	#:: 1693
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1693, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1694\b/) {	#:: 1694
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1694, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1695\b/) {	#:: 1695
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1695, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1696\b/) {	#:: 1696
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1696, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1697\b/) {	#:: 1697
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1697, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1698\b/) {	#:: 1698
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1698, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1699\b/) {	#:: 1699
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1699, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTorgiran\b/) {	#:: 1700
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1700, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWarlord Ngrub\b/) {	#:: 1701
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1701, $change_amount);
+			}
+		}
+		elsif ($text=~/\bResistance Miners\b/) {	#:: 1702
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1702, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNadox Initiate\b/) {	#:: 1703
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1703, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCursed Frogloks of Gukta\b/) {	#:: 1704
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1704, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCreatures of Gunthak\b/) {	#:: 1705
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1705, $change_amount);
+			}
+		}
+		elsif ($text=~/\bUndead of Gunthak\b/) {	#:: 1706
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1706, $change_amount);
+			}
+		}
+		elsif ($text=~/\bResidents of Gunthak\b/) {	#:: 1707
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1707, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCrew of the Scorned Maiden\b/) {	#:: 1708
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1708, $change_amount);
+			}
+		}
+		elsif ($text=~/\bProtectors of Gukta\b/) {	#:: 1709
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1709, $change_amount);
+			}
+		}
+		elsif ($text=~/\bInnothule Monster\b/) {	#:: 1710
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1710, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClerics of Gutka\b/) {	#:: 1711
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1711, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWarriors of Gukta\b/) {	#:: 1712
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1712, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPaladins of Gukta\b/) {	#:: 1713
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1713, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWizards of Gukta\b/) {	#:: 1714
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1714, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShaman of Gukta\b/) {	#:: 1715
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1715, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHigh Council of Gukta\b/) {	#:: 1716
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1716, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLorekeepers of Gukta\b/) {	#:: 1717
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1717, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuktan Elders\b/) {	#:: 1718
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1718, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCitizens of Gukta\b/) {	#:: 1719
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1719, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuktan Suppliers\b/) {	#:: 1720
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1720, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTroll Raiders\b/) {	#:: 1721
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1721, $change_amount);
+			}
+		}
+		elsif ($text=~/\bExiled Frogloks\b/) {	#:: 1722
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1722, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGrimling Bandits\b/) {	#:: 1723
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1723, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNewbie Monster\b/) {	#:: 1724
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1724, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSyrik Iceblood\b/) {	#:: 1725
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1725, $change_amount);
+			}
+		}
+		elsif ($text=~/\bInhabitants of Time\b/) {	#:: 1726
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1726, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCity Vermin\b/) {	#:: 1727
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1727, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBetrayers of Di`Zok\b/) {	#:: 1728
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1728, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFollowers of Korucust\b/) {	#:: 1729
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1729, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLDoNGood\b/) {	#:: 1730
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1730, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLDoNEvil\b/) {	#:: 1731
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1731, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTribe Vrodak\b/) {	#:: 1732
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1732, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWitnesses of Hate\b/) {	#:: 1733
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1733, $change_amount);
+			}
+		}
+		elsif ($text=~/\bForgotten Guktan Spirits\b/) {	#:: 1734
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1734, $change_amount);
+			}
+		}
+		elsif ($text=~/\bInnoruuk's Curse of the Cauldron\b/) {	#:: 1735
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1735, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFrostfoot Goblins\b/) {	#:: 1736
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1736, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLost Minions of Miragul\b/) {	#:: 1737
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1737, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPlanar Collective\b/) {	#:: 1738
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1738, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSynarcana\b/) {	#:: 1739
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1739, $change_amount);
+			}
+		}
+		elsif ($text=~/\bAgents of the Synarcana\b/) {	#:: 1740
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1740, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOrphans\b/) {	#:: 1741
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1741, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSustainers\b/) {	#:: 1742
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1742, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLoyals\b/) {	#:: 1743
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1743, $change_amount);
+			}
+		}
+		elsif ($text=~/\bProgeny\b/) {	#:: 1744
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1744, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRujarkian Slavers\b/) {	#:: 1745
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1745, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Broken\b/) {	#:: 1746
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1746, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSteelcrown\b/) {	#:: 1747
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1747, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSpiritbound\b/) {	#:: 1748
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1748, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSteelslaves\b/) {	#:: 1749
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1749, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCitizens of Takish-Hiz\b/) {	#:: 1750
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1750, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGeomantic Compact\b/) {	#:: 1751
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1751, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRoyal Attendants\b/) {	#:: 1752
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1752, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFlowkeepers\b/) {	#:: 1753
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1753, $change_amount);
+			}
+		}
+		elsif ($text=~/\bArchitects of Sand\b/) {	#:: 1754
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1754, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSandworkers\b/) {	#:: 1755
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1755, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLDoN Hostages\b/) {	#:: 1756
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1756, $change_amount);
+			}
+		}
+		elsif ($text=~/\bServants of the First Witness\b/) {	#:: 1757
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1757, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuktan Scouts\b/) {	#:: 1758
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1758, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWayfarers Brotherhood\b/) {	#:: 1759
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1759, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMinions of Mischief\b/) {	#:: 1760
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1760, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNihil\b/) {	#:: 1761
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1761, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTrusik Tribe\b/) {	#:: 1762
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1762, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLegion of Mata Muram\b/) {	#:: 1763
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1763, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTunat`Muram\b/) {	#:: 1764
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1764, $change_amount);
+			}
+		}
+		elsif ($text=~/\bZun`Muram\b/) {	#:: 1765
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1765, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPixtt\b/) {	#:: 1766
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1766, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHexxt\b/) {	#:: 1767
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1767, $change_amount);
+			}
+		}
+		elsif ($text=~/\bRav\b/) {	#:: 1768
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1768, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCreatures of Taelosia\b/) {	#:: 1769
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1769, $change_amount);
+			}
+		}
+		elsif ($text=~/\bYunjo Slave Resistance\b/) {	#:: 1770
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1770, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGladiators of Mata Muram\b/) {	#:: 1771
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1771, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Sun\b/) {	#:: 1772
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1772, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Moon\b/) {	#:: 1773
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1773, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOrcakar Players\b/) {	#:: 1774
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1774, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCitizens of Argath\b/) {	#:: 1775
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1775, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLiving Steel\b/) {	#:: 1776
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1776, $change_amount);
+			}
+		}
+		elsif ($text=~/\bArgathian Looters\b/) {	#:: 1777
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1777, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCitizens of Arelis\b/) {	#:: 1778
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1778, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFarmers of the Lunanyn\b/) {	#:: 1779
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1779, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMinions of War\b/) {	#:: 1780
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1780, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMinions of the Sun\b/) {	#:: 1781
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1781, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDominion of Beasts\b/) {	#:: 1782
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1782, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCitizens of Sarith\b/) {	#:: 1783
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1783, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDevout of Oseka\b/) {	#:: 1784
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1784, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMinions of Prexus\b/) {	#:: 1785
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1785, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSeekers of Splendor\b/) {	#:: 1786
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1786, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOrder of Radiance\b/) {	#:: 1787
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1787, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDevotees of Decay\b/) {	#:: 1788
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1788, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPurity of Alra\b/) {	#:: 1789
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1789, $change_amount);
+			}
+		}
+		elsif ($text=~/\bParagons of Purity\b/) {	#:: 1790
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1790, $change_amount);
+			}
+		}
+		elsif ($text=~/\bShades of Alra\b/) {	#:: 1791
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1791, $change_amount);
+			}
+		}
+		elsif ($text=~/\bParagons of Shadows\b/) {	#:: 1792
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1792, $change_amount);
+			}
+		}
+		elsif ($text=~/\bArcanists of Alra\b/) {	#:: 1793
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1793, $change_amount);
+			}
+		}
+		elsif ($text=~/\bParagons of the Arcane\b/) {	#:: 1794
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1794, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLiving Will of Alra\b/) {	#:: 1795
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1795, $change_amount);
+			}
+		}
+		elsif ($text=~/\bParagons of Will\b/) {	#:: 1796
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1796, $change_amount);
+			}
+		}
+		elsif ($text=~/\bServants of the Song\b/) {	#:: 1797
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1797, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCitizens of Erillion\b/) {	#:: 1798
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1798, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDisciples of Order\b/) {	#:: 1799
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1799, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Godblooded\b/) {	#:: 1800
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1800, $change_amount);
+			}
+		}
+		elsif ($text=~/\bIceshard Manor\b/) {	#:: 1801
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1801, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDragon Death Keep\b/) {	#:: 1802
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1802, $change_amount);
+			}
+		}
+		elsif ($text=~/\bApparitions of Fear\b/) {	#:: 1803
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1803, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBeetles of Shard's Landing\b/) {	#:: 1804
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1804, $change_amount);
+			}
+		}
+		elsif ($text=~/\bOashim of Shard's Landing\b/) {	#:: 1805
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1805, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPests of Shard's Landing\b/) {	#:: 1806
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1806, $change_amount);
+			}
+		}
+		elsif ($text=~/\bScavengers of Shard's Landing\b/) {	#:: 1807
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1807, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKangon of Shard's Landing\b/) {	#:: 1808
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1808, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBraxi of Shard's Landing\b/) {	#:: 1809
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1809, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWyverns of Shard's Landing\b/) {	#:: 1810
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1810, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSelyrah of Shard's Landing\b/) {	#:: 1811
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1811, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGoral of Shard's Landing\b/) {	#:: 1812
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1812, $change_amount);
+			}
+		}
+		elsif ($text=~/\bSnakes of Shard's Landing\b/) {	#:: 1813
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1813, $change_amount);
+			}
+		}
+		elsif ($text=~/\bPumas of Shard's Landing\b/) {	#:: 1814
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1814, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGrendlaen of Shard's Landing\b/) {	#:: 1815
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1815, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWolves of Shard's Landing\b/) {	#:: 1816
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1816, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHunters of Shard's Landing\b/) {	#:: 1817
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1817, $change_amount);
+			}
+		}
+		elsif ($text=~/\bForsaken Believers\b/) {	#:: 1818
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1818, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Believers\b/) {	#:: 1819
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1819, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Conscripted\b/) {	#:: 1820
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1820, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHeralds of the Unspoken\b/) {	#:: 1821
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1821, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHarbingers of Thule\b/) {	#:: 1822
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1822, $change_amount);
+			}
+		}
+		elsif ($text=~/\bVa`Ker\b/) {	#:: 1823
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1823, $change_amount);
+			}
+		}
+		elsif ($text=~/\bTerrorwing\b/) {	#:: 1824
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1824, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCrystal Circle Builders\b/) {	#:: 1825
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1825, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Unearthers\b/) {	#:: 1826
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1826, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Displaced\b/) {	#:: 1827
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1827, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Sol'Dal\b/) {	#:: 1828
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1828, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Ember\b/) {	#:: 1829
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1829, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDefenders of Decay\b/) {	#:: 1830
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1830, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWarriors of Rodcet\b/) {	#:: 1831
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1831, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1832\b/) {	#:: 1832
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1832, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1833\b/) {	#:: 1833
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1833, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1834\b/) {	#:: 1834
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1834, $change_amount);
+			}
+		}
+		elsif ($text=~/\bHarrowing Horde\b/) {	#:: 1835
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1835, $change_amount);
+			}
+		}
+		elsif ($text=~/\bWestern Plains Bandits\b/) {	#:: 1836
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1836, $change_amount);
+			}
+		}
+		elsif ($text=~/\bUrsarachnids\b/) {	#:: 1837
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1837, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDoomscale Cultists\b/) {	#:: 1838
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1838, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNature Soul - Fire\b/) {	#:: 1839
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1839, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNature Soul - Water\b/) {	#:: 1840
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1840, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNature Soul - Earth\b/) {	#:: 1841
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1841, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNature Soul - Wood\b/) {	#:: 1842
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1842, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFlaming Jacks\b/) {	#:: 1843
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1843, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEthernere Revenants\b/) {	#:: 1844
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1844, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEthernere Spirits\b/) {	#:: 1845
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1845, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKing Naythox Thex Loyalists\b/) {	#:: 1846
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1846, $change_amount);
+			}
+		}
+		elsif ($text=~/\bQueen Cristanos Thex Loyalists\b/) {	#:: 1847
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1847, $change_amount);
+			}
+		}
+		elsif ($text=~/\bNeriak Fourth Gate Residents\b/) {	#:: 1848
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1848, $change_amount);
+			}
+		}
+		elsif ($text=~/\bQeynos Guards of West Karana\b/) {	#:: 1849
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1849, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFellowship of the Peacock\b/) {	#:: 1850
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1850, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDamsel of Decay's Denizens\b/) {	#:: 1851
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1851, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEnemies of Tranquility\b/) {	#:: 1852
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1852, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLegion of the Overking\b/) {	#:: 1853
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1853, $change_amount);
+			}
+		}
+		elsif ($text=~/\bEmpire of the Di`Zok\b/) {	#:: 1854
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1854, $change_amount);
+			}
+		}
+		elsif ($text=~/\bKar`Zok\b/) {	#:: 1855
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1855, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFlamescale Legion\b/) {	#:: 1856
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1856, $change_amount);
+			}
+		}
+		elsif ($text=~/\bGuardians of Konikor\b/) {	#:: 1857
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1857, $change_amount);
+			}
+		}
+		elsif ($text=~/\bClan Droga\b/) {	#:: 1858
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1858, $change_amount);
+			}
+		}
+		elsif ($text=~/\bMajestic Centurion Alliance\b/) {	#:: 1859
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1859, $change_amount);
+			}
+		}
+		elsif ($text=~/\bThe Clawdigger Clan\b/) {	#:: 1860
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1860, $change_amount);
+			}
+		}
+		elsif ($text=~/\bScorpiki\b/) {	#:: 1861
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1861, $change_amount);
+			}
+		}
+		elsif ($text=~/\bDenizens of Veeshan's Peak\b/) {	#:: 1862
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1862, $change_amount);
+			}
+		}
+		elsif ($text=~/\bServants of Esianti\b/) {	#:: 1863
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1863, $change_amount);
+			}
+		}
+		elsif ($text=~/\bServants of Aalishai\b/) {	#:: 1864
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1864, $change_amount);
+			}
+		}
+		elsif ($text=~/\bServants of Mearatas\b/) {	#:: 1865
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1865, $change_amount);
+			}
+		}
+		elsif ($text=~/\bServants of Loruella\b/) {	#:: 1866
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1866, $change_amount);
+			}
+		}
+		elsif ($text=~/\bContingent of the Alabaster Owl\b/) {	#:: 1867
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1867, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBrass Phoenix Brigade\b/) {	#:: 1868
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1868, $change_amount);
+			}
+		}
+		elsif ($text=~/\bCompany of the Alabaster Owl\b/) {	#:: 1869
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1869, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBrass Phoenix Legion\b/) {	#:: 1870
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1870, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLords of Esianti\b/) {	#:: 1871
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1871, $change_amount);
+			}
+		}
+		elsif ($text=~/\bLords of Aalishai\b/) {	#:: 1872
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1872, $change_amount);
+			}
+		}
+		elsif ($text=~/\bBloodmoon Night-Orcs\b/) {	#:: 1873
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1873, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1874\b/) {	#:: 1874
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1874, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1875\b/) {	#:: 1875
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1875, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1876\b/) {	#:: 1876
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1876, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1877\b/) {	#:: 1877
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1877, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1878\b/) {	#:: 1878
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1878, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1879\b/) {	#:: 1879
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1879, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1880\b/) {	#:: 1880
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1880, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1881\b/) {	#:: 1881
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1881, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1882\b/) {	#:: 1882
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1882, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1883\b/) {	#:: 1883
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1883, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1884\b/) {	#:: 1884
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1884, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1885\b/) {	#:: 1885
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1885, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1886\b/) {	#:: 1886
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1886, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1887\b/) {	#:: 1887
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1887, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1888\b/) {	#:: 1888
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1888, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1889\b/) {	#:: 1889
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1889, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1890\b/) {	#:: 1890
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1890, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1891\b/) {	#:: 1891
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1891, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1892\b/) {	#:: 1892
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1892, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1893\b/) {	#:: 1893
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1893, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1894\b/) {	#:: 1894
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1894, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1895\b/) {	#:: 1895
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1895, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1896\b/) {	#:: 1896
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1896, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1897\b/) {	#:: 1897
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1897, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1898\b/) {	#:: 1898
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1898, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1899\b/) {	#:: 1899
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1899, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1900\b/) {	#:: 1900
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1900, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1901\b/) {	#:: 1901
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1901, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1902\b/) {	#:: 1902
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1902, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1903\b/) {	#:: 1903
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1903, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1904\b/) {	#:: 1904
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1904, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1905\b/) {	#:: 1905
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1905, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1906\b/) {	#:: 1906
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1906, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1907\b/) {	#:: 1907
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1907, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1908\b/) {	#:: 1908
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1908, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1909\b/) {	#:: 1909
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1909, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1910\b/) {	#:: 1910
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1910, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1911\b/) {	#:: 1911
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1911, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1912\b/) {	#:: 1912
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1912, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1913\b/) {	#:: 1913
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1913, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1914\b/) {	#:: 1914
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1914, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1915\b/) {	#:: 1915
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1915, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1916\b/) {	#:: 1916
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1916, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1917\b/) {	#:: 1917
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1917, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1918\b/) {	#:: 1918
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1918, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1919\b/) {	#:: 1919
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1919, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1920\b/) {	#:: 1920
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1920, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1921\b/) {	#:: 1921
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1921, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1922\b/) {	#:: 1922
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1922, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1923\b/) {	#:: 1923
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1923, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1924\b/) {	#:: 1924
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1924, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1925\b/) {	#:: 1925
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1925, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1926\b/) {	#:: 1926
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1926, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1927\b/) {	#:: 1927
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1927, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1928\b/) {	#:: 1928
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1928, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1929\b/) {	#:: 1929
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1929, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1930\b/) {	#:: 1930
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1930, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1931\b/) {	#:: 1931
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1931, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1932\b/) {	#:: 1932
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1932, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1933\b/) {	#:: 1933
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1933, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1934\b/) {	#:: 1934
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1934, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1935\b/) {	#:: 1935
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1935, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1936\b/) {	#:: 1936
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1936, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1937\b/) {	#:: 1937
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1937, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1938\b/) {	#:: 1938
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1938, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1939\b/) {	#:: 1939
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1939, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1940\b/) {	#:: 1940
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1940, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1941\b/) {	#:: 1941
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1941, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1942\b/) {	#:: 1942
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1942, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1943\b/) {	#:: 1943
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1943, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1944\b/) {	#:: 1944
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1944, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1945\b/) {	#:: 1945
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1945, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1946\b/) {	#:: 1946
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1946, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1947\b/) {	#:: 1947
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1947, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1948\b/) {	#:: 1948
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1948, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1949\b/) {	#:: 1949
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1949, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1950\b/) {	#:: 1950
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1950, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1951\b/) {	#:: 1951
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1951, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1952\b/) {	#:: 1952
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1952, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1953\b/) {	#:: 1953
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1953, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1954\b/) {	#:: 1954
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1954, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1955\b/) {	#:: 1955
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1955, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1956\b/) {	#:: 1956
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1956, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1957\b/) {	#:: 1957
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1957, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1958\b/) {	#:: 1958
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1958, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1959\b/) {	#:: 1959
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1959, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1960\b/) {	#:: 1960
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1960, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1961\b/) {	#:: 1961
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1961, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1962\b/) {	#:: 1962
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1962, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1963\b/) {	#:: 1963
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1963, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1964\b/) {	#:: 1964
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1964, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1965\b/) {	#:: 1965
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1965, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1966\b/) {	#:: 1966
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1966, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1967\b/) {	#:: 1967
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1967, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1968\b/) {	#:: 1968
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1968, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1969\b/) {	#:: 1969
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1969, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1970\b/) {	#:: 1970
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1970, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1971\b/) {	#:: 1971
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1971, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1972\b/) {	#:: 1972
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1972, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1973\b/) {	#:: 1973
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1973, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1974\b/) {	#:: 1974
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1974, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1975\b/) {	#:: 1975
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1975, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1976\b/) {	#:: 1976
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1976, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1977\b/) {	#:: 1977
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1977, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1978\b/) {	#:: 1978
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1978, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1979\b/) {	#:: 1979
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1979, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1980\b/) {	#:: 1980
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1980, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1981\b/) {	#:: 1981
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1981, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1982\b/) {	#:: 1982
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1982, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1983\b/) {	#:: 1983
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1983, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1984\b/) {	#:: 1984
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1984, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1985\b/) {	#:: 1985
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1985, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1986\b/) {	#:: 1986
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1986, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1987\b/) {	#:: 1987
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1987, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1988\b/) {	#:: 1988
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1988, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1989\b/) {	#:: 1989
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1989, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1990\b/) {	#:: 1990
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1990, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1991\b/) {	#:: 1991
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1991, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1992\b/) {	#:: 1992
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1992, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1993\b/) {	#:: 1993
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1993, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1994\b/) {	#:: 1994
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1994, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1995\b/) {	#:: 1995
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1995, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1996\b/) {	#:: 1996
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1996, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1997\b/) {	#:: 1997
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1997, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1998\b/) {	#:: 1998
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1998, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction1999\b/) {	#:: 1999
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(1999, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2000\b/) {	#:: 2000
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2000, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2001\b/) {	#:: 2001
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2001, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2002\b/) {	#:: 2002
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2002, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2003\b/) {	#:: 2003
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2003, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2004\b/) {	#:: 2004
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2004, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2005\b/) {	#:: 2005
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2005, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2006\b/) {	#:: 2006
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2006, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2007\b/) {	#:: 2007
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2007, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2008\b/) {	#:: 2008
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2008, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2009\b/) {	#:: 2009
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2009, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2010\b/) {	#:: 2010
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2010, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2011\b/) {	#:: 2011
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2011, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2012\b/) {	#:: 2012
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2012, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2013\b/) {	#:: 2013
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2013, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2014\b/) {	#:: 2014
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2014, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2015\b/) {	#:: 2015
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2015, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2016\b/) {	#:: 2016
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2016, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2017\b/) {	#:: 2017
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2017, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2018\b/) {	#:: 2018
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2018, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2019\b/) {	#:: 2019
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2019, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2020\b/) {	#:: 2020
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2020, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2021\b/) {	#:: 2021
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2021, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2022\b/) {	#:: 2022
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2022, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2023\b/) {	#:: 2023
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2023, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2024\b/) {	#:: 2024
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2024, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2025\b/) {	#:: 2025
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2025, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2026\b/) {	#:: 2026
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2026, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2027\b/) {	#:: 2027
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2027, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2028\b/) {	#:: 2028
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2028, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2029\b/) {	#:: 2029
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2029, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2030\b/) {	#:: 2030
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2030, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2031\b/) {	#:: 2031
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2031, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2032\b/) {	#:: 2032
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2032, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2033\b/) {	#:: 2033
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2033, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2034\b/) {	#:: 2034
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2034, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2035\b/) {	#:: 2035
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2035, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2036\b/) {	#:: 2036
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2036, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2037\b/) {	#:: 2037
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2037, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2038\b/) {	#:: 2038
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2038, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2039\b/) {	#:: 2039
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2039, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2040\b/) {	#:: 2040
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2040, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2041\b/) {	#:: 2041
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2041, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2042\b/) {	#:: 2042
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2042, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2043\b/) {	#:: 2043
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2043, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2044\b/) {	#:: 2044
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2044, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2045\b/) {	#:: 2045
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2045, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2046\b/) {	#:: 2046
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2046, $change_amount);
+			}
+		}
+		elsif ($text=~/\bFaction2047\b/) {	#:: 2047
+			if ($client->GetGM()) {
+				quest::say("Turn off your GM flag for faction changes to occur.");
+			}
+			else {
+				quest::faction(2047, $change_amount);
+			}
+		}
 	}
 	else {
 		quest::say("You lack sufficient status to use these commands");
