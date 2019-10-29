@@ -5,7 +5,7 @@ sub EVENT_WAYPOINT_ARRIVE {
 		quest::SetRunning(1);
 	}
 	#:: Match waypoint 3
-	if ($wp == 3) {
+	elsif ($wp == 3) {
 		#:: Set running false (walk)
 		quest::SetRunning(0);
 	}
