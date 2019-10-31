@@ -18,7 +18,7 @@ sub EVENT_SAY {
 		if (plugin::deity("Innoruuk")) {
 			quest::ding();
 		}
-		elsif (plugin:deity(206)) {
+		elsif (plugin::deity(206)) {
 			quest::ding();
 			quest::ding();
 		}
