@@ -8,11 +8,10 @@ sub EVENT_ZONE {
 
 sub EVENT_ENTERZONE {
 	if (plugin::deity($client, "Innoruuk")) {
-			quest::ding();
+		$client->Message(15,"your deity is Innoruuk");
 	}
 	elsif (plugin::deity($client, 206)) {
-		quest::ding();
-		quest::ding();
+		$client->Message(15,"your deity id is 206");
 	}
 	#:: Set common tongue to 1 for any new player that is not human
 	elsif ($race ne "Human") {
