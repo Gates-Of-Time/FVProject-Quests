@@ -3,23 +3,30 @@ sub EVENT_ZONE {
 	if ($client->GetPetID()) {
 		$PetID = $entity_list->GetMobByID($client->GetPetID());
 		$PetID->Kill();
-	}	
+	}
 }
 
 sub EVENT_ENTERZONE {
+	if (plugin::deity("Innoruuk")) {
+			quest::ding();
+	}
+	elsif (plugin::deity(206)) {
+		quest::ding();
+		quest::ding();
+	}
 	#:: Set common tongue to 1 for any new player that is not human
-	if ($race ne "Human") {
+	elsif ($race ne "Human") {
 		if (!defined $qglobals{"newbiecommon"}) {
 			$client->SetLanguageSkill(0, 1);
 			quest::setglobal("newbiecommon", 1, 5, "F");
 		}
 	}
 	#:: Figure out if the player has a pet and blow it up when they enter a zone
-	if ($client->GetPetID()) {
+	elsif ($client->GetPetID()) {
 		$PetID = $entity_list->GetMobByID($client->GetPetID());
 		$PetID->Kill();
 	}
-	if ($name eq "TurmoilToad") {
+	elsif ($name eq "TurmoilToad") {
 		quest::playerrace(27);
 		quest::playersize(7);
 	}
