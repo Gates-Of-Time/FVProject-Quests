@@ -7,12 +7,8 @@ sub EVENT_ZONE {
 }
 
 sub EVENT_ENTERZONE {
-	my $GodID = 206;
-	if (plugin::deity($GodID)) {
-		$client->Message(15,"your deity is Innoruuk");
-	}
 	#:: Set common tongue to 1 for any new player that is not human
-	elsif ($race ne "Human") {
+	if ($race ne "Human") {
 		if (!defined $qglobals{"newbiecommon"}) {
 			$client->SetLanguageSkill(0, 1);
 			quest::setglobal("newbiecommon", 1, 5, "F");
