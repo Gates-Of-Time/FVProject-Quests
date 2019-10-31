@@ -15,7 +15,7 @@ sub EVENT_TIMER {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i){
-		quest::say("Ewwww, you're a " . plugin::Deity(215) . " follower? I thought something smelled fishy");
+		quest::ding();
 	}
 	if ($text=~/level/i) {
 		if ($ulevel <= 20) {
