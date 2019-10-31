@@ -15,7 +15,6 @@ sub EVENT_TIMER {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i){
-		quest::emote("sniffs.")
 		quest::say("Ewwww, you're a " . plugin::Deity(215) . " follower? I thought something smelled fishy");
 	}
 	if ($text=~/level/i) {
