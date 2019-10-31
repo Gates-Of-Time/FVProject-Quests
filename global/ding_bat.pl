@@ -15,7 +15,13 @@ sub EVENT_TIMER {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::ding();
+		if (plugin::deity("Innoruuk")) {
+			quest::ding();
+		}
+		elsif (plugin:deity(206)) {
+			quest::ding();
+			quest::ding();
+		}
 	}
 	if ($text=~/level/i) {
 		if ($ulevel <= 20) {
