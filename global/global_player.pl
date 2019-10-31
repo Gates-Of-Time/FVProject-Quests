@@ -15,11 +15,11 @@ sub EVENT_ENTERZONE {
 		}
 	}
 	#:: Figure out if the player has a pet and blow it up when they enter a zone
-	elsif ($client->GetPetID()) {
+	if ($client->GetPetID()) {
 		$PetID = $entity_list->GetMobByID($client->GetPetID());
 		$PetID->Kill();
 	}
-	elsif ($name eq "TurmoilToad") {
+	if ($name eq "TurmoilToad") {
 		quest::playerrace(27);
 		quest::playersize(7);
 	}
