@@ -1,6 +1,11 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::emote("Ahoy there, Sailor!");
+		quest::say("Ahoy there, Sailor!");
+	}
+	elsif ($text=~/not a sailor/i) {
+		quest::say("What do you mean?! After all that time you spent sailing to Erudin you have to be a sailor by now.");
+		#:: Do animation "laugh"
+		quest::doanim(63);
 	}
 }
 
