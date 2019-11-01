@@ -1,12 +1,10 @@
 sub EVENT_SPAWN {
-	#:: Set up a 50 unit distance
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Create a proximity, 100 units across, 100 units tall, without proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 0);
 }
 
 sub EVENT_ENTER {
-	#:: Check for 18723 - Tattered Note
+	#:: Match a 18723 - Tattered Note
 	if (plugin::check_hasitem($client, 18723)) {
 		$client->Message(15,"A commanding, yet kind looking Erudite turns towards you as you attempt to get your bearings. 'Do not be startled. I am Leraena Shelyrak, Guild Master for the Clerics of Quellious. Read the note in your inventory and hand it to me when you are ready to begin your training.'");
 	}
@@ -16,13 +14,13 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Welcome. my child.  I am Leraena Shelyrak. overseer of the Temple of Divine Light. Inside this temple. you may find the path to inner peace.  Introduce yourself to each of the priests and priestesses of the temple as well as the paladins. Together we shall put an end to such disruptive influences as the [kobold shaman].");
 	}
-	if ($text=~/kobold shaman/i) {
+	elsif ($text=~/kobold shaman/i) {
 		quest::say("The primitive kobold race has begun to show signs of healing ability.  No doubt this was granted by some evil deity.  Since they are of little power compared to a much more superior race such as ours. we only require the talents of young priests to [slay] the kobold shaman.");
 	}
-	if ($text=~/slay/i) {
+	elsif ($text=~/slay/i) {
 		quest::say("You are so young...  Go to Toxxulia and find these kobold shamans.  Cut off their paws and return them to me.  I require three paws as proof of your worth to our temple.");
 	}
-	if ($text=~/guild coin/i) {
+	elsif ($text=~/guild coin/i) {
 		quest::say("Yes, of course. Here it is. Remember that it is not a form of currency.");
 		#:: Give item 13989 - Peacekeeper Token
 		quest::summonitem(13989);
@@ -43,19 +41,19 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Turn in for 18723 -  Tattered Note
-	if (plugin::check_handin(\%itemcount, 18723 => 1)) {
+	#:: Match a 18723 - Tattered Note
+	if (plugin::takeItems(18723 => 1)) {
 		quest::say("Greetings. and welcome to the Temple of Divine Light! Here is your guild tunic. Serve Quellious well. Please see Lumi Stergnon - he has a task for you.");
 		#:: Give item 135546 - Faded Silver Tunic
 		quest::summonitem(13546);
 		#:: Ding!
 		quest::ding();
-		#:: Give a small amount of xp
+		#:: Set factions
+		quest::faction(298, 100); 	#:: + Peace Keepers
+		quest::faction(266, 25); 	#:: + High Council of Erudin
+		quest::faction(265, -25); 	#:: - Heretics
+		#:: Grant a small amount of experience
 		quest::exp(100);
-		#:: Set faction
-		quest::faction(298,100); 	#:: + Peace Keepers
-		quest::faction(266,25); 	#:: + High Council of Erudin
-		quest::faction(265,-25); 	#:: - Heretics
 	}
 	#:: Turn in for 2049 -  Rolled Up Strip of Cloth for Catman Alliance Quest (Warrens Expansion)
 	#if (plugin::check_handin(\%itemcount, 2049 => 1)) {
@@ -70,23 +68,36 @@ sub EVENT_ITEM {
 		#quest::faction(265,-5); 	#:: - Heretics
 		#quest::givecash(8,2,0,0);	#:: Give a small amount of cash copper - plat
 	#}
-	#:: Turn in for 13883 -  Odd Kobold Paw
-	if (plugin::check_handin(\%itemcount, 13883 => 3)) {
+	#:: Match three 13883 - Odd Kobold Paw
+	elsif (plugin::takeItems(13883 => 3)) {
 		quest::say("Fine work. They shall never lay hands upon another kobold again. I mean paws. Here is a small reward for a fine job. Unfortunatly we have recently learned that the shamen in the forest are merely underlings to more [powerful kobold shaman] that reside in the kobold warrens. Continue the work of Quellious.");
-		#:: Randomly choose Spell: Cure Disease or Spell: Holy Armor
-		quest::summonitem(quest::ChooseRandom(15011,15213));
+		#:: Give a random reward: 15011 - Spell: Holy Armor, 15213 - Spell: Cure Disease, 15216 - Spell: Stun, 15212 - Spell: Cure Blindness
+		quest::summonitem(quest::ChooseRandom(15011, 15213, 15216, 15212));
 		#:: Ding!
 		quest::ding();
-		#:: Give a small amount of xp
+		#:: Set factions
+		quest::faction(298, 20); 	#:: + Peace Keepers
+		quest::faction(266, 5); 	#:: + High Council of Erudin
+		quest::faction(265, -5); 	#:: - Heretics
+		#:: Grant a small amount of experience
 		quest::exp(500);
 		#:: Create a hash for storing cash - 150 to 200cp
 		my %cash = plugin::RandomCash(150,200);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set faction
-		quest::faction(298,20); 	#:: + Peace Keepers
-		quest::faction(266,20); 	#:: + High Council of Erudin
-		quest::faction(265,-20); 	#:: - Heretics
+	}
+	#:: Match two 13883 - Odd Kobold Paw
+	elsif (plugin::takeItems(13883 => 2)) {
+		quest::say("I instructed you to return THREE paws.");
+		#:: Return two 13883 - Odd Kobold Paw
+		quest::summonitem(13883);
+		quest::summonitem(13883);
+	}
+	#:: Match one 13883 - Odd Kobold Paw
+	elsif (plugin::takeItems(13883 => 1)) {
+		quest::say("I instructed you to return THREE paws.");
+		#:: Return one 13883 - Odd Kobold Paw
+		quest::summonitem(13883);
 	}
 	#:: Turn in for 14582 -  Embroidered Bag of Bone Necklaces Quellious Disciple Quest - Stonebrunt/Warrens Expansion
 	#if (plugin::check_handin(\%itemcount, 14582 => 1)) {
@@ -130,5 +141,5 @@ sub EVENT_ITEM {
 		#quest::faction(265,-20); 	#:: - Heretics
 	#}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
