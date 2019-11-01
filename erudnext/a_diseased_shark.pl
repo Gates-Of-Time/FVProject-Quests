@@ -11,10 +11,12 @@ sub EVENT_DEATH_COMPLETE {
 		my $adj = plugin::RandomRange(1, 2);
 
 		if ($adj == 1) {
+			#:: Spawn a Erudin >> a_young_shark (24110)
 			quest::spawn2(24110, 15, 0, $x + $xoff, $y + $yoff, $z, $h);
 		}
 		else {
-		quest::spawn2(24110, 15, 0, $x - $xoff, $y - $yoff, $z, $h);
+			#:: Spawn a Erudin >> a_young_shark (24110)
+			quest::spawn2(24110, 15, 0, $x - $xoff, $y - $yoff, $z, $h);
 		}
 	}
 }
