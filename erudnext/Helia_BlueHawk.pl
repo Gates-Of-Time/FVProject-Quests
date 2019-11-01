@@ -5,6 +5,13 @@ sub EVENT_SAY {
 }
 
 sub EVENT_SIGNAL {
-	#:: Signal from erudnext/Phloatin_Highbrow.pl
-	quest::say("Pipe down, Phloatin! Treat the new clientele with respect.");
+	#:: Match signal "1" from /erudnext/Phloatin_Highbrow.pl
+	if ($signal == 1) {
+		quest::say("Pipe down, Phloatin! Treat the new clientele with respect.");
+	}
+}
+
+sub EVENT_ITEM {
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
