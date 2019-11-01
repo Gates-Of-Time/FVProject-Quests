@@ -11,10 +11,10 @@ sub EVENT_ENTER {
 }
 
 sub EVENT_SAY {
-	if ($text=~/Hail/i) {
+	if ($text=~/hail/i) {
 		quest::say("Hail. $name! I am the master of the paladins among the Peacekeepers. Have you [joined] the harmony of the Peacekeepers or are you merely a visitor?");
 	}
-	if ($text=~/joined/i) {
+	elsif ($text=~/joined/i) {
 		quest::say("Then go and speak with the other Peacekeepers. Do your part to promote the words of Quellious.");
 	}
 }
@@ -27,11 +27,11 @@ sub EVENT_ITEM {
 		quest::summonitem(13546);
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
+		#:: Set factions
 		quest::faction(298, 100);	#:: + Peace Keepers
 		quest::faction(266, 25);	#:: + High Council of Erudin
 		quest::faction(265, -25);	#:: - Heretics
-		#:: Give a small amount of xp
+		#:: Give a small amount of experience
 		quest::exp(100);
 	}
 	#:: Return unused items
