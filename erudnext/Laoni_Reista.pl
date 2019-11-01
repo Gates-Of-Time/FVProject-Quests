@@ -20,8 +20,8 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Set factions
 		quest::faction(242, 10);	 	#:: + Deepwater Knights
-		quest::faction(266, 10); 		#:: + High Council of Erudin
-		quest::faction(265, -15); 		#:: - Heretics
+		quest::faction(266, 1); 		#:: + High Council of Erudin
+		quest::faction(265, -1); 		#:: - Heretics
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Create a hash for storing cash - 5 to 10cp
