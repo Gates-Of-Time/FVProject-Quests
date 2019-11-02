@@ -64,7 +64,7 @@ sub EVENT_SAY {
 	elsif ($text=~/toala/i) {
 		quest::say("Toala is supreme when it comes to the blade, but in the art of passion she chooses to leans toward Cain Darkmoore. I do not get it. She is a very beautiful and strong-hearted warrior. Why Cain does not like her is a mystery to me. Why does she waste her time when she could have me? After all, we men of Qeynos are known as the most romantic in all of Norrath.");
 	}
-	elsif ($text=~/^milea is in east karana$/i) {
+	elsif ($text=~/east karana/i) {
 		quest::say("You have seen Milea Clothspinner!! This is great news. I wish I could travel to see her, but Cain will not allow me to do so at this time. You must take her a note for me. Here, take this to her. As a master in this order, I command you to do so immediately. Go!!");
 		#:: Give a 18934 - A Sealed Letter "LoveToMilea"
 		quest::summonitem(18934);
