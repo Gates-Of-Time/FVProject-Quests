@@ -4,7 +4,7 @@ sub EVENT_SAY {
 		if ($faction <= 5 ) {
 			quest::say("Hi, kid! You seem to be a stranger in these parts. Heed my words, this city is dangerous to new blood!");
 			#:: Signal Bronto Thudfoot
-			quest::signal(10135,10);
+			quest::signalwith(10135,1,10);
 		}
 		#:: Match Merchants of Halas faction if worse than indifferent
 		elsif ($faction > 5 ) {
