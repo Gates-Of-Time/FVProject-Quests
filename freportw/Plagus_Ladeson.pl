@@ -58,13 +58,13 @@ sub EVENT_SAY {
 			quest::say("Your head shall look grand mounted on the wall of the Steel Warriors Arena!!");
 		}
 	}
-	elsif ($text=~/milea/i) {
+	elsif ($text=~/^milea$/i) {
 		quest::say("Milea Clothspinner. She was my one true love. She, too, is a Steel Warrior. When she left Qeynos to find adventure, my heart left also. I never saw her again, but I decided to transfer my skills to Freeport. It is probably best that I did not find her. She was in love with adventure. <sigh> The women I am attracted to are always in love with another. Just like [Toala].");
 	}
 	elsif ($text=~/toala/i) {
 		quest::say("Toala is supreme when it comes to the blade, but in the art of passion she chooses to leans toward Cain Darkmoore. I do not get it. She is a very beautiful and strong-hearted warrior. Why Cain does not like her is a mystery to me. Why does she waste her time when she could have me? After all, we men of Qeynos are known as the most romantic in all of Norrath.");
 	}
-	elsif ($text=~/\bmilea is in east karana\b/i) {
+	elsif ($text=~/milea is in east karana/i) {
 		quest::say("You have seen Milea Clothspinner!! This is great news. I wish I could travel to see her, but Cain will not allow me to do so at this time. You must take her a note for me. Here, take this to her. As a master in this order, I command you to do so immediately. Go!!");
 		#:: Give a 18934 - A Sealed Letter "LoveToMilea"
 		quest::summonitem(18934);
