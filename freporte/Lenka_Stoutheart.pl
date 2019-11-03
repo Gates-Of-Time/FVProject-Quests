@@ -1,29 +1,28 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		#:: Match Merchants of Halas faction if indifferent or better
-		if ($faction <= 5 ) {
+		if ($faction <= 5) {
 			quest::say("Hi, kid! You seem to be a stranger in these parts. Heed my words, this city is dangerous to new blood!");
 			#:: Signal Bronto Thudfoot
 			quest::signalwith(10135,1,10);
 		}
-		#:: Match Merchants of Halas faction if worse than indifferent
-		elsif ($faction > 5 ) {
+		else {
 			quest::say("Run while ye still can!!  The Wolves o' the North will not tolerate yer presence!");
 		}
 	}
-	if ($text=~/toala sent me/i) {
+	elsif ($text=~/toala sent me/i) {
 		quest::say("She does not even have the courtesy to come herself. Some old friend!! Listen, some rogue in this city broke into the [Beast] and stole a pouch containing a voucher ticket for a part I need to repair the Beast. I can't get the part back without the ticket. I did not see the rogue. I did not sleep on the Beast that night. Bronto was there. Ask him if he saw the rogue.");
 	}
-	if ($text=~/Beast/i) {
+	elsif ($text=~/beast/i) {
 		quest::say("You're joking, right? You have never heard of the Blue Beast?!! She is the fastest ship in Norrath. She made the [Kunark run] in under three weeks. She was designed by [Bronto].");
 	}
-	if ($text=~/kunark run/i) {
+	elsif ($text=~/kunark run/i) {
 		quest::say("The Kunark run is the most dangerous run between Freeport and [Firiona Vie], in Kunark. If the seas don't rip your hull to splinters and the pirates and sea wyrms don't kill you, you can make a quick run back and forth, avoiding any unwanted inspections.");
 	}
-	if ($text=~/Firiona Vie/i) {
+	elsif ($text=~/firiona vie/i) {
 		quest::say("Firiona Vie is an elven outpost on the continent of Kunark. Every so often I run supplies to and from there. Do not even think about asking me to take you there. It will be months before I can make improvements on the Blue Beast to make it impervious to aerial attacks.");
 	}
-	if ($text=~/journal strongbox/i) {
+	elsif ($text=~/journal strongbox/i) {
 		quest::say("You must be from the Academy of Arcane Science.  Well, kid, bad news.  I was docked at the isle in the Ocean of Tears when I was boarded by the Freeport Militia.  To say the least, I panicked and dropped all my cargo.  It is still there.  Mostly illegal alcohol, but the strongbox is still out there, too.  Directly out from the dock.");
 		#:: set a global called "strongbox" with a value of 1, type 7, for 1 hour
 		quest::setglobal("strongbox",1,7,"H1");
