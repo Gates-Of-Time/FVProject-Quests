@@ -1,10 +1,10 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		#:: Match Merchants of Halas faction if indifferent or better
+		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
 			quest::say("Hi, kid! You seem to be a stranger in these parts. Heed my words, this city is dangerous to new blood!");
-			#:: Signal Bronto Thudfoot
-			quest::signalwith(10135,1,10);
+			#:: Send a signal "1" to East Freeport >> Bronto_Thudfoot (10135) with no delay
+			quest::signalwith(10135, 1, 0);
 		}
 		else {
 			quest::say("Run while ye still can!!  The Wolves o' the North will not tolerate yer presence!");
