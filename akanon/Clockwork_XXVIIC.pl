@@ -4,8 +4,8 @@ sub EVENT_ITEM {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
 			quest::say("Tick.. Pop.. Access granted.");
-			#:: Give a 13212 - Blackbox XIIC
-			quest::summonitem(13212);
+			#:: Give a 13214 - Blackbox XXVIIC
+			quest::summonitem(13214);
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
