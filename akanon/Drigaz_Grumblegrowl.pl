@@ -13,10 +13,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
+		quest::faction(240, 5);		#:: + Deep Muses
 		quest::faction(288, 1); 	#:: + Merchants of Ak'Anon
 		quest::faction(255, 1);		#:: + Gemchoppers
 		quest::faction(238, -1);	#:: - Dark Reflection
-		quest::faction(240, 5);		#:: + Deep Muses
 		#:: Grant a moderate amount of experience
 		quest::exp(1500);
 	}
