@@ -14,7 +14,7 @@ sub EVENT_ITEM {
 			quest::faction(333, 1); 		#:: + King Ak'Anon
 			quest::faction(238, -1); 		#:: - Dark Reflection
 			quest::faction(287, -1); 		#:: - Clan Grikbar
-			#:: Give a small amount of XP
+			#:: Grant a small amount of experience
 			quest::exp(100);
 		}
 		else {
