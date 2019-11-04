@@ -14,11 +14,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(255, 2); 		#:: + Gem Cutters
-		quest::faction(288, 2); 		#:: + Merchants of Ak'Anon
-		quest::faction(333, 2); 		#:: + King Ak'Anon
-		quest::faction(238, -2); 		#:: - Dark Reflection
-		quest::faction(1604, -2); 		#:: - Clan Grikbar
+		quest::faction(255, 5); 		#:: + Gem Cutters
+		quest::faction(288, 1; 			#:: + Merchants of Ak'Anon
+		quest::faction(333, 1); 		#:: + King Ak'Anon
+		quest::faction(238, -1); 		#:: - Dark Reflection
+		quest::faction(1604, -1); 		#:: - Clan Grikbar
 		#:: Grant a moderate amount of experience
 		quest::exp(2000);
 	}
@@ -30,11 +30,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(255, 2); 		#:: + Gem Cutters
-		quest::faction(288, 2); 		#:: + Merchants of Ak'Anon
-		quest::faction(333, 2); 		#:: + King Ak'Anon
-		quest::faction(238, -2); 		#:: - Dark Reflection
-		quest::faction(1604, -2); 		#:: - Clan Grikbar
+		quest::faction(255, 5); 		#:: + Gem Cutters
+		quest::faction(288, 1); 		#:: + Merchants of Ak'Anon
+		quest::faction(333, 1); 		#:: + King Ak'Anon
+		quest::faction(238, -1); 		#:: - Dark Reflection
+		quest::faction(1604, -1); 		#:: - Clan Grikbar
 		#:: Grant a moderate amount of experience
 		quest::exp(2000);
 	}
