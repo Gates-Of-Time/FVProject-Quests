@@ -6,4 +6,5 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	quest::say("Oh thank you . You are too kind to this poor halfling. Do you have anything else to give me?");
+	quest::follow($name, 10);
 }
