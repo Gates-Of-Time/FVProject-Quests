@@ -38,8 +38,8 @@ sub EVENT_ITEM {
 			quest::faction(353, 5);		#:: + Neriak Ogre
 			#:: Grant a small amount of experience
 			quest::exp(150);
-			#:: Create a hash for storing cash - 275 to 350cp
-			my %cash = plugin::RandomCash(275,350);
+			#:: Create a hash for storing cash - 100 to 350cp
+			my %cash = plugin::RandomCash(100,350);
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		}
@@ -52,8 +52,8 @@ sub EVENT_ITEM {
 			quest::faction(353, 5);		#:: + Neriak Ogre
 			#:: Grant a small amount of experience
 			quest::exp(150);
-			#:: Create a hash for storing cash - 275 to 350cp
-			my %cash = plugin::RandomCash(275,350);
+			#:: Create a hash for storing cash - 100 to 350cp
+			my %cash = plugin::RandomCash(100,350);
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		}
@@ -66,8 +66,8 @@ sub EVENT_ITEM {
 			quest::faction(353, 5);		#:: + Neriak Ogre
 			#:: Grant a small amount of experience
 			quest::exp(150);
-			#:: Create a hash for storing cash - 275 to 350cp
-			my %cash = plugin::RandomCash(275,350);
+			#:: Create a hash for storing cash - 100 to 350cp
+			my %cash = plugin::RandomCash(100,350);
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		}
@@ -78,8 +78,8 @@ sub EVENT_ITEM {
 			quest::faction(353, 5);		#:: + Neriak Ogre
 			#:: Grant a small amount of experience
 			quest::exp(150);
-			#:: Create a hash for storing cash - 275 to 350cp
-			my %cash = plugin::RandomCash(275,350);
+			#:: Create a hash for storing cash - 100 to 350cp
+			my %cash = plugin::RandomCash(100,350);
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		}	
