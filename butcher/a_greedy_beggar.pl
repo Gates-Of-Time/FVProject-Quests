@@ -5,7 +5,10 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	$npc->SetAppearance(0);
+	#:: Note that we are intentionally eating any items
 	quest::say("Oh thank you . You are too kind to this poor halfling. Do you have anything else to give me?");
+	#:: Stand
+	$npc->SetAppearance(0);
+	#:: Follow the player who triggered this event
 	quest::follow($userid);
 }
