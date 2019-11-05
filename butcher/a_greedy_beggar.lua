@@ -7,5 +7,5 @@ end
 function event_trade(e)
 	e.self:Say("Oh thank you. You are too kind to this poor halfling. Do you have anything else to give me?");
 	e.self:SetAppearance(0); -- Stand
-	eq.follow(e.other:CharacterID());
+	eq.follow(e.other:GetID());
 end
