@@ -7,5 +7,5 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	$npc->SetAppearance(0);
 	quest::say("Oh thank you . You are too kind to this poor halfling. Do you have anything else to give me?");
-	quest::follow($charid, 10);
+	quest::follow($userid);
 }
