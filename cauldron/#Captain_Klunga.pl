@@ -26,6 +26,6 @@ sub EVENT_ENTER {
 	quest::attack($name);
 }
 
-sub EVENT_DEATH_COMPLETE {
+sub EVENT_DEATH {
 	quest::clear_proximity();
 }
