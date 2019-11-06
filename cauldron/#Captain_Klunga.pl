@@ -1,3 +1,5 @@
+$PlayerToAttack;
+
 sub EVENT_SPAWN {
 	#:: Appearance 1 - Sit
 	$npc->SetAppearance(1);
@@ -10,6 +12,7 @@ sub EVENT_ITEM {
 		$npc->SetAppearance(0);
 		#:: Move to the specified location and guard 
 		quest::moveto(-395.87, 807.04, 70.53, 0, 1);
+		$PlayerToAttack = $name;
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
@@ -17,7 +20,7 @@ sub EVENT_ITEM {
 
 sub EVENT_WAYPOINT_ARRIVE {
 	#:: Create a 12274 - Chalice of Conquest at current coordinates
-	quest::creategroundobject(12274, $x, $y, $z, $h-2);
-	#:: Change faction to KOS
-	$npc->SetNPCFactionID(5013);
+	quest::creategroundobject(12274, -395.87, 807.04, 70.53);
+	#:: Attack the player that handed in the Abandoned Orc Shovel
+	quest::attack($PlayerToAttack);
 }
