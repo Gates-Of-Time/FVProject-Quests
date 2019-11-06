@@ -68,7 +68,7 @@ sub EVENT_ITEM {
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
-			quest::faction(330, 3);			#:: + Freeport Militia
+			quest::faction(330, 10);		#:: + Freeport Militia
 			quest::faction(336, 1);			#:: + Coalition of Tradefolk Underground
 			quest::faction(281, -1);		#:: - Knights of Truth
 			quest::faction(362, -1);		#:: - Priests of Marr
