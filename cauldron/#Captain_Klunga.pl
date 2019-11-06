@@ -18,19 +18,6 @@ sub EVENT_ITEM {
 sub EVENT_WAYPOINT_ARRIVE {
 	#:: Create a 12274 - Chalice of Conquest at current coordinates
 	quest::creategroundobject(12274, $x, $y, $z, $h);
-}
-
-sub EVENT_SIGNAL {
-	#:: Match a signal "1" from /cauldron/player.pl
-	if ($signal == 1) {
-		if ($entity_list->GetClientList()) {
-			my $rClient = $entity_list->GetRandomClient($x,$y,$z, 200);
-			if ($rClient) {
-				quest::attack($rClient->GetName());
-			}
-			else {
-				quest::depop();
-			}
-		}
-	}
+	#:: Change faction to KOS
+	$npc->SetNPCFactionID(5013);
 }
