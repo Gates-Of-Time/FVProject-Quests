@@ -21,7 +21,7 @@ sub EVENT_ITEM {
 
 sub EVENT_WAYPOINT_ARRIVE {
 	#:: Create a 12274 - Chalice of Conquest at current coordinates
-	quest::creategroundobject(12274, -395.87, 807.04, 73);
+	quest::creategroundobject(12274, -395.87, 807.04, 73, 0);
 	quest::say("My target is $PlayerToAttack.");
 	#:: Attack the player that handed in the Abandoned Orc Shovel
 	quest::attack($PlayerToAttack);
