@@ -17,7 +17,7 @@ sub EVENT_ITEM {
 
 sub EVENT_WAYPOINT_ARRIVE {
 	#:: Create a 12274 - Chalice of Conquest at current coordinates
-	quest::creategroundobject(12274, $x, $y, $z, $h);
+	quest::creategroundobject(12274, $x, $y, $z, $h-2);
 	#:: Change faction to KOS
 	$npc->SetNPCFactionID(5013);
 }
