@@ -1,4 +1,4 @@
-$PlayerToAttack;
+my $PlayerToAttack;
 
 sub EVENT_SPAWN {
 	#:: Appearance 1 - Sit
@@ -12,7 +12,7 @@ sub EVENT_ITEM {
 		$npc->SetAppearance(0);
 		#:: Move to the specified location and guard 
 		quest::moveto(-395.87, 807.04, 70.53, 0, 1);
-		$PlayerToAttack = $name;
+		$PlayerToAttack = $ClientID;
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
