@@ -25,7 +25,3 @@ sub EVENT_WAYPOINT_ARRIVE {
 sub EVENT_ENTER {
 	quest::attack($name);
 }
-
-sub EVENT_DEATH {
-	quest::clear_proximity();
-}
