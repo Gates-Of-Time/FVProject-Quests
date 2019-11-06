@@ -32,10 +32,31 @@ sub EVENT_ITEM {
 		quest::faction(336, 1);			#:: + Coalition of Tradefolk Underground
 		quest::faction(281, -1);		#:: - Knights of Truth
 		quest::faction(362, -1);		#:: - Priests of Marr
-		#:: Create a hash for storing cash - 50 to 150cp
-		my %cash = plugin::RandomCash(50,150);
-		#:: Grant a random cash reward
-		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Grant a small amount of experience
+		quest::exp(100);
+		#:: Grant a cash reward of one gold
+		quest::givecash(0, 0, 1, 0);
+	}
+	#:: Match three 13885 - Orc Pawn Pick
+	elsif (plugin::takeItems(13885 => 3)) {
+		quest::say("I cannot reward you until you hand me four Orc Pawn Picks. So says Captain Hazran.");
+		#:: Return three 13885 - Orc Pawn Pick
+		quest::summonitem(13885);
+		quest::summonitem(13885);
+		quest::summonitem(13885);
+	}
+	#:: Match two 13885 - Orc Pawn Pick
+	elsif (plugin::takeItems(13885 => 2)) {
+		quest::say("I cannot reward you until you hand me four Orc Pawn Picks. So says Captain Hazran.");
+		#:: Return two 13885 - Orc Pawn Pick
+		quest::summonitem(13885);
+		quest::summonitem(13885);
+	}
+	#:: Match one 13885 - Orc Pawn Pick
+	elsif (plugin::takeItems(13885 => 1)) {
+		quest::say("I cannot reward you until you hand me four Orc Pawn Picks. So says Captain Hazran.");
+		#:: Return one 13885 - Orc Pawn Pick
+		quest::summonitem(13885);
 	}
 	#:: Match a 12272 - Bag of Cutthroat Rings
  	elsif (plugin::takeItems(12272 => 1)) {
