@@ -12,13 +12,10 @@ sub EVENT_ENTER {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("I am the overseer of the great city of Erudin. You will address me in proper manner. HAIL!!");
+		quest::say("Greetings young one. It is always good to see a new face here in the Palace of Erudin, the perfect city state, free from [crime].");
 	}
 	elsif ($text=~/crime/i) {
 		quest::say("Oh, yes. We here in Erudin have no crime. Actually, it is a very low crime rate. Most of those crimes are committed by the defective brains of [heretics] or inferior, non-Erudite races.");
-	}
-	elsif ($text=~/who are you?/i) {
-		quest::say("Markus Jaevins is the highest ranking official in Erudin");
 	}
 	elsif ($text=~/heretics/i) {
 		quest::say("The heretics are our sworn enemies. Their ancient origins are our own, however, they are the mad Erudites who chose the dark side of magic called necromancy. We, the magicians, caught one snooping in the palace just last week. He is now our [prisoner].");
@@ -50,7 +47,7 @@ sub EVENT_ITEM {
 		quest::faction(267, 15);	#:: + High Guard of Erudin
 		quest::faction(266, 10);	#:: + High Council of Erudin
 		quest::faction(265, -15);	#:: - Heretics
-		#:: Grant a small amount of xp
+		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
 	#:: Match turn in for 13128 - Bones
@@ -64,7 +61,28 @@ sub EVENT_ITEM {
 		quest::faction(266, 5);		#:: + High Council of Erudin
 		quest::faction(265, -7);	#:: - Heretics
 		#:: Grant a moderate amount of experience
+		quest::exp(5000);
+		#:: Create a hash for storing cash - 5 to 50cp
+		my %cash = plugin::RandomCash(5,50);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+	}
+	#:: Match turn in for 13127 - Bones
+	elsif (plugin::takeItems(13127 => 1)) {
+		quest::say("This is fine work, young one. You keep this up and you shall be knighted before long.");
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(254, 25);	#:: + Gate Callers
+		quest::faction(267, 3);		#:: + High Guard of Erudin
+		quest::faction(266, 2);		#:: + High Council of Erudin
+		quest::faction(265, -3);	#:: - Heretics
+		#:: Grant a moderate amount of experience
 		quest::exp(2500);
+		#:: Create a hash for storing cash - 5 to 50cp
+		my %cash = plugin::RandomCash(5,50);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
