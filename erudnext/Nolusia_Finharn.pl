@@ -1,12 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings, $name! Has Lanken sent you to see me? Are you a [visitor or citizen of Erudin]?");
-	}
-	elsif ($text=~/citizen/i) {
-		quest::say("Well then you should know better than to speak the name of defilers inside the palace walls. I must get back to my work or I shall be late to the Inn this evening.");
-	}
-	elsif ($text=~/visitor/i) {
-		quest::say("Then, remember, inside the palace walls, never speak the names of those defilers who have passed on. I shall be at the Vasty Inn later tonight. I can answer your questions there.?");
+		quest::say("Good evening. Are not the stars beautiful. Somewhere out there I imagine there is another world and another person staring right back at me. If you have business with me please save it for the morning in the palace.");
 	}
 	elsif ($text=~/moodoro/i) {
 		quest::say("Moodoro Finharn is my brother. He was a good boy up until he met that accursed halfling named [Flynn] Merrington.");
@@ -38,9 +32,9 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Set factions
 		quest::faction(231, 20);	 		#:: + Craftkeepers
-		quest::faction(267, 3);	 			#:: + High Guard of Erudin
 		quest::faction(266, 2); 			#:: + High Council of Erudin
 		quest::faction(265, -3); 			#:: - Heretics
+		quest::faction(267, 3);	 			#:: + High Guard of Erudin
 		#:: Grant a small amount of experience
 		quest::exp(500);
 	}
@@ -53,11 +47,15 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Set faction
 		quest::faction(231, 30);	 		#:: + Craftkeepers
-		quest::faction(267, 4);	 			#:: + High Guard of Erudin
 		quest::faction(266, 3);	 			#:: + High Council of Erudin
 		quest::faction(265, -4); 			#:: - Heretics
+		quest::faction(267, 4);	 			#:: + High Guard of Erudin
 		#:: Grant a small amount of experience
-		quest::exp(100);
+		quest::exp(500);
+		#:: Create a hash for storing cash - 10 to 50cp
+		my %cash = plugin::RandomCash(10,50);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
