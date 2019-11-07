@@ -21,19 +21,19 @@ sub EVENT_SAY {
 }
 	
 sub EVENT_ITEM {
-	#:: Match turn in for 18729 - Tattered Note
+	#:: Match a 18729 - Tattered Note
 	if (plugin::takeItems(18729 => 1)) {
 		quest::say("Welcome to the Craft Keepers! You have much to learn. and I'm sure you are anxious to get started. Here's your training robe. Go see Nolusia. she'll give you your first lesson.");
-		#:: Give item 13549 - Old Patched Robe*
+		#:: Give a 13549 - Old Patched Robe*
 		quest::summonitem(13549);
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
-		quest::faction(231, 100);	#:: + Craftkeepers
-		quest::faction(266, 10);	#:: + High Council of Erudin
-		quest::faction(265, -15);	#:: - Heretics
-		quest::faction(267, 15);	#:: + High Guard of Erudin
-		#:: Give a small amount of xp
+		#:: Set factions
+		quest::faction(231, 100);		#:: + Craftkeepers
+		quest::faction(266, 10);		#:: + High Council of Erudin
+		quest::faction(265, -15);		#:: - Heretics
+		quest::faction(267, 15);		#:: + High Guard of Erudin
+		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
 	#:: Return unused items
