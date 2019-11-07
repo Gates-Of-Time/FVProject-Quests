@@ -15,10 +15,30 @@ sub EVENT_SAY {
 		quest::say("Welcome. my child.  I am Leraena Shelyrak. overseer of the Temple of Divine Light. Inside this temple. you may find the path to inner peace.  Introduce yourself to each of the priests and priestesses of the temple as well as the paladins. Together we shall put an end to such disruptive influences as the [kobold shaman].");
 	}
 	elsif ($text=~/kobold shaman/i) {
-		quest::say("The primitive kobold race has begun to show signs of healing ability.  No doubt this was granted by some evil deity.  Since they are of little power compared to a much more superior race such as ours. we only require the talents of young priests to [slay] the kobold shaman.");
+		#:: Match if faction is Amiable or better 
+		if ($faction <= 4) {
+			quest::say("The primitive kobold race has begun to show signs of healing ability.  No doubt this was granted by some evil deity.  Since they are of little power compared to a much more superior race such as ours. we only require the talents of young priests to [slay] the kobold shaman.");
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
+			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
+		}
+		else {
+			quest::say("Leave my sight at once! You are no friend to the Peacekeepers of the Temple of Divine Light.");
+		}
 	}
 	elsif ($text=~/slay/i) {
-		quest::say("You are so young...  Go to Toxxulia and find these kobold shamans.  Cut off their paws and return them to me.  I require three paws as proof of your worth to our temple.");
+		#:: Match if faction is Amiable or better 
+		if ($faction <= 4) {
+			quest::say("You are so young...  Go to Toxxulia and find these kobold shamans.  Cut off their paws and return them to me.  I require three paws as proof of your worth to our temple.");
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
+			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
+		}
+		else {
+			quest::say("Leave my sight at once! You are no friend to the Peacekeepers of the Temple of Divine Light.");
+		}
 	}
 	elsif ($text=~/guild coin/i) {
 		quest::say("Yes, of course. Here it is. Remember that it is not a form of currency.");
@@ -70,34 +90,73 @@ sub EVENT_ITEM {
 	#}
 	#:: Match three 13883 - Odd Kobold Paw
 	elsif (plugin::takeItems(13883 => 3)) {
-		quest::say("Fine work. They shall never lay hands upon another kobold again. I mean paws. Here is a small reward for a fine job. Unfortunatly we have recently learned that the shamen in the forest are merely underlings to more [powerful kobold shaman] that reside in the kobold warrens. Continue the work of Quellious.");
-		#:: Give a random reward: 15011 - Spell: Holy Armor, 15213 - Spell: Cure Disease, 15216 - Spell: Stun, 15212 - Spell: Cure Blindness
-		quest::summonitem(quest::ChooseRandom(15011, 15213, 15216, 15212));
-		#:: Ding!
-		quest::ding();
-		#:: Set factions
-		quest::faction(298, 20); 	#:: + Peace Keepers
-		quest::faction(266, 5); 	#:: + High Council of Erudin
-		quest::faction(265, -5); 	#:: - Heretics
-		#:: Grant a small amount of experience
-		quest::exp(500);
-		#:: Create a hash for storing cash - 150 to 200cp
-		my %cash = plugin::RandomCash(150,200);
-		#:: Grant a random cash reward
-		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Match if faction is Amiable or better 
+		if ($faction <= 4) {
+			quest::say("Fine work. They shall never lay hands upon another kobold again. I mean paws. Here is a small reward for a fine job. Unfortunatly we have recently learned that the shamen in the forest are merely underlings to more [powerful kobold shaman] that reside in the kobold warrens. Continue the work of Quellious.");
+			#:: Give a random reward: 15011 - Spell: Holy Armor, 15213 - Spell: Cure Disease, 15216 - Spell: Stun, 15212 - Spell: Cure Blindness
+			quest::summonitem(quest::ChooseRandom(15011, 15213, 15216, 15212));
+			#:: Ding!
+			quest::ding();
+			#:: Set factions
+			quest::faction(298, 20); 	#:: + Peace Keepers
+			quest::faction(266, 5); 	#:: + High Council of Erudin
+			quest::faction(265, -5); 	#:: - Heretics
+			#:: Grant a small amount of experience
+			quest::exp(500);
+			#:: Create a hash for storing cash - 150 to 200cp
+			my %cash = plugin::RandomCash(150,200);
+			#:: Grant a random cash reward
+			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
+			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
+			#:: Return three 13883 - Odd Kobold Paw
+			quest::summonitem(13883);
+			quest::summonitem(13883);
+			quest::summonitem(13883);
+		}
+		else {
+			quest::say("Leave my sight at once! You are no friend to the Peacekeepers of the Temple of Divine Light.");
+		}
 	}
 	#:: Match two 13883 - Odd Kobold Paw
 	elsif (plugin::takeItems(13883 => 2)) {
-		quest::say("I instructed you to return THREE paws.");
-		#:: Return two 13883 - Odd Kobold Paw
-		quest::summonitem(13883);
-		quest::summonitem(13883);
+		#:: Match if faction is Amiable or better 
+		if ($faction <= 4) {
+			quest::say("I instructed you to return THREE paws.");
+			#:: Return two 13883 - Odd Kobold Paw
+			quest::summonitem(13883);
+			quest::summonitem(13883);
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
+			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
+			#:: Return two 13883 - Odd Kobold Paw
+			quest::summonitem(13883);
+			quest::summonitem(13883);
+		}
+		else {
+			quest::say("Leave my sight at once! You are no friend to the Peacekeepers of the Temple of Divine Light.");
+		}
 	}
 	#:: Match one 13883 - Odd Kobold Paw
 	elsif (plugin::takeItems(13883 => 1)) {
-		quest::say("I instructed you to return THREE paws.");
-		#:: Return one 13883 - Odd Kobold Paw
-		quest::summonitem(13883);
+		#:: Match if faction is Amiable or better 
+		if ($faction <= 4) {
+			quest::say("I instructed you to return THREE paws.");
+			#:: Return one 13883 - Odd Kobold Paw
+			quest::summonitem(13883);
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
+			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
+			#:: Return one 13883 - Odd Kobold Paw
+			quest::summonitem(13883);
+		}
+		else {
+			quest::say("Leave my sight at once! You are no friend to the Peacekeepers of the Temple of Divine Light.");
+		}
 	}
 	#:: Turn in for 14582 -  Embroidered Bag of Bone Necklaces Quellious Disciple Quest - Stonebrunt/Warrens Expansion
 	#if (plugin::check_handin(\%itemcount, 14582 => 1)) {
