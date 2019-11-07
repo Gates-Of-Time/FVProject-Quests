@@ -1,6 +1,6 @@
 function event_say(e)
 	local fac = e.other:GetFaction(e.self);
-	
+
 	if(e.message:findi("hail")) then
 		e.self:Say("Welcome to the Temple of Divine Light.  We are the Peacekeepers. followers of Quellious.  If you are a paladin of this temple. you can assist us by showing a desire to [protect the peace].");
 	elseif(e.message:findi("protect the peace")) then
@@ -32,6 +32,7 @@ end
 
 function event_trade(e)
 	local item_lib = require("items");
+	local fac = e.other:GetFaction(e.self);
 
 	if(item_lib.check_turn_in(e.trade, {item1 = 13825})) then -- Item: Poacher's Head
 		if(fac <= 4) then -- Amiable or better
