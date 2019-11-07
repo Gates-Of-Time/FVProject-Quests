@@ -9,7 +9,7 @@ sub EVENT_SAY {
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction == 5) {
-			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.")
+			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
 		}
 		else {
 			quest::say("Leave my sight at once! You are no friend to the Peacekeepers of the Temple of Divine Light.");
@@ -22,7 +22,7 @@ sub EVENT_SAY {
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction == 5) {
-			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.")
+			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
 		}
 		else {
 			quest::say("Leave my sight at once! You are no friend to the Peacekeepers of the Temple of Divine Light.");
@@ -35,7 +35,7 @@ sub EVENT_SAY {
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction == 5) {
-			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.")
+			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
 		}
 		else {
 			quest::say("Leave my sight at once! You are no friend to the Peacekeepers of the Temple of Divine Light.");
@@ -66,7 +66,7 @@ sub EVENT_ITEM {
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction == 5) {
-			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.")
+			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
 			#:: Return a 13825 - Poacher's Head
 			quest::summonitem(13825);
 		}
@@ -98,7 +98,7 @@ sub EVENT_ITEM {
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction == 5) {
-			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.")
+			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
 			#:: Return a 13913 - Barbarian Head
 			quest::summonitem(13913);
 		}
