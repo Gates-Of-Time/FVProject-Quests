@@ -1,6 +1,8 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Hello there, adventurer! I am sure you are thirsty after that long boat ride from Qeynos!");
+		#:: Send a signal "1" to Erudin >> Phloatin_Highbrow (24039) with no delay
+		quest::signalwith(24039, 2, 0);
 	}
 	elsif ($text=~/vasty deep/i) {
 		quest::say("The Deepwater Knights are clerics and paladins of Prexus. They are to be found at the Deepwater Temple.");
