@@ -7,6 +7,9 @@ sub EVENT_SAY {
 		#:: Do animation "laugh"
 		quest::doanim(63);
 	}
+	elsif ($text=~/sinnkin/i) {
+		quest::say("Hey! I'm trying to enjoy myself here. Now take yourself and the dead rat in your mouth outta here.");
+	}
 }
 
 sub EVENT_SIGNAL {
