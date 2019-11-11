@@ -1,38 +1,12 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("I am Toala Nehron. You must be another young warrior aspiring to join the ranks of the Steel Warriors. We welcome all who would try. When you have time there is a friend of mine I would like you to check on.");
+		quest::say("I am Toala Nehron. You must be another young warrior aspiring to join the ranks of the Steel Warriors. We welcome all who would try.");
 	}
 	elsif ($text=~/opal/i) {
 		quest::say("Opal Darkbriar is a little plague rat.  She has used her knowledge of arcane arts to charm Cain Darkmoore.  I know that is what happened.  Why else would he be in love with her?  He is a mighty warrior and she is nothing more than a sickly little librarian for the Academy of Arcane Science.  He must truly yearn for a bold hearted female warrior such as myself.  Not that I care, of course.");
 	}
 	elsif ($text=~/cain darkmoore/i) {
 		quest::say("Cain Darkmoore is only the most handsome of warriors!  He is also the strongest and most bold.  He has slain the mightiest of fiends.  He is truly the manliest man around.  It is no wonder he is the guildmaster of the Steel Warriors.");
-	}
-	elsif ($text=~/have time/i) {
-		#:: Match if faction with Steel Warriors is Amiable or better
-		if ($faction <= 4) {
-			quest::say("I have A friend by the name of Lenka Stoutheart. She reported to me that her ship was broken into and someone stole a pouch of hers. Could you go look into it for me? Just tell her Toala sent you. Oh, and pay no mind to the walking mountain by her. That will only be Bronto, her navigator. Thanks friend.");
-		}
-		#:: Match if faction with Steel Warriors is Indifferent
-		elsif ($faction == 5) {
-			quest::say("The Steel Warriors have no cause to dislike you, but you have yet to prove your worth to this guild.");
-		}
-		else {	
-			quest::say("Your head shall look grand mounted on the wall of the Steel Warriors Arena!!");
-		}
-	}
-	elsif($text=~/lenka stoutheart/i) {
-		#:: Match if faction with Steel Warriors is Amiable or better
-		if ($faction <= 4) {
-			quest::say("Lenka Stoutheart is an old friend of mine. I met her in my younger days when the Steel Warriors sent me to train in the ways of the Wolves of the North, the barbarian warriors of Halas. She is now an adventurer of great renown. She travels from continent to continent aboard her ship,the Blue Beast, her ship.");
-		}
-		#:: Match if faction with Steel Warriors is Indifferent
-		elsif ($faction == 5) {
-			quest::say("The Steel Warriors have no cause to dislike you, but you have yet to prove your worth to this guild.");
-		}
-		else {	
-			quest::say("Your head shall look grand mounted on the wall of the Steel Warriors Arena!!");
-		}
 	}
 }
 
