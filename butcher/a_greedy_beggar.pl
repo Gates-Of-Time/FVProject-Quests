@@ -32,6 +32,8 @@ sub EVENT_TIMER {
 			#:: Match if we the target was defined, but is no longer on the entity list
 			else {
 				undef $FollowTarget;
+				#:: Stop following
+				quest::sfollow();
 				#:: Return to spawn point
 				quest::moveto(2407, 1482, -0.25, 331, 1);
 			}
