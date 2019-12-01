@@ -10,6 +10,7 @@ sub EVENT_SAY {
 	if (!$FollowTarget) {
 		quest::say("Hello there $name. I don't suppose you can spare some coins? I'm just a poor halfling that is far away from home. I can't afford anything to eat or drink. Anything you can offer me will be of help.");
 		$FollowTarget = $userid;
+		quest::say("User ID is $userid and Folow Target is $FollowTarget.");
 		#:: Set a timer to loop every 5 seconds
 		quest::settimer("follow", 5);
 		#:: Set appearance to Stand
@@ -20,8 +21,9 @@ sub EVENT_SAY {
 sub EVENT_TIMER {
 	#:: Match timer "follow"
 	if ($timer eq "follow") {
+		quest::say("Timer 'follow' triggered and Follow Target is $FollowTarget.");
 		#:: Match if FollowTarget is defined (someone triggered a follow event)
-		if ($FollowTarget) {
+		if ($FollowTarget > 0) {
 			#:: Create a scalar variable to store the following target by entity ID
 			my $FollowingTarget = $entity_list->GetClientByCharID($FollowTarget);
 			#:: Match if our target is not null
