@@ -26,6 +26,7 @@ sub EVENT_TIMER {
 		if ($FollowTarget > 0) {
 			#:: Create a scalar variable to store the following target by entity ID
 			my $FollowingTarget = $entity_list->GetClientByCharID($FollowTarget);
+			quest::say("My Follow Target is $FollowTarget, and my Following Target is $FollowingTarget.");
 			#:: Match if our target is not null
 			if ($FollowingTarget) {
 				#:: Follow the target who triggered the follow event
