@@ -1,5 +1,6 @@
 #:: Create a scalar to store an entity ID
 my $FollowTarget;
+my $User;
 
 sub EVENT_AGGRO {
 	quest::say("Guards! Guards! Help me!!")
@@ -10,6 +11,7 @@ sub EVENT_SAY {
 	if (!$FollowTarget) {
 		quest::say("Hello there $name. I don't suppose you can spare some coins? I'm just a poor halfling that is far away from home. I can't afford anything to eat or drink. Anything you can offer me will be of help.");
 		$FollowTarget = $charid;
+		$User = $userid;
 		quest::say("User ID is $userid and Folow Target is $FollowTarget.");
 		#:: Set a timer to loop every 5 seconds
 		quest::settimer("follow", 5);
@@ -23,22 +25,23 @@ sub EVENT_TIMER {
 	if ($timer eq "follow") {
 		quest::say("Timer 'follow' triggered and Follow Target is $FollowTarget.");
 		#:: Match if FollowTarget is defined (someone triggered a follow event)
-		if ($FollowTarget > 0) {
+		if ($FollowTarget) {
 			#:: Create a scalar variable to store the following target by entity ID
 			my $FollowingTarget = $entity_list->GetClientByCharID($FollowTarget);
 			quest::say("My Follow Target is $FollowTarget, and my Following Target is $FollowingTarget.");
-			#:: Match if our target is not null
-			if ($FollowingTarget) {
-				#:: Follow the target who triggered the follow event
-				quest::follow($FollowTarget);
-			}
-			#:: Match if we the target was defined, but is no longer on the entity list
-			else {
+			#:: Match if our target null
+			if (!$FollowingTarget) {
 				undef $FollowTarget;
+				undef $User;
 				#:: Stop following
 				quest::sfollow();
 				#:: Return to spawn point
 				quest::moveto(2407, 1482, -0.25, 331, 1);
+			}
+			#:: Match if we the target was defined, but is no longer on the entity list
+			else {
+				#:: Follow the target who triggered the follow event
+				quest::follow($User);
 			}
 		}
 		#:: Match if no follow target is defined
