@@ -23,11 +23,11 @@ sub EVENT_TIMER {
 		#:: Match if FollowTarget is defined (someone triggered a follow event)
 		if ($FollowTarget) {
 			#:: Create a scalar variable to store the following target by entity ID
-			my $FollowingTarget = $entity_list->GetClientByID($FollowTarget);
+			my $FollowingTarget = $entity_list->GetClientByCharID($FollowTarget);
 			#:: Match if our target is not null
 			if ($FollowingTarget) {
 				#:: Follow the target who triggered the follow event
-				quest::follow($FollowingTarget);
+				quest::follow($FollowTarget);
 			}
 			#:: Match if we the target was defined, but is no longer on the entity list
 			else {
