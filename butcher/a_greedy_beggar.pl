@@ -9,7 +9,7 @@ sub EVENT_SAY {
 	#:: Match if FollowTarget is not defined (nobody has triggered a follow event yet)
 	if (!$FollowTarget) {
 		quest::say("Hello there $name. I don't suppose you can spare some coins? I'm just a poor halfling that is far away from home. I can't afford anything to eat or drink. Anything you can offer me will be of help.");
-		$FollowTarget = $userid;
+		$FollowTarget = $charid;
 		quest::say("User ID is $userid and Folow Target is $FollowTarget.");
 		#:: Set a timer to loop every 5 seconds
 		quest::settimer("follow", 5);
