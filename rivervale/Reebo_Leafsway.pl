@@ -39,9 +39,6 @@ sub EVENT_PROXIMITY_SAY {
 	elsif ($text=~/feerrott/i) {
 		quest::say("The Feerrott is a vast rain forest in southwestern Antonica. It is home to many lizardman tribes.");
 	}
-	elsif ($text=~/hail/i) {
-		quest::say("Proximity hail to you too!");
-	}
 }
 
 sub EVENT_ITEM {
