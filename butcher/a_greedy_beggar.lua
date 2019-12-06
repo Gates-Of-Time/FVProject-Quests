@@ -2,7 +2,7 @@ local followtarget;
 
 function event_spawn(e)
 	followtarget = nil;
-	e.self:Say("Followtarget is " .. followtarget .. ".");
+	e.self:Say(string.format("Followtarget is %s.", followtarget));
 end
 
 function event_say(e)
