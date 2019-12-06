@@ -34,11 +34,11 @@ function event_timer(e)
 			eq.follow(followtarget); -- Follow the player who triggered the event
 			e.self:Say("following target.");
 		else
-			zonecheck = nil;
 			e.self:Say(string.format("Followtarget is %s and he is not in zone", followtarget));
 			eq.stop_follow();
 			e.self:Say("Stopping follow.");
 			followtarget = nil;
+			zonecheck = nil;
 			e.self:Say("Followtarget is nil.");
 			eq.stop_timer("follow");
 			e.self:Say("Timer 'follow' stopped.");
@@ -49,6 +49,7 @@ function event_timer(e)
 		eq.stop_follow();
 		e.self:Say("Stopping follow.");
 		followtarget = nil;
+		zonecheck = nil;
 		e.self:Say("Followtarget is nil.");
 		eq.stop_timer("follow");
 		e.self:Say("Timer 'follow' stopped.");
