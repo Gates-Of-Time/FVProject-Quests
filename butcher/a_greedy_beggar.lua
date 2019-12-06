@@ -1,7 +1,6 @@
 local followtarget;
 
 function event_spawn(e)
-	followtarget = nil;
 	e.self:Say(string.format("Followtarget is %s", followtarget));
 end
 
