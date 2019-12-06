@@ -22,20 +22,25 @@ function event_timer(e)
 		eq.stop_follow();
 		followtarget = nil;
 		eq.stop_timer("follow");
-		e.self:SetAppearance(3); -- lying
 		e.self:MoveTo(2407,1482,0,168,true);
 	end
 end
 
-function event_trade(e) -- Note that we are intentionally accepting any trade
+function event_trade(e) -- Note that we are intentionally accepting any trade if we are not following
 	local item_lib = require("items");
-
+	
 	if(followtarget == nil or e.other:GetID() == followtarget) then
 		e.self:Say("Oh thank you. You are too kind to this poor halfling. Do you have anything else to give me?");
 		e.self:SetAppearance(0); -- Stand
 		followtarget = e.other:GetID();
 		eq.set_timer("follow",5000);
 	else
-		item_lib.return_items(e.self, e.other, e.trade)
+		item_lib.return_items(e.self, e.other, e.trade);
+	end
+end
+
+function event_waypoint_arrive(e)
+	if(e.wp == 0) then
+		e.self:SetAppearance(3); -- lying
 	end
 end
