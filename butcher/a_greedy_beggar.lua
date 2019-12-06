@@ -27,14 +27,12 @@ end
 function event_timer(e)
 	local entity_list = eq.get_entity_list();
 
-	for id, v in pairs(entity_list) do
-		if(followtarget) then
-			eq.follow(followtarget); -- Follow the player who triggered the event
-		else
-			eq.stop_follow();
-			followtarget = nil;
-			eq.stop_timer("follow");
-			e.self:SetAppearance(3); -- lying down
-		end
+	if (entity_list[followtarget]) then
+		eq.follow(followtarget); -- Follow the player who triggered the event
+	else
+		eq.stop_follow();
+		followtarget = nil;
+		eq.stop_timer("follow");
+		e.self:SetAppearance(3); -- lying down
 	end
 end
