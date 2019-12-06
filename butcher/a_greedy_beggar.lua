@@ -24,27 +24,21 @@ function event_say(e)
 end
 
 function event_timer(e)
-	e.self:Say("event timer triggered.");
+	e.self:Say("event timer triggered.");	
 	if(eq.get_entity_list():GetClientByID(followtarget)) then
-		if(followtarget == nil) then
-			e.self:Say("Followtarget is nil.");
-		else
-			e.self:Say(string.format("Followtarget is %s", followtarget));
-			eq.follow(followtarget); -- Follow the player who triggered the event
-		end
+		e.self:Say("Follow target was assigned and is in zone.");
+		e.self:Say(string.format("Followtarget is %s", followtarget));
+		eq.follow(followtarget); -- Follow the player who triggered the event
+		e.self:Say("following target.");
 	else
-		if(followtarget == nil) then
-			e.self:Say("Followtarget is nil.");
-		else
-			e.self:Say(string.format("Followtarget is %s", followtarget));
-			eq.stop_follow();
-			e.self:Say("Stopping follow.");
-			followtarget = nil;
-			e.self:Say("Followtarget is nil.");
-			eq.stop_timer("follow");
-			e.self:Say("Timer 'follow' stopped.");
-			e.self:SetAppearance(3); -- lying down
-		end
+		e.self:Say(string.format("Followtarget is %s and he is not in zone", followtarget));
+		eq.stop_follow();
+		e.self:Say("Stopping follow.");
+		followtarget = nil;
+		e.self:Say("Followtarget is nil.");
+		eq.stop_timer("follow");
+		e.self:Say("Timer 'follow' stopped.");
+		e.self:SetAppearance(3); -- lying down
 	end
 end
 
