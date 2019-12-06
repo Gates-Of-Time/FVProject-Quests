@@ -1,7 +1,7 @@
 local followtarget;
 
-function event_spawn(e)
-	followtarget = nil;
+function event_aggro(e)
+    e.self:Say("Guards! Guards! Help me!!");
 end
 
 function event_say(e)
