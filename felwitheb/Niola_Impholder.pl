@@ -30,7 +30,7 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Turn in for 13068 -  Bat Wings for Bat Wings Quest
+	#:: Turn in for 13068 -  Bat Wings
 	if (plugin::takeItems(13068 => 4)) {
 		quest::say("Ah yes.  These are exactly what I need.  Thank you very much.");
 		#:: Give random item 15310 or 15332 - Spell: Flare or Spell: Shield of Fire
@@ -38,12 +38,12 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(275, 5);		#:: + Keepers of the Art
-		quest::faction(279, 5);		#:: + King Tearis Thex
-		quest::faction(246, 5);		#:: + Faydark's Champions
-		quest::faction(239, -10);	#:: - The Dead
-		#:: Give a small amount of xp
-		quest::exp(350);
+		quest::faction(275, 2);		#:: + Keepers of the Art
+		quest::faction(279, 1);		#:: + King Tearis Thex
+		quest::faction(246, 1);		#:: + Faydark's Champions
+		quest::faction(239, -1);	#:: - The Dead
+		#:: Grant a small amount of experience
+		quest::exp(40);
 	}
 	#:: Turn in for 18777 -  Enrollment Letter
 	elsif (plugin::takeItems(18777 => 1)) {
