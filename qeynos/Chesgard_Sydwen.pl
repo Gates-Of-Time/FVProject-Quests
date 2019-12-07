@@ -52,8 +52,8 @@ sub EVENT_ITEM {
 		quest::faction(221, -20);		#:: - Bloodsabers
 		quest::faction(341, 15);		#:: + Priests of Life
 		quest::faction(262, 15);		#:: + Guards of Qeynos
-		#:: Grant a moderate amount of experience
-		quest::exp(2000);
+		#:: Grant a large amount of experience
+		quest::exp(6200);
 		#:: Create a hash for storing cash - 800 to 1200 cp
 		my %cash = plugin::RandomCash(800,1200);
 		#:: Grant a random cash reward
@@ -76,4 +76,4 @@ sub EVENT_ITEM {
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
-}		
+}
