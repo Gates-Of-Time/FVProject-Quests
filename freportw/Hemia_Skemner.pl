@@ -16,7 +16,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Turn in for 13863 - A Locked Book
 	if (plugin::takeItems(13863 => 1 )) {
-		quest::say("You have done the world of magic a great justice,$name");
+		quest::say("It is a shame we had to take such actions. I mourn for the sanity of Lydl. I cheer for the addition of such a fine wizard as yourself. I found this while rummaging through my vault. Take it as thanks. It is not much.");
 		#:: Ding!
 		quest::ding();
 		#:: Give a small amount of xp
@@ -26,10 +26,10 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
-		quest::faction(220,1); 			#:: + Arcane Scientists
-		quest::faction(296,-1); 		#:: - Knights of Truth
-		quest::faction(330,-1); 		#:: - Freeport Militia
-		quest::faction(281,1); 			#:: + Knights of Truth
+		quest::faction(220,10); 	#:: + Arcane Scientists
+		quest::faction(281,2); 		#:: + Knights of Truth
+		quest::faction(330,-1); 	#:: - Freeport Militia
+		quest::faction(296,-1); 	#:: - Opal Darkbriar
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
