@@ -14,23 +14,23 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Turn in for 13863 - A Locked Book
-	if (plugin::takeItems(13863 => 1 )) {
+	#:: Match a 13863 - A Locked Book
+	if (plugin::takeItems(13863 => 1)) {
 		quest::say("It is a shame we had to take such actions. I mourn for the sanity of Lydl. I cheer for the addition of such a fine wizard as yourself. I found this while rummaging through my vault. Take it as thanks. It is not much.");
 		#:: Ding!
 		quest::ding();
-		#:: Give a small amount of xp
-		quest::exp(500);
-		#:: Create a hash for storing cash - 2000 to 10000cp
-		my %cash = plugin::RandomCash(2000,10000);
-		#:: Grant a random cash reward
-		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set faction
+		#:: Set factions
 		quest::faction(220,10); 	#:: + Arcane Scientists
 		quest::faction(281,2); 		#:: + Knights of Truth
 		quest::faction(330,-1); 	#:: - Freeport Militia
 		quest::faction(296,-1); 	#:: - Opal Darkbriar
+		#:: Grant a small amount of experience
+		quest::exp(500);
+		#:: Create a hash for storing cash - 1 to 10cp
+		my %cash = plugin::RandomCash(1,10);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
-}	
+}
