@@ -49,6 +49,8 @@ sub EVENT_ITEM {
 		quest::summonitem(13957);
 		#:: Ding!
 		quest::ding();
+		#:: Grant a tiny amount of experience
+		quest::exp(5);
 	}
 	#:: Match a 13972 - Crate of Rotten Carrots
 	elsif (plugin::takeItems(13972 => 1)) {
