@@ -17,8 +17,20 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(13862 => 1 )) {
 		#:: Ding!
 		quest::ding();
+		quest::say("Oh! A beautiful Marr Minnow. This shall look grand in my aquarium! How lucky that you are a friend to the Academy of Arcane Science. Take your reward.");
 		#:: Grant a small amount of experience
 		quest::exp(100);
+		#:: Give random item: 13005 - Iron Ration, 13006 - Water Flask
+		quest::summonitem(quest::ChooseRandom(13005, 13006));
+		#:: Set Faction
+		quest::faction(220,5); 	#:: + Arcane Scientists
+		quest::faction(281,1); 	#:: + Knights of Truth
+		quest::faction(296,-1); #:: - Opal Dark Briar
+		quest::faction(330,-1); #:: - The Freeport Militia
+		#:: Create a hash for storing cash - 4500 to 4600cp
+		my %cash = plugin::RandomCash(4500,4600);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
