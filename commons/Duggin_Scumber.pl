@@ -16,7 +16,6 @@ sub EVENT_WAYPOINT_ARRIVE {
 
 sub EVENT_AGGRO {
 	quest::say("Die, dog!!");
-	}
 }
 
 
