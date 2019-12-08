@@ -3,16 +3,56 @@ sub EVENT_SAY {
 		quest::say("Welcome! Welcome to the Church o' the Tribunal! Do ye require healing or are ye [new to the Shamans o' Justice], then, eh?");
 	}
 	elsif ($text=~/new to the Shamans/i) {
-		quest::say("Then I welcome ye into our noble order. Ye'll serve us well or spend an eternity in the dungeons o' the Tribunal. Are ye willing to [contribute to our church] or did ye just come to [meditate] within our walls?");
+		#:: Match if faction is amiable or better
+		if ($faction <= 4) {
+			quest::say("Then I welcome ye into our noble order. Ye'll serve us well or spend an eternity in the dungeons o' the Tribunal. Are ye willing to [contribute to our church] or did ye just come to [meditate] within our walls?");
+		}
+		#:: Match if faction is indifferent
+		elsif ($faction == 5) {
+			quest::say("Ye're no criminal to the Shamans o' Justice, but ye're yet to prove yer devotion to justice.");
+		}
+		else {
+			quest::say("The scales o' the Shamans o' Justice dinnae tip in yer favor.  Ye'd best flee while ye still have the chance.");
+		}
 	}
 	elsif ($text=~/meditate/i) {
-		quest::say("Then find yerself a spot out o' the way. Please dinnae obstruct the paths of others who wish to pay tribute to the righteousness o' the Tribunal.");
+		#:: Match if faction is amiable or better
+		if ($faction <= 4) {
+			quest::say("Then find yerself a spot out o' the way. Please dinnae obstruct the paths of others who wish to pay tribute to the righteousness o' the Tribunal.");
+		}
+		#:: Match if faction is indifferent
+		elsif ($faction == 5) {
+			quest::say("Ye're no criminal to the Shamans o' Justice, but ye're yet to prove yer devotion to justice.");
+		}
+		else {
+			quest::say("The scales o' the Shamans o' Justice dinnae tip in yer favor.  Ye'd best flee while ye still have the chance.");
+		}
 	}
 	elsif ($text=~/contribute to our church/i) {
-		quest::say("Ye'll help all o' Halas by doing the bidding o' this church. Go to Holana. Tell her Jinkus sent ye to assist her. She'll have work fer ye. Perhaps, if ye're planning on passing near Qeynos, ye can [make a delivery] as well?");
+		#:: Match if faction is amiable or better
+		if ($faction <= 4) {
+			quest::say("Ye'll help all o' Halas by doing the bidding o' this church. Go to Holana. Tell her Jinkus sent ye to assist her. She'll have work fer ye. Perhaps, if ye're planning on passing near Qeynos, ye can [make a delivery] as well?");
+		}
+		#:: Match if faction is indifferent
+		elsif ($faction == 5) {
+			quest::say("Ye're no criminal to the Shamans o' Justice, but ye're yet to prove yer devotion to justice.");
+		}
+		else {
+			quest::say("The scales o' the Shamans o' Justice dinnae tip in yer favor.  Ye'd best flee while ye still have the chance.");
+		}
 	}
 	elsif ($text=~/make a delivery/i) {
-		quest::say("The Church of the Tribunal works with the Qeynos Guards to apprehend fugitives. There's a new criminal on the loose, so we must send a wanted poster to Qeynos for them to display on the walls of their bank. Speak with Cindl about a piece o' mammoth hide parchment and with Greta Terrilon about some ink and I'll prepare the bounty poster.");
+		#:: Match if faction is amiable or better
+		if ($faction <= 4) {
+			quest::say("The Church of the Tribunal works with the Qeynos Guards to apprehend fugitives. There's a new criminal on the loose, so we must send a wanted poster to Qeynos for them to display on the walls of their bank. Speak with Cindl about a piece o' mammoth hide parchment and with Greta Terrilon about some ink and I'll prepare the bounty poster.");
+		}
+		#:: Match if faction is indifferent
+		elsif ($faction == 5) {
+			quest::say("Ye're no criminal to the Shamans o' Justice, but ye're yet to prove yer devotion to justice.");
+		}
+		else {
+			quest::say("The scales o' the Shamans o' Justice dinnae tip in yer favor.  Ye'd best flee while ye still have the chance.");
+		}
 	}
 }
 
