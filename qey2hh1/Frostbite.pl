@@ -32,11 +32,11 @@ sub EVENT_TIMER {
 		#:: Create a scalar variable to store a random npc_type id: The Western Plains of Karana >> Basil (12190) [80%] or Paglan (12191) [20%]
 		my $mobid = quest::ChooseRandom(12190, 12190, 12190, 12190, 12190, 12191);
 		#:: Create a scalar variable to store a random x location
-		my $x = quest::ChooseRandom(-3461,-3902,-4011);
+		my $x = quest::ChooseRandom(-3461, -3902, -4011);
 		#:: Create a scalar variable to store a random y location
-		my $y = quest::ChooseRandom(-1457,-3240,-1362);
+		my $y = quest::ChooseRandom(-1457, -3240, -1362);
 		#:: Spawn one and only one Basil or Paglan
-		quest::unique_spawn($mobid,188,0,$x,$y,10,0);
+		quest::unique_spawn($mobid, 188, 0, $x, $y, 10, 0);
 		#:: Set running to true (run)
 		quest::SetRunning(1);
 		#:: Create a scalar variable to store the npc_type id of Basil or Paglan
@@ -68,7 +68,7 @@ sub EVENT_SIGNAL {
 	}
 	#:: Match a signal "2" from The Western Plains of Karana >> Paglan (12191)
 	elsif ($signal == 2) {
-		#:: Stop following Basil
+		#:: Stop following Paglan
 		quest::sfollow();
 		#:: Set running false (walk)
 		quest::SetRunning(0);
