@@ -1,16 +1,29 @@
-function event_spawn(e)
-	eq.set_timer(1,1200000);
-	e.self:SetRunning(true);
-end
+sub EVENT_SPAWN {
+	#:: Set a timer "depop" to loop every 1200 seconds (20 minutes)
+	quest::settimer("depop", 1200);
+	#:: Set running to true (run)
+	quest::SetRunning(1);
+}
 
-function event_timer(e)
-	eq.depop();
-end
+sub EVENT_TIMER {
+	#:: Match timer "depop"
+	if ($timer eq "depop") {
+		quest::depop();
+	}
+}
 
-function event_combat(e)
-	if(e.joined == true) then
-		e.self:Say("The time fer talk is over.  Raise yer guard!!");
-		eq.signal(12082,1);
-		eq.signal(12154,1);
-	end
-end
+sub EVENT_COMBAT {
+	#:: Match if combat state is 1 (fighting)
+	if ($combat_state == 1) {
+		quest::say("The time fer talk is over.  Raise yer guard!!");
+		#:: Send a signal "2" to /qey2hh1/Frostbite.pl with no delay
+		quest::signalwith(12082, 2, 0);
+		#:: Send a signal "2" to /qey2hh1/Frostbite.pl with no delay
+		quest::signalwith(12154, 2, 0);
+	}
+}
+
+sub EVENT_ITEM {
+	#:: Return unused items
+	plugin::returnUnusedItems();
+}
