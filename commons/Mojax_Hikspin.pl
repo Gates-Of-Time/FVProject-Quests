@@ -19,6 +19,9 @@ sub EVENT_SAY {
 	elsif ($text=~/antonius bayle/i) {
 		quest::say("How can it be that you do not know of Antonius Bayle? Was it not he who named this great continent of Antonica? Is it not he who rules over the most powerful city on Norrath? Surely you jest!");
 	}
+	elsif ($text=~/Hall of Truth/i) {
+		quest::say("I have been expecting you. I am very parched. Could you please get me a bottle of milk? Once you do that will show you where I hid the note");
+	}
 }
 
 sub EVENT_ITEM {
@@ -33,6 +36,10 @@ sub EVENT_ITEM {
 		quest::faction(362, 1);			#:: + Priests of Marr
 		#:: Start Grid 86 - Path to the nearby Inn
 		quest::start(86);
+		#:: Give a small amount of xp
+		quest::exp(100);
+		#:: Ding!
+		quest::ding();
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
