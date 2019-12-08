@@ -121,8 +121,9 @@ sub EVENT_ITEM {
 			#:: Return a 12227 - Barbarian head
 			quest::summonitem(12227);
 		}
-	#:: Match a 12225 - Barbarian head Identifies as Paglan's Head
-	if (plugin::takeItems(12225 => 1)) {
+	}
+	#:: Match a 12225 - Barbarian head (Identifies as Paglan's Head)
+	elsif (plugin::takeItems(12225 => 1)) {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
 			quest::Say("Fine work! We've avenged our fellow Northmen and ye've earned yer Langseax. Wield it in the name o' Halas!");
@@ -148,8 +149,8 @@ sub EVENT_ITEM {
 			quest::summonitem(12225);
 		}
 	}
-}
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
+
 #:: Converted to Perl by SS
