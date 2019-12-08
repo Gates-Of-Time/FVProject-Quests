@@ -1,6 +1,6 @@
 sub EVENT_SPAWN {
 	#:: Set running true (run)
-	quest::setrunning(true);
+	quest::setrunning(1);
 }
 
 sub EVENT_SAY {
