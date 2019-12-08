@@ -3,7 +3,10 @@ sub EVENT_SAY {
 		quest::say("Welcome! Welcome to the Church o' the Tribunal! Do ye require healing or are ye [new to the Shamans o' Justice], then, eh?");
 	}
 	elsif ($text=~/new to the Shamans/i) {
-		quest::say("Then I welcome ye into our noble order. Ye'll serve us well or spend an eternity in the dungeons o' the Tribunal. Are ye willing to [contribute to our church] or did ye just come to meditate within our walls?");
+		quest::say("Then I welcome ye into our noble order. Ye'll serve us well or spend an eternity in the dungeons o' the Tribunal. Are ye willing to [contribute to our church] or did ye just come to [meditate] within our walls?");
+	}
+	elsif ($text=~/meditate/i) {
+		quest::say("Then find yerself a spot out o' the way. Please dinnae obstruct the paths of others who wish to pay tribute to the righteousness o' the Tribunal.");
 	}
 	elsif ($text=~/contribute to our church/i) {
 		quest::say("Ye'll help all o' Halas by doing the bidding o' this church. Go to Holana. Tell her Jinkus sent ye to assist her. She'll have work fer ye. Perhaps, if ye're planning on passing near Qeynos, ye can [make a delivery] as well?");
