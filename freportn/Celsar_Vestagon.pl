@@ -20,16 +20,18 @@ sub EVENT_ITEM {
 		quest::exp(200);
 		#:: Ding!
 		quest::ding();
+		#:: Choose random item Spell: Divine Aura - 207, Marr's Sustenance - 13869, potion of disease warding - 14003
+		quest::summonitem(quest::ChooseRandom(207,207,207,207,207,207,207,207,13869,14003));
 		#:: Create a hash for storing cash - 20 to 25cp
 		my %cash = plugin::RandomCash(20,25);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(281,1); 		#:: + Knights of Truth
-		quest::faction(362,-1); 	#:: - Priests of Marr
-		quest::faction(330,-1); 	#:: - Freeport Militia
-		quest::faction(271,1); 		#:: + Dismal Rage
-		quest::faction(311,1); 		#:: + Steel Warriors
+		quest::faction(281,20); 	#:: + Knights of Truth
+		quest::faction(362,4); 		#:: + Priests of Marr
+		quest::faction(330,-3); 	#:: - Freeport Militia
+		quest::faction(271,-3); 	#:: - Dismal Rage
+		quest::faction(311,2); 		#:: + Steel Warriors
 	}
 	#:: Return unused items
 	plugin::return_items(\%itemcount);
