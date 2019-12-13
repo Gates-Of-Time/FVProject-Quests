@@ -48,6 +48,6 @@ sub EVENT_SIGNAL {
 	if ($signal == 1) {
 		quest::say("Get out of here! It is time I dealt with this traitorous guard. Okay guard, let's get it on!!");
 		#:: Send a signal "1" to Eastern Plains of Karana >> #Guard_Elias (15193) with 5 second delay
-		quest::signal(15193, 1, 5);
+		quest::signalwith(15193, 1, 5);
 	}
 }
