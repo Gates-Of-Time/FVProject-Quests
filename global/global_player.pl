@@ -21,7 +21,7 @@ sub EVENT_ENTERZONE {
 	}
 	if ($name eq "TurmoilToad") {
 		quest::playerrace(27);
-		quest::playersize(7);
+		quest::playersize(6);
 	}
 }
 
@@ -75,16 +75,6 @@ sub EVENT_CONNECT {
 		quest::gmsay ("Account Name :: [".$client->AccountName()."] --- Status :: [".$status."] --- Client :: [".$clientverhash{$client->GetClientVersionBit()}."]", 11, 1);
 		quest::gmsay ("-----------------------------------------------------------------------------------------------", 14, 1);
 	}
-	$key = $charid . "-connected";
-	$value = time;
-	quest::set_data($key, $value);
-}
-
-sub EVENT_DISCONNECT {
-	$key = $charid . "-disconnected";
-	$value = time;
-	quest::set_data($key, $value);
-	DoMaths();
 }
 
 sub EVENT_SAY {
@@ -210,31 +200,4 @@ sub ConvertIP {
 	$longip /= 256;
 	my $convertedip = "$firstoctet.$secondoctet.$thirdoctet.$longip";
 	return $convertedip;
-}
-
-sub DoMaths {
-	my $ConnectedAt;
-	my $DisconnectedAt;
-	my $AddTimeServed;
-
-	$key = $charid . "-connected";
-	if (quest::get_data($key)) {
-		$ConnectedAt = quest::get_data($key);
-		quest::delete_data($key);
-	}
-	$key = $charid . "-disconnected";
-	if (quest::get_data($key)) {
-		$DisconnectedAt = quest::get_data($key);
-		quest::delete_data($key);
-	}
-	$AddTimeServed = $DisconnectedAt - $ConnectedAt;
-	$key = $charid . "-timeplayed";
-	if (quest::get_data($key)) {
-		$TimeServed = quest::get_data($key);
-		quest::set_data($key, $TimeServed + $AddTimeServed);
-	}
-	else {
-		quest::set_data($key, $AddTimeServed);
-	}
-	return;
 }
