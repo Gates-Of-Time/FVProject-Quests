@@ -75,10 +75,6 @@ sub EVENT_CONNECT {
 		quest::gmsay ("Account Name :: [".$client->AccountName()."] --- Status :: [".$status."] --- Client :: [".$clientverhash{$client->GetClientVersionBit()}."]", 11, 1);
 		quest::gmsay ("-----------------------------------------------------------------------------------------------", 14, 1);
 	}
-	$connect = plugin::LoadMysql();
-	$query = "SELECT `time_played` FROM `character_data` WHERE `id` = " . $charid . "";
-	$query_handle = $connect->prepare($query); $query_handle->execute();
-	$client->Message(15, $query);
 }
 
 sub EVENT_SAY {
