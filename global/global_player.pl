@@ -80,6 +80,12 @@ sub EVENT_CONNECT {
 	quest::set_data($key, $value);
 }
 
+sub EVENT_DISCONNECT {
+	$key = $client->CharacterID() . "-disconnected";
+	$value = time;
+	quest::set_data($key, $value);
+	DoMaths();
+}
 
 sub EVENT_SAY {
 	if ($status >= 80) {
@@ -206,13 +212,6 @@ sub ConvertIP {
 	return $convertedip;
 }
 
-sub EVENT_DISCONNECT {
-	$key = $client->CharacterID() . "-disconnected";
-	$value = time;
-	quest::set_data($key, $value);
-	DoMaths();
-}
-
 sub DoMaths {
 	my $ConnectedAt;
 	my $DisconnectedAt;
@@ -237,4 +236,5 @@ sub DoMaths {
 	else {
 		quest::set_data($key, $AddTimeServed);
 	}
+	return;
 }
