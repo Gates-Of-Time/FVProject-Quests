@@ -75,6 +75,9 @@ sub EVENT_CONNECT {
 		quest::gmsay ("Account Name :: [".$client->AccountName()."] --- Status :: [".$status."] --- Client :: [".$clientverhash{$client->GetClientVersionBit()}."]", 11, 1);
 		quest::gmsay ("-----------------------------------------------------------------------------------------------", 14, 1);
 	}
+	$key = $client->CharacterID() . "-connected";
+	$value = time;
+	quest::set_data($key, $value);
 }
 
 
@@ -201,4 +204,37 @@ sub ConvertIP {
 	$longip /= 256;
 	my $convertedip = "$firstoctet.$secondoctet.$thirdoctet.$longip";
 	return $convertedip;
+}
+
+sub EVENT_DISCONNECT {
+	$key = $client->CharacterID() . "-disconnected";
+	$value = time;
+	quest::set_data($key, $value);
+	DoMaths();
+}
+
+sub DoMaths {
+	my $ConnectedAt;
+	my $DisconnectedAt;
+	my $AddTimeServed;
+
+	$key = $client->CharacterID() . "-connected";
+	if (quest::get_data($key)) {
+		$ConnectedAt = quest::get_data($key);
+		quest::delete_data($key);
+	}
+	$key = $client->CharacterID() . "-disconnected";
+	if (quest::get_data($key)) {
+		$DisconnectedAt = quest::get_data($key);
+		quest::delete_data($key);
+	}
+	$AddTimeServed = $DisconnectedAt - $ConnectedAt;
+	$key = $client->CharacterID . "-timeplayed";
+	if (quest::get_data($key)) {
+		$TimeServed = quest::get_data($key);
+		quest::set_data($key, $TimeServed + $AddTimeServed);
+	}
+	else {
+		quest::set_data($key, $AddTimeServed);
+	}
 }
