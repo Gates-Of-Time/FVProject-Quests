@@ -17,7 +17,7 @@ sub EVENT_SAY {
 	if ($text=~/hail/i){
 		quest::ding();
 	}
-	elsif ($text=~/\w+/i) && $client {
+	elsif (($text=~/\w+/i) && $client) {
 		quest::say("$text");
 	}
 }
