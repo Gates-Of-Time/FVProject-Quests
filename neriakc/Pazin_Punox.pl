@@ -29,6 +29,8 @@ sub EVENT_ITEM {
 		quest::faction(263, -1);		#:: - Guardians of the Vale
 		quest::faction(262, -1);		#:: - Guards of Qeynos
 		quest::faction(320, -2);		#:: - Wolves of the North
+		#:: Grant a moderate amount of experience
+		quest::exp(1000);
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Rogue');
   	#:: Return unused items
