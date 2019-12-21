@@ -6,7 +6,10 @@ sub EVENT_COMBAT {
 }
 
 sub EVENT_SAY {
-	if ($text=~/scribe of dal/i) {
+	if ($text=~/hail/i) {
+		quest::say("I am the Scribe of Innoruuk. If you do not have business with me, begone!");
+	}
+	elsif ($text=~/scribe of dal/i) {
 		quest::say("The Scribes of Dal? All of them are long since [dead].. or at least most would say that.");
 	}
 	elsif ($text=~/dead/i) {
