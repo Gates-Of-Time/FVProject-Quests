@@ -40,6 +40,8 @@ sub EVENT_ITEM {
 			quest::faction(244, 10);		#:: + Ebon Mask
 			quest::faction(263, -1);		#:: - Guardians of the Vale
 			quest::faction(329, -2);		#:: - Carson McCabe
+			#:: Grant a moderate amount of experience
+			quest::exp(1000);
 			#:: Create a hash for storing cash - 75 to 100cp
 			my %cash = plugin::RandomCash(75,100);
 			#:: Grant a random cash reward
