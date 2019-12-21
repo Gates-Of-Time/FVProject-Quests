@@ -29,10 +29,12 @@ sub EVENT_ITEM {
 		quest::say("Take this note to the Scribe of Dal, and perhaps she will break her vow.");
 		#:: Give a 18200 - Note
 		quest::summonitem(18200);
+		#:: Ding!
+		quest::ding();
 		#:: Set factions
-		quest::faction(236, 10);	#:: + Dark Bargainers
-		quest::faction(334, 10);	#:: + Dreadguard Outer
-		quest::faction(370, 10);	#:: + Dreadguard Inner
+		quest::faction(236, 10);		#:: + Dark Bargainers
+		quest::faction(334, 1);			#:: + Dreadguard Outer
+		quest::faction(370, 1);			#:: + Dreadguard Inner
 		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
@@ -41,6 +43,8 @@ sub EVENT_ITEM {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
 			quest::say("Ah, yes, let me pray to our god.. Yes, Innoruuk has given me wisdom. A Scribe of Dal still exists, disguised as a barkeep in the Blind Fish. This information will not help you though, for she has sworn a [vow] of silence and will not speak of the Dal.");
+			#:: Ding!
+			quest::ding();
 			#:: Set factions
 			quest::faction(236, 40);	#:: + Dark Bargainers
 			quest::faction(334, 4);		#:: + Dreadguard Outer
@@ -62,6 +66,8 @@ sub EVENT_ITEM {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
 			quest::say("Ah, yes, let me pray to our god.. Yes, Innoruuk has given me wisdom. A Scribe of Dal still exists, disguised as a barkeep in the Blind Fish. This information will not help you though, for she has sworn a [vow] of silence and will not speak of the Dal.");
+			#:: Ding!
+			quest::ding();
 			#:: Set factions
 			quest::faction(236, 30);	#:: + Dark Bargainers
 			quest::faction(334, 3);		#:: + Dreadguard Outer
@@ -82,6 +88,8 @@ sub EVENT_ITEM {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
 			quest::say("Ah, yes, let me pray to our god.. Yes, Innoruuk has given me wisdom. A Scribe of Dal still exists, disguised as a barkeep in the Blind Fish. This information will not help you though, for she has sworn a [vow] of silence and will not speak of the Dal.");
+			#:: Ding!
+			quest::ding();
 			#:: Set factions
 			quest::faction(236, 20);	#:: + Dark Bargainers
 			quest::faction(334, 2);		#:: + Dreadguard Outer
@@ -101,6 +109,8 @@ sub EVENT_ITEM {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
 			quest::say("Ah, yes, let me pray to our god.. Yes, Innoruuk has given me wisdom. A Scribe of Dal still exists, disguised as a barkeep in the Blind Fish. This information will not help you though, for she has sworn a [vow] of silence and will not speak of the Dal.");
+			#:: Ding!
+			quest::ding();
 			#:: Set factions
 			quest::faction(236, 10);	#:: + Dark Bargainers
 			quest::faction(334, 1);		#:: + Dreadguard Outer
