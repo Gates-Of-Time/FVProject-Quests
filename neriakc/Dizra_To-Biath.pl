@@ -9,7 +9,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match two gold pieces
 	if (plugin::takeCoin(0, 0, 2, 0)) {
-		quest::say("Hoooray!");
+		quest::say("Oooh yes!! I just love a patron with an over abundance of gold.");
 		#:: Set a timer 'dance' that triggers every 2 seconds
 		quest::settimer("dance", 2);
 	}
