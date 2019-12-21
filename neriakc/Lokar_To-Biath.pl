@@ -9,14 +9,14 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("I am the Scribe of Innoruuk. If you do not have business with me, begone!");
 	}
+	elsif ($text=~/innoruuk/i) {
+		quest::say("I am his scribe, and He is our god. There is nothing else to be said.");
+	}
 	elsif ($text=~/scribe of dal/i) {
 		quest::say("The Scribes of Dal? All of them are long since [dead].. or at least most would say that.");
 	}
 	elsif ($text=~/dead/i) {
 		quest::say("Perhaps, perhaps not. I cannot remember, but perhaps Innoruuk would help me remember should you tithe him a bottle of red wine from the Blind Fish.");
-	}
-	elsif ($text=~/innoruuk/i) {
-		quest::say("I am his scribe, and He is our god. There is nothing else to be said.");
 	}
 	elsif ($text=~/vow/i) {
 		quest::say("Break the vow? She might. Were you to tithe 70 gold to your god, Innoruuk, he might aid you.");
