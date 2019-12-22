@@ -1,31 +1,35 @@
 sub EVENT_SPAWN {
-  $x = $npc->GetX();
-  $y = $npc->GetY();
-  quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Create a proximity, 100 units across, 100 units tall, without proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 0);
 }
 
 sub EVENT_ENTER {
-  if(plugin::check_hasitem($client, 18757)) { 
-		$client->Message(15,"Nezzka Tolax turns towards you. 'Welcome to the Lodge of the Dead. I am Nezzka Tolax and with my training you will learn to master teh ways of the Shadowknight. Read the note in your inventory and hand it to me when you are ready to begin your training.'");
-  }
+	#:: Match a 18757 - Tattered Note
+	if (plugin::check_hasitem($client, 18757)) { 
+		$client->Message(15,"Nezzka Tolax turns towards you. 'Welcome to the Lodge of the Dead. I am Nezzka Tolax and with my training you will learn to master the ways of the Shadowknight. Read the note in your inventory and hand it to me when you are ready to begin your training.'");
+	}
 }
 
 sub EVENT_ITEM {
-	if (plugin::check_handin(\%itemcount, 18757 => 1)) { #tattered note
-		quest::say("Hmmm, I hope you're tougher than you look. Here, put this on. Go find Ulraz, he'll beat you into shape. There's no turning back now, punk. So, you'd better do well, got it?");
+	#:: Match a 18757 - Tattered Note
+	if (plugin::takeItems(18757 => 1)) {
+		#:: Removed after 'Here, put this on.':  'Go find Ulraz, he'll beat you into shape.'
+		quest::say("Hmmm, I hope you're tougher than you look. Here, put this on. There's no turning back now, punk. So, you'd better do well, got it?");
+		#:: Ding!
 		quest::ding();
-		quest::summonitem(13586); #Black Training Tunic
-		quest::faction(239,100); #The Dead
-		quest::faction(303,15); #Queen Cristanos Thex
-		quest::faction(278,-15); #King Naythox Thex
-		quest::faction(275,-15); #Keeper of the Art
-		quest::faction(245,-15); #Eldritch Collective
-		quest::faction(1522,-200); #Primodial Malice
+		#:: Give a 13586 - Black Training Tunic*
+		quest::summonitem(13586);
+		#:: Set factions
+		quest::faction(239, 100);		#:: + The Dead
+		quest::faction(303, 15);		#:: + Queen Cristanos Thex
+		quest::faction(278, -15);		#:: - King Naythox Thex
+		quest::faction(275, -15);		#:: - Keepers of the Art
+		quest::faction(245, -15);		#:: - Eldritch Collective
+		quest::faction(1522, -200);		#:: - Primordial Malice
+		#:: Grant a small amount of experience
 		quest::exp(100);
-  }
-  #do all other handins first with plugin, then let it do disciplines
-  plugin::try_tome_handins(\%itemcount, $class, 'Shadowknight');
-  plugin::return_items(\%itemcount);
+	}
+	#:: plugin::try_tome_handins(\%itemcount, $class, 'Shadowknight');
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
-
-#END of FILE Zone:neriakc  ID:42069 -- Nezzka_Tolax
