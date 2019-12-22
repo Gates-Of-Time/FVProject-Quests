@@ -1,5 +1,5 @@
 sub EVENT_SAY { 
-	if ($text=~/hail/i){
+	if ($text=~/hail/i) {
 		quest::say("Greetings, disciple $name. Feel free to inspect my wares. I am here to serve all necromancers of the Dead. I can also enchant a [Ring of the Dead] if you have one.");
 	}
 	elsif ($text=~/ring of the dead/i) {
@@ -25,9 +25,12 @@ sub EVENT_ITEM {
 			quest::summonitem(13394, 1);
 		}
 		else {
-			quest::say("When you learn to serve The Dead, then I will find the time to speak of such things.");
+			#:: Made up text--likely items should be eaten
+			quest::say("When you learn to serve The Dead, then I will assist with such things.");
 			#:: Return a 13394 - Ring of the Dead with 0 charges
 			quest::summonitem(13394, 0);
+			#:: Return coin
+			quest::givecash($copper, $silver, $gold, $platinum);
 		}
 	}
 	#:: Return unused items
