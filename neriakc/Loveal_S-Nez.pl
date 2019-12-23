@@ -96,6 +96,31 @@ sub EVENT_ITEM {
 		}
 		#:: Else eat it.
 	}
+	#:: Match a 18889 - Sealed Letter
+	elsif (plugin::takeItems(18889 => 1)) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
+			quest::say("I see my expeditionary unit has encountered problems. I must send a dragoon unit to [Befallen] at once. I must not allow the Thex Mallet] to fall into the hands of some simple adventurer. Here is payment for your quick service.");
+			#:: Give a random reward:  13009 - Bandages, 13005 - Iron Ration, 13002 - Torch
+			quest::summonitem(quest::ChooseRandom(13009, 13005, 13002));
+			#:: Ding!
+			quest::ding();
+			#:: Set factions
+			quest::faction(239, 10);			#:: + The Dead
+			quest::faction(303, 1);				#:: + Queen Cristanos Thex
+			quest::faction(278, -1);			#:: - King Naythox Thex
+			quest::faction(275, -1);			#:: - Keepers of the Art
+			quest::faction(245, -1);			#:: - Eldritch Collective
+			quest::faction(1522, -20);			#:: - Primordial Malice
+			#:: Grant a small amount of experience
+			$client->AddLevelBasedExp(1, 16);
+			#:: Create a hash for storing cash - 1 to 10cp
+			my %cash = plugin::RandomCash(1,10);
+			#:: Grant a random cash reward
+			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		}
+		#:: Else eat it
+	}
   	#:: plugin::try_tome_handins(\%itemcount, $class, 'Shadowknight');
 	#:: Return unused items
 	plugin::returnUnusedItems();
