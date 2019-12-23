@@ -3,5 +3,5 @@ function event_spawn(e)
 end
 
 function event_enter(e)
-	e.other:MovePC(51, 2643, 2419, 97, 376.5);
+	e.other:MovePC(51, 2643, 2419, 97, 0);
 end
