@@ -3,5 +3,5 @@ sub EVENT_SPAWN {
  }
 
  sub EVENT_ENTER {
- 	quest::MovePCInstance(51, 0, 2643, 2419, 97, 376.5);
+ 	quest::MovePCInstance(51, 0, 2643, 2419, 97);
  }
