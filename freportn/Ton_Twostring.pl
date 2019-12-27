@@ -1,3 +1,10 @@
+sub EVENT_COMBAT {
+	#:: Match combat state 1 - entered combat
+	if ($combat_state == 1) {
+		quest::say("Die, like a motherless gnoll!");
+	}
+}
+
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Hail, $name--are you [interested] in helping the League of Antonican Bards by delivering some [mail]?");
@@ -8,17 +15,17 @@ sub EVENT_SAY {
 	elsif ($text=~/interested/i) {
 		quest::say("I have messages that need to go to Highpass, Kelethin, and Qeynos.  Will you deliver mail to [Kelethin], [Highpass], or [Qeynos] for me?");
 	}
-	elsif ($text=~/Kelethin/i) {
+	elsif ($text=~/kelethin/i) {
 		quest::say("Take this pouch to Idia in Kelethin.  You can find her at the bard guild hall.  I am sure she will compensate you for your troubles.");
 		#:: Summon 18167 - Pouch of Mail (Kelethin)
 		quest::summonitem(18167);
 	}
-	elsif ($text=~/Qeynos/i) {
+	elsif ($text=~/qeynos/i) {
 		quest::say("Take this pouch to Eve Marsinger in Qeynos.  You can find her at the bard guild hall.  I am sure she will compensate you for your troubles.");
 		#:: Summon 18165 - Pouch of Mail (Highpass)
 		quest::summonitem(18165);
 	}
-	elsif ($text=~/Highpass/i) {
+	elsif ($text=~/highpass/i) {
 		quest::say("Take this pouch to Lislia Goldtune in Highpass.  You can find her at the entrance to HighKeep.  I am sure she will compensate you for your troubles.");
 		#:: Summon 18156 - Pouch of Mail (Qeynos)
 		quest::summonitem(18156);
@@ -28,24 +35,28 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Turn in for 18164 or 18166 - both identify as Pouch of Mail (Freeport)
 	if (plugin::takeItems(18164 => 1 || 18166 => 1 )) {
-		quest::say("More mail - you have done us a noteworthy service!  Please take this gold for your troubles.  If you are interested in more work, just ask me.");
+		quest::say("Incoming mail - very good! Please take this gold for your troubles.");
 		#:: Give item 13556 - White and Blue Tunic*
 		quest::summonitem(13556);
 		#:: Ding!
 		quest::ding();
-		#:: Give a small amount of experience
+		#:: Set factions
+		quest::faction(284, 5);			#:: + League of Antonican Bards
+		quest::faction(281, 1);			#:: + Knights of Truth
+		quest::faction(262, 1);			#:: + Guard of Qeynos
+		quest::faction(304, -1);		#:: - Ring of Scale
+		quest::faction(285, -1);		#:: - Mayong Mistmoore
+		#:: Grant a small amount of experience
 		quest::exp(100);
-		#:: Create a hash for storing cash - 900 to 2000cp
-		my %cash = plugin::RandomCash(900,2000);
+		#:: Create a hash for storing cash - 850 to 1000cp
+		my %cash = plugin::RandomCash(850,1000);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set factions
-		quest::faction(284, 10);		#:: + League of Antonican Bards
-		quest::faction(281, 15);		#:: + Knights of Truth
-		quest::faction(262, -10);		#:: + Guard of Qeynos
-		quest::faction(304, -30);		#:: - Ring of Scale
-		quest::faction(285, -30);		#:: - Mayong Mistmoore
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
+}
+
+sub EVENT_DEATH_COMPLETE {
+	quest::say("My comrades will avenge my death.");
 }
