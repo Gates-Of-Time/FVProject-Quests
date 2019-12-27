@@ -8,8 +8,8 @@ sub EVENT_COMBAT {
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
-	#:: Match waypoint 7
-	if ($wp == 7) {
+	#:: Match waypoint 10
+	if ($wp == 10) {
 		quest::say("Yoohoo!");
 	}
 }
