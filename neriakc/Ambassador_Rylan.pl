@@ -6,3 +6,7 @@ sub EVENT_ITEM {
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
+
+sub EVENT_SLAY {
+	quest::say("Hardly a worthy adversary. A member of the Indigo Brotherhood deserves a much better opponent.");
+}
