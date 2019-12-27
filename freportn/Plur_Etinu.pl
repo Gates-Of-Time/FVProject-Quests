@@ -30,11 +30,8 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 	}		
-	#:: Create a scalar variable for storing money
-	my $cash = 0;
-	$cash = ($platinum * 1000) + ($gold * 100) + ($silver * 10) + $copper;
-	#:: Match 1000 copper - 10gp
-	if ($cash == 1000) {
+	#:: Match 10 gold pieces
+	elsif (plugin::takeCoin(0, 0, 10, 0)) {
 		quest::say("May the unbridled passion of Erollisi Marr flow through your body.");
 		#:: Cast spell 17 - Light Healing
 		$npc->CastSpell(17,$userid);
