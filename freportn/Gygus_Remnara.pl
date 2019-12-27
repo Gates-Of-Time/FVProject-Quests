@@ -12,12 +12,12 @@ sub EVENT_ITEM {
 		quest::summonitem(13556);
 		#:: Ding!
 		quest::ding();
-		#:: Give a small amount of xp
-		quest::exp(100);
 		#:: Set factions
 		quest::faction(362, 100); 	#:: + Priests of Marr
 		quest::faction(330, -10); 	#:: - The Freeport Militia
 		quest::faction(281, 15); 	#:: + Knights of Truth
+		#:: Grant a small amount of experience
+		quest::exp(100);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
