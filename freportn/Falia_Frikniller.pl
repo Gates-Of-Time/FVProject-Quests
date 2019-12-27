@@ -8,13 +8,13 @@ sub EVENT_ITEM {
 	#:: Turn in for 18925 - Letter to Falia
 	if (plugin::takeItems(18925 => 1)) {
 		quest::say("Heh, that good for nothing fool. I've been here for over a month already, and I haven't seen him yet. Bah, anyway, could you take this back to him for me? It was our grandfather's lucky necklace. He passed it down to our father, and now onto my brother. Knowing that little worm, Grenny, he'll probably trade it for a mug of ale. Oh well, thanks for delivering the letter, friend. Good day to you, and safe travels.");
-		#:: Ding!
-		quest::ding();
-		#:: Give a small amount of xp
-		quest::exp(500);
 		#:: Give item 13159 - Broken Heirloom Necklace
 		quest::summonitem(13159);
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(500);
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
