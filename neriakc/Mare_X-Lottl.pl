@@ -1,5 +1,19 @@
 my $count = 0;
 
+sub EVENT_COMBAT {
+	#:: Match combat state 1 - entered combat
+	if ($combat_state == 1) {
+		quest::say("Guards! Guards!");
+	}
+}
+
+sub EVENT_WAYPOINT_ARRIVE {
+	#:: Match waypoint 7
+	if ($wp == 7) {
+		quest::say("Yoohoo!");
+	}
+}
+
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Hello there. sweetie!!  How about letting me dance for you?  Two gold and I will do a little dance for you.");
@@ -19,8 +33,8 @@ sub EVENT_ITEM {
 	#:: Match two gold pieces
 	elsif (plugin::takeCoin(0, 0, 2, 0)) {
 		quest::say("Oooh yes!! I just love a patron with an over abundance of gold.");
-		#:: Set a timer 'dance' that triggers every 2 seconds
-		quest::settimer("dance", 2);
+		#:: Set a timer 'dance' that triggers every 3 seconds
+		quest::settimer("dance", 3);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
@@ -31,7 +45,7 @@ sub EVENT_TIMER {
 	if ($timer eq "dance") {
 		#:: Increment the counter
 		$count++;
-		if ($count < 10) {
+		if ($count < 5) {
 			#:: Do some dance moves
 			quest::doanim(quest::ChooseRandom(28, 36, 40, 42, 51, 52, 53, 58, 60, 62, 64, 70));
 		}
