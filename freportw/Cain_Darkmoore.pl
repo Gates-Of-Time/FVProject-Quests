@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail, $name We are the Steel Warriors of Freeport. Our training disciplines have created some of the finest warriors ever to walk upon Norrath. Perhaps the bards shall sing songs of you one day. Let your first mission be the extermination of [Clan Deathfist].");
+		quest::say("Hail, $name! We are the Steel Warriors of Freeport. Our training disciplines have created some of the finest warriors ever to walk upon Norrath. Perhaps the bards shall sing songs of you one day. Let your first mission be the extermination of [Clan Deathfist].");
 	}
 	elsif ($text=~/clan deathfist/i) {
 		quest::say("The orcs of the Commonlands call themselves Clan Deathfist. They have committed many vile acts upon the residents of the Commonlands as well as persons traveling to and from Freeport. They must be destroyed. Go forth to slay them. I shall pay a bounty for every two Deathfist belts. If you are a true warrior of the bunker then perhaps you can begin with [The Green and Blue].");
@@ -62,7 +62,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match a 13319 - Crushbone Shoulderpads x2 and 13917 Deathfist Shoulderpads x2
 	elsif (plugin::takeItems(13319 => 2, 13917 => 2)) {
-		quest::say("Very fine work, Name. With your help, we shall soon rid the commonlands of the orcs. Then we can move on to a [bigger problem]");
+		quest::say("Very fine work, $name. With your help, we shall soon rid the commonlands of the orcs. Then we can move on to a [bigger problem]");
 		#:: Give item 5369 - Bunker Battle Blade
 		quest::summonitem(5369);		
 		#:: Ding!
