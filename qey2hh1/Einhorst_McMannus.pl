@@ -24,8 +24,8 @@ sub EVENT_SAY {
      	}
 	if ($text=~/lion meat shipment/i) {
 		quest::say("Oh, yes, the lion meat shipment. Aye, it's here somewhere. Just a moment. Ah! Here you go. Apologize for the delay in this.");
-		#:: Give a 17946 - Lion Meat Shipment
-		quest::summonitem(17946);
+		#:: Give a 13961 - Lion Meat Shipment
+		quest::summonitem(13961);
 	}
 }
 	
