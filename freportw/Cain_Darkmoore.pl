@@ -60,6 +60,22 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
+	#:: Match a 13319 - Crushbone Shoulderpads x2 and 13917 Deathfist Shoulderpads x2
+	elsif (plugin::takeItems(13319 => 2, 13917 => 2)) {
+		quest::say("Very fine work, Name. With your help, we shall soon rid the commonlands of the orcs. Then we can move on to a [bigger problem]");
+		#:: Give item 5369 - Bunker Battle Blade
+		quest::summonitem(5369);		
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(330, -15); 			#:: - Freeport Militia
+		quest::faction(311, 100); 			#:: + Steel Warriors
+		quest::faction(230, -15); 			#:: - Corrupt Qeynos Guards
+		quest::faction(262, 20); 			#:: + Guards of Qeynos
+		quest::faction(281, 10); 			#:: + Knights of Truth
+		#:: Grant a small amount of experience
+		quest::exp(100);
+	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
