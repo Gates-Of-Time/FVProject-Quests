@@ -47,7 +47,7 @@ sub EVENT_ITEM {
 	if (plugin::takeCoin(0,0,10,0)) {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
-			quest::Say("The scales have been balanced and the Tribunal has spoken. Yer body shall be saved.");
+			quest::say("The scales have been balanced and the Tribunal has spoken. Yer body shall be saved.");
 			#:: Ding!
 			quest::ding();
 			#:: Cast 17 - Light Healing
@@ -63,7 +63,7 @@ sub EVENT_ITEM {
 	elsif (plugin::takeItems(13967 => 2)) {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
-			quest::Say("The scales have been balanced and the Tribunal has spoken. Yer body shall be saved.");
+			quest::say("The scales have been balanced and the Tribunal has spoken. Yer body shall be saved.");
 			#:: Ding!
 			quest::ding();
 			#:: Cast 213 - Cure Disease
@@ -80,7 +80,7 @@ sub EVENT_ITEM {
 	elsif (plugin::takeItems(13445 => 1)) {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
-			quest::Say("The scales have been balanced and the Tribunal has spoken. Yer body shall be saved.");
+			quest::say("The scales have been balanced and the Tribunal has spoken. Yer body shall be saved.");
 			#:: Ding!
 			quest::ding();
 			#:: Cast 203 - Cure Poison
@@ -96,7 +96,7 @@ sub EVENT_ITEM {
 	elsif (plugin::takeItems(13966 => 1)) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
-			quest::Say("Aye! Ye've filled the jar. I'll see to it that Holana locks this away. Tis difficult to obtain and we can only spare the talents of our young shamans. Allow me to give ye a reward. Thank ye kindly fer yer service.");
+			quest::say("Aye! Ye've filled the jar. I'll see to it that Holana locks this away. Tis difficult to obtain and we can only spare the talents of our young shamans. Allow me to give ye a reward. Thank ye kindly fer yer service.");
 			#:: Give a random reward: 15203 - Spell: Cure Poison, 15270 - Spell: Drowsy, 15271 - Spell: Fleeting Fury, 15275 - Spell: Frost Rift, 15036 - Spell: Gate, 15075 - Spell: Sicken
 			quest::summonitem(quest::ChooseRandom(15203, 15270, 15271, 15275, 15036, 15075));
 			#:: Ding!
