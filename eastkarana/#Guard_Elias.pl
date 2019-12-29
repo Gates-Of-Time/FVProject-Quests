@@ -12,7 +12,7 @@ sub EVENT_SIGNAL {
 	if ($signal == 1) {
 		quest::say("I thought you would never ask.");
 		#:: Attack Eastern Plains of Karana >> Milea_Clothspinner (15055)
-		quest::attack(15055);
+		quest::attacknpctype(15055);
 	}
 }
 
