@@ -1,9 +1,15 @@
-function event_spawn(e)
-	e.self:SetRunning(true);
-end
+sub EVENT_SPAWN {
+	#:: Running true (run)
+	quest::SetRunning(1);
+}
 
-function event_say(e)
-	if(e.message:findi("hail")) then
-		e.self:Say("No time to talk!! I must be on my way. I am in a race with the paladins from the Temple of Life.");
-	end
-end
+sub EVENT_SAY {
+	if ($text=~/hail/i) {
+		quest::say("No time to talk!! I must be off. The grains of sand are falling and I must prove that we paladins from the Temple of Thunder are the quickest.");
+	}
+}
+
+sub EVENT_ITEM {
+	#:: Return unused items
+	plugin::returnUnusedItems();
+}
