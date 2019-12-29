@@ -11,19 +11,18 @@ sub EVENT_SAY {
 	elsif ($text=~/proof/i) {
 		quest::say("Someone reported seeing a Plaguebringer roaming about in the hills near Qeynos. We have long suspected that their dark influence was spreading. I am searching for proof that they are now here in Qeynos. If you find anything, please bring it to me at the Temple of Life.");
 	}
-#:: This item was not discovered until c2005
-#::	#:: It is completely unclear what prompts you to ask this--I could find no history whatsoever
-#::	elsif ($text=~/niclaus/i) {
-#::		#:: Match if faction is Indifferent or worse
-#::		if ($faction => 5) {
-#::			quest::say("The Temple of Life smiles upon you, friend... but such a delicate matter can only be entrusted to our most loyal members.");
-#::		}
-#::		else {
-#::			quest::say("Niclaus Ressinn? Have you seen him? He is one of our paladins who was sent out to investigate the undead sightings in Qeynos Hills. I have a message from Jahnda for him, but I must continue my own search here in Qeynos. Could you take this to Niclaus? Your help would be appreciated.");
-#::			#:: Give a 18970 - Note to Niclaus
-#::			quest::summonitem(18970);
-#::		}
-#::	}
+	#:: It is completely unclear what prompts you to ask this--I could find no history whatsoever
+	elsif ($text=~/niclaus/i) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
+			quest::say("Niclaus Ressinn? Have you seen him? He is one of our paladins who was sent out to investigate the undead sightings in Qeynos Hills. I have a message from Jahnda for him, but I must continue my own search here in Qeynos. Could you take this to Niclaus? Your help would be appreciated.");
+			#:: Give a 18970 - Note to Niclaus
+			quest::summonitem(18970);
+		}
+		else {
+			quest::say("The Temple of Life smiles upon you, friend... but such a delicate matter can only be entrusted to our most loyal members.");
+		}
+	}
 }
 
 sub EVENT_ITEM {
