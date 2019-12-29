@@ -1,3 +1,9 @@
+sub EVENT_SAY {
+	if ($text=~/hail/i) {
+		quest::say("Greetings, I am Tizina.");
+	}
+}
+
 sub EVENT_ITEM {
 	#:: Match 50 gold pieces
 	if (plugin::takeCoin(0, 0, 50, 0)) {
