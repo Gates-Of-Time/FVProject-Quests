@@ -10,3 +10,7 @@ sub EVENT_TIMER {
 		quest::depop();
 	}
 }
+
+sub EVENT_DEATH_COMPLETE {
+	quest::say("You win! Well, off with my head, then!");
+}
