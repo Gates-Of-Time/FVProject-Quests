@@ -25,7 +25,7 @@ sub EVENT_SIGNAL {
 	if ($signal == 1) {
 		quest::say("As you try to open penetrate the stone wall it is clearly being held in place by a powerful force.");
 		#:: Attack Guard  Alayle
-		quest::attack(9141);
+		quest::attacknpctype(9141);
 		#:: Signal Guard Lithnon
 		quest::signalwith(9106,1,0);
 	}
