@@ -9,7 +9,7 @@ sub EVENT_SPAWN {
 sub EVENT_SIGNAL {
 	#:: Match a signal '1' from /guktop/a_saltwater_croc.pl or /guktop/an_ancient_croc.pl
 	if ($signal == 1) {
-		$CrocsUp = $CrocsUp--;
+		$CrocsUp--;
 		if ($CrocsUp == 0) {
 			quest::settimer("crocspawn", 795);
 		}
