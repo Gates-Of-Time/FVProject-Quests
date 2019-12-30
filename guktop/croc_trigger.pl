@@ -11,7 +11,7 @@ sub EVENT_SIGNAL {
 	if ($signal == 1) {
 		$CrocsUp--;
 		if ($CrocsUp == 0) {
-			quest::settimer("crocspawn", 6);
+			quest::settimer("crocspawn", 640);
 		}
 	}
 }
