@@ -1,5 +1,5 @@
 sub EVENT_SAY {
-	if ($text=~/coffin/i) {
+	if ($text=~/hail/i) {
 		quest::say("Greetings. I am Puab Closk, Master of the Ashen Order.  Our home is your home, friend. Feel free to stay as long as you like.  Learn our ways as many have done in the past.  To fight like the tiger and strike like the cobra are your goals.");
 	}
 	elsif ($text=~/treant fists/i) {
