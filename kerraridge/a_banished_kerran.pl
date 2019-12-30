@@ -2,6 +2,9 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Rrrrrr..  Away frrrom this isle of death and.. prrrr.. punishment.");
 	}
+	elsif ($text=~/Puab sent me/i) {
+		quest::say("Prrr... Master Puab? Show me prrroof");
+	}
 	elsif ($text=~/remains of thipt/i) {
 		quest::say("Clawknight Thipt wished to learn the ways of Ashen.  Prrr.. Together we go into green goblins' lair to train.  Prrr.. We find too many and he is too weak.  Separated and unable to find him, I hear his death cry.  Prr.. I cannot make it back, eyes upon me.  Now I must find one sent by Ashen to aid in the recoverrry of his remains.");
 	}
