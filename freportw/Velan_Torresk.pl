@@ -16,6 +16,7 @@ sub EVENT_SAY {
 		else {
 			quest::say("I have been watching you, and appreciate the help you've given to the brothers and sisters of the Ashen Order, but I feel that such a vital matter should be left to one of our more trusted members.");
 		}
+	}
 	elsif ($text=~/yellow sash of order/i) {
 		#:: Match if faction with Ashen Order is Amiable or better
 		if ($faction <= 4) {
