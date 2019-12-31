@@ -35,7 +35,7 @@ sub EVENT_WAYPOINT_ARRIVE {
 	}
 	#:: Match waypoint 23
 	elsif ($wp == 23) {
-		quest::say("Feeling a bit unlucky lately? Gnoll pups always picking on you? Fire beetles attacking you whenyou aren't looking? what you need is a lucky rat's foot necklace! Satisfaction guaranteed!");		
+		quest::say("Feeling a bit unlucky lately? Gnoll pups always picking on you? Fire beetles attacking you when you aren't looking? what you need is a lucky rat's foot necklace! Satisfaction guaranteed!");		
 	}
 	#:: Match waypoint 27
 	elsif ($wp == 27) {
