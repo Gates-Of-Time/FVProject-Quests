@@ -1,12 +1,12 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail. $name - Are you [" . quest::saylink("interested") . "] in helping the League of Antonican Bards by delivering some [" . quest::saylink("mail") . "]?");
+		quest::say("Hail. $name - Are you [interested] in helping the League of Antonican Bards by delivering some [mail]?");
 	}
 	elsif ($text=~/mail/i) {
-		quest::say("The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more distant offices.  Are you [" . quest::saylink("interested") . "]?");
+		quest::say("The League of Antonican Bards has a courier system made up of travelers and adventurers.  We pay good gold to anyone who will take messages from bards such as myself to one of our more distant offices.  Are you [interested]?");
 	}
 	elsif ($text=~/interested/i) {
-		quest::say("I have messages that need to go to Freeport and to Qeynos.  Will you [deliver] mail to [" . quest::saylink("Freeport") . "] or to [" . quest::saylink("Qeynos") . "] for me?");
+		quest::say("I have messages that need to go to Freeport and to Qeynos.  Will you [deliver] mail to [Freeport] or to [Qeynos] for me?");
 	}
 	elsif ($text=~/freeport/i) {
 		quest::say("Take this pouch of mail to Ton Twostring. You can find him at the bard guild hall. I'm sure he will compensate you for your trouble.");

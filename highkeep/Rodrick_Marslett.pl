@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Oooh.. Hello, [" . quest::saylink("guard") . "]. Please do not let the [" . quest::saylink("Teir'Dal") . "] at me again. I can take no more.");
+		quest::say("Oooh.. Hello, [guard]. Please do not let the [Teir'Dal] at me again. I can take no more.");
 	}
 	if ($text=~/Teir'Dal/i) {
 		quest::say("The Teir'Dal are what all elves call the dark elves, such as those vile torturers. I don't know what they are doing in Highpass.");

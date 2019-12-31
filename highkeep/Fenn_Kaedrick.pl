@@ -36,7 +36,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 12185 - Useless Token
 	if (plugin::takeItems(12185 => 1)) {
-		quest::say("So you are the one Laren sent. I myself was trained by Laren. Imagine that, a human trained by elven rogues. I share the concerns of the scouts. You were sent to assassinate [" . quest::saylink("Xentil Herkanon") . "]. He betrayed the scouts and Kelethin. He is somewhere in this keep. Return his head to Laren in Kelethin.");
+		quest::say("So you are the one Laren sent. I myself was trained by Laren. Imagine that, a human trained by elven rogues. I share the concerns of the scouts. You were sent to assassinate [Xentil Herkanon]. He betrayed the scouts and Kelethin. He is somewhere in this keep. Return his head to Laren in Kelethin.");
 		#:: Ding!
 		quest::ding();
 		#:: Grant a moderate amount of experience

@@ -3,7 +3,7 @@ sub EVENT_SAY {
 		quest::say("Greetings!!  Welcome to Highkeep. home of the greatest casino in all of Norrath.  Please visit our fine casino on the second floor.");
 	}
 	if ($text=~/highkeep lottery/i) {
-		quest::say("Interested in the Highkeep lottery, are we?  I am afraid it as been put on hold.  We found last season's winner to be holding a counterfeit ticket.  We now await [" . quest::saylink("last season's winner") . "] to step foward with the winning ticket - ticket number 16568.  His prize is the key to the royal suite.");
+		quest::say("Interested in the Highkeep lottery, are we?  I am afraid it as been put on hold.  We found last season's winner to be holding a counterfeit ticket.  We now await [last season's winner] to step foward with the winning ticket - ticket number 16568.  His prize is the key to the royal suite.");
 	}
 	if ($text=~/last season's winner/i) {
 		quest::say("Last season's winner is not known.  I have heard from my sources that he was some sort of merchant of used goods.");
