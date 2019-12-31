@@ -9,8 +9,8 @@ sub EVENT_SAY {
 		quest::say("If you do not know of Clan Deathfist go ask Cain who they are. He will not only tell you he will sign you up to help fight our war!");
 	}
 	elsif ($text=~/shipment/i) {
-		#:: Match if Class = Warrior
-		if ($class == 1) {
+		#:: Match if faction is amiable or better for Steel Warriors
+		if ($faction < 5) {
 			quest::say("We would be most thankful for your service. Please take this voucher over to Groflah at Groflahs Forge in North Freeport. He will give you the shipment of weapons.");
 			#:: Give item 18820 - Sealed Letter
 			quest::summonitem(18820);
