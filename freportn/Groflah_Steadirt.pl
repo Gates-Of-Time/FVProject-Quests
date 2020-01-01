@@ -28,6 +28,7 @@ sub EVENT_ITEM {
 		quest::faction(281, 10); 	#:: + Knights of Truth
 		#:: Grant a small amount of experience
 		quest::exp(500);
+	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }	
