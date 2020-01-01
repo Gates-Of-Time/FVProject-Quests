@@ -18,6 +18,8 @@ sub EVENT_SIGNAL {
 	if ($signal == 1) {
 		if ($Listener == 1) {
 			quest::say("Welcome Lady Isabella. You are always welcome at this table. As for your friend..");
+			#:: Send a signal '1' to High Keep >> Isabella_Cellus (6082) with no delay
+			quest::signalwith(6082, 1, 0);
 			#:: Send a signal '1' to High Keep >> Isabella_Cellus (6092) with no delay
 			quest::signalwith(6092, 1, 0);
 			#:: Send a signal '1' to High Keep >> Isabella_Cellus (6167) with no delay
