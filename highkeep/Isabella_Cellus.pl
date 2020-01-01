@@ -25,6 +25,13 @@ sub EVENT_WAYPOINT_ARRIVE {
 	}
 }
 
+sub EVENT_SIGNAL {
+	#:: Match a signal '1' from /highkeep/Dealer_Shonta.pl
+	if ($signal == 1) {
+		quest::say("This poor wretched man is no acquaintance of mine.");
+	}
+}
+
 sub EVENT_ITEM {
 	#:: Return unused items
 	plugin::returnUnusedItems();
