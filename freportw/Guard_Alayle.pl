@@ -36,11 +36,16 @@ sub EVENT_ITEM {
 }	
 
 sub EVENT_SIGNAL { 
-	#:: Receive Signal 1 from /freportw/Krazen_Loosh.pl
+	#:: Match a signal '1' from /freportw/Krazen_Loosh.pl
 	if ($signal == 1) {
 		quest::say("Oh no!! It is too late!! Run!!");
 		#:: Send a signal '1' to West Freeport >> Krazen_Loosh (9143) with a 5 second delay
 		quest::signalwith(9143, 1, 5); 
+	}
+	#:: Match a signal '2' from /freportw/Krazen_Loosh.pl
+	elsif ($signal == 2) {
+		#:: Send a signal '2' to West Freeport >> Krazen_Loosh (9143) with a 3 second delay
+		quest::signalwith(9143, 2, 3);
 	}
 }
 
