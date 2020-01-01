@@ -43,3 +43,7 @@ sub EVENT_SIGNAL {
 		quest::signal(9143, 1, 5); 
 	}
 }
+
+sub EVENT_DEATH_COMPLETE {
+	quest::say("My comrades will avenge my death.");
+}
