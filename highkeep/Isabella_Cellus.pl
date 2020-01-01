@@ -20,6 +20,8 @@ sub EVENT_WAYPOINT_ARRIVE {
 	#:: Match waypoint 16
 	elsif ($wp == 16) {
 		quest::say("I just adore this place.");
+		#:: Send a signal '1' to High Keep >> Dealer_Shonta (6064) with no delay
+		quest::signalwith(6064, 1, 0);
 	}
 }
 
