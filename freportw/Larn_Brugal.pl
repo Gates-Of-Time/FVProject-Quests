@@ -37,8 +37,8 @@ sub EVENT_ITEM {
 		quest::faction(281, 4); 	#:: + Knights of Truth
 		#:: Grant a small amount of experience
 		quest::exp(500);
-		#:: Create a hash for storing cash - 500 to 2000cp
-		my %cash = plugin::RandomCash(500,2000);
+		#:: Create a hash for storing cash - 50 to 100cp
+		my %cash = plugin::RandomCash(50,100);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
