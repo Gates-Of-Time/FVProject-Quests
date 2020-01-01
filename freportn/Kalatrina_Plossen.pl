@@ -33,10 +33,16 @@ sub EVENT_ITEM {
 		quest::say("Zimel's Blades?! Hmmmmm. It doesn't ring a bell and the remainder of the writing is too hard to make out. It kind of looks like a list of prices. You know, down at the Office of the People they might be able to tell us if this place exists. Go speak with Rashinda. She knows all about Freeport. If [Zimel's Blades] existed, you must report back to me what happened to it.");
 		#:: Ding!
 		quest::ding();
+		#:: Give item 18818 - a tattered flier
+		quest::summonitem(18818);
 		#:: Set faction
-		quest::faction(281,1); 		#:: + Knights of Truth
-		quest::faction(311,0); 	#:: + Steel Warriors
-		quest::faction(330,-1); 	#:: - Freeport Militia
+		quest::faction(281,1); 	#:: + Knights of Truth
+		quest::faction(271,-1); #:: - Dismal Rage
+		quest::faction(311,1); 	#:: + Steel Warriors
+		quest::faction(330,-1);	#:: - The Freeport Militia
+		quest::faction(362,1);	#:: + Priests of Marr
+		#:: Grant a small amount of experience
+		quest::exp(500);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
