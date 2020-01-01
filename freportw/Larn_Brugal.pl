@@ -25,18 +25,18 @@ sub EVENT_ITEM {
 	#:: Turn in for 12241 - Raw Short Sword 1, 12242 - Raw Short Sword 2, 12243 - Raw Short Sword 3, 12244 - Raw Short Sword 4
 	if (plugin::takeItems(12241 => 1, 12242 => 1, 12243 => 1, 12244 => 1)) {
 		quest::say("Good work, $name. The bunker shall be well stocked. Here you are, my friend. Take this raw blade. You can take it to Groflah - he will sharpen and polish it for you. It should be a formidable weapon.");
+		#:: Give a 13919 - Reward Raw Short Sword
+		quest::summonitem(13919);
 		#:: Ding!
 		quest::ding();
-		#:: Give item 13919 - Reward Raw Short Sword
-		quest::summonitem(13919);
-		#:: Give a small amount of experience
-		quest::exp(500);
 		#:: Set factions
-		quest::faction(311,20); #:: + Steel Warriors
-		quest::faction(262,4); 	#:: + Guards of Qeynos
-		quest::faction(230,-3); #:: - Corrupt Qeynos Guards
-		quest::faction(330,-3); #:: - The Freeport Militia
-		quest::faction(281,4); 	#:: + Knights of Truth
+		quest::faction(311, 20); 	#:: + Steel Warriors
+		quest::faction(262, 4); 	#:: + Guards of Qeynos
+		quest::faction(230, -3); 	#:: - Corrupt Qeynos Guards
+		quest::faction(330, -3); 	#:: - The Freeport Militia
+		quest::faction(281, 4); 	#:: + Knights of Truth
+		#:: Grant a small amount of experience
+		quest::exp(500);
 		#:: Create a hash for storing cash - 500 to 2000cp
 		my %cash = plugin::RandomCash(500,2000);
 		#:: Grant a random cash reward
@@ -44,5 +44,5 @@ sub EVENT_ITEM {
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
-		quest::say("This is only one sword. I requested four altogether. You shall not get your payment until I get my fourth sword");
+#:: 	quest::say("This is only one sword. I requested four altogether. You shall not get your payment until I get my fourth sword");
 }
