@@ -17,7 +17,7 @@ sub EVENT_SAY {
 			quest::say("I have been watching you, and appreciate the help you've given to the brothers and sisters of the Ashen Order, but I feel that such a vital matter should be left to one of our more trusted members.");
 		}
 	}
-	elsif ($text=~/yellow sash of order/i) {
+	elsif ($text=~/yellow/i) {
 		#:: Match if faction with Ashen Order is Amiable or better
 		if ($faction <= 4) {
 			quest::say("To earn the yellow sash, you must prove yourself to be very skilled in the art of fighting. The lands to the west and south of Freeport are filled with dangerous beasts that often prey upon innocent travelers. Help protect our merchant caravans and traveling citizens, while at the same time practicing your defensive skills, and eliminating these deadly creatures from the surrounding landscape. Bring me a giant snake rattle, a Deathfist slashed belt, the chitin of a desert tarantula, and turn in your white training sash, and I shall reward your noble work with our yellow Sash of Order. Good luck, $name!");
