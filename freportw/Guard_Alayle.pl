@@ -11,7 +11,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Turn in for 18817 - Sealed Letter
-	if (plugin::takeItems(1797 => 1)) {
+	if (plugin::takeItems(18817 => 1)) {
 		if ($class eq "Paladin") {
 			quest::say("This is not good news. I must leave immediately. Here. Take this to Kala.. I mean my father. I found it on the floor of Sir Lucan D'Lere's quarters. Thanks again, messenger. I got this just in time");
 			#:: Ding!
@@ -21,7 +21,7 @@ sub EVENT_ITEM {
 			#:: Set factions
 			quest::faction(311, 1);		#:: + Steel Warriors
 			quest::faction(262, 1);		#:: + Guards of Qeynos
-			quest::faction(230, -1);		#:: - Corrupt Qeynos Guards
+			quest::faction(230, -1);	#:: - Corrupt Qeynos Guards
 			quest::faction(330, -1);	#:: - Freeport Militia
 			quest::faction(281, 1);		#:: + Knights of Truth
 			#:: Spawn Krazen Loosh
