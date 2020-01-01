@@ -14,18 +14,18 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(18817 => 1)) {
 		if ($class eq "Paladin") {
 			quest::say("This is not good news. I must leave immediately. Here. Take this to Kala.. I mean my father. I found it on the floor of Sir Lucan D'Lere's quarters. Thanks again, messenger. I got this just in time");
-			#:: Ding!
-			quest::ding();
 			#:: Give a 18818 - A Tattered Flier
 			quest::summonitem(18818);
+			#:: Ding!
+			quest::ding();
 			#:: Set factions
 			quest::faction(311, 1);		#:: + Steel Warriors
 			quest::faction(262, 1);		#:: + Guards of Qeynos
 			quest::faction(230, -1);	#:: - Corrupt Qeynos Guards
 			quest::faction(330, -1);	#:: - Freeport Militia
 			quest::faction(281, 1);		#:: + Knights of Truth
-			#:: Spawn Krazen Loosh
-			quest::spawn2(9143,87,0,-154,-55,-10,128);
+			#:: Spawn West Freeport >> Krazen_Loosh (9143) on path grid 87
+			quest::spawn2(9143, 87, 0, -154, -55, -10, 128);
 		}
 		else {
 			quest::say("I have no use for this item, $name. You can have it back.");
@@ -36,10 +36,10 @@ sub EVENT_ITEM {
 }	
 
 sub EVENT_SIGNAL { 
-	#:: Receive Signal 1 from Krazen Loosh
+	#:: Receive Signal 1 from /freportw/Krazen_Loosh.pl
 	if ($signal == 1) {
 		quest::say("Oh no!! It is too late!! Run!!");
-		#Signal Krazen Loosh
-		quest::signal(9143,1,30000); 
+		#:: Send a signal '1' to West Freeport >> Krazen_Loosh (9143) with a 30 second delay
+		quest::signal(9143, 1, 30); 
 	}
 }
