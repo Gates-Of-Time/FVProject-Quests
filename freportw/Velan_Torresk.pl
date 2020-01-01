@@ -8,7 +8,7 @@ sub EVENT_SAY {
 	elsif ($text=~/sash/i) {
 		quest::say("The Sashes of Order are given out by the various trainers of our clan. I give out the [white training sash] and the [yellow Sash of Order], and Reyia is in charge of the orange and red sashes.");
 	}
-	elsif ($text=~/white training sash/i) {
+	elsif ($text=~/white training/i) {
 		#:: Match if faction with Ashen Order is Amiable or better
 		if ($faction <= 4) {
 			quest::say("The white training sash of the Ashen Order is awarded to our new members for completing a few simple tasks to prove their devotion to our clan. As you know, Freeport is a very hostile place, under constant attack from [orcs], wild beasts, and even the undead. To help keep this city and its citizens relatively safe, we must help the Militia protect the main gates. Bring me two Deathfist pawn scalps from those vile [Deathfist orcs], a snake fang, and some bone chips from a skeleton. Good luck, $name, represent us well!");
