@@ -1,5 +1,5 @@
 sub EVENT_SPAWN {
-	quest::settimer("ready",300000);
+	quest::settimer("ready",30);
 }
 
 sub EVENT_TIMER {
