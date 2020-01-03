@@ -5,17 +5,17 @@ sub EVENT_SAY {
 }
 
 sub EVENT_SIGNAL {
-	#:: Signal from freporte/Branis_Noolright.pl
-	if ($signal == 2) {
+	#:: Match signal '1' from /freporte/Branis_Noolright.pl
+	if ($signal == 1) {
 		quest::say("Those halfwit ogres make good pets. If they are housebroken.");
 	}
-	#:: Signal from freporte/Palana_Willin.pl
-	elsif ($signal == 4) {
+	#:: Match signal '2' from freporte/Palana_Willin.pl
+	elsif ($signal == 2) {
 		quest::say("The Teir'Dal cower to no one. We are the only true force to be reckoned with.");
 	}
 }
 
 sub EVENT_ITEM {
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
