@@ -24,8 +24,10 @@ sub EVENT_SIGNAL {
 		#:: Match singasong = 1
 		if ($singasong == 1) {
 			quest::say("Here's one for Sir Lucan... He's just a ruler. In a long line of rulers. Looking for a few more orcs to slay. They say that he fights them with one hand tied to his back. And he won't leave Freeport till you remember his name. Thank you.");
-			#:: Send a signal '3' to East Freeport >> Sir_Edwin_Motte (10199) with no delay
-			quest::signalwith(10199, 3, 0);
+			#:: Send a signal '1' to East Freeport >> Plnorrick_Spinecracker (10163) with no delay
+			quest::signalwith(10163, 1, 0);
+			#:: Send a signal '3' to East Freeport >> Talym_Shoontar (10182) with a three second delay
+			quest::signalwith(10163, 3, 3);
 		}
 		#:: Match singasong = 2
 		elsif ($singasong == 2) {
