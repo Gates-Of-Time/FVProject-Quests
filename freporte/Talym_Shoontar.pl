@@ -10,8 +10,12 @@ sub EVENT_SIGNAL {
 		quest::say("What kind of girly song was tha? It stank as bas as a troll's breath.");
 	}
 	#:: Match signal '2' from /freporte/Palana_Willin.pl
-	if ($signal == 2) {
+	elsif ($signal == 2) {
 		quest::say("Get off the stage, lass! Can't ye see he left because ye can't carry a tune?!");
+	}
+	#:: Match signal '3' from /freporte/Trolon_Lightleer.pl
+	elsif ($signal == 3) {
+		quest::say("Yeah!! Sir Lucan is nothing more than a glory monger.");
 	}
 }
 
