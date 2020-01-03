@@ -32,8 +32,6 @@ sub EVENT_SIGNAL {
 			quest::say("Look around you. Stand up tall!! Feel for the poor and never have a cold heart. Becausee we are all in this. We are not like the rest. We're all here together and know we are the best. So Norrath, can't you see the error in your ways? You're living separated each and every day. Don't be thinking that we don't want you, because, Norrath, we do. Freeport is the only place where your friend can be from afar. I hope you enjoyed that one.");
 			#:: Send a signal '1' to East Freeport >> Sir_Edwin_Motte (10199) with no delay
 			quest::signalwith(10199, 1, 0);
-			#:: Send a signal '1' to East Freeport >> Talym_Shoontar (10182) with a 3 second delay
-			quest::signalwith(10182, 1, 3);
 		}
 	}
 }
