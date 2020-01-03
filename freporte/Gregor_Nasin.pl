@@ -36,12 +36,12 @@ sub EVENT_ITEM {
 		quest::summonitem(13379);
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
-		quest::faction(336,1); 		#:: + Coalition of Tradefolk Underground
-		quest::faction(229,1);	 	#:: + Coalition of Trade Folk
-		quest::faction(329,1); 		#:: + Carson McCabe
-		quest::faction(230,1); 		#:: + Corrupt Qeynos Guards
-		quest::faction(330,1); 		#:: + Freeport Militia
+		#:: Set factions
+		quest::faction(336, 5); 		#:: + Coalition of Tradefolk Underground
+		quest::faction(229, 5);	 		#:: + Coalition of Trade Folk
+		quest::faction(329, 1); 		#:: + Carson McCabe
+		quest::faction(230, 1); 		#:: + Corrupt Qeynos Guards
+		quest::faction(330, 1); 		#:: + Freeport Militia
 		#:: Grant a small amount of experience
 		quest::exp(200);
 		#:: Create a hash for storing cash - 1000 to 2000cp
