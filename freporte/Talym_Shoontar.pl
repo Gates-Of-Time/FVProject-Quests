@@ -17,6 +17,18 @@ sub EVENT_SIGNAL {
 	elsif ($signal == 3) {
 		quest::say("Yeah!! Sir Lucan is nothing more than a glory monger.");
 	}
+	#:: Match a signal '4' from /freporte/Tlin_Bowfright.pl
+	elsif ($signal == 4) {
+		quest::say("Antonius Bayle is a blithering fool.");
+		#:: Send a signal '2' to East Freeport >> Tlin_Bowfright (10186) with no delay
+		quest::signalwith(10186, 2, 0);
+	}
+	#:: Match a signal '5' from /freporte/Tlin_Bowfright.pl
+	elsif ($signal == 5) {
+		quest::say("All right, Tlin! I am going to smash your face in!");
+		#:: Attack East Freeport >> Tlin_Bowfright (10186)
+		quest::attacknpctype(10186);
+	}
 }
 
 sub EVENT_ITEM {
