@@ -74,7 +74,7 @@ sub EVENT_ITEM {
 		if ($faction <= 5) {
 			quest::say("Good work!! Kylan will never know o' me negligence. I owe ye one, young warrior. Let's call it even with this. Twas found by one of our foraging parties. It is still useful. And... I believe ye can assist with a more [dangerous matter] as well");
 			#:: Give a random reward: 17001 - Wrist Pouch, 17002 - Belt Pouch, 17003 - Small Bag, 17009 - Purse
-			quest::summonitem::ChooseRandom(17001, 17002, 17003, 17004, 17009);
+			quest::summonitem(quest::ChooseRandom(17001, 17002, 17003, 17004, 17009));
 			#:: Ding!
 			quest::ding();
 			#:: Set Factions
@@ -101,7 +101,7 @@ sub EVENT_ITEM {
 		if ($faction <= 5) {
 			quest::say("Fine work! We've avenged our fellow Northmen and ye've earned yer Langseax. Wield it in the name o' Halas!");
 			#:: Give a random reward: 5367 - Langseax, 5368 - Langseax of the Wolves
-			quest::summonitem::ChooseRandom(5367, 5368);
+			quest::summonitem(quest::ChooseRandom(5367, 5368));
 			#:: Ding!
 			quest::ding();
 			#:: Set Factions
@@ -128,7 +128,7 @@ sub EVENT_ITEM {
 		if ($faction <= 5) {
 			quest::say("Fine work! We've avenged our fellow Northmen and ye've earned yer Langseax. Wield it in the name o' Halas!");
 			#:: Give a random reward: 5367 - Langseax, 5368 - Langseax of the Wolves
-			quest::summonitem::ChooseRandom(5367, 5368);
+			quest::summonitem(quest::ChooseRandom(5367, 5368));
 			#:: Ding!
 			quest::ding();
 			#:: Set Factions
