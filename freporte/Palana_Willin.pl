@@ -30,8 +30,8 @@ sub EVENT_SIGNAL {
 		}
 		elsif ($singasong == 2) {
 			quest::say("All clap and pass the ale. Sir Lucan is in charge so don't set sail. All clap and pass the ale. Sir Lucan is in charge and he shall never fail. He saved our fair city when the others had fled. Off on a crusade, or so they said. All clap  and pass the ale, Sir Lucan is in charge so don't you bail. All clap and pass the ale, Sir Lucan is in charge so sing or go to jail. All clap and pass the ale, Sir Lucan beat the orcs and next is Bayle. Thank you. I hope the Freeport citizens liked that one.");
-			#:: Send a signal '3' to East Freeport >> Sir_Edwin_Motte (10199) with no delay
-			quest::signalwith(10199, 3, 0);
+			#:: Send a signal '2' to East Freeport >> Sir_Edwin_Motte (10199) with no delay
+			quest::signalwith(10199, 2, 0);
 		}
 		elsif ($singasong == 3) {
 			quest::say("Here is one for my former lover, Joffrey Clay. You look the lute. It was my favorite one. A little white lute, and went off to Qeynos. You took the songs. They were all special ones. Packed them all up. Off to Qeynos. You killed the plant. Put it in a deep freeze. Dumped it in the trunk. With the rest of the refuse. You, left to Qeynos. You, left to Qeynos. You, left to Qeynos. You, left to Qeynos.");
