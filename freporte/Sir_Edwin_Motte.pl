@@ -5,25 +5,25 @@ sub EVENT_SAY {
 }
 
 sub EVENT_SIGNAL {
-	#:: Signal From Branis Noolright of East Freeport
+	#:: Match signal '1' from /freporte/Branis_Noolright.pl or /freporte/Trolon_Lightleer.pl or /freporte/Palana_Willin.pl
 	if ($signal == 1) {
 		quest::say("What is it with all this political revelry. Let's here more jests!");
 	}
-	#:: Signal From Branis Noolright of East Freeport & Signal From Palana Willin of East Freeport 
-	if ($signal == 3) {
+	#:: Match signal '2' from /freporte/Branis_Noolright.pl or /freporte/Trolon_Lightleer.pl or /freporte/Palana_Willin.pl
+	elsif ($signal == 2) {
 		quest::say("I say, that Sir Lucan is no man of nobility. So they say...");
 	}
-	#:: Signal From Palana Willin of East Freeport 
-	if ($signal == 4) {
+	#:: Missing dialogue to cause this
+	elsif ($signal == 3) {
 		quest::say("I say!! I have fought side by side with the great Antonius bayle. He is a man of supreme virtue.");
 	}
 	#:: Signal From Palana Willin of East Freeport 
-	if ($signal == 6) {
+	elsif ($signal == 4) {
 		quest::say("Bloody right, you are! Those fellows can't keep down any grog.");
 	}
 }
 
 sub EVENT_ITEM {
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
