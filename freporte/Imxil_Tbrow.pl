@@ -1,6 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("There are No greater circles of magic than those of the Teir'Dal.");
+		quest::say("I have no desire to speak with anyone. That includes you!");
+	}
+	elsif ($text=~/teir'dal/i) {
+		quest::say("The Teir'Dal are the dark elves. Such as I.");
 	}
 }
 
