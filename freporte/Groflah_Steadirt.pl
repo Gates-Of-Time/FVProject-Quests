@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Greetings, $class! Join in the [celebration]! Have a few drinks. Alas, there are no [Tumpy Tonics], $name");
+		quest::say("Greetings, $name! Join in the [celebration]! Have a few drinks. Alas, there are no [Tumpy Tonics].");
 	}
 	elsif ($text=~/celebration/i) {
 		quest::say("The Freeport Militia now has a bar to themselves. Luckily, it is not this one. Ahh... I tell you, I just don't feel up to much right now. I have had so much grog, my great grandma could best me!");
@@ -12,7 +12,7 @@ sub EVENT_SAY {
 		quest::say("While we were traveling through the Lavastorm Mountains, we happened upon a caravan. They wore emblems in honor of the evil god, Innoruuk. They did not see us, but we saw them. And most importantly of all, Ariska saw the apparent leader's sword. It was glowing with great energy. Suddenly, the evil knights were in a battle. The knights gave chase, leaving their camp unattended. The knight who owned the sword left it behind, opting to fight with another, leading me to believe it was not his to begin with. It was at this point that Ariska ran down and grabbed the sword. A few weeks later, we were to learn that the knight was a powerful man by the name of Pietro Zarn and that he was looking for a sword stolen from him. He called it .. Soulfire. I believe Zarn must have finally found Ariska.");
 	}
 	elsif ($text=~/tumpy tonics/i) {
-		quest::say("Ah a tumpy tonic, good drink indeed. They are made. Lets see if I can rememeber how to make them.  Ahh yes, ye take a kiola nut and stir it with water, wait a while and ya got it.  If you plan to make some then please by all means bring me one to try as I sure do miss them.");
+		quest::say("Tumpy Tonics are great!! I used to drink them often in a bar in Kaladim. Kind of glad they don't serve it here. I could not stop drinking them and they would always cause me to drain the dragon. I get tired of running to the docks for that reason.");
 	}
 }
 
