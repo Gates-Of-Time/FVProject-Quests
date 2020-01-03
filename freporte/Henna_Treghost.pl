@@ -38,9 +38,9 @@ sub EVENT_TIMER {
 
 sub bard_sing {
 	#:: Send a signal '1' to East Freeport >> Trolon_Lightleer (10141) with no delay
-	quest::signal(10141, 1, 0);
+	quest::signalwith(10141, 1, 0);
 	#:: Send a signal '1' to East Freeport >> Branis_Noolright (10158) with no delay
-	quest::signal(10158, 1, 0);
+	quest::signalwith(10158, 1, 0);
 	#:: Send a signal '1' to East Freeport >> Palana_Willin (10165) with no delay
-	quest::signal(10165, 1, 0);
+	quest::signalwith(10165, 1, 0);
 }
