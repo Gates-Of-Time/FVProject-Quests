@@ -5,7 +5,7 @@ sub EVENT_SPAWN {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Nice to meet you, $class. I hope you stay to hear my fine compositions, $name");
+		quest::say("Nice to meet you, $name. I hope you stay to hear my fine compositions.");
 	}
 }
 
