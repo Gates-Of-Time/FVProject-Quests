@@ -35,6 +35,11 @@ sub EVENT_SIGNAL {
 			#:: Send a signal '1' to East Freeport >> Sir_Edwin_Motte (10199) with no delay
 			quest::signalwith(10199, 1, 0);
 		}
+		elsif ($singasong == 3) {
+			quest::say("My city is mighty and all shall learn to cower. We are nothing less than the ultimate power. My city is pure and filled with beautiful charm. I shall conquer you to save you from harm. My city shall first send its guards to back you in times of need. Soon you shall learn to live under my laws, indeed. So bow down when you see me and give out my favorite cheer, 'All Hail Antonius Bail!' My city is Qeynos and there is nothing to fear.");
+			#:: Send a signal '1' to East Freeport >> Tlin_Bowfright (10186) with no delay
+			quest::signalwith(10186, 1, 0);
+		}
 	}
 }
 
