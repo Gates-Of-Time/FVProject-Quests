@@ -5,17 +5,17 @@ sub EVENT_SAY {
 }
 
 sub EVENT_SIGNAL {
-	#:: Signal From Branis Noolright of East Freeport
+	#:: Mising signal for this dialogue
 	if ($signal == 1) {
 		quest::say("What kind of girly song was tha? It stank as bas as a troll's breath.");
 	}
-	#:: Signal From Palana Willin of East Freeport 
-	if ($signal == 5) {
+	#:: Match signal '2' from /freporte/Palana_Willin.pl
+	if ($signal == 2) {
 		quest::say("Get off the stage, lass! Can't ye see he left because ye can't carry a tune?!");
 	}
 }
 
 sub EVENT_ITEM {
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
