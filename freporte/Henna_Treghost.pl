@@ -1,10 +1,10 @@
 sub EVENT_SPAWN {
-	#:: Set up a timer
-	quest::set_timer("sing", 1040);
+	#:: Create a timer 'sing' that loops every 1020 seconds (17 minutes)
+	quest::set_timer("sing", 1020);
 }
 
 sub EVENT_TIMER {
-	#:: Catch the "sing" timer
+	#:: Match timer 'sing'
 	if ($timer eq "sing") {
 		#:: Create a scalar to store a random
 		my $singit = quest::ChooseRandom(1,2,3,4,5,6);
@@ -37,10 +37,10 @@ sub EVENT_TIMER {
 }
 
 sub bard_sing {
-	#:: Send a signal to Trolong Lightleer
-	quest::signal(10141,1);
-	#:: Send a signal to Branis Noolright
-	quest::signal(10158,1);
-	#:: Send a signal to Palana_Willin
-	quest::signal(10165,1);
+	#:: Send a signal '1' to East Freeport >> Trolon_Lightleer (10141) with no delay
+	quest::signal(10141, 1, 0);
+	#:: Send a signal '1' to East Freeport >> Branis_Noolright (10158) with no delay
+	quest::signal(10158, 1, 0);
+	#:: Send a signal '1' to East Freeport >> Palana_Willin (10165) with no delay
+	quest::signal(10165, 1, 0);
 }
