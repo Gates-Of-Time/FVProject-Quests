@@ -38,8 +38,8 @@ sub EVENT_SIGNAL {
 		#:: Match singasong = 3
 		elsif ($singasong == 3) {
 			quest::say("All clap and pass the ale. Sir Lucan is in charge so don't set sail. All clap and pass the ale. Sir Lucan is in charge and he shall never fail. He saved our fair city when the others had fled. Off on a crusade, or so they said. All clap and pass the ale, Sir Lucan is in charge so don't you bail. All clap and pass the ale, Sir Lucan is in charge so sing or go to jail. All clap and pass the ale, Sir Lucan beat the orcs and next is Bayle. Thank you. I hope the Freeport citizens liked that one.");
-			#:: Send a signal '1' to East Freeport >> Sir_Edwin_Motte (10199) with no delay
-			quest::signalwith(10199, 1, 0);
+			#:: Send a signal '3' to East Freeport >> Sir_Edwin_Motte (10199) with no delay
+			quest::signalwith(10199, 3, 0);
 		}
 	}
 }
