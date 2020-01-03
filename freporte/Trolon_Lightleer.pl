@@ -1,6 +1,6 @@
 sub EVENT_SPAWN {
-	#:: Create a timer 'ready' that loops every 300 seconds (5 minutes)
-	quest::set_timer("ready", 300);
+	#:: Create a timer 'ready' that loops every 30 seconds
+	quest::set_timer("ready", 30);
 }
 
 sub EVENT_SAY {
@@ -13,7 +13,6 @@ sub EVENT_TIMER {
 	#:: Match timer 'ready'
 	if ($timer eq "ready") {
 		quest::say("What a cheerful crowd.");
-		quest::stoptimer("ready");
 	}
 }
 
