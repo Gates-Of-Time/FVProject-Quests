@@ -1,6 +1,9 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hello $name, I hope your hunt is going well.");
+		quest::say("How are you, friend? It is a good day to be alive in Antonica! If you should happen to visit Surefall Glade, say hello to [Hager Sureshot] for me.");
+	}
+	elsif ($text=~/hager sureshot/i) {
+		quest::say("Hager Sureshot is that know-nothing ranger in charge of the Protectors of the Pine. He thinks he can protect all of Surefall Glade. He is wrong.");
 	}
 }
 
