@@ -1,6 +1,6 @@
 sub EVENT_SPAWN {
 	#:: Create a timer 'sing' that loops every 120 seconds (2 minutes)
-	quest::set_timer("sing", 120);
+	quest::settimer("sing", 120);
 }
 
 sub EVENT_TIMER {
