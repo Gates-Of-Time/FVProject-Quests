@@ -30,16 +30,16 @@ sub EVENT_COMBAT {
 		quest::say("Fer Halas!! One more victory fer the Wolves o' the North!!");
 	}
 }
-	
+
 sub EVENT_SIGNAL {
 	#:: Match a signal '1' from /everfrost/Iceberg.pl
 	if ($signal == 1) {
-		#:: Create a scalar variable to store the entity ID of Everfrost Peaks >> Iceberg (30062)
 		my $iceberg = $entity_list->GetMobByNpcTypeID(30062);
-		my $follow_target = $iceberg->GetID();
-		#:: Follow Everfrost Peaks >> Iceberg (30062)
-		quest::follow($follow_target);
-		quest::say("On my way, Iceberg!!");
+		if ($iceberg->CalculateDistance($x, $y, $z) > 100) {
+			my $follow_target = $iceberg->GetID();
+			quest::follow($follow_target);
+			quest::say("On my way, Iceberg!!");
+		}
 	}
 	#:: Match a signal '2' from /everfrost/Iceberg.pl
 	elsif ($signal == 2) {
