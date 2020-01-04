@@ -1,22 +1,23 @@
 sub EVENT_SPAWN {
-	#:: Create a timer 'follow' that loops every 30 seconds
-	quest::settimer("follow", 30);
+	#:: Create a timer 'follow' that loops every 10 seconds
+	quest::settimer("follow", 10);
 }
 
 sub EVENT_TIMER {
 	#:: Create a scalar variable to store the entity ID of Everfrost Peaks >> Tundra_Jack (30061)
 	my $tundrajack = $entity_list->GetMobByNpcTypeID(30061);
+	my $follow_target = $tundrajack->GetID();
 	#:: Match the timer 'follow'
 	if ($timer eq "follow") {
 		#:: Follow Tundra Jack
-		quest::follow($tundrajack);
+		quest::follow($follow_target);
 	}
 }
 
 sub EVENT_COMBAT {
 	#:: Match combat_state 1 (true) for entered combat
 	if ($combat_state == 1) {
-		quest::say("Grrroarrr !!");
+		quest::say("Grrroarrr!!");
 		#:: Send a signal '1' to Everfrost Peaks >> Tundra_Jack (30061) with no delay
 		quest::signalwith(30061, 1, 0);
 	}
