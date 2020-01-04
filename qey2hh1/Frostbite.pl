@@ -13,7 +13,7 @@ sub EVENT_ITEM {
 		quest::ding();
 	}
 	#:: Match a 12226 - Sweaty Shirt
-	elsif (plugin::takeItems(12226)) {
+	elsif (plugin::takeItems(12226 => 1)) {
 		quest::emote("takes a whiff of the sweaty shirt and barks.");
 		#:: Create a timer "follow" that loops every 15 seconds
 		quest::settimer("follow", 15);
