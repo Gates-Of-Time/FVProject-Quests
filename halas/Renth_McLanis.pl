@@ -100,8 +100,8 @@ sub EVENT_ITEM {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
 			quest::say("Fine work! We've avenged our fellow Northmen and ye've earned yer Langseax. Wield it in the name o' Halas!");
-			#:: Give a random reward: 5367 - Langseax, 5368 - Langseax of the Wolves
-			quest::summonitem(quest::ChooseRandom(5367, 5368));
+			#:: Give a reward: 5367
+			quest::summonitem(5367);
 			#:: Ding!
 			quest::ding();
 			#:: Set Factions
@@ -126,9 +126,9 @@ sub EVENT_ITEM {
 	elsif (plugin::takeItems(12225 => 1)) {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
-			quest::say("Fine work! We've avenged our fellow Northmen and ye've earned yer Langseax. Wield it in the name o' Halas!");
-			#:: Give a random reward: 5367 - Langseax, 5368 - Langseax of the Wolves
-			quest::summonitem(quest::ChooseRandom(5367, 5368));
+			quest::say("Incredible! We’d heard Paglan was killed attempting to cross an ice floe! It appears his escape was for naught, Ye’ve earned something greater than a mere Langseax. Ye’ve earned the Langseax o’ the Wolves. Tis an enchanted weapon meant for a warrior’s skill only. The Tribunal will watch over ye.");
+			#:: Give a reward: 5368 - Langseax of the Wolves
+			quest::summonitem(5368);
 			#:: Ding!
 			quest::ding();
 			#:: Set Factions
