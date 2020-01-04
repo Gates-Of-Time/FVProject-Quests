@@ -7,11 +7,23 @@ sub EVENT_SAY {
 		if ($faction <= 4) {
 			quest::say("Why do you ask? I know why. Glory has captured your affections. Those who seek glory find death. Still, you may be of some use. Before I assign you a task, I must be assured of your power. I require you to [perform a test].");
 		}
+		elsif ($faction == 5) {
+			quest::say("When you learn to serve the Dead, then I will find the time to speak of such things.");
+		}
+		else {
+			quest::say("How dare you enter my presence?!  In the name of the Dead I should strike you down!");
+		}
 	}
 	elsif ($text=~/perform a test/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
 			quest::say("In the Lavastorm Mountain Range there have been sightings of a paladin, one Sir Lindeal. He has compromised our routes between.. well, that is none of your concern. All you need to know is that this paladin of the Temple of Marr must be sent to his everlasting life. Do so and prove your worth to us. I await your proof. Use no assistance. If you are truly his equal then I shall know. I know all.");
+		}
+		elsif ($faction == 5) {
+			quest::say("When you learn to serve the Dead, then I will find the time to speak of such things.");
+		}
+		else {
+			quest::say("How dare you enter my presence?!  In the name of the Dead I should strike you down!");
 		}
 	}
 	elsif ($text=~/appointed tasks/i) {
@@ -19,11 +31,23 @@ sub EVENT_SAY {
 		if ($faction <= 4) {
 			quest::say("Very well. You have gained the appropriate power. I require you to journey to the Commonlands and seek out Kizdean Gix. He is a member of a very important force. Tell him 'Utalk Adarev Otcin'. Remember this password.");
 		}
+		elsif ($faction == 5) {
+			quest::say("When you learn to serve the Dead, then I will find the time to speak of such things.");
+		}
+		else {
+			quest::say("How dare you enter my presence?!  In the name of the Dead I should strike you down!");
+		}
 	}
 	elsif ($text=~/thex mallet/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
 			quest::say("All you can know is that the Thex Mallet is desired by our Queen. If we are not successful in its retrieval, it will be our heads which adorn her trophy room. We have learned its location and believe it to be broken into three separate pieces.");
+		}
+		elsif ($faction == 5) {
+			quest::say("When you learn to serve the Dead, then I will find the time to speak of such things.");
+		}
+		else {
+			quest::say("How dare you enter my presence?!  In the name of the Dead I should strike you down!");
 		}
 	}
 	elsif ($text=~/queen cristanos thex/i) {
