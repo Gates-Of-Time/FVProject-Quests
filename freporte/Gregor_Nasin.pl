@@ -54,5 +54,8 @@ sub EVENT_ITEM {
 }
 
 sub EVENT_SIGNAL {
-	quest::say("Thank you, Brunar. You are some kind of fisherman! I better take this down to the storeroom with your earlier catches before it spoils.. hmm.. a little later.");	
+	#:: Match signal '1' from /freporte/Brunar_Rankin.pl
+	if ($signal == 1) {
+		quest::say("Thank you, Brunar. You are some kind of fisherman! I better take this down to the storeroom with your earlier catches before it spoils.. hmm.. a little later.");	
+	}
 }
