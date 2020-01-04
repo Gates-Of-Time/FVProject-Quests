@@ -7,7 +7,7 @@ sub EVENT_SAY {
 sub EVENT_SIGNAL {
 	#:: Match signal '1' from /freporte/Branis_Noolright.pl or /freporte/Trolon_Lightleer.pl or /freporte/Palana_Willin.pl
 	if ($signal == 1) {
-		quest::say("What is it with all this political revelry. Let's here more jests!");
+		quest::say("What is it with all this political revelry. Let's hear more jests!");
 	}
 	#:: Match signal '2' from /freporte/Branis_Noolright.pl or /freporte/Trolon_Lightleer.pl or /freporte/Palana_Willin.pl
 	elsif ($signal == 2) {
