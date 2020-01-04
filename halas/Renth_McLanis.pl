@@ -100,7 +100,7 @@ sub EVENT_ITEM {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
 			quest::say("Fine work! We've avenged our fellow Northmen and ye've earned yer Langseax. Wield it in the name o' Halas!");
-			#:: Give a reward: 5367
+			#:: Give a 5367 - Langseax
 			quest::summonitem(5367);
 			#:: Ding!
 			quest::ding();
@@ -127,7 +127,7 @@ sub EVENT_ITEM {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
 			quest::say("Incredible! We’d heard Paglan was killed attempting to cross an ice floe! It appears his escape was for naught, Ye’ve earned something greater than a mere Langseax. Ye’ve earned the Langseax o’ the Wolves. Tis an enchanted weapon meant for a warrior’s skill only. The Tribunal will watch over ye.");
-			#:: Give a reward: 5368 - Langseax of the Wolves
+			#:: Give a 5368 - Langseax of the Wolves
 			quest::summonitem(5368);
 			#:: Ding!
 			quest::ding();
