@@ -9,8 +9,8 @@ sub EVENT_TIMER {
 	my $follow_target = $tundrajack->GetID();
 	#:: Match the timer 'follow'
 	if ($timer eq "follow") {
-		#:: Follow Tundra Jack
-		quest::follow($follow_target);
+		#:: Follow Tundra Jack at 20 units
+		quest::follow($follow_target, 20);
 	}
 }
 
