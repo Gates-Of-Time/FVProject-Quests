@@ -6,7 +6,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match 200 copper coins - 2gp
-	if (plugin::takeCoin(200)) {
+	if (plugin::takeCoin(0, 0, 2, 0)) {
 		quest::say("Rat spittle! Busted another string! You seem like a good music loving citizen, could you please run to the Wind Spirit's Song and grab me a fresh set of lute strings?");
 		#:: Ding!
 		quest::ding();
