@@ -5,20 +5,20 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Turn in for 18856 -  A tattered Note
-	if (plugin::check_handin(\%itemcount, 18856 => 1)) {
+	#:: Match a 18856 - A tattered Note
+	if (plugin::takeItems(18856 => 1)) {
 		quest::say("Hey, Nex, we got another sucker.. er.. volunteer, that is, to help us out around here. Here ya go friend, put this on and let's whip you into shape.");
 		#:: Give item 13566 - Blood Spotted Robe*
 		quest::summonitem(13566);
-		#:: Give a small amount of xp
-		quest::exp(100);
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
-		quest::faction(271,100); 	#:: + Dismal Rage
-		quest::faction(281,-15); 	#:: - Knights of Truth
-		quest::faction(296,20); 	#:: + Opal Dark Briar
+		#:: Set factions
+		quest::faction(271, 100); 		#:: + Dismal Rage
+		quest::faction(281, -15); 		#:: - Knights of Truth
+		quest::faction(296, 20); 		#:: + Opal Dark Briar
+		#:: Grant a small amount of experience
+		quest::exp(100);
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
