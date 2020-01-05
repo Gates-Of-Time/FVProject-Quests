@@ -6,7 +6,7 @@ sub EVENT_SAY {
 
 sub EVENT_SIGNAL {
 	#:: Match a signal '1' from /freporte/Trolon_Lightleer.pl
-	if (signal == 1) {
+	if ($signal == 1) {
 		quest::say("Sir Lucan is only a human. He is weak. I can smash him.");
 	}
 }
