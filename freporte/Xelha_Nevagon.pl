@@ -104,8 +104,8 @@ sub EVENT_ITEM {
 	}
 	#:: Match a 13927 - Cyclops Eye
 	elsif (plugin::takeItems(13927 => 1)) {
-		#:: Match if faction is Indifferent or better
-		if ($faction <= 5) {
+		#:: Match if faction is Kindly or better
+		if ($faction <= 3) {
 			quest::say("A cyclops eye!! You are stronger than I believed. You will rise in the ranks of the Dismal Rage quickly with acts such as this!! I am most appreciative! Here, take this. It was lying around my shelves, just gettingg all dusty. I hope you can use it. And watch yourself in your journeys, the aura of your faith in Innoruuk surrounds you like a shroud. Our enemies will surely see you for what you are.");
 			#:: Ding!
 			quest::ding();
@@ -121,8 +121,7 @@ sub EVENT_ITEM {
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		}
 		else {
-			#:: Made up
-			quest::say("You are no ally of the Dismal Rage.  Run while you still have legs!!");
+			quest::say("I will do nothing to aid beings like you.");
 			#:: Return a 13927 - Cyclops Eye
 			quest::summonitem(13927);
 		}
