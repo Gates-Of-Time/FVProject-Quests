@@ -32,7 +32,7 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(22293, 22294, 22295, 22296, 22297, 22298, 22299));
 	}
 	#:: Match any Card other than King or Joker 
-	elsif (plugin::takeItems(22299 => 1)) || (plugin::takeItems(22297 => 1)) || (plugin::takeItems(22296 => 1)) || (plugin::takeItems(22294 => 1)) || (plugin::takeItems(22293 => 1))) {
+	elsif ((plugin::takeItems(22299 => 1)) || (plugin::takeItems(22297 => 1)) || (plugin::takeItems(22296 => 1)) || (plugin::takeItems(22294 => 1)) || (plugin::takeItems(22293 => 1))) {
 		quest::say("Bad luck must be one of your strong suits. You should have been a beggar because you sure aren't a very good $class. You lose! $name");
 	}
 	#:: Match a 22295 -  Joker Card
