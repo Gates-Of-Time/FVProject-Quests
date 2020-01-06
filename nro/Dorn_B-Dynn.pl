@@ -17,6 +17,7 @@ sub EVENT_SAY {
 			quest::say("So you were sent by Zimbittle. Take this note to Kraagia of Da Bashers in Grobb. Do not lose the note. If it were to fall into the wrong hands of [" . quest::saylink("Goonda") . "], this whole plan could be disrupted. Now, leave, I can no longer tolerate you foul stench!");
 			#:: 18886 - A Sealed Letter (Letter from The Dead)
 			quest::summonitem(18886);
+		}
 	}
 	elsif ($text=~/goonda/i) {
 		quest::say("In the western planes of Karana, you will find Goonda. He seems to be the Ogre shaman in charge out there.");
