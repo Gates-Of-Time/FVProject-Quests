@@ -2,18 +2,23 @@ sub EVENT_WAYPOINT_ARRIVE {
 	#:: Match at waypoint 2, 9, 14, 21, and 24
 	if (($wp eq 2) || ($wp eq 9) || ($wp eq 14) || ($wp eq 21) || ($wp eq 24)) {
 		quest::say("Ember?!  Ember?!  Where are you, girl?!");
-		#:: Send a signal to Ember - (misty)
-		quest::signal(33065);
+		#:: Send a signal '1' to Misty Thicket >> Ember (33065) with no delay
+		quest::signal(33065, 1, 0);
 	}
 }
 
 sub EVENT_SIGNAL {
-	#:: Signal sent from Ember.pl
-	quest::say("There you are!  Stay close to me, girl.");
+	#:: Match a signal '1' from /misty/Ember.pl
+	if ($signal == 1) {
+		quest::say("There you are!  Stay close to me, girl.");
+	}
 }
 
 sub EVENT_COMBAT {
-	quest::say("What do you think you are doing?!?");
+	#:: Match combat_state 1 (true) for entered combat
+	if ($combat_state == 1) {
+		quest::say("What do you think you are doing?!?");
+	}
 }
 
 sub EVENT_SAY { 
@@ -55,21 +60,21 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(14010,13281,13280,14015,16875));
 		#:: Ding!
 		quest::ding();
-		#:: Give a small amount of experience
+		#:: Set factions
+		quest::faction(292, 12);		#:: + Merchants of Rivervale
+		quest::faction(241, 12);		#:: + Deeppockets
+		quest::faction(263, 12);		#:: + Guardians of the Vale
+		quest::faction(286, 12);		#:: + Mayor Gubbin
+		quest::faction(336, -15);		#:: - Coalition of Tradefolk Underground
+		#:: Grant a small amount of experience
 		quest::exp(65);
 		#:: Create a hash for storing cash - 350 to 400cp
 		my %cash = plugin::RandomCash(350,400);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set factions
-		quest::faction(292, 12);	#:: + Merchants of Rivervale
-		quest::faction(241, 12);		#:: + Deeppockets
-		quest::faction(263, 12);	#:: + Guardians of the Vale
-		quest::faction(286, 12);	#:: + Mayor Gubbin
-		quest::faction(336, -15);	#:: - Coalition of Tradefolk Underground
 	}
 	#:: Match a 13268 - Complete Bug Collection
-	elsif (plugin::takeItems(13268 => 1) {
+	elsif (plugin::takeItems(13268 => 1)) {
 		quest::say("Oh you have a complete collection for me?! Good! Good! Well done. But remember that I need the complete bug collection and you must return my want list before I can pay you.");
 		#:: Return the 13268 - Complete Bug Collection
 		quest::summonitem(13268);
