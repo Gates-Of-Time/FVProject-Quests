@@ -12,7 +12,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match three gold pieces
-	if (plugin::takeCoin(0, 0, 3, 0) {
+	if (plugin::takeCoin(0, 0, 3, 0)) {
 		quest::say("May your body and soul be rejuvenated.");
 		#:: Cast 17 - Light Healing
 		$npc->CastSpell(17,$userid);
