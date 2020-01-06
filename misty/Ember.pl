@@ -14,8 +14,10 @@ sub EVENT_TIMER {
 }
 
 sub EVENT_SIGNAL {
-	#:: Signal sent from Blixkin_Entopop.pl
-	quest::emote("clicks at Blixkin happily.");
-	#:: Send a signal to 33066 - Blixkin_Entopop - (misty)
-	quest::signal(33066);
+	#:: Match a signal '1' from /misty/Blixkin_Entopop.pl
+	if ($signal == 1) {
+		quest::emote("clicks at Blixkin happily.");
+		#:: Send a signal '1' to Misty Thicket >> Blixkin_Entopop (33066) with no delay
+		quest::signalwith(33066, 1, 0);
+	}
 }
