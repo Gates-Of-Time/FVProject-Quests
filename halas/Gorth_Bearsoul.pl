@@ -12,7 +12,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match 500 gold pieces
-	if (plugin::takeCoin(0, 0, 500, 0) {
+	if (plugin::takeCoin(0, 0, 500, 0)) {
 		quest::say("Aye, I guess ye truly are a good soul.  Good luck on whatever ye needed such a dread item fer.");
 		#:: Give a 7113 - Potion of Sorrow
 		quest::summonitem(7113);
