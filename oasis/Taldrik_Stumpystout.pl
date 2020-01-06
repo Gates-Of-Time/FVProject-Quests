@@ -3,7 +3,7 @@ sub EVENT_SAY {
 		quest::say("Move along dere yer blocking me view lad. I await me friend that has gone off to fetch me some water. It sure is hot out here.");
 	}
 	elsif ($text=~/recipe/i) {
-		e.self:Say("Well ya see lad I had an ancient recipe passed down to me that told one how to create the holiest of ale. Its far gone now, however I recently had a vision of the ingredients and where they might be found. Do you wish to seek out the components for me?");
+		quest::say("Well ya see lad I had an ancient recipe passed down to me that told one how to create the holiest of ale. Its far gone now, however I recently had a vision of the ingredients and where they might be found. Do you wish to seek out the components for me?");
 	}
 	elsif ($text=~/components/i) {
 		quest::say("Excellent lad! Let meh see here if I can remember correctly. I know that you need to Preserved hops and a Battleworn canteen. I know that these were carried by my good friend Torklar back when I was still a young lad in training like you. However one day he adventured to an undead estate with a friend of his that was a very skilled brewer. I believe they went there in search of some ingredients they needed for a recipe however neither of them ever returned. But before you go any further I must tell ye that you will need a specific kind of cask to combine these items in.");
