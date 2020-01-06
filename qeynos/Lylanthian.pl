@@ -1,5 +1,5 @@
 sub EVENT_AGGRO {
-	quest::say("How dare you!"
+	quest::say("How dare you!");
 }
 
 sub EVENT_DEATH_COMPLETE {
