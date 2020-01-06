@@ -15,7 +15,7 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Set factions
 		quest::faction(255, 5); 		#:: + Gem Cutters
-		quest::faction(288, 1; 			#:: + Merchants of Ak'Anon
+		quest::faction(288, 1); 		#:: + Merchants of Ak'Anon
 		quest::faction(333, 1); 		#:: + King Ak'Anon
 		quest::faction(238, -1); 		#:: - Dark Reflection
 		quest::faction(1604, -1); 		#:: - Clan Grikbar
