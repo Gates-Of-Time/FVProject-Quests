@@ -64,14 +64,14 @@ sub Train {
 }
 
 sub EVENT_SAY {
+	if ($text=~/train/i) {
+		Train();
+	}
+	elsif ($text=~/hail/i) {
+		quest::say("Hello $name! Don't let my little friend fool you--he is quite powerful!");
+	}
 	if ($status => 80) {
-		if ($text=~/train/i) {
-			Train();
-		}
-		elsif ($text=~/hail/i) {
-			quest::say("Hello $name! Don't let my little friend fool you--he is quite powerful!");
-		}
-		elsif ($text=~/faction/i) {
+		if ($text=~/faction/i) {
 			quest::say("I can adjust your faction.  Hand me 1 copper to lose 500, 1 silver to lose 100, 1 gold to gain 100, and 1 platinum to gain 500--then speak the faction number, or the faction name.");
 		}
 		elsif (!$client->GetGM()) {
