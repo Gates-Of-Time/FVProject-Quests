@@ -5,26 +5,27 @@ sub EVENT_SAY {
 } 
 
 sub EVENT_ITEM {
-	#:: Turn in for 12143 - H.K. 102
-	if (plugin::takeItems(12143 => 1 )) {
+	#:: Match a 12143 - H.K. 102
+	if (plugin::takeItems(12143 => 1)) {
 		quest::say("I am sorry to see you check out. Here is all you had in your box. We hope to serve you again. Have a nice day!! Next!");
 		#:: Give item 18936 - A Sealed Note *Zimels Letter from Hayle
 		quest::summonitem(18936);
 		#:: Ding!
 		quest::ding();
+		#:: Create a hash for storing cash - 80 to 500cp
 		my %cash = plugin::RandomCash(80,500);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
-	#:: Turn in for 12193 - H.K. 106  *Highkeep Strongbox 106
-	if (plugin::takeItems(12193 => 1 )) {
+	#:: Match a 12193 - H.K. 106  *Highkeep Strongbox 106
+	elsif (plugin::takeItems(12193 => 1)) {
 		quest::say("I am sorry to see you check out. Here is all you had in your box. We hope to serve you again. Have a nice day!! Next!");
 		#:: Give item 13323 - Emerald Shard *Shard of Stormhammer II
 		quest::summonitem(13323);
-		#:: Give a small amount of xp
-		quest::exp(500);
 		#:: Ding!
 		quest::ding();
+		#:: Give a small amount of xp
+		quest::exp(500);
 		#:: Create a hash for storing cash - 900 to 2000cp
 		my %cash = plugin::RandomCash(200,900);
 		#:: Grant a random cash reward
