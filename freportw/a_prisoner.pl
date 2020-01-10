@@ -6,7 +6,16 @@ sub EVENT_SPAWN {
 sub EVENT_TIMER {
 	#:: Match the timer "goog"
 	if ($timer eq "goog") {
-		quest::say(quest::ChooseRandom("unngh!!.. Biggle and boo.. Goggle froo..","ahhhh!!.. Tiggle bumble coo.. Bog n' Goo.."));
+		#:: Create a scalar for storing a random number
+  		my $RandomResponse = quest::ChooseRandom(1, 2);
+  		if ($RandomResponse == 1) {
+    			#:: Do the first thing
+			quest::say(quest::ChooseRandom("unngh!!.. Biggle and boo.. Goggle froo..","ahhhh!!.. Tiggle bumble coo.. Bog n' Goo.."));
+  			}
+  		elsif ($RandomReponse == 2) {
+    			#:: Do the second thing
+			quest::say(quest::ChooseRandom("Bog n Goo.. Blanket too!!"));
+  			}
 	}
 }
 
