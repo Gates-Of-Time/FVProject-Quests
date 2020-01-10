@@ -1,7 +1,7 @@
 my $number = 0;
 
 sub EVENT_SPAWN {
-	$number = quest::ChooseRandom(17..23);
+	$number = quest::ChooseRandom(1, 2, 3);
 	quest::say("$number");
 	GetDressed();
 }
