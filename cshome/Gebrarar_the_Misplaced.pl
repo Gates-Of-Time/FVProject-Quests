@@ -7,5 +7,6 @@ sub EVENT_SPAWN {
 }
 
 sub GetDressed {
+	quest::say("Getting dressed in texture $number");
 	quest::npcfeature("texture", $number);
 }
