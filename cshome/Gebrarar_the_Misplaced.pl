@@ -1,4 +1,4 @@
-my $number;
+my $number = 0;
 
 EVENT_SPAWN {
 	$number = quest::ChooseRandom(17..23);
