@@ -12,6 +12,9 @@ sub EVENT_ITEM {
 		quest::summonitem(18936);
 		#:: Ding!
 		quest::ding();
+		my %cash = plugin::RandomCash(80,500);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Turn in for 12193 - H.K. 106  *Highkeep Strongbox 106
 	if (plugin::takeItems(12193 => 1 )) {
@@ -23,7 +26,7 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Create a hash for storing cash - 900 to 2000cp
-		my %cash = plugin::RandomCash(900,2000);
+		my %cash = plugin::RandomCash(200,900);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
