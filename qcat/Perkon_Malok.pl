@@ -27,7 +27,7 @@ sub EVENT_ITEM {
 	#:: Match a 18850 - Blood Stained Note
 	if (plugin::takeItems(18850 => 1)) {
 		quest::say("A new initiate always pleases me, here is your tunic. Once you are ready to begin your training please make sure that you see Bruax Grengar, he can assist you in developing your hunting and gathering skills. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [trades] you will have available to you.");
-		13595 - Stained Purple Robe*
+		#:: Give a 13595 - Stained Purple Robe*
 		quest::summonitem(13595);
 		#:: Ding!
 		quest::ding();
