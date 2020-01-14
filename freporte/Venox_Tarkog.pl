@@ -14,8 +14,8 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Turn in for 18774 -  A tattered note
-	if (plugin::takeItems(18774 => 1)) {
+	#:: Turn in for 18744 -  A tattered note
+	if (plugin::takeItems(18744 => 1)) {
 		quest::say("Here we find a new follower.. Here we find a tunic of the Dismal Rage. Put the two together and let the hate grow. Let it be known from now on that your soul belongs to the Prince of Hate, Innoruuk. It is his power which flows within you. Destroy all those who oppose us. Please introduce your hate to the others in this shrine.");
 		#:: Give item 13561 - Faded Crimson Tunic
 		quest::summonitem(13561);
