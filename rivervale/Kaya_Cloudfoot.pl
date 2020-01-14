@@ -31,7 +31,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match a 18431 - Halfling Paladin Note
-	if (plugin::takeItems(18431)) {
+	if (plugin::takeItems(18431 => 1)) {
 		quest::say("Karana smiles upon you young $name! Take this tunic to keep you warm through the storms you must face. There is evil encroaching upon the lands of Karana's faithful. The wicked minions of Bertoxxulous and the Teir'Dal children of Hate corrupt the lands to the west and east, and the Deathfist Clan of Orcs are waging war on this region while destoying the wilderness for lumber and stone. It is Karana's will that we defend our lands and way of life from these evil threats. When you are ready to begin adventuring, I will be happy to advise you on how to help us deal with the [evil forces]. I also posses knowledge of various [trades], seek me out when you wish to learn about them.");
 		#:: Give a 13541 - Jumjum Sack Tunic*
 		quest::summonitem(13541);
