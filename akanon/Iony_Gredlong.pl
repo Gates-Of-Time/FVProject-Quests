@@ -27,8 +27,8 @@ sub EVENT_ITEM {
 	#:: Match a 18775 - Tattered Note
 	if (plugin::takeItems(18775 => 1)) { 
 		quest::say("Welcome to the Abbey of Deep Musing.  Here you can train and raise your abilities to the peak of perfection. Take this tunic and wear it with pride. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [trades] you will have available to you.");
-		#:: Reward 13522 - Worn Felt Tunic
-		quest::summonitem(13522);
+		#:: Reward 13517 - Worn Felt Tunic*
+		quest::summonitem(13517);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
