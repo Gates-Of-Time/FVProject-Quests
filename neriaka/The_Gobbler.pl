@@ -5,7 +5,7 @@ sub EVENT_SAY {
 	elsif ($text=~/HEHE meat/i) {
 		quest::say("HEHE meat? It human, Erudite 'n high elf, mashed together. Mmmm. Very tasty!");
 	}
-	elsif ($text=~/froggy legs|froglok legs/i) {
+	elsif ($text=~/froggy legs/i) {
 		quest::say("Froggy legs come from far away. Me get from friend, [Chef Dooga]. It not tasty. Trolls like it. Eat it up much. They eat too much froggy. Me glad [Nerbilik] leave Neriak!! He eat way too much froggy.");
 	}
 	elsif ($text=~/chef dooga/i) {
