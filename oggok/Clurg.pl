@@ -66,19 +66,27 @@ sub EVENT_ITEM {
 	}
 	#:: Match a 13378 - Ogre Head (Pungla's Head)
 	elsif (plugin::takeItems(13378 => 1)) {
-		quest::say("'Haha! He shall mix no more Flaming Pungla's! I shall drink from his rotting skull tonight. As for you, take this and call it yours. Consider yourself a friend of Clurg.");
-		#:: Give a 13355 - Crude Stein, 6302 - Ogre War Maul, 10024 - Pearl, 6006 - Warhammer, 3131 - Large Ringmail Belt, 3136 - Large Ringmail Boots (3136), 3133 - Large Ringmail Bracelet, 3130 - Large Ringmail Cape, 3128 - Large Ringmail Coat, 3125 - Large Ringmail Coif (3125), 3134 - Large Ringmail Gloves, 3129 - Large Ringmail Mantle, 3127 - Large Ringmail Neckguard, 3135 - Large Ringmail Pants (3135), 3132 - Large Ringmail Sleeves, 10021 - Star Rose Quartz, 9019 - Large Kite Shield
-		quest::summonitem(quest::ChooseRandom(13355,6302,10024,6006,3131,3136,3133,3130,3128,3125,3134,3129,3127,3135,3132,10021,9019));
-		#:: Ding!
-		quest::ding();
-		#:: Set factions
-		quest::faction(228, 15);		#:: + Clurg
-		quest::faction(274, -15); 		#:: - Kazon Stormhammer
-		quest::faction(261, 15);		#:: + Green Blood Knights
-		quest::faction(232, 15);		#:: + Craknek Warriors
-		quest::faction(337, 15);		#:: + Oggok Guards
-		#:: Grant a moderate amount of experience
-		quest::exp(6000);
+		#:: Match if faction is Indifferent or better
+		if ($faction <= 5) {
+			quest::say("'Haha! He shall mix no more Flaming Pungla's! I shall drink from his rotting skull tonight. As for you, take this and call it yours. Consider yourself a friend of Clurg.");
+			#:: Give a 13355 - Crude Stein, 6302 - Ogre War Maul, 10024 - Pearl, 6006 - Warhammer, 3131 - Large Ringmail Belt, 3136 - Large Ringmail Boots (3136), 3133 - Large Ringmail Bracelet, 3130 - Large Ringmail Cape, 3128 - Large Ringmail Coat, 3125 - Large Ringmail Coif (3125), 3134 - Large Ringmail Gloves, 3129 - Large Ringmail Mantle, 3127 - Large Ringmail Neckguard, 3135 - Large Ringmail Pants (3135), 3132 - Large Ringmail Sleeves, 10021 - Star Rose Quartz, 9019 - Large Kite Shield
+			quest::summonitem(quest::ChooseRandom(13355,6302,10024,6006,3131,3136,3133,3130,3128,3125,3134,3129,3127,3135,3132,10021,9019));
+			#:: Ding!
+			quest::ding();
+			#:: Set factions
+			quest::faction(228, 15);		#:: + Clurg
+			quest::faction(274, -15); 		#:: - Kazon Stormhammer
+			quest::faction(261, 15);		#:: + Green Blood Knights
+			quest::faction(232, 15);		#:: + Craknek Warriors
+			quest::faction(337, 15);		#:: + Oggok Guards
+			#:: Grant a moderate amount of experience
+			quest::exp(6000);
+		}
+		else {
+			quest::say("Find ways to help all in Oggok. Then we will trade.");
+			#:: Return a 13378 - Ogre Head (Pungla's Head)
+			quest::summonitem(13378);
+		}
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
