@@ -5,13 +5,13 @@ sub EVENT_SAY {
 	elsif ($text=~/HEHE meat/i) {
 		quest::say("HEHE meat? It human, Erudite 'n high elf, mashed together. Mmmm. Very tasty!");
 	}
-	elsif ($text=~/froggy legs/i) {
+	elsif ($text=~/froggy legs/i || $text=~/froglok legs/i)
 		quest::say("Froggy legs come from far away. Me get from friend, [Chef Dooga]. It not tasty. Trolls like it. Eat it up much. They eat too much froggy. Me glad [Nerbilik] leave Neriak!! He eat way too much froggy.");
 	}
 	elsif ($text=~/chef dooga/i) {
-		quest::say("Friend in Oggok is Chef Dooga. Chef she is. Used to work in Neriak. She beautiful. She supply the Gobbler with [froglok legs]. They very low now. Fat trolls eat too many!! Me need to [pick up froglok legs].");
+		quest::say("Friend in Oggok is Chef Dooga. Chef she is. Used to work in Neriak. She beautiful. She supply the Gobbler with [froglok legs]. They very low now. Fat trolls eat too many!! Me need to [pick up] froglok legs.");
 	}
-	elsif ($text=~/pick up froglok legs/i) {
+	elsif ($text=~/pick up/i) {
 		quest::say("That good news. Oggok far away. Me got no time to go. If you go speak to Chef Dooga, say you pick up froglok legs. You bring back and me give you coin, maybe even something good.");
 	}
 	elsif ($text=~/nerbilik/i) {
