@@ -71,6 +71,11 @@ sub EVENT_ITEM {
 		quest::faction(235, 10);		#:: - Da Bashers
 		#:: Grant a small amount of experience
 		quest::exp(250);
+		#:: Create a hash for storing cash - 4000 to 9000cp
+		my %cash = plugin::RandomCash(4000,9000);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+	}
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
