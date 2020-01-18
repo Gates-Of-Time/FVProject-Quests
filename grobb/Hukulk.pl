@@ -76,7 +76,6 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
-	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
