@@ -23,8 +23,8 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Match two 13073 - Bone Chips and two 13070 - Snake Scales
-	if (plugin::takeItems(13073 => 2, 13070 => 2)) {
+	#:: Match two 13073 - Bone Chips and two 13187 - Froglok Tadpole Flesh
+	if (plugin::takeItems(13073 => 2, 13187 => 2)) {
 		quest::say("Good. Innoruuk get special gift. Not you, dis time. Here. Learning majik wid dis. You more want to [help Innoruuk]?");
 		#:: Give a 15093 - Spell: Burst of Flame
 		quest::summonitem(15093);
