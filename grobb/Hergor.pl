@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Whatsin you wants!! Me great master of Da Bashers. Me tinks yousa must be lookin fer training. Yousa looks like a weekling. Me train yous and yous helps me get fatter. Well!! Are yous gonna [help Hergor get fatter]?!!");
+		quest::say("Whats you wants! Me great master of da bashers. Me tinks yooz must be lookin' fer trainin'. Yooz looks like a weaklin'. Me train yooz and yooz helps me get fatter. Well! Are yooz gonna [helps Hergor get fatter]?!");
 	}
 	elsif ($text=~/helps hergor get fatter/i || $text=~/help hergor get fatter/i) {
 		#:: Match if faction is Amiable or better
