@@ -36,8 +36,6 @@ sub EVENT_ITEM {
 	#:: Turn in for 18164 or 18166 - both identify as Pouch of Mail (Freeport)
 	if (plugin::takeItems(18164 => 1) || plugin::takeItems(18166 => 1)) {
 		quest::say("Incoming mail - very good! Please take this gold for your troubles.");
-		#:: Give item 13556 - White and Blue Tunic*
-		quest::summonitem(13556);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
