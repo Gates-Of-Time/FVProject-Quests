@@ -1,7 +1,13 @@
 sub EVENT_SAY {
-	if ($text=~/hail/i) {
+	#:: Match if faction is better than apprehensive
+	if ($faction < 6) {
+		if ($text=~/hail/i) {
 		quest::say("You dare speak to Master Treskar!! You be [sent by Hukulk] or you be hurtin'!! Me have no time to waste with ugly one like you!!");
+		}
+		else {
+		quest::say("..Sniff, sniff, sniff..>  Me smell the blood of enemy in you.  You fool to talk to Nightkeep shadowknight!  Me bleed you if you no run!");
 	}
+}
 	elsif ($text=~/sent by hukulk/i) {
 		quest::say("Ha!! Hukulk accept puny troll now?!! Ha!! You join us and you join fight. Nightkeep enemy is $name enemy!! You help smash [other weak shadowknights]. Them weak. We true power!! You bash good and maybe you do [secret mission] for Treskar. Or I has sum other [work] fer you.");
 	}
