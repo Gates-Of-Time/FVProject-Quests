@@ -1,7 +1,7 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::emote("stops humming to himself and turns to look at you.");
-		quest::say("Hey dere.");
+		quest::say("Ranjor tell shaddernites to gets rids of spore guardian. Ha! Gud.");
 	}
 	elsif ($text=~/what tune/i) {
 		quest::say("Yous like da toon me hum? Me hum gud! Me hears it sumtimes when me walks by da Dark Ones place. Dey gots strong majik back dere, me gets funny feeling in me tummy.");
