@@ -5,7 +5,7 @@ sub EVENT_SPAWN {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hello there!");
+		quest::say("Step right up! I am the best butcher you have ever seen. Well, are you the next to be fileted");
 	}
 	elsif ($text=~/come back to the closet/i) {
 		quest::say("Darn!! I was just starting to have fun. Tell you what. You find me a nice Ogre Butcher Apron and I will gladly go back to my cramped quarters.");
@@ -25,7 +25,7 @@ sub EVENT_TIMER {
 sub EVENT_ITEM {
 	#:: Match a 12217 - Ogre Butcher Apron
 	if (plugin::takeItems(12217 => 1)) {
-		quest::say("Thanks!! Now I'm a real butcher just like Carver Cagrek!! Ok, before you take me back, we need to find my friend The Captain. Last I heard, he was boating around the swamp. Ask the guards outside if they have [seen the captain].");
+		quest::say("'Great! Thanks a lot, pal. Lets get moving. I hear my bonehead roomie called the Captain was spotted by Basher Sklama. Go ask [where the Captain] is.");
 		#:: Give a 12214 - The Butcher
 		quest::summonitem(12214);
 		#:: Ding!
