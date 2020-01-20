@@ -14,7 +14,8 @@ sub EVENT_ITEM {
 		quest::faction(284,10); 	#:: + League of Antonican Bards
 		quest::faction(281,10); 	#:: + Knights of Truth
 		quest::faction(262,10); 	#:: + Guards of Qeynos
-		quest::faction(285,-30); 	#:: - Mayong Mistmoore
+		quest::faction(304,-15); 	#:: - Ring of Scale
+		quest::faction(285,-15); 	#:: - Mayong Mistmoore
 		#:: Give a small amount of xp
 		quest::exp(100);
 		#:: Create a hash for storing cash - 100 to 600cp
@@ -31,7 +32,8 @@ sub EVENT_ITEM {
 		quest::faction(284,10); 	#:: + League of Antonican Bards
 		quest::faction(281,10); 	#:: + Knights of Truth
 		quest::faction(262,10); 	#:: + Guards of Qeynos
-		quest::faction(285,-30); 	#:: - Mayong Mistmoore
+		quest::faction(304,-15); 	#:: - Ring of Scale
+		quest::faction(285,-15); 	#:: - Mayong Mistmoore
 		#:: Give a small amount of xp
 		quest::exp(100);
 		#:: Create a hash for storing cash - 100 to 600cp
@@ -48,7 +50,8 @@ sub EVENT_ITEM {
 		quest::faction(284,10); 	#:: + League of Antonican Bards
 		quest::faction(281,10); 	#:: + Knights of Truth
 		quest::faction(262,10); 	#:: + Guards of Qeynos
-		quest::faction(285,-30); 	#:: - Mayong Mistmoore
+		quest::faction(304,-15); 	#:: - Ring of Scale
+		quest::faction(285,-15); 	#:: - Mayong Mistmoore
 		#:: Give a small amount of xp
 		quest::exp(100);
 		#:: Create a hash for storing cash - 100 to 1200cp
@@ -65,7 +68,8 @@ sub EVENT_ITEM {
 		quest::faction(284,10); 	#:: + League of Antonican Bards
 		quest::faction(281,10); 	#:: + Knights of Truth
 		quest::faction(262,10); 	#:: + Guards of Qeynos
-		quest::faction(285,-30); 	#:: - Mayong Mistmoore
+		quest::faction(304,-15); 	#:: - Ring of Scale
+		quest::faction(285,-15); 	#:: - Mayong Mistmoore
 		#:: Give a small amount of xp
 		quest::exp(100);
 		#:: Create a hash for storing cash - 100 to 1200cp
