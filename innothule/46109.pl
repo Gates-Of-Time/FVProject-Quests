@@ -5,11 +5,11 @@ sub EVENT_SPAWN {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Yes?");
+		quest::say("'Avast, matey! Captain Bones here. This here island is mine! Raise anchor and ship out!");
 	}
 	elsif ($text=~/come back to the closet/i) {
 		quest::emote("lets out a long sigh.");
-		quest::say("If I must...but only if I can take a bit of my former life with me inside the closet. Since my boat is broken, bring me a Ship in a Bottle and I will accept my fate.");
+		quest::say("I wish I could be leaving this isle of the damned, alas, me boat has gone to Prexus' locker. I'll not be leavin' here until I get meself another ship.");
 	}
 }
 
@@ -26,7 +26,7 @@ sub EVENT_TIMER {
 sub EVENT_ITEM {
 	#:: Match a 12218 - Ship in a Bottle
 	if (plugin::takeItems(12218 => 1)) {
-		quest::say("At least I can dream I'm on this ship out on the wide open sea...Thanks friend. You know what would make being in that closet easier? Having my friend The Minstrel playing music. I heard Basher Avisk trying to hum a tune that I know The Minstrel plays a lot. Maybe he knows where to find The Minstrel. Hmm...I doubt he'll know what a minstrel is...better ask him about the [tune] he's always humming.");
+		quest::say("Aye, matey! Ye found me another vessel with which to sail the seven seas? Let's be shoving off then! Come on, hop aboard, swabby! Be sure to pick up the minstrel. His hide was last seen by Basher Avisk. Only he be knowin' [where the minstrel ] be");
 		#:: Give a 12215 - The Captain
 		quest::summonitem(12215);
 		#:: Ding!
