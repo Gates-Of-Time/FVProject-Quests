@@ -1,21 +1,10 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		#:: Match if faction is better than indifferent
-		if ($faction < 5) {
-			quest::say("Whats you wants!!  Me great master of da bashers.  Me tinks yooz must be lookin' fer trainin'.  Yooz looks like a weaklin'.  Me train yooz and yooz helps me get fatter.  Well!!  Are yooz gonna [helps Hergor get fatter]?!!");
-		}
-		#:: Match if faction is indifferent
-		elsif ($faction == 5) {
-			quest::say("More service to da bashers, den me listen.");
-		}
-		#:: Match if faction is worse than indifferent
-		else {
-			quest::say("Me smell death coming your way!  Da bashers no like you. Hey!  Me am basher!");
-		}
+		quest::say("Whatsin you wants!! Me great master of Da Bashers. Me tinks yousa must be lookin fer training. Yousa looks like a weekling. Me train yous and yous helps me get fatter. Well!! Are yous gonna [help Hergor get fatter]?!!");
 	}
-	elsif ($text=~/helps Hergor get fatter/i) {
-		#:: Match if faction is better than indifferent
-		if ($faction < 5) {
+	elsif ($text=~/helps hergor get fatter/i || $text=~/help hergor get fatter/i) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
 			quest::say("Yooz makes da good choice.  Me nevers get enuff ta eats.  Eats more and gets more stronger, me always say.  Yooz gos and speaks wit carver Cagrek.  Yooz tell him Hergor wants his [fungus dung pie].  Yooz duz dis and me gives you sum rawhide armer or tatters armer.");
 		}
 		#:: Match if faction is indifferent
@@ -38,15 +27,15 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(2125, 2126, 2127, 2129, 2131, 2133, 2134, 2161, 2162, 2163, 2164, 2165, 2166, 2167, 2168, 2169, 2170, 2171, 2172));
 		#:: Ding!
 		quest::ding();
+		#:: Set factions
+		quest::faction(235, 5);		#:: + Da Bashers
+		quest::faction(222, -1);	#:: - Broken Skull Clan
 		#:: Grant a small amount of experience
 		quest::exp(145);
 		#:: Create a hash for storing cash - 150 to 250cp
 		my %cash = plugin::RandomCash(150,250);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set factions
-		quest::faction(235, 5);		#:: + Da Bashers
-		quest::faction(222, -1);	#:: - Broken Skull Clan
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
