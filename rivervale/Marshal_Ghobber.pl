@@ -41,7 +41,7 @@ sub EVENT_SAY {
 			quest::faction(263,-500);  #:: - Guardians of the Vale
 		}
 		#:: Match if faction is indifferent
-		elsif ($faction < 5) {
+		elsif ($faction >= 2) {
 			quest::say("You are in good standing with the Guardians of the Vale. Continue with your good work and then we may speak.");
 		}
 		#:: Match if faction is worse than indifferent
