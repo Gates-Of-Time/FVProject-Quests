@@ -1,3 +1,10 @@
+sub EVENT_COMBAT {
+	#:: Match combat state 1 - entered combat
+	if ($combat_state == 1) {
+		quest::say("Come and feel the blade of the Dark Bargainers.");
+	}
+}
+
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Spend your money or get out! This ain't no pansy social club!");
