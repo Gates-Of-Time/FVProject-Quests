@@ -23,25 +23,25 @@ sub EVENT_COMBAT {
 
 sub EVENT_SAY { 
 	if ($text=~/hail/i) {
-		quest::say("Hail, $name! My name is Blixkin Entopop. Have you seen the wonderful assortment of [" . quest::saylink("spiders") . "] and [" . quest::saylink("beetles") . "] that inhabit the thicket? I have quite an extensive [" . quest::saylink("bug collection") . "]. Be careful, though. I have seen many brave halflings fall beneath a [" . quest::saylink("swarm") . "] of clicking and hissing bugs.");
+		quest::say("Hail, $name! My name is Blixkin Entopop. Have you seen the wonderful assortment of [spiders] and [beetles] that inhabit the thicket? I have quite an extensive [bug collection]. Be careful, though. I have seen many brave halflings fall beneath a [swarm] of clicking and hissing bugs.");
 	}
 	elsif ($text=~/spiders/i) {
-		quest::say("There are many species of bugs out here. The most common are the fire beetles. If you are hunting them, make sure their queen is not around or you will be in deep trouble. Their eyes are a popular item for adventurers because they give off light as if they were on fire. I even had one warrior try to kill [" . quest::saylink("Ember") . "] for her eyes!!");
+		quest::say("There are many species of bugs out here. The most common are the fire beetles. If you are hunting them, make sure their queen is not around or you will be in deep trouble. Their eyes are a popular item for adventurers because they give off light as if they were on fire. I even had one warrior try to kill [Ember] for her eyes!!");
 	}
 	elsif ($text=~/ember/i) {
 		quest::say("I raised Ember from an egg. She is my faithful pet and quite smart for a beetle. There are plenty of other bugs to squish, out in the thicket, so you had best leave her alone or I will have to SQUISH you!");
 	}
 	elsif ($text=~/swarm/i) {
-		quest::say("Bugs tend to swarm and defend others of their species when they are attacked. So keep your eyes peeled if you intend to squish any of them.. And you'd better not even THINK of squishing [" . quest::saylink("Ember") . "] or you will be sorry!");
+		quest::say("Bugs tend to swarm and defend others of their species when they are attacked. So keep your eyes peeled if you intend to squish any of them.. And you'd better not even THINK of squishing [Ember] or you will be sorry!");
 	}
 	elsif ($text=~/beetles/i) {
-		quest::say("There are many species of bugs out here. The most common are the fire beetles. If you are hunting them, make sure their queen is not around or you will be in deep trouble. Their eyes are a popular item for adventurers because they give off light as if they were on fire. I even had one warrior try to kill [" . quest::saylink("Ember") . "] for her eyes!!");
+		quest::say("There are many species of bugs out here. The most common are the fire beetles. If you are hunting them, make sure their queen is not around or you will be in deep trouble. Their eyes are a popular item for adventurers because they give off light as if they were on fire. I even had one warrior try to kill [Ember] for her eyes!!");
 	}
 	elsif ($text=~/bug collection/i) {
-		quest::say("I collect all kinds of bugs but most of the ones I have are dead. [" . quest::saylink("Ember") . "] is the only exception. I just like them for their pretty colors and I admire how loyal they are to each other. If you want to, you can help me complete my collection and I will reward you for your time. Here is a list of the bug parts I need for my collection. If you [" . quest::saylink("don't have a box") . "] to collect the bug parts in, just ask me for one. I think I have some extras.'");
+		quest::say("I collect all kinds of bugs but most of the ones I have are dead. [Ember] is the only exception. I just like them for their pretty colors and I admire how loyal they are to each other. If you want to, you can help me complete my collection and I will reward you for your time. Here is a list of the bug parts I need for my collection. If you [don't have a box] to collect the bug parts in, just ask me for one. I think I have some extras.'");
 	}
 	elsif ($text=~/don't have a box/i) {
-		quest::say("Here you go. Just follow the instructions on the [" . quest::saylink("list") . "] so you know what to collect and how to prepare the collection for me.");
+		quest::say("Here you go. Just follow the instructions on the [list] so you know what to collect and how to prepare the collection for me.");
 		#:: Give a 17922 - Bug Collection Box
 		quest::summonitem(17922);
 	}

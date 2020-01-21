@@ -1,12 +1,12 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hello. I would shake your hand, but it would [" . quest::saylink("hurt") . "]. Ooooh! Owwy!");
+		quest::say("Hello. I would shake your hand, but it would [hurt]. Ooooh! Owwy!");
 	}
 	elsif ($text=~/hurt/i) {
 		quest::say("I was attacked by the bixies. They swarmed on me!! I think I got too near their queen. I need that honey to make a living! Get me a bandage and I will tell you where all their worker bee's buzz around.");
 	}
 	elsif ($text=~/honeycomb/i) {
-		quest::say("If you're looking for the honeycombs, I don't have any right now. I have been unable to get any since I was attacked by the little [" . quest::saylink("buggers") . "]. I will tell you where to get some if you will only get me a bandage for my bites.");
+		quest::say("If you're looking for the honeycombs, I don't have any right now. I have been unable to get any since I was attacked by the little [buggers]. I will tell you where to get some if you will only get me a bandage for my bites.");
 	}
 	elsif ($text=~/buggers/i) {
 		quest::say("I was attacked by the bixies. They swarmed on me!! I think I got too near their queen. I need that honey to make a living! Get me a bandage and I will tell you where all their worker bees buzz around.");

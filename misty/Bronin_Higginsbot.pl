@@ -3,7 +3,7 @@ sub EVENT_SAY {
 		quest::say("Hello. It is dangerous out in the woods. You should go to Rivervale. It's at the end of the path. You will find good times there. Travel safely, my friend!");
 	}
 	elsif ($text=~/shard/i) {
-		quest::say("Searching for that blasted emerald shard, are you? That thing has done nothing but bring me bad luck!! I would gladly give it to you if you would do a [" . quest::saylink("small favor") . "] for me.");
+		quest::say("Searching for that blasted emerald shard, are you? That thing has done nothing but bring me bad luck!! I would gladly give it to you if you would do a [small favor] for me.");
 	}
 	elsif ($text=~/small favor/i) {
 		#:: Match if Amiable or better for Deeppockets
@@ -50,7 +50,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match if Amiable or better for Deeppockets and a 12192 - Froglok Leg
 	elsif (($faction <= 4) && (plugin::takeItems(12192 => 1 ))) {
-		quest::say("So I see you have defeated Slaythe. I shall sleep much better now that he is gone. I placed the emerald shard in one of the Highkeep strongboxes in Highpass. Give the bank clerk's assistant, Kiolna this key. There is a [" . quest::saylink("second piece of the gem") . "] which I hid near Kelethin. You will need it to complete the gem. I hope it brings you better luck than I.");
+		quest::say("So I see you have defeated Slaythe. I shall sleep much better now that he is gone. I placed the emerald shard in one of the Highkeep strongboxes in Highpass. Give the bank clerk's assistant, Kiolna this key. There is a [second piece of the gem] which I hid near Kelethin. You will need it to complete the gem. I hope it brings you better luck than I.");
 		#:: Give a 12193 - H.K. 106
 		quest::summonitem(12193);
 		#:: Grant a small amount of experience

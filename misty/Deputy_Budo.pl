@@ -10,7 +10,7 @@ sub EVENT_COMBAT {
 
 sub EVENT_SAY{
 	if ($text=~/hail/i) {
-		quest::say("Hail, $name. I am Deputy Budo Bullnose, the squad leader of the Great Wall Patrol. Be very careful in the lands beyond the wall. They are filled with dangerous beasts, as well as [" . quest::saylink("Clan Runnyeye") . "].");
+		quest::say("Hail, $name. I am Deputy Budo Bullnose, the squad leader of the Great Wall Patrol. Be very careful in the lands beyond the wall. They are filled with dangerous beasts, as well as [Clan Runnyeye].");
 	}
 	if ($text=~/clan runnyeye/i) {
 		quest::say("Beyond this wall lies Runnyeye, the lair of the goblins of Clan Runnyeye. They have been a nuisance to Rivervale for quite some time. If you wish to join the fight, go to Rivervale and ask Sheriff Roglio about Clan Runnyeye.");
