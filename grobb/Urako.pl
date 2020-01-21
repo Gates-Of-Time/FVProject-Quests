@@ -63,7 +63,7 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(12213 => 1, 12214 => 1, 12215 => 1, 12216 => 1)) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
-			quest::say("Ohh, tank you!! Kaglari not hafta do bad tings to Urako!! Me berry berry happy!! Oh, here is da doll, me tanks you a lot!!");
+			quest::say("Tank you. You saved me neck. Kaglari not learn me mistake now. Me give you a [Kaglari mana doll].");
 			#:: Give a 12212 - Kaglari Mana Doll
 			quest::summonitem(12212);
 			#:: Ding!
