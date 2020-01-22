@@ -12,10 +12,8 @@ sub EVENT_SAY {
 		quest::say("Mutt is a girl I found on the streets. I cleaned her up and I am now training her, I mean showing her how to be a respectable citizen. She also carries my pack. I have back problems you know.");
 	}
 	elsif ($text=~/drink special/i) {
-		#:: Path to the Golden Rooster
-		quest::moveto(-197, 383, 3.75, 43, 1);
-		#:: Set a timer 'drink' to loop every 300 seconds (5 min)
-		quest::settimer("drink", 300);
+		#:: Start pathing grid 19
+		quest::start(19);
 	}
 }
 
@@ -24,12 +22,10 @@ sub EVENT_ITEM {
 	plugin::returnUnusedItems();
 }
 
-sub EVENT_TIMER {
-	#:: Match timer 'drink'
-	if ($timer eq "drink") {
-		#:: Stop the timer 'drink'
-		quest::stoptimer("drink");
-		#:: Return to spawn point and guard
-		quest::moveto(-60, 422, 3.75, 283, 1);
+sub EVENT_WAYPOINT_ARRIVE {
+	#:: Match waypoint 0
+	if ($wp == 0) {
+		#:: Stop pathing on grid 19
+		quest::stop();
 	}
 }
