@@ -23,8 +23,8 @@ sub EVENT_ITEM {
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
-	#:: Match waypoint 0
-	if ($wp == 0) {
+	#:: Match waypoint 10
+	if ($wp == 10) {
 		#:: Stop pathing on grid 19
 		quest::stop();
 	}
