@@ -59,6 +59,16 @@ sub EVENT_SAY {
 	}
 }
 
+sub EVENT_TIMER {
+	#:: Match timer 'depop'
+	if ($timer eq "depop") {
+		#:: Stop the timer 'depop'
+		quest::stoptimer("depop");
+		#:: Depop with spawn timer active
+		quest::depop_withtimer();
+	}
+}
+
 sub EVENT_ITEM {
 	#:: Match a 12341 - Unusual Tiger Pelt, a 12342 - Peculiar Tiger Pelt, and a 12343 - Strange Tiger Pelt
 	if (plugin::takeItems(12341 => 1, 12342 => 1, 12343 => 1)) {
@@ -75,6 +85,8 @@ sub EVENT_ITEM {
 			quest::faction(309, 1);			#:: + Silent Fist Clan
 			#:: Grant a small amount of experience
 			quest::exp(100);
+			#:: Create a timer 'depop' that loops every 10 seconds
+			quest::settimer("depop", 10);
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction == 5) {
