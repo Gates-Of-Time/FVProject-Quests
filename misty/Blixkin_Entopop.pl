@@ -3,7 +3,7 @@ sub EVENT_WAYPOINT_ARRIVE {
 	if (($wp eq 2) || ($wp eq 9) || ($wp eq 14) || ($wp eq 21) || ($wp eq 24)) {
 		quest::say("Ember?!  Ember?!  Where are you, girl?!");
 		#:: Send a signal '1' to Misty Thicket >> Ember (33065) with no delay
-		quest::signal(33065, 1, 0);
+		quest::signalwith(33065, 1, 0);
 	}
 }
 
