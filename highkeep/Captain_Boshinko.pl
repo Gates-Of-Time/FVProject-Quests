@@ -25,6 +25,8 @@ sub EVENT_SAY {
 		#:: Match if faction is Amiable or better
 		if ($faction <=4) {
 			quest::say("That little man has now made it to Rivervale. He has ties with the halfling rogues, obviously. I want you to find him.  When you find him, take this shank he used to kill my guard and hand it to him. I want him to know why he is about to die. No one escapes my prison!! Bring me his head and I shall pay the bounty.");
+		#:: Summon the Bloody Shank
+		quest::summonitem(13110);
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction == 5) {
@@ -42,8 +44,8 @@ sub EVENT_ITEM {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
 			quest::say("Good work, bounty hunter! You have served your legend well. I hope a few plat is good enough and, please, take this item we confiscated from one of our guests now serving time in our dungeon.");
-			#:: Give a random reward: 2314 - Bearskin Gloves, 7321 - Scouts Blade
-			quest::summonitem(quest::ChooseRandom(2314,2314,2314,7321));
+			#:: Give a random reward: 2314 - Bearskin Gloves, 7321 - Scouts Blade, 5300 - Dwarven Axe, 6302 - Oger War Maul
+			quest::summonitem(quest::ChooseRandom(2314,2314,2314,7321,5300,6302));
 			#:: Ding
 			quest::ding();
 			#:: Set factions
