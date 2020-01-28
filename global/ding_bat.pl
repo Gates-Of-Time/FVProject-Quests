@@ -253,7 +253,7 @@ sub DoTeleport {
 			#:: Match if the Raid member is near the client who triggered the event
 			if ($pc->CalculateDistance($x,$y,$z) <= 150) {
 				#:: Assign to the instance
-				quest::AssignToInstance($InstanceID);
+				$pc->AssignToInstance($InstanceID);
 				#:: Move the Raid member to the specified location
 				$pc->MovePCInstance($Data[1], $InstanceID, $Data[2], $Data[3], $Data[4], 0);
 			}
@@ -268,7 +268,7 @@ sub DoTeleport {
 			#:: Match if the Group member is near the client who triggered the event
 			if ($pc->CalculateDistance($x,$y,$z) <= 150) {
 				#:: Assign to the instance
-				quest::AssignToInstance($InstanceID);
+				$pc->AssignToInstance($InstanceID);
 				#:: Move the Group member to the specified location
 				$pc->MovePCInstance($Data[1], $InstanceID, $Data[2], $Data[3], $Data[4], 0);
 			}
