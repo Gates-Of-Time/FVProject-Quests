@@ -36,7 +36,7 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/gone/i) {
 		#:: Key a data bucket to protect functions
-		$key = $npc->GetCleanName() . "cool-down";
+		$key = $npc->GetCleanName() . "-cool-down";
 		#:: Match if the key exists
 		if (quest::get_data($key)) {
 			quest::say("Give me a minute, $name.  I seem to keep losing people.");
