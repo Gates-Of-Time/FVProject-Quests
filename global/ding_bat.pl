@@ -194,10 +194,10 @@ sub EVENT_SAY {
 		$key = $NPCName . "-current-name";
 		#:: Match if the person talking is the focus of our attention
 		if (quest::get_data($key) eq "$name") {
-			#:: Create a scalar variable to store total aa points
+			#:: Create a scalar variable to store total money on the player who triggered the event
 			my $total = $client->GetCarriedMoney();
-			#:: Match if the player who triggered the event has more AAs than the reset costs
-			if ($total > $cost) {
+			#:: Match if the player who triggered the event has the same or more coin than the reset costs
+			if ($total >= $cost) {
 				#:: Key a data bucket to check for existing instances by zone
 				$key = $client->CharacterID() . "-active-instance-zone";
 				#:: Match if the data bucket exists
