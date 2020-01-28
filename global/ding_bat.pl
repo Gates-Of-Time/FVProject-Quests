@@ -147,7 +147,7 @@ sub EVENT_SAY {
 			#:: Match if the data bucket exists but is set to a different zone
 			else {
 				$CharInstance = quest::get_data($key);
-				$client->Message(315, "$NPCName says, 'Sorry $name, but it looks like you already have an instance for" . $CharInstance . ". Would you like to [" . quest::saylink("delete") . "] it for" $cost/1000 ."platinum pieces?'");
+				$client->Message(315, "$NPCName says, 'Sorry $name, but it looks like you already have an instance for" . $CharInstance . ". Would you like to [" . quest::saylink("delete") . "] it for" . $cost / 1000 . " platinum pieces?'");
 			}
 		}
 		#:: Match if the person talking rudely interrupted
