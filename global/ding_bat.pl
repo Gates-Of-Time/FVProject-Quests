@@ -15,7 +15,7 @@ sub EVENT_SAY {
 	my $NPCName = $npc->GetCleanName();
 	if ($text=~/hail/i) {
 		#:: Key a data bucket to protect functions
-		$key = $npc->GetCleanName() . "-current-name";
+		$key = $NPCName . "-current-name";
 		#:: Match if the key exists
 		if (quest::get_data($key)) {
 			#:: Match if the person talking is the focus of our attention
@@ -36,7 +36,7 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/gone/i) {
 		#:: Key a data bucket to protect functions
-		$key = $npc->GetCleanName() . "-cool-down";
+		$key = $NPCName . "-cool-down";
 		#:: Match if the key exists
 		if (quest::get_data($key)) {
 			quest::say("Give me a minute, $name.  I seem to keep losing people.");
@@ -45,7 +45,7 @@ sub EVENT_SAY {
 			#:: Protect gone from switching for 60 seconds
 			quest::set_data($key, 1, 60);
 			#:: Key a data bucket to protect functions
-			$key = $npc->GetCleanName() . "-current-name";
+			$key = $NPCName . "-current-name";
 			#:: Set the data bucket
 			quest::set_data($key, $name);
 			$client->Message(315, "$NPCName says, 'Well then, $name...are you interested in a [" . quest::saylink("teleport") . "]?'");
@@ -53,7 +53,7 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/teleport/i) {
 		#:: Key a data bucket to protect functions
-		$key = $npc->GetCleanName() . "-current-name";
+		$key = $NPCName . "-current-name";
 		#:: Match if the person talking is the focus of our attention
 		if (quest::get_data($key) eq "$name") {
 			#:: Speak the elements of the zone array
@@ -76,7 +76,7 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/\bPermafrost\b/i) {
 		#:: Key a data bucket to protect functions
-		$key = $npc->GetCleanName() . "-current-name";
+		$key = $NPCName . "-current-name";
 		#:: Match if the person talking is the focus of our attention
 		if (quest::get_data($key) eq "$name") {
 			@Data = undef;  
@@ -117,7 +117,7 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/\bNagafen's Lair\b/i) {
 		#:: Key a data bucket to protect functions
-		$key = $npc->GetCleanName() . "-current-name";
+		$key = $NPCName . "-current-name";
 		#:: Match if the person talking is the focus of our attention
 		if (quest::get_data($key) eq "$name") {
 			@Data = undef;  
@@ -158,7 +158,7 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/go/i) {
 		#:: Key a data bucket to protect functions
-		$key = $npc->GetCleanName() . "-current-name";
+		$key = $NPCName . "-current-name";
 		#:: Match if the person talking is the focus of our attention
 		if (quest::get_data($key) eq "$name") {
 			#:: Key a data bucket to check for existing instances
@@ -191,7 +191,7 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/delete/i) {
 		#:: Key a data bucket to protect functions
-		$key = $npc->GetCleanName() . "-current-name";
+		$key = $NPCName . "-current-name";
 		#:: Match if the person talking is the focus of our attention
 		if (quest::get_data($key) eq "$name") {
 			#:: Create a scalar variable to store total aa points
@@ -277,7 +277,7 @@ sub DoTeleport {
 	#:: Move the client who triggered the event to the specified location
 	$client->MovePCInstance($Data[1], $InstanceID, $Data[2], $Data[3], $Data[4], 0);
 	#:: Key a data bucket to protect functions
-	$key = $npc->GetCleanName() . "-current-name";
+	$key = $NPCName . "-current-name";
 	#:: Destroy the data bucket
 	quest::delete_data($key);
 }
