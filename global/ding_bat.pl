@@ -3,6 +3,7 @@ my @Data = undef;
 my @ZoneArray =
 	(
 		"Permafrost",
+		"Nagafen's Lair"
 	);
 
 sub EVENT_SAY {
@@ -75,6 +76,47 @@ sub EVENT_SAY {
 		if (quest::get_data($key) eq "$name") {
 			@Data = undef;  
 			@Data = ("permafrost", 73, 61.00, -121.00, 3.75);
+			#:: Key a data bucket to check the player's existing zone instance setting
+			$key = $client->CharacterID() . "-active-instance-zone";
+			#:: Match if the data bucket does not exist
+			if (!quest::get_data($key)) {
+				#:: Set a data bucket to track player zone instance
+				quest::set_data($key, "$Data[0]", 86400);
+				#:: Create the Instance of that zone and store the ID in a scalar variable
+				$InstanceID = quest::CreateInstance("$Data[0]", 0, 86400);
+				#:: Key a data bucket to track the player's instance ID
+				$key = $client->CharacterID() . "-active-instance-id";
+				#:: Set a data bucket to track player's instance ID
+				quest::set_data($key, $InstanceID, 86400);
+				$client->Message(315, "$NPCName says, 'Alright, $name.  Please tell me when you are ready to [" . quest::saylink("go") . "].'");
+			}
+			#:: Match if the data bucket exists for this zone shortname
+			elsif (quest::get_data($key) eq "$Data[0]") {
+				#:: Key a data bucket to pull the instance ID
+				$key = $client->CharacterID() . "-active-instance-id";
+				#:: Update the scalar variable
+				$InstanceID = quest::get_data($key);
+				$client->Message(315, "$NPCName says, 'Alright, $name.  Please tell me when you are ready to [" . quest::saylink("go") . "].'");
+			}
+			#:: Match if the data bucket exists but is set to a different zone
+			else {
+				$CharInstance = quest::get_data($key);
+				$client->Message(315, "$NPCName says, 'Sorry $name, but it looks like you already have an instance for" . $CharInstance . ". Would you like to [" . quest::saylink("delete") . "] it for 500 AAs?'");
+			}
+		}
+		#:: Match if the person talking rudely interrupted
+		else {
+			$Name = quest::get_data($key);
+			quest::say("I am sorry, $name, but I was right in the middle of speaking with " . $Name . ".  Is " . $Name . " [" . quest::saylink("gone") . "]?");
+		}
+	}
+	elsif ($text=~/\bNagafen's Lair\b/i) {
+		#:: Key a data bucket to protect functions
+		$key = $npc->GetCleanName() . "-current-name";
+		#:: Match if the person talking is the focus of our attention
+		if (quest::get_data($key) eq "$name") {
+			@Data = undef;  
+			@Data = ("soldungb", 32, -263, 424, -108);
 			#:: Key a data bucket to check the player's existing zone instance setting
 			$key = $client->CharacterID() . "-active-instance-zone";
 			#:: Match if the data bucket does not exist
