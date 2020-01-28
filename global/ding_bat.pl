@@ -244,6 +244,8 @@ sub DoTeleport {
 	$raid = $entity_list->GetRaidByClient($client);
 	#:: Create a scalar variable to store client Group information
 	$group = $entity_list->GetGroupByClient($client);
+	#:: Move the client who triggered the event to the specified location
+	$client->MovePCInstance($Data[1], $InstanceID, $Data[2], $Data[3], $Data[4], 0);
 	#:: Match if the player is in a Raid
 	if ($raid) {
 		#:: Loop through each member of the Raid
@@ -258,8 +260,6 @@ sub DoTeleport {
 				$pc->MovePCInstance($Data[1], $InstanceID, $Data[2], $Data[3], $Data[4], 0);
 			}
 		}
-		#:: Move the client who triggered the event to the specified location
-		$client->MovePCInstance($Data[1], $InstanceID, $Data[2], $Data[3], $Data[4], 0);
 	}
 	#:: Match if the player is in a Group
 	elsif ($group) {
@@ -275,11 +275,7 @@ sub DoTeleport {
 				$pc->MovePCInstance($Data[1], $InstanceID, $Data[2], $Data[3], $Data[4], 0);
 			}
 		}
-		#:: Move the client who triggered the event to the specified location
-		$client->MovePCInstance($Data[1], $InstanceID, $Data[2], $Data[3], $Data[4], 0);
 	}
-	#:: Move the client who triggered the event to the specified location
-	$client->MovePCInstance($Data[1], $InstanceID, $Data[2], $Data[3], $Data[4], 0);
 	#:: Key a data bucket to protect functions
 	$key = $NPCName . "-current-name";
 	#:: Destroy the data bucket
