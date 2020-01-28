@@ -1,5 +1,10 @@
+#:: Create a scalar variable to store the cost of instance deletion - 1,000,000 copper pieces (1,000pp)
+my $cost = (1000000);
+#:: Create a scalar variable to store an Instance ID
 my $InstanceID = 0;
+#:: Create an array to store zone data information
 my @Data = undef;
+#:: Create an array of zones enabled for instancing and transport
 my @ZoneArray =
 	(
 		"Permafrost",
@@ -142,7 +147,7 @@ sub EVENT_SAY {
 			#:: Match if the data bucket exists but is set to a different zone
 			else {
 				$CharInstance = quest::get_data($key);
-				$client->Message(315, "$NPCName says, 'Sorry $name, but it looks like you already have an instance for" . $CharInstance . ". Would you like to [" . quest::saylink("delete") . "] it for 500 AAs?'");
+				$client->Message(315, "$NPCName says, 'Sorry $name, but it looks like you already have an instance for" . $CharInstance . ". Would you like to [" . quest::saylink("delete") . "] it for" $cost/1000 ."platinum pieces?'");
 			}
 		}
 		#:: Match if the person talking rudely interrupted
@@ -191,8 +196,6 @@ sub EVENT_SAY {
 		if (quest::get_data($key) eq "$name") {
 			#:: Create a scalar variable to store total aa points
 			my $total = $client->GetCarriedMoney();
-			#:: Create a scalar variable to store the cost of deletion - 1,000,000 copper pieces (1,000pp)
-			my $cost = (1000000);
 			#:: Match if the player who triggered the event has more AAs than the reset costs
 			if ($total > $cost) {
 				#:: Key a data bucket to check for existing instances by zone
