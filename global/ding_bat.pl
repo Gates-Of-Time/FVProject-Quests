@@ -190,9 +190,9 @@ sub EVENT_SAY {
 		#:: Match if the person talking is the focus of our attention
 		if (quest::get_data($key) eq "$name") {
 			#:: Create a scalar variable to store total aa points
-			my $total = $client->GetAAPoints();
-			#:: Create a scalar variable to store the cost of deletion
-			my $cost = (500);
+			my $total = $client->GetCarriedMoney();
+			#:: Create a scalar variable to store the cost of deletion - 1,000,000 copper pieces (1,000pp)
+			my $cost = (1000000);
 			#:: Match if the player who triggered the event has more AAs than the reset costs
 			if ($total > $cost) {
 				#:: Key a data bucket to check for existing instances by zone
@@ -208,8 +208,8 @@ sub EVENT_SAY {
 						#:: Destroy the data bucket just to be tidy
 						quest::delete_data($key);
 					}
-					$total = int($total-$cost);    
-					$client->SetAAPoints($total);
+					#:: Take the coins and update the client
+					$client->TakeMoneyFromPP($cost, 1);
 					$client->Message(315, "$NPCName says, 'Easy come, easy go, right $name?  You are now free to [" . quest::saylink("teleport") . "] wherever you would like to go.'");
 				}
 				else {
@@ -217,7 +217,7 @@ sub EVENT_SAY {
 				}
 			}
 			else {
-				$client->Message(315, "$NPCName says, 'Sorry, $name, but you do not have the $cost AA points required to reset an instance.'");
+				$client->Message(315, "$NPCName says, 'Sorry, $name, but you do not have the coins required to reset an instance.'");
 			}
 		}
 		#:: Match if the person talking rudely interrupted
