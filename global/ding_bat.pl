@@ -1,5 +1,5 @@
 #:: Create a scalar variable to store the cost of instance deletion - 1,000,000 copper pieces (1,000pp)
-my $cost = (1000000);
+my $cost = 1000000;
 #:: Create a scalar variable to store an Instance ID
 my $InstanceID = 0;
 #:: Create an array to store zone data information
