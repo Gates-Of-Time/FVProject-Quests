@@ -258,6 +258,8 @@ sub DoTeleport {
 				$pc->MovePCInstance($Data[1], $InstanceID, $Data[2], $Data[3], $Data[4], 0);
 			}
 		}
+		#:: Move the client who triggered the event to the specified location
+		$client->MovePCInstance($Data[1], $InstanceID, $Data[2], $Data[3], $Data[4], 0);
 	}
 	#:: Match if the player is in a Group
 	elsif ($group) {
@@ -273,6 +275,8 @@ sub DoTeleport {
 				$pc->MovePCInstance($Data[1], $InstanceID, $Data[2], $Data[3], $Data[4], 0);
 			}
 		}
+		#:: Move the client who triggered the event to the specified location
+		$client->MovePCInstance($Data[1], $InstanceID, $Data[2], $Data[3], $Data[4], 0);
 	}
 	#:: Move the client who triggered the event to the specified location
 	$client->MovePCInstance($Data[1], $InstanceID, $Data[2], $Data[3], $Data[4], 0);
