@@ -11,6 +11,21 @@ my @ZoneArray =
 		"Nagafen's Lair"
 	);
 
+sub EVENT_SPAWN {
+	quest::settimer("follow",10);
+	quest::say("Ding!");
+}
+
+sub EVENT_TIMER {
+	if ($timer eq "follow") {
+		my $OpponentID = 2161;
+		my $getmobbynpctype = $entity_list->GetMobByNpcTypeID($OpponentID);
+		my $follow_target = $getmobbynpctype->GetID();
+		quest::follow($follow_target);
+		quest::stoptimer("follow");
+	}
+}
+
 sub EVENT_SAY {
 	my $NPCName = $npc->GetCleanName();
 	if ($text=~/hail/i) {
