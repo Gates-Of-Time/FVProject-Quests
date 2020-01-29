@@ -7,6 +7,23 @@ sub EVENT_SAY {
 		if ($faction <= 4) {
 			quest::say("Good.. Zannsin said you had a special talent for this sort of thing, so here's your chance to prove it. What you need to do is follow Stald on his patrol, and when the coast is clear, take him down. Good luck. Oh yeah.. not that I don't trust you or anything, but bring me back some sorta proof that Stald is dead, got it?");
 		}
+		else {
+			#:: Create a scalar variable to store a random number
+			my $RandomResponse = quest::ChooseRandom(1..4);
+			#:: Match the random number
+			if ($RandomResponse == 1) {
+				quest::say("Is that your BREATH, or did something die in here? Now go away!");
+			}
+			elsif ($RandomResponse == 2) {
+				quest::say("I didn't know slime could speak common. Go back to the sewer before I lose my temper!");
+			}
+			elsif ($RandomResponse == 3) {
+				quest::say("I wonder how much I could get for the tongue of a blithering fool? Leave before I decide to find out for myself.");
+			}
+			else {
+				quest::say("Oh look, a talking lump of refuse. How novel!");
+			}
+		}
 	}
 }
 
@@ -28,14 +45,15 @@ sub EVENT_ITEM {
 			quest::exp(500);
 		}
 		else {
+			#:: Confirmed no text on live.
 			#:: Return a 18795 - Letter for Prak
 			quest::summonitem(18795);
 		}
 	}
 	#:: Match a 13793 - Stald's Badge
 	elsif (plugin::takeItems(13793 => 1)) {
-		#:: Match if faction is Kindly or better
-		if ($faction <= 3) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
 			quest::say("Ah, boy! Looks like I owe Kaden two plat... I thought you'd fumble it up for sure. Well, you've impressed me friend. Here, take this back to Zan... I'll make sure to note your fine work to Carson, too, next time we speak.");
 			#:: Give a 18028 - Message to Zannsin
 			quest::summonitem(18028);
@@ -51,6 +69,7 @@ sub EVENT_ITEM {
 			quest::exp(500);
 		}
 		else {
+			#:: Confirmed no text on live.
 			#:: Return a 13793 - Stald's Badge
 			quest::summonitem(13793);
 		}	
