@@ -3,5 +3,5 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_ENTER {
-	quest::MovePCInstance(15, 0, -8338, -3097, 690, 32);
+	$client->MovePC(15, -8338, -3097, 690, 32);
 }
