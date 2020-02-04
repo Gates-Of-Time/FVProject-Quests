@@ -25,6 +25,15 @@ sub EVENT_SAY {
 	}
 }
 
+sub EVENT_SIGNAL {
+	#:: Match a signal '1' from /highkeep/Lartin.pl
+	if ($signal == 1) {
+		quest::say("Not at all. It is your life, sir.");
+		#:: Send a signal '2' to High Keep >> Lartin (6186) with no delay
+		quest::signalwith(6186, 2, 0);
+	}
+}
+
 sub EVENT_ITEM {
 	#:: Return unused items
 	plugin::returnUnusedItems();
