@@ -118,8 +118,8 @@ sub EVENT_ITEM {
 		my %cash = plugin::RandomCash(40,60);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set faction
-		quest::faction(316,5);		#:: + Tunare's Scouts
+		#:: Set faction - Confirmed on live.
+		quest::faction(316, 1);		#:: + Tunare's Scouts
 	}
 	#:: Match a 13322 - Emerald Shard
 	elsif (plugin::takeItems(13322=> 1)) {
