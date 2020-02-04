@@ -5,4 +5,6 @@ sub EVENT_SPAWN {
 
 sub EVENT_ENTER {
 	quest::emote("erupts in a cloud of spores!");
+	#:: Spawn a a_goblin_scavenger
+	quest::spawn2(11000, 0, 0, $x, $y, $z, $h);
 }
