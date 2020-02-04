@@ -1,6 +1,13 @@
 #:: Create a scalar variable to store coin state
 my $coinoperated = 0;
 
+sub EVENT_COMBAT {
+	#:: Match combat state 1 - entered combat
+	if ($combat_state == 1) {
+		quest::say("Raise your guard! It's time to test your skills.");
+	}
+}
+
 sub EVENT_SPAWN {
 	#:: Create a timer to trigger in 30 minutes
 	quest::settimer("depop", 1800);
@@ -20,7 +27,7 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("What brings you to the top of the castle? Me? I am just the Highkeep exterminator. We have had a nasty time with rats.");
 	}
-	if ($text=~/xentil herkanon/i && $coinoperated == 1) {
+	elsif ($text=~/xentil herkanon/i && $coinoperated == 1) {
 		quest::say("Xentil Herkanon is related to one of the bigwigs of the Circle of Unseen Hands, the rogue guild in Qeynos. Killing him would greatly decrease your popularity with them, but who do they like, anyway? He travels with two bodyguards, Lartin and Grex, very tough customers. It's best to avoid them. Goodbye and good luck.");
 		#:: Spawn a High Keep >> Xentil_Herkanon (6185)
 		quest::unique_spawn(6185, 0, 0, -258, -102, 4, 16);
@@ -46,4 +53,8 @@ sub EVENT_ITEM {
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
+}
+
+sub EVENT_DEATH_COMPLETE {
+	quest::say("You have won this battle, my friend, but my fellow rogues will learn of this and you shall pay dearly.");
 }
