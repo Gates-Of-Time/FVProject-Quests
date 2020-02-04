@@ -33,7 +33,7 @@ sub EVENT_ITEM {
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
-			quest::faction(316, 10);		#:: + Tunare's Scouts
+			quest::faction(316, 30);		#:: + Tunare's Scouts
 			#:: Grant a large amount of experience
 			quest::exp(20000);
 			#:: Create a hash for storing cash - 2700 to 2900cp
