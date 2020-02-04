@@ -30,11 +30,11 @@ sub EVENT_SAY {
 	elsif ($text=~/xentil herkanon/i && $coinoperated == 1) {
 		quest::say("Xentil Herkanon is related to one of the bigwigs of the Circle of Unseen Hands, the rogue guild in Qeynos. Killing him would greatly decrease your popularity with them, but who do they like, anyway? He travels with two bodyguards, Lartin and Grex, very tough customers. It's best to avoid them. Goodbye and good luck.");
 		#:: Spawn a High Keep >> Xentil_Herkanon (6185)
-		quest::unique_spawn(6185, 0, 0, -258, -102, 4, 16);
-		#:: Spawn a High Keep >> Lartin (6186)
-		quest::unique_spawn(6186, 0, 0, -259, -78, 4, 0);
-		#:: Spawn a High Keep >> Grex (6187)
-		quest::unique_spawn(6187, 0, 0, -240, -78, 4, 0);
+		quest::unique_spawn(6185, 0, 0, -256, -99, 3.75, 40);
+		#:: Spawn a High Keep >> Lartin (6186) on grid 11
+		quest::unique_spawn(6186, 11, 0, -212, -54, 3.75, 471);
+		#:: Spawn a High Keep >> Grex (6187) on grid 10
+		quest::unique_spawn(6187, 10, 0, 23, -28, -2.25, 384);
 		quest::stoptimer("depop");
 		quest::depop();
 	}
