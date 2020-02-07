@@ -17,5 +17,5 @@ sub EVENT_WAYPOINT_ARRIVE {
 
 sub EVENT_ENTER {
 	#:: Move client to Ocean of Tears (oot)
-	quest::movepc(69, -9193, 386 , 5.2);
+	quest::movepc(69, 7582, -2090, 4, 384);
 }
