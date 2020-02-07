@@ -19,7 +19,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
  #Handin: 1x a Strategic Map of Kithicor (16548)
  if(plugin::check_handin(\%itemcount, 16548 => 1)){
-  quest::say("Excellent work, $name!! It is obvious that you are a highly skilled tracker and warrior. Accept this reward, my personal sword which has served me well in countless battles.");
+  quest::say("Excellent work, $name!! It is obvious that you are a highly skilled tracker and warrior. Accept this reward, my personal sword which has served me well in countless battles. Perhaps you are willing to perform [another service]?");
   quest::summonitem('5422'); #Short Sword of Morin (5422)
  }
  #Handin: 1x Ebony Bladed Sword (5405)
