@@ -11,7 +11,14 @@ sub EVENT_WAYPOINT_ARRIVE {
 }
 
 sub EVENT_ENTER {
-	quest::emote("'s spirit moves you to another land ...");
-	#:: Cast 2280 - Portal to Butcher
-	quest::selfcast(2280);
+	if ($x > 0) {
+		quest::emote("'s spirit moves you to another land ...");
+		#:: Move the client to Freeport
+		quest::movepc(10,-1853,-748,-80,0);
+	}
+	else {
+		quest::emote("'s spirit moves you to another land ...");
+		#:: Move the client to Butcher
+		quest::movepc(68,4591,2090,-15,0);
+	}
 }
