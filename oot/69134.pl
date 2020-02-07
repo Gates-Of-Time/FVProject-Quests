@@ -24,6 +24,6 @@ sub EVENT_ENTER {
 	else {
 		quest::emote("'s spirit moves you to another land ...");
 		#:: Move the client to Butcher
-		quest::movepc(68,4591,2090,-15,0);
+		quest::movepc(68, 3200, 1356, 12, 128);
 	}
 }
