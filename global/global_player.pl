@@ -23,6 +23,10 @@ sub EVENT_ENTERZONE {
 		quest::playerrace(27);
 		quest::playersize(6);
 	}
+	if ($name eq "Fippy") {
+		quest::playerrace(29);
+		quest::playersize(5);
+	}
 }
 
 sub EVENT_CONNECT {
