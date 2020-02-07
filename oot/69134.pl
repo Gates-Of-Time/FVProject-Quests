@@ -19,7 +19,7 @@ sub EVENT_ENTER {
 	if ($x > 0) {
 		quest::emote("'s spirit moves you to another land ...");
 		#:: Move the client to Freeport
-		quest::movepc(10,-1853,-748,-80,0);
+		quest::movepc(10, -975, -15, -52 , 384);
 	}
 	else {
 		quest::emote("'s spirit moves you to another land ...");
