@@ -1,6 +1,6 @@
 sub EVENT_SPAWN {
 	#:: Create a timer 'ready' that loops every 30 seconds
-	quest::set_timer("ready", 30);
+	quest::settimer("ready", 30);
 }
 
 sub EVENT_SAY {
