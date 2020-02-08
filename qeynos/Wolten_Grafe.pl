@@ -38,7 +38,7 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Set factions
 		quest::faction(280, 10);	#:: + Knights of Thunder
-		quest::faction(220, -10);	#:: - Bloodsabers
+		quest::faction(221, -10);	#:: - Bloodsabers
 		quest::faction(341, 7);		#:: + Priests of Life
 		quest::faction(262, 7);		#:: + Guards of Qeynos
 		#:: Grant a small amount of experience
@@ -65,7 +65,7 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Set factions
 		quest::faction(280, 50);	#:: + Knights of Thunder
-		quest::faction(220, -50);	#:: - Bloodsabers
+		quest::faction(221, -50);	#:: - Bloodsabers
 		quest::faction(341, 37);	#:: + Priests of Life
 		quest::faction(262, 37);	#:: + Guards of Qeynos
 		#:: Grant a small amount of experience
@@ -84,7 +84,7 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Set factions
 		quest::faction(280, 50);	#:: + Knights of Thunder
-		quest::faction(220, -50);	#:: - Bloodsabers
+		quest::faction(221, -50);	#:: - Bloodsabers
 		quest::faction(341, 37);	#:: + Priests of Life
 		quest::faction(262, 37);	#:: + Guards of Qeynos
 		#:: Grant a small amount of experience
@@ -103,7 +103,7 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Set factions
 		quest::faction(280, 50);	#:: + Knights of Thunder
-		quest::faction(220, -50);	#:: - Bloodsabers
+		quest::faction(221, -50);	#:: - Bloodsabers
 		quest::faction(341, 37);	#:: + Priests of Life
 		quest::faction(262, 37);	#:: + Guards of Qeynos
 		#:: Grant a small amount of experience
