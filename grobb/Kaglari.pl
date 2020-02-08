@@ -15,7 +15,7 @@ sub EVENT_SAY {
 		quest::say("<SNORT!>  HHUUUUCCCSSH..  Peh!  You speak at Kaglari, High Priestess of Dark Ones.  Children of Hate.  Spawn of Innoruuk.  $name, speak or be gone!  <SNORT!>  You [wish majik power]?");
 	}
 	elsif ($text=~/wish majik power/i) {
-		quest::say("GOOD! <SNORT> Innoruuk needs more childrens.  You show majik skill or I give you to Innoruuk.  You bring two snake scales and two bone chips ..<SNORT>..  from old bones.  I teach you majik.  GO!  <SNORT!!>");
+		quest::say("GOOD! <SNORT> Innoruuk needs more childrens.  You show majik skill or I give you to Innoruuk.  You bring two froglok tadpole flesh and two bone chips ..<SNORT>..  from old bones.  I teach you majik.  GO!  <SNORT!!>");
 	}
 	elsif ($text=~/help innoruuk/i) {
 		quest::say("Me hears orcs nearby are trubble. Da werd frum Neriak is dey wants us ta kills dem before dey organize. Dark elf say ta looks for Deathfist Clan. Say dey called cen-tu-ri-ons. Dey try ta gets big orc army. Shows me ya can strike fear and hate inta dem orcs.. dey needs be more scared a us den dem humies. Brings me a Deathfist slashed belt.");
