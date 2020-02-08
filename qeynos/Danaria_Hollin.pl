@@ -18,7 +18,7 @@ sub EVENT_WAYPOINT_ARRIVE {
 sub EVENT_SIGNAL {
 	#:: Match a signal "1" from qeynos/Karn_Tassen.pl
 	if ($signal == "1") {
-		quest:say("Just get me the tart and put your eyes back in your sockets or I'll pry them out for good!");
+		quest::say("Just get me the tart and put your eyes back in your sockets or I'll pry them out for good!");
 	}
 }
 
