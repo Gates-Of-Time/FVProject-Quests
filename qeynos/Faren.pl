@@ -49,13 +49,13 @@ sub EVENT_SIGNAL {
 	if ($signal == 1) {
 		quest::say("Oh, hi, Beren. Not too good so far. That [dwarf] keeps bothering me, too.");
 		#:: Send a signal "2" to South Qeynos >> Guard_Beren (1090) with no delay
-		quest::signal(1090,2,0);
+		quest::signalwith(1090, 2, 0);
 	}
 	#:: Match signal "2" from qeynos/Trumpy_Irontoe.pl
 	elsif ($signal == 2) {
 		quest::say("Huh? What? My [tacklebox]!? You know I can't swim, you rotten [dwarf]!");
 		#:: Send a signal "1" to South Qeynos >> Trumpy_Irontoe (1042) with no delay
-		quest::signalwith(1042,1,0);
+		quest::signalwith(1042, 1, 0);
 	}
 	#:: Match signal "3" from qeynos/Trumpy_Irontoe.pl
 	elsif ($signal == 3) {
