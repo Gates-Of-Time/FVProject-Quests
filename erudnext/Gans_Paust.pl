@@ -63,7 +63,7 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		#:: quest::exp(100);
 		#:: Diminishing Quest Rewards with Multiple Turn-ins
-		$key = $client->CharacterID() . "-" . $npc->GetNPCTypeID() . "-13922-turnin-count";
+		$key = $client->CharacterID() . "-" . $npc->GetNPCTypeID() . "1771-turnin-count";
 		#:: Match if data bucket exists
 		if (quest::get_data($key) < 20) {
 			#:: Increment the data bucket value
