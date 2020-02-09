@@ -35,7 +35,7 @@ sub EVENT_ITEM {
 			#:: Create a scalar to store the value of the data bucket
 			$turnin_count = quest::get_data($key);
 			#:: Reward experience that decreases as the count increases
-			quest::exp((20/$turnin_count)*1000);
+			quest::exp((20/$turnin_count) * 1000);
 		}
 		else {
 			#:: Set the data bucket with a value of 1
@@ -43,7 +43,7 @@ sub EVENT_ITEM {
 			#:: Create a scalar to store the value of the data bucket
 			$turnin_count = quest::get_data($key);
 			#:: Reward experience that decreases as the count increases
-			quest::exp((20/$turnin_count)*1000);
+			quest::exp((20/$turnin_count) * 1000);
 		}	
 	}
 	#:: Return unused items
