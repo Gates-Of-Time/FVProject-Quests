@@ -28,7 +28,29 @@ sub EVENT_ITEM {
 			quest::faction(266, 1); 		#:: + High Council of Erudin
 			quest::faction(265, -1); 		#:: - Heretics
 			#:: Grant a small amount of experience
-			quest::exp(100);
+			#:: quest::exp(100);
+			#:: Diminishing Quest Rewards
+			$key = $client->CharacterID() . "-" . $npc->GetNPCTypeID() . "-13884-turnin-count";
+			#:: Match if data bucket exists
+			if (quest::get_data($key) < 20) {
+				#:: Increment the data bucket value
+				quest::set_data($key, quest::get_data($key) + 1);
+				#:: Create a scalar to store the value of the data bucket
+				$turnin_count = quest::get_data($key);
+				#:: Reward experience that decreases as the count increases
+				quest::exp((20/$turnin_count) * 100);
+			}
+			elsif (quest::get_data($key) == 20) {
+				quest::exp(100);
+			}
+			else {
+				#:: Set the data bucket with a value of 1
+				quest::set_data($key, 1);
+				#:: Create a scalar to store the value of the data bucket
+				$turnin_count = quest::get_data($key);
+				#:: Reward experience that decreases as the count increases
+				quest::exp((20/$turnin_count) * 100);
+			}
 		}
 		else {
 			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
