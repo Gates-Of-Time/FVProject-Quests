@@ -29,13 +29,16 @@ sub EVENT_ITEM {
 		#:: Diminishing Quest Rewards without Reward Item
 		$key = $client->CharacterID() . "-" . $npc->GetNPCTypeID() . "-turnin-count";
 		#:: Match if data bucket exists
-		if (quest::get_data($key)) {
+		if (quest::get_data($key) < 20) {
 			#:: Increment the data bucket value
 			quest::set_data($key, quest::get_data($key) + 1);
 			#:: Create a scalar to store the value of the data bucket
 			$turnin_count = quest::get_data($key);
 			#:: Reward experience that decreases as the count increases
 			quest::exp((20/$turnin_count) * 1000);
+		}
+		elsif (quest::get_data($key) == 20) {
+			quest::exp(1000);
 		}
 		else {
 			#:: Set the data bucket with a value of 1
