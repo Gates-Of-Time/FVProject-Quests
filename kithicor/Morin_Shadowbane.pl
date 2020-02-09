@@ -30,10 +30,10 @@ sub EVENT_ITEM {
 		quest::summonitem(5422);
 	}
 	#:: Match a 20638 - Sealed Ghoul Boss' Log Book
-#::	elsif (plugin::takeItems(20638 => 1)) {
-#:: 		quest::say("We meet again, $name. This log reveals much of the machinations of our dark oppressors, but not enough. Deliver these orders to Bryn in Lesser Faydark, and he will provide you with another weapon to aid in our defense of Kithicor.");
-#::		quest::summonitem(0000); #Sealed Orders (0000)
-#::	}
+	elsif (plugin::takeItems(20638 => 1)) {
+		quest::say("We meet again, $name. This log reveals much of the machinations of our dark oppressors, but not enough. Deliver these orders to Bryn in Lesser Faydark, and he will provide you with another weapon to aid in our defense of Kithicor.");
+		quest::summonitem(20639); #Orders for Bryn - 20639
+	}
 #::	plugin::try_tome_handins(\%itemcount, $class, 'Ranger');
 	#:: Return unused items
 	plugin::returnUnusedItems();
