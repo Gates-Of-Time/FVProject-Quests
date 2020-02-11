@@ -7,7 +7,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Turn in for 18158 - A Bardic Letter (Freeport)
 	if (plugin::takeItems(18158 => 1 )) {
-		quest::say("Incoming mail - very good!  Please take this gold for your troubles.");
+		quest::say("Mail from the front - thank you very much! Please take this gold for your troubles. If you are interested in more work, just ask Ton Twostring");
 		#:: Ding!
 		quest::ding();
 		#:: Give a small amount of xp
