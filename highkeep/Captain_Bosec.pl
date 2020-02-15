@@ -22,8 +22,8 @@ sub EVENT_ITEM {
 		quest::faction(331, 4);		#:: + Merchants of Highpass
 		quest::faction(230, 4);		#:: + Corrupt Qeynos Guards
 		quest::faction(330, 4);		#:: + The Freeport Militia
-		#:: Grant a small amount of experience
-		quest::exp(120);
+		#:: Grant a small amount of experience, based on level
+		$client->AddLevelBasedExp(4, 24);
 		#:: Create a hash for storing cash - 2400 to 2800cp
 		my %cash = plugin::RandomCash(2400,2800);
 		#:: Grant a random cash reward
@@ -40,8 +40,8 @@ sub EVENT_ITEM {
 		quest::faction(331, 3);		#:: + Merchants of Highpass
 		quest::faction(230, 3);		#:: + Corrupt Qeynos Guards
 		quest::faction(330, 3);		#:: + The Freeport Militia
-		#:: Grant a small amount of experience
-		quest::exp(90);
+		#:: Grant a small amount of experience, based on level
+		$client->AddLevelBasedExp(3, 24);
 		#:: Create a hash for storing cash - 1800 to 2100cp
 		my %cash = plugin::RandomCash(1800,2100);
 		#:: Grant a random cash reward
@@ -58,8 +58,8 @@ sub EVENT_ITEM {
 		quest::faction(331, 2);		#:: + Merchants of Highpass
 		quest::faction(230, 2);		#:: + Corrupt Qeynos Guards
 		quest::faction(330, 2);		#:: + The Freeport Militia
-		#:: Grant a small amount of experience
-		quest::exp(60);
+		#:: Grant a small amount of experience, based on level
+		$client->AddLevelBasedExp(2, 24);
 		#:: Create a hash for storing cash - 1200 to 1400cp
 		my %cash = plugin::RandomCash(1200,1400);
 		#:: Grant a random cash reward
@@ -76,8 +76,8 @@ sub EVENT_ITEM {
 		quest::faction(331, 1);		#:: + Merchants of Highpass
 		quest::faction(230, 1);		#:: + Corrupt Qeynos Guards
 		quest::faction(330, 1);		#:: + The Freeport Militia
-		#:: Grant a small amount of experience
-		quest::exp(30);
+		#:: Grant a small amount of experience, based on level
+		$client->AddLevelBasedExp(1, 24);
 		#:: Create a hash for storing cash - 600 to 700cp
 		my %cash = plugin::RandomCash(600,700);
 		#:: Grant a random cash reward
