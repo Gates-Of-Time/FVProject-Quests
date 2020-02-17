@@ -45,6 +45,20 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
+	#:: Match a 28055 - Tattered Parchment
+	if (plugin::takeItems(28055 => 1 )) {
+		quest::say("You have performed a great service to one who is your brother. Your loyalty shines brightly, as does your skill. Take the treant fists. They are yours now.");
+		#:: Give a 12344 - Treant Fists
+		quest::summonitem(12344);
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(361, 20); 		#:: + Ashen Order
+		quest::faction(281, 3); 		#:: + Knights of Truth
+		quest::faction(309, 2); 		#:: + Silent Fist Clan
+		#:: Grant a small amount of experience
+		quest::exp(1000);
+	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
