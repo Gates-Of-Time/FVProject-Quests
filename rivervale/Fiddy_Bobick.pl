@@ -19,18 +19,18 @@ sub EVENT_ITEM {
 		quest::say("Whew!! We are sure on the way to saving this village, pal! They're gonna erect a statue in our names.  Fishslayers is what we are!  Let's keep up the good work!");
 		#:: Ding!
 		quest::ding();
+		#:: Set factions
+		quest::faction(292, 1); 		#:: + Merchants of Rivervale
+		quest::faction(241, 1);			#:: + Deeppockets
+		quest::faction(263, 1);			#:: + Guardians of the Vale
+		quest::faction(286, 1); 		#:: + Mayor Gubbin
+		quest::faction(336, -1);		#:: - Coalition of Tradefolk Underground
 		#:: Grant a small amount of experience
 		quest::exp(15);
 		#:: Create a hash for storing cash - 170 to 200cp
 		my %cash = plugin::RandomCash(170,200);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set factions
-		quest::faction(292, 5); 	#:: + Merchants of Rivervale
-		quest::faction(241, 5);		#:: + Deeppockets
-		quest::faction(263, 5);		#:: + Guardians of the Vale
-		quest::faction(286, 5); 	#:: + Mayor Gubbin
-		quest::faction(336, -5);		#:: - Coalition of Tradefolk Underground
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
