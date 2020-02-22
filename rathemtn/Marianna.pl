@@ -12,6 +12,7 @@ sub EVENT_SAY {
 		}
 	}
 }
+
 sub EVENT_ITEM {
 	#:: Match two 12310 - Rotten Shark Meat
 	if (plugin::takeItems(12310 => 2)) {
@@ -28,6 +29,8 @@ sub EVENT_ITEM {
 			quest::faction(262, 10);	#:: + Guards of Qeynos
 			quest::faction(221, -5);	#:: - Bloodsabers
 			quest::faction(219, 3);		#:: + Antonius Bayle
+			#:: Grant a moderate amount of experience
+			quest::exp(1000);
 		}
 		else {
 			quest::say("Foolish person!! The word is out amongst the followers of the Prime Healer not to trust you.");
