@@ -55,7 +55,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match a 12206 - Kilij Plans
-	if plugin::takeItems(12206 => 1)) {
+	if (plugin::takeItems(12206 => 1)) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
 			quest::say("Ahh!! The kilij!! The legend was true. As for you.. the mold for the Boots of Ro. Go and speak with Thomas for the final component. Ask him of 'Lord Searfire'.  Brell be with you.");
