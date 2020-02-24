@@ -37,7 +37,7 @@ sub EVENT_SAY {
 			#:: Set the data bucket
 			quest::set_data($key, 1);
 			#:: Spawn one and only one Princess_Lenya_Thex (51176)
-			quest::unique_spawn(51176, 0, 0, 220, 85, 74, 400);
+			quest::unique_spawn(51176, 0, 0, -202, 85, 74, 400);
 		}
 		else {
 			quest::say("When you have furthered your service to the Paladins of Tunare, we shall make conversation.");
