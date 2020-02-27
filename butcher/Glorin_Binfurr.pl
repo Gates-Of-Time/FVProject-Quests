@@ -9,9 +9,9 @@ sub EVENT_SAY {
 		quest::say("Glorin and $name. We would make a fine couple.");
 	}
 	elsif ($text=~/marry me/i) {
-		quest::say("Why yes I'll marry you $name, we'll make a fine couple.");
+		quest::say("Why yes I'll marry you $name. We would make a fine couple.");
 	}
-	elsif ($text=~/ugly dorf|ugly dwarf/i) {
+	elsif ($text=~/you are ugly/i) {
 		quest::say("I believe the word '$name' is dwarven for ignorant, smelly skuzz bucket. That's what I hear.");
 	}
 }
