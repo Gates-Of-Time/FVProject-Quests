@@ -43,7 +43,13 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		}
-		#:: Else eat the items
+		else {
+			#:: Return four 13791 - Orc Scalp
+			quest::summonitem(13791);
+			quest::summonitem(13791);
+			quest::summonitem(13791);
+			quest::summonitem(13791);
+		}
 	}
 	#:: Match three 13791 - Orc Scalp
 	elsif (plugin::takeItems(13791 => 3)) {
@@ -65,7 +71,12 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		}
-		#:: Else eat the items
+		else {
+			#:: Return three 13791 - Orc Scalp
+			quest::summonitem(13791);
+			quest::summonitem(13791);
+			quest::summonitem(13791);
+		}
 	}
 	#:: Match two 13791 - Orc Scalp
 	elsif (plugin::takeItems(13791 => 2)) {
@@ -87,7 +98,11 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		}
-		#:: Else eat the items
+		else {
+			#:: Return two 13791 - Orc Scalp
+			quest::summonitem(13791);
+			quest::summonitem(13791);
+		}
 	}
 	#:: Match a 13791 - Orc Scalp
 	elsif (plugin::takeItems(13791 => 1)) {
@@ -109,7 +124,10 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		}
-		#:: Else eat the items
+		else {
+			#:: Return a 13791 - Orc Scalp
+			quest::summonitem(13791);
+		}
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
