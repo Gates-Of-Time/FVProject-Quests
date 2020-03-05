@@ -9,7 +9,6 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("If you have business then out with it!! If not, then please be gone. I have little time to waste on chitchat!");
 	}
-	#:: There is some evidence that there are no responses without proper faction
 	elsif ($text=~/utalk adarev otcin/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
@@ -17,18 +16,24 @@ sub EVENT_SAY {
 			#:: Summon a 18891 - Tattered Cloth Note
 			quest::summonitem(18891);
 		}
+		else {
+			quest::say("How dare you enter my presence?!  In the name of the Dead I should strike you down!");
+		}
 	}
 	elsif ($text=~/the dead/i) {
 		quest::say("The Dead are the combined might of the [Teir'Dal] shadowknights and necromancers. A mightier force cannot be found in all of Norrath.");
 	}
 	elsif ($text=~/teir'dal/i) {
-		#:: quest::say("Response unknown.");
+		#:: Does not respond on live
 	}
 	elsif ($text=~/thex mallet/i) {
 		if ($ResponseVersion == 2) { 
 			#:: Match if faction is Amiable or better
 			if ($faction <= 4) {
 				quest::say("The Thex Mallet is a very special weapon of elven creation. It is as ancient as Norrath itself. Queen Cristanos commands that we find it and return it to Loveal S'nez. That is all you need to know.");
+			}
+			else {
+				quest::say("How dare you enter my presence?!  In the name of the Dead I should strike you down!");
 			}
 		}
 	}
@@ -40,20 +45,23 @@ sub EVENT_SAY {
 				#:: Give a 18889 - Sealed Letter
 				quest::summonitem(18889);
 			}
+			else {
+				quest::say("How dare you enter my presence?!  In the name of the Dead I should strike you down!");
+			}
 		}
 		else {
 			#:: Match if faction is Amiable or better
 			if ($faction <= 4) {
 				quest::say("Inform the Dead that I have no further information at this time. I shall continue with my work as directed. Please return regularly, for I am expecting to break new ground.");
 			}
+			else {
+				quest::say("How dare you enter my presence?!  In the name of the Dead I should strike you down!");
+			}
 		}
 	}
 	elsif ($text=~/silent watch/i) {
 		if ($ResponseVersion == 1) { 
-			#:: Match if faction is Amiable or better
-			if ($faction <= 4) {
-				quest::say("The Koada'Dal have created an elite band of paladins, greater even than our own Teir'Dal Dragoons. They exist on the edge of righteousness. They will perform despicable acts in the name of their deity, barely skimming the edge of evil.");
-			}
+			quest::say("The Koada'Dal have created an elite band of paladins, greater even than our own Teir'Dal Dragoons. They exist on the edge of righteousness. They will perform despicable acts in the name of their deity, barely skimming the edge of evil.");
 		}
 	}
 }
