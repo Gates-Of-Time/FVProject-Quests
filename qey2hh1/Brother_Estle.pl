@@ -25,7 +25,7 @@ sub EVENT_WAYPOINT_ARRIVE {
 		quest::say("I believe here is where I am to wait for the [blessed oil].");
 	}
 	#:: Match waypoint 2 or 5
-	elsif ($wp == 2) || ($wp == 5) {
+	elsif (($wp == 2) || ($wp == 5)) {
 		quest::say("Cleanse your souls, sinners! The way of life is found through the [Prime Healer]. Repent and join us!");
 	}
 }
