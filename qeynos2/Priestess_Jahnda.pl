@@ -21,6 +21,15 @@ sub EVENT_SAY {
 		#:: Removed quest text for Plains of Karana / Splitpaw clan--no response found
 		quest::say("Brother Hayle Mool is one of our finest clerics. He could convert anyone to the ways of Rodcet Nife. Recently, he has been out in the Plains of Karana trying to befriend Splitpaw clan. I pray he has not become their prisoner or even worse, their dinner.");
 	}
+	elsif ($text=~/honored member/i) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
+			quest::say("Yes. The light of righteouness shines from within you.");
+		}
+		else {
+			quest::say("Your mere presence disgusts me. Please remove yourself from my sight. Until you change yourself and your ways, you are unwelcome in the Temple of Life.");
+		}
+	}
 }
 
 sub EVENT_ITEM {
