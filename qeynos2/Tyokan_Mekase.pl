@@ -19,7 +19,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match a 13296 - Prayer Beads
 	elsif (plugin::takeItems(13296 => 1)) {
-		quest::say("As instructed by High Preistess Jahnda I must ask for the beads and a donation of 100 gold coins.");
+		quest::say("As instructed by High Priestess Jahnda I must ask for the beads and a donation of 100 gold coins.");
 		#:: Give a 13296 - Prayer Beads, no charges
 		quest::summonitem(13296,0);
 	}
