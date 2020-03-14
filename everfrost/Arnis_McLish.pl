@@ -1,11 +1,11 @@
 sub EVENT_SPAWN {
 	#:: Set running true (run)
-	quest::setrunning(1);
+	quest::SetRunning(1);
 }
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		#:: Match if faction is indifferent or better
+		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
 			quest::say("My word!! I cannot believe how cold it is out here. I must keep running around just to keep warm.");
 		}
@@ -18,7 +18,7 @@ sub EVENT_SAY {
 		}
 	}
 	elsif ($text=~/Megan/i) {
-		#:: Match if faction is indifferent or better
+		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
 			quest::say("I heard she got lost on the plains. You should go ask her dog, Snowflake, where she is. I hear she is somewhere around the pass to Halas.");
 		}
@@ -33,7 +33,7 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Match 13243 - One Half of Elixir
+	#:: Match a 13243 - One Half of Elixir
 	if (plugin::takeItems(13243 => 1)) {
 		quest::say("Mmmm.. Thank you stranger. I feel a lot warmer now. You should now go and find [Megan] O'Reilly.");
 		#:: Give a 13244 - One Quarter of Elixir
