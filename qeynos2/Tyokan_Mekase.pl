@@ -8,6 +8,15 @@ sub EVENT_SAY {
 	elsif ($text=~/whysia/i) {
 		quest::say("Whysia Flock is the night merchant here at the temple shop. She usually arrives around eight at night or so.");
 	}
+	elsif ($text=~/prayer beads/i) {
+		#:: Match if faction is Indifferent or better
+		if ($faction <= 5) {
+			quest::say("The prayer beads are the blessed necklaces of the Priests of Life.  The beads have a few charges of minor healing.  I recharge them for all members in  good standing.  All I need are the beads and a donation of 100 gold pieces.");
+		}
+		else {
+			quest::say("Your mere presence disgusts me. Please remove yourself from my sight. Until you change yourself and your ways, you are unwelcome in the Temple of Life.");
+		}
+	}
 }
 
 sub EVENT_ITEM {
