@@ -1,6 +1,6 @@
 sub EVENT_SPAWN {
-	#:: Create a timer 'depop' that loops every 300 seconds (5 min)
-	quest::settimer("depop", 300);
+	#:: Create a timer 'depop' that loops every 180 seconds (3 min)
+	quest::settimer("depop", 180);
 }
 
 sub EVENT_COMBAT {
