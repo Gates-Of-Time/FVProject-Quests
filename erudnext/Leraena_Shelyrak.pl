@@ -102,29 +102,7 @@ sub EVENT_ITEM {
 			quest::faction(266, 5); 	#:: + High Council of Erudin
 			quest::faction(265, -5); 	#:: - Heretics
 			#:: Grant a small amount of experience
-			#:: quest::exp(500);
-			#:: Diminishing Quest Rewards
-			$key = $client->CharacterID() . "-" . $npc->GetNPCTypeID() . "-13883-turnin-count";
-			#:: Match if data bucket exists
-			if (quest::get_data($key) < 20) {
-				#:: Increment the data bucket value
-				quest::set_data($key, quest::get_data($key) + 1);
-				#:: Create a scalar to store the value of the data bucket
-				$turnin_count = quest::get_data($key);
-				#:: Reward experience that decreases as the count increases
-				quest::exp((20/$turnin_count) * 500);
-			}
-			elsif (quest::get_data($key) == 20) {
-				quest::exp(500);
-			}
-			else {
-				#:: Set the data bucket with a value of 1
-				quest::set_data($key, 1);
-				#:: Create a scalar to store the value of the data bucket
-				$turnin_count = quest::get_data($key);
-				#:: Reward experience that decreases as the count increases
-				quest::exp((20/$turnin_count) * 500);
-			}
+			quest::exp(500);
 			#:: Create a hash for storing cash - 150 to 200cp
 			my %cash = plugin::RandomCash(150,200);
 			#:: Grant a random cash reward
