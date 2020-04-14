@@ -32,8 +32,8 @@ sub EVENT_ITEM {
 		quest::faction(336, 1);			#:: + Coalition of Tradefolk Underground
 		quest::faction(281, -1);		#:: - Knights of Truth
 		quest::faction(362, -1);		#:: - Priests of Marr
-		#:: Grant a small amount of experience
-		quest::exp(100);
+		#:: Grant a moderate amount of experience based on level
+		$client->AddLevelBasedExp(10, 8);
 		#:: Grant a cash reward of one gold
 		quest::givecash(0, 0, 1, 0);
 	}
