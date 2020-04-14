@@ -67,31 +67,23 @@ sub EVENT_SIGNAL {
 sub EVENT_ITEM {
 	#:: Match a 13702 - Wooden Fishing Tackle
 	if (plugin::takeItems(13702 => 1)) {
-		#:: Match if faction is Indifferent or better
-		if ($faction <= 5) {
-			quest::say("Thank you so much!  If you want some free advice, steer clear of those [Irontoes]! They are nothing but trouble. Here, It's not much but I must thank you somehow.");
-			#:: Give a 13129 - Hurrieta's Tunic
-			quest::summonitem(13129);
-			#:: Ding!
-			quest::ding();
-			#:: Set factions
-			quest::faction(262, 10);		#:: + Guards of Qeynos
-			quest::faction(219, 1);			#:: + Antonius Bayle
-			quest::faction(230, -1);		#:: - Corrupt Qeynos Guards
-			quest::faction(223, -2);		#:: - Circle of Unseen Hands
-			quest::faction(291, 1);			#:: + Merchants of Qeynos
-			#:: Grant a small amount of experience
-			quest::exp(200);
-			#:: Create a hash for storing cash - 5 to 20cp
-			my %cash = plugin::RandomCash(5,20);
-			#:: Grant a random cash reward
-			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		}
-		else {
-			quest::say("I have no need for this item $name, you can have it back.");
-			#:: Return a 13702 - Wooden Fishing Tackle
-			quest::summonitem(13702);
-		}
+		quest::say("Thank you so much!  If you want some free advice, steer clear of those [Irontoes]! They are nothing but trouble. Here, It's not much but I must thank you somehow.");
+		#:: Give a 13129 - Hurrieta's Tunic
+		quest::summonitem(13129);
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(262, 10);		#:: + Guards of Qeynos
+		quest::faction(219, 1);			#:: + Antonius Bayle
+		quest::faction(230, -1);		#:: - Corrupt Qeynos Guards
+		quest::faction(223, -2);		#:: - Circle of Unseen Hands
+		quest::faction(291, 1);			#:: + Merchants of Qeynos
+		#:: Grant a small amount of experience
+		quest::exp(200);
+		#:: Create a hash for storing cash - 5 to 20cp
+		my %cash = plugin::RandomCash(5,20);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
