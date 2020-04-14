@@ -2,7 +2,7 @@ sub EVENT_SPAWN {
 	#:: Create a proximity, 100 units across, 100 units tall, and enable proximity say
 	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 1);
 	#:: Create a timer that loops every 300 seconds (5 min)
-	quest::settimer("fishing",300);
+	quest::settimer("fishing", 300);
 }
 
 sub EVENT_TIMER {
@@ -13,6 +13,7 @@ sub EVENT_TIMER {
 }
 
 sub EVENT_COMBAT {
+	#:: Match combat state 1 - entered combat
 	if ($combat_state == 1) {
 		quest::say("Aaaaaa! Help! Guards! Psycho on the dock!");
 	}
@@ -31,7 +32,7 @@ sub EVENT_PROXIMITY_SAY {
 	if ($text=~/tacklebox/i) {
 		quest::say("Oh. That mean [dwarf], Trumpy, just knocked my tacklebox into the water. Could you please get it for me? I can't swim.");	
 		#:: Send a signal "1" to South Qeynos >> Trumpy_Irontoe (1042) with no delay
-		quest::signalwith(1042,1,0);
+		quest::signalwith(1042, 1, 0);
 	}
 	elsif ($text=~/dwarf/i) {
 		quest::say("His name is Trumpy. He is one of those [Irontoes] I think. I've seen him hanging out in the Fish's Ale. I don't know why he likes to torment me.");
@@ -66,23 +67,31 @@ sub EVENT_SIGNAL {
 sub EVENT_ITEM {
 	#:: Match a 13702 - Wooden Fishing Tackle
 	if (plugin::takeItems(13702 => 1)) {
-		quest::say("Thank you so much!  If you want some free advice, steer clear of those [Irontoes]! They are nothing but trouble. Here, It's not much but I must thank you somehow.");
-		#:: Give a 13129 - Hurrieta's Tunic
-		quest::summonitem(13129);
-		#:: Ding!
-		quest::ding();
-		#:: Set factions
-		quest::faction(262, 10);		#:: + Guards of Qeynos
-		quest::faction(219, 1);			#:: + Antonius Bayle
-		quest::faction(230, -1);		#:: - Corrupt Qeynos Guards
-		quest::faction(223, -2);		#:: - Circle of Unseen Hands
-		quest::faction(291, 1);			#:: + Merchants of Qeynos
-		#:: Grant a small amount of experience
-		quest::exp(200);
-		#:: Create a hash for storing cash - 5 to 20cp
-		my %cash = plugin::RandomCash(5,20);
-		#:: Grant a random cash reward
-		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Match if faction is Indifferent or better
+		if ($faction <= 5) {
+			quest::say("Thank you so much!  If you want some free advice, steer clear of those [Irontoes]! They are nothing but trouble. Here, It's not much but I must thank you somehow.");
+			#:: Give a 13129 - Hurrieta's Tunic
+			quest::summonitem(13129);
+			#:: Ding!
+			quest::ding();
+			#:: Set factions
+			quest::faction(262, 10);		#:: + Guards of Qeynos
+			quest::faction(219, 1);			#:: + Antonius Bayle
+			quest::faction(230, -1);		#:: - Corrupt Qeynos Guards
+			quest::faction(223, -2);		#:: - Circle of Unseen Hands
+			quest::faction(291, 1);			#:: + Merchants of Qeynos
+			#:: Grant a small amount of experience
+			quest::exp(200);
+			#:: Create a hash for storing cash - 5 to 20cp
+			my %cash = plugin::RandomCash(5,20);
+			#:: Grant a random cash reward
+			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		}
+		else {
+			quest::say("I have no need for this item $name, you can have it back.");
+			#:: Return a 13702 - Wooden Fishing Tackle
+			quest::summonitem(13702);
+		}
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
