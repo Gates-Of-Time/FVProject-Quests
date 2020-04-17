@@ -296,3 +296,10 @@ sub DoTeleport {
 	#:: Destroy the data bucket
 	quest::delete_data($key);
 }
+
+sub EVENT_DEATH {
+	$key = "First-Kill-" . $npc->GetCleanName();
+	if (!quest::get_data($key)) {
+		quest::set_data($key, $name)
+	}
+}
