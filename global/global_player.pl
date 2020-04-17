@@ -21,7 +21,7 @@ sub EVENT_ENTERZONE {
 	}
 	if ($name eq "TurmoilToad") {
 		quest::playerrace(27);
-		quest::playersize(6);
+		quest::playersize(4);
 	}
 	if ($name eq "Fippy") {
 		quest::playerrace(39);
