@@ -296,3 +296,13 @@ sub DoTeleport {
 	#:: Destroy the data bucket
 	quest::delete_data($key);
 }
+
+sub EVENT_DEATH {
+	$key = "First-kill-" . $npc->GetCleanName();
+	if (!quest::get_data($key)) {
+		quest::set_data($key, $name);
+		$connect = plugin::LoadMysql();
+		my $query = "UPDATE `titles` SET `char_id` = '" . $charid ."' WHERE `id` = '104';";
+		$query_handle = $connect->prepare($query); $query_handle->execute();
+	}
+}
