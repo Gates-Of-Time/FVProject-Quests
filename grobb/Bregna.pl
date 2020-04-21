@@ -27,12 +27,12 @@ sub EVENT_ITEM {
 		quest::summonitem(12212);
 		#:: Ding!
 		quest::ding();
-		#:: Grant a small amount of experience
-		quest::exp(100);
 		#:: Set factions
 		quest::faction(237, 10);		#:: + Dark Ones
-		quest::faction(251, -10);	#:: - Frogloks of Guk
-		quest::faction(308, 10);	#:: + Shadowknights of Night Keep
+		quest::faction(251, -10);		#:: - Frogloks of Guk
+		quest::faction(308, 10);		#:: + Shadowknights of Night Keep
+		#:: Grant a small amount of experience
+		quest::exp(100);
 	}
 	#:: Match a 26632 - Blood Raven Tailfeather, a 26640 - Wrulon Claw,  a 29921 - Arachnae Fangs, a 26662 - Swirling Banshee Essence
 	elsif (plugin::takeItems(26632 => 1, 26640 => 1, 29921 => 1, 26662 => 1)) {
@@ -43,12 +43,12 @@ sub EVENT_ITEM {
 			quest::summonitem(28740);
 			#:: Ding!
 			quest::ding();
-			#:: Grant a large amount of experience
-			quest::exp(10000);
 			#:: Set factions
 			quest::faction(237, 10);		#:: + Dark Ones
-			quest::faction(251, -10);	#:: - Frogloks of Guk
-			quest::faction(308, 10);	#:: + Shadowknights of Night Keep
+			quest::faction(251, -10);		#:: - Frogloks of Guk
+			quest::faction(308, 10);		#:: + Shadowknights of Night Keep
+			#:: Grant a large amount of experience
+			quest::exp(10000);
 		}
 		elsif ($ExpansionSetting < 8) {
 			quest::say("I have no need for these items, $name.  You can have them back.");
