@@ -26,8 +26,8 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(15270,15226,15279,15211));
 		#:: Ding!
 		quest::ding();
-		#:: Grant a small amount of experience
-		quest::exp(500);
+		#:: Grant a small amount of experience based on level
+		$client->AddLevelBasedExp(10,1);
 		#:: Set faction
 		quest::faction(394,20);		#:: + Shamen of War
 	}
@@ -38,8 +38,8 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(15270,15226,15279,15211));
 		#:: Ding!
 		quest::ding();
-		#:: Grant a small amount of experience
-		quest::exp(500);
+		#:: Grant a small amount of experience based on level
+		$client->AddLevelBasedExp(10,1);
 		#:: Set faction
 		quest::faction(394,20);		#:: + Shamen of War
 	}
@@ -50,8 +50,8 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(15270,15226,15279,15211));
 		#:: Ding!
 		quest::ding();
-		#:: Grant a small amount of experience
-		quest::exp(500);
+		#:: Grant a small amount of experience based on level
+		$client->AddLevelBasedExp(14,1);
 		#:: Set faction
 		quest::faction(394,20);		#:: + Shamen of War
 	}
