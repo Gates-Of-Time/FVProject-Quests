@@ -59,8 +59,8 @@ sub EVENT_ITEM {
 		quest::faction(226, -50);			#:: - Clerics of Tunare
 		quest::faction(341, -30);			#:: - Priests of Life
 		quest::faction(1522, -800);			#:: - Primordial Malice
-		#:: Grant a small amount of experience
-		quest::exp(100);
+		#:: Grant a small amount of experience based on level
+		$client->AddLevelBasedExp(14,3);
 	}
 	#:: Match a 13113 - Leatherfoot Raider Skullcap
 	elsif (plugin::takeItems(13113 => 1)) {
@@ -76,8 +76,8 @@ sub EVENT_ITEM {
 			quest::faction(226, -2);		#:: - Clerics of Tunare
 			quest::faction(341, -1);		#:: - Priests of Life
 			quest::faction(1522, -40);		#:: - Primordial Malice
-			#:: Grant a small amount of experience
-			quest::exp(100);
+			#:: Grant a small amount of experience based on level
+			$client->AddLevelBasedExp(14,3);
 			#:: Create a hash for storing cash - 40 to 60cp
 			my %cash = plugin::RandomCash(40,60);
 			#:: Grant a random cash reward
