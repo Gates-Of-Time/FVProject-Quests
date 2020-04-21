@@ -78,8 +78,8 @@ sub EVENT_ITEM {
 		quest::faction(230, -1);		#:: - Corrupt Qeynos Guards
 		quest::faction(223, -2);		#:: - Circle of Unseen Hands
 		quest::faction(291, 1);			#:: + Merchants of Qeynos
-		#:: Grant a small amount of experience
-		quest::exp(200);
+		#:: Grant a small amount of experience based on level
+		$client->AddLevelBasedExp(5, 1);
 		#:: Create a hash for storing cash - 5 to 20cp
 		my %cash = plugin::RandomCash(5,20);
 		#:: Grant a random cash reward
