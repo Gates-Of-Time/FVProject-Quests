@@ -2,7 +2,7 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Rrrribit.. Please, let me go!! I don't want to be eaten!!");
 	}
-	if ($text=~/glib sent me/i) {
+	elsif ($text=~/glib sent me/i) {
 		quest::say("Liessss. ...Groakk.. I do not believe you!! Bring me proof. Bring me the necklace of a basher!! ..Groakk..");
 	}
 }
@@ -15,8 +15,8 @@ sub EVENT_ITEM {
 		quest::summonitem(13375);
 		#:: Ding!
 		quest::ding();
-		#:: Grant a small amount of experience
-		quest::exp(500);
+		#:: Grant a small amount of experience based on level
+		$client->AddLevelBasedExp(10,1);
 	}
 	#:: Match a 13376 - Ochre Liquid
 	elsif (plugin::takeItems(13376 => 1)) {
@@ -25,8 +25,8 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(18884,18885));
 		#:: Ding!
 		quest::ding();
-		#:: Grant a small amount of experience
-		quest::exp(500);
+		#:: Grant a small amount of experience based on level
+		$client->AddLevelBasedExp(14,1);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
