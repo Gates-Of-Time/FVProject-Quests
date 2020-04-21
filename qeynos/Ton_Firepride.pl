@@ -36,8 +36,8 @@ sub EVENT_ITEM {
 		quest::faction(273, 3);			#:: + Kane Bayle
 		quest::faction(223, 2);			#:: + Circle of Unseen Hands
 		quest::faction(221, 3);			#:: + Bloodsabers
-		#:: Grant a small amount of experience
-		quest::exp(400);
+		#:: Grant a small amount of experience based on level
+		$client->AddLevelBasedExp(15, 1);
 		#:: Create a hash for storing cash - 80 to 100cp
 		my %cash = plugin::RandomCash(80,100);
 		#:: Grant a random cash reward
