@@ -11,7 +11,7 @@ sub EVENT_SAY {
 	elsif ($text=~/mammoth hide parchment/i) {
 		quest::say("Oh, for Jinkus? Ok, here you go.");
 		#:: Give a 12621 - Mammoth Hide Parchment
-		quest::SummonItem(12621);
+		quest::summonitem(12621);
 	}
 }
 	
@@ -23,36 +23,36 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(2130, 2131, 2132, 2134, 2135, 2136, 2127, 2126, 2128, 2129, 2125, 2133));
 		#:: Ding!
 		quest::ding();
-		#:: Give a small amount of experience
+		#:: Set factions
+		quest::faction(328, 5); 	#:: + Merchants of Halas
+		quest::faction(320, 3);		#:: + Wolves of the North
+		quest::faction(327, 3);		#:: + Shamen of Justice
+		quest::faction(305, -5);	#:: + Rogues of the White Rose
+		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Create a hash for storing cash - 90 to 110cp
 		my %cash = plugin::RandomCash(90,110);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set Factions
-		quest::faction(328, 5); 	#:: + Merchants of Halas
-		quest::faction(320, 3);		#:: + Wolves of the North
-		quest::faction(327, 3);		#:: + Shamen of Justice
-		quest::faction(305, -5);	#:: + Rogues of the White Rose
 	}
 	#:: Match two 12223 - Wrath Orc Wristbands
-	if (plugin::takeItems(12223 => 2)) {
+	elsif (plugin::takeItems(12223 => 2)) {
 		quest::say("Fine work hunter!  As your reward please accept this item which I have fashioned for you.");
 		#:: Give a random item: 2034 - Large Leather Gloves, 2171 - Large Raw-hide Leggings, 2164 - Large Raw-hide Tunic
 		quest::summonitem(quest::ChooseRandom(2034, 2171, 2164));
 		#:: Ding!
 		quest::ding();
-		#:: Give a small amount of experience
+		#:: Set factions
+		quest::faction(328, 10); 	#:: + Merchants of Halas
+		quest::faction(320, 7);		#:: + Wolves of the North
+		quest::faction(327, 7);		#:: + Shamen of Justice
+		quest::faction(305, -5);	#:: + Rogues of the White Rose
+		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Create a hash for storing cash - 90 to 110cp
 		my %cash = plugin::RandomCash(90,110);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set Factions
-		quest::faction(328, 10); 	#:: + Merchants of Halas
-		quest::faction(320, 7);		#:: + Wolves of the North
-		quest::faction(327, 7);		#:: + Shamen of Justice
-		quest::faction(305, -5);	#:: + Rogues of the White Rose
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
