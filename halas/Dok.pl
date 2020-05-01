@@ -13,13 +13,13 @@ sub EVENT_SAY {
 	elsif ($text=~/crime/i) { 
 		quest::say("Aye. I happened upon the crime scene, but too late, more's the pity.  I grabbed fer one of the rogues and got only a handful of his shirt.  Before I knew it, I was left holding his sweaty shirt and he was far from the scene.  I called fer the guards and they summoned the shaman.  Methinks one died and one got away in the chase.  I've heard rumors that the leader of [Clan McMannus] has spotted the culprit.  Ye should go to the leader of Clan McMannus and tell him ye're [searching for the fugitive].");
 	}
-	elsif ($text=~/Clan McMannus/i) {
+	elsif ($text=~/clan mcmannus/i) {
 		quest::say("Methinks it is Einhorst McMannus.");
 	}
 	elsif ($text=~/sweaty/i) {
 		quest::say("Now, why would ye be wantin' that smelly thing?!!  I no longer have it.  [Tundra Jack] came into me shop and bought it from me.  He says he can wash it good and make a new collar for Iceberg out of it.");
 	}
-	elsif ($text=~/Tundra Jack/i) {
+	elsif ($text=~/tundra jack/i) {
 		quest::say("Well, now, let's see...  His name is Tundra Jack.. me first guess would be that ye might find him on the frozen tundra of Everfrost, eh?");
 	}
 	elsif ($text=~/candle of bravery/i) {
@@ -35,30 +35,30 @@ sub EVENT_ITEM {
 		quest::summonitem(12220);
 		#:: Ding!
 		quest::ding();
+		#:: Set Factions
+		quest::faction(328, 25); 	#:: + Merchants of Halas
+		quest::faction(320, 18);	#:: + Wolves of the North
+		quest::faction(327, 18);	#:: + Shamen of Justice
 		#:: Grant a small amount of experience
 		quest::exp(250);
 		#:: Create a hash for storing cash - 900 to 1100cp
 		my %cash = plugin::RandomCash(900,1100);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set Factions
-		quest::faction(328, 25); 	#:: + Merchants of Halas
-		quest::faction(320, 18);	#:: + Wolves of the North
-		quest::faction(327, 18);	#:: + Shamen of Justice
 	}
 	#:: Match 12275 - Foot of Candlestick, 12276 - Stem of Candlestick, 12282 - Soil of Underfoot and 13953 - Honeycomb
-	if (plugin::takeItems(12275 => 1, 12276 => 1, 12282 => 1, 13953 => 1)) {
+	elsif (plugin::takeItems(12275 => 1, 12276 => 1, 12282 => 1, 13953 => 1)) {
 		quest::say("Here is your Candle o' Bravery.");
 		#:: Give a 12277 - Candle of Bravery
 		quest::summonitem(12277);
 		#:: Ding!
 		quest::ding();
-		#:: Grant a large amount of experience
-		quest::exp(50000);
-		#:: Set Faction
-		quest::faction(328, 3); 	#:: + Merchants of Halas
+		#:: Set factions
+		quest::faction(328, 5); 	#:: + Merchants of Halas
 		quest::faction(320, 3);		#:: + Wolves of the North
 		quest::faction(327, 3);		#:: + Shamen of Justice
+		#:: Grant a large amount of experience
+		quest::exp(50000);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
