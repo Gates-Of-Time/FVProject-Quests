@@ -101,18 +101,18 @@ sub EVENT_ITEM {
 			quest::summonitem(quest::ChooseRandom(15203, 15270, 15271, 15275, 15036, 15075));
 			#:: Ding!
 			quest::ding();
+			#:: Set factions
+			quest::faction(327, 10);		#:: + Shamen of Justice
+			quest::faction(328, 1);			#:: + Merchants of Halas
+			quest::faction(223, -1);		#:: - Circle of Unseen Hands
+			quest::faction(336, -1);		#:: - Coalition of Tradefolk Underground
+			quest::faction(244, -2);		#:: - Ebon Mask
 			#:: Grant a small amount of experience
 			quest::exp(50);
 			#:: Create a hash for storing cash - 400 to 700 cp
 			my %cash = plugin::RandomCash(400,700);
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-			#:: Set Factions
-			quest::faction(328, 1);		#:: + Merchants of Halas
-			quest::faction(223, -1);		#:: - Circle of Unseen Hands
-			quest::faction(327, 10);	#:: + Shamen of Justice
-			quest::faction(229, -1);		#:: - Coalition of Trade Folk
-			quest::faction(244, -2);		#:: - Ebon Mask
 		}
 		else {
 			quest::say("The scales o' the Shamans o' Justice dinnae tip in yer favor. Ye'd best flee ye still have the chance.");
@@ -123,5 +123,3 @@ sub EVENT_ITEM {
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
-
-#:: Converted to Perl by SS
