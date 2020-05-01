@@ -1,5 +1,8 @@
 sub EVENT_SIGNAL {
-	quest::say("Dinnae be rude to the customers, Holana.");
+	#:: Match a signal '1' from /halas/Holana_Oleary.pl
+	if ($signal == 1) {
+		quest::say("Dinnae be rude to the customers, Holana.");
+	}
 }
 
 sub EVENT_SAY {
@@ -12,5 +15,3 @@ sub EVENT_ITEM {
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
-
-#:: Converted to Perl by SS
