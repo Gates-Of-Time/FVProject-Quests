@@ -42,17 +42,17 @@ sub EVENT_ITEM {
 			quest::summonitem(quest::ChooseRandom(2012, 17001, 10004, 10017, 1038, 10016, 13877, 2135, 7007, 8008, 10009, 13007, 5014, 13003));
 			#:: Ding!
 			quest::ding();
+			#:: Set factions
+			quest::faction(328, 1);			#:: + Merchants of Halas
+			quest::faction(327, 1);			#:: + Shamen of Justice
+			quest::faction(311, 1);			#:: + Steel Warriors
+			quest::faction(320, 5);			#:: + Wolves of the North
 			#:: Grant a small amount of experience
 			quest::exp(125);
 			#:: Create a hash for storing cash - 3000 to 3200cp
 			my %cash = plugin::RandomCash(3000,3200);
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-			#:: Set factions
-			quest::faction(328, 10);	#:: + Merchants of Halas
-			quest::faction(327, 10);	#:: + Shamen of Justice
-			quest::faction(311, 10);	#:: + Steel Warriors
-			quest::faction(320, 10);	#:: + Wolves of the North
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction == 5) {
