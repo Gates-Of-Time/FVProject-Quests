@@ -21,16 +21,16 @@ sub EVENT_ITEM {
 		quest::summonitem(12221);
 		#:: Ding!
 		quest::ding();
+		#:: Set factions
+		quest::faction(328, 10);	#:: + Merchants of Halas
+		quest::faction(320, 7);		#:: + Wolves of the North
+		quest::faction(327, 7);		#:: + Shamen of Justice
 		#:: Grant a moderate amount of experience
 		quest::exp(1000);
 		#:: Create a hash for storing cash - 300 to 350cp
 		my %cash = plugin::RandomCash(300,350);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set factions
-		quest::faction(328, 10);	#:: + Merchants of Halas
-		quest::faction(320, 7);		#:: + Wolves of the North
-		quest::faction(327, 7);		#:: + Shamen of Justice
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
