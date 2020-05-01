@@ -26,14 +26,14 @@ sub EVENT_ITEM {
 		quest::summonitem(1349);
 		#:: Ding!
 		quest::ding();
+		#:: Set faction
+		quest::faction(305, 5);		#:: + Rogues of the White Rose
 		#:: Grant a small amount of experience
 		quest::exp(125);
 		#:: Create a hash for storing cash - 1000 to 1300cp
 		my %cash = plugin::RandomCash(1000,1300);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set faction
-		quest::faction(305, 10);	#:: + Rogues of the White Rose
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
