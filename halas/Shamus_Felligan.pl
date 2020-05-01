@@ -18,45 +18,38 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(15270, 15275, 15075, 15271, 15212, 15079));
 		#::Ding!
 		quest::ding();
-		#:: Grant a small amount of experience
-		quest::exp(800);
-		#:: Create a hash for storing cash - 500 to 700cp
-		my %cash = plugin::RandomCash(500,700);
-		#:: Grant a random cash reward
-		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set Factions
-		quest::faction(327, 10);		#:: + Shamen of Justice
-		quest::faction(328, 1);			#:: + Merchants of Halas
+		#:: Set factions
+		quest::faction(327, 10);			#:: + Shamen of Justice
+		quest::faction(328, 1);				#:: + Merchants of Halas
 		quest::faction(223, -1);			#:: - Circle of Unseen Hands
 		quest::faction(336, -1);			#:: - Coalition of Tradefolk Underground
 		quest::faction(244, -2);			#:: - Ebon Mask
+		#:: Grant a small amount of experience
+		quest::exp(800);
+		#:: Create a hash for storing cash - 1500 to 2000cp
+		my %cash = plugin::RandomCash(1500,2000);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Match a 13969 - Caster Beads
 	elsif (plugin::takeItems(13969 => 1)) {
-		if ($class eq "shaman") {
-			quest::say("Finally! Intact! This IS good news! I can continue me investigation now. As fer yer loyal deed, I'll offer ye this, the Gavel of Justice. May ye employ it well in the service o' justice.");
-			#:: Give a 6028 - Gavel of Justice
-			quest::summonitem(6028);
-			#:: Ding!
-			quest::ding();
-			#:: Grant a moderate amount of experience
-			quest::exp(1600);
-			#:: Create a hash for storing cash - 900 to 1100cp
-			my %cash = plugin::RandomCash(900,1100);
-			#:: Grant a random cash reward
-			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-			#:: Set Factions
-			quest::faction(327, 25);	#:: + Shamen of Justice
-			quest::faction(328, 3);		#:: + Merchants of Halas
-			quest::faction(223, -3);		#:: - Circle of Unseen Hands
-			quest::faction(336, -3);		#:: - Coalition of Tradefolk Underground
-			quest::faction(244, -5);		#:: - Ebon Mask
-		}
-		else {
-			#:: Return a 13969 - Caster Beads
-			quest::summonitem(13969);
-			quest::say("I have no use for this item, $name.  You can have it back.");
-		}
+		quest::say("Finally! Intact! This IS good news! I can continue me investigation now. As fer yer loyal deed, I'll offer ye this, the Gavel of Justice. May ye employ it well in the service o' justice.");
+		#:: Give a 6028 - Gavel of Justice
+		quest::summonitem(6028);
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(327, 25);		#:: + Shamen of Justice
+		quest::faction(328, 3);			#:: + Merchants of Halas
+		quest::faction(223, -3);		#:: - Circle of Unseen Hands
+		quest::faction(336, -3);		#:: - Coalition of Tradefolk Underground
+		quest::faction(244, -5);		#:: - Ebon Mask
+		#:: Grant a moderate amount of experience
+		quest::exp(1600);
+		#:: Create a hash for storing cash - 900 to 1100cp
+		my %cash = plugin::RandomCash(900,1100);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
     	#:: Return unused items
 	plugin::returnUnusedItems();
