@@ -61,7 +61,7 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(12621 => 1, 12619 => 1)) {
 		quest::say("Here is th' bounty poster. Take it to a bank guard in Qeynos, immediately!");
 		#:: Give a 12620 - Wanted Poster
-		quest::summon(12620);
+		quest::summonitem(12620);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
@@ -78,14 +78,14 @@ sub EVENT_ITEM {
 		quest::summonitem(1376);
 		#:: Ding!
 		quest::ding();
-		#:: Grant a small amount of experience
-		quest::exp(100);
 		#:: Set factions
 		quest::faction(327, 25); 	#:: + Shamen of Justice
 		quest::faction(328, 3); 	#:: + Merchants of Halas
 		quest::faction(223, -3); 	#:: - Circle Of Unseen Hands
 		quest::faction(336, -3); 	#:: - Coalition of Tradefolk Underground
 		quest::faction(244, -5); 	#:: - Ebon Mask
+		#:: Grant a small amount of experience
+		quest::exp(100);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
