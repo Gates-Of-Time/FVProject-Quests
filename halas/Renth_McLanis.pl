@@ -104,15 +104,15 @@ sub EVENT_ITEM {
 			quest::summonitem(5367);
 			#:: Ding!
 			quest::ding();
-			#:: Set Factions
+			#:: Set factions
 			quest::faction(320, 10); 		#:: + Wolves of the North 
-			quest::faction(328, 2);			#:: - Merchants of Halas 
 			quest::faction(327, 2);			#:: + Shamen of Justice
+			quest::faction(328, 2);			#:: - Merchants of Halas 
 			quest::faction(311, 1);			#:: - Steel Warriors
 			#:: Grant a moderate amount of experience
 			quest::exp(2000);
-			#:: Create a hash for storing cash - 500 to 900 cp
-			my %cash = plugin::RandomCash(500,900);
+			#:: Create a hash for storing cash - 1 to 10 cp
+			my %cash = plugin::RandomCash(1,10);
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		}
@@ -132,10 +132,10 @@ sub EVENT_ITEM {
 			#:: Ding!
 			quest::ding();
 			#:: Set Factions
-			quest::faction(320, 10); 		#:: + Wolves of the North 
-			quest::faction(328, 2);			#:: - Merchants of Halas 
+			quest::faction(320, 10); 		#:: + Wolves of the North
 			quest::faction(327, 2);			#:: + Shamen of Justice
-			quest::faction(311, 1);			#:: - Steel Warriors
+			quest::faction(328, 2);			#:: + Merchants of Halas
+			quest::faction(311, 1);			#:: + Steel Warriors
 			#:: Grant a moderate amount of experience
 			quest::exp(2000);
 			#:: Create a hash for storing cash - 500 to 900 cp
@@ -152,5 +152,3 @@ sub EVENT_ITEM {
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
-
-#:: Converted to Perl by SS
