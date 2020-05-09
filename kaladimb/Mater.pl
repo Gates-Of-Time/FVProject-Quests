@@ -1,10 +1,8 @@
 sub EVENT_SPAWN {
-	#:: Create a proximity, 100 units across
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
-	#:: Create a timer "repeat" that triggers every 530 seconds.
-	quest::settimer("repeat", 530);
+	#:: Create a proximity, 100 units across, 10 units tall, without proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 5, $z + 5, 0);
+	#:: Create a timer 'repeat' that triggers every 600 seconds (10 min)
+	quest::settimer("repeat", 600);
 }
 
 sub EVENT_ENTER {
@@ -16,8 +14,8 @@ sub EVENT_ENTER {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		#:: Match if faction is Dubious or better
-		if ($faction <= 7) {
+		#:: Match if faction is Indifferent or better
+		if ($faction <= 5) {
 			quest::say("Welcome to the mines of Kaladim!");
 		}
 		else {
@@ -29,8 +27,8 @@ sub EVENT_SAY {
 		if ($faction <= 4) {
 			quest::say("So you have heard of Mining Pick 628 and feel you are ready to wield one? You shall earn one with the return of the ogre head of [Boog Mudtoe] and the 300 gold pieces he still owes me. Don't return unless you have the head and the 300 gold!!");
 		}
-		#:: Match if faction is Indifferent or better
-		elsif ($faction <= 5) {
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
 			quest::say("Don't take this personally, but I can't quite trust you with such matters. Maybe a few less Butcherblock bandits would prove your worth.");
 		}
 		else {
@@ -42,7 +40,8 @@ sub EVENT_SAY {
 		if ($faction <= 4) {
 			quest::say("Boog Mudtoe is one of the last remaining ogres of the Mudtoe clan. We helped him escape the assault of the Stormguard for a small fee. Unfortunately for him, we have come to believe his head to be more valuable than the fee. We hear there is someone near the port of Butcherblock who knows of the Mudtoe's whereabouts.");
 		}
-		elsif ($faction <= 5) {
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
 			quest::say("Don't take this personally, but I can't quite trust you with such matters. Maybe a few less Butcherblock bandits would prove your worth.");
 		}
 		else {
@@ -63,20 +62,38 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match if faction is Amiable or better, 300 gold pieces, and a 13316 - Ogre Head
-	if (($faction <= 4) && (plugin::takeItemsCoin(0,0,300,0, 13316 => 1))) {
-		quest::say("Very good!! You found him. His head shall bring us a great reward from the Stormguard. And as for you, here is your Mining Pick 628. Only a member of 628 can wield this fine weapon. We are the only ones who can wield it in such a way as to pierce our foes.");
-		#:: Give a 12161 - Mining Pick 628
-		quest::summonitem(12161);
-		#:: Ding!
-		quest::ding();
-		#:: Grant a moderate amount of experience
-		quest::exp(5000);
-		#:: Set factions
-		quest::faction(322, 10);	#:: + Miners Guild 628
-		quest::faction(223, -10);	#:: - Circle Of Unseen Hands
-		quest::faction(379, -10);	#:: - Butcherblock Bandits
-		quest::faction(241, 10);		#:: + Deeppockets
-		quest::faction(244, -10);	#:: - Ebon Mask
+	if (plugin::takeItemsCoin(0,0,300,0, 13316 => 1)) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
+			quest::say("Very good!! You found him. His head shall bring us a great reward from the Stormguard. And as for you, here is your Mining Pick 628. Only a member of 628 can wield this fine weapon. We are the only ones who can wield it in such a way as to pierce our foes.");
+			#:: Give a 12161 - Mining Pick 628
+			quest::summonitem(12161);
+			#:: Ding!
+			quest::ding();
+			#:: Set factions
+			quest::faction(322, 10);		#:: + Miners Guild 628
+			quest::faction(223, -10);		#:: - Circle Of Unseen Hands
+			quest::faction(379, -10);		#:: - Butcherblock Bandits
+			quest::faction(241, 10);		#:: + Deeppockets
+			quest::faction(244, -10);		#:: - Ebon Mask
+			#:: Grant a moderate amount of experience
+			quest::exp(5000);
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
+			quest::say("Don't take this personally, but I can't quite trust you with such matters. Maybe a few less Butcherblock bandits would prove your worth.");
+			#:: Return a 13316 - Ogre Head
+			quest::summonitem(13316);
+			#:: Return unused money
+			quest::givecash($copper, $silver, $gold, $platinum);
+		}
+		else {
+			quest::say("The word around the mines is that you are not to be trusted. You'd best leave before my dagger finds a new home in your back.");
+			#:: Return a 13316 - Ogre Head
+			quest::summonitem(13316);
+			#:: Return unused money
+			quest::givecash($copper, $silver, $gold, $platinum);
+		}
 	}
 	#:: Match a 18767 - Small, Folded Note
 	elsif (plugin::takeItems(18767 => 1)) {
@@ -85,14 +102,14 @@ sub EVENT_ITEM {
 		quest::summonitem(13516); #Ruined Miner's Tunic
 		#:: Ding!
 		quest::ding();
+		#:: Set factions
+		quest::faction(322, 100);			#:: + Miners Guild 628
+		quest::faction(223, -5);			#:: - Circle Of Unseen Hands
+		quest::faction(379, -5);			#:: - Butcherblock Bandits
+		quest::faction(241, 5);				#:: + Deeppockets
+		quest::faction(244, -15);			#:: - Ebon Mask
 		#:: Grant a small amount of experience
 		quest::exp(100);
-		#:: Set factions
-		quest::faction(322, 100);	#:: + Miners Guild 628
-		quest::faction(223, -5);		#:: - Circle Of Unseen Hands
-		quest::faction(379, -5);		#:: - Butcherblock Bandits
-		quest::faction(241, 5);		#:: + Deeppockets
-		quest::faction(244, -15);	#:: - Ebon Mask
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Rogue');
 	#:: Return unused items
@@ -100,10 +117,15 @@ sub EVENT_ITEM {
 }
 
 sub EVENT_TIMER {
-	#:: Match if timer is "repeat"
+	#:: Match timer 'repeat'
 	if ($timer eq "repeat") {
-		quest::say("Blast all these pesky rats!! Jeet, you need to get one of the new rogues.. I mean miners, to get rid of them!!");
-		#:: Send a signal "1" to North Kaladim >> Jeet (67018) with no delay
-		quest::signalwith(67018,1,0)
+		#:: Key up a data bucket
+		$key = mater_timer_repeat;
+		#:: Match if the key does not exist
+		if (!quest::get_key($key) {
+			quest::say("Blast all these pesky rats!! Jeet, you need to get one of the new rogues.. I mean miners, to get rid of them!!");
+			#:: Send a signal "1" to North Kaladim >> Jeet (67018) with no delay
+			quest::signalwith(67018,1,0)
+		}
 	}
 }
