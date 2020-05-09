@@ -20,8 +20,14 @@ sub EVENT_SAY {
 }
 
 sub EVENT_SIGNAL {
-	#:: Signal from rivervale/Mangler.pl
-	quest::say("Settle down there, Mangler. Hey! I told you to stay off of that table!");
+	#:: Match a signal '1' from /rivervale/Mangler.pl
+	if ($signal == 1) {
+		#:: Key up a data bucket
+		$key = mangler_timer_mangler;
+		#:: Set the key to a value of '1' for 360 seconds (6 min)
+		quest::set_data($key, 1, 360);
+		quest::say("Settle down there, Mangler. Hey! I told you to stay off of that table!");
+	}
 }
 
 sub EVENT_ITEM {
