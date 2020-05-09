@@ -82,69 +82,111 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(13054 => 4)) {
 		quest::say("It's about time you managed to smash these four!! Here. You do good work. We could use someone like you to [run to the gnome city]."); 
 		#:: Give a random reward: 2117 - Small tattered shoulderpads, 2119 - Small tattered Belt, 2122 - Small tattered gloves, 2115 - Small Tattered Gorget, 2114 - Small Tattered Mask, 2113 - Small tattered skullcap, 2121 Small Tattered Wristbands
-		quest::summonitem(quest::ChooseRandom(2117,2119,2122,2115,2114,2113,2121));
+		quest::summonitem(quest::ChooseRandom(2117, 2119, 2122, 2115, 2114, 2113, 2121));
 		#:: Ding!
 		quest::ding();
+		#:: Set factions
+		quest::faction(322, 10);		#:: + Miners Guild 628
+		quest::faction(223, -10);		#:: - Circle Of Unseen Hands
+		quest::faction(379, -10);		#:: - Butcherblock Bandits
+		quest::faction(241, 10);		#:: + Deeppockets
+		quest::faction(244, -10);		#:: - Ebon Mask
 		#:: Reward a moderate amount of experience
 		quest::exp(5000);
-		#:: Set factions
-		quest::faction(322, 10);	#:: + Miners Guild 628
-		quest::faction(223, -10);	#:: - Circle Of Unseen Hands
-		quest::faction(379, -10);	#:: - Butcherblock Bandits
-		quest::faction(241, 10);		#:: + Deeppockets
-		quest::faction(244, -10);	#:: - Ebon Mask
 	}
-	#:: Match if faction is Amiable or better
-	elsif (($faction <= 4) && (plugin::takeItems(13282 => 1))) { # Scrap Metal
-		quest::say("Great work!! We need this junk for something and we sure didn't need this rat sucking up any of our gems. Here. This is a Mining Cap 628. It's not much, but it is the mark of our miners and provides light for mining purposes. Hold onto it. You never know when we may call upon you to produce it.");
-		#:: Give a 12165 - Miners Cap 628
-		quest::summonitem(12165);
-		#:: Ding!
-		quest::ding();
-		#:: Reward a moderate amount of experience
-		quest::exp(5000);
-		#:: Set factions
-		quest::faction(322, 10);	#:: + Miners Guild 628
-		quest::faction(223, -10);	#:: - Circle Of Unseen Hands
-		quest::faction(379, -10);	#:: - Butcherblock Bandits
-		quest::faction(241, 10);		#:: + Deeppockets
-		quest::faction(244, -10);	#:: - Ebon Mask
+	#:: Match a 13282 - Scrap Metal
+	elsif (plugin::takeItems(13282 => 1)) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
+			quest::say("Great work!! We need this junk for something and we sure didn't need this rat sucking up any of our gems. Here. This is a Mining Cap 628. It's not much, but it is the mark of our miners and provides light for mining purposes. Hold onto it. You never know when we may call upon you to produce it.");
+			#:: Give a 12165 - Miners Cap 628
+			quest::summonitem(12165);
+			#:: Ding!
+			quest::ding();
+			#:: Reward a moderate amount of experience
+			quest::exp(5000);
+			#:: Set factions
+			quest::faction(322, 10);		#:: + Miners Guild 628
+			quest::faction(223, -10);		#:: - Circle Of Unseen Hands
+			quest::faction(379, -10);		#:: - Butcherblock Bandits
+			quest::faction(241, 10);		#:: + Deeppockets
+			quest::faction(244, -10);		#:: - Ebon Mask
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
+			quest::say("Don't take this personally, but I can't quite trust you with such matters. Maybe a few less Butcherblock bandits would prove your worth.");
+			#:: Return a 13282 - Scrap Metal
+			quest::summonitem(13282);
+		}
+		else {
+			quest::say("The word around the mines is that you are not to be trusted. You'd best leave before my dagger finds a new home in your back.");
+			#:: Return a 13282 - Scrap Metal
+			quest::summonitem(13282);
+		}
 	}
-	#:: Match if faction is Amiable or better and a 12167 - Gnome Take (Bad)
-	elsif (($faction <= 4) && (plugin::takeItems(12167 => 1))) {
-		quest::say("What is all this junk!! That blasted tin rat is supposed to be heisting expensive goods from rich gnomes - not all this garbage!! Here. This is your cut of this junk.");
-		#:: Give a random reward: 13220 - Ionys Absorber, 10015 - Malachite, 10500 - Small Piece of Ore, 10016 - Lapis Lazuli
-		quest::summonitem(quest::ChooseRandom(13220, 10015, 10500, 10016));
-		#:: Ding!
-		quest::ding();
-		#:: Reward a moderate amount of experience
-		quest::exp(5000);
-		#:: Create a hash for storing cash - 15 to 25cp
-		my %cash = plugin::RandomCash(15,25);
-		#:: Grant a random cash reward
-		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set factions
-		quest::faction(322, 10);	#:: + Miners Guild 628
-		quest::faction(223, -10);	#:: - Circle Of Unseen Hands
-		quest::faction(379, -10);	#:: - Butcherblock Bandits
-		quest::faction(241, 10);		#:: + Deeppockets
-		quest::faction(244, -10);	#:: - Ebon Mask
+	#:: Match a 12167 - Gnome Take (Bad)
+	elsif (plugin::takeItems(12167 => 1)) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
+			quest::say("What is all this junk!! That blasted tin rat is supposed to be heisting expensive goods from rich gnomes - not all this garbage!! Here. This is your cut of this junk.");
+			#:: Give a random reward: 13220 - Ionys Absorber, 10015 - Malachite, 10500 - Small Piece of Ore, 10016 - Lapis Lazuli
+			quest::summonitem(quest::ChooseRandom(13220, 10015, 10500, 10016));
+			#:: Ding!
+			quest::ding();
+			#:: Set factions
+			quest::faction(322, 10);		#:: + Miners Guild 628
+			quest::faction(223, -10);		#:: - Circle Of Unseen Hands
+			quest::faction(379, -10);		#:: - Butcherblock Bandits
+			quest::faction(241, 10);		#:: + Deeppockets
+			quest::faction(244, -10);		#:: - Ebon Mask
+			#:: Grant a moderate amount of experience
+			quest::exp(5000);
+			#:: Create a hash for storing cash - 15 to 25cp
+			my %cash = plugin::RandomCash(15,25);
+			#:: Grant a random cash reward
+			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
+			quest::say("Don't take this personally, but I can't quite trust you with such matters. Maybe a few less Butcherblock bandits would prove your worth.");
+			#:: Return a 12167 - Gnome Take (Bad)
+			quest::summonitem(12167);
+		}
+		else {
+			quest::say("The word around the mines is that you are not to be trusted. You'd best leave before my dagger finds a new home in your back.");
+			#:: Return a 12167 - Gnome Take (Bad)
+			quest::summonitem(12167);
+		}
 	}
-	#:: Match if faction is Amiable or better and a 12162 - Gnome Take (Good)
-	elsif (($faction <= 4) && (plugin::takeItems(12162 => 1))) {
-		quest::say("Good work miner. This is a fantastic haul!! Those wrinkly little gnomes don't know what is going on. Here is your cut. Now get back to work.");
-		#:: Give a random reward: 10017 - Turquoise, 10020 - Jasper, 10006 - Silver Earring, 10320 - Golden Ear Stud, 10019 - bloodstone 
-		quest::summonitem(quest::ChooseRandom(10017,10020,10006,10320,10019));
-		#:: Ding!
-		quest::ding();
-		#:: Grant a moderate amount of experience
-		quest::exp(5000);
-		#:: Set factions
-		quest::faction(322, 10);	#:: + Miners Guild 628
-		quest::faction(223, -10);	#:: - Circle Of Unseen Hands
-		quest::faction(379, -10);	#:: - Butcherblock Bandits
-		quest::faction(241, 10);		#:: + Deeppockets
-		quest::faction(244, -10);	#:: - Ebon Mask
+	#:: Match a 12162 - Gnome Take (Good)
+	elsif (plugin::takeItems(12162 => 1)) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
+			quest::say("Good work miner. This is a fantastic haul!! Those wrinkly little gnomes don't know what is going on. Here is your cut. Now get back to work.");
+			#:: Give a random reward: 10017 - Turquoise, 10020 - Jasper, 10006 - Silver Earring, 10320 - Golden Ear Stud, 10019 - bloodstone 
+			quest::summonitem(quest::ChooseRandom(10017,10020,10006,10320,10019));
+			#:: Ding!
+			quest::ding();
+			#:: Set factions
+			quest::faction(322, 10);		#:: + Miners Guild 628
+			quest::faction(223, -10);		#:: - Circle Of Unseen Hands
+			quest::faction(379, -10);		#:: - Butcherblock Bandits
+			quest::faction(241, 10);		#:: + Deeppockets
+			quest::faction(244, -10);		#:: - Ebon Mask
+			#:: Grant a moderate amount of experience
+			quest::exp(5000);
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
+			quest::say("Don't take this personally, but I can't quite trust you with such matters. Maybe a few less Butcherblock bandits would prove your worth.");
+			#:: Return a 12162 - Gnome Take (Good)
+			quest::summonitem(12162);
+		}
+		else {
+			quest::say("The word around the mines is that you are not to be trusted. You'd best leave before my dagger finds a new home in your back.");
+			#:: Return a 12162 - Gnome Take (Good)
+			quest::summonitem(12162);
+		}
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Rogue');
 	#:: Return unused items
@@ -154,6 +196,10 @@ sub EVENT_ITEM {
 sub EVENT_SIGNAL {
 	#:: Match signal "1" from kaladimb/Mater.pl
 	if ($signal == 1) {
+		#:: Key up a data bucket
+		$key = mater_timer_repeat;
+		#:: Set a value of '1' for 300 seconds (5 min)
+		quest::set_data($key, 1, 300);
 		quest::say("I am working on it, Mater!!");
 	}
 }
