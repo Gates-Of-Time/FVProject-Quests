@@ -122,7 +122,7 @@ sub EVENT_TIMER {
 		#:: Key up a data bucket
 		$key = mater_timer_repeat;
 		#:: Match if the key does not exist
-		if (!quest::get_key($key)) {
+		if (!quest::get_data($key)) {
 			quest::say("Blast all these pesky rats!! Jeet, you need to get one of the new rogues.. I mean miners, to get rid of them!!");
 			#:: Send a signal "1" to North Kaladim >> Jeet (67018) with no delay
 			quest::signalwith(67018,1,0)
