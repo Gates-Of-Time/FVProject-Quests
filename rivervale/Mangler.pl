@@ -9,7 +9,7 @@ sub EVENT_TIMER {
 		#:: Key up a data bucket
 		$key = mangler_timer_mangler;
 		#:: Match if the key does not exist
-		if (!quest::get_data($key) {
+		if (!quest::get_data($key)) {
 			quest::say("<Bark, bark, bark! Hoooooowwwwwwl!>");
 			#:: Send a signal "1" to Rivervale >> Kevlin_Diggs (19049) after 0 seconds
 			quest::signalwith(19049,1,0);
