@@ -7,7 +7,7 @@ sub EVENT_TIMER {
 	#:: Match the 'mangler'
 	if ($timer eq "mangler") {
 		#:: Key up a data bucket
-		$key = mangler_timer_manger;
+		$key = mangler_timer_mangler;
 		#:: Match if the key does not exist
 		if (!quest::get_data($key) {
 			quest::say("<Bark, bark, bark! Hoooooowwwwwwl!>");
