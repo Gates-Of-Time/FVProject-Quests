@@ -36,6 +36,10 @@ sub EVENT_ITEM {
 		my %cash = plugin::RandomCash(1,10);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Key a data bucket
+		$key = $client->CharacterID() . "-Yegek-part-two";
+		#:: Set the value to 1, forever
+		quest::set_data($key, 1);
 	}
 	#:: Match a 9998 - Short Sword*
 	elsif (plugin::takeItems(9998 => 1)) {
