@@ -1,3 +1,12 @@
+sub EVENT_WEAPON_PROC {
+	if ($itemid == 147495) {
+		quest::ze("Your Celestial Devouring Sword proc'd!");
+	}
+	elsif ($itemid == 147496) {
+		quest::ze("Your Celestial Devouring Mac proc'd!");
+	}
+}
+
 sub EVENT_ZONE {
 	#:: Figure out if the player has a pet and blow it up when they leave a zone
 	if ($client->GetPetID()) {
