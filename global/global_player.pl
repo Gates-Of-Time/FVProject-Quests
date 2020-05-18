@@ -1,5 +1,5 @@
-sub EVENT_WEAPON_PROC {
-	if ($itemname eq "Celestial Devouring Sword") {
+sub EVENT_CAST {
+	if ($spell_id == 995) {
 		quest::ze("Your Celestial Devouring somthing proc'd!");
 	}
 }
