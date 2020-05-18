@@ -43,10 +43,6 @@ sub EVENT_SAY {
 			quest::summonitem(13108);
 			#:: Ding!
 			quest::ding();
-			#:: Key a data bucket
-			$key = $client->CharacterID() . "-bracer-to-lenya";
-			#:: Set the data bucket
-			quest::set_data($key, 1);
 			#:: Spawn one and only one Princess_Lenya_Thex (51176)
 			quest::unique_spawn(51176, 0, 0, -202, 85, 74, 400);
 		}
@@ -67,45 +63,28 @@ sub EVENT_TIMER {
 }
 
 sub EVENT_ITEM {
-	#:: Match a 13108 - Tearons Bracer
-	if (plugin::takeItems(13108 => 1)) {
+	#:: Match a 13112 - Tearon's Bracer
+	if (plugin::takeItems(13112 => 1)) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
-			#:: Key a data bucket
-			$key = $client->CharacterID() . "-bracer-to-lenya";
-			#:: Match if the key value is 2
-			if (quest::get_data($key) == 2) {
-				quest::say("King Tearis Thex thanks you my friend. Could you please hand the princess this amulet. It is hers. I pryed it from the hands of some beggar.");
-				#:: Give a 13109 - Royal Amulet of Thex
-				quest::summonitem(13109);
-				#:: Ding!
-				quest::ding();
-				#:: Set factions
-				quest::faction(226, 25); 		#:: + Clerics of Tunare
-				quest::faction(279, 25); 		#:: + King Tearis Thex
-				quest::faction(5001, 10);		#:: + Anti-Mage
-				#:: Grant a small amount of experience
-				quest::exp(100);
-				#:: Delete the data bucket
-				quest::delete_data($key);
-				#:: Key a data bucket
-				$key = $client->CharacterID() . "-amulet-to-lenya";
-				#:: Set the data bucket
-				quest::set_data($key, 1);
-				#:: Spawn one and only one Princess_Lenya_Thex (51176), without guild war or pathgrid, at the specified location
-				quest::unique_spawn(51176, 0, 0, 51, 2, 2.5, 501);
-			}
-			else {
-				#:: Text made up
-				quest::say("Give Princess Lenya the bracer to prove you are with the Koada'dal.");
-				#:: Give a 13108 - Tearons Bracer
-				quest::summonitem(13108);
-			}
+			quest::say("King Tearis Thex thanks you my friend. Could you please hand the princess this amulet. It is hers. I pryed it from the hands of some beggar.");
+			#:: Give a 13109 - Royal Amulet of Thex
+			quest::summonitem(13109);
+			#:: Ding!
+			quest::ding();
+			#:: Set factions
+			quest::faction(226, 25); 		#:: + Clerics of Tunare
+			quest::faction(279, 25); 		#:: + King Tearis Thex
+			quest::faction(5001, 10);		#:: + Anti-Mage
+			#:: Grant a small amount of experience
+			quest::exp(100);
+			#:: Spawn one and only one Princess_Lenya_Thex (51176), without guild war or pathgrid, at the specified location
+			quest::unique_spawn(51176, 0, 0, 51, 2, 2.5, 501);
 		}
 		else {
 			quest::say("When you have furthered your service to the Paladins of Tunare, we shall make conversation.");
-			#:: Give a 13108 - Tearons Bracer
-			quest::summonitem(13108);
+			#:: Give a 13112 - Tearon's Bracer
+			quest::summonitem(13112);
 		}
 	}
 #::	#:: Match a 12267 - Highkeep Royal Suite, and a 13109 - Royal Amulet of Thex
