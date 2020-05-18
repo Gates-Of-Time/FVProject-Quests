@@ -17,15 +17,7 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		#:: Match if she is in the locked room at the specified coordinates
 		if ($x == -202 && $y == 85) {
-			#:: Key a data bucket
-			$key = $client->CharacterID() . "-bracer-to-lenya";
-			#:: Match if the key exists
-			if (quest::get_data($key)) {
-				quest::say("Are not you a little short for a Highpass Guard?");
-			}
-			else {
-				quest::say("Hello kind sir. Please rescue me. I am a princess and can give you a generous reward. First talk with a high elf named Tearon. He should have something for me in order to escape.");
-			}
+			quest::say("Are not you a little short for a Highpass Guard?");
 		}
 		#:: Match if she is free
 		else {
