@@ -1,6 +1,6 @@
 sub EVENT_WEAPON_PROC {
 	if ($itemid == 147495) {
-		quest::ze("Global player weapon proc trigger.");
+		quest::ze(15, "Global player weapon proc trigger.");
 	}
 }
 
