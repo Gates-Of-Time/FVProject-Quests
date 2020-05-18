@@ -15,7 +15,14 @@ sub EVENT_TIMER {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Are not you a little short for a Highpass Guard?");
+		#:: Match if she is in the locked room at the specified coordinates
+		if ($x == -202 && $y == 85) {
+			quest::say("Are not you a little short for a Highpass Guard?");
+		}
+		#:: Match if she is free
+		else {
+			quest::say("Greetings. You may rise. I am sure that you are honored to make my accquaintance. I am Princess Lenya Thex. It is not often that I speak with common folk.");
+		}
 	}
 	elsif ($text=~/not a highpass guard/i) {
 		quest::say("Of course not. You are far too puny. Then what is your business here in my cell?");
