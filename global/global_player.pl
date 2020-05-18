@@ -1,9 +1,3 @@
-sub EVENT_CAST {
-	if ($spell_id == 995) {
-		quest::ze("Your Celestial Devouring somthing proc'd!");
-	}
-}
-
 sub EVENT_ZONE {
 	#:: Figure out if the player has a pet and blow it up when they leave a zone
 	if ($client->GetPetID()) {
