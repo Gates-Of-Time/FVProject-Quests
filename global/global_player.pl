@@ -1,9 +1,6 @@
 sub EVENT_WEAPON_PROC {
-	if ($itemid == 147495) {
-		quest::ze("Your Celestial Devouring Sword proc'd!");
-	}
-	elsif ($itemid == 147496) {
-		quest::ze("Your Celestial Devouring Mac proc'd!");
+	if ($spell_id == 995) {
+		quest::ze("Your Celestial Devouring somthing proc'd!");
 	}
 }
 
