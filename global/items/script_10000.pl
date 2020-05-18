@@ -1,3 +1,3 @@
 sub EVENT_WEAPON_PROC {
-	quest::ze("Your weapon proc'd.");
+	quest::ze(15, "Your weapon proc'd.");
 }
