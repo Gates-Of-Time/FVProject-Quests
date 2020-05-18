@@ -1,9 +1,3 @@
-sub EVENT_WEAPON_PROC {
-	if ($itemid == 147495) {
-		quest::ze(15, "Global player weapon proc trigger.");
-	}
-}
-
 sub EVENT_ZONE {
 	#:: Figure out if the player has a pet and blow it up when they leave a zone
 	if ($client->GetPetID()) {
