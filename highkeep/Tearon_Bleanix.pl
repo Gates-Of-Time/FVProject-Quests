@@ -92,8 +92,8 @@ sub EVENT_ITEM {
 				$key = $client->CharacterID() . "-amulet-to-lenya";
 				#:: Set the data bucket
 				quest::set_data($key, 1);
-				#:: Spawn one and only one Princess_Lenya_Thex (51176)
-				quest::unique_spawn(51176, 0, 0, -325, -28, 54, 88);
+				#:: Spawn one and only one Princess_Lenya_Thex (51176), without guild war or pathgrid, at the specified location
+				quest::unique_spawn(51176, 0, 0, 51, 2, 2.5, 501);
 			}
 			else {
 				#:: Text made up
