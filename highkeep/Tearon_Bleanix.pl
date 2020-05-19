@@ -35,7 +35,7 @@ sub EVENT_SAY {
 #::			quest::say("When you have furthered your service to the Paladins of Tunare, we shall make conversation.");
 #::		}
 #::	}
-	elsif ($text=~/want to be a hero/i) {
+	elsif (($text=~/want to be a hero/i) || ($text=~/become a hero/i)) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
 			quest::say("Well let's get started on making you a hero. You must take Elite Guard Bracer. Look for Princess Lenya. When you find her give her the bracer to prove you are with the Koada'dal. She should trust you then. Then return to me with Princess Lenya and return my bracer. Be safe my friend.");
