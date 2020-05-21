@@ -76,7 +76,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 12317 - The Idol, and a 10133 - Red Sash of Order
 	if (plugin::takeItems(12317 => 1, 10133 => 1)) {
-		quest::say("We thank you for the return of the idol of Zan Fi. Take this rare robe pattern. You shall find it useful should you aid [" . quest::saylink("Brother Qwinn") . "] in his quest. His item, the rare robe pattern, a swatch of shadow silk, and a scroll containing Jonathan's Whistling Warsong. Into a sewing kit they will be going. And into the brotherhood will you. I hope you do not wish me to [return the sash].");
+		quest::say("We thank you for the return of the idol of Zan Fi. Take this rare robe pattern. You shall find it useful should you aid [Brother Qwinn] in his quest. His item, the rare robe pattern, a swatch of shadow silk, and a scroll containing Jonathan's Whistling Warsong. Into a sewing kit they will be going. And into the brotherhood will you. I hope you do not wish me to [return the sash].");
 		#:: Give a 12315 - Rare Robe Pattern
 		quest::summonitem(12315); #Rare Robe Pattern
 		#:: Ding!
