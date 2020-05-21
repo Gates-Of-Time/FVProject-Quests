@@ -5,12 +5,12 @@ sub EVENT_SPAWN {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Shhhh!! Keep quiet! Can you not tell this island is inhabited by undead? I wish to take the fight to them, but I am weak from the [" . quest::saylink("boat disaster") . "].");
+		quest::say("Shhhh!! Keep quiet! Can you not tell this island is inhabited by undead? I wish to take the fight to them, but I am weak from the [boat disaster].");
 	}
-	if ($text=~/boat disaster/i) {
-		quest::say("I was returning to my temple in Freeport in a small boat when the storm hit. I soon found myself shipwrecked on this evil island of undead. The words of Marr tell me to destroy these beings, but I am far too weak. If I only had a sip of the [" . quest::saylink("Potion of Marr") . "].");
+	elsif ($text=~/boat disaster/i) {
+		quest::say("I was returning to my temple in Freeport in a small boat when the storm hit. I soon found myself shipwrecked on this evil island of undead. The words of Marr tell me to destroy these beings, but I am far too weak. If I only had a sip of the [Potion of Marr].");
 	}
-	if ($text=~/potion of marr/i) {
+	elsif ($text=~/potion of marr/i) {
 		quest::say("The Potion of Marr was created for the Sentries of Passion. It makes us alert and energetic. It will work only on sentries such as myself. It is distributed by Serna Tasknon of the Temple of Marr in Freeport.");
 	}			
 }
@@ -21,7 +21,7 @@ sub EVENT_WAYPOINT_ARRIVE {
 		#:: Hate on the undead
 		KillUndead();
 	}
-	if ($wp == 5) {
+	elsif ($wp == 5) {
 		quest::say("Many thanks to all who aided in this battle. I offer you this, a weapon I found on a slain Erudite paladin. May Marr watch over his soul and may Marr guide yours. Now I must go.");
 		#:: Ground spawn a 5414 - Deepwater Harpoon
 		quest::creategroundobject(5414,$x,$y,$z,0,1800000);
@@ -53,12 +53,12 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(362,5);		#:: + Priests of Marr
-		quest::faction(330,-10);	#:: - Freeport Militia
-		quest::faction(281,5);		#:: + Knights of Truth
+		quest::faction(362, 5);		#:: + Priests of Marr
+		quest::faction(330, -10);	#:: - Freeport Militia
+		quest::faction(281, 5);		#:: + Knights of Truth
 		#:: Set running to true
 		quest::SetRunning(1);
-		#:: Start grid 62
+		#:: Start pathing grid 62
 		quest::start(62);
 	}
 	#:: Return unused items
