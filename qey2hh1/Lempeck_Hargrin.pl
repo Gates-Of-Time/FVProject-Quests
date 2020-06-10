@@ -13,7 +13,7 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(341,1);		#:: + Priests of Life
+		quest::faction(341, 1);		#:: + Priests of Life
 		quest::faction(280, 1);		#:: + Knights of Thunder
 		quest::faction(262, 1);		#:: + Guards of Qeynos
 		quest::faction(221, -1);	#:: - Bloodsabers
@@ -23,4 +23,8 @@ sub EVENT_ITEM {
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
+}
+
+sub EVENT_DEATH_COMPLETE {
+	quest::say("The Priests of Life will cleanse this city of evil ones like you soon enough. May Rodcet have mercy on all our souls.");
 }
