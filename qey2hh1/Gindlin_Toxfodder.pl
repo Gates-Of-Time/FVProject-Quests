@@ -1,0 +1,21 @@
+sub EVENT_SAY {
+	if ($text=~/hail/i) {
+		quest::say("Enough with the formalities. I don't make it to these parts often and I only plan on being here a couple days. My time is precious. You must be a rogue in search of the [death juice].");
+	}
+	elsif ($text=~/death juice/i) {
+		quest::say("Spider Venom. No doubt you can't mix it yourself. If you want, I can do it. I'll need Two Spider Venom sacs from the Giant Spiders. There's some around these plains. I also demand a fee of 20 Gold Pieces, oh yeah!!.. I have been banished from Qeynos,.. I also want a bottle of my favorite brew, Crow's special brew, purchased from Crow himself in North Qeynos.");
+	}
+}
+
+sub EVENT_ITEM {
+	#:: Match two 14017 - Snake Venom Sac, a 13901 - Crow's Special Brew, and 20 gold
+	if (plugin::takeItemsCoin(0, 0, 20, 0, 14017 => 2, 13901 => 1)) {
+		quest::say("Here.  I could care less what you do with this.  Hopefully you'll lay some on the Circle of Unseen Hands.");
+		#:: Give a 14015 - Spider Venom
+		quest::summonitem(14015);
+		#:: Ding!
+		quest::ding();
+	}
+	#:: Return unused items
+	plugin::returnUnusedItems();
+}
