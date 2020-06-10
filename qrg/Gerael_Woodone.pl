@@ -13,6 +13,12 @@ sub EVENT_SAY {
 	elsif ($text=~/jale phlintoes/i) {
 		quest::say("Jale Phlintoes was trained in the ways of the Jaggedpine Treefolk since his birth. He was only eight when his parents were killed by poachers. Young Jale would have had his throat slit also if he were not off fishing at the lake. Unfortunate. The now orphaned Jale was brought up by us druids. After many conflicts with our council, he ran off to start his own sect somewhere in the nearby lands. For his terrorist activities his head now brings a high price.");
 	}
+	elsif ($text=~/linaya/i) {
+		quest::say("Linaya Sowlin is an old student of mine. When her father passed away she inherited his farmhouse in The Plains of Karana. A tent in the Jaggedpine or an estate on the plains? I would choose the former.");
+	}
+	elsif ($text=~/nitrates/i) {
+		quest::say("It is nothing more than a special elixir for plants only.");
+	}
 }
 
 sub EVENT_ITEM {
