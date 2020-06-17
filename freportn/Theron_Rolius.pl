@@ -46,11 +46,13 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
-	#:: Turn in for 13873 - Sack of Sharkskins
-	elsif (plugin::takeItems(13873 => 1 )) {
+	#:: Turn in for 13868 - Sack of Sharkskins
+	elsif (plugin::takeItems(13868 => 1 )) {
 		quest::say("Thanks for the hard work, here is a shield to help you in your duties.");
 		#:: Ding!
 		quest::ding();
+		#:: Give item 13520 - Sharkskin Shield
+		quest::summonitem(13520);
 		#:: Set faction
 		quest::faction(362,10); 		#:: + Priests of Marr
 		quest::faction(271,-30); 		#:: - Dismal Rage
