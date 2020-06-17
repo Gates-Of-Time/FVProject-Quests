@@ -28,40 +28,35 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Turn in for 13921 - Damaged Militia Helm
+	#:: Match a 13921 - Damaged Militia Helm
 	if (plugin::takeItems(13921 => 1 )) {
 		quest::say("Fantastic work, my young knight.  Here is a small token of the my appreciation.  I would offer you a sharkskin shield, but I have made only a few and the paladins are testing them.");
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
-		quest::faction(362,10); 		#:: + Priests of Marr
-		quest::faction(271,-30); 		#:: - Dismal Rage
-		quest::faction(281,10); 		#:: + Knights of Truth
-		quest::faction(311,10); 		#:: + Steel Warriors
-		quest::faction(330,-30); 		#:: - Freeport Militia
-		#:: Give a moderate amount of xp
-		quest::exp(1000);
-		#:: Create a hash for storing cash - 900 to 2000cp
-		my %cash = plugin::RandomCash(900,2000);
+		#:: Set factions
+		quest::faction(281, 25); 		#:: + Knights of Truth
+		quest::faction(362, 5); 		#:: + Priests of Marr
+		quest::faction(311, 2); 		#:: + Steel Warriors
+		quest::faction(271, -3); 		#:: - Dismal Rage
+		quest::faction(330, -3); 		#:: - Freeport Militia
+		#:: Grant a small amount of experience
+		quest::exp(500);
+		#:: Create a hash for storing cash - 2500 to 3500cp
+		my %cash = plugin::RandomCash(2500,3500);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Turn in for 13868 - Sack of Sharkskins
 	elsif (plugin::takeItems(13868 => 1 )) {
-		quest::say("Thanks for the hard work, here is a shield to help you in your duties.");
-		#:: Ding!
-		quest::ding();
+		quest::say("Fantastic work, my young knight. Here is a small token of my appreciation -- a fine Sharkskin Shield. It should serve you well in battle.");
 		#:: Give item 13520 - Sharkskin Shield
 		quest::summonitem(13520);
-		#:: Set faction
-		quest::faction(362,10); 		#:: + Priests of Marr
-		quest::faction(271,-30); 		#:: - Dismal Rage
-		quest::faction(281,10); 		#:: + Knights of Truth
-		quest::faction(311,10); 		#:: + Steel Warriors
-		quest::faction(330,-30); 		#:: - Freeport Militia
-		#:: Give a small amount of xp
+		#:: Ding!
+		quest::ding();
+		#:: Confirmed no faction reward
+		#:: Grant a small amount of experience
 		quest::exp(500);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
-}	
+}
