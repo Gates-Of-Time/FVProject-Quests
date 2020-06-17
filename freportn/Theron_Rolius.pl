@@ -46,11 +46,11 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
-	#:: Match a 13868 - Sack of Sharkskins
-	elsif (plugin::takeItems(13868 => 1)) {
+	#:: Match a 13873 - Sack of Sharkskins
+	elsif (plugin::takeItems(13873 => 1)) {
 		quest::say("Fantastic work, my young knight. Here is a small token of my appreciation -- a fine Sharkskin Shield. It should serve you well in battle.");
-		#:: Give a 13520 - Sharkskin Shield
-		quest::summonitem(13520);
+		#:: Give a 13868 - Sharkskin Shield
+		quest::summonitem(13868);
 		#:: Ding!
 		quest::ding();
 		#:: Confirmed no faction reward
