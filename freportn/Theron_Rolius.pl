@@ -29,7 +29,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match a 13921 - Damaged Militia Helm
-	if (plugin::takeItems(13921 => 1 )) {
+	if (plugin::takeItems(13921 => 1)) {
 		quest::say("Fantastic work, my young knight.  Here is a small token of the my appreciation.  I would offer you a sharkskin shield, but I have made only a few and the paladins are testing them.");
 		#:: Ding!
 		quest::ding();
@@ -46,10 +46,10 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
-	#:: Turn in for 13868 - Sack of Sharkskins
-	elsif (plugin::takeItems(13868 => 1 )) {
+	#:: Match a 13868 - Sack of Sharkskins
+	elsif (plugin::takeItems(13868 => 1)) {
 		quest::say("Fantastic work, my young knight. Here is a small token of my appreciation -- a fine Sharkskin Shield. It should serve you well in battle.");
-		#:: Give item 13520 - Sharkskin Shield
+		#:: Give a 13520 - Sharkskin Shield
 		quest::summonitem(13520);
 		#:: Ding!
 		quest::ding();
