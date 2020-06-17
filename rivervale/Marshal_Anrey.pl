@@ -23,8 +23,8 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Match a 13749 - Alligator Skin, a 13942 - Polar Bear Skin, a 13075 - Shark Skin, and a 13765 - Thick Grizzly Bear Skin
-	if (plugin::takeItems(13749 => 1, 13942 => 1, 13075 => 1, 13765 => 1)) {
+	#:: Match a 13749 - Alligator Skin, a 13761 - Polar Bear Skin, a 13075 - Shark Skin, and a 13765 - Thick Grizzly Bear Skin
+	if (plugin::takeItems(13749 => 1, 13761 => 1, 13075 => 1, 13765 => 1)) {
 		quest::say("Good work, $name. You passed the first test. If you think you are one of us, return this cap to me along with a dagger from a Dark Elf for your true reward.");
 		#:: Give a 13941 - Leatherfoot Skullcap
 		quest::summonitem(13941);
