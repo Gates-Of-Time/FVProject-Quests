@@ -3,7 +3,7 @@ sub EVENT_SAY {
 		quest::say("Hail, $name! Are you the champion Najena sent for?");
 	}
 	elsif ($text=~/champion of najena/i) {
-		quest::say("Very well then $name. I am Aetherthane D'zitherak, Priestess of Innoruuk, seeker of the fabled and ancient Staff of Ankexfen. Have you ever hard of this relic before?");
+		quest::say("Very well then $name. I am Aetherthane D'zitherak, Priestess of Innoruuk, seeker of the fabled and ancient Staff of Ankexfen. Have you ever heard of this relic before?");
 	}
 	elsif ($text=~/not heard of the staff/i) {
 		quest::say("Long ago there existed a race known as the Ankexfen, after their progenitor Hazeg Ankexfen, who were created by Rallos Zek during the Elder Age. This race was quite intelligent and cunning. They quickly expanded their knowledge of magic and other planes, yet constantly yearned for more power. So along with their ogre counterparts, they set out to master the Plane of Earth. Alas, their attempts proved futile and the combined might of the other gods forced Rallos Zek back to the Planes of Power, leaving his creations to the whims of other gods.");
