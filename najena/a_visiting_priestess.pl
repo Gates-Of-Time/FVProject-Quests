@@ -44,7 +44,7 @@ sub EVENT_ITEM {
 			#:: Return a 6335 - Slime Crystal Staff
 			quest::summonitem(6335);
 			#:: Return a 6336 - Water Crystal Staff
-			quest::summonitem(6366);
+			quest::summonitem(6336);
 		}
 	}
 	#:: Return unused items
