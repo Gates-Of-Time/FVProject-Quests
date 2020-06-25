@@ -3,10 +3,22 @@ sub EVENT_SAY {
 		quest::say("This is no place for you. These Splitpaws are very fierce. Only the power of Rodcet Nife will guide them to the light. By the way, I might warn you that the cells here lock behind you.");
 	}
 	elsif ($text=~/proof of nobility/i) {
-		quest::say("I require the returned note I gave you, a Testimony of Truth, a Sword of Faith and finally the hilt of Soulfire. The Testimony and Sword of Faith are earned in the Hall of Truth, but for the hilt of Soulfire you shall have to battle [Xicotl].");
+		#:: Match if faction is Warmly or better
+		if ($faction <= 2) {
+			quest::say("I require the returned note I gave you, a Testimony of Truth, a Sword of Faith and finally the hilt of Soulfire. The Testimony and Sword of Faith are earned in the Hall of Truth, but for the hilt of Soulfire you shall have to battle [Xicotl].");
+		}
+		else {
+			quest::say("You have not yet proven yourself.");
+		}
 	}
 	elsif ($text=~/xicotl/i) {
-		quest::say("Xicotl is the evil troll who attempted to steal Soulfire from the vaults of the Temple of Life. The hilt of Soulfire broke off during the battle and now rests in the hands of this troll shadowknight. From what I have heard, he is frequently an invited guest at the castle called Mistmoore. Woe to any paladin who dares set foot upon the land of Mistmoore, but should you attempt it you might search the guest rooms for the troll. May Rodcet Nife walk with you.");
+		#:: Match if faction is Warmly or better
+		if ($faction <= 2) {
+			quest::say("Xicotl is the evil troll who attempted to steal Soulfire from the vaults of the Temple of Life. The hilt of Soulfire broke off during the battle and now rests in the hands of this troll shadowknight. From what I have heard, he is frequently an invited guest at the castle called Mistmoore. Woe to any paladin who dares set foot upon the land of Mistmoore, but should you attempt it you might search the guest rooms for the troll. May Rodcet Nife walk with you.");
+		}
+		else {
+			quest::say("You have not yet proven yourself.");
+		}
 	}
 	elsif ($text=~/rodcet nife/i) {
 		quest::say("Rodcet Nife is the Prime Healer. The god unto all creatures pray to in some time of their life. He will show these gnolls the true inner light. I have converted a few of these creatues, but I fear they have executed them all. My turn will come soon, but I believe that in my martydom they shall see the true glory of Rodcet Nife and a new life will heal their evil souls.");
