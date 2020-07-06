@@ -12,9 +12,12 @@ sub EVENT_SAY {
 			#:: Give item 18833 - A Sealed Letter for Emil Parsini
 			quest::summonitem(18833);
 		}
-		#:: Missing response for worse than Indifferent
-		else {
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
 			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
+		}
+		else {
+			quest::say("Leave my sight at once!  You are no friend to the Peacekeepers of the Temple of Divine Light.");
 		}
 	}
 	elsif ($text=~/battle the undead/i) {
@@ -24,8 +27,12 @@ sub EVENT_SAY {
 			#:: Give item 17941 - Box for Bones
 			quest::summonitem(17941);
 		}
-		else {
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
 			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
+		}
+		else {
+			quest::say("Leave my sight at once!  You are no friend to the Peacekeepers of the Temple of Divine Light.");
 		}
 	}
 	elsif ($text=~/important missions/i) {
@@ -33,8 +40,12 @@ sub EVENT_SAY {
 		if ($faction <= 4) {
 			quest::say("We have need of skilled priests. We have learned that a High Guard battle staff has been stolen. We require a priest to [track down the staff].");
 		}
-		else {
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
 			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
+		}
+		else {
+			quest::say("Leave my sight at once!  You are no friend to the Peacekeepers of the Temple of Divine Light.");
 		}
 	}
 	elsif ($text=~/track down the staff/i) {
@@ -42,8 +53,12 @@ sub EVENT_SAY {
 		if ($faction <= 4) {
 			quest::say("In the mountain keep called High Hold, we have heard there is a person hiring mercenaries for an attempt to obtain a High Guard battle staff. We are missing one of our staffs and believe this person has it. Go to Highpass Hold and find this person. Return the High Guard battle staff to me!");
 		}
-		else {
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
 			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
+		}
+		else {
+			quest::say("Leave my sight at once!  You are no friend to the Peacekeepers of the Temple of Divine Light.");
 		}
 	}
 	elsif ($text=~/here to pay homage/i) {
@@ -72,8 +87,14 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		}		
-		else {
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
 			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
+			#:: Return a 13882 - Box of Bones
+			quest::summonitem(13882);
+		}
+		else {
+			quest::say("Leave my sight at once!  You are no friend to the Peacekeepers of the Temple of Divine Light.");
 			#:: Return a 13882 - Box of Bones
 			quest::summonitem(13882);
 		}
@@ -98,8 +119,14 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		}
-		else {
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
 			quest::say("You have not done much to upset the Peacekeepers of this temple, but we must ask you to prove yourself to us before we may discuss things such as this.");
+			#:: Return a 13816 - Peacekeeper staff 
+			quest::summonitem(13816);
+		}
+		else {
+			quest::say("Leave my sight at once!  You are no friend to the Peacekeepers of the Temple of Divine Light.");
 			#:: Return a 13816 - Peacekeeper staff
 			quest::summonitem(13816);
 		}
