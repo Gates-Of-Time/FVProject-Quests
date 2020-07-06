@@ -22,7 +22,7 @@ sub EVENT_ITEM {
 		if (!quest::get_data($key)) {
 			quest::emote("quickly pockets the coins and says, 'Go see the Librarian, Nallar. Tell him Denouncer Ixtaz sent you. Do not return here for at least 3 days, now go, $race.");
 			#:: Grant a small amount of experience, based on level
-			$client->AddLevelBasedExp(0.5, 30);
+			$client->AddLevelBasedExp(1, 30);
 			#:: Set the data bucket with a value of '1' that expires in 12960 seconds (3 in-game days)
 			quest::set_data($key, 1, 12960);
 		}
@@ -35,7 +35,7 @@ sub EVENT_ITEM {
 	elsif (plugin::takeItems(1890 => 1)) {
 		quest::emote("accepts the vial and looks you over, eyebrow raised. He says, 'Well, a sacrifice to feed my forge. You have done Neriak a great service, Citizen $name. I shall burn it now.' He then holds the vial up the the flames, the blood seems to glow brightly as he stares into it. Then suddenly, with the shout of an arcane phrase, he throws the vial violently into the flame. The force shatters the vial, spilling the blood about the flames. Almost immediately the flames flare up to the ceiling. When they die down a presence is felt within the flames.");
 		#:: Spawn a Neriak - Commons >> vengeful_spirit (41106), no grid or guildwar, at the specified coordinates
-		quest::spawn2(41106, 0, 0, -867, 70, -35);
+		quest::spawn2(41106, 0, 0, -867, 70, -35, 510);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
