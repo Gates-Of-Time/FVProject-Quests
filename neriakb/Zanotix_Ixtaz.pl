@@ -15,12 +15,14 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match 75pp
-	if (plugin::takeCoin(0, 0, 0, 75)) {
+	if (plugin::takePlatinum(75)) {
 		#:: Key a data bucket
 		$key = $client->CharacterID() . "-Zanotix-cool-down";
 		#:: Match if the data bucket does not exist
 		if (!quest::get_data($key)) {
 			quest::emote("quickly pockets the coins and says, 'Go see the Librarian, Nallar. Tell him Denouncer Ixtaz sent you. Do not return here for at least 3 days, now go, $race.");
+			#:: Ding!
+			quest::ding();
 			#:: Grant a small amount of experience, based on level
 			$client->AddLevelBasedExp(1, 30);
 			#:: Set the data bucket with a value of '1' that expires in 12960 seconds (3 in-game days)
@@ -28,7 +30,7 @@ sub EVENT_ITEM {
 		}
 		else {
 			#:: Return coin
-			quest::givecash($copper, $silver, $gold, $platinum);
+			quest::givecash(0, 0, 0, 75);
 		}
   	}
 	#:: Match a 1890 - Vial of Noble's Blood
