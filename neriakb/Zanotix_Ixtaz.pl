@@ -11,7 +11,7 @@ sub EVENT_SAY {
 	elsif ($text=~/ritual/i) {
 		quest::say("The Ritual? Well I was young when it took place. I don't really remember. I've had so much on my mind lately, what with all these new taxes. For instance, I need to come up with an extra 75 pieces of platinum just to cover the forge tax. I don't know what I'm going to do.....*cough*.");
 	}
-]
+}
 
 sub EVENT_ITEM {
 	#:: Match 75pp
