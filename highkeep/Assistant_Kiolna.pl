@@ -26,8 +26,22 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Give a small amount of xp
 		quest::exp(500);
-		#:: Create a hash for storing cash - 900 to 2000cp
+		#:: Create a hash for storing cash - 200 to 900cp
 		my %cash = plugin::RandomCash(200,900);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+	}
+	#:: Match a 13823 - H.K. 401
+	elsif (plugin::takeItems(13823 => 1)) {
+		quest::say("I am sorry to see you check out. Here is all you had in your box. We hope to serve you again. Have a nice day!! Next!");
+		#:: Give a 13828 - Staff Segment (Staff Segment B)
+		quest::summonitem(13828);
+		#:: Ding!
+		quest::ding();
+		#:: Give a small amount of xp
+		quest::exp(500);
+		#:: Create a hash for storing cash - 600 to 900cp
+		my %cash = plugin::RandomCash(600,900);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
