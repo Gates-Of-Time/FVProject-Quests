@@ -1,5 +1,5 @@
 sub EVENT_TARGET_CHANGE {
-	if ($ulevel > 52) {
+	if ($ulevel > 1) {
 		quest::gmsay("User Level Match.");
 		if ($status > 80) {
 			quest::gmsay("User Status Match.");
