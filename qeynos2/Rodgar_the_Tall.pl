@@ -18,12 +18,12 @@ sub EVENT_ITEM {
 		quest::summonitem(13824);
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
-		quest::faction(291,10); 	#:: + Merchants of Qeynos
-		quest::faction(223,10); 	#:: + Circle of Unseen Hands
-		quest::faction(219,10); 	#:: + Antonius Bayle
-		quest::faction(229,10); 	#:: + Coalition of Tradefolk
-		quest::faction(262,10); 	#:: + Guards of Qeynos
+		#:: Set factions
+		quest::faction(291, 2); 	#:: + Merchants of Qeynos
+		quest::faction(223, -1); 	#:: - Circle of Unseen Hands
+		quest::faction(219, 1); 	#:: + Antonius Bayle
+		quest::faction(229, 1); 	#:: + Coalition of Tradefolk
+		quest::faction(262, 1); 	#:: + Guards of Qeynos
 		#:: Grant a moderate amount of experience
 		quest::exp(2432);
 	}
