@@ -78,9 +78,5 @@ sub EVENT_KILLED_MERIT {
 	}
 	#:: Display an emote message to each client in yellow to notify them that they received credit
 	$client->Message(15, "You have received credit for killing " . $npc->GetCleanName() . ".");
-	#:: Enable 'Dragonslayer' Title
-	$connect = plugin::LoadMysql();
-	my $query = "UPDATE `titles` SET `char_id` = '" . $charid ."' WHERE `id` = '105';";
-	$query_handle = $connect->prepare($query); $query_handle->execute();
 	quest::enabletitle(105);
 }
