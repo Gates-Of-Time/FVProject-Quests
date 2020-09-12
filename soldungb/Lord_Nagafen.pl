@@ -1,74 +1,80 @@
-# Attempt to limit players level 53 and over from engaging nagafen and vox.
-# Banished to Lavastorm.
-my $SpawnX = 0;
-my $SpawnY = 0;
-my $SpawnZ = 0;
-my $SpawnH = 0;
-
 sub EVENT_SPAWN {
-  $SpawnX = $x;
-  $SpawnY = $y;
-  $SpawnZ = $z;
-  $SpawnH = $h;
-  my $range = 200;
-  quest::set_proximity($x - $range, $x + $range, $y - $range, $y + $range);
-  quest::setnexthpevent(96);
-}
-
-sub EVENT_HP {
-  #if my HP are dropping make certain the timer is running
-  #this gets around 100% pet tanking, because the owner is
-  #on the aggro list but with 0's and EVENT_AGGRO isn't firing.
-  quest::stoptimer(1);
-  EVENT_AGGRO();
-  #backup safety check
-  quest::setnexthpevent(int($npc->GetHPRatio())-9);
-}
-
-sub EVENT_ENTER {
-  if (($ulevel >= 53) && ($status < 80)) {
-    quest::echo(0, "I will not fight you, but I will banish you!");
-    $client->MovePC(27,-64,262,-93.96,0);
-  }
+	#:: Create a proximity 400 units across, without proximity say
+	quest::set_proximity($x - 200, $x + 200, $y - 200, $y + 200, $z - 200, $z + 200, 0);
+	#:: Create a HP event at 96 percent health
+	quest::setnexthpevent(96);
 }
 
 sub EVENT_AGGRO {
-  # a 1 second leash timer.
-  quest::settimer(1,1);
+	#:: Create a timer 'leash' that triggers every second
+	quest::settimer("leash", 1);
+}
+
+sub EVENT_HP {
+	#:: Stop the timer 'leash' from triggering
+	quest::stoptimer("leash");
+	#:: Trigger EVENT_AGGRO subroutine to makue sure the timer is running
+	EVENT_AGGRO();
+	#:: Set another HP event to catch any HP loss
+	quest::setnexthpevent(int($npc->GetHPRatio())-9);
+}
+
+sub EVENT_ENTER {
+	if (($ulevel >= 53) && ($status < 80)) {
+		quest::echo(0, "I will not fight you, but I will banish you!");
+		#:: Move player to Lavastorm (27) at the specified coordinates, facing North
+		$client->MovePC(27, -64, 262, -93.96, 0);
+	}
 }
 
 sub EVENT_TIMER {
-  if ($timer == 1) {
-    if($x < -1000 || $x > -650 || $y < -1500 || $y > -1290) {
-      WIPE_AGGRO();
-    }
-    my @hate_list = $npc->GetHateList();
-	my $hate_count = @hate_list;
-	if ($hate_count > 0) {
-      foreach $ent (@hate_list) {
-        my $h_ent = $ent->GetEnt();
-	    my $h_dmg = $ent->GetDamage();
-	    my $h_hate = $ent->GetHate();
-        if ($h_ent->IsClient()) {
-          if ($h_ent->GetLevel() > 52) {
-            quest::ze(0,"I will not fight you, but I will banish you!");
-            $h_ent->CastToClient()->MovePC(27,-64,262,-93.96,0);
-          }
-        }
-	  }
-    } else {
-      WIPE_AGGRO();
+	#:: Match timer 'leash'
+	if ($timer eq "leash") {
+		if ($x < -1000 || $x > -650 || $y < -1500 || $y > -1290) {
+			#:: Trigger WIPE_AGGRO subroutine
+			WIPE_AGGRO();
+		}
+		my @hate_list = $npc->GetHateList();
+		my $hate_count = @hate_list;
+		if ($hate_count > 0) {
+			foreach $ent (@hate_list) {
+				my $h_ent = $ent->GetEnt();
+				if ($h_ent->IsClient()) {
+					if ($h_ent->GetLevel() > 52) {
+						quest::ze(0, "I will not fight you, but I will banish you!");
+						#:: Move player to Lavastorm (27) at the specified coordinates, facing North
+						$h_ent->CastToClient()->MovePC(27, -64, 262, -93.96, 0);
+					}
+				}
+			}
+		} 
+		else {
+			#:: Trigger WIPE_AGGRO subroutine
+			WIPE_AGGRO();
+		}
 	}
-  }
 }
 
 sub WIPE_AGGRO {
-  $npc->BuffFadeAll();
-  $npc->WipeHateList();
-  $npc->SetHP($npc->GetMaxHP());
-  $npc->GMMove($SpawnX,$SpawnY,$SpawnZ,$SpawnH);
-  quest::stoptimer(1);
-  quest::setnexthpevent(96);
+	$npc->BuffFadeAll();
+	$npc->WipeHateList();
+	$npc->SetHP($npc->GetMaxHP());
+	$npc->GMMove($npc->GetSpawnPointX(), $npc->GetSpawnPointY(), $npc->GetSpawnPointZ(), $npc->GetSpawnPointH());
+	#:: Stop the timer 'leash' from triggering
+	quest::stoptimer("leash");
+	#:: Create a HP event at 96 percent health
+	quest::setnexthpevent(96);
 }
 
-# EOF zone: soldungb ID: 32040 NPC: Lord_Nagafen
+sub EVENT_KILLED_MERIT {
+	#:: Key a data bucket for all group members
+	$key = $client->CharacterID() . "-" . $npc->GetCleanName();
+	quest::set_data($key, quest::get_data($key) + 1);
+	#:: Display an emote message to each client in yellow to notify them that they received credit
+	$client->Message(15, "You have received credit for killing " . $npc->GetCleanName() . ".");
+	#:: Enable 'Dragonslayer' Title
+	$connect = plugin::LoadMysql();
+	my $query = "UPDATE `titles` SET `char_id` = '" . $charid ."' WHERE `id` = '105';";
+	$query_handle = $connect->prepare($query); $query_handle->execute();
+	quest::enabletitle(105);
+}
