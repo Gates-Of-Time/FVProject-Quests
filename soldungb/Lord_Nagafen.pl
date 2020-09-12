@@ -69,7 +69,13 @@ sub WIPE_AGGRO {
 sub EVENT_KILLED_MERIT {
 	#:: Key a data bucket for all group members
 	$key = $client->CharacterID() . "-" . $npc->GetCleanName();
-	quest::set_data($key, quest::get_data($key) + 1);
+	#:: Match if data bucket does not exist
+	if (!quest::get_data($key)) {
+		quest::set_data($key, 1);
+	}
+	else {
+		quest::set_data($key, quest::get_data($key) + 1);
+	}
 	#:: Display an emote message to each client in yellow to notify them that they received credit
 	$client->Message(15, "You have received credit for killing " . $npc->GetCleanName() . ".");
 	#:: Enable 'Dragonslayer' Title
