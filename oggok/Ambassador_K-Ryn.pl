@@ -6,7 +6,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match a 18842 - Sealed Letter
-	if (plugin::takeItems(18842)) {
+	if (plugin::takeItems(18842 => 1)) {
 		quest::say("Another young warrior. I pray you shall not meet the fate of the last twelve. Here then. Take this report to Mistress Seloxia at once. And stay clear of the Froglok lair called Gukk.");
 		#:: Give a 18843 - Sealed Letter
 		quest::summonitem(18843);
