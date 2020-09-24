@@ -14,7 +14,7 @@ sub EVENT_ITEM {
 		quest::faction(334, 10);#Dreadguard Outer
 		quest::faction(236, 10);#Dark Bargainers
 	}
-	elsif(plugin::check_handin(\%itemcount, 13846 => 1)){#Dark Elf Decapitated Head
+	elsif(plugin::check_handin(\%itemcount, 13846 => 1, 18201 =>1)){#Dark Elf Decapitated Head & Note
 		quest::say("Take this book and be gone with you.");
 		quest::summonitem(18202);#Book of Turmoil
 		quest::faction(370, 10);#Dreadguard Inner
