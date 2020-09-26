@@ -4,9 +4,14 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_TIMER {
-	#:: Catch the "Lenny" timer
+	#:: Match the 'Lenny' timer
 	if ($timer eq "Lenny") {
-		#:: Signal 19062 - Lendel Deeppockets in Rivervale
-		quest::signalwith(19062,1,0);
+		#:: Key up a data bucket
+		$key = gaffin_timer_lenny;
+		#:: Match if the key does not exist
+		if (!quest::get_data($key)) {
+			#:: Signal 19062 - Lendel Deeppockets in Rivervale
+			quest::signalwith(19062, 1, 0);
+		}
 	}
 }
