@@ -6,5 +6,5 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_ENTER {
-	quest::SendFullPopup("Manastone", "Do you want a manastone?", 42, 43, 1, 0, "Of course!", "No way!", 0);
+	$quest->SendFullPopup("Manastone", "Do you want a manastone?", 42, 43, 1, 0, "Of course!", "No way!", 0);
 }
