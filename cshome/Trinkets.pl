@@ -6,5 +6,5 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_ENTER {
-	quest::popup2('Manastone', 'Do you want a manastone?', 42, 43, 1, 0, 'of course!', 'no way!', 0);
+	$client->popup2('Manastone', 'Do you want a manastone?', 42, 43, 1, 0, 'of course!', 'no way!', 0);
 }
