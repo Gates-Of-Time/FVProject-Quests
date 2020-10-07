@@ -29,10 +29,6 @@ sub EVENT_SAY {
 sub EVENT_SIGNAL { 
 	#:: Match a signal '1' from rivervale/Gaffin_Deeppockets.pl
 	if ($signal == 1) {
-		#:: Key up a data bucket
-		$key = gaffin_timer_lenny;
-		#:: Set the key to a value of '1' for 600 seconds (10 min)
-		quest::set_data($key, 1, 600);
 		quest::say("Find somebody to go see what he wants. I don't like the idea of making Hanns mad at us, but I also don't like the idea of looking over my shoulder for Stanos. He is not somebody I would care to dance with, and I DO owe him.");
 	}
 }
