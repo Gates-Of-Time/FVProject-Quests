@@ -74,6 +74,15 @@ sub EVENT_SAY {
 			quest::say("Your shifty eyes tell me that you are no ally of the Stormguard.");
 		}
 	}
+   	elsif ($text=~/battle of busted skull/i) {
+		#:: Match if faction is Apprehensive or better
+		if ($faction <= 6) {	
+			quest::say("The Battle of Busted Skull was fought in the land of the Crushbone orcs.  King Kazon sent the entire Irontoe Brigade to retrieve an ancient artifact from an old dwarven outpost.  The battle was fierce.  At its end, only a handful of Irontoes made it back.  After that, the Irontoe Brigade survivors left Kaladim for good.  All except Tumpy Irontoe.");
+		}
+		else {
+			quest::say("Your shifty eyes tell me that you are no ally of the Stormguard.");
+		}
+	}
 }
 
 sub EVENT_ITEM {
