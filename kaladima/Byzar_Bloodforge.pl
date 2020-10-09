@@ -83,6 +83,9 @@ sub EVENT_SAY {
 			quest::say("Your shifty eyes tell me that you are no ally of the Stormguard.");
 		}
 	}
+  	elsif ($text=~/tumpy/i) {
+		quest::say("If you frequent the pubs, you just may run into Tumpy Irontoe.  He was once the brave leader of the Irontoe Brigade.  Whatever you do, do not mention to the Battle of Busted Skull.  I am sure that would bring back some bad memories for him.");
+	}
 }
 
 sub EVENT_ITEM {
