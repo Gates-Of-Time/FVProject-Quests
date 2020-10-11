@@ -8,6 +8,7 @@ sub EVENT_SIGNAL {
 		my $getmobbynpctype = $entity_list->GetMobByNpcTypeID(72003);
 		my $follow_target = $getmobbynpctype->GetID();
 		quest::follow($follow_target);
+		quest::say("We obey!");
 	}
 	#:: Match a signal '3' sent from /fearplane/Cazic_Thule.pl
 	elsif ($signal == 3) {
