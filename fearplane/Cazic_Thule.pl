@@ -1,6 +1,8 @@
 sub EVENT_SPAWN {
-	#:: Create a timer 'obey' that triggers every 600 seconds (10 min)
-	quest::settimer("obey", 600);
+	#:: Create a timer 'Beware' that triggers every 600 seconds (10 min)
+	quest::settimer("Beware", 600);
+	#:: Create a timer 'SpawnCondition' that triggers every 5 seconds
+	quest::settimer("SpawnCondition", 5);
 }
 
 sub EVENT_SAY {
@@ -27,8 +29,16 @@ sub EVENT_ITEM {
 }
 
 sub EVENT_TIMER {
-	#:: Match timer 'obey'
-	if ($timer eq "obey") {
+	#:: Match timer 'SpawnCondition'
+	if ($timer eq "SpawnCondition") {
+		#:: This was added to PEQ to prevent the entire zone from popping at once
+		quest::spawn_condition("fearplane",0,1,0);
+		quest::spawn_condition("fearplane",0,1,1);
+		#:: Stop the timer 'SpawnCondition'
+		quest::stoptimer("SpawnCondition");
+	}
+	#:: Match timer 'Beware'
+	elsif ($timer eq "Beware") {
 		quest::shout("Beware all infidels who dare to taint my plane, for I shall rend your minds with fright, dread, and terror!");
 		#:: Send a signal '1' to the indicated npc_type id without delay
 		quest::signalwith(72029, 1, 0);		#:: Amygdalan_knight
