@@ -53,9 +53,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(362, 5);		#:: + Priests of Marr
-		quest::faction(330, -10);	#:: - Freeport Militia
-		quest::faction(281, 5);		#:: + Knights of Truth
+		quest::faction(362, 1);		#:: + Priests of Marr
+		quest::faction(330, -1);	#:: - Freeport Militia
+		quest::faction(281, 1);		#:: + Knights of Truth
 		#:: Set running to true
 		quest::SetRunning(1);
 		#:: Start pathing grid 62
