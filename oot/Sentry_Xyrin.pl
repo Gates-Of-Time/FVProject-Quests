@@ -1,3 +1,17 @@
+#:: Grid 62 inserts: 
+#:: 
+#:: INSERT INTO `grid` (`id`, `zoneid`, `type`, `type2`)
+#:: VALUES
+#::     (62, 69, 6, 1);
+#:: INSERT INTO `grid_entries` (`gridid`, `zoneid`, `number`, `x`, `y`, `z`, `heading`, `pause`, `centerpoint`)
+#:: VALUES
+#::     (62, 69, 1, -7332, -612, 1, -1, 0, 0),
+#::     (62, 69, 2, -7219, -687, 82, -1, 0, 0),
+#::     (62, 69, 3, -7150, -767, 38, -1, 0, 0),
+#::     (62, 69, 4, -7098, -885, 131, -1, 0, 0),
+#::     (62, 69, 5, -6963, -886, 139, -1, 20, 0),
+#::     (62, 69, 6, -6881, -785, 158, 314, 600, 0);
+
 sub EVENT_SPAWN {
 	#:: Set a timer for 1 hour
 	quest::settimer("depop", 3600);
@@ -23,14 +37,15 @@ sub EVENT_WAYPOINT_ARRIVE {
 	}
 	elsif ($wp == 5) {
 		quest::say("Many thanks to all who aided in this battle. I offer you this, a weapon I found on a slain Erudite paladin. May Marr watch over his soul and may Marr guide yours. Now I must go.");
-		#:: Ground spawn a 5414 - Deepwater Harpoon
-		quest::creategroundobject(5414,$x,$y,$z,0,1800000);
+		#:: Ground spawn a 5414 - Deepwater Harpoon at the current location
+		quest::creategroundobject(5414, $x, $y, $z, 0, 1800000);
 		#:: Depop
 		quest::depop();			
 	}
 }
 
 sub EVENT_COMBAT {
+	#:: Match combat state 1 - entered combat
 	if ($combat_state == 1) {
 		quest::say("Let the fury of passion smite thee!");
 	}
@@ -66,10 +81,15 @@ sub EVENT_ITEM {
 }
 
 sub KillUndead {
+	#:: Create an array of the NPC entities in the zone
 	my @npc_list = $entity_list->GetNPCList();
+	#:: For each member of the list...
 	foreach $npc_ent (@npc_list) {
+		#:: Select any spectres and skeletons within 1000 units
 		if ($npc_ent->CalculateDistance($x, $y, $z) < 1000 && $npc_ent->GetCleanName()=~/spectre/i || $npc_ent->GetCleanName()=~/skeleton/i) {
+			#:: Attack the selected entity
 			$npc->Attack($npc_ent);
+			#:: Exit the loop after the first match
 			last;
 		}
 	}
