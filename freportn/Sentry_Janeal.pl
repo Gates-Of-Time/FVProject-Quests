@@ -17,7 +17,7 @@ sub EVENT_ITEM {
 		#:: Set faction
 		quest::faction(362, 2); 		#:: + Priests of Marr
 		quest::faction(330, -1); 		#:: - Freeport Militia
-		quest::faction(281, 2); 		#:: + Knights of Truth	
+		quest::faction(281, 1); 		#:: + Knights of Truth	
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
