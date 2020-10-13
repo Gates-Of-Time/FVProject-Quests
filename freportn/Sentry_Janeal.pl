@@ -8,8 +8,6 @@ sub EVENT_ITEM {
 	#:: Turn in for 12130 - Part of Potion of Marr
 	if (plugin::takeItems(12130 => 1 )) {
 		quest::say("I feel quite alert now. Thank you. You should take this to the next sentry.");
-		#:: Give a small amount of xp
-		quest::exp(100);
 		#:: Give item 12131 - Half of Potion of Marr
 		quest::summonitem(12131);
 		#:: Ding!
@@ -17,7 +15,9 @@ sub EVENT_ITEM {
 		#:: Set faction
 		quest::faction(362, 2); 		#:: + Priests of Marr
 		quest::faction(330, -1); 		#:: - Freeport Militia
-		quest::faction(281, 1); 		#:: + Knights of Truth	
+		quest::faction(281, 1); 		#:: + Knights of Truth
+		#:: Give a small amount of xp
+		quest::exp(100);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
