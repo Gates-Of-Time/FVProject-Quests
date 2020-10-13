@@ -15,9 +15,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(362,5); 		#:: + Priests of Marr
-		quest::faction(330,-10); 	#:: - Freeport Militia
-		quest::faction(281,5); 		#:: + Knights of Truth	
+		quest::faction(362, 2); 		#:: + Priests of Marr
+		quest::faction(330, -1); 		#:: - Freeport Militia
+		quest::faction(281, 2); 		#:: + Knights of Truth	
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
