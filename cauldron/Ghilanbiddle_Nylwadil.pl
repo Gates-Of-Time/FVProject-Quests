@@ -58,3 +58,14 @@ sub EVENT_ITEM {
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
+
+sub EVENT_COMBAT {
+	#:: Match combat state 1 - entered combat
+	if ($combat_state == 1) {
+		quest::say("All shall die before the might of the Fabulous Four!!");
+	}
+}
+
+sub EVENT_DEATH_COMPLETE {
+	quest::say("The entire Eldritch Collective shall feel the vibrations of my passing. They will know of your foul deed.");
+}
