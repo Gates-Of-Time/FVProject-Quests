@@ -1,5 +1,9 @@
 sub EVENT_SAY {
-	if ($text=~/hail/i) {
+	#:: Match if faction is Indifferent or worse
+	if ($faction > 5) {
+		quest::say("Your reputation preceeds you. You are no friend to me.");
+	}
+	elsif ($text=~/hail/i) {
 		quest::say("Greetings, $name, I am the Oracle of K'Aron. Do you quest for [knowledge] yourself, or do you offer that which I [seek].");
 	}
 	elsif ($text=~/knowledge/i) {
@@ -44,25 +48,38 @@ sub EVENT_SAY {
 
 
 sub EVENT_ITEM {
+	#:: Match if faction is Indifferent or worse
+	if ($faction > 5) {
+		quest::say("Your reputation preceeds you. You are no friend to me.");
+	}
 	#:: Part of The Fiery Avenger, Paladin Epic 1.0
 	#:: Match 18302 - Book of Scale
-	#:: if (plugin::takeItems(18302 => 1)) {
+	#:: elsif (plugin::takeItems(18302 => 1)) {
+		#:: quest::say("Unbelievable! The legendary Book of Scale is mine! Please, take this as a small token of my thanks. I warn you however, if you ever manage to join the corporeal body to the evil that resides within, you will rue the day.");
 		#:: Give a 19072 - Miragul's Phylactery
 		#:: quest::summonitem(19072);
+		#:: Ding!
+		#:: quest::ding();
+		#:: Set factions
+		#:: quest::faction(402, 10);
+		#:: quest::faction(403, -10);
+		#:: Grant a large amount of experience
+		#:: quest::exp(72900);
 	#:: }
 	#:: Match a 18202 - Book of Turmoil
-	if (plugin::takeItems(18202 => 1)) {
+	elsif (plugin::takeItems(18202 => 1)) {
 		quest::say("Thank thee for this tome. Be sure to check back with me later, as I might have another task for thee.");
 		#:: Give a 10071 - Glowing Torch
 		quest::summonitem(10071);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(402, 5);		#:: + Oracle of Karnon
-		quest::faction(403, -10);	#:: - Oracle of Marud
+		quest::faction(402, 10);		#:: + Oracle of Karnon
+		quest::faction(403, -10);		#:: - Oracle of Marud
 		#:: Grant a large amount of experience
 		quest::exp(72900);
 	}
+	quest::say("I have no need for this item, $name. You can have it back.");
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
