@@ -3,9 +3,9 @@ sub EVENT_SAY {
 		quest::say("Welcome to my island. I always welcome visitors, but I would prefer that your stay not last too long. My warriors are sometimes tempted by others. That is why they all wear purity belts. I should warn you, also, to be on the lookout for the [Pirates of Gunthak].");
 	}
 	elsif ($text=~/pirates of gunthak/i) {
-		quest::say("The Pirates of Gunthak have been stranded on a nearby island. Their ship was sunk by some unknown water beast. They now attempt to take over this island and commandeer the first ship they encounter. I am looking for brave [adventurers] to hunt the rogues. Do you wish to hunt the pirates or are you waiting for the next ship?");
+		quest::say("The Pirates of Gunthak have been stranded on a nearby island. Their ship was sunk by some unknown water beast. They now attempt to take over this island and commandeer the first ship they encounter. I am looking for brave adventurers to hunt the rogues. Do you wish to hunt the pirates or are you waiting for the next ship?");
 	}
-	elsif ($text=~/adventurers/i) {
+	elsif ($text=~/i will hunt the pirates/i) {
 		quest::say("Go and seek them out. They are on a nearby island. You will have to swim if you have no boat. Each pirate wears the pirate earring of the Pirates of Gunthak. I shall reward you for each earring you return to me. They have also stolen the Bracers of Erollisi from us. Their leader may have the pair. Return it to me and I shall be very appreciative.");
 	}
 	elsif ($text=~/sentry xyrin/i) {
@@ -24,11 +24,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(246, 5);			#:: + Faydarks Champions
+		quest::faction(246, 20);		#:: + Faydarks Champions
 		quest::faction(279, 5);			#:: + King Tearis Thex
 		quest::faction(310, 5);			#:: + Soldiers of Tunare
 		quest::faction(226, 5);			#:: + Clerics of Tunare
-		quest::faction(234,-10);		#:: - Crushbone Orcs
+		quest::faction(234, -5);		#:: - Crushbone Orcs
 		#:: Grant a small amount of experience
 		quest::exp(250);
 		#:: Create a hash for storing cash - 600 to 700cp
@@ -45,10 +45,10 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Set factions
 		quest::faction(246, 5);			#:: + Faydarks Champions
-		quest::faction(279, 5);			#:: + King Tearis Thex
-		quest::faction(310, 5);			#:: + Soldiers of Tunare
-		quest::faction(226, 5);			#:: + Clerics of Tunare
-		quest::faction(234, -10);		#:: - Crushbone Orcs
+		quest::faction(279, 1);			#:: + King Tearis Thex
+		quest::faction(310, 1);			#:: + Soldiers of Tunare
+		quest::faction(226, 1);			#:: + Clerics of Tunare
+		quest::faction(234, -1);		#:: - Crushbone Orcs
 		#:: Grant a small amount of experience
 		quest::exp(250);
 		#:: Create a hash for storing cash - 600 to 700cp
