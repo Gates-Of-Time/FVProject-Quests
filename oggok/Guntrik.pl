@@ -6,7 +6,7 @@ sub EVENT_SPAWN {
 sub EVENT_ENTER {
 	#:: Match a 18787 - Tattered Note
 	if (plugin::check_hasitem($client, 18787)) {
-		$client->Message(15,"You stand in a large room which appears to be somewhat important. Next to you is a huge Ogre, with an evil grin. 'You come for training? You join us or me will smash you! I am Guntrik. I train you! Read note in inventory and hand to me when ready to start!'");
+		$client->Message(15, "You stand in a large room which appears to be somewhat important. Next to you is a huge Ogre, with an evil grin. 'You come for training? You join us or me will smash you! I am Guntrik. I train you! Read note in inventory and hand to me when ready to start!'");
 	}
 }
 
@@ -56,14 +56,51 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(5032, 5029, 5033, 5031, 13355));
 		#:: Ding!
 		quest::ding();
-
 		#:: Set factions
 		quest::faction(232, 15);	#:: + Craknek Warrior
 		quest::faction(228, 2);		#:: + Clurg
 		quest::faction(261, -2);	#:: - Green Blood Knights
 		#:: Grant a small amount of experience
 		quest::exp(100);
-	} 
+	}
+	#:: Match a 28055 - Tattered Parchment
+	elsif (plugin::takeItems(28055 => 1)) {
+		quest::say("Ooh! This where hunters stay. You must go to Rathe Mountains and find Drinn's Inn. Kill all. Bring owners' scalps back and me give good junk. You get more warriors to help. Say Guntrik command them. You will need all help you get.");
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(232, 2);		#:: + Craknek Warrior
+		quest::faction(228, 1);		#:: + Clurg
+		quest::faction(261, -1);	#:: - Green Blood Knights
+		#:: Grant a small amount of experience
+		quest::exp(100);
+	}
+	#:: Match a 13362 - Human Scalp and a 13363 - Human Scalp
+	elsif (plugin::takeItems(13362 => 1, 13363 =>1)) {
+		quest::say("You some great warrior. Crakneks proud. Take reward. You show us you great. Great Crakneks we need.");
+		#:: Give a 6302 - Ogre War Maul
+		quest::summonitem(6302);
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(232, 20);	#:: + Craknek Warrior
+		quest::faction(228, 2);		#:: + Clurg
+		quest::faction(261, -2);	#:: - Green Blood Knights
+		#:: Grant a small amount of experience
+		quest::exp(100);
+	}
+	#:: Match a 13362 - Human Scalp
+	elsif (plugin::takeItems(13362 => 1)) {
+		quest::say("What! This just one. Paper say there two owners. Me give you fist in face if you don't scalp other owner.");
+		#:: Return a 13362 - Human Scalp
+		quest::summonitem(13362);
+	}
+	#:: Match a 13363 - Human Scalp
+	elsif (plugin::takeItems(13362 => 1)) {
+		quest::say("What! This just one. Paper say there two owners. Me give you fist in face if you don't scalp other owner.");
+		#:: Return a 13363 - Human Scalp
+		quest::summonitem(13363);
+	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Warrior');
 	#:: Return unused items
 	plugin::returnUnusedItems();
