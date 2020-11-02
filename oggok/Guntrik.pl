@@ -96,7 +96,7 @@ sub EVENT_ITEM {
 		quest::summonitem(13362);
 	}
 	#:: Match a 13363 - Human Scalp
-	elsif (plugin::takeItems(13362 => 1)) {
+	elsif (plugin::takeItems(13363 => 1)) {
 		quest::say("What! This just one. Paper say there two owners. Me give you fist in face if you don't scalp other owner.");
 		#:: Return a 13363 - Human Scalp
 		quest::summonitem(13363);
