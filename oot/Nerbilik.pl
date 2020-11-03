@@ -26,8 +26,8 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(235,10);			#:: + Da Bashers
-		quest::faction(222,10);			#:: + Broken Skull Clan
+		quest::faction(235, 10);			#:: + Da Bashers
+		quest::faction(222, -1);			#:: + Broken Skull Clan
 		#:: Grant a small amount of experience
 		quest::exp(150);
 		#:: Create a hash for storing cash - 1500 to 2000cp
