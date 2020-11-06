@@ -15,6 +15,7 @@ sub EVENT_ENTER {
 		quest::settimer("haldin_client_check", 30);
 		#:: Create a timer 'warning' that triggers every 60 seconds (1 min)
 		quest::settimer("warning", 60);
+		#:: Set the flavor text trigger state to true
 		$FlavorTrigger = 1;
 		quest::say("WARNING TO ALL TRAVELERS!  Bandits have been sighted on the road ahead. Beware!");
 	}
@@ -51,9 +52,17 @@ sub EVENT_COMBAT {
 	#:: Match combat state 1 - entered combat
 	if ($combat_state == 1) {
 		quest::say("For the glory of Kaladim, have at thee!!");
+		#:: Stop the timer 'warning'
+		quest::stoptimer("warning");
+		#:: Stop the timer 'haldin_client_check'
+		quest::stoptimer("haldin_client_check");	
 	}
 	else {
 		quest::say("For the glory of Kaladim!! You are no more.");
+		#:: Create a timer 'haldin_client_check' that triggers every 30 seconds
+		quest::settimer("haldin_client_check", 30);
+		#:: Create a timer 'warning' that triggers every 60 seconds (1 min)
+		quest::settimer("warning", 60);
 	}
 }
 
