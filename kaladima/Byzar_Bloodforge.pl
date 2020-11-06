@@ -11,7 +11,7 @@ sub EVENT_SAY {
 			quest::say("Your shifty eyes tell me that you are no ally of the Stormguard.");
 		}
 	}
-	elsif (($text=~/Zachoomi/i) || ($text=~/Corflunk/i)) {
+	elsif (($text=~/zarchoomi/i) || ($text=~/corflunk/i)) {
 		#:: Match if faction is Apprehensive or better
 		if ($faction <= 6) {
 			quest::say("Do not speak the names of Zarchoomi and Corflunk!!  I have heard enough of those ogres!!  I would pay greatly for their heads!!");
