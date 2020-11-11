@@ -36,12 +36,12 @@ sub EVENT_SAY {
 		}
 	}
 	elsif ($text=~/innoruuk/i) {
-		quest::say("He is the Prince of Hate. We are his vessels of destruction. There no greater servants of Innoruuk than The Dead. His word is law. Once the Teir'Dal obtain the second half of the [Scroll of G'han], all Norrath shall be enveloped by his glorious hate.");
+		quest::say("He is the Prince of Hate. We are his vessels of destruction. There no greater servants of Innoruuk than The Dead. His word is law. Once the Teir'Dal obtain the second half of the [Scroll of G`han], all Norrath shall be enveloped by his glorious hate.");
 	}
-	elsif ($text=~/scroll of g'han/i) {
+	elsif ($text=~/scroll of g`han/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <=4) {
-			quest::say("The Scroll of G'han was scribed long ago by the great necromancer G'han. With it, we can directly commune with Innoruuk. Unfortunately one portion of the scroll was taken from us by a rogue who was hired by the Koada'Dal. In Felwithe it doth lye. The Indigo Brotherhood now attempts to reclaim it.");
+			quest::say("The Scroll of G'han was scribed long ago by the great necromancer G`han. With it, we can directly commune with Innoruuk. Unfortunately one portion of the scroll was taken from us by a rogue who was hired by the Koada'Dal. In Felwithe it doth lye. The Indigo Brotherhood now attempts to reclaim it.");
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction == 5) {
