@@ -125,8 +125,12 @@ sub EVENT_ITEM {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
 			quest::say("I see my expeditionary unit has encountered problems. I must send a dragoon unit to [Befallen] at once. I must not allow the Thex Mallet] to fall into the hands of some simple adventurer. Here is payment for your quick service.");
-			#:: Give a random reward:  13009 - Bandages, 13005 - Iron Ration, 13002 - Torch
-			quest::summonitem(quest::ChooseRandom(13009, 13005, 13002));
+			#:: Give two 13009 - Bandages
+			quest::summonitem(13009, 2);
+			#:: Give two 13005 - Iron Ration
+			quest::summonitem(13005, 2);
+			#:: Give a 13002 - Torch
+			quest::summonitem(13002);
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
@@ -136,7 +140,7 @@ sub EVENT_ITEM {
 			quest::faction(275, -1);			#:: - Keepers of the Art
 			quest::faction(245, -1);			#:: - Eldritch Collective
 			quest::faction(1522, -20);			#:: - Primordial Malice
-			#:: Grant a small amount of experience
+			#:: Grant a small amount of level-based experience
 			$client->AddLevelBasedExp(1, 16);
 			#:: Create a hash for storing cash - 1 to 10cp
 			my %cash = plugin::RandomCash(1,10);
