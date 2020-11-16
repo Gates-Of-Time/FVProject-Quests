@@ -20,7 +20,7 @@ sub EVENT_ITEM {
 			quest::faction(292, 1);			#:: + Merchants of Rivervale
 			quest::faction(329, -1);		#:: - Unkempt Druids
 			#:: Grant a small amount of experience
-			quest::exp(500);
+			$client->AddLevelBasedExp(4, 5);
 			#:: Create a hash for storing cash - 70 to 90cp
 			my %cash = plugin::RandomCash(70,90);
 			#:: Grant a random cash reward
