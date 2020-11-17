@@ -13,8 +13,13 @@ sub EVENT_TIMER {
 		quest::stop;
 		quest::moveto(-639,-85,-24.75,16.5);
 	}
-	if ($count ==2 ) {
-	quest::settimer("checks",120);
-	$count = 0;
+	if ($count == 2 ) {
+		$count = 0;
 	}
-} 
+}
+
+sub EVENT_SAY {
+	if ($text=~/hail/i) {
+		quest::say("Join us in celebrating my promotion to the rank of Dragoon!  I shall still respect all of you scum.");
+	}
+}
