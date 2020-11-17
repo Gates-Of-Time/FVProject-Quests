@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
- 		quest::say("Zanotix Ixtaz casts an icy glare at you and says 'I, Zanotix Ixtaz, am the greatest weaponsmith in all of Neriak. Have you disturbed me to purchase one of my superior products or have you come to learn the art of crafting [indigo sabres]? '");
+ 		quest::emote("casts an icy glare at you and says 'I, Zanotix Ixtaz, am the greatest weaponsmith in all of Neriak. Have you disturbed me to purchase one of my superior products or have you come to learn the art of crafting [indigo sabres]? '");
 	}
 	elsif ($text=~/indigo sabres/i) {
 		quest::say("Indigo sabres are the weapons of choice for true swordsmen. They are constructed of the finest adamantite and can only be crafted in our unique Teir'Dal forge. In order to successfully craft an indigo sabre. you will require a curved blade mold. Neriak nectar. a folded sheet of adamantite. and a mold for the hilt and pommel. If you are a faithful follower of our Lord of Hate then you may be interested in crafting an imbued indigo sabre. You will need to temper the sword with shadow temper instead of Neriak nectar. and will have to forge a sapphire that has been imbued by a cleric into the sword at the time of its creation.");
