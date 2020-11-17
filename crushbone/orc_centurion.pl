@@ -13,3 +13,7 @@ sub EVENT_COMBAT {
 		}
 	}
 }
+
+sub EVENT_DEATH_COMPLETE {
+	quest::say("You shall have all the Crushbone orc legions on your tail for my death!");
+}
