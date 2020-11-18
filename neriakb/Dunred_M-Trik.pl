@@ -27,3 +27,8 @@ sub EVENT_SAY {
 		quest::say("Within this area you will find the Cauldron of Hate which is home to the Teir'Dal warriors.");
 	}
 }
+
+sub EVENT_ITEM {
+	#:: Return unused items
+	plugin::returnUnusedItems();
+}
