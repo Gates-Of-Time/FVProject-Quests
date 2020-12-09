@@ -102,6 +102,7 @@ sub EVENT_DEATH_COMPLETE {
 		$query_handle->execute();
 	}
 	elsif (quest::get_data($key) eq "2") {
+		quest::set_data($key, quest::get_data($key) + 1);
 		$mob->CameraEffect(10000, 10, 0, 1);
 		quest::we(13, "Sirran the Lunatic shouts, 'Give me your trinkets, or give me death!'");
 		$connect = plugin::LoadMysql();
