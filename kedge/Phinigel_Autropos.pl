@@ -1,4 +1,4 @@
-sub EVENT_DEATH_COMPLETE {
+sub EVENT_DEATH {
 	$key = "serverprogress";
 	if (!quest::get_data($key)) {
 		quest::set_data($key, 1);
