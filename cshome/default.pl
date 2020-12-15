@@ -38,6 +38,6 @@ sub EVENT_TIMER {
 }
 
 sub FireWorks {
-	my $randomspell = quest::ChooseRandom(30, 119, 206, 214, 2320, 3647, 20124..20139, 21501..21505, 21951, 24013..24016, 24069..24072, 39536..39540);
+	my $randomspell = quest::ChooseRandom(30, 119, 206, 214, 2320, 3647, 20124..20139, 21501..21505, 21951, 24013..24016, 24069..24072, 39536..39539);
 	$npc->CastSpell($randomspell, $caster_id);
 }
