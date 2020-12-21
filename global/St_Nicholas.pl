@@ -54,22 +54,22 @@ sub Give_Gifts {
 	quest::doanim(43);
 	$npc->CastSpell(15911, $caster_id);
 	my $random = int(rand(4)) + 1;
-	if ($random = 4) {
-		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x + 5, $y + 5, $z + 1, 0);
-		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x - 5, $y + 5, $z + 1, 0);
-		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x + 5, $y - 5, $z + 1, 0);
-		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x - 5, $y - 5, $z + 1, 0);
+	if ($random == 4) {
+		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x + 5, $y + 5, $z - 1, 0);
+		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x - 5, $y + 5, $z - 1, 0);
+		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x + 5, $y - 5, $z - 1, 0);
+		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x - 5, $y - 5, $z - 1, 0);
 	}
-	elsif ($random = 3) {
-		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x + 5, $y + 5, $z + 1, 0);
-		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x - 5, $y + 5, $z + 1, 0);
-		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x + 5, $y - 5, $z + 1, 0);
+	elsif ($random == 3) {
+		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x + 5, $y + 5, $z - 1, 0);
+		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x - 5, $y + 5, $z - 1, 0);
+		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x + 5, $y - 5, $z - 1, 0);
 	}
-	elsif ($random = 2) {
-		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x + 5, $y + 5, $z + 1, 0);
-		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x - 5, $y + 5, $z + 1, 0);
+	elsif ($random == 2) {
+		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x + 5, $y + 5, $z - 1, 0);
+		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x - 5, $y + 5, $z - 1, 0);
 	}
-	elsif ($random = 1) {
-		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x + 5, $y + 5, $z + 1, 0);
+	elsif ($random == 1) {
+		quest::creategroundobject(quest::ChooseRandom(32567, 32567, 32567, 88364), $x + 5, $y + 5, $z - 1, 0);
 	}	
 }
