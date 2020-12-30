@@ -8,3 +8,7 @@ sub EVENT_COMBAT {
 sub EVENT_SLAY {
 	quest::say("Die!");
 }
+
+sub EVENT_DEATH_COMPLETE {
+	quest::emote("sags to the ground, defeated.");
+}
