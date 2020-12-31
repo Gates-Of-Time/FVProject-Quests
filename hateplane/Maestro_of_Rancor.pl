@@ -5,5 +5,6 @@ sub EVENT_SLAY {
 sub EVENT_DEATH_COMPLETE {
 	quest::say("The dance is over, for now.");
 	#:: Spawn one and only one Plane of Hate >> Hand_of_the_Maestro (76015) at the current location
-	quest::unique_spawn(76015, 0, 0, $x, $y, $z);
+	#:: After revamp
+	#:: quest::unique_spawn(76015, 0, 0, $x, $y, $z);
 }
