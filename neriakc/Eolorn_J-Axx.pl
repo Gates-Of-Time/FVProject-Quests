@@ -54,10 +54,10 @@ sub EVENT_ITEM {
 		quest::exp(100);
 	}
 	#:: Match a 13891 - locked Chest
-	if (plugin::takeItems(13891 => 1)) {
+	elsif (plugin::takeItems(13891 => 1)) {
 		quest::say("The Hall thanks you. You have performed supremely. We are glad to have you with us. I offer you this, loot from former takes. I hope you can use it.");
-		#:: Randomly choose from Rusty Rapier, Rusty Dagger, Rat Pelt Cape, Tattered Cloth Sandal, Rat Fur Cap
-		quest::summonitem(quest::ChooseRandom(7008, 7007, 13824, 1051, 1038, 1050));
+		#:: Give a random reward:  7008 - Rusty Rapier, 7007 - Rusty Dagger, 1051 - Rat Pelt Cape, 1038 - Tattered Cloth Sandal, 1050 - Rat Fur Cap
+		quest::summonitem(quest::ChooseRandom(7008, 7007, 1051, 1038, 1050));
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
@@ -69,9 +69,9 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100)
 		#:: Create a hash for storing cash - 5 to 15cp
-		my %cash = plugin::RandomCash(5,15);
-			#:: Grant a random cash reward
-			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});;
+		my %cash = plugin::RandomCash(5, 15);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});;
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Rogue');
 	#:: Return unused items
