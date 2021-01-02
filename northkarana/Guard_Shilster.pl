@@ -24,17 +24,26 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match 5 gold pieces
 	if (plugin::takeCoin(0, 0, 5, 0)) {
-		quest::say("There you go, sport. If you get caught with that, you didn't get it from me!");
-		#:: Give a 13107 - Black Burrow Stout
-		quest::summonitem(13107);
-		#:: Ding!
-		quest::ding();
-		#:: Set factions
-		quest::faction(230, 1);		#:: + Corrupt Qeynos Guards
-		quest::faction(262, -1);	#:: - Guards of Qeynos
-		quest::faction(273, 1);		#:: + Kane Bayle
-		quest::faction(223, 1);		#:: + Circle Of Unseen Hands
-		quest::faction(221, 1);		#:: + Bloodsabers
+		#:: Need dubious or better faction with Corrupt Qeynos Guards
+		if ($faction <= 7) {
+			quest::say("There you go, sport. If you get caught with that, you didn't get it from me!");
+			#:: Give a 13107 - Black Burrow Stout
+			quest::summonitem(13107);
+			#:: Ding!
+			quest::ding();
+			#:: Set factions
+			quest::faction(230, 1);		#:: + Corrupt Qeynos Guards
+			quest::faction(262, -1);	#:: - Guards of Qeynos
+			quest::faction(273, 1);		#:: + Kane Bayle
+			quest::faction(223, 1);		#:: + Circle Of Unseen Hands
+			quest::faction(221, 1);		#:: + Bloodsabers
+		}
+		else {
+			quest::say("You have the smell of a snitch. I have nothing for you to purchase");
+			#:: Return the 5 gold
+			quest::givecash(0,5,0,0);
+		}
+		
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
