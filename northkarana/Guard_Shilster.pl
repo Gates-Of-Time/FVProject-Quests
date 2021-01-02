@@ -41,7 +41,7 @@ sub EVENT_ITEM {
 		else {
 			quest::say("You have the smell of a snitch. I have nothing for you to purchase");
 			#:: Return the 5 gold
-			quest::givecash(0,5,0,0);
+			quest::givecash(0,0,5,0);
 		}
 		
 	}
