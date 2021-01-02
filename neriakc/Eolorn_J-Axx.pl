@@ -53,6 +53,26 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
+	#:: Match a 13891 - locked Chest
+	if (plugin::takeItems(13891 => 1)) {
+		quest::say("The Hall thanks you. You have performed supremely. We are glad to have you with us. I offer you this, loot from former takes. I hope you can use it.");
+		#:: Randomly choose from Rusty Rapier, Rusty Dagger, Rat Pelt Cape, Tattered Cloth Sandal, Rat Fur Cap
+		quest::summonitem(quest::ChooseRandom(7008, 7007, 13824, 1051, 1038, 1050));
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(244, 10);		#:: + Ebon Mask
+		quest::faction(262, -1);		#:: - Guard of Qeynos
+		quest::faction(320, -2);		#:: - Wolves of the North
+		quest::faction(263, -1);		#:: - Guardians of the Vale
+		quest::faction(329, -2);		#:: - Carson McCabe
+		#:: Grant a small amount of experience
+		quest::exp(100)
+		#:: Create a hash for storing cash - 5 to 15cp
+		my %cash = plugin::RandomCash(5,15);
+			#:: Grant a random cash reward
+			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});;
+	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Rogue');
 	#:: Return unused items
 	plugin::returnUnusedItems();
