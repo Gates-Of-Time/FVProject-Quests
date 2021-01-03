@@ -1,3 +1,10 @@
+sub EVENT_COMBAT {
+	#:: Match combat state 1 - entered combat
+	if ($combat_state == 1) {
+		quest::say("Prime Healer!! Guide me to victory!!");
+	}
+}
+
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Greetings, child of life. The way of the [Prime Healer] shall set you free and cleanse your soul. I hope to see you at [mass].");
@@ -53,4 +60,8 @@ sub EVENT_ITEM {
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
+}
+
+sub EVENT_DEATH_COMPLETE {
+	quest::say("Your name has been stricken from the book of the Prime Healer!! I shall be avenged!");
 }
