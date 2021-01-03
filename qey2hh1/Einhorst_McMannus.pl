@@ -4,8 +4,7 @@ sub EVENT_SAY {
 		if ($faction <= 4) {
 			quest::say("Greetings, $name. Welcome to the fishing village of Clan McMannus. We sell what we can here. Have a look around but, please do not buy too much. We must save most of our stock for delivery to our home");
 		}
-		#:: Match if faction is Indifferent or worse
-		elsif ($faction => 5) {
+		else {
 			quest::say("Welcome to the village of McMannus. We sell many goods. Feel free to look around - just keep your hands to yourself. Good day.");
 		}
 	}
@@ -14,8 +13,7 @@ sub EVENT_SAY {
 		if ($faction <= 4) {
 			quest::say("Searching for someone, eh? You will most likely never find them on the plains. This is a vast area. I could have Frostbite help you search. He is quite good at [tracking prey].");
 		}
-		#:: Match if faction is Indifferent or worse
-		elsif ($faction => 5) {
+		else {
 			quest::say("I see they have sent someone to hunt the scoundrel down. I am afraid I haven't seen the barbarian thief in quite some time. You can search and search for him here in the western plains, but I doubt you shall find him. Good luck.");
 		}
 	}
