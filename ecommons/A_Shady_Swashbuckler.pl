@@ -23,6 +23,7 @@ sub EVENT_SAY {
 			quest::set_data($key, $karma);
 
 			$client->AddCrystals(quest::get_data($key), 0);
+			$client->Message(15, "You have been awarded $karma radiant crystals for your time in Norrath.");
 		}
 		else {
 			$accountID = $client->AccountID();
@@ -37,9 +38,15 @@ sub EVENT_SAY {
 
 			my $total_crystals = quest::get_data($key);
 			my $award_crystals = $karma - $total_crystals;
-
-			$client->AddCrystals($award_crystals, 0);
-			quest::set_data($key, $karma);
+			
+			if ($award_crystals == 0) {
+				$client->Message(15, "Please check back later.  A crystal is earned every 20 minutes you are in Norrath.");
+			}
+			else {
+				quest::set_data($key, $karma);
+				$client->AddCrystals($award_crystals, 0);
+				$client->Message(15, "You have been awarded $award_crystals radiant crystals for your time in Norrath.");
+			}
 		}
 	}
 }
