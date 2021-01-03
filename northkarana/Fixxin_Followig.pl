@@ -2,10 +2,10 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Hail, $name! Fixxin is my moniker. Nice ta see ya. I am a member of the [Fangbreakers] and we are hunting [werewolves]. We run into lots of other [creepies] out here as well.");
 	}
-	elsif ($text=~/fanbreakers/i) {
+	elsif ($text=~/fangbreakers/i) {
 		quest::say("Fangbreakers? You have not heard of us? We are the best [werewolf] hunters there are!");
 	}
-	elsif ($text=/werewolf|werewolves/i) {
+	elsif ($text=~/werewolf|werewolves/i) {
 		quest::say("Those blasted fiends hide among normal folk during the day, but at night their bloodlust is set free on an innocent populace. Some claim there is a cure for their condition but the only one we know of is an [enchanted blade] through the bellies of the beasts.");
 	}
 	elsif ($text=~/enchanted blade/i) {
