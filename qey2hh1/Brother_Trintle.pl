@@ -1,5 +1,8 @@
-sub EVENT_AGGRO {
-	quest::say("For Bertoxxulous, I shall spill your guts upon the floor!");
+sub EVENT_COMBAT {
+	#:: Match combat state 1 - entered combat
+	if ($combat_state == 1) {
+		quest::say("For Bertoxxulous, I shall spill your guts upon the floor!");
+	}
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
