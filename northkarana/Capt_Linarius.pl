@@ -14,25 +14,33 @@ sub EVENT_COMBAT {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail, traveler! You are free to rest within this keep or within any of my towers along the roads to Qeynos. My guards shall keep watch over you. While you tread upon the roads, be warned that there are [local dangers] as well as rumors of [corrupt guards].");
+		#:: Need to be at least dubious to get corrupt guards quest.
+		if ($faction <= 7) {
+			quest::say("Hail, traveler! You are free to rest within this keep or within any of my towers along the roads to Qeynos. My guards shall keep watch over you. While you tread upon the roads, be warned that there are [local dangers] as well as rumors of [corrupt guards].");
+		}
+			else {
+			quest::say("Hail, traveler! You are free to rest within this keep or within any of my towers along the roads to Qeynos. My guards shall keep watch over you. While you tread upon the roads, be warned that there are [local dangers].");
+		}
 	}
-	elsif ($text=~/local dangers/i) {
-		quest::say("My guards report daily to me of dangers in the plains. Lately, they've been telling me of rumors of [Lord Grimrot].");
+	    elsif ($text=~/local dangers/i) {
+	    	quest::say("My guards report daily to me of dangers in the plains. Lately, they've been telling me of rumors of [Lord Grimrot].");
 	}
-	elsif ($text=~/corrupt guards/i) {
-		quest::say("I have heard rumors of dissension among my guards. I will reward any fine resident for the death of these traitorous guards. If you find you must kill one, bring his guard bracelet back to me. I cannot allow such men among my guards. Be sure they are corrupt, or I shall have your head as well.");
+    	elsif ($text=~/corrupt guards/i) {
+	    	quest::say("I have heard rumors of dissension among my guards. I will reward any fine resident for the death of these traitorous guards. If you find you must kill one, bring his guard bracelet back to me. I cannot allow such men among my guards. Be sure they are corrupt, or I shall have your head as well.");
 	}
-	elsif ($text=~/lord grimrot/i) {
-		quest::say("My guards have heard rumors of this Lord Grimrot. It is said that he is a powerful shadowknight who is raising an army of undead. Such things should be reported to the Temle of Life. Journey to Qeynos and speak with Camlend Serbold. Tell him of Lord Grimrot.");
+    	elsif ($text=~/lord grimrot/i) {
+	    	quest::say("My guards have heard rumors of this Lord Grimrot. It is said that he is a powerful shadowknight who is raising an army of undead. Such things should be reported to the Temple of Life. Journey to Qeynos and speak with Camlend Serbold. Tell him of Lord Grimrot.");
 	}
 }
 
 sub EVENT_ITEM {
 	#:: Match a 13303 - Guard Bracelet
 	if (plugin::takeItems(13303 => 1)) {
+		#:: Need to be at least dubious to do corrupt guards quest.
+		if ($faction <= 7) {
 		quest::say("What a pity. Such a promising soldier. I thank you for ridding us of this corruption and offer you this as a reward. It is nothing more than junk which littered the roadways of the Plains of Karana. I hope you can find a use for it.");
-		#:: Give a random reward: 5369 - Bunker Battle Blade or a 9002 - Round Shield
-		quest::summonitem(quest::ChooseRandom(5369,9002));
+		#:: Give a random reward: 5369 - Bunker Battle Blade or a 9002 - Round Shield, Bronze short sword, Bronze Long Sword, Bronze Battle Axe, Bronze Bastard Sword, Fine Steel Short Sword, Fine Steel Long Sword, Fine Steel Scimitar
+		quest::summonitem(quest::ChooseRandom(5369,9002,5026,5027,5028,5029,5350,5352,5353));
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
@@ -47,13 +55,19 @@ sub EVENT_ITEM {
 		my %cash = plugin::RandomCash(800,850);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		}
+		else {
+		quest::say("I have no need of this");
+		#:: Return Guard Bracelet 13303
+		quest::summonitem(13303);
+		}
 	}
-	#:: Match a 13304 - Guard Bracelet
-	elsif (plugin::takeItems(13304 => 1)) {
-		quest::say("You fool!! You have killed a fine and outstanding guard. You shall pay dearly for this!!");
-		#:: Attack the player who triggered the event
-		quest::attack($name);
-	}
+	    #:: Match a 13304 - Guard Bracelet
+	    elsif (plugin::takeItems(13304 => 1)) {
+		    quest::say("You fool!! You have killed a fine and outstanding guard. You shall pay dearly for this!!");
+		    #:: Attack the player who triggered the event
+		    quest::attack($name);
+	    }
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
