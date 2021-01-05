@@ -22,8 +22,8 @@ sub EVENT_SAY {
 
 			quest::set_data($key, $karma);
 
-			$client->AddCrystals(quest::get_data($key), 0);
-			$client->Message(15, "You have been awarded $karma radiant crystals for your time in Norrath.");
+			$client->SummonItem(103000, quest::get_data($key));
+			$client->Message(15, "You have been awarded $karma Chronobines for your time in Norrath.");
 		}
 		else {
 			$accountID = $client->AccountID();
@@ -36,16 +36,16 @@ sub EVENT_SAY {
 				$karma = $account_row[0];
 			}
 
-			my $total_crystals = quest::get_data($key);
-			my $award_crystals = $karma - $total_crystals;
+			my $total_karma_award = quest::get_data($key);
+			my $award_currency = $karma - $total_karma_award;
 			
-			if ($award_crystals == 0) {
-				$client->Message(15, "Please check back later.  A crystal is earned every 20 minutes you are in Norrath.");
+			if ($award_currency == 0) {
+				$client->Message(15, "Please check back later.  A Chronobine is earned every 20 minutes you are in Norrath.");
 			}
 			else {
 				quest::set_data($key, $karma);
-				$client->AddCrystals($award_crystals, 0);
-				$client->Message(15, "You have been awarded $award_crystals radiant crystals for your time in Norrath.");
+				$client->SummonItem(103000, $award_currency);
+				$client->Message(15, "You have been awarded $award_currency Chronobines for your time in Norrath.");
 			}
 		}
 	}
