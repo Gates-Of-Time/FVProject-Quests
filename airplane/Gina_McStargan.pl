@@ -1,6 +1,6 @@
 sub EVENT_SPAWN {
 	#:: Create a timer 'gina_depop' that triggers every 300 seconds (5 min)
-	quest::settimer("depop", 300);
+	quest::settimer("gina_depop", 300);
 }
 
 sub EVENT_TIMER {
