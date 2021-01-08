@@ -33,7 +33,7 @@ sub EVENT_ITEM {
 		#:: Give a 27729 - Warhammer of the Wind
 		quest::summonitem(27729);
 		#:: Ding!
-		quest::ding()
+		quest::ding();
 		#:: Grant a huge amount of experience
 		quest::exp(100000);
 		quest::depop();
@@ -44,7 +44,7 @@ sub EVENT_ITEM {
 		#:: Give a 27730 - Vermilion Sky Ring
 		quest::summonitem(27730);
 		#:: Ding!
-		quest::ding()
+		quest::ding();
 		#:: Grant a huge amount of experience
 		quest::exp(100000);
 		quest::depop();
@@ -55,7 +55,7 @@ sub EVENT_ITEM {
 		#:: Give a 11694 - Garduk
 		quest::summonitem(11694);
 		#:: Ding!
-		quest::ding()
+		quest::ding();
 		#:: Grant a huge amount of experience
 		quest::exp(100000);
 		quest::depop();
