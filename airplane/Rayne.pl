@@ -1,6 +1,6 @@
 sub EVENT_SPAWN {
 	#:: Create a timer 'rayne_depop' that triggers every 300 seconds (5 min)
-	quest::settimer("rayne_depop",300);
+	quest::settimer("rayne_depop", 300);
 }
 
 sub EVENT_TIMER {
@@ -32,7 +32,7 @@ sub EVENT_ITEM {
 		#:: Give a 11677 - Ebonsting
 		quest::summonitem(11677);
 		#:: Ding!
-		quest::ding()
+		quest::ding();
 		#:: Grant a huge amount of experience
 		quest::exp(100000);
 		quest::depop();
@@ -43,7 +43,7 @@ sub EVENT_ITEM {
 		#:: Give a 2701 - Scintillating Bracer of Protection
 		quest::summonitem(2701);
 		#:: Ding!
-		quest::ding()
+		quest::ding();
 		#:: Grant a huge amount of experience
 		quest::exp(100000);
 		quest::depop();
@@ -54,7 +54,7 @@ sub EVENT_ITEM {
 		#:: Give a 2702 - Transparent Mask
 		quest::summonitem(2702);
 		#:: Ding!
-		quest::ding()
+		quest::ding();
 		#:: Grant a huge amount of experience
 		quest::exp(100000);
 		quest::depop();
