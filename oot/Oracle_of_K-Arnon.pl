@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	#:: Match if faction is Indifferent or worse
-	if ($faction > 5) {
+	if ($faction > 4) {
 		quest::say("Your reputation preceeds you. You are no friend to me.");
 	}
 	elsif ($text=~/hail/i) {
@@ -25,9 +25,9 @@ sub EVENT_SAY {
 		quest::say("I do not seek the Book of Enlightenment at this time, but I might have need of it in the future.");
 	}
 	elsif ($text=~/scale/i) {
-		quest::say("I do not seek the Book of Scale at this time, but I might have need of it in the future.");
+		#:: quest::say("I do not seek the Book of Scale at this time, but I might have need of it in the future.");
 		#:: Part of The Fiery Avenger, Paladin Epic 1.0
-		#:: quest::say("Ah, the Book of Scale.. It would be wondrous indeed if you could recover the Book of Scale for me. If you do manage to procure the Book of Scale, I will gladly part with an artifact of my own that may be of interest to you.");
+		quest::say("Ah, the Book of Scale.. It would be wondrous indeed if you could recover the Book of Scale for me. If you do manage to procure the Book of Scale, I will gladly part with an artifact of my own that may be of interest to you.");
 	}
 	elsif ($text=~/turmoil/i) {
 		quest::say("Ah, yes! The Book of Turmoil. I seek this book, and should you find it and return it to me, I will reward you with secret knowledge.");
@@ -49,23 +49,23 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match if faction is Indifferent or worse
-	if ($faction > 5) {
+	if ($faction > 4) {
 		quest::say("Your reputation preceeds you. You are no friend to me.");
 	}
 	#:: Part of The Fiery Avenger, Paladin Epic 1.0
 	#:: Match 18302 - Book of Scale
-	#:: elsif (plugin::takeItems(18302 => 1)) {
-		#:: quest::say("Unbelievable! The legendary Book of Scale is mine! Please, take this as a small token of my thanks. I warn you however, if you ever manage to join the corporeal body to the evil that resides within, you will rue the day.");
+	elsif (plugin::takeItems(18302 => 1)) {
+		quest::say("Unbelievable! The legendary Book of Scale is mine! Please, take this as a small token of my thanks. I warn you however, if you ever manage to join the corporeal body to the evil that resides within, you will rue the day.");
 		#:: Give a 19072 - Miragul's Phylactery
-		#:: quest::summonitem(19072);
+		quest::summonitem(19072);
 		#:: Ding!
-		#:: quest::ding();
+		quest::ding();
 		#:: Set factions
-		#:: quest::faction(402, 10);
-		#:: quest::faction(403, -10);
+		quest::faction(402, 10);
+		quest::faction(403, -10);
 		#:: Grant a large amount of experience
-		#:: quest::exp(72900);
-	#:: }
+		quest::exp(72900);
+	}
 	#:: Match a 18202 - Book of Turmoil
 	elsif (plugin::takeItems(18202 => 1)) {
 		quest::say("Thank thee for this tome. Be sure to check back with me later, as I might have another task for thee.");
