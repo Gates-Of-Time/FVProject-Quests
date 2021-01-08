@@ -53,7 +53,7 @@ sub EVENT_ITEM {
 		quest::depop();
 	}
 	#:: Match a 20943 - Diaphanous Globe, a 20701 - Dried Leather, and a 20702 - Finely Woven Cloth Belt
-	elsif (plugin::20943 => 1, 20701 => 1, 20702 => 1)) {				#:: Shadowknight Test of Slash
+	elsif (plugin::takeItems(20943 => 1, 20701 => 1, 20702 => 1)) {			#:: Shadowknight Test of Slash
 		quest::say("You is powerful! Take this!");
 		#:: Give a 2704 - Pegasus-Hide Belt
 		quest::summonitem(2704);
