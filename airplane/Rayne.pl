@@ -8,6 +8,7 @@ sub EVENT_TIMER {
 	if ($timer eq "rayne_depop") {
 		quest::stoptimer("rayne_depop");
 		quest::depop();
+	}
 } 
 
 sub EVENT_SAY {
