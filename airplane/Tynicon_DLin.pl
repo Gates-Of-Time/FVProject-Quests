@@ -1,6 +1,6 @@
 sub EVENT_SPAWN {
 	#:: Create a timer 'tynicon_depop' that triggers every 300 seconds (5 min)
-	quest::settimer("tynicon_depop",300);
+	quest::settimer("tynicon_depop", 300);
 }
 
 sub EVENT_TIMER {
@@ -36,7 +36,7 @@ sub EVENT_ITEM {
 		#:: Give a 4322 - Blood Sky Face Plate
 		quest::summonitem(4322);
 		#:: Ding!
-		quest::ding():
+		quest::ding();
 		#:: Grant a huge amount of experience
 		quest::exp(100000);
 		quest::depop();
@@ -47,7 +47,7 @@ sub EVENT_ITEM {
 		#:: Give a 11678 - Obtenebrate Mithril Guard
 		quest::summonitem(11678);
 		#:: Ding!
-		quest::ding():
+		quest::ding();
 		#:: Grant a huge amount of experience
 		quest::exp(100000);
 		quest::depop();
@@ -58,7 +58,7 @@ sub EVENT_ITEM {
 		#:: Give a 11699 - Pearlescent Pauldrons
 		quest::summonitem(11699);
 		#:: Ding!
-		quest::ding():
+		quest::ding();
 		#:: Grant a huge amount of experience
 		quest::exp(100000);
 		quest::depop();
@@ -69,7 +69,7 @@ sub EVENT_ITEM {
 		#:: Give a 11679 - Rheumguls
 		quest::summonitem(11679);
 		#:: Ding!
-		quest::ding():
+		quest::ding();
 		#:: Grant a huge amount of experience
 		quest::exp(100000);
 		quest::depop();
