@@ -1,12 +1,12 @@
 sub EVENT_SPAWN {
 	#:: Create a timer 'gragrot_depop' that triggers every 300 seconds (5 min)
-	quest::settimer("gragrot_depop",300);
+	quest::settimer("gragrot_depop", 300);
 }
 
 sub EVENT_TIMER {
 	#:: Match the timer 'gragrot_depop'
 	if ($timer eq "gragrot_depop") {
-		quest::stoptimer("depop");
+		quest::stoptimer("gragrot_depop");
 		quest::depop();
 	}
 }
@@ -53,7 +53,7 @@ sub EVENT_ITEM {
 		quest::depop();
 	}
 	#:: Match a 20943 - Diaphanous Globe, a 20701 - Dried Leather, and a 20702 - Finely Woven Cloth Belt
-	elsif (plugin::(20943 => 1, 20701 => 1, 20702 => 1)) {				#:: Shadowknight Test of Slash
+	elsif (plugin::20943 => 1, 20701 => 1, 20702 => 1)) {				#:: Shadowknight Test of Slash
 		quest::say("You is powerful! Take this!");
 		#:: Give a 2704 - Pegasus-Hide Belt
 		quest::summonitem(2704);
