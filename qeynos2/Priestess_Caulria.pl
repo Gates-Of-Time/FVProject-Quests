@@ -14,6 +14,15 @@ sub EVENT_SAY {
 			quest::say("The Temple of Life smiles upon you, friend.. but such a delicate matter can only be entrusted to our most loyal members.");
 		}
 	}
+	elsif ($text=~/fleshy orb/i) {
+		#:: Match if faction is Amiable or better
+		if ($faction < 5) {
+			quest::say("'I do not know what you are talking about. Let me see it.");
+		}
+		else {
+			quest::say("The Temple of Life smiles upon you, friend.. but such a delicate matter can only be entrusted to our most loyal members.");
+		}
+	}
 	elsif ($text=~/contemplation/i) {
 		quest::say("I understand. Sometimes a person can be filled with the lies of so many other false deities that he cannot see the truth when it lies in front of him.");
 	}
