@@ -1,15 +1,15 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Nice to meet you. Do not the plains of Karana whistle with life. This land is truly blessed by the gods. Would you like to hear a tune or do you pass?");
+		quest::say("Nice to meet you. Do not the plains of Karana whistle with life. This land is truly blessed by the gods. Would you like to [hear a tune] or do you pass?");
 	}
 	elsif ($text=~/hear a tune/i) {
-		quest::say("Inside this heart I am trapped with the sight beautiful colors, all memories of your love They attack me with full might . You left me here in this garden of grey Never to see the true colors of the happiness of day Here in my heart I sit and I cry You have left me alone and my colors have all died . What do you think? Is it a happy tune or a sad tune?");
+		quest::say("Inside this heart I am trapped with the sight beautiful colors, all memories of your love They attack me with full might . You left me here in this garden of grey Never to see the true colors of the happiness of day Here in my heart I sit and I cry You have left me alone and my colors have all died . What do you think? Is it a [happy] tune or a [sad] tune?");
 	}
 	elsif ($text=~/happy/i) {
-		quest::say("It does need work. It should make the listener sad.I fear all my best tunes are behind me. That is why I am here. I am trying to write a New Composition.");
+		quest::say("It does need work. It should make the listener sad.I fear all my best tunes are behind me. That is why I am here. I am trying to write a [New Composition].");
 	}
 	elsif ($text=~/sad/i) {
-		quest::say("It takes a broken heart to truly appreciate that tune. I am glad you enjoyed it. My dear Metala left me one year ago. The wound has healed , but the scar lives on. I am presently trying to complete a New Composition. Maybe that will turn me around.");
+		quest::say("It takes a broken heart to truly appreciate that tune. I am glad you enjoyed it. My dear Metala left me one year ago. The wound has healed , but the scar lives on. I am presently trying to complete a [New Composition]. Maybe that will turn me around.");
 	}
 	elsif ($text=~/new composition/i) {
 		quest::say("I have come here to create my greatest composition. I call it 'The Winds of Karana'. Alas , but the Song Sheets have been taken from me. While I, ahem, attended to some personal business a Hermit came and stole two Song Sheets from my pack. It would be grand if in your journey you were to come upon this Hermit of the Plains and return my Song Sheets to me. I would pay kindly. I must now get back to my thoughts. Please excuse me.");
