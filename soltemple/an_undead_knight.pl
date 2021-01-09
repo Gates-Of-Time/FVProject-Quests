@@ -19,27 +19,33 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 12292 - Decayed Left Gauntlet, a 12291 - Decayed Right Gauntlet, and a 16507 - Enchanted Platinum Bar
 	if (plugin::takeItems(12292 => 1, 12291 => 1, 16507 => 1)) {
-		quest::say("Well done, $name, here is your reward.");
+		quest::say("Well done, $name, here is your reward.");	#:: Not confirmed
 		#:: Give a 3144 - Darkforge Gauntlets
 		quest::summonitem(3144);
 		#:: Ding!
 		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(1000);
 	}
 	#:: Match a 12294 - Decayed Left Legplate, a 12293 - Decayed Right Legplate, and two 12297 - Melatite
 	elsif (plugin::takeItems(12294 => 1, 12293 => 1, 12297 => 2)) {
-		quest::say("Well done, $name, here is your reward.");
+		quest::say("You have been granted the darkforge greaves!!");
 		#:: Give a 3145 - Darkforge Greaves
 		quest::summonitem(3145);
 		#:: Ding!
 		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(1000);
 	}
 	#:: Match a 12296 - Decayed Left Boot, a 12295 - Decayed Right Boot, and two 12106 - Fairy Dust
-	elsif (plugin::check_handin(\%itemcount, 12296 => 1, 12295 => 1, 12106 => 2)) {
-		quest::say("Well done, $name, here is your reward.");
+	elsif (plugin::takeItems(12296 => 1, 12295 => 1, 12106 => 2)) {
+		quest::say("Well done, $name, here is your reward.");	#:: Not confirmed
 		#:: Give a 3146 - Darkforge Boots
 		quest::summonitem(3146);
 		#:: Ding!
 		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(1000);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
