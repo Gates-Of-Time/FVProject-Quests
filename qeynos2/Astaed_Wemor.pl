@@ -25,6 +25,7 @@ sub EVENT_SAY {
 		else {
 			quest::say("I do not dislike you, but I cannot fully trust one who has yet to prove his service to the Prime Healer.  Perhaps you can assist us in ridding the land of diseased animals.  Priestess Caulria will accept all pelts from rabid beasts."); 
 		}
+	}
 	elsif ($text=~/fleshy orb/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
@@ -33,7 +34,6 @@ sub EVENT_SAY {
 		else {
 			quest::say("I do not dislike you, but I cannot fully trust one who has yet to prove his service to the Prime Healer.  Perhaps you can assist us in ridding the land of diseased animals.  Priestess Caulria will accept all pelts from rabid beasts."); 
 		}
-	}
 	}
 }
 
@@ -121,13 +121,14 @@ sub EVENT_ITEM {
 			#:: Return a 13970 - Rusty Scythe
 			quest::summonitem(13970);
 		}
+	}
 	#:: Match a 13950 - Fleshy Orb
 	elsif (plugin::takeItems(13950 => 1)) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
 			quest::say("This is very odd. I believe I have seen Priestess Caulria studying similar orbs. Take it to her. She is in the temple.");
-			#:: Give back 13950 Fleshy Orb
-			quest::summonitem(13950);
+			#:: Give back a 13951 - Fleshy Orb
+			quest::summonitem(13951);
 		}
 		else {
 			quest::say("I do not dislike you, but I cannot fully trust one who has yet to prove his service to the Prime Healer.");
