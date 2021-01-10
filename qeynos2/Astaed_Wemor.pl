@@ -127,8 +127,8 @@ sub EVENT_ITEM {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
 			quest::say("This is very odd. I believe I have seen Priestess Caulria studying similar orbs. Take it to her. She is in the temple.");
-			#:: Give back a 13951 - Fleshy Orb
-			quest::summonitem(13951);
+			#:: Give back a 13950 - Fleshy Orb
+			quest::summonitem(13950);
 		}
 		else {
 			quest::say("I do not dislike you, but I cannot fully trust one who has yet to prove his service to the Prime Healer.");
