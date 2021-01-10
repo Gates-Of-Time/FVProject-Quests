@@ -17,8 +17,8 @@ sub EVENT_ITEM {
 	#:: Match a 13951 - Fleshy Orb
 	elsif (plugin::takeItems(13951 => 1)) {
 		quest::say("Ah. Thank you for bringing this to me! I will make very good use of it. Here take this small token of my appreciation in return. Guard Jenkins will no longer require it as he was killed on the training field yesterday. Tsk. tsk. tsk.");
-		#:: Give a 5353 - Fine Steel Scimitar
-		quest::summonitem(5353);
+		#:: Choose a random reward: 5353 - Fine Steel Scimitar, 5351 - Fine Steel Two Handed Sword, 6351 - Fine Steel Morning Star, 6350 - Fine Steel Warhammer, 7352 - Fine Steel Rapier, 6352 - Fine Steel Great Staff
+		quest::summonitem(quest::ChooseRandom(5353, 5351, 6351, 6350, 7352, 6352);
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
