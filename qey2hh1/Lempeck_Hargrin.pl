@@ -11,7 +11,13 @@ sub EVENT_COMBAT {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Gree.. .. tings. How are you? Don't get too close to me. I have come down with something bad.");
+		quest::say("Greet.. cough.. ings. How are you? Don't get too close to me. I have come down with something bad.");
+	}
+	elsif ($text=~/come down/i) {
+		quest::say("Ever since I got bit by that wolf on the way to Qeynos I have been feeling ill. My strength is all gone and I.. I.. I need the [potion].");
+	}
+	elsif ($text=~/potion/i) {
+		quest::say("I have been informed that the potions of the Temple of Life will help me. The potion is my last chance, that is what Astaed Wernor of the temple told me.");
 	}
 }
 
