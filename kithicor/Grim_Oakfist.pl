@@ -1,5 +1,5 @@
 sub EVENT_SAY {
-	if (text=~/hail/i) {
+	if ($text=~/hail/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
 			quest::say("It is good to finally meet one who respects the disciplines of the Ashen Order.  All I have met are rangers.  They have interfered with my [mission in the woods].");
