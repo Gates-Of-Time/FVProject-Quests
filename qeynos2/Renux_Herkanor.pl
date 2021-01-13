@@ -51,6 +51,20 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
+	#:: Match a 13716 - Kerran Doll
+	if (plugin::takeItems(13716 => 1)) {
+		quest::say("Yes, I see you aim to please. I hope you gave Lomarc the payment that he deserved? Heh, that punk had no idea of the value of this shipment. The emerald inside this doll will fetch a pretty penny from those greedy merchants.");
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(223, 30);		#:: + Circle of Unseen Hands
+		quest::faction(291, -4);		#:: - Merchants of Qeynos
+		quest::faction(230, 4);			#:: + Corrupt Qeynos Guards
+		quest::faction(262, -4);		#:: - Guards of Qeynos
+		quest::faction(273, 4);			#:: + Kane Bayle
+		#:: Grant a small amount of experience
+		quest::exp(100);
+	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
