@@ -39,8 +39,6 @@ sub EVENT_ITEM {
 	#:: Match a 18802 - Sealed Letter
 	elsif (plugin::takeItems(18802 => 1)) {
 		quest::say("What have you brought me, worm? Hmm... This is disappointing. That Tovax has failed us for the last time. Your loyalty to Bertoxxulous and the Bloodsabers has been noted. Now, if you will excuse me a moment...");
-		#:: Give a 14007 - Potion of Light Healing
-		quest::summonitem(14007);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
