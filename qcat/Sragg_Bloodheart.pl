@@ -10,6 +10,24 @@ sub EVENT_ENTER {
 	}
 }
 
+sub EVENT_TIMER {
+	#:: Match timer 'sragg_tovax'
+	if ($timer eq "sragg_tovax") {
+		quest::stoptimer("sragg_tovax");
+		#:: Send a signal '1' to /qcat/Tovax_Vmar.pl (4020) with no delay
+		quest::signalwith(4020, 1, 0);
+	}
+}
+
+sub EVENT_SIGNAL {
+	#:: Match a signal '1' from /qcat/Tovax_Vmar.pl
+	if ($signal == 1) {
+		quest::say("I will hear no more excuses, Tovax! Enjoy eternal pain and suffering!");
+		#:: Attack Tovax_Vmar (4020)
+		quest::attacknpctype(4020);
+	}
+}
+
 sub EVENT_ITEM {
 	#:: Match a 18706 - Stained Cloth Note
 	if (plugin::takeItems(18706 => 1)) {
@@ -25,7 +43,27 @@ sub EVENT_ITEM {
 		quest::faction(341, -25);		#:: - Priest of Life
 		quest::faction(230, 5);			#:: + Corrupt Qeynos Guards
 		#:: Grant a small amount of experience
-		quest::exp(100);	
+		quest::exp(100);
+	}
+	#:: Match a 18802 - Sealed Letter
+	elsif (plugin::takeItems(18802 => 1)) {
+		quest::say("What have you brought me, worm? Hmm... This is disappointing. That Tovax has failed us for the last time. Your loyalty to Bertoxxulous and the Bloodsabers has been noted. Now, if you will excuse me a moment...");
+		#:: Give a 14007 - Potion of Light Healing
+		quest::summonitem(14007);
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(221, 50);		#:: + Bloodsabers
+		quest::faction(262, -7);		#:: - Guards of Qeynos
+		quest::faction(296, 5);			#:: + Opal Darkbriar
+		quest::faction(341, -12);		#:: - Priest of Life
+		quest::faction(230, 2);			#:: + Corrupt Qeynos Guards
+		#:: Grant a small amount of experience
+		quest::exp(100);
+		#:: Spawn one and only one The Qeynos Hills >> Tovax_Vmar (4020), without grid or guild war, in front of the current location
+		quest::unique_spawn(4020, 0, 0, $x + 10, $y + 10, $z, $h - 256);
+		#:: Set a timer 'sragg_tovax' that triggers every 30 seconds
+		quest::settimer("sragg_tovax", 30);
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Shadowknight');
 	#:: Return unused items
