@@ -61,7 +61,7 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Spawn one and only one The Qeynos Hills >> Tovax_Vmar (4020), without grid or guild war, in front of the current location
-		quest::unique_spawn(4020, 0, 0, $x + 10, $y + 10, $z, $h - 256);
+		quest::unique_spawn(4020, 0, 0, -313.54, 411.46, -39.47, 77.8);
 		#:: Set a timer 'sragg_tovax' that triggers every 30 seconds
 		quest::settimer("sragg_tovax", 30);
 	}
