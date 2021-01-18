@@ -1,7 +1,7 @@
 sub EVENT_SPAWN {
 	quest::say("Huh? What the... oh, no... S'ragg! PLEASE NO! Bertoxxulous save me!");
-	#:: Send a signal '1' to The Qeynos Aqueduct System >> Sragg_Bloodheart (45091) with no delay
-	quest::signalwith(45091, 1, 0);
+	#:: Send a signal '1' to The Qeynos Aqueduct System >> Sragg_Bloodheart (45091) with 10 second delay
+	quest::signalwith(45091, 1, 10);
 }
 
 sub EVENT_COMBAT {
