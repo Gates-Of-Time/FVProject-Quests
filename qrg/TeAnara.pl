@@ -67,7 +67,7 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
-	#:: Turn in for 18807 - Sealed Letter (Note to Jaggedpine)
+	#:: Turn in for 18807 - Sealed Letter (Note to Jaggedpine- Real)
 	elsif (plugin::takeItems(18807 => 1)) {
 		quest::say("Aye! This is good news. We shall try to supply Qeynos with a limited number of acres to begin their lumberyard. Here, my good messenger. A token to share in the good news.");
 		#:: Ding!
@@ -84,6 +84,20 @@ sub EVENT_ITEM {
 		my %cash = plugin::RandomCash(800,850);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+	}
+	#:: Turn in for 18806 - Sealed Letter (Note to Jaggedpine- Fake)
+	elsif (plugin::takeItems(18806 => 1)) {
+		quest::say("This is dreadful news. We have been nothing but kind neighbors to Qeynos. Now Antonius Bayle wishes to abuse our friendship. This will not sit well with the others. Begone, messenger!");
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(272, -10); 	#:: - Jaggedpine Treefolk
+		quest::faction(302, -10); 	#:: - Protectors of Pine
+		quest::faction(343, -10); 	#:: - QRG Protected Animals
+		quest::faction(324, 15); 	#:: + Unkempt Druids
+		quest::faction(262, -10); 	#:: - Guards of Qeynos
+		#:: Grant a moderate amount of experience
+		quest::exp(1600);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
