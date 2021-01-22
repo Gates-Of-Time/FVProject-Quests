@@ -1,8 +1,6 @@
 sub EVENT_SPAWN {
-	#:: Create a proximity, 100 units across
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Create a proximity, 100 units across, 20 units tall, without proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 10, $z + 10, 0);
 }
 
 sub EVENT_ENTER {
@@ -48,30 +46,41 @@ sub EVENT_ITEM {
 		quest::summonitem(13514);
 		#:: Ding!
 		quest::ding();
+		#:: Set factions
+		quest::faction(227, 100); 			#:: + Clerics of Underfoot
+		quest::faction(274, 100); 			#:: + Kazon Stormhammer
+		quest::faction(293, 75); 			#:: + Miners Guild 249
 		#:: Grant a small amount of experience
 		quest::exp(100);
-		#:: Set factions
-		quest::faction(227,100); 	#:: + Clerics of Underfoot
-		quest::faction(274,100); 	#:: + Kazon Stormhammer
-		quest::faction(293,75); 	#:: + Miners Guild 249
 	}
 	#:: Match if faction is Amiable or better, and four 12106 - Fairy Dust 
-	elsif (($faction <= 4) && (plugin::takeItems(12106 => 4))) {
-		quest::say("May the mighty power of Brell saturate this soil with his divinity.  Here you are, my noble friend.  You may have a pouch of the soil of Underfoot.");
-		#:: Give a 12282 - Soil of Underfoot
-		quest::summonitem(12282);
-		#:: Ding!
-		quest::ding();
-		#:: Grant a moderate amount of experience
-		quest::exp(5000);
-		#:: Create a hash for storing cash - 1300 to 1500cp
-		my %cash = plugin::RandomCash(1300,1500);
-		#:: Grant a random cash reward
-		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set factions
-		quest::faction(227,2);		#:: + Clerics of Underfoot
-		quest::faction(274,2); 		#:: + Kazon Stormhammer
-		quest::faction(293,2); 		#:: + Miners Guild 249
+	elsif (plugin::takeItems(12106 => 4))) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
+			quest::say("May the mighty power of Brell saturate this soil with his divinity.  Here you are, my noble friend.  You may have a pouch of the soil of Underfoot.");
+			#:: Give a 12282 - Soil of Underfoot
+			quest::summonitem(12282);
+			#:: Ding!
+			quest::ding();
+			#:: Set factions
+			quest::faction(227, 2);			#:: + Clerics of Underfoot
+			quest::faction(274, 2); 		#:: + Kazon Stormhammer
+			quest::faction(293, 2); 		#:: + Miners Guild 249
+			#:: Grant a moderate amount of experience
+			quest::exp(5000);
+			#:: Create a hash for storing cash - 1300 to 1500cp
+			my %cash = plugin::RandomCash(1300,1500);
+			#:: Grant a random cash reward
+			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		}
+		else {
+			quest::say("The Clerics of Underfoot have yet to see your faith directed towards our wills. Perhaps you should assist Master Gunlok Jure in the crusade against the undead.");
+			#:: Return four 12106 - Fairy Dust
+			quest::summonitem(12106);
+			quest::summonitem(12106);
+			quest::summonitem(12106);
+			quest::summonitem(12106);
+		}
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
