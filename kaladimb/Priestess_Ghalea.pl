@@ -54,7 +54,7 @@ sub EVENT_ITEM {
 		quest::exp(100);
 	}
 	#:: Match if faction is Amiable or better, and four 12106 - Fairy Dust 
-	elsif (plugin::takeItems(12106 => 4))) {
+	elsif (plugin::takeItems(12106 => 4)) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
 			quest::say("May the mighty power of Brell saturate this soil with his divinity.  Here you are, my noble friend.  You may have a pouch of the soil of Underfoot.");
