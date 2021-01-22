@@ -20,8 +20,8 @@ sub EVENT_ITEM {
 		quest::faction(281, 2);			#:: + Knights of Truth
 		#:: Grant a moderate amount of experience
 		quest::exp(2000);
-		#:: Spawn a 15193 - Eastern Plains of Karana >> #Guard_Elias, Grid 0, Guildwar 0, X, Y, Z, Heading
-		quest::unique_spawn2(15193, 135, 0, -5521, -1870, 3, 226);
+		#:: Spawn one and only one 15193 - Eastern Plains of Karana >> #Guard_Elias, on grid 135, no guildwar, at the specified coordinates
+		quest::unique_spawn(15193, 135, 0, -5521, -1870, 3, 226);
 	}
 	#:: Match a 18934 - Sealed Note, filename='LoveToMilea'
 	elsif (plugin::takeItems(18934 => 1)) {
