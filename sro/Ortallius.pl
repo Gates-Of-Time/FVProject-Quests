@@ -28,23 +28,23 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
-#::	#:: Match a 12348 - Gem of Stamina and a 12349 - Sparkling Sapphire
-#::	elsif (plugin::takeItems(12348 => 1, 12349 => 1)) {
-#::		quest::say("You serve the Burning Prince as I do. The Redeemed has instructed me to give you this reward upon completion of your test. Practice your arts and prepare yourself. Evil approaches our realm. Long live Ro!!");
-#::		#:: Give a 7041 - Burning Rapier
-#::		quest::summonitem(7041);
-#::		#:: Ding!
-#::		quest::ding();
-#::		#:: Set factions
-#::		quest::faction(5029,10);		#:: + Temple Of Sol Ro
-#::		quest::faction(416,-10);		#:: - Shadowed Men
-#::		#:: Grant a moderate amount of experience
-#::		quest::exp(1000);
-#::		#:: Create a hash for storing cash - 3750 to 4250cp
-#::		my %cash = plugin::RandomCash(3750,4250);
-#::		#:: Grant a random cash reward
-#::		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-#::	}
+	#:: Match a 12348 - Gem of Stamina and a 12349 - Sparkling Sapphire
+	elsif (plugin::takeItems(12348 => 1, 12349 => 1)) {
+		quest::say("You serve the Burning Prince as I do. The Redeemed has instructed me to give you this reward upon completion of your test. Practice your arts and prepare yourself. Evil approaches our realm. Long live Ro!!");
+		#:: Give a 7041 - Burning Rapier
+		quest::summonitem(7041);
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(5029,10);		#:: + Temple Of Sol Ro
+		quest::faction(416,-10);		#:: - Shadowed Men
+		#:: Grant a moderate amount of experience
+		quest::exp(1000);
+		#:: Create a hash for storing cash - 3750 to 4250cp
+		my %cash = plugin::RandomCash(3750,4250);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
