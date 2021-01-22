@@ -14,7 +14,7 @@ sub EVENT_SAY {
 		quest::say("Hail, $name. My name is Weleth Nagoh. In addition to my patrol, I am in charge of keeping the guardhouse [stocked with supplies]. I must get back to my duties. Farewell.");
 	}
 	elsif ($text=~/supplies/i) {
-		qeust::say("I must keep the guardhouses here stocked with arrows, rations and water. That reminds me.. I still have to return that blasted [crate].");
+		quest::say("I must keep the guardhouses here stocked with arrows, rations and water. That reminds me.. I still have to return that blasted [crate].");
 	}
 	elsif ($text=~/duties/i) {
 		quest::say("I must keep the guardhouses here stocked with arrows, rations and water. That reminds me.. I still have to return that blasted [crate].");
