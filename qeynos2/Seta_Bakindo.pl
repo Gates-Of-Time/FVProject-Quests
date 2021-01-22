@@ -57,31 +57,33 @@ sub EVENT_SAY {
 #::		quest::say("Konem Matse is my friend and mentor, he resides in Qeynos Hills providing security for the Sayers there. Lately though I have heard reports of guards demanding he pay them tax or else. This tax they speak of does not exist. I need you to go to the hills and help Konem. Rid the lands of these corrupt guards and bring me their heads as proof. I will also need 1 High Quality Gnoll Fur for a tailoring project I have been working on. Return to me with these items and you will be rewarded for your troubles.");
 #::	}
 	elsif ($text=~/tomer instogle/i) {
-		quest::say("Oh, Tomer? We haven't heard from him in days, I'm really starting to worry. . . We need to have someone go [find him].");
+		if ($text=~/rescued|found/i) {
+			#:: Data bucket to verify quest has been started appropriately
+			$key = $client->CharacterID() . "-tomer-found";
+			#:: Match if the key exists
+			if (quest::get_data($key)) {
+				quest::say("Great work $name, we thought that was the last we'd seen of young Tomer.");
+				#:: Delete the data bucket
+				$key = $client->CharacterID() . "-tomer-found";
+				quest::delete_data($key);
+				#:: Data bucket to verify quest has progressed appropriately
+				$key = $client->CharacterID() . "-tomer-rescued";
+				#:: Set a data bucket
+				quest::set_data($key, 1);
+				#:: Send a signal "1" to North Qeynos >> Tomer_Instogle (2030) with no delay
+				quest::signalwith(2030, 1, 0);
+			}
+		}
+		else {
+			quest::say("Oh, Tomer? We haven't heard from him in days, I'm really starting to worry. . . We need to have someone go [find him].");
+		}
 	}
-	elsif($text=~/find him/i) {
+	elsif ($text=~/find him/i) {
 		quest::say("One of our clan brothers has not reported back in over three days. He was sent to help defend the Qeynos Gates, and we haven't heard from him since. We need you to find him, if he is still alive. Tell him that Seta has sent you to find him, and escort him back to our guild. Good luck.");
 		#:: Data bucket to verify quest has been started appropriately
 		$key = $client->CharacterID() . "-tomer-find";
 		#:: Set a data bucket, quest started
 		quest::set_data($key, 1);
-	}
-	elsif (($text=~/i have rescued tomer instogle/i) or ($text=~/i found tomer/i)) {
-		#:: Data bucket to verify quest has been started appropriately
-		$key = $client->CharacterID() . "-tomer-found";
-		#:: Match if the key exists
-		if (quest::get_data($key)) {
-			quest::say("Great work $name, we thought that was the last we'd seen of young Tomer.");
-			#:: Delete the data bucket
-			$key = $client->CharacterID() . "-tomer-found";
-			quest::delete_data($key);
-			#:: Data bucket to verify quest has progressed appropriately
-			$key = $client->CharacterID() . "-tomer-rescued";
-			#:: Set a data bucket
-			quest::set_data($key, 1);
-			#:: Send a signal "1" to North Qeynos >> Tomer_Instogle (2030) with no delay
-			quest::signalwith(2030, 1, 0);
-		}
 	}
 }
 
