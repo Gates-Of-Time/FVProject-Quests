@@ -3,7 +3,7 @@ sub EVENT_SAY {
 		quest::say("Do you know who I am?!! I am the Commander of the Qeynos Guard!! Do you think I trod through these sewers to speak with you? If so then you are quite mistaken.");
 	}
 	elsif ($text=~/bloodsabers/i) {
-		quest::say("I have heard whispers of such a group. I believe the Priests of Life spoke the name once. No.. I think it was the Knights of Thunder. Bah!! I cannot remember.");
+		quest::say("I have heard whispers of such a group. I believe the [Priests of Life] spoke the name once. No.. I think it was the [Knights of Thunder]. Bah!! I cannot remember.");
 	}
 	elsif ($text=~/priests of life/i) {
 		quest::say("The awe inspiring Temple of Life in North Qeynos is home to the paladins and clerics called the Priest of Life. This temple draws many visitors from far and wide. The resident healer of Qeynos is a member of this temple. They have been assisting us with the extermination of the recent rise of rabid animals within Qeynos Hills.");
