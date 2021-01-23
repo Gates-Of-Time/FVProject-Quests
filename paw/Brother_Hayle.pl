@@ -41,6 +41,8 @@ sub EVENT_ITEM {
 		quest::faction(219, 3);				#:: + Antonious Bayle
 		#:: Grant a small amount of experience
 		quest::exp(200);
+		#:: Depop with spawn timer active
+        	quest::depop_withtimer();
 	}
 	#:: Match a 18936 - Sealed Note
 	elsif (plugin::takeItems(18936 => 1)) {
