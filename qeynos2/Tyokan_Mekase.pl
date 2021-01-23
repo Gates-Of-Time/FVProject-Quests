@@ -34,11 +34,17 @@ sub EVENT_ITEM {
 	}
 	#:: Match a 13306 - T.O.L. 2020
 	elsif (plugin::takeItems(13306 => 1)) {
-		quest::say("Oh, turning in your key, are you? Very well, defender of life. Here you are.");
+		#:: Match if faction is Indifferent or better
+		if ($faction <= 4) {
+			quest::say("Oh, turning in your key, are you? Very well, defender of life. Here you are.");
+		}
 		#:: Give a random reward: 15126 - Spell: Inspire Fear or 15248 - Spell: Ward Summoned
 		quest::summonitem(quest::ChooseRandom(15126, 15126, 15248));
 		#:: Ding!
 		quest::ding();
+		else {
+			quest::say("Your mere presence disgusts me. Please remove yourself from my sight. Until you change yourself and your ways, you are unwelcome in the Temple of Life.");
+		}
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
