@@ -1,4 +1,4 @@
-]sub EVENT_SAY {
+sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("I am Vilissia, chosen of Solusek Ro.  I am a practitioner in the Wizardly arts, and keeper of lore for the [Runescale Cloak], [Tishans Kilt] and the [Acumen Mask].");
 	}
