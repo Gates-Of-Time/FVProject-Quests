@@ -15,6 +15,8 @@ sub EVENT_ITEM {
 		quest::summonitem(14015);
 		#:: Ding!
 		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(1000);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
