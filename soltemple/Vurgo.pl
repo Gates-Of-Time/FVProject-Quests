@@ -44,7 +44,7 @@ sub EVENT_ITEM {
 		quest::exp(1000);
 	}
 	#:: Match a 10529 - Shadowed Book
-	elsif (plugin::takeItems(10529 => 1) {
+	elsif (plugin::takeItems(10529 => 1)) {
 		quest::say("A shadowed book! Well done! The more banished shadowed men the better. As the items of the shadowed men tend to disappear, I have given you a note to remind me that you have indeed supplied me with a book. Give me the note with the following items, and I will scribe for you Words of Darkness: a book of darkness from the Erudites in the tower by Lake Rathe, a book of frost from the icy goblin in Permafrost Keep and 300 golden coins. Bring me these items, and I will scribe for you the Words of Darkness.");
 		#:: Give a 18945 - Note
 		quest::summonitem(18945);
