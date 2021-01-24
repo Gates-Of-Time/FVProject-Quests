@@ -8,8 +8,8 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Match two 14017 - Snake Venom Sac, a 13901 - Crow's Special Brew, and 20 gold
-	if (plugin::takeItemsCoin(0, 0, 20, 0, 14017 => 2, 13901 => 1)) {
+	#:: Match two 14018 - Spider Venom Sac, a 14018 - Crow's Special Brew, and 20 gold
+	if (plugin::takeItemsCoin(0, 0, 20, 0, 14018 => 2, 13901 => 1)) {
 		quest::say("Here.  I could care less what you do with this.  Hopefully you'll lay some on the Circle of Unseen Hands.");
 		#:: Give a 14015 - Spider Venom
 		quest::summonitem(14015);
