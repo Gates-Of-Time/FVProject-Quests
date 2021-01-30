@@ -1,5 +1,5 @@
 sub EVENT_SPAWN {
-	quest::say("You cannot escape the claws of Splitpaw! <BARK!>");
+	quest::shout("You cannot escape the claws of Splitpaw! <BARK!>");
 	#:: Send a signal '1' to The Western Plains of Karana >> Yiz_Pon (12167) with no delay
 	quest::signalwith(12167, 1, 0);
 }
