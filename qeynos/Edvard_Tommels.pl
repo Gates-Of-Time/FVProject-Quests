@@ -23,8 +23,8 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Set faction
 		quest::faction(121, 10);		#:: + Qeynos Citizens
-		#:: Grant a small amount of experience
-		quest::exp(100);
+		#:: Grant a moderate amount of experience
+		quest::exp(5000);
 		#:: Create a hash for storing cash - 4000 to 15000cp
 		my %cash = plugin::RandomCash(4000,15000);
 		#:: Grant a random cash reward
@@ -45,8 +45,8 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Set faction
 		quest::faction(121, 2);			#:: + Qeynos Citizens
-		#:: Grant a small amount of experience
-		quest::exp(100);
+		#:: Grant a moderate amount of experience
+		quest::exp(5000);
 		#:: Create a hash for storing cash - 950 to 3500cp
 		my %cash = plugin::RandomCash(950,3500);
 		#:: Grant a random cash reward
