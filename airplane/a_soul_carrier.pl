@@ -5,7 +5,7 @@ my $mob2;
 my $mobnpc1;
 my $mobnpc2;
 
-sub EVENT_DEATH_COMPLETE {
+sub EVENT_DEATH {
 	#:: Send a signal '2' to The Plane of Sky >> Key_Master (71056) after a 200 second delay (3.33 min)
   	quest::signalwith(71056, 2, 200000);
 	#:: Spawn a The Plane of Sky >> an_essence_carrier (71070)
