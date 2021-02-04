@@ -52,7 +52,7 @@ sub EVENT_SAY {
 		elsif ($text=~/llaw eht htiw eno I ma/i) {
 			quest::say("Kcul doog! Ouy rof ydaer si erips eht fo retsis eht won, sdik boj doog.");
 			#:: Spawn The Plane of Sky >> #Sister_of_the_Spire (71076) 
-			quest::spawn(71076, 0, 0, -927.4, -1033.2, 1092.5, 66.1);
+			quest::spawn2(71076, 0, 0, -927.4, -1033.2, 1092.5, 66.1);
 		}
 	}
 	elsif (quest::get_data($key) eq "7") {		#:: Island 7
