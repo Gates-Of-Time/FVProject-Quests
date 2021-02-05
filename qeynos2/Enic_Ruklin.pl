@@ -16,8 +16,8 @@ sub EVENT_SAY {
 	}
 	elsif (($text=~/donation to the temple of thunder/i) || ($text=~/donate to the temple of thunder/i)) {
 		quest::say("I would be glad to help you out. The Knights of Thunder are a respected order.");
-		#:: Give a 13292 - Donation
-		quest::summonitem(13292);
+		#:: Give a 13293 - Donation
+		quest::summonitem(13293);
 	}
 }
 
