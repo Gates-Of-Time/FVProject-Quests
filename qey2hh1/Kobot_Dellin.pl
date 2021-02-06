@@ -1,16 +1,14 @@
 sub EVENT_SPAWN {
-	#:: Running true (run)
+	#:: Set running true (run)
 	quest::SetRunning(1);
 }
 
 sub EVENT_AGGRO {
-
-quest::say("In the name of the Rainkeeper, I strike at thee!!");
+	quest::say("In the name of the Rainkeeper, I strike at thee!!");
 }
 
 sub EVENT_DEATH_COMPLETE {
-
-quest::say("You will meet your own doom soon enough, my friend.. my influence with the Knights of Thunder is great, and they will not rest until I am avenged!");
+	quest::say("You will meet your own doom soon enough, my friend.. my influence with the Knights of Thunder is great, and they will not rest until I am avenged!");
 }
 
 sub EVENT_SAY {
