@@ -28,8 +28,8 @@ sub EVENT_ITEM {
 	#:: Match five hundred fifty gold pieces
 	if (plugin::takeCoin(0, 0, 550, 0)) {
 		quest::say("Here is your prize - a lambent fire opal.");
-		#:: Give a 10128 - Lambent Fire Opal
-		quest::summonitem(10128);
+		#:: Give a 10031 - Fire Opal
+		quest::summonitem(10031);
 		#:: Ding
 		quest::ding();
 		#:: Set factions
