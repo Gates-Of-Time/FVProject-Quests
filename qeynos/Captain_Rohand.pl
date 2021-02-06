@@ -72,8 +72,8 @@ sub EVENT_ITEM {
 		quest::faction(219, 3);			#:: + Antonius Bayle
 		quest::faction(229, 2);			#:: + Coalition of Tradefolk
 		quest::faction(262, 5);			#:: + Guards of Qeynos
-		#:: Grant a moderate amount of experience
-		quest::exp(8000);
+		#:: Grant a small amount of experience
+		quest::exp(1000);
 		#:: Set item count to 1
 		$ItemCount = 1;
 	}
