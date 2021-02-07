@@ -99,6 +99,8 @@ sub EVENT_ITEM {
 		quest::say("Good work, pal. Here's a little dough to spend, just don't spend it at any other bar.");
 		#:: Ding!
 		quest::ding();
+		#:: Give one 13130 - Black Burrow Stout
+		quest::summonitem(13130,1);
 		#:: Set factions
 		quest::faction(345, 30);	#:: + Karana Residents
 		quest::faction(262, 7);		#:: + Guards of Qeynos
