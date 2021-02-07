@@ -41,7 +41,7 @@ sub EVENT_SAY {
 			quest::say("So, you think you can be of assistance to me? Let me test your skill. Travel to Erudin and seek out the beasts which are called Kobolds. I have never seen one and would very much like to have four Kobold Hides with which to make a rug. To do so would earn you some barely used rawhide armor - maybe even a shield.");
 		}
 	}
-	elsif ($text=~/dangrous task/i) {
+	elsif ($text=~/dangerous task/i) {
 		#:: Match if faction is Indifferent or worse
 		if ($faction > 4) {
 			quest::say("The Steel Warriors have no cause to dislike you, but you have yet to truly prove your worth to this guild.");
@@ -91,7 +91,7 @@ sub EVENT_ITEM {
 			quest::summonitem(13424);
 		}	
 		else {
-			quest::say("Incredible!! Such grand tones. It shall make a fine rug. You have shown me that you cannot always judge a book by its cover. You are quite skilled. Would you like to perform a [dangrous task] for me?");
+			quest::say("Incredible!! Such grand tones. It shall make a fine rug. You have shown me that you cannot always judge a book by its cover. You are quite skilled. Would you like to perform a [dangerous task] for me?");
 			#:: Give a random reward: 2147 - Raw-hide Leggings, 2140 - Raw-hide Tunic, 9002 - Round Shield
 			quest::summonitem(quest::ChooseRandom(2147, 2140, 2147, 2140, 9002));
 			#:: Ding!
