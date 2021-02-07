@@ -3,8 +3,8 @@ sub EVENT_SAY {
 		quest::say("Hail, $name.  I'm Kazlo Naedra of the Order of Three.  We always seem to be running out of [supplies] around here, which is, of course, very distracting to our studies.");
 	}
 	elsif ($text=~/supplies/i) {
-		#:: Match if faction is Indifferent or better
-		if ($faction <= 5) {
+		#:: Match if faction is amiable or better
+		if ($faction <= 4) {
 			quest::say("Yes, we're almost out of [blank scroll sheets]. Gahlith will be very upset, unless I can replenish our inventory soon.");
 		}
 		else {
@@ -12,8 +12,8 @@ sub EVENT_SAY {
 		}
 	}
 	elsif ($text=~/blank scroll sheets/i) {
-		#:: Match if faction is Indifferent or better
-		if ($faction <= 5) {
+		#:: Match if faction is amiable or better
+		if ($faction <= 4) {
 			quest::say("These blank sheets seem harder to find every month. All the local merchants are out of them. Hopefully, one of the merchants out in Surefall will have some.");
 		}
 		else {
