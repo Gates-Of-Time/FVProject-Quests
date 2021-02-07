@@ -38,7 +38,7 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(10070 => 4)) {
 		quest::say("Here you go then. Don't go tellin' no Guards where that came from, I would hate to rid myself of a good paying customer.");
 		#:: Give four 13107 - Black Burrow Stout
-		quest::summonitem(13107,4);
+		quest::summonitem(13107, 4);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
@@ -52,8 +52,8 @@ sub EVENT_ITEM {
 	#:: Match three 10070 - Moonstone
 	elsif (plugin::takeItems(10070 => 3)) {
 		quest::say("Here you go then. Don't go tellin' no Guards where that came from, I would hate to rid myself of a good paying customer.");
-		#:: Give four 13107 - Black Burrow Stout
-		quest::summonitem(13107,3);
+		#:: Give three 13107 - Black Burrow Stout
+		quest::summonitem(13107, 3);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
@@ -67,8 +67,8 @@ sub EVENT_ITEM {
 	#:: Match two 10070 - Moonstone
 	elsif (plugin::takeItems(10070 => 2)) {
 		quest::say("Here you go then. Don't go tellin' no Guards where that came from, I would hate to rid myself of a good paying customer.");
-		#:: Give four 13107 - Black Burrow Stout
-		quest::summonitem(13107,2);
+		#:: Give two 13107 - Black Burrow Stout
+		quest::summonitem(13107, 2);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
@@ -82,8 +82,8 @@ sub EVENT_ITEM {
 	#:: Match one 10070 - Moonstone
 	elsif (plugin::takeItems(10070 => 1)) {
 		quest::say("Here you go then. Don't go tellin' no Guards where that came from, I would hate to rid myself of a good paying customer.");
-		#:: Give four 13107 - Black Burrow Stout
-		quest::summonitem(13107,1);
+		#:: Give one 13107 - Black Burrow Stout
+		quest::summonitem(13107, 1);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
@@ -99,6 +99,8 @@ sub EVENT_ITEM {
 		quest::say("Good work, pal. Here's a little dough to spend, just don't spend it at any other bar.");
 		#:: Ding!
 		quest::ding();
+		#:: Give one 13107 - Black Burrow Stout
+		quest::summonitem(13107, 1);
 		#:: Set factions
 		quest::faction(345, 30);	#:: + Karana Residents
 		quest::faction(262, 7);		#:: + Guards of Qeynos
