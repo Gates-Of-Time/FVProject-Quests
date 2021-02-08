@@ -120,8 +120,8 @@ sub EVENT_ITEM {
 		}	
 		else {
 			quest::say("The map!! It is all blurred. The ink has run. I shall never be able to decipher it now. Still, I owe you for completion of your mission. May these be of assistance. It is always good for a warrior to be well supplied.");
-			#:: Give a 5082 - Cast-Iron Long Sword
-			quest::summonitem(5082);
+			#:: Give a random reward: 5082 - Cast-Iron Long Sword, 5024 - Rusty Halberd, 9001 - Buckler, 13009 Bandages
+			quest::summonitem(quest::ChooseRandom(5082, 5024, 9001,13009));
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
