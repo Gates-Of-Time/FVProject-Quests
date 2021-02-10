@@ -8,7 +8,8 @@ sub EVENT_TIMER {
 	if ($timer eq "depop") {
 		# Stop timer 'depop' from looping
 		quest::stoptimer("depop");
-		quest::depop(); 
+		#:: Depop with spawn timer active
+		quest::depop_withtimer();
 	}
 }
 
