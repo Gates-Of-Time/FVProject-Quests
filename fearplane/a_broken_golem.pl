@@ -4,7 +4,7 @@ sub EVENT_ITEM {
 		quest::say("A $class like you always brings out the worst in me.");
 		#:: Spawn a The Plane of Fear >> an_enraged_golem (72106) at the current location
 		quest::spawn2(72106, 0, 0, $x, $y, $z, $h);
-		quest::depop();
+		quest::depop_withtimer();
 	}
 }
 
