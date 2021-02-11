@@ -28,6 +28,11 @@ sub EVENT_ENTERZONE {
 		quest::playersize(5);
 		quest::playertexture(2);
 	}
+	if ($name eq "Sergeant") {
+		quest::playerrace(44);
+		quest::playersize(6);
+		quest::playertexture(1);
+	}
 }
 
 sub EVENT_CONNECT {
