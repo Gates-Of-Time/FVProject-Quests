@@ -32,6 +32,7 @@ sub EVENT_ENTERZONE {
 		quest::playerrace(44);
 		quest::playersize(6);
 		quest::playertexture(1);
+		quest::playerfeature("helm", 1);
 	}
 }
 
