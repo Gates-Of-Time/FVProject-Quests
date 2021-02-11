@@ -51,8 +51,8 @@ sub EVENT_ITEM {
 	#:: Match a 18805 - Sealed Letter
 	elsif (plugin::takeItems(18805 => 1)) {
 		quest::say("This is terrible news. It is good you did not find your grave in the catacombs. You completed your mission regardless of the odds of survival. The temple thanks you. We shall still require your service, Knight of Thunder. Events have transpired which put all agents of righteousness in danger. We cannot explain all as yet. Take this note to Freeport. You will give it to Eestyana Naestra at the Hall of Truth. Beware, now. The Shrine of Bertoxxulous now knows of your allegiance. Give me any other item you may have found on Drosco's body.");
-		#:: Give a 18822 - Note
-		quest::summonitem(18822);
+		#:: Give a 18816 - Note
+		quest::summonitem(18816);
 		#:: "Sometimes" give a 6357 - Thunder Staff
 		#:: Create a scalar variable to store a random number 1-5
 		my $randomChance = quest::ChooseRandom(1,2,3,4,5);
