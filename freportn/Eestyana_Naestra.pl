@@ -8,8 +8,24 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Turn in for 18822 - A Note
-	if (plugin::takeItems(18822 => 1 )) {
+	#:: Match a 18735 - Tattered Note
+	if (plugin::takeItems(18735 => 1)) {
+		quest::say("The Truthbringer welcomes you into his life. Here is the tunic of Marr. Wear it with pride and be sure to conduct yourself with valor. Once you are ready to begin your training please make sure that you see Salinsa Delfdosan, she can assist you in developing your hunting and gathering skills. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks.");
+		#:: Give a 13554 - Faded Purple Tunic*
+		quest::summonitem(13554);
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(281, 100); 	#:: + Knights of Truth
+		quest::faction(271, -15); 	#:: - Dismal Rage
+		quest::faction(330, -15); 	#:: - Freeport Militia
+		quest::faction(362, 20); 	#:: + Priests of Marr
+		quest::faction(311, 10); 	#:: + Steel Warriors
+		#:: Grant a small amount of experience
+		quest::exp(100);
+	}
+	#:: Match a 18822 - A Note
+	elsif (plugin::takeItems(18822 => 1 )) {
 		quest::say("You must be the young member of the Hall of Truth who was sent by Theron. I am glad to see you avoided any interference. Please take this as a reward for your service.");
 		#:: Give item 9985 - Spell: Courage*
 		quest::summonitem(9985);
