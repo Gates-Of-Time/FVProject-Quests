@@ -24,8 +24,8 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
-	#:: Match a 18822 - A Note
-	elsif (plugin::takeItems(18822 => 1 )) {
+	#:: Match a 18816 - A Note
+	elsif (plugin::takeItems(18816 => 1 )) {
 		quest::say("You must be the young member of the Hall of Truth who was sent by Theron. I am glad to see you avoided any interference. Please take this as a reward for your service.");
 		#:: Give item 9985 - Spell: Courage*
 		quest::summonitem(9985);
@@ -44,8 +44,8 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
-	#:: Turn in for 18804 - A Tattered Note
-	elsif (plugin::takeItems(18804 => 1 )) {
+	#:: Match a 18822 - A Note
+	elsif (plugin::takeItems(18822 => 1 )) {
 		quest::say("Thank you, defender of Karana! We have heard rumors of the followers of Bertoxxulous gaining knowledge of our knight who infiltrated the ranks of the [Militia]. They would have tried to sell the information to the Militia. We will inform our knight immediately. As for you, here is a donation to your journey's expenses. Stay clear of the Freeport Militia. There is no doubt they have learned of your alliance with us.");
 		#:: Give random reward: 6016 - Rusty Morning Star or 13296 - Prayer Beads
 		quest::summonitem(quest::ChooseRandom(6016, 13296));
