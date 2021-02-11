@@ -30,6 +30,9 @@ sub EVENT_SAY {
 	elsif ($text=~/wish to assist/i) {
 		quest::say("Then we command you to assist the Qeynos Guard with the destruction of Blackburrow. Report to Captain Tillin of Qeynos Guard and speak with him of the [gnolls of Blackburrow]. I believe he is at the arena. My loyal friend, if you have earned your Thunder Staff, I urge you to [retrieve the Bayle list].");
 	}
+	elsif ($text=~/Drosco/i) {
+		quest::say("Have you knowledge of Sir Drosco? He is a Knight of Thunder and reports to Sir Wolten. He has been missing for quite some time. I believe Sir Wolten has begun a search for him.");
+	}	
 	elsif ($text=~/retrieve/i) {
 		#:: Match if faction is Warmly or better
 		if ($faction < 3) {
