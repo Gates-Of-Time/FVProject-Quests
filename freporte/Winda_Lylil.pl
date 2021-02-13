@@ -1,14 +1,13 @@
 sub EVENT_ITEM {
-
-#:: Match 1839 - Full Muffin Crate
-  if (plugin::takeItems(1839 => 1)) {
+	#:: Match 1839 - Full Muffin Crate
+	if (plugin::takeItems(1839 => 1)) {
 		quest::say("Ah yes! This is exactly what I am looking for, dear. Let me put these on the shelf right away. Here is some coin for your trouble. Perhaps we can do business again sometime.");
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
 		quest::faction(281, -1);		#:: - Knights of Truth
 		quest::faction(330, 2); 		#:: + Freeport Militia
-		quest::faction(336, 1);		  #:: + Coalition of Tradefolk Underground
+		quest::faction(336, 1);			#:: + Coalition of Tradefolk Underground
 		quest::faction(362, -1);		#:: - Priests of Marr
 		#:: Grant a moderate amount of experience
 		quest::exp(1000);
