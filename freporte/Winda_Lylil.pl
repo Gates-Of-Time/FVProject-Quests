@@ -1,3 +1,17 @@
+sub EVENT_SAY { 
+	if ($text=~/hail/i) {
+		quest::say("Hello $name, you wouldn't happen to be [a baker] yourself or maybe you know someone who bakes?"); 
+	}
+	elsif ($text=~/a baker/i) {
+		quest::say("Well good! Maybe you can help me restock. If you are a baker you could help me out by restocking my [muffin supply].");
+	}
+	elsif ($text=~/muffin supply/i) {
+		quest::say("Thanks, you're a pal. Take this crate and fill it with muffins, then seal it up and bring the Full Muffin Crate back to me. Don't go trying to pass off that store bought stuff on me either, I need fresh baked muffins. The ones in the stores are already too old and will get moldy too fast, so I don't want those.");
+		#:: Give a 17881 - Muffin Crate
+		quest::summonitem(17881);
+	}
+}
+
 sub EVENT_ITEM {
 	#:: Match 1839 - Full Muffin Crate
 	if (plugin::takeItems(1839 => 1)) {
