@@ -1,23 +1,23 @@
 sub EVENT_SAY { 
 	if ($text=~/hail/i) {
-		quest::say("Huh? Oh hi $name. Youse want to buy sumthin?  Or maybe youz a [baker]?"); 
+		quest::say("Huh? Oh hi $name. Youse want to buy sumthin?  Or maybe youz a [baker]?");
 	}
 	elsif ($text=~/baker/i) {
-		quest::say("Gud, you help me restock. You helps me out by restocking my [muffinz]. Or you go findz da guy wid da gud bread loaves and bring mez a [shipment of bread]."); 
+		quest::say("Gud, you help me restock. You helps me out by restocking my [muffinz]. Or you go findz da guy wid da gud bread loaves and bring mez a [shipment of bread].");
 	}
 	elsif ($text=~/muffin/i) {
-		quest::say("You take dis crate and fill it with muffinz, den seal it up and bring da full crate bak to me. Don't you tink you can go buy dat store stuff either, I wants fresh baked muffinz.  Da store ones too old and will gets moldy too fast, den I have to toss out.  Da make me very unhappy wid you!"); 
+		quest::say("You take dis crate and fill it with muffinz, den seal it up and bring da full crate bak to me. Don't you tink you can go buy dat store stuff either, I wants fresh baked muffinz.  Da store ones too old and will gets moldy too fast, den I have to toss out.  Da make me very unhappy wid you!");
 		#:: Give a 17881 - Muffin Crate
 		quest::summonitem(17881);
 	}
 	elsif ($text=~/shipment of bread/i) {
-		quest::say("You go to da south plains and find da Meadowgreen guy.  He is very gud baker and we wantz his bag of bread loaves.  You go tell him dat, get movin!"); 
+		quest::say("You go to da south plains and find da Meadowgreen guy.  He is very gud baker and we wantz his bag of bread loaves.  You go tell him dat, get movin!");
 	}
 }
 
 sub EVENT_ITEM {
 	#:: Match a 1839 - Full Muffin Crate
-	elsif (plugin::takeItems(1839 => 1)) {
+	if (plugin::takeItems(1839 => 1)) {
 		quest::say("MMmmm... Deez look like gud muffins. Here's sum money. Tanks. Now meez all stocked again.");
 		#:: Ding!
 		quest::ding();
