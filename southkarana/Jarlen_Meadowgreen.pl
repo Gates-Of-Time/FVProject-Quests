@@ -1,3 +1,12 @@
+sub EVENT_WAYPOINT_ARRIVE {
+	if ($wp == 1) {
+		quest::say("Mmmm can you smell that brothers, my latest batch of bread is just about done.");
+	}
+	elsif ($wp == 3) {
+		quest::say("Perfect tiiming as always, no burning bread for me. Ohh ow ow ow, that's hot!");
+	}
+}
+
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Hello there stranger! What brings you here?");
