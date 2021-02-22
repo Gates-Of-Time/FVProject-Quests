@@ -1,10 +1,3 @@
-sub EVENT_SPAWN {
-	if ($zonetime > 700 || $zonetime < 1899) {
-		#:: Depop with spawn timer active
-		quest::depop_withtimer();
-	}
-}
-
 sub EVENT_COMBAT {
 	#:: Match combat state 1 - entered combat
 	if ($combat_state == 1) {
@@ -19,15 +12,11 @@ sub EVENT_SAY {
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
-	if (($zonetime > 700 || $zonetime < 1899) && ($wp == 1)) {
-		#:: Depop with spawn timer active
-		quest::depop_withtimer();
-	}
 	if ($wp == 1) {
 		#:: Create a ground spawn 18802 - Sealed Letter at the current location
 		quest::creategroundobject(18802, $x, $y, $z, 0, 7200);
 	}
-	if (($wp == 5) || ($wp == 15) || ($wp == 35) || ($wp == 60) || ($wp == 66)) {
+	elsif (($wp == 5) || ($wp == 15) || ($wp == 35) || ($wp == 60) || ($wp == 66)) {
 		quest::say("Sragg is going to have my head for losing that letter.");
 	}
 }
