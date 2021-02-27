@@ -71,20 +71,42 @@ sub EVENT_CONNECT {
 			$dbh->disconnect();
 			quest::gmsay ("-----------------------------------------------------------------------------------------------", 257, 1);
 		}
+		if ($status < 255) {
+			quest::we (257, "-----------------------------------------------------------------------------------------------");
+			quest::we (11, "Everyone welcome < $name >, newly created < $class >!");
+			quest::we (257, "-----------------------------------------------------------------------------------------------");
+		}
 	}
 	#:: Post connection info
 	else {
-		quest::gmsay ("-----------------------------------------------------------------------------------------------", 14, 1);
-		quest::gmsay ("[GM:] New Connection [IP:".ConvertIP($client->GetIP())."]:", 11, 1);
-		if ($uguild_id > 0) {
-			my $guildname = quest::getguildnamebyid($uguild_id);
-			quest::gmsay("($ulevel $class) $name ($race) <$guildname> ZONE: $zonesn", 11, 1);
+		if ($status < 1) {
+			quest::gmsay ("-----------------------------------------------------------------------------------------------", 14, 1);
+			quest::gmsay ("[GM:] New Connection [IP:".ConvertIP($client->GetIP())."]:", 11, 1);
+			if ($uguild_id > 0) {
+				my $guildname = quest::getguildnamebyid($uguild_id);
+				quest::gmsay("($ulevel $class) $name ($race) <$guildname> ZONE: $zonesn", 11, 1);
+			}
+			else {
+				quest::gmsay("($ulevel $class) $name ($race) <UNGUILDED> ZONE: $zonesn", 11, 1);
+			}
+			quest::gmsay ("Account Name :: [".$client->AccountName()."] --- Status :: [".$status."] --- Client :: [".$clientverhash{$client->GetClientVersionBit()}."]", 11, 1);
+			quest::gmsay ("-----------------------------------------------------------------------------------------------", 14, 1);
+			quest::we (257, "-----------------------------------------------------------------------------------------------");
+			quest::we (11, " < $name >, the < $race $class > just got on!");
+			quest::we (257, "-----------------------------------------------------------------------------------------------");
 		}
 		else {
-			quest::gmsay("($ulevel $class) $name ($race) <UNGUILDED> ZONE: $zonesn", 11, 1);
+			quest::gmsay ("-----------------------------------------------------------------------------------------------", 14, 1);
+			quest::gmsay ("[GM:] New Connection [IP:".ConvertIP($client->GetIP())."]:", 11, 1);
+			if ($uguild_id > 0) {
+				my $guildname = quest::getguildnamebyid($uguild_id);
+				quest::gmsay("($ulevel $class) $name ($race) <$guildname> ZONE: $zonesn", 11, 1);
+			}
+			else {
+				quest::gmsay("($ulevel $class) $name ($race) <UNGUILDED> ZONE: $zonesn", 11, 1);
+			}
+			quest::gmsay ("Account Name :: [".$client->AccountName()."] --- Status :: [".$status."] --- Client :: [".$clientverhash{$client->GetClientVersionBit()}."]", 11, 1);
 		}
-		quest::gmsay ("Account Name :: [".$client->AccountName()."] --- Status :: [".$status."] --- Client :: [".$clientverhash{$client->GetClientVersionBit()}."]", 11, 1);
-		quest::gmsay ("-----------------------------------------------------------------------------------------------", 14, 1);
 	}
 }
 
