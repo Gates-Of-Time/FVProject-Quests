@@ -70,10 +70,8 @@ sub EVENT_CONNECT {
 			$sth->finish();
 			$dbh->disconnect();
 			quest::gmsay ("-----------------------------------------------------------------------------------------------", 257, 1);
-		}
-		if ($status < 255) {
 			quest::we (257, "-----------------------------------------------------------------------------------------------");
-			quest::we (11, "Everyone welcome < $name >, newly created < $class >!");
+			quest::we (11, "Everyone welcome < $name >, newly created $race $class!");
 			quest::we (257, "-----------------------------------------------------------------------------------------------");
 		}
 	}
@@ -92,7 +90,7 @@ sub EVENT_CONNECT {
 			quest::gmsay ("Account Name :: [".$client->AccountName()."] --- Status :: [".$status."] --- Client :: [".$clientverhash{$client->GetClientVersionBit()}."]", 11, 1);
 			quest::gmsay ("-----------------------------------------------------------------------------------------------", 14, 1);
 			quest::we (257, "-----------------------------------------------------------------------------------------------");
-			quest::we (11, " < $name >, the < $race $class > just got on!");
+			quest::we (11, "Say hello to < $name >, the $race $class, who just got on!");
 			quest::we (257, "-----------------------------------------------------------------------------------------------");
 		}
 		else {
