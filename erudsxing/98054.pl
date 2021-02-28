@@ -2,7 +2,7 @@
 
 sub EVENT_SPAWN {
 	#:: Create a proximity, 80 units across, 200 units tall, without proximity say
-	quest::set_proximity($x - 40, $x + 40, $y - 40, $y + 40, $z - 100, $z + 100, 0);
+	quest::set_proximity($x - 30, $x + 30, $y - 30, $y + 30, $z - 100, $z + 100, 0);
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
