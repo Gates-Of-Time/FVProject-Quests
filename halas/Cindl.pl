@@ -13,6 +13,12 @@ sub EVENT_SAY {
 		#:: Give a 12621 - Mammoth Hide Parchment
 		quest::summonitem(12621);
 	}
+	elsif ($text=~/shaman of justice/i) {
+		quest::say("The Shamans of Justice serve the will of the Tribunal. They search out those who defy the laws set by the Tribunal.");
+	}
+	elsif ($text=~/wolves of the north/i) {
+		quest::say("The Wolves of the North comprise of warriors. It is their sole purpose to defend the city and its visitors from all those that would harm it.  Becoming a warrior and thus a Wolve of the North hold the highest form of honor among the clans.");
+	}
 }
 	
 sub EVENT_ITEM {
