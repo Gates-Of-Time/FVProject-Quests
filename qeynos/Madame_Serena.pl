@@ -1,4 +1,7 @@
 sub EVENT_SAY {
+	if ($text=~/hail/i) {
+		quest::emote("'So you wish to find a path in whichh to start your destiny. Very well. Open your mind and give me your hand. Tell me the faith whichh you follow.");
+	}
 	if ($text=~/follow/i) {
 		if ($text=~/bertoxxulous/i) {
 			quest::say("The catacombs contain safe haven for you and I. It is our place to you I tell no lie.");
