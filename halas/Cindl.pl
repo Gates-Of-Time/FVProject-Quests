@@ -19,6 +19,9 @@ sub EVENT_SAY {
 	elsif ($text=~/wolves of the north/i) {
 		quest::say("The Wolves of the North comprise of warriors. It is their sole purpose to defend the city and its visitors from all those that would harm it.  Becoming a warrior and thus a Wolve of the North hold the highest form of honor among the clans.");
 	}
+	elsif ($text=~/rogues of the white rose/i) {
+		quest::say("The Rogues of the White Rose are loyal to the city of Halas.  For that, they are viewed with the same respect as all other residents.");
+	}
 }
 	
 sub EVENT_ITEM {
