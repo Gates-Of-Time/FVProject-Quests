@@ -11,7 +11,7 @@ sub EVENT_SAY {
 	elsif ($text=~/jewels/i) {
 		quest::say("I require three jewels; a Bloodstone, a Moonstone, and a Star Rose Quartz. Only then will I tell you what I know of the rare and powerful Paw of Opolla.");
 	}
-	elsif ($text=~/gynok moltor/i) {
+	elsif ($text=~/gynok/i) {
 		#:: Key a data bucket
 		$key = $npc->GetNPCTypeID() . "-turned-in";
 		#:: Match if data bucket exists
