@@ -10,8 +10,8 @@ sub EVENT_ITEM {
 		#:: Match if faction is Indifferent or better
 		if ($faction <= 5) {
 			quest::say("Ah.. Hello friend.. So, I see Daenor sent you.. Uh huh, ok.. Here's something that will be very useful for you. Practice this well, friend.. It will help protect you in this harsh world.");
-			#:: Give a 15288 - Spell: Minor Shielding
-			quest::summonitem(15288);
+			#:: Give a 15109 - Spell: Elemental Armor
+			quest::summonitem(15109);
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
