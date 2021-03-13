@@ -80,8 +80,8 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(200);
 	}
-	#:: Match one 13065 - Rat Foot, two 13071 - Rat Whiskers, and 2 gold
-	elsif (plugin::takeItemsCoin(0,0,2,0, 13065 => 1, 13071 => 2)) {
+	#:: Match one 13065 - Rat Foot, one 13071 - Rat Whiskers, one Honey Mead
+	elsif (plugin::takeItems(13065 => 1, 13071 => 1, 13033 => 1)) {
 		quest::say("Hey, look at this, some of my best work, if I do say so myself. Enjoy, and tell your friends");
 		#:: Give a 1053 - Rat's Foot Necklace
 		quest::summonitem(1053);
