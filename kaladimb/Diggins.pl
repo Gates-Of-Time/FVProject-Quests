@@ -70,18 +70,18 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(7007,7008,7009,7010));
 		#:: Ding!
 		quest::ding();
-		#:: Reward a moderate amount of experience
-		quest::exp(5000);
-		#:: Create a hash for storing cash - 35 to 45cp
-		my %cash = plugin::RandomCash(35,45);
-		#:: Grant a random cash reward
-		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
 		quest::faction(322, 10);	#:: + Miners Guild 628
-		quest::faction(223, -10);	#:: - Circle Of Unseen Hands
-		quest::faction(379, -10);	#:: - Butcherblock Bandits
-		quest::faction(241, 10);		#:: + Deeppockets
-		quest::faction(244, -10);	#:: - Ebon Mask
+		quest::faction(223, -1);	#:: - Circle Of Unseen Hands
+		quest::faction(379, -1);	#:: - Butcherblock Bandits
+		quest::faction(241, 1);		#:: + Deeppockets
+		quest::faction(244, -1);	#:: - Ebon Mask
+		#:: Grant a moderate amount of experience
+		quest::exp(5000);
+		#:: Create a hash for storing cash - 20 to 45cp
+		my %cash = plugin::RandomCash(20, 45);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Match if faction is Amiable or better and 12170 - Crytil's Tongue, 12172 - Keldyn's Tongue, 12174 - Barma's Tongue, 12178 - Rondo's Tongue
 	elsif (($faction <= 4) && (plugin::takeItems(12170 => 1, 12172 => 1, 12174 => 1, 12178 => 1))) {
@@ -90,16 +90,16 @@ sub EVENT_ITEM {
 		quest::summonitem(12166);
 		#:: Ding!
 		quest::ding();
-		#:: Reward a moderate amount of experience
-		quest::exp(5000);
 		#:: Set factions
 		quest::faction(322, 10);	#:: + Miners Guild 628
 		quest::faction(223, -10);	#:: - Circle Of Unseen Hands
 		quest::faction(379, -10);	#:: - Butcherblock Bandits
-		quest::faction(241, 10);		#:: + Deeppockets
+		quest::faction(241, 10);	#:: + Deeppockets
 		quest::faction(244, -10);	#:: - Ebon Mask
+		#:: Reward a moderate amount of experience
+		quest::exp(5000);
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Rogue');
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
