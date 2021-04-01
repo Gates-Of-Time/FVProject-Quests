@@ -1,7 +1,7 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		#:: Match if faction is dubious or better
-		if ($faction <= 7) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
 			quest::say("How is life treating you, bud? What are you doing around the mines? Either you are a [member of 628] or you are lost. If you are lost, I can't help you. I ain't no guide.");
 		}
 		else {
@@ -13,8 +13,8 @@ sub EVENT_SAY {
 		if ($faction <= 4) {
 			quest::say("It's my duty to assign [guild tasks] to all new members of Mining Guild 628.");
 		}
-		#:: Match if faction is Indifferent or better
-		elsif ($faction <= 5) {
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
 			quest::say("Don't take this personally, but I can't quite trust you with such matters. Maybe a few less Butcherblock bandits would prove your worth");
 		}
 		else {
@@ -26,8 +26,8 @@ sub EVENT_SAY {
 		if ($faction <= 4) {
 			quest::say("I see you are interested in helping out. Good! For starters, go into the surrounding territory of Kaladim and destroy all the goblins. We hear they sometimes carry necklaces of ornate design. 628 wants these Runnyeye warbeads. You bring me no fewer than four and I will pay you and maybe, just maybe, I may have an extra piercing weapon lying around which has your name on it.");
 		}
-		#:: Match if faction is Indifferent or better
-		elsif ($faction <= 5) {
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
 			quest::say("Don't take this personally, but I can't quite trust you with such matters. Maybe a few less Butcherblock bandits would prove your worth.");
 		}
 		else {
@@ -39,8 +39,8 @@ sub EVENT_SAY {
 		if ($faction <= 4) {
 			quest::say("So you want to earn a parrying pick? Consider it an honor that I am even speaking of this with you. The guild had these picks made just for us. It is a magic item used to fend off attacks. Before you can have one, you will have to do me a [great favor].");
 		}
-		#:: Match if faction is Indifferent or better
-		elsif ($faction <= 5) {
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
 			quest::say("Don't take this personally, but I can't quite trust you with such matters. Maybe a few less Butcherblock bandits would prove your worth.");
 		}
 		else {
@@ -52,8 +52,8 @@ sub EVENT_SAY {
 		if ($faction <= 4) {
 			quest::say("Mater has asked me to exterminate the dwarven family of Dunfire. They were once members of our guild. They left and now use their talents to aid the Butcherblock bandits. We will not allow them to speak of the skills we taught them. Go and rip out their tongues. Return the tongues of Crytil, Rondo, Keldyn, and Barma Dunfire and the parrying pick is yours.");
 		}
-		#:: Match if faction is Indifferent or better
-		elsif ($faction <= 5) {
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
 			quest::say("Don't take this personally, but I can't quite trust you with such matters. Maybe a few less Butcherblock bandits would prove your worth.");
 		}
 		else {
@@ -63,11 +63,11 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Match four 13931 - Runnyeye Warbeads
-	if (plugin::takeItems(13931 => 4)) {
+	#:: Match if faction is Amiable or better and four 13931 - Runnyeye Warbeads
+	if ((faction <= 4) && (plugin::takeItems(13931 => 4))) {
 		quest::say("Good work. We shall add these to the stash. Here is your reward, as promised. Be happy with it and continue your work. Maybe soon you shall be able to [earn a parrying pick].");
 		#:: Give a random reward: 7007 - Rusty Dagger, 7008 - Rusty Rapier, 7009 - Rusty Spear, 7010 - Rusty Shortened Spear
-		quest::summonitem(quest::ChooseRandom(7007,7008,7009,7010));
+		quest::summonitem(quest::ChooseRandom(7007, 7008, 7009, 7010));
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
@@ -91,11 +91,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(322, 10);	#:: + Miners Guild 628
-		quest::faction(223, -10);	#:: - Circle Of Unseen Hands
-		quest::faction(379, -10);	#:: - Butcherblock Bandits
-		quest::faction(241, 10);	#:: + Deeppockets
-		quest::faction(244, -10);	#:: - Ebon Mask
+		quest::faction(322, 50);	#:: + Miners Guild 628
+		quest::faction(223, -2);	#:: - Circle Of Unseen Hands
+		quest::faction(379, -2);	#:: - Butcherblock Bandits
+		quest::faction(241, 2);		#:: + Deeppockets
+		quest::faction(244, -7);	#:: - Ebon Mask
 		#:: Reward a moderate amount of experience
 		quest::exp(5000);
 	}
