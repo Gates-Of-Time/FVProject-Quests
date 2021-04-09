@@ -5,7 +5,7 @@ sub EVENT_SAY {
 	elsif ($text=~/blackburrow/i) {
 		quest::say("Blackburrow is north west of here. Bark! But I wouldn't go there $name. They don't like folks like you very much. I wish they were not so BARK! stubborn.");
 	}
-	elsif ($text=~/cleat/i) {
+	elsif ($text=~/cleet/i) {
 		quest::say("Cleet and Henina Miller are the only parents I have ever known. They found me hurt in their field and raised me as if I was one of their own children. I love them very much. I don't remember my true parents at all but I know they came from Blackburrow.");
 	}
 }
