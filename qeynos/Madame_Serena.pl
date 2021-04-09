@@ -67,6 +67,11 @@ sub EVENT_ITEM {
 			#:: Grant a small amount of experience
 			quest::exp(100);
 		}
+		else {
+			quest::say("You need to prove your dedication to our cause before I can discuss such matters with you.");
+			#:: Return coin
+			quest::givecash($copper, $silver, $gold, $platinum);
+		}
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
