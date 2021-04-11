@@ -29,6 +29,9 @@ sub EVENT_SAY {
 	elsif ($text=~/help/i) {
 		quest::say("Oh good! We can always use help gathering hay. Bring any hay bales you find in the fields to me and I will pay you for your time.");
 	}
+	elsif ($text=~/lempeck/i) {
+		quest::say("Lempeck is our farmhand. He has been feeling ill ever since that mangy wolf bit him the other day.");
+	}
 }
 
 sub EVENT_ITEM {
