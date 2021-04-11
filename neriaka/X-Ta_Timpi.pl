@@ -59,8 +59,8 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Match a 7036 - Charred Dagger, a 10019 - Bloodstone, and two 10517 - Dull Bone Chips
-	if (plugin::takeItems(7036 => 1, 10019 => 1, 10517 => 2)) {
+	#:: Match a 7036 - Charred Dagger, a 10019 - Bloodstone, and a 10517 - Dull Bone Chips
+	if (plugin::takeItems(7036 => 1, 10019 => 1, 10517 => 1)) {
 		quest::say("You have quested well - With spell and sword - Accept our thanks - And this reward.");
 		#:: Give a 11835 - Words of Detachment
 		quest::summonitem(11835);
