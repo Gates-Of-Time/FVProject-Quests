@@ -19,6 +19,9 @@ sub EVENT_SAY {
 	elsif ($text=~/potion/i) {
 		quest::say("I have been informed that the potions of the Temple of Life will help me. The potion is my last chance, that is what Astaed Wernor of the temple told me.");
 	}
+	elsif ($text=~/tiny|cleet|miller|furball|henina/i) {
+		quest::say("The... <cough>... Millers own this... <cough>... farm. Cleet Miller has been good to me and lets me take breaks when I am not feeling well. The rest of the family is kind to me as well.");
+	}
 }
 
 sub EVENT_ITEM {
