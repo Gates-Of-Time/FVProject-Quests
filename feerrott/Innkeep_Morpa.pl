@@ -13,7 +13,7 @@ sub EVENT_SAY {
 	elsif ($text=~/loaves of bread/i) {
 		quest::say("You go to Plains of Karana. You look for Jarlen Meadowgreen. You tells him dat you there to get Bread Loaves for us. Weeze pay you when you get back. Tanks."); 
 	}
-d}
+}
 
 sub EVENT_ITEM {
 	#:: Match a 1839 - Full Muffin Crate
