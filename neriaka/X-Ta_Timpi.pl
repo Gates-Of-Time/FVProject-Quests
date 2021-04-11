@@ -110,8 +110,8 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of level-based experience
 		$client->AddLevelBasedExp(2, 30);
  	}
-	#:: Match a 10521 - Globe of Fear, a 10021 - Star Rose Quartz, and two 10519 - Iced Bone Chips
-	elsif (plugin::takeItems(10521 => 1, 10021 => 1, 10519 => 2)) {
+	#:: Match a 10521 - Globe of Fear, a 10021 - Star Rose Quartz, and a 10519 - Iced Bone Chips
+	elsif (plugin::takeItems(10521 => 1, 10021 => 1, 10519 => 1)) {
 		quest::say("You have quested well - With spell and sword - Accept our thanks - And this reward.");
    		#:: Give a 11851 - Words of the Suffering
 		quest::summonitem(11851);
