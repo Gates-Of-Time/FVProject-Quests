@@ -61,6 +61,10 @@ sub EVENT_SAY {
 		if ($faction <= 5) {
 			quest::say("The great statue of Kazon Stormhammer was once encrusted with two great gems from the mines of Butcherblock. So big were they that it took the magic of the high elves to assist us in lifting them to the statue's face. In the year 2995, somehow, someone stole one of the eyes. We decided to keep the remaining eye in the vault. Now, even that has been stolen from us! Only the most trusted warriors may be involved in this [important Stormguard matter].");
 		}
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
+			quest::say("Prove yourself to the Stormguard and then we shall talk. Perhaps you may assist Master Canloe and show your worth to us.");
+		}
 		else {
 			quest::say("Your shifty eyes tell me that you are no ally of the Stormguard.");
 		}
@@ -70,6 +74,10 @@ sub EVENT_SAY {
 		if ($faction <= 5) {
 			quest::say("Doran resides on an island in the Ocean of Tears. The island is filled with beautiful maidens. I could think of worse places to live.");
 		}
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
+			quest::say("Prove yourself to the Stormguard and then we shall talk. Perhaps you may assist Master Canloe and show your worth to us.");
+		}
 		else {
 			quest::say("Your shifty eyes tell me that you are no ally of the Stormguard.");
 		}
@@ -78,6 +86,10 @@ sub EVENT_SAY {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
 			quest::say("Long ago, before King Kazon Stormhammer declared this to be Kaladim, these caverns were the lair of a great dragon. It was Jendl Mizebrite who happened upon his lair and fought him to the death. Jendl smashed the great dragon's skull with his trusty warhammer, but not before losing an arm. Thanks to his heroic deed, we now call these caves Kaladim.");
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
+			quest::say("Prove yourself to the Stormguard and then we shall talk. Perhaps you may assist Master Canloe and show your worth to us.");
 		}
 		else {
 			quest::say("Your shifty eyes tell me that you are no ally of the Stormguard.");
@@ -102,9 +114,9 @@ sub EVENT_ITEM {
 			#:: Grant a small amount of experience
 			quest::exp(500);
 			#:: Create a hash for storing cash - 25 to 35cp
-			my %cash = plugin::RandomCash(25,35);
+			my %cash = plugin::RandomCash(25, 35);
 			#:: Grant a random cash reward
-			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+			quest::givecash($cash{copper}, $cash{silver}, $cash{gold}, $cash{platinum});
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction == 5) {
@@ -142,9 +154,9 @@ sub EVENT_ITEM {
 			#:: Grant a small amount of experience
 			quest::exp(500);
 			#:: Create a hash for storing cash - 1 to 10cp
-			my %cash = plugin::RandomCash(1,10);
+			my %cash = plugin::RandomCash(1, 10);
 			#:: Grant a random cash reward
-			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+			quest::givecash($cash{copper}, $cash{silver}, $cash{gold}, $cash{platinum});
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction == 5) {
@@ -176,9 +188,9 @@ sub EVENT_ITEM {
 			#:: Grant a moderate amount of experience
 			quest::exp(5000);
 			#:: Create a hash for storing cash - 3000 to 4000cp
-			my %cash = plugin::RandomCash(3000,4000);
+			my %cash = plugin::RandomCash(3000, 4000);
 			#:: Grant a random cash reward
-			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+			quest::givecash($cash{copper}, $cash{silver}, $cash{gold}, $cash{platinum});
 		}
 		#:: Match if faction is Indifferent
 		elsif ($faction == 5) {
