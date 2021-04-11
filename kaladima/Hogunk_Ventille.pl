@@ -16,20 +16,20 @@ sub EVENT_ITEM {
 		quest::say("I shall display this in the guard hall. Let it be a warning to all those who dare to run from battle. As for you, that was splendid work, but next time, remember to wrap decapitated heads in something drip-proof. Those stains will never come out! Oh yes, and here is your reward.");
 		#:: Ding!
 		quest::ding();
-		#:: Grant a moderate amount of experience
-		quest::exp(5000);
 		#:: Reward a 5034 - Bronze Scimitar, 7013 - Bronze Rapier, 6024 - Bronze Morning Star, 5027 - Bronze Long Sword, 6019 - Bronze Mace
 		quest::summonitem(quest::ChooseRandom(5034,7013,6024,5027,6019));
+		#:: Set Factions
+		quest::faction(274, 2);			#:: + Kazon Stormhammer
+		quest::faction(312, 15);		#:: + Storm Guard
+		quest::faction(293, 2);			#:: + Miners Guild 249
+		quest::faction(5025, 3);		#:: + Kaladim Merchants
+		quest::faction(232, -3);		#:: - Craknek Warriors
 		#:: Create a hash for storing cash - 1600 to 1700cp
 		my %cash = plugin::RandomCash(1600,1700);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set Factions
-		quest::faction(274,5);		#:: + Kazon Stormhammer
-		quest::faction(312,5);		#:: + Storm Guard
-		quest::faction(293,5);		#:: + Miners Guild 249
-		quest::faction(5025,5);		#:: + Kaladim Merchants
-		quest::faction(232,-5);		#:: - Craknek Warriors
+		#:: Grant a moderate amount of experience
+		quest::exp(5000);
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Warrior');
 	#:: Return unused items
