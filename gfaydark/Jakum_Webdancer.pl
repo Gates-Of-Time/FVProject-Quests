@@ -11,11 +11,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(284, 10); 	#:: + League of Antonican Bards
-		quest::faction(281, 10); 	#:: + Knights of Truth
-		quest::faction(262, 10); 	#:: + Guards of Qeynos
-		quest::faction(304, -30); 	#:: - Ring of Scale
-		quest::faction(285, -30); 	#:: - Mayong Mistmoore
+		quest::faction(284, 5); 	#:: + League of Antonican Bards
+		quest::faction(281, 1); 	#:: + Knights of Truth
+		quest::faction(262, 1); 	#:: + Guards of Qeynos
+		quest::faction(304, -1); 	#:: - Ring of Scale
+		quest::faction(285, -1); 	#:: - Mayong Mistmoore
 		#:: Grant a small amount of experience
 		quest::exp(50);
 		#:: Create a hash for storing cash - 300 to 600cp
@@ -29,11 +29,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(284, 10); 	#:: + League of Antonican Bards
-		quest::faction(281, 10); 	#:: + Knights of Truth
-		quest::faction(262, 10); 	#:: + Guards of Qeynos
-		quest::faction(304, -30); 	#:: - Ring of Scale
-		quest::faction(285, -30); 	#:: - Mayong Mistmoore
+		quest::faction(284, 5); 	#:: + League of Antonican Bards
+		quest::faction(281, 1); 	#:: + Knights of Truth
+		quest::faction(262, 1); 	#:: + Guards of Qeynos
+		quest::faction(304, -1); 	#:: - Ring of Scale
+		quest::faction(285, -1); 	#:: - Mayong Mistmoore
 		#:: Grant a small amount of experience
 		quest::exp(80);
 		#:: Create a hash for storing cash - 600 to 900cp
