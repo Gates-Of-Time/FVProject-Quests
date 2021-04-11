@@ -1,3 +1,9 @@
+sub EVENT_SAY {
+	if ($text=~/bloodforge brigade/i) {
+		quest::say("The Bloodforge Brigade was created to take the place of the now defunct Irontoe Brigade. I hear they are a much stronger force to reckon with.");
+	}
+}
+
 sub EVENT_AGGRO {
 	my $entid1;
 	my $entid2;
