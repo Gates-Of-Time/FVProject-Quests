@@ -71,7 +71,7 @@ sub EVENT_ITEM {
 		quest::faction(303, 1);			#:: + Queen Cristanos Thex
 		quest::faction(278, -1);		#:: - King Naythox Thex
 		quest::faction(275, -1);		#:: - Keepers of the Art
-		quest::faction(245, -1):		#:: - Eldritch Collective
+		quest::faction(245, -1);		#:: - Eldritch Collective
 		quest::faction(1522, -20);		#:: - Primordial Malice
 		#:: Grant a small amount of level-based experience
 		$client->AddLevelBasedExp(2, 30);
@@ -88,7 +88,7 @@ sub EVENT_ITEM {
 		quest::faction(303, 1);			#:: + Queen Cristanos Thex
 		quest::faction(278, -1);		#:: - King Naythox Thex
 		quest::faction(275, -1);		#:: - Keepers of the Art
-		quest::faction(245, -1):		#:: - Eldritch Collective
+		quest::faction(245, -1);		#:: - Eldritch Collective
 		quest::faction(1522, -20);		#:: - Primordial Malice
 		#:: Grant a small amount of level-based experience
 		$client->AddLevelBasedExp(2, 30);
@@ -105,7 +105,7 @@ sub EVENT_ITEM {
 		quest::faction(303, 1);			#:: + Queen Cristanos Thex
 		quest::faction(278, -1);		#:: - King Naythox Thex
 		quest::faction(275, -1);		#:: - Keepers of the Art
-		quest::faction(245, -1):		#:: - Eldritch Collective
+		quest::faction(245, -1);		#:: - Eldritch Collective
 		quest::faction(1522, -20);		#:: - Primordial Malice
 		#:: Grant a small amount of level-based experience
 		$client->AddLevelBasedExp(2, 30);
@@ -122,7 +122,7 @@ sub EVENT_ITEM {
 		quest::faction(303, 1);			#:: + Queen Cristanos Thex
 		quest::faction(278, -1);		#:: - King Naythox Thex
 		quest::faction(275, -1);		#:: - Keepers of the Art
-		quest::faction(245, -1):		#:: - Eldritch Collective
+		quest::faction(245, -1);		#:: - Eldritch Collective
 		quest::faction(1522, -20);		#:: - Primordial Malice
 		#:: Grant a small amount of level-based experience
 		$client->AddLevelBasedExp(2, 30);
