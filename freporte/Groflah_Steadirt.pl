@@ -38,10 +38,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(229, 4); 		#:: + Coalition of Trade Folk
-		quest::faction(336, 4); 		#:: + Coalition of Tradefolk Underground
-		quest::faction(281, 4); 		#:: + Knights of Truth
-		quest::faction(291, 4); 		#:: + Merchants of Qeynos
+		quest::faction(229, 40); 		#:: + Coalition of Trade Folk
+		quest::faction(336, 40); 		#:: + Coalition of Tradefolk Underground
+		quest::faction(281, 40); 		#:: + Knights of Truth
+		quest::faction(291, 28); 		#:: + Merchants of Qeynos
 		#:: Grant a small amount of experience
 		quest::exp(60);
 		#:: Create a hash for storing cash - 200 to 400cp
@@ -55,10 +55,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(229, 3); 		#:: + Coalition of Trade Folk
-		quest::faction(336, 3); 		#:: + Coalition of Tradefolk Underground
-		quest::faction(281, 3); 		#:: + Knights of Truth
-		quest::faction(291, 3); 		#:: + Merchants of Qeynos
+		quest::faction(229, 30); 		#:: + Coalition of Trade Folk
+		quest::faction(336, 30); 		#:: + Coalition of Tradefolk Underground
+		quest::faction(281, 30); 		#:: + Knights of Truth
+		quest::faction(291, 21); 		#:: + Merchants of Qeynos
 		#:: Grant a small amount of experience
 		quest::exp(45);
 		#:: Create a hash for storing cash - 100 to 300cp
@@ -72,10 +72,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(229, 2); 		#:: + Coalition of Trade Folk
-		quest::faction(336, 2); 		#:: + Coalition of Tradefolk Underground
-		quest::faction(281, 2); 		#:: + Knights of Truth
-		quest::faction(291, 2); 		#:: + Merchants of Qeynos
+		quest::faction(229, 20); 		#:: + Coalition of Trade Folk
+		quest::faction(336, 20); 		#:: + Coalition of Tradefolk Underground
+		quest::faction(281, 20); 		#:: + Knights of Truth
+		quest::faction(291, 14); 		#:: + Merchants of Qeynos
 		#:: Grant a small amount of experience
 		quest::exp(30);
 		#:: Create a hash for storing cash - 50 to 200cp
@@ -89,10 +89,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(229, 1); 		#:: + Coalition of Trade Folk
-		quest::faction(336, 1); 		#:: + Coalition of Tradefolk Underground
-		quest::faction(281, 1); 		#:: + Knights of Truth
-		quest::faction(291, 1); 		#:: + Merchants of Qeynos
+		quest::faction(229, 10); 		#:: + Coalition of Trade Folk
+		quest::faction(336, 10); 		#:: + Coalition of Tradefolk Underground
+		quest::faction(281, 10); 		#:: + Knights of Truth
+		quest::faction(291, 7); 		#:: + Merchants of Qeynos
 		#:: Grant a small amount of experience
 		quest::exp(15);
 		#:: Create a hash for storing cash - 1 to 100cp
