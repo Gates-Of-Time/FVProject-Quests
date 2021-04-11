@@ -5,7 +5,7 @@ sub EVENT_SAY {
 	elsif ($text=~/tumpy tonic/i) {
 		quest::say("So you want a Tumpy Tonic? I can make you one. All I need is a flask of water and a kiola nut. The kiola nut can be bought in the Ocean of Tears island chain.");
 	}
-	elsif ($text=~/dumpy/i) {
+	elsif ($text=~/dumpy|crumpy|clumpy/i) {
 		quest::say("Sounds like you ran into one of my old pals from the Irontoe Brigade. I hope he is doing okay. Ah, those were the days...");
 	}
 	elsif ($text=~/trumpy/i) {
@@ -26,5 +26,4 @@ sub EVENT_ITEM {
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
-
-		quest::say("Sounds like you ran into one of my old pals from the Irontoe Brigade. I hope he is doing okay. Ah, those were the days...");
+}
