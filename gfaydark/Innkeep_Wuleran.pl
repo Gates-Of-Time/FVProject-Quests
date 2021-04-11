@@ -18,7 +18,7 @@ sub EVENT_SAY {
 	}
 }
 
-sub EVENT_ITEM
+sub EVENT_ITEM {
 	#:: Match 1839 - Full Muffin Crate
 	if (plugin::takeItems(1839 => 1)) {
 		quest::say("Oh, these look delicious! No doubt they were made with fresh fruit grown locally; I can tell by the aroma. You have quite a talent! Thank you so much. Here is your payment. This should be enough to last me for a little while.");
@@ -31,9 +31,9 @@ sub EVENT_ITEM
 		#:: Grant a small amount of level-based experience
 		$client->AddLevelBasedExp(4, 14);
 		#:: Create a hash for storing cash - 500 to 750cp
-		my %cash = plugin::RandomCash(500,750);
+		my %cash = plugin::RandomCash(500, 750);
 		#:: Grant a random cash reward
-		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		quest::givecash($cash{copper}, $cash{silver}, $cash{gold}, $cash{platinum});
 		#:: The Greater Faydark >> Innkeep_Wuleran (54146), restock 13014 - Muffin, quantity 20
 		quest::MerchantSetItem(54146, 13014, 20);
 	}
