@@ -32,6 +32,9 @@ sub EVENT_SAY {
 	elsif ($text=~/scarecrows/i) {
 		quest::say("The scarecrows?  We don't know where they came from - just showed up here one night.  We let them be and they don't seem to mind us none.  They keep strangers out of our fields, that's for sure.");
 	}
+	elsif ($text=~/lempeck/i) {
+		quest::say("Lempeck is our farmhand. He has been feeling ill ever since that mangy wolf bit him the other day.");
+	}
 }
 
 sub EVENT_ITEM {
