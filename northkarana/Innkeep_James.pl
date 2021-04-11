@@ -38,7 +38,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match a 1838 - Bag of Bread Loaves
 	elsif (plugin::takeItems(1838 => 1)) {
-		quest::say("You nice for getting bread loaves for us. You take some money. Weeze happy now dat weeze got more bread for sale. You maybe check back later if weeze run out of bread again");
+		quest::say("Ahhh, fresh baked bread! Thank you for making the trip, it's not far, but I can never seem to find the time. Here is a little coin for your travel expenses. You have my thanks.");
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
