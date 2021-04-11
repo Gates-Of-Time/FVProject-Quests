@@ -23,10 +23,10 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Set factions
 		quest::faction(291, 4);			#:: + Merchants of Qeynos
-		quest::faction(223, -2);		#:: - Circle of Unseen Hands
-		quest::faction(219, 2);			#:: + Antonius Bayle
-		quest::faction(229, 2);			#:: + Coalition of Tradefolk
-		quest::faction(262, 2);			#:: + Guards of Qeynos
+		quest::faction(223, -1);		#:: - Circle of Unseen Hands
+		quest::faction(219, 1);			#:: + Antonius Bayle
+		quest::faction(229, 1);			#:: + Coalition of Tradefolk
+		quest::faction(262, 1);			#:: + Guards of Qeynos
 		#:: Grant a small amount of experience, based on level
 		$client->AddLevelBasedExp(4, 14);
 		#:: Create a hash for storing cash - 1000 to 1500cp
