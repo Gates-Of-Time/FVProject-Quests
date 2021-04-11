@@ -51,7 +51,7 @@ sub EVENT_SAY {
 		quest::say("The answer to that question is held by another - Ask again of my sister..."); 
 	}
 	elsif ($text=~/words of requisition/i) {
-		quest::say("The answer to that question is held by another - Ask again of my sister..."); 
+		quest::say("From the Plane of Fear, bring an Eye of Fright and a Stone of the Wraith - From a merchant bring a pearl - Then Words of Requisition will to you be given."); 
 	}
 	elsif ($text=~/words of acquisition/i) {
 		quest::say("The answer to that question is held by another - Ask again of my sister..."); 
