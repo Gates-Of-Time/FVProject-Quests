@@ -2,8 +2,14 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Welcome to Irontoe's! The finest watering hole this side of Oggok! If you're looking for anything special and it ain't behind the bar, just ask. Maybe I can make it.");
 	}
-	if ($text=~/tumpy tonic/i) {
+	elsif ($text=~/tumpy tonic/i) {
 		quest::say("So you want a Tumpy Tonic? I can make you one. All I need is a flask of water and a kiola nut. The kiola nut can be bought in the Ocean of Tears island chain.");
+	}
+	elsif ($text=~/dumpy/i) {
+		quest::say("Sounds like you ran into one of my old pals from the Irontoe Brigade. I hope he is doing okay. Ah, those were the days...");
+	}
+	elsif ($text=~/trumpy/i) {
+		quest::say("Trumpy...I have not seen him in ages! We were both members of the Irontoe Brigade. Last I heard, he was drinking his life away in the great city of Qeynos.");
 	}
 }
 
@@ -19,5 +25,6 @@ sub EVENT_ITEM {
 		quest::exp(1000);
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
-}
+	plugin::returnUnusedItems();
+
+		quest::say("Sounds like you ran into one of my old pals from the Irontoe Brigade. I hope he is doing okay. Ah, those were the days...");
