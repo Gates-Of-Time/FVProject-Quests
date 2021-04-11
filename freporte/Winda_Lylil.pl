@@ -23,14 +23,31 @@ sub EVENT_ITEM {
 		quest::faction(330, 2); 		#:: + Freeport Militia
 		quest::faction(336, 1);			#:: + Coalition of Tradefolk Underground
 		quest::faction(362, -1);		#:: - Priests of Marr
-		#:: Grant a moderate amount of experience
-		quest::exp(1000);
+		#:: Grant a small amount of level-based experience
+		$client->AddLevelBasedExp(4, 14);
 		#:: Create a hash for storing cash - 500 to 750cp
 		my %cash = plugin::RandomCash(500,750);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: East Freeport >> Winda Lylil (10062), restock 13014 - Muffin, quantity 20
 		quest::MerchantSetItem(10062, 13014, 20);
+	}
+	#:: Match a 1838 - Bag of Bread Loaves
+	elsif (plugin::takeItems(1838 => 1)) {
+		quest::say("'Well now, what do we have here? You actually went out of your way to fetch bread for me? Thank ye so kindly. Please accept this payment for your service.");
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(281, -1);		#:: - Knights of Truth
+		quest::faction(330, 2); 		#:: + Freeport Militia
+		quest::faction(336, 1);			#:: + Coalition of Tradefolk Underground
+		quest::faction(362, -1);		#:: - Priests of Marr
+		#:: Create a hash for storing cash - 1300 to 2200cp
+		my %cash = plugin::RandomCash(1300, 2200);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper}, $cash{silver}, $cash{gold}, $cash{platinum});
+		#:: Grant a small amount of level-based experience
+		$client->AddLevelBasedExp(4, 14);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
