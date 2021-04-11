@@ -3,7 +3,7 @@ sub EVENT_SAY {
 		quest::say("Howdy, $name. Welcome to Miller's Farmstead. I am Cleet Miller. [Henina] and I own this here field o' crops. Look out if you go a-wandering in the field because there are a bunch of nasty scarecrows who call this farm home and don't like strangers.");
 	}
 	elsif ($text=~/henina/i) {
-		quest::say("Henina is my loving wife of twenty-five years. She is a beautiful woman and the proud mother of five great kids; Cleet Junior, Baobob, Tiny, Chanda, and [Furball]. Henina loves them all very much, even though most of them ain't our natural-born children.");
+		quest::say("Henina is my loving wife of twenty-five years. She is a beautiful woman and the proud mother of five great kids; [Cleet Junior], [Baobob], [Tiny], [Chanda], and [Furball]. Henina loves them all very much, even though most of them ain't our natural-born children.");
  	} 
 	elsif ($text=~/furball/i) {
 		quest::say("Furball was just a pup when we saw him tussling with a scarecrow in the fields one day. He was all torn up by the time Tiny chased the 'crow off him. He was hurt bad and couldn't git back to [Blackburrow] 'cause his pa would've killed him for returning a failure. Those [Sabertooths] have some weird and dangerous customs. Henina tended to his wounds and taught him how to behave proper. He gets feisty sometimes, but we love him just the same and he helps out quite a bit on the farm.");
