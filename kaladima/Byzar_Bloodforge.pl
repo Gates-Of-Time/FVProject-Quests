@@ -95,7 +95,7 @@ sub EVENT_ITEM {
 		if ($faction <= 6) {
 			quest::say("You finally have proven yourself a warrior, a slow one!!  Take this reward and ask for nothing else.  You should be proud to defend Kaladim and expect no reward.");
 			#:: Reward a 2113 - Small Tattered Skullcap, 2114 - Small Tattered Mask, 2115 - Small Tattered Gorget, 2117 - Small Tattered Shoulderpads, 2119 - Small Tattered Belt, 2121 - Small Tattered Wristbands, 2122 - Small Tattered Gloves
-			quest::summonitem(quest::ChooseRandom(2113,2114,2115,2117,2119,2121,2122));
+			quest::summonitem(quest::ChooseRandom(2113, 2114, 2115, 2117, 2119, 2121, 2122));
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
@@ -104,12 +104,12 @@ sub EVENT_ITEM {
 			quest::faction(293, 1);			#:: + Miners Guild 249
 			quest::faction(290, 1);			#:: + Merchants Of Kaladim
 			quest::faction(232, -1);		#:: - Craknek Warriors
-			#:: Grant a moderate amount of expierence
+			#:: Grant a large amount of expierence
 			quest::exp(10000);
 			#:: Create a hash for storing cash - 200 to 250cp
-			my %cash = plugin::RandomCash(200,250);
+			my %cash = plugin::RandomCash(200, 250);
 			#:: Grant a random cash reward
-			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+			quest::givecash($cash{copper}, $cash{silver}, $cash{gold}, $cash{platinum});
 		}
 		else {
 			quest::say("Your shifty eyes tell me that you are no ally of the Stormguard.");
@@ -129,7 +129,7 @@ sub EVENT_ITEM {
 		if ($faction <= 6) {
 			quest::say("I underestimated you.  You are truly a great warrior.  I reward you with a piece of my own Bloodforge armor.  You would be fine Bloodforge Brigade material!  How would you like to [take a little trip] in the name of the Bloodforge Brigade?");
 			#:: Reward a 3090 - Bloodforge Helm, 3091 - Bloodforge Mail, 3092 - Bloodforge Armplates, 3093 - Bloodforge Bracers, 3094 - Bloodforge Gauntlets, 3095 - Bloodforge Legplates, 3096 - Bloodforge Boots
-			quest::summonitem(quest::ChooseRandom(3090,3090,3090,3090,3090,3090,3091,3092,3093,3094,3095,3096));
+			quest::summonitem(quest::ChooseRandom(3090, 3090, 3090, 3090, 3090, 3090, 3091, 3092, 3093, 3094, 3095, 3096));
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
@@ -138,7 +138,7 @@ sub EVENT_ITEM {
 			quest::faction(293, 3);			#:: + Miners Guild 249
 			quest::faction(290, 5);			#:: + Merchants Of Kaladim
 			quest::faction(232, -5);		#:: - Craknek Warriors
-			#:: Grant a moderate amount of expierence
+			#:: Grant a large amount of expierence
 			quest::exp(10000);
 			#:: Create a hash for storing cash - 50 to 150cp
 			my %cash = plugin::RandomCash(50,150);
@@ -168,7 +168,7 @@ sub EVENT_ITEM {
 			quest::faction(293, 1);			#:: + Miners Guild 249
 			quest::faction(290, 1);			#:: + Merchants Of Kaladim
 			quest::faction(232, -1);		#:: - Craknek Warriors
-			#:: Grant a moderate amount of expierence
+			#:: Grant a large amount of expierence
 			quest::exp(10000);
 			#:: Create a hash for storing cash - 200 to 250cp
 			my %cash = plugin::RandomCash(200,250);
