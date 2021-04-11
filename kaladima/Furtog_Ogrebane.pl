@@ -1,11 +1,10 @@
 sub EVENT_SPAWN {
-	#:: Create a proximity, 100 units across
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Create a proximity, 100 units across, 20 units tall, without proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 10, $z + 10, 0);
 }
 
 sub EVENT_ENTER {
+	#:: Match a 18766 - Recruitment Letter
 	if (plugin::check_hasitem($client, 18766)) { 
 		$client->Message(15,"Furtog Ogrebane glances your way. 'Ah a new recruit! Oh, how I enjoy meeting new recruits! With my training one day you could be a powerful member of the Stormguard! Read the note in your inventory and then hand it to me when you wish to begin your training!");
 	}
@@ -67,13 +66,13 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factiions
-		quest::faction(312, 25);	#:: + Storm Guard
-		quest::faction(274, 25);	#:: + Kazon Stormhammer
-		quest::faction(293, 25);	#:: + Miners Guild 249
-		quest::faction(290, 25);	#:: + Merchants of Kaladim
-		quest::faction(232, -25);	#:: - Craknek Warriors
+		quest::faction(312, 50);	#:: + Storm Guard
+		quest::faction(274, 7);		#:: + Kazon Stormhammer
+		quest::faction(293, 7);		#:: + Miners Guild 249
+		quest::faction(290, 12);	#:: + Merchants of Kaladim
+		quest::faction(232, -12);	#:: - Craknek Warriors
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Warrior');
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
