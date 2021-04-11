@@ -48,11 +48,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(312,40);		#:: + Storm Guard
-		quest::faction(274,40);		#:: + Kazon Stormhammer
-		quest::faction(293,40);		#:: + Miners Guild 249
-		quest::faction(290,40);		#:: + Merchants of Kaladim
-		quest::faction(232,-120);	#:: - Craknek Warriors
+		quest::faction(312, 40);		#:: + Storm Guard
+		quest::faction(274, 4);			#:: + Kazon Stormhammer
+		quest::faction(293, 8);			#:: + Miners Guild 249
+		quest::faction(290, 4);			#:: + Merchants of Kaladim
+		quest::faction(232, -8);		#:: - Craknek Warriors
 		#:: Grant a moderate amount of experience
 		quest::exp(28000);
 		#:: Create a hash for storing cash - 200 to 250cp
@@ -72,11 +72,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(312,30);		#:: + Storm Guard
-		quest::faction(274,30);		#:: + Kazon Stormhammer
-		quest::faction(293,30);		#:: + Miners Guild 249
-		quest::faction(290,30);		#:: + Merchants of Kaladim
-		quest::faction(232,-90);	#:: - Craknek Warriors
+		quest::faction(312, 30);		#:: + Storm Guard
+		quest::faction(274, 3);			#:: + Kazon Stormhammer
+		quest::faction(293, 6);			#:: + Miners Guild 249
+		quest::faction(290, 3);			#:: + Merchants of Kaladim
+		quest::faction(232, -6);		#:: - Craknek Warriors
 		#:: Grant a moderate amount of experience
 		quest::exp(21000);
 		#:: Create a hash for storing cash - 140 to 190cp
@@ -95,11 +95,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(312,20);		#:: + Storm Guard
-		quest::faction(274,20);		#:: + Kazon Stormhammer
-		quest::faction(293,20);		#:: + Miners Guild 249
-		quest::faction(290,20);		#:: + Merchants of Kaladim
-		quest::faction(232,-60);	#:: - Craknek Warriors
+		quest::faction(312, 20);		#:: + Storm Guard
+		quest::faction(274, 2);			#:: + Kazon Stormhammer
+		quest::faction(293, 4);			#:: + Miners Guild 249
+		quest::faction(290, 2);			#:: + Merchants of Kaladim
+		quest::faction(232, -4);		#:: - Craknek Warriors
 		#:: Grant a moderate amount of experience
 		quest::exp(14000);
 		#:: Create a hash for storing cash - 100 to 140cp
@@ -117,11 +117,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(312,10);		#:: + Storm Guard
-		quest::faction(274,10);		#:: + Kazon Stormhammer
-		quest::faction(293,10);		#:: + Miners Guild 249
-		quest::faction(290,10);		#:: + Merchants of Kaladim
-		quest::faction(232,-30);	#:: - Craknek Warriors
+		quest::faction(312, 10);		#:: + Storm Guard
+		quest::faction(274, 1);			#:: + Kazon Stormhammer
+		quest::faction(293, 2);			#:: + Miners Guild 249
+		quest::faction(290, 1);			#:: + Merchants of Kaladim
+		quest::faction(232, -2);		#:: - Craknek Warriors
 		#:: Grant a moderate amount of experience
 		quest::exp(7000);
 		#:: Create a hash for storing cash - 50 to 90cp
@@ -133,16 +133,16 @@ sub EVENT_ITEM {
 	elsif (plugin::takeItems(13319 => 4)) {
 		quest::say("Aha!! You have downed a Crushbone legionnaire!! You have shown yourself to be a strong warrior. Take this. This is more becoming of a great warrior such as yourself. Let no creature stand in the way of the Stormguard!");
 		#:: Reward two 10017 - Turquoise
-		quest::summonitem(10017,2);
+		quest::summonitem(10017, 2);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(312,20);		#:: + Storm Guard
-		quest::faction(274,20);		#:: + Kazon Stormhammer
-		quest::faction(293,20);		#:: + Miners Guild 249
-		quest::faction(290,20);		#:: + Merchants of Kaladim
-		quest::faction(232,-60);	#:: - Craknek Warriors
-		#:: Grant a moderate amount of experience
+		quest::faction(312, 30);		#:: + Storm Guard
+		quest::faction(274, 4);			#:: + Kazon Stormhammer
+		quest::faction(293, 4);			#:: + Miners Guild 249
+		quest::faction(290, 6);			#:: + Merchants of Kaladim
+		quest::faction(232, -6);		#:: - Craknek Warriors
+		#:: Grant a large amount of experience
 		quest::exp(64000);
 		#:: Create a hash for storing cash - 700 to 900cp
 		my %cash = plugin::RandomCash(700,900);
@@ -157,12 +157,12 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(312,10);		#:: + Storm Guard
-		quest::faction(274,10);		#:: + Kazon Stormhammer
-		quest::faction(293,10);		#:: + Miners Guild 249
-		quest::faction(290,10);		#:: + Merchants of Kaladim
-		quest::faction(232,-30);	#:: - Craknek Warriors
-		#:: Grant a moderate amount of experience
+		quest::faction(312, 15);		#:: + Storm Guard
+		quest::faction(274, 2);			#:: + Kazon Stormhammer
+		quest::faction(293, 2);			#:: + Miners Guild 249
+		quest::faction(290, 3);			#:: + Merchants of Kaladim
+		quest::faction(232, -3);		#:: - Craknek Warriors
+		#:: Grant a large amount of experience
 		quest::exp(32000);
 		#:: Create a hash for storing cash - 350 to 450cp
 		my %cash = plugin::RandomCash(350,450);
