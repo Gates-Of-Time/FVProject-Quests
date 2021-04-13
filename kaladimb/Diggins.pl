@@ -64,7 +64,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match if faction is Amiable or better and four 13931 - Runnyeye Warbeads
-	if ((faction <= 4) && (plugin::takeItems(13931 => 4))) {
+	if (($faction <= 4) && (plugin::takeItems(13931 => 4))) {
 		quest::say("Good work. We shall add these to the stash. Here is your reward, as promised. Be happy with it and continue your work. Maybe soon you shall be able to [earn a parrying pick].");
 		#:: Give a random reward: 7007 - Rusty Dagger, 7008 - Rusty Rapier, 7009 - Rusty Spear, 7010 - Rusty Shortened Spear
 		quest::summonitem(quest::ChooseRandom(7007, 7008, 7009, 7010));
