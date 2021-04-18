@@ -5,7 +5,7 @@ sub EVENT_SAY {
 	elsif ($text=~/executioner/i) {
 		quest::say("The executioner is quite an exceptional person. [Field Marshal Ralem] happened upon her while on a secret operation in Everfrost Peaks. They fought side by side against some creature the locals named Iceberg. The creature escaped. Ralem was grateful and eventually recruited her when she decided to separate from the guards of Halas.");
 	}
-	elsif ($text=~/field marshal ralem/i) {
+	elsif ($text=~/field marshall ralem/i) {
 		quest::say("Field Marshall Ralem Christof is in charge of a brigade of roving rangers, druids and warriors. He hails from the Jaggedpine. He is quite an exceptional ranger. No one is ever really sure where he is. His brigade is constantly on the move.");
 	}
 }
