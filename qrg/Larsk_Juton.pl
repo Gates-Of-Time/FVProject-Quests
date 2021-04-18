@@ -23,8 +23,8 @@ sub EVENT_ITEM {
 	#:: Match a 13309 - Gnoll Head
 	if (plugin::takeItems(13309 => 1)) {
 		quest::say("So, I see you rid the hills of the beast. Good work! I have a reward for you. I hope it will be usefull. I am afraid this gnoll's death will not halt the alliance between the two. I shall require your services to [assist in the extermination of the gnoll brewers].");
-		#:: Give a 2140 - Raw-hide Tunic
-		quest::summonitem(2140);
+		#:: Give a random reward: 2140 - Raw-Hide Tunic, 5033 - Bronze Broad Sword, 10526 - Spell: Skin Like Wood, 9006 - Wooden Shield
+		quest::summonitem(quest::ChooseRandom(2140, 5033, 10526, 9006));
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
