@@ -17,6 +17,9 @@ sub EVENT_SAY {
 	elsif ($text=~/cloak of jaggedpine/i) {
 		quest::say("The Cloak of Jaggedpine was made for those loyal to the ways of the forest.  It is enchanted to increase one's dexterity.  It is awarded to those who have aided in our cause to rid the land of those vile dogs called the Sabertooths.  Should you earn one, be sure to hold onto it - you never know when we may alter the enchantments placed upon the cloak.");
 	}
+	elsif ($text=~/blackburrow stout/i) {
+		quest::say("Blackburrow Stout is a grog created by the gnolls of Blackburrow. It is no surprise that the grog is illegal in Qeynos. Even so, I hear there are some barkeeps who dare sell it.");
+	}
 }
 
 sub EVENT_ITEM {
