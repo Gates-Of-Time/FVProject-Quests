@@ -11,20 +11,27 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_SIGNAL {
-	#:: Received from steamfont/Watchman_Grep.pl
-	quest::emote("Chuga.. Chug..Chug..");
-	quest::say("This unit requires maintenance.");
+	#:: Match a signal '1' from steamfont/Watchman_Grep.pl
+	if ($signal == 1) {
+		quest::emote("Chuga.. Chug..Chug..");
+		quest::say("This unit requires maintenance.");
+	}
 }
 
 sub EVENT_TIMER {
 	#:: Match "CargoTimer" every five seconds
 	if ($timer eq "CargoTimer") {
-		#:: Match if the quest was not a failure and the time is 8 AM
-		if (!defined($qglobals{CargoClockwork}) && ($zonehour == 8)) {
-			#:: Set a qglobal in case of quest failure
-			quest::setglobal("CargoClockwork",1,1,"H2");
-			#:: Start path grid 177 - path to the windmills
-			quest::start(177);
+		#:: Key a data bucket
+		$key = $npc->GetCleanName() . "-failed";
+		#:: Match if the data bucket does not exist
+		if (!quest::get_data($key)) {
+			#:: Match if the time is 8 AM
+			if ($zonehour == 8) {
+				#:: Set the data bucket for 7200s (2 hours)
+				quest::set_data($key, 1, 7200);
+				#:: Start path grid 177 - path to the windmills
+				quest::start(177);
+			}
 		}
 		#:: Match if at the spawnpoint (WP 0) and if delivery was completed
 		if ($x == 700 && $y == -1783 && $delivery == 1) {
@@ -32,12 +39,19 @@ sub EVENT_TIMER {
 			quest::stop();
 			#:: Reset the delivery state
 			$delivery = 0;
+			#:: Reset the data bucket
+			quest::delete_data($key);
 		}
 		#:: Match if at the crossroads with Watchman Grep (WP 7)
 		if ($x == 550 && $y == -830) {
-			quest::say("kachunk .. kachunk..");
-			#:: Send a signal to Watchman Grep
-			quest::signal(56066,1);
+			#:: Pull a list of clients from the entity list
+			my @ClientList = $entity_list->GetClientList();
+			#:: Match if the ClientList is not empty
+			if (scalar @ClientList > 0) {
+				quest::say("kachunk .. kachunk..");
+				#:: Send a signal '1' to Watchman Grep with no delay
+				quest::signal(56066, 1, 0);
+			}
 		}
 		#:: Match if at the highway robbery location and delivery has not been completed
 		if ($x == 90 && $y == -700 && $delivery == 0) {
