@@ -196,10 +196,11 @@ sub EVENT_ITEM {
 sub EVENT_SIGNAL {
 	#:: Match signal "1" from kaladimb/Mater.pl
 	if ($signal == 1) {
-		#:: Key up a data bucket
-		$key = mater_timer_repeat;
-		#:: Set a value of '1' for 300 seconds (5 min)
-		quest::set_data($key, 1, 300);
-		quest::say("I am working on it, Mater!!");
+		#:: Pull a list of clients from the entity list
+		my @ClientList = $entity_list->GetClientList();
+		#:: Match if the ClientList is not empty
+		if (scalar @ClientList > 0) {
+			quest::say("I am working on it, Mater!!");
+		}
 	}
 }
