@@ -1,8 +1,14 @@
 sub EVENT_ZONE {
-	#:: Figure out if the player has a pet and blow it up when they leave a zone
+	#:: Match if the client has a pet when they trigger the event
 	if ($client->GetPetID()) {
-		$PetID = $entity_list->GetMobByID($client->GetPetID());
-		$PetID->Kill();
+		#:: Match if the pet was a charm pet
+		if ($PetID->Charmed()) {
+			$PetID->WipeHateList();
+		}
+		else {
+			$PetID = $entity_list->GetMobByID($client->GetPetID());
+			$PetID->Kill();
+		}
 	}
 }
 
@@ -14,10 +20,16 @@ sub EVENT_ENTERZONE {
 			quest::setglobal("newbiecommon", 1, 5, "F");
 		}
 	}
-	#:: Figure out if the player has a pet and blow it up when they enter a zone
+	#:: Match if the client has a pet when they trigger the event
 	if ($client->GetPetID()) {
-		$PetID = $entity_list->GetMobByID($client->GetPetID());
-		$PetID->Kill();
+		#:: Match if the pet was a charm pet
+		if ($PetID->Charmed()) {
+			$PetID->WipeHateList();
+		}
+		else {
+			$PetID = $entity_list->GetMobByID($client->GetPetID());
+			$PetID->Kill();
+		}
 	}
 	if ($name eq "TurmoilToad") {
 		quest::playerrace(27);
