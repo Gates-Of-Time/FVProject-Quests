@@ -119,13 +119,13 @@ sub EVENT_ITEM {
 sub EVENT_TIMER {
 	#:: Match timer 'repeat'
 	if ($timer eq "repeat") {
-		#:: Key up a data bucket
-		$key = mater_timer_repeat;
-		#:: Match if the key does not exist
-		if (!quest::get_data($key)) {
+		#:: Pull a list of clients from the entity list
+		my @ClientList = $entity_list->GetClientList();
+		#:: Match if the ClientList is not empty
+		if (scalar @ClientList > 0) {
 			quest::say("Blast all these pesky rats!! Jeet, you need to get one of the new rogues.. I mean miners, to get rid of them!!");
 			#:: Send a signal "1" to North Kaladim >> Jeet (67018) with no delay
-			quest::signalwith(67018,1,0)
+			quest::signalwith(67018, 1, 0);
 		}
 	}
 }
