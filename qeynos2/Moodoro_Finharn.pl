@@ -44,10 +44,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(233,20); 	#:: + Crimson Hands
-		quest::faction(266,20); 	#:: + High Council of Erudin
-		quest::faction(265,-20); 	#:: - Heretics
-		quest::faction(267,20); 	#:: + High Guard of Erudin
+		quest::faction(233, 20); 	#:: + Crimson Hands
+		quest::faction(266, 2); 	#:: + High Council of Erudin
+		quest::faction(265, -3); 	#:: - Heretics
+		quest::faction(267, 3); 	#:: + High Guard of Erudin
 		#:: Give a small amount of experience
 		quest::exp(200);
 		#:: Create a hash for storing cash - 1 to 10cp
