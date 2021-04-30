@@ -1,14 +1,8 @@
 sub EVENT_ZONE {
 	#:: Match if the client has a pet when they trigger the event
 	if ($client->GetPetID()) {
-		#:: Match if the pet was a charm pet
-		if ($PetID->Charmed()) {
-			$PetID->WipeHateList();
-		}
-		else {
-			$PetID = $entity_list->GetMobByID($client->GetPetID());
-			$PetID->Kill();
-		}
+		$PetID = $entity_list->GetMobByID($client->GetPetID());
+		$PetID->Kill();
 	}
 }
 
@@ -22,14 +16,8 @@ sub EVENT_ENTERZONE {
 	}
 	#:: Match if the client has a pet when they trigger the event
 	if ($client->GetPetID()) {
-		#:: Match if the pet was a charm pet
-		if ($PetID->Charmed()) {
-			$PetID->WipeHateList();
-		}
-		else {
-			$PetID = $entity_list->GetMobByID($client->GetPetID());
-			$PetID->Kill();
-		}
+		$PetID = $entity_list->GetMobByID($client->GetPetID());
+		$PetID->Kill();
 	}
 	if ($name eq "TurmoilToad") {
 		quest::playerrace(27);
