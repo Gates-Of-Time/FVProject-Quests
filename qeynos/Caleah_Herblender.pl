@@ -8,16 +8,26 @@ sub EVENT_SPAWN {
 sub EVENT_TIMER {
 	#:: Match timer "replenish"
 	if ($timer eq "replenish") {
-		quest::say("Drawna.. Are we all out of bat fur again?");
-		#:: Send a signal "1" to South Qeynos >> Drawna_Opimsor (1051) with no delay
-		quest::signalwith(1051,1,0);
+		#:: Pull a list of clients from the entity list
+		my @ClientList = $entity_list->GetClientList();
+		#:: Match if the ClientList is not empty
+		if (scalar @ClientList > 0) {
+			quest::say("Drawna.. Are we all out of bat fur again?");
+			#:: Send a signal "1" to South Qeynos >> Drawna_Opimsor (1051) with no delay
+			quest::signalwith(1051,1,0);
+		}
 	}
 }
 
 sub EVENT_SIGNAL {
 	#:: Match a signal "1" from qeynos/Drawna_Opimsor.pl
 	if ($signal == 1) {
-		quest::say("Hmmm.. Let's see if we can find someone to help replenish our stock of [rat whiskers] and [bat fur]. I need these items for a new little experiment I'm working on.");
+		#:: Pull a list of clients from the entity list
+		my @ClientList = $entity_list->GetClientList();
+		#:: Match if the ClientList is not empty
+		if (scalar @ClientList > 0) {
+			quest::say("Hmmm.. Let's see if we can find someone to help replenish our stock of [rat whiskers] and [bat fur]. I need these items for a new little experiment I'm working on.");
+		}
 	}
 }
 
