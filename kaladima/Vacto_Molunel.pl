@@ -3,18 +3,26 @@ sub EVENT_SAY {
 		quest::say("Well met. $name!  I am Vacto Molunel.  If you are seeking to outfit yourself with the finest weapons in all of Kaladim, I am the one to see.  I also posses a [rare talent] you might find useful.");
 	}
 	elsif ($text=~/rare talent/i) {
-		#:: Match if faction is Indifferent or better
-		if ($faction <= 5) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
 			quest::say("Piqued your interest. did I?  Well, you see, I am one of the few dwarves who possess the knowledge and talent to craft a unique type of armor entirely out of scarab carapaces.  While my specialty is making [scarab helms], I have also been convinced to make [scarab breastplates] and [scarab boots] from time to time.  All of the pieces I craft are to dwarven proportions, but I have had some gnomish and halfling customers as well.  They come from all over for my armor.");
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
+			quest::say("Prove yourself to the Stormguard and then we shall talk. Perhaps you may assist Master Canloe and show your worth to us.");
 		}
 		else {
 			quest::say("Your shifty eyes tell me that you are no ally of the Stormguard.");
 		}
 	}
 	elsif ($text=~/scarab helms/i) {
-		#:: Match if faction is Indiferent or better
-		if ($faction <= 5) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
 			quest::say("Interested in a scarab helm. are you?  Well, because my talent is so unique and my time is so valuable, I am afraid I could only make you a helm if you were to provide me with the two scarab carapaces necessary to accommodate a head such as yours.  I will also need a payment of 5 gold pieces.  The Butcherblocks are crawling with worker scarabs that have just the right size carapaces for our needs.");
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
+			quest::say("Prove yourself to the Stormguard and then we shall talk. Perhaps you may assist Master Canloe and show your worth to us.");
 		}
 		else {
 			quest::say("Your shifty eyes tell me that you are no ally of the Stormguard.");
@@ -34,9 +42,13 @@ sub EVENT_SAY {
 		}
 	}
 	elsif ($text=~/scarab boots/i) {
-		#:: Match if faction is Indifferent or better
-		if ($faction <= 5) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
 			quest::say("Ah..  Scarab Boots.. hmm.  Well, if you want to convince me to go though the trouble of crafting a pair of those, not only will you have to pay my fee of 17 gold pieces, you must provide me with a cracked giant scarab shell and 2 scarab legs."); 
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
+			quest::say("Prove yourself to the Stormguard and then we shall talk. Perhaps you may assist Master Canloe and show your worth to us.");
 		}
 		else {
 			quest::say("Your shifty eyes tell me that you are no ally of the Stormguard.");
@@ -70,7 +82,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match two 13849 - Scarab Carapace and 5 gold
-	if (plugin::takeItemsCoin(0,0,5,0, 13849 => 2)) {
+	if ($faction < 6 && plugin::takeItemsCoin(0,0,5,0, 13849 => 2)) {
 		quest::say("Excellent. Here is your helm. Wear it with pride! And be sure to occasionally wipe out the insulating mucus that tends to build up on its underside. It will make your hair fall out. One more thing, would you be interested in [scarab boots] to match your helm?");
 		#:: Give a 2175 - Small Scarab Helm
 		quest::summonitem(2175); 
@@ -86,7 +98,7 @@ sub EVENT_ITEM {
 		quest::exp(500);
 	}
 	#:: Match a 13132 - Cracked Giant Scarab Carapace, two 13848 - Scarab Legs, and 17 gold
-	elsif (plugin::takeItemsCoin(0,0,17,0, 13132 => 1, 13848 => 2)) {
+	elsif ($faction < 6 && plugin::takeItemsCoin(0,0,17,0, 13132 => 1, 13848 => 2)) {
 		quest::say("Very good! Let me see here. Thread the legs around like this and... There you go. Wear them with pride!");
 		#:: Give a 2177 - Small Scarab Boots
 		quest::summonitem(2177);
@@ -102,7 +114,7 @@ sub EVENT_ITEM {
 		quest::exp(500);
 	}
 	#:: Match a 13133 - Pristine Giant Scarab Carapace and 23 gold
-	elsif (plugin::takeItemsCoin(0,0,23,0, 13133 => 1)) {
+	elsif ($faction < 5 && plugin::takeItemsCoin(0,0,23,0, 13133 => 1)) {
 		quest::say("If I do say so myself, this is one of the finest breastplates in all of Norrath. I am truly a master at my craft. You might want to wipe out some of the excess scarab goo before wearing it, though.");
 		#:: Give a 2176 - Small Scarab Breastplate
 		quest::summonitem(2176); 
