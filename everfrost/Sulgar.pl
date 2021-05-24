@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hail, traveler! Would you happen to know the location of any of the spokes of [Tarton's Wheel]?' ");
+		quest::say("Hail, traveler! Would you happen to know the location of any of the spokes of [Tarton's Wheel]?");
 	}
 	elsif ($text=~/tarton's wheel/i) {
 		quest::say("Tarton's Wheel was a device that Tarton constructed to let him travel through the planes. If you are [interested] in helping me reassemble it, I will reward you well.");
@@ -14,7 +14,7 @@ sub EVENT_SAY {
 		quest::summonitem(18031);
 	}
 	elsif ($text=~/wheel case/i) {
-		quest::say("I will lend you this wheel case - put the ten spokes of the wheel in it when you have collected them. I did say lend, however. I shall need the case back. Once you have constructed the Staff of the Wheel and the Star of Eyes, I will trade you them for two magical runes I have found useful in my research.' ");
+		quest::say("I will lend you this wheel case - put the ten spokes of the wheel in it when you have collected them. I did say lend, however. I shall need the case back. Once you have constructed the Staff of the Wheel and the Star of Eyes, I will trade you them for two magical runes I have found useful in my research.");
 		#:: Give 17510 - Glowing Chest (quest container)
 		quest::summonitem(17510);
 	}
