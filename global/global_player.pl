@@ -2,7 +2,12 @@ sub EVENT_ZONE {
 	#:: Match if the client has a pet when they trigger the event
 	if ($client->GetPetID()) {
 		$PetID = $entity_list->GetMobByID($client->GetPetID());
-		$PetID->Kill();
+		if ($PetID->Charmed()) {
+			#:: Do nothing
+		}
+		else {
+			$PetID->Kill();
+		}
 	}
 }
 
@@ -34,6 +39,9 @@ sub EVENT_ENTERZONE {
 		quest::playertexture(1);
 		quest::playerfeature("helm", 1);
 	}
+	set_current_position();
+	#:: Create a timer 'check_idle' that triggers every 900 seconds (15 min)
+	quest::settimer("check_idle", 900);
 }
 
 sub EVENT_CONNECT {
@@ -110,6 +118,37 @@ sub EVENT_CONNECT {
 	}
 }
 
+sub EVENT_TIMER {
+	#:: Match the timer 'check_idle'
+	if ($timer eq "check_idle") {
+		my $last_x  = $client->GetEntityVariable("last_x");
+		my $last_y  = $client->GetEntityVariable("last_y");
+		my $is_idle = ($last_x eq $client->GetX() && $last_y eq $client->GetY());
+		if ($is_idle && $status < 255) {
+			$key = $client->CharacterID() . "-idle-trigger";
+			if (!quest::get_data($key)) {
+				quest::set_data($key, "1", 1800);
+			}
+			elsif (quest::get_data($key) == "1") {
+				quest::set_data($key, "2", 1200);
+				quest::popup("Still here?", "Click OK to stay in game.", 1, 1, 0);
+			}
+			else {
+				$client->Kick();
+			}
+		}
+		set_current_position();
+	}
+}
+
+sub EVENT_POPUPRESPONSE {
+	#:: Match popup ID 1 - 'Still here?'
+	if ($popupid == 1) {
+		$key = $client->CharacterID() . "-idle-trigger";
+		quest::delete_data($key);
+	}
+}
+
 sub ConvertIP {
 	my $longip = $_[0];
 	$firstoctet = $longip % 256;
@@ -123,4 +162,9 @@ sub ConvertIP {
 	$longip /= 256;
 	my $convertedip = "$firstoctet.$secondoctet.$thirdoctet.$longip";
 	return $convertedip;
+}
+
+sub set_current_position() {
+	$client->SetEntityVariable("last_x", $client->GetX());
+	$client->SetEntityVariable("last_y", $client->GetY());
 }
