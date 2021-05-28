@@ -5,7 +5,7 @@ my $mob2;
 my $mobnpc1;
 my $mobnpc2;
 
-sub EVENT_DEATH {
+sub EVENT_DEATH_COMPLETE {
 	#:: Spawn a The Plane of Sky >> an_essence_carrier (71070)
 	$entid1 = quest::spawn2(71070, 0, 0, $x + 10, $y, $z, $h);
 	$mob1 = $entity_list->GetMobID($entid1);
