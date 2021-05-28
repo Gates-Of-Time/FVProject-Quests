@@ -21,3 +21,7 @@ sub EVENT_DEATH {
 		$killed = 1;
 	}
 }
+
+sub EVENT_DEATH_COMPLETE {
+	$killed = undef;
+}
