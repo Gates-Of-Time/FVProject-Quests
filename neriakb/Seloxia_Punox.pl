@@ -59,7 +59,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match a 18751 - Tattered Note
-	if (plugin::takeItemss(18751 => 1)) {
+	if (plugin::takeItems(18751 => 1)) {
 		quest::say("I shall reserve any official welcoming until you have proven yourself a suitable member for the Indigo Brotherhood. That proof shall be obtained by your progression in your training. See Jarrex N`Ryt, one of my most trusted trainers in the Brotherhood and obey his command carefully if you wish to succeed as a member of the Brotherhood. Return to me when you have become more experienced in our art, I will be able to further instruct you on how to progress through your early ranks, as well as in some of the various [trades] you will have available to you.");
 		#:: Give a 13580 - Old Training Tunic*
 		quest::summonitem(13580);
