@@ -23,6 +23,8 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
+	#:: Let's MultiqQuest!
+	plugin::mq_process_items(\%itemcount);
 	#:: Match a 13700 - Gnoll Paw
 	if (plugin::takeItems(13700 => 1)) {
 		quest::say("Thank you for tracking down the filthy little poacher. Take this as your reward.");
@@ -41,25 +43,69 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
-	#:: Match a 13231 - Bottom of Broken Staff and 13232 - Top of Broken Staff
-	elsif (plugin::takeItems(13231 => 1, 13232 =>)) {
-		quest::say("Excellent! Here is a Jaggedpine Crook of your own. Please use it only to defend yourself and never to attack one of Tunare's creatures. You will find that while wielding the crook, Tunare grants you a boon of strength and the power to smite enemies who would otherwise be impervious to physical attacks.");
-		#:: Give a 13230 - Jaggedpine Crook
-		quest::summonitem(13230);
-		#:: Ding!
-		quest::ding();
-		#:: Set factions
-		quest::faction(272, 10); 	#:: + Jaggedpine Treefolk
-		quest::faction(302, 2); 	#:: + Protectors of Pine
-		quest::faction(343, 1); 	#:: + QRG Protected Animals
-		quest::faction(324, -2); 	#:: - Unkempt Druids
-		quest::faction(262, 1); 	#:: + Guards of Qeynos
-		#:: Grant a small amount of experience
-		quest::exp(200);
-		#:: Create a hash for storing cash - 250 to 300cp
-		my %cash = plugin::RandomCash(250,300);
-		#:: Grant a random cash reward
-		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+	#:: Match a 13231 - Bottom of Broken Staff
+	elsif (plugin::takeItems(13231 => 1)) {
+		plugin::mq_process_items(13231 => 1);
+		if (plugin::check_mq_handin(13231 => 1, 13232 => 1)) {
+			quest::say("Excellent! Here is a Jaggedpine Crook of your own. Please use it only to defend yourself and never to attack one of Tunare's creatures. You will find that while wielding the crook, Tunare grants you a boon of strength and the power to smite enemies who would otherwise be impervious to physical attacks.");
+			#:: Give a 13230 - Jaggedpine Crook
+			quest::summonitem(13230);
+			#:: Ding!
+			quest::ding();
+			#:: Set factions
+			quest::faction(272, 10); 	#:: + Jaggedpine Treefolk
+			quest::faction(302, 2); 	#:: + Protectors of Pine
+			quest::faction(343, 1); 	#:: + QRG Protected Animals
+			quest::faction(324, -2); 	#:: - Unkempt Druids
+			quest::faction(262, 1); 	#:: + Guards of Qeynos
+			#:: Grant a small amount of experience
+			quest::exp(400);
+		}
+		else {
+			quest::say("Look what you have found! It is tragic to know that for every broken crook that is recovered, one of the Treefolk has lost his life. Those gnolls will pay some day. If you have the other half of the crook I will repair it for you.");
+			#:: Ding!
+			quest::ding();
+			#:: Set factions (apparently the same values as both pieces)
+			quest::faction(272, 10); 	#:: + Jaggedpine Treefolk
+			quest::faction(302, 2); 	#:: + Protectors of Pine
+			quest::faction(343, 1); 	#:: + QRG Protected Animals
+			quest::faction(324, -2); 	#:: - Unkempt Druids
+			quest::faction(262, 1); 	#:: + Guards of Qeynos
+			#:: Grant a small amount of experience
+			quest::exp(200);
+		}
+	}
+	#:: Match a 13232 - Top of Broken Staff
+	elsif (plugin::takeItems(13232 =>)) {
+		plugin::mq_process_items(13232 => 1);
+		if (plugin::check_mq_handin(13231 => 1, 13232 => 1)) {
+			quest::say("Excellent! Here is a Jaggedpine Crook of your own. Please use it only to defend yourself and never to attack one of Tunare's creatures. You will find that while wielding the crook, Tunare grants you a boon of strength and the power to smite enemies who would otherwise be impervious to physical attacks.");
+			#:: Give a 13230 - Jaggedpine Crook
+			quest::summonitem(13230);
+			#:: Ding!
+			quest::ding();
+			#:: Set factions
+			quest::faction(272, 10); 	#:: + Jaggedpine Treefolk
+			quest::faction(302, 2); 	#:: + Protectors of Pine
+			quest::faction(343, 1); 	#:: + QRG Protected Animals
+			quest::faction(324, -2); 	#:: - Unkempt Druids
+			quest::faction(262, 1); 	#:: + Guards of Qeynos
+			#:: Grant a small amount of experience
+			quest::exp(400);
+		}
+		else {
+			quest::say("Look what you have found! It is tragic to know that for every broken crook that is recovered, one of the Treefolk has lost his life. Those gnolls will pay some day. If you have the other half of the crook I will repair it for you.");
+			#:: Ding!
+			quest::ding();
+			#:: Set factions (apparently the same values as both pieces)
+			quest::faction(272, 10); 	#:: + Jaggedpine Treefolk
+			quest::faction(302, 2); 	#:: + Protectors of Pine
+			quest::faction(343, 1); 	#:: + QRG Protected Animals
+			quest::faction(324, -2); 	#:: - Unkempt Druids
+			quest::faction(262, 1); 	#:: + Guards of Qeynos
+			#:: Grant a small amount of experience
+			quest::exp(200);
+		}
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
