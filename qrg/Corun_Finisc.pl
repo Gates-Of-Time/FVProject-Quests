@@ -23,8 +23,6 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Let's MultiqQuest!
-	plugin::mq_process_items(\%itemcount);
 	#:: Match a 13700 - Gnoll Paw
 	if (plugin::takeItems(13700 => 1)) {
 		quest::say("Thank you for tracking down the filthy little poacher. Take this as your reward.");
@@ -60,6 +58,7 @@ sub EVENT_ITEM {
 			quest::faction(262, 1); 	#:: + Guards of Qeynos
 			#:: Grant a small amount of experience
 			quest::exp(400);
+			plugin::clear_mq_handin();
 		}
 		else {
 			quest::say("Look what you have found! It is tragic to know that for every broken crook that is recovered, one of the Treefolk has lost his life. Those gnolls will pay some day. If you have the other half of the crook I will repair it for you.");
@@ -92,6 +91,7 @@ sub EVENT_ITEM {
 			quest::faction(262, 1); 	#:: + Guards of Qeynos
 			#:: Grant a small amount of experience
 			quest::exp(400);
+			plugin::clear_mq_handin();
 		}
 		else {
 			quest::say("Look what you have found! It is tragic to know that for every broken crook that is recovered, one of the Treefolk has lost his life. Those gnolls will pay some day. If you have the other half of the crook I will repair it for you.");
@@ -108,7 +108,7 @@ sub EVENT_ITEM {
 		}
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
 
 sub EVENT_WAYPOINT_ARRIVE{
