@@ -23,6 +23,8 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
+	#:: Let's MultiqQuest!
+	plugin::mq_process_items(\%itemcount);
 	#:: Match a 13700 - Gnoll Paw
 	if (plugin::takeItems(13700 => 1)) {
 		quest::say("Thank you for tracking down the filthy little poacher. Take this as your reward.");
@@ -107,8 +109,6 @@ sub EVENT_ITEM {
 			quest::exp(200);
 		}
 	}
-	#:: Return unused items
-	plugin::returnUnusedItems();
 }
 
 sub EVENT_WAYPOINT_ARRIVE{
