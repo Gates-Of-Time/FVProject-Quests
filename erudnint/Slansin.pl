@@ -6,7 +6,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match turn in for 13983 - Inert Potion
-	if (plugin::check_handin(\%itemcount, 13983 => 1)) {
+	if (plugin::takeItems(13983 => 1)) {
 		#:: Create a scalar variable for mob class
 		my $mobclass = $npc->GetClass();
 		#:: Match if class is 41 - shopkeeper
@@ -16,11 +16,11 @@ sub EVENT_ITEM {
 			quest::exp(300);
 			#:: Ding!
 			quest::ding();
-			#:: Set faction
-			quest::faction(231,-5);		#:: - Craftkeepers
-			quest::faction(266,-5);		#:: - High Council of Erudin
-			quest::faction(265,1);		#:: + Heretics
-			quest::faction(267,-5);		#:: - High Guard of Erudin
+			#:: Set factions
+			quest::faction(231, -1);		#:: - Craftkeepers
+			quest::faction(266, -1);		#:: - High Council of Erudin
+			quest::faction(265, 1);			#:: + Heretics
+			quest::faction(267, -1);		#:: - High Guard of Erudin
 			#:: Depop no timer
 			quest::depop();
 		}
@@ -31,13 +31,14 @@ sub EVENT_ITEM {
 			quest::exp(300);
 			#:: Ding!
 			quest::ding();
-			#:: Set faction
-			quest::faction(336,5);		#:: + Coalition of Tradefolk Underground
-			quest::faction(229,5);		#:: + Coalition of Tradefolk
-			quest::faction(329,5);		#:: + Carson McCabe
-			quest::faction(230);		#:: + Corrupt Qeynos Guards
-			quest::faction(330,5);		#:: + Freeport Militia
+			#:: Set factions
+			quest::faction(336, 2);			#:: + Coalition of Tradefolk Underground
+			quest::faction(229, 2);			#:: + Coalition of Tradefolk
+			quest::faction(329, 1);			#:: + Carson McCabe
+			quest::faction(230, 1);			#:: + Corrupt Qeynos Guards
+			quest::faction(330, 1);			#:: + Freeport Militia
 		}
 	}
-	plugin::return_items(\%itemcount);
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
