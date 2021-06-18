@@ -35,7 +35,7 @@ sub EVENT_ITEM {
 			quest::faction(336,5);		#:: + Coalition of Tradefolk Underground
 			quest::faction(229,5);		#:: + Coalition of Tradefolk
 			quest::faction(329,5);		#:: + Carson McCabe
-			quest::faction(346,5);		#:: + Corrupt Qeynos Guards
+			quest::faction(230);		#:: + Corrupt Qeynos Guards
 			quest::faction(330,5);		#:: + Freeport Militia
 		}
 	}
