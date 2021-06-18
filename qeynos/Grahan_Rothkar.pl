@@ -35,13 +35,8 @@ sub EVENT_TIMER {
 sub EVENT_ITEM {
 	#:: Match a 20031 - Pen Key # 7
 	if (plugin::takeItems(20031 => 1)) {
-		#:: Match if faction is Indifferent or worse
-		if ($faction > 4) {
-			quest::say("The Steel Warriors have no cause to dislike you, but you have yet to truly prove your worth to this guild.");
-			#:: Return a 20031 - Pen Key # 7
-			quest::summonitem(20031);
-		}
-		else {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
 			quest::say("I thank you. I must admit I had my doubts, but you have proven yourself a true warrior. I salute you. You can be of some assistance to me. It see ms as though there has been a [second escaped gladiator] and I have a reward waiting for a human warrior.");
 			#:: Give a 5033 - Bronze Broad Sword
 			quest::summonitem(5033);
@@ -63,6 +58,11 @@ sub EVENT_ITEM {
 			$key = $client->CharacterID() . "-escaped-prisoners";
 			#:: Set a data bucket, quest started
 			quest::set_data($key, 1);
+		}
+		else {
+			quest::say("The Steel Warriors have no cause to dislike you, but you have yet to truly prove your worth to this guild.");
+			#:: Return a 20031 - Pen Key # 7
+			quest::summonitem(20031);
 		}
 	}
 	#:: Match 12188 - Minotaur Hero Shackles
@@ -99,13 +99,8 @@ sub EVENT_ITEM {
 	}
 	#:: Match a 18894 - Sealed Letter
 	elsif (plugin::takeItems(18894 => 1)) {
-		#:: Match if faction is Indifferent or worse
-		if ($faction > 4) {
-			quest::say("The Steel Warriors have no cause to dislike you, but you have yet to truly prove your worth to this guild.");
-			#:: Return a 18894 - Sealed Letter
-			quest::summonitem(18894);
-		}
-		else {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
 			quest::say("So you are ready to encounter your final test. I wish you well, young warrior. Take this key to the pen on the left along the wall with three doors. There you shall meet your final challenge. Return with proof of victory. Exit before it is at an end and I shall not help you.");
 			#:: Give a 20029 - Pen Key # 5
 			quest::summonitem(20029);
@@ -127,6 +122,11 @@ sub EVENT_ITEM {
 			$key = $client->CharacterID() . "-steel-warriors-final-test";
 			#:: Set a data bucket, quest started
 			quest::set_data($key, 1);
+		}
+		else {
+			quest::say("The Steel Warriors have no cause to dislike you, but you have yet to truly prove your worth to this guild.");
+			#:: Return a 18894 - Sealed Letter
+			quest::summonitem(18894);
 		}
 	}
 	#:: Match a 13398 - Arena Lion Skin
