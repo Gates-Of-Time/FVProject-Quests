@@ -39,7 +39,22 @@ sub EVENT_SAY {
                                         $client->Message(15, "Agent of Change says, 'Hello, $name.  It looks like your raid instance expired.  You can rejoin another in $LockoutTime seconds.'");
                                 }
                                 else {
-                                      	$client->Message(15, "Agent of Change says, 'Hello, $name.  Let me know when you are [ready] to join the raid.'");
+					$value = quest::get_data($key);
+					$key = $raid->GetID() . "-fearplane-raid";
+					if (!quest::get_data($key)) {
+                                                if ($raid->IsLeader($name)) {
+                                                        $client->Message(15, "Agent of Change says, 'Hello, $name.  Would you like to [create] a raid instance?'");
+                                                }
+                                                else {
+                                                      	$client->Message(15, "Agent of Change says, 'Hello, $name.  It looks like your raid leader needs to create a raid instance.'");
+                                                }
+					}
+					elsif ($value == quest::get_data($key)) {
+	                                      	$client->Message(15, "Agent of Change says, 'Hello, $name.  Let me know when you are [ready] to join the raid.'");
+					}
+					else {
+						$client->Message(15, "Agent of Change says, 'Hello, $name.  It looks like your raid instance expired.  You can rejoin another in $LockoutTime seconds.'");
+					}
                                 }
                         }
                 }
