@@ -2,13 +2,13 @@ my $LockoutTime = 86400;
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		$Raid = $client->GetRaid();
-		if ($Raid > 0) {
+		$raid = $client->GetRaid();
+		if ($raid > 0) {
 			$key = $name . "-fearplane-instance";
 			if (!quest::get_data($key)) {
 				$key = $name . "-fearplane-raid";
 				if (!quest::get_data($key)) {
-					$key = $Raid . "-fearplane-raid";
+					$key = $raid . "-fearplane-raid";
 					if (!quest::get_data($key)) {
 						if ($raid->IsLeader($name)) {
 							$client->Message(15, "Agent of Change says, 'Hello, $name.  Would you like to [create] a raid instance?'");
@@ -20,7 +20,7 @@ sub EVENT_SAY {
 					else {
 						$InstanceTime = quest::get_data_expires($key) - time();
 						$key = $name . "-fearplane-raid";
-						quest::set_data($key, $Raid, $InstanceTime);
+						quest::set_data($key, $raid, $InstanceTime);
 						$key = $name . "-fearplane-instance";
 						quest::set_data($key, 1, $LockoutTime);
 						$client->Message(15, "Agent of Change says, 'Hello, $name.  Let me know when you are [ready] to join the raid.'");
@@ -46,19 +46,19 @@ sub EVENT_SAY {
 		}
 	}
 	elsif ($text=~/create/i) {
-		$Raid = $client->GetRaid();
-		if ($Raid > 0) {
+		$raid = $client->GetRaid();
+		if ($raid > 0) {
 			if ($raid->IsLeader($name)) {
 				$key = $name . "-fearplane-instance";
 				if (!quest::get_data($key)) {
 					$key = $name . "-fearplane-raid";
 					if (!quest::get_data($key)) {
-						$key = $Raid . "-fearplane-raid";
+						$key = $raid . "-fearplane-raid";
 						if (!quest::get_data($key)) {
-							quest::set_data($key, $Raid, 43200);
+							quest::set_data($key, $raid, 43200);
 							$InstanceTime = quest::get_data_expires($key) - time();
 							$key = $name . "-fearplane-raid";
-							quest::set_data($key, $Raid, $InstanceTime);
+							quest::set_data($key, $raid, $InstanceTime);
 							$key = $name . "-fearplane-instance";
 							quest::set_data($key, 1, $LockoutTime);
 							$Instance = quest::CreateInstance("fearplane", 0, 345600);
@@ -82,9 +82,9 @@ sub EVENT_SAY {
 		}
 	}
 	elsif ($text=~/ready/i) {
-		$Raid = $client->GetRaid();
-		if ($Raid > 0) {
-			$key = $Raid . "-fearplane-raid";
+		$raid = $client->GetRaid();
+		if ($raid > 0) {
+			$key = $raid . "-fearplane-raid";
 			if (!quest::get_data($key)) {
 				$client->Message(15, "Agent of Change says, 'Sorry, but your raid does not have an instance.  Ask your raid leader to make one.'");
 			}
@@ -92,7 +92,7 @@ sub EVENT_SAY {
 				$InstanceTime = quest::get_data_expires($key) - time();
 				$key = $name . "-fearplane-raid";
 				if (!quest::get_data($key)) {
-					quest::set_data($key, $Raid, $InstanceTime);
+					quest::set_data($key, $raid, $InstanceTime);
 				}
 				$key = $name . "-fearplane-instance";
 				if (!quest::get_data($key)) {
