@@ -3,7 +3,10 @@ my $LockoutTime = 86400;
 sub EVENT_SAY {
         if ($text=~/hail/i) {
                 $raid = $client->GetRaid();
-                if ($raid > 0) {
+                if ($ulevel < 46) {
+			$client->Message(15,"Much to learn you still have… padawan. Return once your power has increased!");
+		}
+		elsif ($raid > 0) {
                         $key = $name . "-fearplane-instance";
                         if (!quest::get_data($key)) {
                                 $key = $name . "-fearplane-raid";
@@ -64,7 +67,10 @@ sub EVENT_SAY {
         }
 	elsif ($text=~/create/i) {
                 $raid = $client->GetRaid();
-                if ($raid > 0) {
+                if ($ulevel < 46) {
+			$client->Message(15,"Much to learn you still have… padawan. Return once your power has increased!");
+		}
+		elsif ($raid > 0) {
                         if ($raid->IsLeader($name)) {
                                 $key = $name . "-fearplane-instance";
                                 if (!quest::get_data($key)) {
@@ -95,7 +101,10 @@ sub EVENT_SAY {
         }
 	elsif ($text=~/ready/i) {
                 $raid = $client->GetRaid();
-                if ($raid > 0) {
+                if ($ulevel < 46) {
+			$client->Message(15,"Much to learn you still have… padawan. Return once your power has increased!");
+		}
+		elsif ($raid > 0) {
                         $key = $raid->GetID() . "-fearplane-raid";
                         if (!quest::get_data($key)) {
                                 $client->Message(15, "Agent of Change says, 'Sorry, but your raid does not have an instance.  Ask your raid leader to make one.'");
