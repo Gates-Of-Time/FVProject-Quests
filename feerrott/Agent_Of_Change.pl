@@ -1,4 +1,4 @@
-my $LockoutTime = 86400;
+my $LockoutTime = 604800;
 
 sub EVENT_SAY {
         if ($text=~/hail/i) {
