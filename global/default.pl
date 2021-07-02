@@ -1,8 +1,10 @@
 my $FireworkTrigger;
 
 sub EVENT_SPAWN {
-	quest::set_proximity($x - 250, $x + 250, $y - 250, $y + 250, $z - 50, $z + 50, 0);
-	$FireworkTrigger = 0;
+	if (!$npc->IsPet()) {
+		quest::set_proximity($x - 250, $x + 250, $y - 250, $y + 250, $z - 50, $z + 50, 0);
+		$FireworkTrigger = 0;
+	}
 }
 
 sub EVENT_ENTER {
