@@ -80,15 +80,15 @@ sub EVENT_SAY {
                                                 if (!quest::get_data($key)) {
                                                         $Instance = quest::CreateInstance("permafrost", 0, 345600);
                                                         quest::set_data($key, $Instance, 43200);
-                                                        $client->Message(15, "Agent of Change says, 'Your instance ( $Instance ) has been created. Let me know when you are [ready] to go to the Plane of Fear.'");
+                                                        $client->Message(15, "Agent of Change says, 'Your instance ( $Instance ) has been created. Let me know when you are [ready] to go to the Permafrost Caverns.'");
                                                 }
                                         }
                                         else {
-                                              	$client->Message(15, "Agent of Change says, 'You already have instance. Let me know when you are [ready] to go to the Plane of Fear.'");
+                                              	$client->Message(15, "Agent of Change says, 'You already have instance. Let me know when you are [ready] to go to the Permafrost Caverns.'");
                                         }
                                 }
                                 else {
-                                      	$client->Message(15, "Agent of Change says, 'You already have instance. Let me know when you are [ready] to go to the Plane of Fear.'");
+                                      	$client->Message(15, "Agent of Change says, 'You already have instance. Let me know when you are [ready] to go to the Permafrost Caverns.'");
                                 }
                         }
                         else {
