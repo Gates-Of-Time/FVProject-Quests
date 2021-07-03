@@ -3,9 +3,6 @@ my $LockoutTime = 604800;
 sub EVENT_SAY {
         if ($text=~/hail/i) {
                 $raid = $client->GetRaid();
-                if ($ulevel < 46) {
-			$client->Message(15,"Much to learn you still have… padawan. Return once your power has increased!");
-		}
 		elsif ($raid > 0) {
                         $key = $name . "-soldungb-instance";
                         if (!quest::get_data($key)) {
@@ -67,9 +64,6 @@ sub EVENT_SAY {
         }
 	elsif ($text=~/create/i) {
                 $raid = $client->GetRaid();
-                if ($ulevel < 46) {
-			$client->Message(15,"Much to learn you still have… padawan. Return once your power has increased!");
-		}
 		elsif ($raid > 0) {
                         if ($raid->IsLeader($name)) {
                                 $key = $name . "-soldungb-instance";
@@ -101,9 +95,6 @@ sub EVENT_SAY {
         }
 	elsif ($text=~/ready/i) {
                 $raid = $client->GetRaid();
-                if ($ulevel < 46) {
-			$client->Message(15,"Much to learn you still have… padawan. Return once your power has increased!");
-		}
 		elsif ($raid > 0) {
                         $key = $raid->GetID() . "-soldungb-raid";
                         if (!quest::get_data($key)) {
@@ -122,7 +113,7 @@ sub EVENT_SAY {
                                 }
                                 $client->AssignToInstance($Instance);
                                 $client->MovePCInstance(32, $Instance, -413,-265,-108.84, 0);
-                                plugin::RandomSay(100, "Do not touch any Turmoil Warts!", "Do not pick the boogey, man!", "Pull my finger for a fright!", "Gorgon solo can be stinky.", "I want my shiverback shiverback shiverback...shiverback ribs!", "Does the tentacle tormentor only torment tentacles?", "You better hope TurmoilToad does not have any relatives in there!", "Phobos is a moon from Mars.  Plasm is a mold.  Moon Mold.  You are welcome.", "Eating amygdalin can cause cyanide poisoning.  It is true.", "Samhain existed before Halloween.  Those Pagans.");
+                                plugin::RandomSay(100, "You have nice manners for a thief and a liar.", "You seem familiar with my name, but I don't seem to remember smelling you before.", "Who are you and where do you come from, may I ask?", "Well thief! I smell you and I feel your air. I hear your breath. Come along! Help yourself again, there is plenty and to spare!", "I kill where I wish and none dare resist.", "I laid low the warriors of old and their like is not in the world today.");
                         }
                 }
                 else {
