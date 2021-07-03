@@ -3,10 +3,7 @@ my $LockoutTime = 604800;
 sub EVENT_SAY {
         if ($text=~/hail/i) {
                 $raid = $client->GetRaid();
-                if ($ulevel < 46) {
-			$client->Message(15,"Much to learn you still have… padawan. Return once your power has increased!");
-		}
-		elsif ($raid > 0) {
+		if ($raid > 0) {
                         $key = $name . "-permafrost-instance";
                         if (!quest::get_data($key)) {
                                 $key = $name . "-permafrost-raid";
@@ -67,10 +64,7 @@ sub EVENT_SAY {
         }
 	elsif ($text=~/create/i) {
                 $raid = $client->GetRaid();
-                if ($ulevel < 46) {
-			$client->Message(15,"Much to learn you still have… padawan. Return once your power has increased!");
-		}
-		elsif ($raid > 0) {
+		if ($raid > 0) {
                         if ($raid->IsLeader($name)) {
                                 $key = $name . "-permafrost-instance";
                                 if (!quest::get_data($key)) {
@@ -101,10 +95,7 @@ sub EVENT_SAY {
         }
 	elsif ($text=~/ready/i) {
                 $raid = $client->GetRaid();
-                if ($ulevel < 46) {
-			$client->Message(15,"Much to learn you still have… padawan. Return once your power has increased!");
-		}
-		elsif ($raid > 0) {
+		if ($raid > 0) {
                         $key = $raid->GetID() . "-permafrost-raid";
                         if (!quest::get_data($key)) {
                                 $client->Message(15, "Agent of Change says, 'Sorry, but your raid does not have an instance.  Ask your raid leader to make one.'");
@@ -122,7 +113,7 @@ sub EVENT_SAY {
                                 }
                                 $client->AssignToInstance($Instance);
                                 $client->MovePCInstance(73, $Instance, -60,100,3.44, 0);
-                                plugin::RandomSay(100, "Do not touch any Turmoil Warts!", "Do not pick the boogey, man!", "Pull my finger for a fright!", "Gorgon solo can be stinky.", "I want my shiverback shiverback shiverback...shiverback ribs!", "Does the tentacle tormentor only torment tentacles?", "You better hope TurmoilToad does not have any relatives in there!", "Phobos is a moon from Mars.  Plasm is a mold.  Moon Mold.  You are welcome.", "Eating amygdalin can cause cyanide poisoning.  It is true.", "Samhain existed before Halloween.  Those Pagans.");
+                                plugin::RandomSay(100, "Have an ice day!", "Variety is the ice of life.", "Once bitten, ice shy!", "Icy what you did there.", "Many are called but few are frozen.", "Are we friends or froze?", "Coughs and freezes spread diseases.", "Money doesn’t grow on freeze.", "Head for the chills!", "Ask a chilly question, get a chilly answer.");
                         }
                 }
                 else {
