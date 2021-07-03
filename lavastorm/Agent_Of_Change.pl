@@ -3,7 +3,7 @@ my $LockoutTime = 604800;
 sub EVENT_SAY {
         if ($text=~/hail/i) {
                 $raid = $client->GetRaid();
-		elsif ($raid > 0) {
+		if ($raid > 0) {
                         $key = $name . "-soldungb-instance";
                         if (!quest::get_data($key)) {
                                 $key = $name . "-soldungb-raid";
@@ -64,7 +64,7 @@ sub EVENT_SAY {
         }
 	elsif ($text=~/create/i) {
                 $raid = $client->GetRaid();
-		elsif ($raid > 0) {
+		if ($raid > 0) {
                         if ($raid->IsLeader($name)) {
                                 $key = $name . "-soldungb-instance";
                                 if (!quest::get_data($key)) {
@@ -95,7 +95,7 @@ sub EVENT_SAY {
         }
 	elsif ($text=~/ready/i) {
                 $raid = $client->GetRaid();
-		elsif ($raid > 0) {
+		if ($raid > 0) {
                         $key = $raid->GetID() . "-soldungb-raid";
                         if (!quest::get_data($key)) {
                                 $client->Message(15, "Agent of Change says, 'Sorry, but your raid does not have an instance.  Ask your raid leader to make one.'");
