@@ -112,7 +112,7 @@ sub EVENT_SAY {
                                         quest::set_data($key, $Instance, $LockoutTime);
                                 }
                                 $client->AssignToInstance($Instance);
-                                $client->MovePCInstance(32, $Instance, -413,-265,-108.84, 0);
+                                $client->MovePCInstance(32, $Instance, -265, -413, -108.84, 0);
                                 plugin::RandomSay(100, "You have nice manners for a thief and a liar.", "You seem familiar with my name, but I don't seem to remember smelling you before.", "Who are you and where do you come from, may I ask?", "Well thief! I smell you and I feel your air. I hear your breath. Come along! Help yourself again, there is plenty and to spare!", "I kill where I wish and none dare resist.", "I laid low the warriors of old and their like is not in the world today.");
                         }
                 }
