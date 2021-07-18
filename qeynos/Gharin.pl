@@ -42,9 +42,9 @@ sub EVENT_ITEM {
 		quest::faction(223, -12);		#:: - Circle of Unseen Hands
 		quest::faction(291, 5);			#:: + Merchants of Qeynos
 		#:: Grant a moderate amount of experience
-		quest::exp(8000);
+		quest::exp(800);
 		#:: Create a hash for storing cash - 10 to 50cp
-		my %cash = plugin::RandomCash(10,50);
+		my %cash = plugin::RandomCash(10, 50);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Reset item count
@@ -72,9 +72,9 @@ sub EVENT_ITEM {
 			quest::faction(223, -12);		#:: - Circle of Unseen Hands
 			quest::faction(291, 5);			#:: + Merchants of Qeynos
 			#:: Grant a moderate amount of experience
-			quest::exp(8000);
+			quest::exp(800);
 			#:: Create a hash for storing cash - 10 to 50cp
-			my %cash = plugin::RandomCash(10,50);
+			my %cash = plugin::RandomCash(10, 50);
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Reset item count
@@ -102,9 +102,9 @@ sub EVENT_ITEM {
 			quest::faction(223, -12);		#:: - Circle of Unseen Hands
 			quest::faction(291, 5);			#:: + Merchants of Qeynos
 			#:: Grant a moderate amount of experience
-			quest::exp(8000);
+			quest::exp(800);
 			#:: Create a hash for storing cash - 10 to 50cp
-			my %cash = plugin::RandomCash(10,50);
+			my %cash = plugin::RandomCash(10, 50);
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Reset item count
@@ -131,7 +131,7 @@ sub EVENT_ITEM {
 			quest::faction(223, -12);		#:: - Circle of Unseen Hands
 			quest::faction(291, 5);			#:: + Merchants of Qeynos
 			#:: Grant a moderate amount of experience
-			quest::exp(8000);
+			quest::exp(800);
 			#:: Create a hash for storing cash - 10 to 50cp
 			my %cash = plugin::RandomCash(10,50);
 			#:: Grant a random cash reward
