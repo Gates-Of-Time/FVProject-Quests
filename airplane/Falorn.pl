@@ -82,7 +82,7 @@ sub EVENT_ITEM {
 	}
 	elsif (quest::is_the_ruins_of_kunark_enabled()) {
 		#:: Match a 4321 - Aerated Pauldron
-		elsif (plugin::takeItems(4321 => 1)) {		#:: Swap Aerated Pauldrons -> Pauldrons of the Blue Sky
+		if (plugin::takeItems(4321 => 1)) {		#:: Swap Aerated Pauldrons -> Pauldrons of the Blue Sky
 			quest::say("You have proven yourself worthy.");
 			#:: Give a 27701 - Pauldrons of the Blue Sky
 			quest::summonitem(27701);
