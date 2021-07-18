@@ -30,8 +30,15 @@ sub EVENT_ITEM {
 	#:: Match a 20793 - Finely Woven Gold Mesh, a 20794 - Silken Strands, and a 20932 - Verdant Tessera
 	if (plugin::takeItems(20793 => 1, 20794 => 1, 20932 => 1)) {			#:: Monk Test of Strength
 		quest::say("You have done well, $name.");
-		#:: Give a 1282 - Mystical Back Straps
-		quest::summonitem(1282);
+		if (quest::is_the_ruins_of_kunark_enabled()) {
+			#:: Give a 27714 - Back Straps of Mastery
+			quest::summonitem(27714);
+		}
+		else {
+			#:: Give a 1282 - Mystical Back Straps
+			quest::summonitem(1282);
+		}
+
 		#:: Ding!
 		quest::ding();
 		#:: Grant a huge amount of experience

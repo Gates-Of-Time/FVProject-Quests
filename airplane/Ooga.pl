@@ -30,8 +30,15 @@ sub EVENT_ITEM {
 	#:: Match a 20845 - Efreeti War Club, a 20955 - Djinni Statuette, a 20842 - Corrosive Venom, and a 20841 - Wooden Bands
 	if (plugin::takeItems(20845 => 1, 20955 => 1, 20842 => 1, 20841 => 1)) {			#:: Shaman Test of Shrink
 		quest::say("Take dis.");
-		#:: Give a 27729 - Warhammer of the Wind
-		quest::summonitem(27729);
+		if (quest::is_the_ruins_of_kunark_enabled()) {
+			#:: Give a 27729 - Warhammer of the Wind
+			quest::summonitem(27729);
+		}
+		else {
+			#:: Give a 147497 - Spiroc Warhammer
+			quest::summonitem(147497);
+		}
+
 		#:: Ding!
 		quest::ding();
 		#:: Grant a huge amount of experience
@@ -41,8 +48,15 @@ sub EVENT_ITEM {
 	#:: Match a 20962 - Emerald Spiroc Feather, a 20843 - Bixie Essence, and a 20844 - Spiritualist`s Ring
 	elsif (plugin::takeItems(20962 => 1, 20843 => 1, 20844 => 1)) {					#:: Shaman Test of the Snake
 		quest::say("Take dis.");
-		#:: Give a 27730 - Vermilion Sky Ring
-		quest::summonitem(27730);
+		if (quest::is_the_ruins_of_kunark_enabled()) {
+			#:: Give a 27730 - Vermilion Sky Ring
+			quest::summonitem(27730);
+		}
+		else {
+			#:: Give a 11695 - Crimson Ring of Desinence
+			quest::summonitem(11695);
+		}
+
 		#:: Ding!
 		quest::ding();
 		#:: Grant a huge amount of experience

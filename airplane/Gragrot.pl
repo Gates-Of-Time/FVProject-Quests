@@ -19,10 +19,20 @@ sub EVENT_SAY {
 		quest::say("Great, let us waste no more time! I offer to you three challenges: Bash, smash, or slash. What do you wish to be tested in?");
 	}
 	elsif ($text=~/bash/i) {
-		quest::say("Gragrot like bashin. Gragrot say you like bashin too! Give Gragrot an Ebon Tessera, a Sphinx Eye Opal, and a Finely Crafted Amulet. Gragrot then give you Sphinx Eye Amulet.");
+		my $reward = "Sphinx Eye Amulet";
+		if (quest::is_the_ruins_of_kunark_enabled()) {
+			$reward = "Amulet of the Sphinx Eye";
+		} 
+				
+		quest::say("Gragrot like bashin. Gragrot say you like bashin too! Give Gragrot an Ebon Tessera, a Sphinx Eye Opal, and a Finely Crafted Amulet. Gragrot then give you $reward.");
 	}
 	elsif ($text=~/smash/i) {
-		quest::say("Gragrot wants you smashin. Smash, smash, and return a Copper Disk, a Small Sapphire, and a Silvery Ring. Then Gragrot give you Djinni's Finger Ring.");
+		my $reward = "Djinni's Finger Ring";
+		if (quest::is_the_ruins_of_kunark_enabled()) {
+			$reward = "Crimson Ring of the Djinni";
+		} 
+				
+		quest::say("Gragrot wants you smashin. Smash, smash, and return a Copper Disk, a Small Sapphire, and a Silvery Ring. Then Gragrot give you $reward.");
 	}
 	elsif ($text=~/slash/i) {
 		quest::say("Gragrot see you is powerful, but Gragrot wonders if you is good at Slashin. Gragrot says return with a Diaphanous Globe, a piece of dried leather, and a Finely Woven Cloth Belt. Gragrot then give you pegasus hide belt.");
@@ -33,8 +43,15 @@ sub EVENT_ITEM {
 	#:: Match a 20929 - Ebon Tessera, a 20997 - Sphinx Eye Opal, and a 20998 - Finely Crafted Amulet
 	if (plugin::takeItems(20929 => 1, 20997 => 1, 20998 => 1)) {			#:: Shadowknight Test of Bash
 		quest::say("You is powerful! Take this!");
-		#:: Give a 14554 - Sphinx Eye Amulet
-		quest::summonitem(14554);
+		if (quest::is_the_ruins_of_kunark_enabled()) {
+			#:: Give a 27705 - Amulet of the Sphinx Eye
+			quest::summonitem(27705);
+		}
+		else {
+			#:: Give a 14554 - Sphinx Eye Amulet
+			quest::summonitem(14554);
+		}
+
 		#:: Ding!
 		quest::ding();
 		#:: Grant a huge amount of experience
@@ -44,8 +61,16 @@ sub EVENT_ITEM {
 	#:: Match a 20936 - Copper Disc, a 20999 - Small Sapphire, and a 20700 - Silvery Ring
 	elsif (plugin::takeItems(20936 => 1, 20999 => 1, 20700 => 1)) {			#:: Shadowknight Test of Smash
 		quest::say("You is powerful! Take this!");
-		#:: Give a 14553 - Djinni Finger Ring
-		quest::summonitem(14553);
+		
+		if (quest::is_the_ruins_of_kunark_enabled()) {
+			#:: Give a 27706 - Crimson Ring of the Djinni
+			quest::summonitem(27706);
+		}
+		else {
+			#:: Give a 14553 - Djinni Finger Ring
+			quest::summonitem(14553);
+		}
+
 		#:: Ding!
 		quest::ding();
 		#:: Grant a huge amount of experience
