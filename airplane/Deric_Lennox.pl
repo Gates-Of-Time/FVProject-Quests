@@ -41,8 +41,15 @@ sub EVENT_ITEM {
 	#:: Match a 20815 - Djinni Aura, a 20816 - Efreeti Mace, a 20814 - Glowing Sapphire, and a 20961 - Saffron Spiroc Feather
 	elsif (plugin::takeItems(20815 => 1, 20816 => 1, 20814 => 1, 20961 => 1)) {		#:: Cleric Test of Theurgy
 		quest::say("Good on ya!");
-		#:: Give a 27718 - Theurgist's Star
-		quest::summonitem(27718);
+		if (quest::is_the_ruins_of_kunark_enabled()) {
+			#:: Give a 27718 - Theurgist's Star
+			quest::summonitem(27718);
+		}
+		else {
+			#:: Give a 11692 - Theurgist
+			quest::summonitem(11692);
+		}
+
 		#:: Ding!
 		quest::ding();
 		#:: Grant a huge amount of experience

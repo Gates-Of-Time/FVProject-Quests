@@ -30,8 +30,8 @@ sub EVENT_ITEM {
 	#:: Match a 20934 - Auburn Tessera, a 20850 - Griffon Talon, and a 20849 - Ysgaril Root
 	if (plugin::takeItems(20934 => 1, 20850 => 1, 20849 => 1)) {			#:: Ranger Test of Body
 		quest::say("Good work, ranger.");
-		#:: Give a 2715 - Spiroc Healer's Cloak
-		quest::summonitem(2715);
+		#:: Give a 14567 - Griffon Talon Necklace	
+		quest::summonitem(14567);
 		#:: Ding!
 		quest::ding();
 		#:: Grant a huge amount of experience
@@ -41,8 +41,14 @@ sub EVENT_ITEM {
 	#:: Match a 20853 - Fine Velvet Cloak, a 20852 - Harpy Tongue, and a 20851 - Mithril Disc
 	elsif (plugin::takeItems(20853 => 1, 20852 => 1, 20851 => 1)) {			#:: Ranger Test of Defense
 		quest::say("Good work, ranger.");
-		#:: Give a 27731 - Dark Cloak of the Sky
-		quest::summonitem(27731);
+		if (quest::is_the_ruins_of_kunark_enabled()) {
+			#:: Give a 27731 - Dark Cloak of the Sky
+			quest::summonitem(27731);
+		}
+		else {
+			#:: Give a 2715 - Spiroc Healer's Cloak
+			quest::summonitem(2715);
+		}
 		#:: Ding!
 		quest::ding();
 		#:: Grant a huge amount of experience
