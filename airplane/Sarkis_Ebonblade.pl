@@ -10,13 +10,15 @@ sub EVENT_SAY {
 			quest::say("I will summon him for you then");
 			#:: Spawn a The Plane of Sky >> Gragrot (71063), without grid or guild war, at the specified location
 			quest::spawn2(71063, 0, 0, 563.3, 1351.9, -766.9, 63.4);
-			quest::depop();
+			#:: Depop with spawn timer active
+			quest::depop_withtimer();
 		}
 		elsif ($text=~/tynicon/i) {
 			quest::say("I will summon him for you then");
 			#:: Spawn a The Plane of Sky >> Tynicon_DLin (71098), without grid or guild war, at the specified location
 			quest::spawn2(71098, 0, 0, 563.3, 1351.9, -766.9, 63.4);
-			quest::depop();
+			#:: Depop with spawn timer active
+			quest::depop_withtimer();
 		}
 	}
 }
