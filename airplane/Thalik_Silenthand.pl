@@ -10,13 +10,15 @@ sub EVENT_SAY {
 			quest::say("I will summon him for you then");
 			#:: Spawn a The Plane of Sky >> Rayne (71061), without grid or guild war, at the specified location
 			quest::spawn2(71061, 0, 0, 563.3, 1372.6, -766.9, 63.4);
-			quest::depop();
+			#:: Depop with spawn timer active
+			quest::depop_withtimer();
 		}
 		elsif ($text=~/kendrick/i) {
 			quest::say("I will summon him for you then");
 			#:: Spawn a The Plane of Sky >> Kendrick (71068), without grid or guild war, at the specified location
 			quest::spawn2(71068, 0, 0, 563.3, 1372.6, -766.9, 63.4);
-			quest::depop();
+			#:: Depop with spawn timer active
+			quest::depop_withtimer();
 		}
 	}
 }
