@@ -10,13 +10,15 @@ sub EVENT_SAY {
 			quest::say("I will summon him for you then");
 			#:: Spawn a The Plane of Sky >> Falorn (71067), without grid or guild war, at the specified location
 			quest::spawn2(71067, 0, 0, 563.3, 1392.4, -766.9, 63.4);
-			quest::depop();
+			#:: Depop with spawn timer active
+			quest::depop_withtimer();
 		}
 		if ($text=~/ogog/i) {
 			quest::say("I will summon him for you then");
 			#:: Spawn a The Plane of Sky >> Ogog (71064), without grid or guild war, at the specified location
 			quest::spawn2(71064, 0, 0, 563.3, 1392.4, -766.9, 63.4);
-			quest::depop();
+			#:: Depop with spawn timer active
+			quest::depop_withtimer();
 		}
 	}
 }
