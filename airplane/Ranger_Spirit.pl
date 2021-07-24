@@ -10,13 +10,15 @@ sub EVENT_SAY {
 			quest::say("I shall summon him for you then");
 			#:: Spawn The Plane of Sky >> Relinin_Skyrunner (71095), without grid or guild war, at the specified location
 			quest::spawn2(71095, 0, 0, 617.1, 1399.5, -766.9, 129.4);
-			quest::depop();
+			#:: Depop with spawn timer active
+			quest::depop_withtimer();
 		}
 		elsif ($text=~/gordon treecaller/i) {
 			quest::say("I shall summon him for you then");
 			#:: Spawn The Plane of Sky >> Gordon_Treecaller (71090), without grid or guild war, at the specified location
 			quest::spawn2(71090, 0, 0, 592.8, 1400.1, -766.9, 129.4);
-			quest::depop();
+			#:: Depop with spawn timer active
+			quest::depop_withtimer();
 		}
 	}
 }
