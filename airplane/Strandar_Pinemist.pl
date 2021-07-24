@@ -10,13 +10,15 @@ sub EVENT_SAY {
 			quest::say("I will summon him for you then");
 			#:: Spawn a The Plane of Sky >> Will_Treewalker (71099), without grid or guild war, at the specified location
 			quest::spawn2(71099, 0, 0, 563, 1311.4, -766.9, 65.4);
-			quest::depop();
+			#:: Depop with spawn timer active
+			quest::depop_withtimer();
 		}
 		elsif ($text=~/fenalla/i) {
 			quest::say("I will summon him for you then");
 			#:: Spawn a The Plane of Sky >> Fenalla_Moonshadow (71086), without grid or guild war, at the specified location
 			quest::spawn2(71086, 0, 0, 562.5, 1329.3, -766.9, 65.4);
-			quest::depop();
+			#:: Depop with spawn timer active
+			quest::depop_withtimer();
 		}
 	}
 }
