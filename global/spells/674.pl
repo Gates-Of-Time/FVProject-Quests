@@ -2,6 +2,8 @@
 
 sub EVENT_SPELL_EFFECT_CLIENT {
 	if ($status < 80) {
- 		$client->BuffFadeAll();
+		if ($zoneid != 71) {
+	 		$client->BuffFadeAll();
+		}
 	}
 }
