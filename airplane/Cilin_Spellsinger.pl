@@ -10,13 +10,15 @@ sub EVENT_SAY {
 			quest::say("I shall summon them for you");
 			#:: Spawn a The Plane of Sky >> Clarisa_Spiritsong (71081), without grid or guildwar, at the specified location
 			quest::spawn2(71081, 0, 0, 660.7, 1388.9, -766.9, 192.6);
-			quest::depop();
+			#:: Depop with spawn timer active
+			quest::depop_withtimer();
 		}
 		elsif ($text=~/denise/i) {
 			quest::say("I shall summon them for you");
 			#:: Spawn a The Plane of Sky >> Denise_Songweaver (71082), without grid or guildwar, at the specified location
 			quest::spawn2(71082, 0, 0, 660.7, 1368.4, -766.9, 192.6);
-			quest::depop();
+			#:: Depop with spawn timer active
+			quest::depop_withtimer();
 		}
 	}
 }
