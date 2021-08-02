@@ -10,13 +10,15 @@ sub EVENT_SAY {
 			quest::say("I shall summon them for you");
 			#:: Spawn a The Plane of Sky >> Gina_McStargan (71087), without grid or guild war, at the specified location
 			quest::spawn2(71087, 0, 0, 631.9, 1401.9, -766.9, 129.8);
-			quest::depop();
+			#:: Depop with spawn timer active
+			quest::depop_withtimer();
 		}
 		elsif ($text=~/ooga/i) {
 			quest::say("I shall summon them for you");
 			#:: Spawn a The Plane of Sky >> Ooga (71093), without grid or guild war, at the specified location
 			quest::spawn2(71093, 0, 0, 653.4, 1399.0, -766.9, 129.8);
-			quest::depop();
+			#:: Depop with spawn timer active
+			quest::depop_withtimer();
 		}
 	}
 }

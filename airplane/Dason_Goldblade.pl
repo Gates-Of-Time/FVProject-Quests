@@ -9,12 +9,14 @@ sub EVENT_SAY {
 	        quest::say("I will summon him for you then");
 		#:: Spawn a The Plane of Sky >> Gregori_Lightbringer (71089), without grid or guild war, at the specified location
         	quest::spawn2(71089, 0, 0, 563, 1331.1, -766.9, 63.4);
-	        quest::depop();
+	        #:: Depop with spawn timer active
+		quest::depop_withtimer();
 	}
 	elsif ($text=~/dirkog/i) {
 		quest::say("I will summon him for you then");
 		#:: Spawn a The Plane of Sky >> Dirkog_Steelhand (71077), without grid or guild war, at the specified location
 		quest::spawn2(71077, 0, 0, 563, 1331.1, -766.9, 63.4);
-		quest::depop();
+		#:: Depop with spawn timer active
+		quest::depop_withtimer();
 	}
 }
