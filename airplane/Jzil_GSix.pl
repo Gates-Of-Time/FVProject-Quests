@@ -30,15 +30,8 @@ sub EVENT_ITEM {
 	#:: Match a 20932 - Verdant Tessera, a 20780 - Ebon Shard, and a 20781 - Griffon's Beak
 	if (plugin::takeItems(20932 => 1, 20780 => 1, 20781 => 1)) {			#:: Necromancer Test of Flight
 		quest::say("Very good. Now take this and leave me.");
-		if (quest::is_the_ruins_of_kunark_enabled()) {
-			#:: Give a 27712 - Bloody Griffon-Hide Wrist Guard
-			quest::summonitem(27712);
-		}
-		else {
-			#:: Give a 2709 - Rotted Griffon-Hide Wrist Guard
-			quest::summonitem(2709);
-		}
-		
+		#:: Give a 2709 - Rotted Griffon-Hide Wrist Guard
+		quest::summonitem(2709);
 		#:: Ding!
 		quest::ding();
 		#:: Grant a huge amount of experience
