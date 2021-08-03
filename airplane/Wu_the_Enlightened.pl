@@ -41,15 +41,8 @@ sub EVENT_ITEM {
 	#:: Match a 20803 - Brass Knuckles, a 20801 - Ethereal Amethyst, a 20802 - Nebulous Sapphire, and a 20960 - White Spiroc Feather
 	elsif (plugin::takeItems(20803 => 1, 20801 => 1, 20802 => 1, 20960 => 1)) {		#:: Monk Test of Fists
 		quest::say("You have moved closer to enlightenment.");
-		if (quest::is_the_ruins_of_kunark_enabled()) {
-			#:: Give a 27715 - Wu's Fist of Mastery
-			quest::summonitem(27715);
-		}
-		else {
-			#:: Give a 11690 - Wu's Tranquil Fist
-			quest::summonitem(11690);
-		}
-
+		#:: Give a 11690 - Wu's Tranquil Fist
+		quest::summonitem(11690);
 		#:: Ding!
 		quest::ding();
 		#:: Grant a huge amount of experience

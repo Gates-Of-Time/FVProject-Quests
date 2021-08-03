@@ -52,15 +52,8 @@ sub EVENT_ITEM {
 	#:: Match a 20960 - White Spiroc Feather, a 20788 - Nebulous Ruby, and a 20789 - Ring of Veeshan
 	elsif (plugin::takeItems(20960 => 1, 20788 => 1, 20789 => 1)) {				#:: Necromancer Test of the Finger
 		quest::say("Haha! So you lived! Take this and be gone!");
-		if (quest::is_the_ruins_of_kunark_enabled()) {
-			#:: Give a 27713 - Band of Wailing Winds
-			quest::summonitem(27713);
-		}
-		else {
-			#:: Give a 14561 - Band of Screaming Winds
-			quest::summonitem(14561);
-		}
-
+		#:: Give a 14561 - Band of Screaming Winds
+		quest::summonitem(14561);
 		#:: Ding!
 		quest::ding();
 		#:: Grant a huge amount of experience
