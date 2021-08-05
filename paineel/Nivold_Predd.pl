@@ -20,18 +20,18 @@ sub EVENT_ITEM {
 			quest::summonitem(14105);
 			#:: Ding!
 			quest::ding();
-			#:: Grant a moderate amount of experience
-			quest::exp(1000);
-			#:: Create a hash for storing cash - 1111 to 9999cp
-			my %cash = plugin::RandomCash(1111,9999);
-			#:: Grant a random cash reward
-			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Set factions
 			quest::faction(265,400);	# + Heretics
 			quest::faction(254,-400);	# - Gate Callers
 			quest::faction(242,-400);	# - Deepwater Knights
 			quest::faction(231,-400);	# - Craftkeepers
 			quest::faction(233,-400);	# - Crimson Hands
+			#:: Grant a moderate amount of experience
+			quest::exp(1000);
+			#:: Create a hash for storing cash - 1111 to 9999cp
+			my %cash = plugin::RandomCash(1111,9999);
+			#:: Grant a random cash reward
+			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 			#:: Spawn an avatar_of_dread (75164)
 			quest::unique_spawn(75164,0,0,474,1230,-37,256);
 		}

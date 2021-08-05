@@ -51,14 +51,14 @@ sub EVENT_ITEM {
 		quest::summonitem(13573);
 		#:: Ding!
 		quest::ding();
-		#:: Grant a small amount of experience
-		quest::exp(100);
 		#:: Set factions
 		quest::faction(265,100);	#:: + Heretics
 		quest::faction(242,-100);	#:: - Deepwater Knights
 		quest::faction(254,-100);	#:: - Gate Callers
 		quest::faction(231,-100);	#:: - Craftkeepers
 		quest::faction(233,-100);	#:: - Crimson Hands
+		#:: Grant a small amount of experience
+		quest::exp(100);
 	}
 	#:: Match four 13270 - Infected Rat Livers
 	elsif (plugin::takeItems(13270 => 4)) {
@@ -67,14 +67,14 @@ sub EVENT_ITEM {
 		quest::summonitem(1437);
 		#:: Ding!
 		quest::ding();
-		#:: Grant a small amount of experience
-		quest::exp(200);
 		#:: Set factions
 		quest::faction(265, 10);	#:: + Heretics
 		quest::faction(231, -30);	#:: - Craftkeepers
 		quest::faction(233, -30);	#:: - Crimson Hands
 		quest::faction(242, -30);	#:: - Deepwater Knights
 		quest::faction(254, -30);	#:: - Gate Callers
+		#:: Grant a small amount of experience
+		quest::exp(200);
 	} 
 	#:: Match a 13074 - Zombie Skin, 16990 - Embalming Dust, 14102 - Charred Bone Chips, 14103 - Vial of Tunare's Breath
 	elsif (plugin::takeItems(13074 => 1, 16990 => 1, 14102 => 1, 14103 => 1)) {
@@ -83,18 +83,18 @@ sub EVENT_ITEM {
 		quest::summonitem(147495);
 		#:: Ding!
 		quest::ding();
-		#:: Grant a moderate amount of experience
-		quest::exp(1000);
-		#:: Create a hash for storing cash - 1111 to 9999cp
-		my %cash = plugin::RandomCash(1111,9999);
-		#:: Grant a random cash reward
-		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
 		quest::faction(265, 150);	#:: + Heretics
 		quest::faction(231, -30);	#:: - Craftkeepers
 		quest::faction(233, -30);	#:: - Crimson Hands
 		quest::faction(242, -30);	#:: - Deepwater Knights
 		quest::faction(254, -30);	#:: - Gate Callers
+		#:: Grant a moderate amount of experience
+		quest::exp(1000);
+		#:: Create a hash for storing cash - 1111 to 9999cp
+		my %cash = plugin::RandomCash(1111,9999);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Spawn an Avatar_of_Fright (38202)
 		quest::unique_spawn(38202,0,0,474,1230,-37,128);
 	}
