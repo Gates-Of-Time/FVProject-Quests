@@ -1,8 +1,6 @@
 sub EVENT_SPAWN {
-	#:: Set up a proximity, 100 units across
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Set up a proximity, 100 units across, 50 units tall, without proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 25, $z + 25, 0);
 }
 
 sub EVENT_ENTER {
@@ -23,7 +21,7 @@ sub EVENT_SAY {
 		quest::say("The primary duty of this temple is to spread terror, fright, and dread as a symbol of your devotion to our lord Cazic Thule. We are currently researching a means of summoning avatars of Fright, Terror and Dread, the primary minions of the Faceless in his home plane. Will you [assist] the avatar of Fright?");
 	}
 	elsif ($text=~/assist/i) {
-		quest::say("In order to summon the avatar of Fright. I require some special components for the ritual. Fetch me the flesh of a zombie, the dust used in the process of mummification, [charred bone chips], and a [vial of Tunare's Breath].");
+		quest::say("In order to summon the avatar of Fright, I require some special components for the ritual. Fetch me the flesh of a zombie, the dust used in the process of mummification, [charred bone chips], and a [vial of Tunare's Breath].");
 	}
 	elsif ($text=~/charred bone chips/i) {
 		quest::say("Some time ago a necromancer by the name of Obretl was sent to slay Rathmana Allin and his abomination of an adopted son, Ortallius. Obretl failed in his task and now haunts a small ruin in the desert of Ro cursed by Solusek to wallow in his failure in the form of a burning skeleton. Slay Obretl to free him from his pathetic existence and gather his charred remains.");
@@ -52,11 +50,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(265,100);	#:: + Heretics
-		quest::faction(242,-100);	#:: - Deepwater Knights
-		quest::faction(254,-100);	#:: - Gate Callers
-		quest::faction(231,-100);	#:: - Craftkeepers
-		quest::faction(233,-100);	#:: - Crimson Hands
+		quest::faction(265, 100);	#:: + Heretics
+		quest::faction(242, -100);	#:: - Deepwater Knights
+		quest::faction(254, -100);	#:: - Gate Callers
+		quest::faction(231, -100);	#:: - Craftkeepers
+		quest::faction(233, -100);	#:: - Crimson Hands
 		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
@@ -67,20 +65,20 @@ sub EVENT_ITEM {
 		quest::summonitem(1437);
 		#:: Ding!
 		quest::ding();
-		#:: Set factions
-		quest::faction(265, 10);	#:: + Heretics
-		quest::faction(231, -30);	#:: - Craftkeepers
-		quest::faction(233, -30);	#:: - Crimson Hands
-		quest::faction(242, -30);	#:: - Deepwater Knights
-		quest::faction(254, -30);	#:: - Gate Callers
+		#:: Set factions (confirmed)
+		quest::faction(265, 5);		#:: + Heretics
+		quest::faction(231, -5);	#:: - Craftkeepers
+		quest::faction(233, -5);	#:: - Crimson Hands
+		quest::faction(242, -5);	#:: - Deepwater Knights
+		quest::faction(254, -5);	#:: - Gate Callers
 		#:: Grant a small amount of experience
 		quest::exp(200);
 	} 
 	#:: Match a 13074 - Zombie Skin, 16990 - Embalming Dust, 14102 - Charred Bone Chips, 14103 - Vial of Tunare's Breath
 	elsif (plugin::takeItems(13074 => 1, 16990 => 1, 14102 => 1, 14103 => 1)) {
 		quest::say("Excellent job, $name. These components will help with our research immeasurably. You will soon be reaping the rewards granted by our Lord Cazic-Thule!! If you want to further assist our research effots, talk to Atdehim Sqonci.");
-		#:: Give a 147495 - Mundane Helm
-		quest::summonitem(147495);
+		#:: Give a 14104 - Mundane Helm
+		quest::summonitem(14104);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
@@ -92,7 +90,7 @@ sub EVENT_ITEM {
 		#:: Grant a moderate amount of experience
 		quest::exp(1000);
 		#:: Create a hash for storing cash - 1111 to 9999cp
-		my %cash = plugin::RandomCash(1111,9999);
+		my %cash = plugin::RandomCash(1111, 9999);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Spawn an Avatar_of_Fright (38202)
