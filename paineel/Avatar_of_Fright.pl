@@ -15,19 +15,19 @@ sub EVENT_TIMER {
 }
 
 sub EVENT_ITEM {
-	#:: Match a 147495 - Mundane Helm
-	if (plugin::takeItems(147495 => 1)) {
+	#:: Match a 14104 - Mundane Helm
+	if (plugin::takeItems(14104 => 1)) {
 		quest::say("Wear this helm imbued with my very essence. Wear it in honor of your great services to our Lord Cazic-Thule!");
 		#:: Give a 14100 - Fright Forged Helm
 		quest::summonitem(14100);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(265,50);		# + Heretics
-		quest::faction(254,-50);	# - Gate Callers
-		quest::faction(242,-50);	# - Deepwater Knights
-		quest::faction(231,-50);	# - Craftkeepers
-		quest::faction(233,-50);	# - Crimson Hands
+		quest::faction(265, 50);		# + Heretics
+		quest::faction(254, -50);		# - Gate Callers
+		quest::faction(242, -50);		# - Deepwater Knights
+		quest::faction(231, -50);		# - Craftkeepers
+		quest::faction(233, -50);		# - Crimson Hands
 		#:: Grant a moderate amount of experience
 		quest::exp(1000);
 		#:: Despawn
