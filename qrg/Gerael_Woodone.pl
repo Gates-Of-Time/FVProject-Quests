@@ -19,6 +19,18 @@ sub EVENT_SAY {
 	elsif ($text=~/nitrates/i) {
 		quest::say("It is nothing more than a special elixir for plants only.");
 	}
+	elsif ($text=~/where.*plains of karana/i) {
+		quest::say("One path in Qeynos Hills leads to Qeynos and another to the Plains of Karana.");
+	}
+	elsif ($text=~/where.*qeynos/i) {
+		quest::say("The great city of Qeynos can be found by walking along the path outside of Surefall Glade.  Many of our rangers and druids serve alongside the Qeynos Guard when the need arises.");
+	}
+	elsif ($text=~/where.*druid.*guildmaster/i) {
+		quest::say("The Jaggedpine Treefolk are the local druids.  The masters can be found here within the great tree."); 
+	}
+	elsif ($text=~/where.*bank/i) {
+		quest::say("There is no need for a vault among our people.  You could try the Qeynos Hold in Qeynos."); 
+	}
 }
 
 sub EVENT_ITEM {
@@ -56,7 +68,7 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience, based on level
 		$client->AddLevelBasedExp(1, 46);
 		#:: Create a hash for storing cash - 250 to 300cp
-		my %cash = plugin::RandomCash(250,300);
+		my %cash = plugin::RandomCash(250, 300);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
