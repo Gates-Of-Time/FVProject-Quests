@@ -1,5 +1,5 @@
 sub EVENT_SPAWN {
-	#:: Set a proximity 80 by 80 units wide; by 20 units tall, without proximity say
+	#:: Set a proximity 70 by 70 units wide; by 20 units tall, without proximity say
 	quest::set_proximity($x - 70, $x + 70, $y - 70, $y + 70, $z - 10, $z + 10, 0);
 }
 
