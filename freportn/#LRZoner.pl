@@ -6,4 +6,6 @@ sub EVENT_SPAWN {
 sub EVENT_ENTER {
 	#:: Move the player who triggered the event to 9 - freportw at the specified coordinates and heading
 	quest::movepc(9, -586.57, 715.13, -19.25, 324.5);
+	if($status > 100) {
+		$client->Message(15, "DEBUG: You have entered a proximity!");
 }
