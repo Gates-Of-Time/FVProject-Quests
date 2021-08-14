@@ -8,6 +8,6 @@ sub EVENT_SPAWN {
 sub EVENT_ENTER {
 	#:: Move the player who triggerd the event to 51 - lakerathe at the specified coordinates
 	quest::movepc(51, 2643, 2419, 97);
-	if($status > 100) {
-		$client->Message(15, "DEBUG: You have entered a proximity!");
+	#:: if($status > 100) {
+		#:: $client->Message(15, "DEBUG: You have entered a proximity!");
 }
