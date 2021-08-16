@@ -1,5 +1,5 @@
 sub EVENT_SAY {
-    if ( $text =~ /Hail/i ) {
+    if ( $text=~/Hail/i ) {
         quest::emote(
             "puffs up his chest and lifts his chin with hearty arrogance."
         );

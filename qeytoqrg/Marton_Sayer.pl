@@ -17,7 +17,7 @@ sub EVENT_SAY {
 	elsif ($text=~/joseph sayer/i) {
 		quest::say("You speak of my son, Joseph Sayer. He is but an infant and is safe here with Mira and me... At least, I believe he is.");
 	}
-	elsif ($text=/true potential/i) {
+	elsif ($text=~/true potential/i) {
 		quest::say("The true potential of Gnoll Slayer is an enchantment which was once imbedded into a gnoll's eye which was placed into the hilt of the blade. The spell would help you fight off disease and call forth a wolf to fight beside you. Alas, the gnoll eye was stolen from the blade by a great, one-eyed, white gnoll. Alone with the eye, the only book which explained how to return the enchantment was also stolen. I know not where this gnoll might be. If you can find the journal and the eye, return them with the Gnoll Slayer to me for I have been searching for decades.");
 	}
 }
