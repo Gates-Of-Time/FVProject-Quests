@@ -22,7 +22,7 @@ sub EVENT_SAY {
 		quest::say("A monk must know when to use his or her fists, and when to use ones mind. You must decide in this endevour, which you shall use. Return to me, once you have found them, a pair of Brass Knuckles, a White Spiroc Feather, an Emerald Amethyst, and a Nebulous Sapphire.");
 	}
 	elsif ($text=~/tranquility/i) {
-		quest::say("Ah, the test of tranquility. Only the tranquil monk can achieve enlightenment. Are you such an individual? Time shall tell. Retrieve these items for me. Bring an Aged Nectar, a Writ of Quellious, and a Glowing Diamond and we shall asses your ability.");
+		quest::say("Ah, the test of tranquility. Only the tranquil monk can achieve enlightenment. Are you such an individual? Time shall tell. Retrieve these items for me. Bring an Aged Nectar, a Decree of Quellious, and a Glowing Diamond and we shall asses your ability.");
 	}
 }
 
