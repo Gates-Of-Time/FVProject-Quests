@@ -1,6 +1,7 @@
 sub EVENT_SPAWN {
 	#:: Create a timer 'falorn_depop' that triggers every 300 seconds (5 min)
 	quest::settimer("falorn_depop", 300);
+	quest::say("I am Falorn. Good day to thee.");
 }
 
 sub EVENT_TIMER {
