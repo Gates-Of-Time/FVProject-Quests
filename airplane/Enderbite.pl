@@ -16,7 +16,7 @@ sub EVENT_SAY {
 		quest::say("Great, let us waste no more time! I have three tests from which you can choose from. They are Disillusion, Memorization, and Incapacitation.");
 	}
 	elsif ($text=~/disillusion/i) {
-		quest::say("Disillusion it is. Proceed upward through the sky and return to me a Harpy Statuette, a Nebulous Sapphire, and an Adamintium Earring. This will prove your abilities to me and I will reward you with an Earring of Displacement.");
+		quest::say("Disillusion it is. Proceed upward through the sky and return to me a Harpy Statuette, a Black Nebulous Sapphire, and an Adamintium Earring. This will prove your abilities to me and I will reward you with an Earring of Displacement.");
 	}
 	elsif ($text=~/memorization/i) {
 		quest::say("Memorization it is. Proceed upward through the sky and return to me a Carmine Spiroc Feather, a Ganoric Poison, and a Glowing Necklace. This will prove your abilities to me and I will reward you with a Necklace of Whispering Winds.");
@@ -27,8 +27,8 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Match a 20774 - Adamantium Earring, a 20952 - Harpy Statuette, and a 20802 - Nebulous Sapphire
-	if (plugin::takeItems(20774 => 1, 20952 => 1, 20802 => 1)) {				#:: Enchanter Test of Disillusion
+	#:: Match a 20774 - Adamantium Earring, a 20952 - Harpy Statuette, and a 20773 - Black Nebulous Sapphire
+	if (plugin::takeItems(20774 => 1, 20952 => 1, 20773 => 1)) {				#:: Enchanter Test of Disillusion
 		quest::say("Good. Take this as your reward.");
 		#:: Give a 14559 - Earring of Displacement
 		quest::summonitem(14559);
