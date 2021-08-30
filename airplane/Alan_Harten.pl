@@ -1,6 +1,7 @@
 sub EVENT_SPAWN {
 	#:: Create a timer 'alan_depop' that triggers every 300 seconds (5 min)
 	quest::settimer("abec_depop", 300);
+	quest::say("Faith is the key.");
 }
 
 sub EVENT_TIMER {
@@ -52,8 +53,8 @@ sub EVENT_ITEM {
 		#:: Depop without spawn timer active
 		quest::depop();
 	}
-	#:: Match a 20946 - Adumbrate Globe, a 20829 - Glowing Diamond, and a2 0811 - Shiny Pauldrons
-	elsif (plugin::takeItems(20946 => 1, 20829 => 1, 20811 => 1)) {			#:: Cleric Test of Protection
+	#:: Match a 20946 - Adumbrate Globe, a 20810 - Faintly Glowing Diamond, and a 20811 - Shiny Pauldrons
+	elsif (plugin::takeItems(20946 => 1, 20810 => 1, 20811 => 1)) {			#:: Cleric Test of Protection
 		quest::say("Wonderful! Take this as your reward!");
 		#:: Give a 4323 - Glowing Pauldrons
 		quest::summonitem(4323);
