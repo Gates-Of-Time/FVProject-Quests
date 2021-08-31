@@ -112,7 +112,7 @@ sub EVENT_SAY {
                                         quest::set_data($key, $Instance, $LockoutTime);
                                 }
                                 $client->AssignToInstance($Instance);
-                                $client->MovePCInstance(73, $Instance, 100, -60, 3.44, 0);
+                                $client->MovePCInstance(73, $Instance, 100, -60, 4, 0);
                                 plugin::RandomSay(100, "Have an ice day!", "Variety is the ice of life.", "Once bitten, ice shy!", "Icy what you did there.", "Many are called but few are frozen.", "Are we friends or froze?", "Coughs and freezes spread diseases.", "Money doesn’t grow on freeze.", "Head for the chills!", "Ask a chilly question, get a chilly answer.");
                         }
                 }

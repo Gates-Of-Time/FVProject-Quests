@@ -121,7 +121,7 @@ sub EVENT_SAY {
                                         quest::set_data($key, $Instance, $LockoutTime);
                                 }
                                 $client->AssignToInstance($Instance);
-                                $client->MovePCInstance(71, $Instance, 614, 1415, -650, 0);
+                                $client->MovePCInstance(71, $Instance, 539, 1384, -664, 0);
                                 plugin::RandomSay(100, "Do not touch any Turmoil Warts!", "Do not pick the boogey, man!", "Pull my finger for a fright!", "Gorgon solo can be stinky.", "I want my shiverback shiverback shiverback...shiverback ribs!", "Does the tentacle tormentor only torment tentacles?", "You better hope TurmoilToad does not have any relatives in there!", "Phobos is a moon from Mars.  Plasm is a mold.  Moon Mold.  You are welcome.", "Eating amygdalin can cause cyanide poisoning.  It is true.", "Samhain existed before Halloween.  Those Pagans.");
                         }
                 }
