@@ -1,6 +1,7 @@
 sub EVENT_SPAWN {
 	#:: Create a timer 'abec_depop' that triggers every 300 seconds (5 min)
 	quest::settimer("abec_depop", 300);
+	quest::say("I am here to do your bidding, Wizard Spirit!");
 }
 
 sub EVENT_TIMER {
@@ -52,8 +53,8 @@ sub EVENT_ITEM {
     		#:: Depop without spawn timer active
 		quest::depop();
 	}
-	#:: Match a 20753 - Efreeti War Staff, a 20965 - Lush Nectar, a 20751 - Copper Air Band, and a 20758 - Ivory Pendant
-	elsif (plugin::takeItems(20753 => 1, 20965 => 1, 20751 => 1, 20758 => 1)) { 	#:: Wizard Test of Preparation
+	#:: Match a 20753 - Efreeti War Staff, a 20965 - Lush Nectar, a 20751 - Copper Air Band, and a 20752 - Large Sky Sapphire
+	elsif (plugin::takeItems(20753 => 1, 20965 => 1, 20751 => 1, 20752 => 1)) { 	#:: Wizard Test of Preparation
 		quest::say("Excellent! Take this.");
 		#:: Give a 11685 - Nargon's Staff
 		quest::summonitem(11685);
