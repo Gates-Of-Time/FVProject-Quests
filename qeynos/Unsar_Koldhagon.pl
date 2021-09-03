@@ -21,7 +21,7 @@ sub EVENT_ITEM {
 		quest::faction(342, 5);		#:: + Order of Three
 		quest::faction(221, -1);	#:: - Bloodsabers
 		quest::faction(262, 1);		#:: + Guards of Qeynos
-		quest::faction(296, -1,);	#:: - Opal Darkbriar
+		quest::faction(296, -1);	#:: - Opal Darkbriar
 		#:: Grant a small amount of experience
 		quest::exp(200);
 	}
