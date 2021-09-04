@@ -120,7 +120,8 @@ sub EVENT_SAY {
                                         plugin::RandomSay(100, "Kiss those buffs goodbye!", "Watch that first step!");
 
 				} else {
-					if ($Instance == quest::get_data($key)) {
+                                        my $raidKey = $raid->GetID() . "-airplane-raid";
+					if ($raidKey == quest::get_data($key)) {
                                                 $client->MovePCInstance(71, $Instance, 539, 1384, -664, 0);
                                                 plugin::RandomSay(100, "Kiss those buffs goodbye!", "Watch that first step!");
                                         }
