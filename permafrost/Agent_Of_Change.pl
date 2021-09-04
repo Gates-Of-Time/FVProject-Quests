@@ -106,14 +106,21 @@ sub EVENT_SAY {
                                 $key = $name . "-permafrost-raid";
                                 if (!quest::get_data($key)) {
                                         quest::set_data($key, $raid->GetID(), $InstanceTime);
-                                }
-                                $key = $name . "-permafrost-instance";
-                                if (!quest::get_data($key)) {
-                                        quest::set_data($key, $Instance, $LockoutTime);
-                                }
-                                $client->AssignToInstance($Instance);
-                                $client->MovePCInstance(73, $Instance, 100, -60, 4, 0);
-                                plugin::RandomSay(100, "Have an ice day!", "Variety is the ice of life.", "Once bitten, ice shy!", "Icy what you did there.", "Many are called but few are frozen.", "Are we friends or froze?", "Coughs and freezes spread diseases.", "Money doesn’t grow on freeze.", "Head for the chills!", "Ask a chilly question, get a chilly answer.");
+                                        $client->AssignToInstance($Instance);
+                                        $client->MovePCInstance(73, $Instance, 100, -60, 4, 0);
+                                        plugin::RandomSay(100, "Have an ice day!", "Variety is the ice of life.", "Once bitten, ice shy!", "Icy what you did there.", "Many are called but few are frozen.", "Are we friends or froze?", "Coughs and freezes spread diseases.", "Money doesn’t grow on freeze.", "Head for the chills!", "Ask a chilly question, get a chilly answer.");
+
+				} else {
+                                        my $raidKey = $raid->GetID() . "-permafrost-instance";
+					if ($raidKey == quest::get_data($key)) {
+                                                $client->MovePCInstance(73, $Instance, 100, -60, 4, 0);
+                                                plugin::RandomSay(100, "Have an ice day!", "Variety is the ice of life.", "Once bitten, ice shy!", "Icy what you did there.", "Many are called but few are frozen.", "Are we friends or froze?", "Coughs and freezes spread diseases.", "Money doesn’t grow on freeze.", "Head for the chills!", "Ask a chilly question, get a chilly answer.");
+                                        }
+                                        else {
+                                                my $LockoutTime = quest::get_data_expires($key) - time();
+                                                quest::say("Sorry $name, but you still have an active instance " . quest::get_data($raidKey) . ", and your raid is in instance $Instance.  You can join another Airplane instance in $LockoutTime seconds.");
+                                        }
+                                }        
                         }
                 }
                 else {
