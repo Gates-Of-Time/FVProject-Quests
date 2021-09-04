@@ -114,15 +114,26 @@ sub EVENT_SAY {
                                 $Instance = quest::get_data($key);
                                 $key = $name . "-airplane-raid";
                                 if (!quest::get_data($key)) {
-                                        quest::set_data($key, $raid->GetID(), $InstanceTime);
-                                }
-                                $key = $name . "-airplane-instance";
-                                if (!quest::get_data($key)) {
-                                        quest::set_data($key, $Instance, $LockoutTime);
-                                }
-                                $client->AssignToInstance($Instance);
-                                $client->MovePCInstance(71, $Instance, 539, 1384, -664, 0);
-                                plugin::RandomSay(100, "Do not touch any Turmoil Warts!", "Do not pick the boogey, man!", "Pull my finger for a fright!", "Gorgon solo can be stinky.", "I want my shiverback shiverback shiverback...shiverback ribs!", "Does the tentacle tormentor only torment tentacles?", "You better hope TurmoilToad does not have any relatives in there!", "Phobos is a moon from Mars.  Plasm is a mold.  Moon Mold.  You are welcome.", "Eating amygdalin can cause cyanide poisoning.  It is true.", "Samhain existed before Halloween.  Those Pagans.");
+					$key = $name . "-airplane-instance";					
+	                                if (!quest::get_data($key)) {
+						quest::set_data($key, $Instance, $LockoutTime);
+						$key = $name . "-airplane-raid";
+	                                        quest::set_data($key, $raid->GetID(), $InstanceTime);
+						$client->AssignToInstance($Instance);
+						$client->MovePCInstance(71, $Instance, 539, 1384, -664, 0);
+						plugin::RandomSay(100, "Kiss those buffs goodbye!", "Watch that first step!");
+                                	}
+					else {
+						if ($Instance == quest::get_data($key)) {
+							$client->MovePCInstance(71, $Instance, 539, 1384, -664, 0);
+							plugin::RandomSay(100, "Kiss those buffs goodbye!", "Watch that first step!");
+						}
+						else {
+							my $LockoutTime = quest::get_data_expires($key) - time();
+							quest::say("Sorry $name, but you still have an active instance " . quest::get_data($key) . ", and your raid is in instance $Instance.  You can join another Airplane instance in $LockoutTime seconds.");
+						}
+					}
+				}
                         }
                 }
                 else {
