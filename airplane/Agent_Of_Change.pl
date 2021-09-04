@@ -127,7 +127,7 @@ sub EVENT_SAY {
                                         }
                                         else {
                                                 my $LockoutTime = quest::get_data_expires($key) - time();
-                                                quest::say("Sorry $name, but you still have an active instance " . quest::get_data($key) . ", and your raid is in instance $Instance.  You can join another Airplane instance in $LockoutTime seconds.");
+                                                quest::say("Sorry $name, but you still have an active instance " . quest::get_data($raidKey) . ", and your raid is in instance $Instance.  You can join another Airplane instance in $LockoutTime seconds.");
                                         }
                                 }
                         }
