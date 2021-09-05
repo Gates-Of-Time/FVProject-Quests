@@ -1,130 +1,82 @@
-my $LockoutTime = 604800;
+my $LockoutTime = 345600;
+my @Data = ("permafrost", 73, 100, -60, 4, 0);;
 
 sub EVENT_SAY {
-        if ($text=~/hail/i) {
-                $raid = $client->GetRaid();
-		if ($raid > 0) {
-                        $key = $name . "-permafrost-instance";
-                        if (!quest::get_data($key)) {
-                                $key = $name . "-permafrost-raid";
-                                if (!quest::get_data($key)) {
-                                        $key = $raid->GetID() . "-permafrost-raid";
-                                        if (!quest::get_data($key)) {
-                                                if ($raid->IsLeader($name)) {
-                                                        $client->Message(15, "Agent of Change says, 'Hello, $name.  Would you like to [create] a raid instance?'");
-                                                }
-                                                else {
-                                                      	$client->Message(15, "Agent of Change says, 'Hello, $name.  It looks like your raid leader needs to create a raid instance.'");
-                                                }
-                                        }
-                                        else {
-                                              	$client->Message(15, "Agent of Change says, 'Hello, $name. Let me know when you are [ready] to join the raid instance.'");
-                                        }
-                                }
-                                else {
-					my $LockoutTime = quest::get_data_expires($key) - time();
-                                        $key = $raid->GetID() . "-permafrost-raid";
-                                        if (!quest::get_data($key)) {
-						$client->Message(15, "Agent of Change says, 'Hello, $name.  It looks like your raid instance expired.  You can rejoin another in $LockoutTime seconds.'");
-	                                }
-					else {
-	                                      	$client->Message(15, "Agent of Change says, 'Hello, $name.  Let me know when you are [ready] to join the raid instance.'");
-					}
-                                }
-                        }
-                        else {
-                              	my $LockoutTime = quest::get_data_expires($key) - time();
-                                $key = $name . "-permafrost-raid";
-                                if (!quest::get_data($key)) {
-                                        $client->Message(15, "Agent of Change says, 'Hello, $name.  It looks like your raid instance expired.  You can rejoin another in $LockoutTime seconds.'");
-                                }
-                                else {
-					$value = quest::get_data($key);
-					$key = $raid->GetID() . "-permafrost-raid";
-					if (!quest::get_data($key)) {
-                                                if ($raid->IsLeader($name)) {
-                                                        $client->Message(15, "Agent of Change says, 'Hello, $name.  Would you like to [create] a raid instance?'");
-                                                }
-                                                else {
-                                                      	$client->Message(15, "Agent of Change says, 'Hello, $name.  It looks like your raid leader needs to create a raid instance.'");
-                                                }
-					}
-					elsif ($value == quest::get_data($key)) {
-	                                      	$client->Message(15, "Agent of Change says, 'Hello, $name.  Let me know when you are [ready] to join the raid.'");
-					}
-					else {
-						$client->Message(15, "Agent of Change says, 'Hello, $name.  It looks like your raid instance expired.  You can rejoin another in $LockoutTime seconds.'");
-					}
-                                }
-                        }
-                }
-                else {
-                      	$client->Message(15, "Agent of Change says, 'You must be in a raid before you can join a raid instance.'");
-                }
-        }
+	$raid = $client->GetRaid();
+	if (!$raid) {
+		$client->Message(15, "Agent of Change says, 'I would speak to the leader of your raid, $name.'");
+	}
+	elsif ($ulevel < 46) {
+		$client->Message(15, "Agent of Change says, 'Go away little one.  Return when you have more experience.'");
+	}
+	elsif ($text=~/hail/i) {
+		$key = $name . "-" . $Data[0];
+		if (!quest::get_data($key)) {
+			if ($raid->IsLeader($name)) {
+				$client->Message(15, "Agent of Change says, 'Hello, $name.  Would you like to [create] an instance?'");
+			}
+			else {
+				$client->Message(15, "Agent of Change says, 'I would speak to the leader of your raid, $name.'");
+			}
+		}
+		else {
+			my $LockoutTime = quest::get_data_expires($key) - time();
+			$client->Message(15, "Agent of Change says, 'You have instance " . quest::get_data($key) . ", $name.  It will expire in $LockoutTime seconds.  Let me know if you are [ready] to return to your instance.'");
+		}
+	}
 	elsif ($text=~/create/i) {
-                $raid = $client->GetRaid();
-		if ($raid > 0) {
-                        if ($raid->IsLeader($name)) {
-                                $key = $name . "-permafrost-instance";
-                                if (!quest::get_data($key)) {
-                                        $key = $name . "-permafrost-raid";
-                                        if (!quest::get_data($key)) {
-                                                $key = $raid->GetID() . "-permafrost-raid";
-                                                if (!quest::get_data($key)) {
-                                                        $Instance = quest::CreateInstance("permafrost", 0, 345600);
-                                                        quest::set_data($key, $Instance, 43200);
-                                                        $client->Message(15, "Agent of Change says, 'Your instance ( $Instance ) has been created. Let me know when you are [ready] to go to the Permafrost Caverns.'");
-                                                }
-                                        }
-                                        else {
-                                              	$client->Message(15, "Agent of Change says, 'You already have instance. Let me know when you are [ready] to go to the Permafrost Caverns.'");
-                                        }
-                                }
-                                else {
-                                      	$client->Message(15, "Agent of Change says, 'You already have instance. Let me know when you are [ready] to go to the Permafrost Caverns.'");
-                                }
-                        }
-                        else {
-                              	$client->Message(15, "Agent of Change says, 'Sorry $name, but only a raid leader can create an instance.'");
-                        }
-                }
-                else {
-                      	$client->Message(15, "Agent of Change says, 'You must be in a raid before you can join a raid instance.'");
-                }
-        }
+		if ($raid->IsLeader($name)) {
+			$key = $name . "-" . $Data[0];
+			if (!quest::get_data($key)) {
+				$Instance = quest::CreateInstance("$Data[0]", 0, $LockoutTime);
+				quest::set_data($key, $Instance, $LockoutTime);
+				$key = $raid->GetID() . "-" . $Data[0];
+				quest::set_data($key, $Instance, $LockoutTime);
+				$client->Message(15, "Agent of Change says, 'Your instance has been created. Have your raid let me know when they are [ready].'");
+			}
+			else {
+				my $LockoutTime = quest::get_data_expires($key) - time();
+				$client->Message(15, "Agent of Change says, 'You have instance " . quest::get_data($key) . ", $name.  It will expire in $LockoutTime seconds.  Let me know if you are [ready] to return to your instance.'");
+			}
+		}
+		else {
+			$client->Message(15, "Agent of Change says, 'I would speak to the leader of your raid, $name.'");
+		}
+	}
 	elsif ($text=~/ready/i) {
-                $raid = $client->GetRaid();
-		if ($raid > 0) {
-                        $key = $raid->GetID() . "-permafrost-raid";
-                        if (!quest::get_data($key)) {
-                                $client->Message(15, "Agent of Change says, 'Sorry, but your raid does not have an instance.  Ask your raid leader to make one.'");
-                        }
-                        else {
-                              	$InstanceTime = quest::get_data_expires($key) - time();
-                                $Instance = quest::get_data($key);
-                                $key = $name . "-permafrost-raid";
-                                if (!quest::get_data($key)) {
-                                        quest::set_data($key, $raid->GetID(), $InstanceTime);
-                                        $client->AssignToInstance($Instance);
-                                        $client->MovePCInstance(73, $Instance, 100, -60, 4, 0);
-                                        plugin::RandomSay(100, "Have an ice day!", "Variety is the ice of life.", "Once bitten, ice shy!", "Icy what you did there.", "Many are called but few are frozen.", "Are we friends or froze?", "Coughs and freezes spread diseases.", "Money doesn’t grow on freeze.", "Head for the chills!", "Ask a chilly question, get a chilly answer.");
-
-				} else {
-                                        my $raidKey = $raid->GetID() . "-permafrost-instance";
-					if ($raidKey == quest::get_data($key)) {
-                                                $client->MovePCInstance(73, $Instance, 100, -60, 4, 0);
-                                                plugin::RandomSay(100, "Have an ice day!", "Variety is the ice of life.", "Once bitten, ice shy!", "Icy what you did there.", "Many are called but few are frozen.", "Are we friends or froze?", "Coughs and freezes spread diseases.", "Money doesn’t grow on freeze.", "Head for the chills!", "Ask a chilly question, get a chilly answer.");
-                                        }
-                                        else {
-                                                my $LockoutTime = quest::get_data_expires($key) - time();
-                                                quest::say("Sorry $name, but you still have an active instance " . quest::get_data($raidKey) . ", and your raid is in instance $Instance.  You can join another Airplane instance in $LockoutTime seconds.");
-                                        }
-                                }        
-                        }
-                }
-                else {
-                        $client->Message(15, "Agent of Change says, 'You must be in a raid before you can join a raid instance.'");
-                }
-        }
+		$key = $raid->GetID() . "-" . $Data[0];
+		if (!quest::get_data($key)) {
+			$client->Message(15, "Agent of Change says, 'I would speak to the leader of your raid, $name.'");
+		}
+		else {
+			$Instance = quest::get_data($key);
+			$key = $name . "-" . $Data[0];
+			if (!quest::get_data($key)) {
+				if (quest::GetInstanceTimerByID($Instance) > 0) {
+					quest::set_data($key, $Instance, $LockoutTime);
+					$client->AssignToInstance($Instance);
+					$client->Message(15, "Agent of Change says, 'Moving you to Zone: $Data[0], Instance: $Instance.'");
+					$client->MovePCInstance($Data[1], $Instance, $Data[2], $Data[3], $Data[4], $Data[5]);
+				}
+				else {
+					$client->Message(15, "Agent of Change says, 'That instance has expired, $name.'");
+				}
+			}
+			else {
+				if ($Instance == quest::get_data($key)) {
+					if (quest::GetInstanceTimerByID($Instance) > 0) {
+						$client->Message(15, "Agent of Change says, 'Moving you to Zone: $Data[0], Instance: $Instance.'");
+						$client->MovePCInstance($Data[1], $Instance, $Data[2], $Data[3], $Data[4], $Data[5]);
+					}
+					else {
+						$client->Message(15, "Agent of Change says, 'That instance has expired, $name.'");
+					}
+				}
+				else {
+					my $LockoutTime = quest::get_data_expires($key) - time();
+					$client->Message(15, "Agent of Change says, 'You must wait for instance " . quest::get_data($key) . "to expire, $name.  It will expire in $LockoutTime seconds.'");
+				}
+			}
+		}
+	}
 }
