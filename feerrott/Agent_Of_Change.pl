@@ -115,14 +115,21 @@ sub EVENT_SAY {
                                 $key = $name . "-fearplane-raid";
                                 if (!quest::get_data($key)) {
                                         quest::set_data($key, $raid->GetID(), $InstanceTime);
-                                }
-                                $key = $name . "-fearplane-instance";
-                                if (!quest::get_data($key)) {
-                                        quest::set_data($key, $Instance, $LockoutTime);
-                                }
-                                $client->AssignToInstance($Instance);
-                                $client->MovePCInstance(72, $Instance, 1020.95	-813.26, 105, 0);
-                                plugin::RandomSay(100, "Do not touch any Turmoil Warts!", "Do not pick the boogey, man!", "Pull my finger for a fright!", "Gorgon solo can be stinky.", "I want my shiverback shiverback shiverback...shiverback ribs!", "Does the tentacle tormentor only torment tentacles?", "You better hope TurmoilToad does not have any relatives in there!", "Phobos is a moon from Mars.  Plasm is a mold.  Moon Mold.  You are welcome.", "Eating amygdalin can cause cyanide poisoning.  It is true.", "Samhain existed before Halloween.  Those Pagans.");
+                                        $client->AssignToInstance($Instance);
+                                        $client->MovePCInstance(72, $Instance, 1020.95	-813.26, 105, 0);
+                                        plugin::RandomSay(100, "Do not touch any Turmoil Warts!", "Do not pick the boogey, man!", "Pull my finger for a fright!", "Gorgon solo can be stinky.", "I want my shiverback shiverback shiverback...shiverback ribs!", "Does the tentacle tormentor only torment tentacles?", "You better hope TurmoilToad does not have any relatives in there!", "Phobos is a moon from Mars.  Plasm is a mold.  Moon Mold.  You are welcome.", "Eating amygdalin can cause cyanide poisoning.  It is true.", "Samhain existed before Halloween.  Those Pagans.");
+
+				} else {
+                                        my $raidKey = $raid->GetID() . "-fearplane-instance";
+					if ($raidKey == quest::get_data($key)) {
+                                                $client->MovePCInstance(72, $Instance, 1020.95	-813.26, 105, 0);
+                                                plugin::RandomSay(100, "Do not touch any Turmoil Warts!", "Do not pick the boogey, man!", "Pull my finger for a fright!", "Gorgon solo can be stinky.", "I want my shiverback shiverback shiverback...shiverback ribs!", "Does the tentacle tormentor only torment tentacles?", "You better hope TurmoilToad does not have any relatives in there!", "Phobos is a moon from Mars.  Plasm is a mold.  Moon Mold.  You are welcome.", "Eating amygdalin can cause cyanide poisoning.  It is true.", "Samhain existed before Halloween.  Those Pagans.");
+                                        }
+                                        else {
+                                                my $LockoutTime = quest::get_data_expires($key) - time();
+                                                quest::say("Sorry $name, but you still have an active instance " . quest::get_data($raidKey) . ", and your raid is in instance $Instance.  You can join another Airplane instance in $LockoutTime seconds.");
+                                        }
+                                }  
                         }
                 }
                 else {

@@ -106,14 +106,21 @@ sub EVENT_SAY {
                                 $key = $name . "-soldungb-raid";
                                 if (!quest::get_data($key)) {
                                         quest::set_data($key, $raid->GetID(), $InstanceTime);
-                                }
-                                $key = $name . "-soldungb-instance";
-                                if (!quest::get_data($key)) {
-                                        quest::set_data($key, $Instance, $LockoutTime);
-                                }
-                                $client->AssignToInstance($Instance);
-                                $client->MovePCInstance(32, $Instance, -265, -413, -112, 0);
-                                plugin::RandomSay(100, "You have nice manners for a thief and a liar.", "You seem familiar with my name, but I don't seem to remember smelling you before.", "Who are you and where do you come from, may I ask?", "Well thief! I smell you and I feel your air. I hear your breath. Come along! Help yourself again, there is plenty and to spare!", "I kill where I wish and none dare resist.", "I laid low the warriors of old and their like is not in the world today.");
+                                        $client->AssignToInstance($Instance);
+                                        $client->MovePCInstance(32, $Instance, -265, -413, -112, 0);
+                                        plugin::RandomSay(100, "You have nice manners for a thief and a liar.", "You seem familiar with my name, but I don't seem to remember smelling you before.", "Who are you and where do you come from, may I ask?", "Well thief! I smell you and I feel your air. I hear your breath. Come along! Help yourself again, there is plenty and to spare!", "I kill where I wish and none dare resist.", "I laid low the warriors of old and their like is not in the world today.");
+
+				} else {
+                                        my $raidKey = $raid->GetID() . "-soldungb-instance";
+					if ($raidKey == quest::get_data($key)) {
+                                                $client->MovePCInstance(32, $Instance, -265, -413, -112, 0);
+                                                plugin::RandomSay(100, "You have nice manners for a thief and a liar.", "You seem familiar with my name, but I don't seem to remember smelling you before.", "Who are you and where do you come from, may I ask?", "Well thief! I smell you and I feel your air. I hear your breath. Come along! Help yourself again, there is plenty and to spare!", "I kill where I wish and none dare resist.", "I laid low the warriors of old and their like is not in the world today.");
+                                        }
+                                        else {
+                                                my $LockoutTime = quest::get_data_expires($key) - time();
+                                                quest::say("Sorry $name, but you still have an active instance " . quest::get_data($raidKey) . ", and your raid is in instance $Instance.  You can join another Airplane instance in $LockoutTime seconds.");
+                                        }
+                                }                                
                         }
                 }
                 else {
