@@ -10,7 +10,7 @@ sub EVENT_SAY {
 		$client->Message(15, "Agent of Change says, 'Go away little one.  Return when you have more experience.'");
 	}
 	elsif ($text=~/hail/i) {
-		$key = $name . "-" . $Data[0]
+		$key = $name . "-" . $Data[0];
 		if (!quest::get_data($key)) {
 			if ($raid->IsLeader($name)) {
 				$client->Message(15, "Agent of Change says, 'Hello, $name.  Would you like to [create] an instance?'");
@@ -26,7 +26,7 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/create/i) {
 		if ($raid->IsLeader($name)) {
-			$key = $name . "-" . $Data[0]
+			$key = $name . "-" . $Data[0];
 			if (!quest::get_data($key)) {
 				$Instance = quest::CreateInstance("$Data[0]", 0, $LockoutTime);
 				quest::set_data($key, $Instance, $LockoutTime);
@@ -50,7 +50,7 @@ sub EVENT_SAY {
 		}
 		else {
 			$Instance = quest::get_data($key);
-			$key = $name . "-" . $Data[0]
+			$key = $name . "-" . $Data[0];
 			if (!quest::get_data($key)) {
 				if (quest::GetInstanceTimerByID($Instance) > 0) {
 					quest::set_data($key, $Instance, $LockoutTime);
