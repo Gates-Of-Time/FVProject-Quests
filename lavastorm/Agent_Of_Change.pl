@@ -32,6 +32,7 @@ sub EVENT_SAY {
 				quest::set_data($key, $Instance, $LockoutTime);
 				$key = $raid->GetID() . "-" . $Data[0];
 				quest::set_data($key, $Instance, $LockoutTime);
+				$client->AssignToInstance($Instance);
 				$client->Message(15, "Agent of Change says, 'Your instance has been created. Have your raid let me know when they are [ready].'");
 			}
 			else {
