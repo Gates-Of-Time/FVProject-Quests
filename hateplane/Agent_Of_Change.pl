@@ -25,23 +25,37 @@ sub EVENT_SAY {
 		}
 	}
 	elsif ($text=~/create/i) {
-		if ($raid->IsLeader($name)) {
-			$key = $name . "-" . $Data[0];
-			if (!quest::get_data($key)) {
-				$Instance = quest::CreateInstance("$Data[0]", 0, $LockoutTime);
-				quest::set_data($key, $Instance, $LockoutTime);
-				$key = $raid->GetID() . "-" . $Data[0];
-				quest::set_data($key, $Instance, $LockoutTime);
-				$client->AssignToInstance($Instance);
-				$client->Message(15, "Agent of Change says, 'Your instance has been created. Have your raid let me know when they are [ready].'");
+		$key = $Data[0] . "-lockout";
+		if (!quest::get_data($key)) {
+			if ($raid->IsLeader($name)) {
+				$key = $name . "-" . $Data[0];
+				if (!quest::get_data($key)) {
+					$Instance = quest::CreateInstance("$Data[0]", 0, $LockoutTime);
+					quest::set_data($key, $Instance, $LockoutTime);
+					$key = $raid->GetID() . "-" . $Data[0];
+					quest::set_data($key, $Instance, $LockoutTime);
+					$key = $Data[0] . "-lockout";
+					quest::set_data($key, "1", 3600);
+					$client->AssignToInstance($Instance);
+					$client->Message(15, "Agent of Change says, 'Your instance has been created. Have your raid let me know when they are [ready].'");
+				}
+				else {
+					my $LockoutTime = quest::get_data_expires($key) - time();
+					$client->Message(15, "Agent of Change says, 'You have instance " . quest::get_data($key) . ", $name.  It will expire in $LockoutTime seconds.  Let me know if you are [ready] to return to your instance.'");
+				}
 			}
 			else {
-				my $LockoutTime = quest::get_data_expires($key) - time();
-				$client->Message(15, "Agent of Change says, 'You have instance " . quest::get_data($key) . ", $name.  It will expire in $LockoutTime seconds.  Let me know if you are [ready] to return to your instance.'");
+				$client->Message(15, "Agent of Change says, 'I would speak to the leader of your raid, $name.'");
 			}
 		}
 		else {
-			$client->Message(15, "Agent of Change says, 'I would speak to the leader of your raid, $name.'");
+			my $LockoutTime = int((quest::get_data_expires($key) - time())/60);
+			if ($LockoutTime > 1) {
+				$client->Message(15, "Agent of Change says, 'I do not have the energy to create a new instance yet, $name.  I must rest for another $LockoutTime minutes.'");
+			}
+			else {
+				$client->Message(15, "Agent of Change says, 'I will be able to create an instance soon, $name.'");
+			}
 		}
 	}
 	elsif ($text=~/ready/i) {
