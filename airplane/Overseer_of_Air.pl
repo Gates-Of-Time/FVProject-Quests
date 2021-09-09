@@ -10,6 +10,20 @@ sub EVENT_SAY {
 	}
 }
 
+sub EVENT_TIMER {
+	#:: Match timer 'dt'
+	if ($timer eq "dt") {
+		$target = $npc->GetHateTop();
+		if ($target->IsPet()) {
+			$owner = $target->GetOwnerID();
+			$npc->CastSpell(982, $owner);
+		}
+		else {
+			$npc->CastSpell(982, $target);
+		}
+	}
+}
+
 sub EVENT_DEATH_COMPLETE {
 	#:: Spawn The Plane of Sky >> the_Hand_of_Veeshan (71060), without grid or guild war, at the specified location
 	quest::spawn2(71060, 0, 0, -1462.2, -270.1, 1250.9, 62.9);

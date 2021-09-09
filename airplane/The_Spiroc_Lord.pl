@@ -1,3 +1,17 @@
+sub EVENT_TIMER {
+	#:: Match timer 'dt'
+	if ($timer eq "dt") {
+		$target = $npc->GetHateTop();
+		if ($target->IsPet()) {
+			$owner = $target->GetOwnerID();
+			$npc->CastSpell(982, $owner);
+		}
+		else {
+			$npc->CastSpell(982, $target);
+		}
+	}
+}
+
 sub EVENT_DEATH_COMPLETE {
 	#:: Key a data bucket
 	$key = sirran_status;
