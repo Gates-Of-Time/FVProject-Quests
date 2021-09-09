@@ -14,7 +14,7 @@ sub EVENT_TIMER {
 	#:: Match timer 'dt'
 	if ($timer eq "dt") {
 		$target = $npc->GetHateTop();
-		if ($target->isPet()) {
+		if ($target->IsPet()) {
 			$owner = $target->getOwnerID();
 			$npc->CastSpell(982, $owner);
 		}
