@@ -3,17 +3,26 @@ sub EVENT_SPAWN {
 	quest::settimer("keeper_depop", 600);
 }
 
+sub EVENT_COMBAT {
+	#:: Match combat state 1 - entered combat
+	if ($combat_state == 1) {
+		#:: Create a timer 'dt' that triggers every 45 seconds
+		quest::settimer("dt", 45);
+	}
+	else {
+		#:: Stop the timer 'dt' from triggering
+		quest::stoptimer("dt");
+	}
+}
+
 sub EVENT_TIMER {
 	#:: Match a timer 'keeper_depop'
 	if ($timer eq "keeper_depop") {
 		quest::stoptimer("keeper_depop");
 		quest::depop();
 	}
-}
-
-sub EVENT_TIMER {
 	#:: Match timer 'dt'
-	if ($timer eq "dt") {
+	elsif ($timer eq "dt") {
 		$target = $npc->GetHateTop();
 		if ($target->IsPet()) {
 			$owner = $target->GetOwnerID();
