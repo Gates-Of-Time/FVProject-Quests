@@ -13,12 +13,13 @@ sub EVENT_COMBAT {
 sub EVENT_TIMER {
 	#:: Match timer 'dt'
 	if ($timer eq "dt") {
-		if ($targetid->IsPet()) {
-			$owner = $targetid->getOwnerID();
+		$target = $npc->GetHateTop();
+		if ($target->isPet()) {
+			$owner = $target->getOwnerID();
 			$npc->CastSpell(982, $owner);
 		}
 		else {
-			$npc->CastSpell(982, $targetid);
+			$npc->CastSpell(982, $target);
 		}
 	}
 }
