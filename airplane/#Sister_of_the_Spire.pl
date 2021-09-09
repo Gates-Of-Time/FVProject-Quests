@@ -6,3 +6,17 @@ sub EVENT_DEATH_COMPLETE {
 	#:: Spawn one and only one The Plane of Sky >> Sirran_the_Lunatic (71058), without grid or guild war, at the current location
 	quest::unique_spawn(71058, 0, 0, $x, $y, $z);
 }
+
+sub EVENT_TIMER {
+	#:: Match timer 'dt'
+	if ($timer eq "dt") {
+		$target = $npc->GetHateTop();
+		if ($target->IsPet()) {
+			$owner = $target->GetOwnerID();
+			$npc->CastSpell(982, $owner);
+		}
+		else {
+			$npc->CastSpell(982, $target);
+		}
+	}
+}
