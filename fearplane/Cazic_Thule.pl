@@ -67,6 +67,17 @@ sub EVENT_TIMER {
 		quest::signalwith(72004, 1, 0);		#:: Fright
 		quest::signalwith(72002, 1, 0);		#:: Terror
 	}
+	#:: Match timer 'dt'
+	elsif ($timer eq "dt") {
+		$target = $npc->GetHateTop();
+		if ($target->IsPet()) {
+			$owner = $target->GetOwnerID();
+			$npc->CastSpell(982, $owner);
+		}
+		else {
+			$npc->CastSpell(982, $target);
+		}
+	}
 }
 
 sub EVENT_COMBAT {
@@ -99,6 +110,8 @@ sub EVENT_COMBAT {
 		quest::signalwith(72000, 2, 0);		#:: Dread
 		quest::signalwith(72004, 2, 0);		#:: Fright
 		quest::signalwith(72002, 2, 0);		#:: Terror
+		#:: Create a timer 'dt' that triggers every 45 seconds
+		quest::settimer("dt", 45);
 	}
 	#:: Match combat state 0 - left combat
 	elsif ($combat_state == 0) {
@@ -128,6 +141,8 @@ sub EVENT_COMBAT {
 		quest::signalwith(72000, 3, 0);		#:: Dread
 		quest::signalwith(72004, 3, 0);		#:: Fright
 		quest::signalwith(72002, 3, 0);		#:: Terror
+		#:: Stop the timer 'dt' from triggering
+		quest::stoptimer("dt");
 	}
 }
 
