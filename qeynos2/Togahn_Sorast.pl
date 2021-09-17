@@ -155,6 +155,7 @@ sub EVENT_ITEM {
 			quest::summonitem(10112);
 			quest::summonitem(13165);
 			quest::summonitem(13166);
+			quest::summonitem(13167);
 		}
 	}
 	#:: Match a 10113 - Red Headband, 13168 - Skull of Jhen`Tra, 13169 - Dagger of Marnek, and a 3000 - Zaharn's Coronet
