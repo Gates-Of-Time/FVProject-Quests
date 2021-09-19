@@ -13,7 +13,8 @@ sub EVENT_COMBAT {
 				quest::set_data($key, 1, 44);
 			}
 			else {
-				$target->BuffFadeAll();
+				$Client = $entity_list->GetClientByID($target);
+				$Client->BuffFadeAll();
 				$npc->CastSpell(982, $target);
 				quest::set_data($key, 1, 44);
 			}
@@ -36,12 +37,14 @@ sub EVENT_TIMER {
 			$target = $npc->GetHateTop();
 			if ($target->IsPet()) {
 				$owner = $target->GetOwnerID();
-				$owner->BuffFadeAll();
+				$Client = $entity_list->GetClientByID($owner);
+				$Client->BuffFadeAll();
 				$npc->CastSpell(982, $owner);
 				quest::set_data($key, 1, 44);
 			}
 			else {
-				$target->BuffFadeAll();
+				$Client = $entity_list->GetClientByID($target);
+				$Client->BuffFadeAll();
 				$npc->CastSpell(982, $target);
 				quest::set_data($key, 1, 44);
 			}
