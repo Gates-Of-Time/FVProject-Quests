@@ -3,7 +3,7 @@ sub EVENT_COMBAT {
 	if ($combat_state == 1) {
 		$key = $npc->GetCleanName() . "-dt";
 		#:: Match if the key does not exist
-		if (!quest::get_data($key) {
+		if (!quest::get_data($key)) {
 			$target = $npc->GetHateTop();
 			if ($target->IsPet()) {
 				$owner = $target->GetOwnerID();
@@ -31,7 +31,7 @@ sub EVENT_TIMER {
 	if ($timer eq "dt") {
 		$key = $npc->GetCleanName() . "-dt";
 		#:: Match if the key does not exist
-		if (!quest::get_data($key) {
+		if (!quest::get_data($key)) {
 			$target = $npc->GetHateTop();
 			if ($target->IsPet()) {
 				$owner = $target->GetOwnerID();
