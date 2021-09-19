@@ -16,8 +16,8 @@ sub EVENT_SIGNAL {
 	}
 }
 
-sub EVENT_DEATH_COMPLETE {
-	#:: Spawn a The Plane of Fear >> Iksar_broodling (72105) at the current location 75 percent of the time
-	my $Random = quest::ChooseRandom(72105, 72105, 72105, 0);
-	quest::spawn2($Random, 0, 0, $x, $y, $z, $h);
-}
+#:: sub EVENT_DEATH_COMPLETE {
+#::	#:: Spawn a The Plane of Fear >> Iksar_broodling (72105) at the current location 75 percent of the time
+#::	my $Random = quest::ChooseRandom(72105, 72105, 72105, 0);
+#::	quest::spawn2($Random, 0, 0, $x, $y, $z, $h);
+#::}
