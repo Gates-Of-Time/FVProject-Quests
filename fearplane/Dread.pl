@@ -7,7 +7,8 @@ sub EVENT_COMBAT {
 			$target = $npc->GetHateTop();
 			if ($target->IsPet()) {
 				$owner = $target->GetOwnerID();
-				$owner->BuffFadeAll();
+				$Client = $entity_list->GetClientByID($owner);
+				$Client->BuffFadeAll();
 				$npc->CastSpell(982, $owner);
 				quest::set_data($key, 1, 44);
 			}
