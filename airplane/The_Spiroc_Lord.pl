@@ -59,4 +59,9 @@ sub EVENT_DEATH_COMPLETE {
 	quest::set_data($key, "5", 900);
 	#:: Spawn one and only one The Plane of Sky >> Sirran_the_Lunatic (71058), without grid or guild war, at the current location
 	quest::unique_spawn(71058, 0, 0, $x, $y, $z);
+	#:: Match a The Plane of Sky >> a_spiroc_vanquisher (71009) or a The Plane of Sky >> The_Spiroc_Guardian (71013)
+	if ($entity_list->IsMobSpawnedByNpcTypeID(71009) || $entity_list->IsMobSpawnedByNpcTypeID(71013)) {
+		#:: Reset spawn timer for 1000ms
+		quest::UpdateSpawnTimer(2630, 1000);
+	}
 }
