@@ -14,8 +14,7 @@ sub EVENT_COMBAT {
 			}
 			else {
 				$target->BuffFadeAll();
-				quest::gmsay("target is $target");
-				$npc->CastSpell(982, $target);
+				$npc->CastSpell(982, $entity_list->GetClientByID($target));
 				quest::set_data($key, 1, 44);
 			}
 		}
