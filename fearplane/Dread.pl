@@ -2,16 +2,12 @@ sub EVENT_COMBAT {
 	#:: Match combat state 1 - entered combat
 	if ($combat_state == 1) {
 		$key = $npc->GetCleanName() . "-dt";
-		quest::gmsay("key");
 		#:: Match if the key does not exist
 		if (!quest::get_data($key)) {
 			$target = $npc->GetHateTop();
-			quest::gmsay("$target");
 			if ($target->IsPet()) {
 				$owner = $target->GetOwnerID();
-				quest::gmsay("$owner");
 				$Client = $entity_list->GetClientByID($owner);
-				quest::gmsay("$Client");
 				$Client->BuffFadeAll();
 				$npc->CastSpell(982, $owner);
 				quest::set_data($key, 1, 44);
