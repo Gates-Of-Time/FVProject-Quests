@@ -13,9 +13,8 @@ sub EVENT_COMBAT {
 				quest::set_data($key, 1, 44);
 			}
 			else {
-				$Client = $entity_list->GetClientByID($target);
-				$Client->BuffFadeAll();
-				$npc->CastSpell(982, $target);
+				$target->BuffFadeAll();
+				$npc->CastSpell(982, $target->GetID());
 				quest::set_data($key, 1, 44);
 			}
 		}
@@ -43,9 +42,8 @@ sub EVENT_TIMER {
 				quest::set_data($key, 1, 44);
 			}
 			else {
-				$Client = $entity_list->GetClientByID($target);
-				$Client->BuffFadeAll();
-				$npc->CastSpell(982, $target);
+				$target->BuffFadeAll();
+				$npc->CastSpell(982, $target->GetID());
 				quest::set_data($key, 1, 44);
 			}
 		}
