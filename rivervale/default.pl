@@ -4,7 +4,7 @@ sub EVENT_SPAWN {
 
 sub EVENT_TIMER {
 	if ($timer eq "die") {
-		quest::setanim($npc->GetNPCTypeID(), 3);
+		plugin::SetAnim("dead");
 		quest::sethp(1);
 		quest::stoptimer("die");
 	}
