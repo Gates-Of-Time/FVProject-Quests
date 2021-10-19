@@ -4,7 +4,7 @@ sub EVENT_SPAWN {
 
 sub EVENT_TIMER {
 	if ($timer eq "die") {
-		quest::setanim($mob->GetNPCTypeID(), 3);
+		quest::setanim($mobid, 3);
 		quest::sethp(1);
 	}
 }
