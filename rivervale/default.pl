@@ -4,6 +4,7 @@ sub EVENT_SPAWN {
 
 sub EVENT_TIMER {
 	if ($timer eq "die") {
+		quest::say("Oh no, Inny killed me")
 		plugin::SetAnim("dead");
 		quest::sethp(1);
 		quest::stoptimer("die");
