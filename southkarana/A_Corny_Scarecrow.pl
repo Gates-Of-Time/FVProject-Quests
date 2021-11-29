@@ -25,7 +25,8 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	if (plugin::check_handin(\%itemcount, 147636 =>1 )) {
+	#:: Match a 148000 - Ear of Corn
+	if (plugin::takeItems(148000 =>1 )) {
 		if (quest::istaskactivityactive(273, 4)) { # Task: Help find my turkeys! 
 			quest::updatetaskactivity(273, 4, 1); # Task: Help find my turkeys! 
 			quest::say("Okay, $name.  Watch how quickly these wild turkeys come after this corn");
@@ -37,7 +38,8 @@ sub EVENT_ITEM {
 			quest::say("Thank you so much for this corn!");
 		}
 	}
-	plugin::return_items(\%itemcount);
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
 
 sub EVENT_TIMER {
@@ -49,7 +51,7 @@ sub EVENT_TIMER {
 		quest::ze(1,"Off in the distance, a cold, shrill gobble permeates the solitude of the plain.");
 		quest::settimer(2,30);
 	}
-	if ($timer == 2) {
+	elsif ($timer == 2) {
 		quest::stoptimer(2);
 		quest::spawn2(14199,0,0,$x - 200,$y,$z,$h);
 		quest::spawn2(14199,0,0,$x + 200,$y,$z,$h);
