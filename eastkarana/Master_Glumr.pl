@@ -30,7 +30,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match 148001 - Sack of Corn
-	if (plugin::check_handin(\%itemcount, 148001 =>1 )) {
+	if (plugin::takeItems(148001 =>1 )) {
 		if (quest::istaskactivityactive(273, 6)) {
 			quest::say("It's a miracle! Thank you so much, $name.  With this food our turkeys are sure to live.");
 			#:: Give a 148002 - Note to Farmer Glumr
@@ -46,7 +46,8 @@ sub EVENT_ITEM {
 			quest::exp(60000);
 		}
 	}
-	plugin::return_items(\%itemcount);
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
 
 # EOF Zone: Eastern Plains of Karana (eastkarana) >> Master Glumr (15196)
