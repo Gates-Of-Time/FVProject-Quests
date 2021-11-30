@@ -1,13 +1,7 @@
 # Zone: The Plane of Knowledge (poknowledge) >> Farmer_Glumr (22208)
 
-sub EVENT_SPAWN {
-	quest::settimer(1,600);
-}
-
-sub EVENT_TIMER {
-	if ($timer == 1) {
-		quest::say("Here turkey turkey turkey!");
-	}
+sub EVENT_WAYPOINT_ARRIVE {
+	quest::say("Here turkey turkey turkey!");
 }
 
 sub EVENT_SAY {
