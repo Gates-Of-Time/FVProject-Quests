@@ -32,13 +32,17 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match a 148002 - Note to Farmer Glumr
-	if (plugin::check_handin(\%itemcount, 148002 =>1 )) {
-		quest::say("Thank you so much, $name!  Please, take some turkey meat for your troubles!");
-		quest::summonitem(56051);  # Endless Turkeys (56051)
-		quest::ding();
-		quest::exp(600000);
+	if (plugin::takeItems(148002 =>1 )) {
+		if (quest::istaskactivityactive(273, 7)) { # Task: Help find my turkeys! 
+			quest::updatetaskactivity(273, 7, 1); # Task: Help find my turkeys! 
+			quest::say("Thank you so much, $name!  Please, take some turkey meat for your troubles!");
+			quest::summonitem(56051);  # Endless Turkeys (56051)
+			quest::ding();
+			quest::exp(600000);
+		}
 	}
-	plugin::return_items(\%itemcount);
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
 
 # EOF Zone: The Plane of Knowledge (poknowledge) >> Farmer_Glumr (22208)
