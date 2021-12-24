@@ -26,7 +26,7 @@ sub EVENT_SAY {
 		quest::say("Foolishness or bravery Gendal?  We shall see. Return to me a pearlescent globe, a silver mesh and a spiroc air totem  In return, you will receive both my deepest respect and the aerated pauldrons.");
 	}
 	elsif ($text=~/skill/i) {
-		quest::say("The test of skill it is. Go upward and retrieve these three items: an ivory tessera, a tiny ruby, and an azure ring. Return these to me and the azure ruby ring shall be yours.");
+		quest::say("The test of skill it is. Go upward and retrieve these three items: an ivory tessera, a small ruby, and an azure ring. Return these to me and the azure ruby ring shall be yours.");
 	}
 }
 
