@@ -1,8 +1,6 @@
 sub EVENT_SPAWN {
-	#:: Set up a proximity, 100 units across
-	$x = $npc->GetX();
-	$y = $npc->GetY();
-	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50);
+	#:: Create a proximity, 100 units across, 50 units tall, without proximity say
+	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 25, $z + 25, 0);
 }
 
 sub EVENT_ENTER {
@@ -90,10 +88,10 @@ sub EVENT_ITEM {
 		quest::summonitem(13535);
 		#:: Ding!
 		quest::ding();
+		#:: Set faction
+		quest::faction(316, 100);	#:: + Tunare's Scouts
 		#:: Grant a small amount of experience
 		quest::exp(100);
-		#:: Set faction
-		quest::faction(316,100);	#:: + Tunare's Scouts
 	}
 	#:: LoY quest
 	#:: Match 54019 - Encrypted Scout Note
@@ -112,14 +110,14 @@ sub EVENT_ITEM {
 		quest::summonitem(7021);
 		#:: Ding!
 		quest::ding();
+		#:: Set faction - Confirmed on live.
+		quest::faction(316, 1);		#:: + Tunare's Scouts
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Create a hash for storing cash - 40 to 60cp
 		my %cash = plugin::RandomCash(40,60);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-		#:: Set faction - Confirmed on live.
-		quest::faction(316, 1);		#:: + Tunare's Scouts
 	}
 	#:: Match a 13322 - Emerald Shard
 	elsif (plugin::takeItems(13322=> 1)) {
@@ -130,18 +128,20 @@ sub EVENT_ITEM {
 			quest::summonitem(3315);
 			#:: Ding!
 			quest::ding();
+			#:: Set faction
+			quest::faction(316, 100);	#:: + Tunare's Scouts
 			#:: Grant a small amount of experience
 			quest::exp(100);
 			#:: Create a hash for storing cash - 5000 to 6000cp
 			my %cash = plugin::RandomCash(5000,6000);
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
-			#:: Set faction
-			quest::faction(316,100);	#:: + Tunare's Scouts
 		}
 		else {
-			#:: Return unused items
-			plugin::return_items(\%itemcount);
+			#:: Made up
+			quest::say("I have no use for this item, $name.  You can have it back.");
+			#:: Return a 13322 - Emerald Shard
+			quest::summonitem(13322);
 		}
 	}
 	#:: Return unused items
