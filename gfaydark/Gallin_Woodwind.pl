@@ -1,8 +1,8 @@
 sub EVENT_SAY { 
-	if ($text=~/Hail/i) {
+	if ($text=~/hail/i) {
 		quest::say("Greetings. friend! I am Gallin Woodwind of the Emerald Warriors. It is my charge to send forth Fier'Dal to [hunt for meat]. Kelethin's citizens must be nourished and this requires meat. Such is the circle of life.");
 	}
-	if ($text=~/hunt for meat/i) {
+	elsif ($text=~/hunt for meat/i) {
 		quest::say("Good!!  We have enough young warriors hunting in our woods. Your duty shall be to take this pack to the ocean and seek out sharks. Fill the bag with shark meat and combine it. I shall reward you with a fine piercing weapon."); 
 		#:: Give a 17953 - Pack for Shark
 		quest::summonitem(17953);
@@ -17,18 +17,18 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(7001, 7032));
 		#:: Ding!
 		quest::ding();
-		#:: Grant a small amount of experience
-		quest::exp(150);
 		#:: Create a hash for storing cash - 700 to 1000cp
 		my %cash = plugin::RandomCash(700,1000);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set factions
-		quest::faction(326,40);		#:: + Emerald Warriors
-		quest::faction(270,-6);		#:: - Indigo Brotherhood
-		quest::faction(325,4);		#:: + Merchants of Felwithe
-		quest::faction(276,4);		#:: + Kelethin Merchants
+		quest::faction(326, 40);		#:: + Emerald Warriors
+		quest::faction(270, -6);		#:: - Indigo Brotherhood
+		quest::faction(325, 4);			#:: + Merchants of Felwithe
+		quest::faction(276, 4);			#:: + Kelethin Merchants
+		#:: Grant a small amount of experience
+		quest::exp(150);
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
