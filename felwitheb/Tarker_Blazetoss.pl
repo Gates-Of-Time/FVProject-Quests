@@ -53,10 +53,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(275, 10); 	#:: + Keepers of the Art
-		quest::faction(279, 10); 	#:: + King Tearis Thex
-		quest::faction(246, 10); 	#:: + Faydark's Champions
-		quest::faction(239, -10); 	#:: - The Dead
+		quest::faction(275, 1); 	#:: + Keepers of the Art
+		quest::faction(279, 1); 	#:: + King Tearis Thex
+		quest::faction(246, 1); 	#:: + Faydark's Champions
+		quest::faction(239, -1); 	#:: - The Dead
 		#:: Grant a small amount of experience
 		quest::exp(350);
 	}
