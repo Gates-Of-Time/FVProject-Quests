@@ -15,6 +15,9 @@ sub EVENT_ITEM {
 		quest::say("Here is the first part. Now, go and gather the components from the list. Once your trap is ready, you will know what to do.");
 		#:: Give a 17803 - Soul Trap
 		quest::summonitem(17803);
+		#:: Ding!
+		quest::ding();
+		#:: No exp / faction
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
