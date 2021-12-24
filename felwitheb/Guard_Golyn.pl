@@ -4,7 +4,7 @@ sub EVENT_COMBAT {
 		if ($cur_target) {
 			my $target_name = $cur_target->GetCleanName();
 			quest::say("Time to die $target_name!");
-			$random = quest::ChooseRandom(1..4)
+			$random = quest::ChooseRandom(1..4);
 			if ($random == 1) {
 				quest::say("It's $race" . "s like you who have ruined your own lands.  You'll not ruin mine!");
 			}
