@@ -2,7 +2,7 @@ sub EVENT_SAY {
 	if ($text=~/Hail/i) {
 		quest::say("How are you, my friend?  You must be a [new scout of Kelethin].  I would hope so.  We dearly need more recruits.  Most of the Fier'Dal choose the path of the ranger.");
 	}
-	if ($text=~/new scout of Kelethin/i) {
+	elsif ($text=~/new scout of Kelethin/i) {
 		quest::say("Good.  I have an easy, but very important, task for you.  We require all young members to cleanse these woods of the troublesome pixie tricksters.  Take this pouch, fill it, and when it is combined, return it to me.  I just may have some used armor lying around for you.");
 		#:: Give a 17957 - Empty Pouch
 		quest::summonitem(17957);#Empty Pouch
@@ -17,15 +17,15 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(2104, 2106, 2108, 2111, 2112));
 		#:: Ding!!
 		quest::ding();
-		#:: Grant a small amount of experience
-		quest::exp(800);
 		#:: Create a hash for storing cash - 100 to 200cp
 		my %cash = plugin::RandomCash(100,200);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		#:: Set faction
 		quest::faction(316, 10);	#:: + Tunare's Scouts
+		#:: Grant a small amount of experience
+		quest::exp(800);
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
