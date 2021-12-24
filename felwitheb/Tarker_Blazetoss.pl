@@ -42,14 +42,14 @@ sub EVENT_ITEM {
 		quest::faction(279, 25); 	#:: + King Tearis Thex
 		quest::faction(246, 15); 	#:: + Faydark's Champions
 		quest::faction(239, -25); 	#:: - The Dead
-		#:: Give a small amount of xp
+		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
 	#:: Turn in for 13758 - Black Wolf Skin
 	elsif (plugin::takeItems(13758 => 1)) {
 		quest::say("Ah yes.  This is exactly what I need.  Thank you very much.");
-		#:: Randomly choose Rusty Dagger, Bandages, Simple Copper Ring, Spell: Numbing Cold, Worn Great Staff
-		quest::summonitem(quest::ChooseRandom(7007,13009,58094,59964,6012));
+		#:: Randomly choose Rusty Dagger, Bandages, Copper Ring, Spell: Numbing Cold, Worn Great Staff
+		quest::summonitem(quest::ChooseRandom(7007, 13009, 10004, 59964, 6012));
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
@@ -57,7 +57,7 @@ sub EVENT_ITEM {
 		quest::faction(279, 10); 	#:: + King Tearis Thex
 		quest::faction(246, 10); 	#:: + Faydark's Champions
 		quest::faction(239, -10); 	#:: - The Dead
-		#:: Give a small amount of xp
+		#:: Grant a small amount of experience
 		quest::exp(350);
 	}
 	#:: Return unused items
