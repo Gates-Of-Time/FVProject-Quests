@@ -38,19 +38,19 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(401,100);	#:: + Song Weavers
+		quest::faction(401, 100);	#:: + Song Weavers
 		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
 	#:: Match four 13099 - Spiderling Silk
-	if (plugin::takeItems(13099  => 4)) {
+	elsif (plugin::takeItems(13099  => 4)) {
 		quest::say("Splendid job! Now if you can just keep a tune, you'll be a fine bard.");
 		#:: Give a 13000 - Hand Drum
 		quest::summonitem(13000);
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(401,10);		#:: + Song Weavers
+		quest::faction(401, 1);		#:: + Song Weavers
 		#:: Grant a small amount of experience
 		quest::exp(100);
 		#:: Create a hash for storing cash - 90 to 110cp
