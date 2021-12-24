@@ -38,8 +38,6 @@ sub EVENT_ITEM {
 			#:: Grant a moderate amount of experience
 			quest::exp(1000);
 		}
-		#:: Return unused items
-		plugin::returnUnusedItems();
 	}
 	quest::say("Come back when you have done more to further our campaign.");
 	#:: Return unused items
