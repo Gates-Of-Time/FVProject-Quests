@@ -82,3 +82,14 @@ sub EVENT_ITEM {
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
+
+sub EVENT_COMBAT {
+	#:: Match combat state 1 - entered combat
+	if ($combat_state == 1) {
+		quest::say("Stand where you are, scum!!");
+	}
+}
+
+sub EVENT_DEATH_COMPLETE {
+	quest::say("Your name shall be added to the most wanted list of the Freeport Militia!!");
+}
