@@ -52,7 +52,7 @@ sub EVENT_ITEM {
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 #::	#:: Turn in for the Aid Fimli Quest (POP) Bundle of Super Conductive Wires, Gold Tipped Boar Horn, Shard of Pure Energy, Silicorrosive Grease
-#::	elsif (plugin::check_handin(\%itemcount, 9426 => 1, 28618 => 1, 29906 =>1, 28165 +>1)) {
+#::	elsif (plugin::takeItems(9426 => 1, 28618 => 1, 29906 =>1, 28165 +>1)) {
 #::		quest::say("I've been waiting for those.  Thank you, please take this!");
 #::		#:: 15980 - Note to Fimli
 #::		quest::summonitem(15980); 
