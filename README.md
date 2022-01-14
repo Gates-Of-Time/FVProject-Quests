@@ -1,7 +1,7 @@
 # FVProject Quests
 These are the quest files for [The Firionia Vie Project](https://fvproject.com/) emulated server.  These quest scripts cover "Classic" EverQuest, prior to any expansion content.
 
-## Close Source
+## Closed Source
 These quest scripts are closed source.  All rights are reserved.
 
 ## Contributing
