@@ -44,11 +44,11 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-#::	if (plugin::check_handin(\%itemcount, 20204 => 1)) {
+#::	if (plugin::takeItems(20204 => 1)) {
 #::		quest::say("Well done. The Bloodsabers have many enemies within the city of Qeynos and its surrounding regions. You must exercise much caution when not within the safety of our temple here in the Qeynos Catacombs. Take this Rough Bloodsaber Staff and when you have gathered a Giant King Snake Skin, two Gnoll Fangs, and a Giant Fire Beetle Eye, return them to me with this staff and I will complete its construction.");
 #::		quest::summonitem(20203);
 #::	}
-#::	elsif (plugin::check_handin(\%itemcount, 13915 => 2, 19946 => 1, 13251 => 1, 20203 => 1)) {
+#::	elsif (plugin::takeItems(13915 => 2, 19946 => 1, 13251 => 1, 20203 => 1)) {
 #::		quest::say("Excellent work! Here is your reward.");
 #::		quest::summonitem(20264);
 #::		quest::exp(100);
