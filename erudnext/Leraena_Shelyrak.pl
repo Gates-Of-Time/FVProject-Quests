@@ -76,7 +76,7 @@ sub EVENT_ITEM {
 		quest::exp(100);
 	}
 	#:: Turn in for 2049 -  Rolled Up Strip of Cloth for Catman Alliance Quest (Warrens Expansion)
-	#if (plugin::check_handin(\%itemcount, 2049 => 1)) {
+	#if (plugin::takeItems(2049 => 1)) {
 		#quest::say("This is important news indeed. It seems there is a tribe of cat men in the Stonebrunt Mountains that wishes to form an alliance with Erudin. I must alert the High Council of this immediately, thank you for your services.");
 		#:: Give a small amount of xp
 		#quest::exp(1000);
@@ -159,13 +159,13 @@ sub EVENT_ITEM {
 		}
 	}
 	#:: Turn in for 14582 -  Embroidered Bag of Bone Necklaces Quellious Disciple Quest - Stonebrunt/Warrens Expansion
-	#if (plugin::check_handin(\%itemcount, 14582 => 1)) {
+	#elsif (plugin::takeItems(14582 => 1)) {
 		#quest::say("I am unfamiliar with the markings that adorn these necklaces. You have done well thus far in hindering the kobolds worship of their evil deity. I award you the Initiate Symbol of Quellious. Return to me when you feel you are ready to deal with the [greater kobold shaman].");
 		#:: Give item 1564 - Initiate Symbol of Quellious
 		#quest::summonitem(1564);
 	#}
 	#:: Turn in for 1458 -  Embroidered bag of Bronze Symbols and 1564 Initiate Symbol of Quellious - Quellious Initiate Quest - Stonebrunt/Warrens Expansion
-	#if (plugin::check_handin(\%itemcount, 14583 => 1, 1565 =>1)) {
+	#elsif (plugin::takeItems(14583 => 1, 1565 =>1)) {
 		#quest::say("Your service to this temple is commendable. I award you the rank of Disciple for your devotions to The Tranquil. When you are [ready to advance] return to me and I will set you upon another task.");
 		#:: Give item 1565 - Disciple Symbol of Quellious
 		#quest::summonitem(1565);
@@ -179,14 +179,14 @@ sub EVENT_ITEM {
 		#quest::faction(265,-20); 	#:: - Heretics
 	#}
 	#:: Turn in for 14585 -  Odd Cold Iron Necklace  Quellious Regent Quest - Stonebrunt/Warrens Expansion
-	#if (plugin::check_handin(\%itemcount, 14585 => 1)) {
+	#elsif (plugin::takeItems(14585 => 1)) {
 		#quest::say("It is imperative that we discern the nature of these symbols and the source of the kobolds shamanistic powers. There is a citizen of Erudin residing in Freeport named Glyssa Sonshaw. She is quite possibly the most knowledgeable individual in the field of heraldic and hieroglyphic studies. Take the high shamans necklace and this note to her. When you have discovered the nature of the symbols return to me with the documentation and your Disciple Symbol of Quellious.");
 		#:: Give item 1772- Sealed Parchment and 14585 Odd Cold Iron Necklace
 		#quest::summonitem(1772);
 		#quest::summonitem(14585);
 	#}
 	#:: Turn in for 1780 -  Hieroglyph Translations, 1781 Encrypted document, and 1565 Disciple Symbol of Quellious  Quellious Regent Quest - Stonebrunt/Warrens Expansion
-	#if (plugin::check_handin(\%itemcount, 1780 => 1, 1781 => 1, 1565 =>1)) {
+	#elsif (plugin::takeItems(1780 => 1, 1781 => 1, 1565 =>1)) {
 		#quest::say("You have done well yet again, young disciple. I award you the rank of Regent of the Peacekeepers. With this information we can hopefully gain some insight into the workings of the kobolds' religion.");
 		#:: Give item 1566 - Regent Symbol of Quellious
 		#quest::summonitem(1566);
