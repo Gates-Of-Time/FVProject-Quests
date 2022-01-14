@@ -1,18 +1,24 @@
 sub EVENT_SAY {
-	if($text=~/hail/i) {
+	if ($text=~/hail/i) {
 		quest::emote("flutters about and seems to be staring back at you as if reading and understanding your thoughts!!");
 	}
 }
 
 sub EVENT_ITEM { 
-	if(plugin::check_handin(\%itemcount, 12271 => 1)){
+	#:: Match a 12271 - Fish Food
+	if (plugin::takeItems(12271 => 1)){
 		quest::emote("gladly gulps up your odd mixture and transforms into..!!");
-		quest::unique_spawn(51176,0,0,$x,$y,$z,$h);
+		#:: Ding!
 		quest::ding();
-		quest::faction( 5001, 10);
-		quest::faction( 226, 10);
-		quest::faction( 279, 10);
+		#:: Set factions
+		quest::faction(5001, 10);	#:: + Anti-mage
+		quest::faction(226, 10);	#:: + Clerics of Tunare
+		quest::faction(279, 10);	#:: + King Tearis Thex
+		#:: Depop with spawn timer active
 		quest::depop_withtimer();
+		#:: Spawn a Lake Rathetear >> Princess_Lenya_Thex (51176) at the current location
+		quest::unique_spawn(51176, 0, 0, $x, $y, $z, $h);
 	}
-	plugin::return_items(\%itemcount);
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
