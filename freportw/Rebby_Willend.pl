@@ -5,15 +5,15 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Turn in for 18923 - Message to Rebby
-	if (plugin::check_handin(\%itemcount, 18923 => 1)) {
+	#:: Match a 18923 - Message to Rebby
+	if (plugin::takeItems(18923 => 1)) {
 		#:: Give item 13158 - Rebbys Rat Whiskers
 		quest::summonitem(13158);
-		#:: Give a small amount of xp
-		quest::exp(50);
 		#:: Ding!
 		quest::ding();
+		#:: Grane a small amount of experience
+		quest::exp(50);
 	}
 	#:: Return unused items
-	plugin::return_items(\%itemcount);
+	plugin::returnUnusedItems();
 }
