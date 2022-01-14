@@ -51,7 +51,7 @@ sub EVENT_ITEM {
 		quest::exp(1000);
 	}
 	#:: Match a 20882 - Poacher's Head
-	elsif (plugin::check_handin(\%itemcount, 20882 => 1)) {
+	elsif (plugin::takeItems(20882 => 1)) {
 		quest::say("You, $name, are a worthy forester. It brings me great pride to present you this scroll that I have only passed to the finest in all of Norrath. Now you, too, may call the flames.");
 		#:: Give a 15691 - Spell: Call of Flame
 		quest::summonitem(15691);
