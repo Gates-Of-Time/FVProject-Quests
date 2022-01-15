@@ -63,21 +63,21 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
-#::	#:: Match a 28058 - Head of Stanos
-#:: 	elsif (plugin::takeItems(28058 => 1)) {
-#::		quest::say("YES! The ******* is dead, finally. I would have loved to do the work myself, but this will suffice. Here, take this, you have proven yourself a true friend of the Circle!");
-#::		#:: Give a 7501 - Fanged Skull Stiletto
-#::		quest::summonitem(7501);
-#::		#:: Ding!
-#::		quest::ding();
-#::		quest::faction(223, 200);		#:: + Circle of Unseen Hands
-#::		quest::faction(291, -30);		#:: - Merchants of Qeynos
-#::		quest::faction(230, 30);		#:: + Corrupt Qeynos Guards
-#::		quest::faction(262, -30);		#:: - Guards of Qeynos
-#::		quest::faction(273, 20);		#:: + Kane Bayle
-#:: 		#:: Grant a large amount of experience
-#::		quest::exp(50000);
-#::	}
+	#:: Match a 28058 - Head of Stanos
+ 	elsif (plugin::takeItems(28058 => 1)) {
+		quest::say("YES! The ******* is dead, finally. I would have loved to do the work myself, but this will suffice. Here, take this, you have proven yourself a true friend of the Circle!");
+		#:: Give a 7501 - Fanged Skull Stiletto
+		quest::summonitem(7501);
+		#:: Ding!
+		quest::ding();
+		quest::faction(223, 200);		#:: + Circle of Unseen Hands
+		quest::faction(291, -30);		#:: - Merchants of Qeynos
+		quest::faction(230, 30);		#:: + Corrupt Qeynos Guards
+		quest::faction(262, -30);		#:: - Guards of Qeynos
+		quest::faction(273, 20);		#:: + Kane Bayle
+ 		#:: Grant a large amount of experience
+		quest::exp(50000);
+	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
