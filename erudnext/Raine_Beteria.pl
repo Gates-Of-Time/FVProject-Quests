@@ -34,14 +34,14 @@ sub EVENT_ITEM {
 		elsif ($faction == 5) {
 			quest::say("You are most welcome to the circle of the Craftkeepers, but I require more service before we can discuss such things.");
 			#:: Return coin
-			quest::givecash($copper, $silver, $gold, $platinum);
+			quest::givecash($c, $s, $g, $p);
 			#:: Return 6339 - Blessed Silver Wand
 			quest::summonitem(6339);
 		}
 		else {
 			quest::say("You are lucky to be standing. Leave here immediately or suffer grave consequences! You are not welcome amongst the Craftkeepers.");
 			#:: Return coin
-			quest::givecash($copper, $silver, $gold, $platinum);
+			quest::givecash($c, $s, $g, $p);
 			#:: Return 6339 - Blessed Silver Wand
 			quest::summonitem(6339);
 		}
