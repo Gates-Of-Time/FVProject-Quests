@@ -16,7 +16,7 @@ sub EVENT_TIMER
 sub EVENT_CYCLE
 {
 # We assume 1 is night/Zephyl, and 2 is day/Hasten
-	if($zonesn eq 'commons' || $zonesn eq 'everfrost' || $zonesn eq 'kithicor' || $zonesn eq 'lakerathe' || $zonesn eq 'lfaydark' || $zonesn eq 'northkarana' || $zonesn eq 'qey2hh1' || $zonesn eq 'rathemtn' || $zonesn eq 'highpass' || $zonesn eq 'southkarana' || $zonesn eq 'eastwastes')
+	if($zonesn eq 'commons' || $zonesn eq 'everfrost' || $zonesn eq 'kithicor' || $zonesn eq 'lakerathe' || $zonesn eq 'lfaydark' || $zonesn eq 'northkarana' || $zonesn eq 'qey2hh1' || $zonesn eq 'rathemtn' || $zonesn eq 'highpass' || $zonesn eq 'southkarana' || $zonesn eq 'eastwastes' || $zonesn eq 'swampofnohope' || $zonesn eq 'fieldofbone' || $zonesn eq 'timorous')
 	{
 		if ($zonetime < 600 || $zonetime > 1999) 
 		{
