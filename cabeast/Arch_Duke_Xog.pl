@@ -42,8 +42,8 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(62, 100); #Crusader of Greenmist
-		quest::faction(193, 25); #Legion of Cabilis
+		quest::faction(442, 100); 	#:: + Crusaders of Greenmist
+		quest::faction(441, 25); 	#:: + Legion of Cabilis
 		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
