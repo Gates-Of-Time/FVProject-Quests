@@ -33,6 +33,8 @@ sub EVENT_ITEM {
 		quest::faction(445, 1);		#:: + Scaled Mystics
 		quest::faction(444, 1);		#:: + Swift Tails
 		quest::faction(442, 1);		#:: + Crusaders of Greenmist
+		#:: Grant a moderate amount of experience
+		quest::exp(500);
 	}
 	#:: plugin::try_tome_handins(\%itemcount, $class, 'Warrior');
 	#:: Return unused items
