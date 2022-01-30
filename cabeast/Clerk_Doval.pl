@@ -21,8 +21,8 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(30, 3); 		#:: + Cabilis Residents
-		quest::faction(193, 3);		#:: + Legion of Cabilis
+		quest::faction(440, 3); 		#:: + Cabilis Residents
+		quest::faction(441, 3);			#:: + Legion of Cabilis
 		#:: Grant a moderate amount of experience
 		quest::exp(1200);
 		#:: Create a hash for storing cash - 50 to 100cp
