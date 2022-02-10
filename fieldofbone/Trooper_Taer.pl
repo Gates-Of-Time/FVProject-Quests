@@ -44,5 +44,5 @@ sub EVENT_ITEM {
 }
 
 sub EVENT_DEATH_COMPLETE {
-	quest::say("My comrades will avenge my death."
+	quest::say("My comrades will avenge my death.");
 }
