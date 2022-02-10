@@ -1,5 +1,5 @@
 sub EVENT_SAY {
-	elsif ($text=~/mission/i) {
+	if ($text=~/mission/i) {
 		quest::say("If you have not noticed the new intelligent races that have found it's way to our land, you will see soon. They have built a small outpost far to the south along the ocean. If they go unchecked, their outpost will become a city from which they will cause us much discomfort. They are strong and have experienced [mercenaries] in their employ.");
 	}
 	elsif ($text=~/mercenaries/i) {
