@@ -1,5 +1,5 @@
 sub EVENT_ENTERZONE {
 
-PerlPacket::SendTo("LiveOP_MOTD", $client);
+PerlPacket::SendTo(LiveOP_MOTD, $client);
 
 }
