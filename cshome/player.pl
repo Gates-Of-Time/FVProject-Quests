@@ -1,4 +1,5 @@
 sub EVENT_ENTERZONE {
-my $perlpacket = "0x01b2";
-$perlpacket->SendTo($client);
+
+$PerlPacket->SendTo(0x01b2, $client);
+
 }
