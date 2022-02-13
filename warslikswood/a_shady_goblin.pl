@@ -1,16 +1,11 @@
 #:: Regal Band of Bathezid
 
 sub EVENT_SAY{
-	#:: Key a data bucket
-	$key = $client->CharacterID() . "-signet-of-service";
-	#:: Match if the key exists and value is 1
-	if (quest::get_data($key) == 1) {
-		if ($text=~/hail/i) {
-			quest::say("If yer not my contact ya best be movin' on. Got no time to waste on ya.");
-		}
-		elsif ($text=~/i am your contact/i) {
-			quest::say("Are ya? Hum, let me see yer insignia then, and the note Skargus gave ya.");
-		}
+	if ($text=~/hail/i) {
+		quest::say("If yer not my contact ya best be movin' on. Got no time to waste on ya.");
+	}
+	elsif ($text=~/i am your contact/i) {
+		quest::say("Are ya? Hum, let me see yer insignia then, and the note Skargus gave ya.");
 	}
 }
 
