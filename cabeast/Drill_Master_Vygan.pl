@@ -14,19 +14,25 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("I am a Drill Master of the Legion of Cabilis.  I have no time for idle chitchat.  Be off if you were not summoned to this fortress!  Find that guild which was chosen for you as an egg.");
 	}
-	elsif ($text=~/militia pike/i) {
-		quest::say("The pike is the prime weapon of Cabilis warriors. It can be upgraded, too, such as from the partisan pike to the militia pike and beyond. All these pikes may be slung on one's back when your hands are needed for other pursuits. To upgrade a pike is something that is learned, but it can never be performed without a [geozite tool]. Do you [desire to upgrade the partisan pike]?");
+	#:: Match if faction is amiable or better
+	if ($faction <= 4) {
+		elsif ($text=~/militia pike/i) {
+			quest::say("The pike is the prime weapon of Cabilis warriors. It can be upgraded, too, such as from the partisan pike to the militia pike and beyond. All these pikes may be slung on one's back when your hands are needed for other pursuits. To upgrade a pike is something that is learned, but it can never be performed without a [geozite tool]. Do you [desire to upgrade the partisan pike]?");
+		}
+		elsif ($text=~/upgrade the partisan pike/i) {
+			quest::say("It seems as though a traitor is among our people. Someone has smuggled shackle keys to the slaves. The froglok slaves have been escaping into the swamplands and there we can hear the whistle of their contact who escorts them to freedom. We must put a stop to this! I desire three things. Your partisan pike, the head of the Iksar traitor and the whistle of the escort. Bring these to me and I shall give you the militia pike.");
+		}
+		elsif ($text=~/what geozite tool/i) {
+			quest::say("The Geozite Tool is used to sharpen the pikes of the Legion of Cabilis. Only it can produce the serrated edges necessary for these deadly weapons. They are not handed out to just any broodling. The tool is only given to warriors who serve the legion. Do you [want a geozite tool]?");
+		}
+		elsif ($text=~/want a geozite tool/i) {
+			quest::say("Then take this satchel and go to the outer walls of Cabilis and seek out large scorpions. When you can fill and combine the satchel with scorpion pincers, then you shall prove to me that you are truly a warrior and I shall send you off on your true test.");
+			#:: Give a 17993 - Pincer Satchel
+			quest::summonitem(17993);
+		}
 	}
-	elsif ($text=~/upgrade the partisan pike/i) {
-		quest::say("It seems as though a traitor is among our people. Someone has smuggled shackle keys to the slaves. The froglok slaves have been escaping into the swamplands and there we can hear the whistle of their contact who escorts them to freedom. We must put a stop to this! I desire three things. Your partisan pike, the head of the Iksar traitor and the whistle of the escort. Bring these to me and I shall give you the militia pike.");
-	}
-	elsif ($text=~/what geozite tool/i) {
-		quest::say("The Geozite Tool is used to sharpen the pikes of the Legion of Cabilis. Only it can produce the serrated edges necessary for these deadly weapons. They are not handed out to just any broodling. The tool is only given to warriors who serve the legion. Do you [want a geozite tool]?");
-	}
-	elsif ($text=~/want a geozite tool/i) {
-		quest::say("Then take this satchel and go to the outer walls of Cabilis and seek out large scorpions. When you can fill and combine the satchel with scorpion pincers, then you shall prove to me that you are truly a warrior and I shall send you off on your true test.");
-		#:: Give a 17993 - Pincer Satchel
-		quest::summonitem(17993);
+	else {
+		quest::say("No Iksar resident will have anything to do with you!");
 	}
 #::	elsif ($text=~/true warrior of the legion/i) {
 #::		quest::say("If you are you will have proof; else you will have the wrath of the Legion upon you for such a claim.");
