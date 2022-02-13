@@ -2,14 +2,23 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Greetings, small one! You should not waste your time in the safety of the troopers' patrols. Go forth into the land and earn your stripes in battle. Become a greater asset to the Iksar empire.");
 	}
-	elsif ($text=~/thieves/i) {
-		#:: Text made up
-		quest::say("Never mind how the book was taken, just go find the goblin thieves that did the deed.");
+	elsif ($text=~/poem/i) {
+		quest::say("What kind on nonsssenssse do you sspeak?  Unless you find sssomething with my name on it, I cannot help you.");
 	}
-	elsif ($text=~/reporting for duty/i) {
-		quest::say("Welcome to my garrison, Trooper $name. Lucky for you that you do not serve the inferior swamp garrison. They lose more troopers than any legion unit. You have come just in time. We need you to take this pack and fill it with goblin warlord warbeads. Combine the beads in the pack and return it to me.");
-		#:: Give a 17042 - Woods Garrison Pack
-		quest::summonitem(17042);
+	#:: Match if faction is amiable or better
+	if ($faction <= 4) {
+		if ($text=~/thieves/i) {
+			#:: Text made up
+			quest::say("Oh yes, the thieves were none other than a band of goblin thieves who crept silently into my quarters.  They are often found lurking close to these walls.  Find them and return my poem!");
+		}
+		elsif ($text=~/trooper reporting for duty/i) {
+			quest::say("Welcome to my garrison, Trooper $name. Lucky for you that you do not serve the inferior swamp garrison. They lose more troopers than any legion unit. You have come just in time. We need you to take this pack and fill it with goblin warlord warbeads. Combine the beads in the pack and return it to me.");
+			#:: Give a 17042 - Woods Garrison Pack
+			quest::summonitem(17042);
+		}
+	}
+	else {
+		quest::say("No Iksar resident will have anything to do with you!");
 	}
 }
 
