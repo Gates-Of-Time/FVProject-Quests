@@ -14,7 +14,17 @@ sub EVENT_TIMER {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Do not waste my time, $name.  Do you wish to take the test of blades or not?");
+		if (quest::is_the_scars_of_velious_enabled()) {
+			quest::say("Do not waste my time, $name.  Do you wish to take the test of blades or not? Or do you have one of my old trinkets you wish to trade in?");
+		}
+		else {
+			quest::say("Do not waste my time, $name.  Do you wish to take the test of blades or not?");
+		}
+	}
+	elsif ($text=~/trinkets/i) {
+		if (quest::is_the_scars_of_velious_enabled()) {
+			quest::say("Ahh, I've given out some lesser trinkets in the past that many have gotten bored with.  I'm willing to accept Aerated Pauldrons in trade for Pauldrons of the Blue Sky.");
+		}
 	}
 	elsif ($text=~/blades/i) {
 		quest::say("The test of blades is not easy.  I hope you are as powerful as you are brave.  What do you wish to strive for? Strength, force, or skill?");
@@ -45,8 +55,15 @@ sub EVENT_ITEM {
 	#:: Match a 20942 - Pearlescent Globe, a 20974 - Silver Mesh, and a 20975 - Spiroc Air Totem
 	elsif (plugin::takeItems(20942 => 1, 20974 => 1, 20975 => 1)) {		#:: Warrior Test of Force
 		quest::say("You have proven yourself worthy.");
-		#:: Give a 4321 - Aerated Pauldrons
-		quest::summonitem(4321);
+		if (quest::is_the_scars_of_velious_enabled()) {
+			#:: Give a 27701 - Pauldrons of the Blue Sky
+			quest::summonitem(27701);
+		}
+		else {
+			#:: Give a 4321 - Aerated Pauldrons
+			quest::summonitem(4321);
+		}
+
 		#:: Ding!
 		quest::ding();
 		#:: Grant a huge amount of experience
@@ -63,6 +80,17 @@ sub EVENT_ITEM {
 		#:: Grant a huge amount of experience
 		quest::exp(100000);
 		quest::depop();
+	}
+	elsif (quest::is_the_scars_of_velious_enabled()) {
+		#:: Match a 4321 - Aerated Pauldron
+		if (plugin::takeItems(4321 => 1)) {		#:: Swap Aerated Pauldrons -> Pauldrons of the Blue Sky
+			quest::say("You have proven yourself worthy.");
+			#:: Give a 27701 - Pauldrons of the Blue Sky
+			quest::summonitem(27701);
+			#:: Ding!
+			quest::ding();
+			quest::depop();
+		}
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
