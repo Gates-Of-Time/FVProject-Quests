@@ -1,3 +1,5 @@
+my @Data = ("lavastorm", 27, 485, 911, 55, 106);
+
 sub EVENT_SPAWN {
 	#:: Create a proximity 400 units across, without proximity say
 	quest::set_proximity($x - 200, $x + 200, $y - 200, $y + 200, $z - 200, $z + 200, 0);
@@ -22,8 +24,8 @@ sub EVENT_HP {
 sub EVENT_ENTER {
 	if (($ulevel >= 53) && ($status < 80)) {
 		quest::echo(0, "I will not fight you, but I will banish you!");
-		#:: Move player to Lavastorm (27) at the specified coordinates, facing North
-		$client->MovePC(27, -64, 262, -93.96, 0);
+		#:: Move player to Lavastorm (27) at the specified coordinates
+		$client->MovePC($Data[1], $Data[2], $Data[3], $Data[4], $Data[5]);
 	}
 }
 
@@ -42,8 +44,8 @@ sub EVENT_TIMER {
 				if ($h_ent->IsClient()) {
 					if ($h_ent->GetLevel() > 52) {
 						quest::ze(0, "I will not fight you, but I will banish you!");
-						#:: Move player to Lavastorm (27) at the specified coordinates, facing North
-						$h_ent->CastToClient()->MovePC(27, -64, 262, -93.96, 0);
+						#:: Move player to Lavastorm (27) at the specified coordinates
+						$h_ent->CastToClient()->MovePC($Data[1], $Data[2], $Data[3], $Data[4], $Data[5]);
 					}
 				}
 			}
