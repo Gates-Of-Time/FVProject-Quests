@@ -1,4 +1,4 @@
-my @Data = ("lavastorm", 27, 485, 911, 55, 106);
+my @Data = ("lavastorm", 27, 527, 935, 55, 106);
 
 sub EVENT_SPAWN {
 	#:: Create a proximity 400 units across, without proximity say
