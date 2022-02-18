@@ -16,7 +16,7 @@ sub EVENT_SAY {
 	}
 	#:: Match if faction is amiable or better
 	if ($faction <= 4) {
-		elsif ($text=~/militia pike/i) {
+		if ($text=~/militia pike/i) {
 			quest::say("The pike is the prime weapon of Cabilis warriors. It can be upgraded, too, such as from the partisan pike to the militia pike and beyond. All these pikes may be slung on one's back when your hands are needed for other pursuits. To upgrade a pike is something that is learned, but it can never be performed without a [geozite tool]. Do you [desire to upgrade the partisan pike]?");
 		}
 		elsif ($text=~/upgrade the partisan pike/i) {
