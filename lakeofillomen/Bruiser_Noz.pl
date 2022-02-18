@@ -21,10 +21,11 @@ sub EVENT_TIMER {
 		if (scalar @ClientList > 0) {
 			foreach my $c (@ClientList) {
 				if ($c->CalculateDistance($x, $y, $z) < 50) {
-				#:: Attack the selected entity
-				$npc->Attack($c);
-				#:: Exit the loop after the first match
-				last;
+					#:: Attack the selected entity
+					$npc->Attack($c);
+					#:: Exit the loop after the first match
+					last;
+				}
 			}
 		}
 	}
