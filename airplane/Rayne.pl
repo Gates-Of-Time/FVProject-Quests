@@ -30,8 +30,15 @@ sub EVENT_ITEM {
 	#:: Match a 20963 - Honeyed Nectar, a 20994 - Bixie Stinger, a 20995 - Lightning Rod, and a 20996 - Bloodsky Sapphire
 	if (plugin::takeItems(20963 => 1, 20994 => 1, 20995 => 1, 20996 => 1)) {	#:: Rogue Test of Deception
 		quest::say("Very good. Here's your reward.");
-		#:: Give a 11677 - Ebonsting
-		quest::summonitem(11677);
+		if (quest::is_the_scars_of_velious_enabled()) {
+			#:: Give a 27704 - Thornstinger
+			quest::summonitem(27704);
+		}
+		else {
+			#:: Give a 11677 - Ebonsting
+			quest::summonitem(11677);
+		}
+
 		#:: Ding!
 		quest::ding();
 		#:: Grant a huge amount of experience
@@ -52,8 +59,15 @@ sub EVENT_ITEM {
 	#:: Match a 20935 - Bronze Disc, a 20987 - Jester's Mask, and a 20986 - Red Face Paint
 	elsif (plugin::takeItems(20935 => 1, 20987 => 1, 20986 => 1)) {			#:: Rogue Test of Cunning
 		quest::say("Very good. Here's your reward.");
-		#:: Give a 2702 - Transparent Mask
-		quest::summonitem(2702);
+		if (quest::is_the_scars_of_velious_enabled()) {
+			#:: Give a 27702 - Crystal Mask
+			quest::summonitem(27702);
+		}
+		else {
+			#:: Give a 2702 - Transparent Mask
+			quest::summonitem(2702);
+		}
+
 		#:: Ding!
 		quest::ding();
 		#:: Grant a huge amount of experience
