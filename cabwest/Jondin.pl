@@ -33,6 +33,8 @@ sub EVENT_ITEM {
 		#:: Set factions
 		quest::faction(443, 1);		#:: + Brood of Kotiz
 		quest::faction(441, 1);		#:: + Legion of Cabilis
+		#:: Grant a small amount of experience
+		quest::exp(100);
 		#:: Create a hash for storing cash - 1 to 20cp
 		my %cash = plugin::RandomCash(1, 20);
 		#:: Grant a random cash reward
@@ -48,6 +50,8 @@ sub EVENT_ITEM {
 		#:: Set factions
 		quest::faction(443, 2);		#:: + Brood of Kotiz
 		quest::faction(441, 1);		#:: + Legion of Cabilis
+		#:: Grant a small amount of experience
+		quest::exp(100);
 		#:: Create a hash for storing cash - 1 to 10cp
 		my %cash = plugin::RandomCash(1, 10);
 		#:: Grant a random cash reward
