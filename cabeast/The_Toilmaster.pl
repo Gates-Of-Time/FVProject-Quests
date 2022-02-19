@@ -26,7 +26,7 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(441, 2);		#:: + Legion of Cabilis
+		quest::faction(441, 3);		#:: + Legion of Cabilis
 		quest::faction(440, 1);		#:: + Cabilis Residents
 		quest::faction(445, 1);		#:: + Scaled Mystics
 		quest::faction(442, 1);		#:: + Crusaders of Greenmist
