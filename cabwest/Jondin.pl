@@ -32,7 +32,26 @@ sub EVENT_ITEM {
 		quest::ding();
 		#:: Set factions
 		quest::faction(443, 1);		#:: + Brood of Kotiz
-		quest::faction(441, 1);		#:: + Legion of Cabilis		
+		quest::faction(441, 1);		#:: + Legion of Cabilis
+		#:: Create a hash for storing cash - 1 to 20cp
+		my %cash = plugin::RandomCash(1, 20);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+	}
+	#:: Match a 12421 - Full Fern Flower Pouch
+	elsif (plugin::takeItems(12421 => 1)) {
+		quest::say("Thank you for your service my good friend. Here is a small reward and please accept this item which I procured in one of my many visits to the Outlands.");
+		#:: Give a 9026 - Frogskin Shield
+		quest::summonitem(9026);
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(443, 2);		#:: + Brood of Kotiz
+		quest::faction(441, 1);		#:: + Legion of Cabilis
+		#:: Create a hash for storing cash - 1 to 10cp
+		my %cash = plugin::RandomCash(1, 10);
+		#:: Grant a random cash reward
+		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
