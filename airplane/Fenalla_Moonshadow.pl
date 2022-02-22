@@ -52,13 +52,17 @@ sub EVENT_ITEM {
 	#:: Match a 20736 - Acidic Venom, a 20737 - Ethereal Ruby, a 20867 - Spiroc Elder's Totem, and a 20958 - White-tipped Spiroc Feather
 	elsif (plugin::takeItems(20736 => 1, 20737 => 1, 20867 => 1, 20958 => 1)) {			#:: Druid Test of the Eagle
 		quest::say("You have done well, young one.");
-		if (quest::is_the_scars_of_velious_enabled()) {
-			#:: Give a 14555 - Spiroc Banisher Focus
-			quest::summonitem(14555);
-		}
-		else {
+		if (quest::quest::is_classic_enabled()) {
 			#:: Give a 147498 - Cloak of Leaves
 			quest::summonitem(147498);
+		}
+		elsif (quest::is_the_ruins_of_kunark_enabled()) {
+			#:: Give a 147498 - Cloak of Leaves
+			quest::summonitem(147498);
+		}
+		else {
+			#:: Give a 14555 - Spiroc Banisher Focus
+			quest::summonitem(14555);
 		}
 
 		#:: Ding!

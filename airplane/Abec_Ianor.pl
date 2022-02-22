@@ -44,13 +44,17 @@ sub EVENT_ITEM {
 	#:: Match a 20958 - White-tipped Spiroc Feather, a 20749 - Pulsating Sapphire, and a 20750 - Amethyst Amulet
 	elsif (plugin::takeItems(20958 => 1, 20749 => 1, 20750 => 1)) {			#:: Wizard Test of Visualization
 		quest::say("Excellent! Take this.");
-		if (quest::is_the_scars_of_velious_enabled()) {
-			#:: Give a 27710 - Amulet of the Void
-			quest::summonitem(27710);
-		}
-		else {
+		if (quest::quest::is_classic_enabled()) {
 			#:: Give a 14556 - Amulet of Planar Transference
 			quest::summonitem(14556);
+		}
+		elsif (quest::is_the_ruins_of_kunark_enabled()) {
+			#:: Give a 14556 - Amulet of Planar Transference
+			quest::summonitem(14556);
+		}
+		else {
+			#:: Give a 27710 - Amulet of the Void
+			quest::summonitem(27710);
 		}
 
 		#:: Ding!

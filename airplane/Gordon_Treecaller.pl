@@ -41,13 +41,17 @@ sub EVENT_ITEM {
 	#:: Match a 20859 - Bitter Honey, a 20860 - Circlet of Brambles, a 20858 - Efreeti Long Sword, and a 20962 - Emerald Spiroc Feather
 	elsif (plugin::takeItems(20859 => 1, 20860 => 1, 20858 => 1, 20962 => 1)) { 		#:: Ranger Test of the Blade
 		quest::say("Take this as your reward.");
-		if (quest::is_the_scars_of_velious_enabled()) {
-			#:: Give a 27732 - Arydryidriyorn
-			quest::summonitem(27732);
-		}
-		else {
+		if (quest::quest::is_classic_enabled()) {
 			#:: Give a 11697 - Yannikil
 			quest::summonitem(11697);
+		}
+		elsif (quest::is_the_ruins_of_kunark_enabled()) {
+			#:: Give a 11697 - Yannikil
+			quest::summonitem(11697);
+		}
+		else {
+			#:: Give a 27732 - Arydryidriyorn
+			quest::summonitem(27732);
 		}
 
  		#:: Ding!
