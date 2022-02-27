@@ -8,7 +8,7 @@ sub EVENT_SIGNAL {
 	if ($signal == 1) {
 		quest::say("Ha!! Who dares to take what is Bruiser's!! I will make swamp mush out of them!!");
 		#:: Set a timer 'Bruiser' that triggers every 10 seconds
-		quest::set_timer("Bruiser", 10);
+		quest::settimer("Bruiser", 10);
 	}
 }
 
