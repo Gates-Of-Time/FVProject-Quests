@@ -66,13 +66,17 @@ sub EVENT_ITEM {
 	#:: Match a 20711 - Efreeti War Axe, a 20964 - Dulcet Nectar, a 20713 - Blood Sky Ruby, and a 20712 - Bloodstained Hilt
 	elsif (plugin::takeItems(20711 => 1, 20964 => 1, 20713 => 1, 20712 => 1)) {		#:: Shadowknight Test of Necropotence
 		quest::say("You have truly earned this.");
-		if (quest::is_the_scars_of_velious_enabled()) {
-			#:: Give a 27707 - Khyldorn the Blood Drinker
-			quest::summonitem(27707);
-		}
-		else {
+		if (quest::quest::is_classic_enabled()) {
 			#:: Give a 11679 - Rheumguls
 			quest::summonitem(11679);
+		}
+		elsif (quest::is_the_ruins_of_kunark_enabled()) {
+			#:: Give a 11679 - Rheumguls
+			quest::summonitem(11679);
+		}
+		else {
+			#:: Give a 27707 - Khyldorn the Blood Drinker
+			quest::summonitem(27707);
 		}
 
 		#:: Ding!

@@ -32,13 +32,17 @@ sub EVENT_ITEM {
 	#:: Match a 20947 - Phosphoric Globe, a 20824 - Shimmering Diamond, and a 20825 - Crude Wooden Flute
 	if (plugin::takeItems(20947 => 1, 20824 => 1, 20825 => 1)) {				#:: Bard Test of Pitch
 		quest::say("Excellent! Take this as your reward.");
-		if (quest::is_the_scars_of_velious_enabled()) {
-			#:: Give a 27722 - Ervaj's Flute of Flight
-			quest::summonitem(27722);
-		}
-		else {
+		if (quest::quest::is_classic_enabled()) {
 			#:: Give a 14564 - Agilmente's Flute of Flight
 			quest::summonitem(14564);
+		}
+		elsif (quest::is_the_ruins_of_kunark_enabled()) {
+			#:: Give a 14564 - Agilmente's Flute of Flight
+			quest::summonitem(14564);
+		}
+		else {
+			#:: Give a 27722 - Ervaj's Flute of Flight
+			quest::summonitem(27722);
 		}
 
 		#:: Ding!
@@ -50,13 +54,17 @@ sub EVENT_ITEM {
 	#:: Match a 20940 - Platinum Disc, a 20822 - Music Box, and a 20823 - Light Woolen Mantle
 	elsif (plugin::takeItems(20940 => 1, 20822 => 1, 20823 => 1)) {				#:: Bard Test of Voice
 		quest::say("Excellent! Take this as your reward.");
-		if (quest::is_the_scars_of_velious_enabled()) {
-			#:: Give a 27721 - Mantle of the Songweaver
-			quest::summonitem(27721);
-		}
-		else {
+		if (quest::quest::is_classic_enabled()) {
 			#:: Give a 2710 - Songweaver's Mantle
 			quest::summonitem(2710);
+		}
+		elsif (quest::is_the_ruins_of_kunark_enabled()) {
+			#:: Give a 2710 - Songweaver's Mantle
+			quest::summonitem(2710);
+		}
+		else {
+			#:: Give a 27721 - Mantle of the Songweaver
+			quest::summonitem(27721);
 		}
 
 		#:: Ding!
@@ -68,13 +76,17 @@ sub EVENT_ITEM {
 	#:: Match a 20933 - Ochre Tessera, a 20821 - Light Woolen Mask, and a 20820 - Songbird Statuette
 	elsif (plugin::takeItems(20933 => 1, 20821 => 1, 20820 => 1)) {				#:: Bard Test of Tone
 		quest::say("Excellent! Take this as your reward.");
-		if (quest::is_the_scars_of_velious_enabled()) {
-			#:: Give a 27720 - Mask of Song
-			quest::summonitem(27720);
-		}
-		else {
+		if (quest::quest::is_classic_enabled()) {
 			#:: Give a 2711 - Mask of the Songbird
 			quest::summonitem(2711);
+		}
+		elsif (quest::is_the_ruins_of_kunark_enabled()) {
+			#:: Give a 2711 - Mask of the Songbird
+			quest::summonitem(2711);
+		}
+		else {
+			#:: Give a 27720 - Mask of Song
+			quest::summonitem(27720);
 		}
 
 		#:: Ding!
