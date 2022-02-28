@@ -1,6 +1,6 @@
 sub EVENT_SAY {   
 	if ($text=~/hail/i) {
-		if (plugin::check_hasitem($client, 4246) {
+		if (plugin::check_hasitem($client, 4246)) {
 			quest::say("So you are expecting to earn your way to rank of revenant, eh? You shall when I have the base and stem of the candle your occultist skullcap.");
 		}
 		else {
@@ -27,7 +27,7 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/true mission/i) {
 		#:: Match a 4263 - Dark Binder Skullcap
-		if (plugin::check_hasitem($client, 4263) {
+		if (plugin::check_hasitem($client, 4263)) {
 			quest::say("I have been waiting for a Nihilist to return. His name was Ryx and I fear his love of ale and the high seas has kept him from his mission. All I want you to do is find him. He should be disguised as a worker and he will give you a tome to bring to me. Return it with your Dark Binder Cap. I am sure that is simple enough for one as simple as you. Be sure to give him this.");
 			#:: Give a 12848 - Spectacle
 			quest::summonitem(12848);
@@ -40,9 +40,9 @@ sub EVENT_SAY {
 #::	elsif ($text=~/kor sha candlestick/i) {
 #:: 		quest::say("I need the foot and stem of my candlestick. The Stem comes from Sarnaks. The foot has been stolen by Gripe, in East Cabilis.");
 #::	}
-	elsif ($text=~/new revenant/i) {
-		quest::say("");
-	}
+#::	elsif ($text=~/new revenant/i) {
+#::		quest::say("");
+#::	}
 }
 
 sub EVENT_ITEM { 
