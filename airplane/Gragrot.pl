@@ -20,7 +20,7 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/bash/i) {
 		my $reward = "Amulet of the Sphinx Eye";
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			$reward = "Sphinx Eye Amulet";
 		}
 		elsif (quest::is_the_ruins_of_kunark_enabled()) {
@@ -31,7 +31,7 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/smash/i) {
 		my $reward = "Crimson Ring of the Djinni";
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			$reward = "Djinni's Finger Ring";
 		}
 		elsif (quest::is_the_ruins_of_kunark_enabled()) {
@@ -49,7 +49,7 @@ sub EVENT_ITEM {
 	#:: Match a 20929 - Ebon Tessera, a 20997 - Sphinx Eye Opal, and a 20998 - Finely Crafted Amulet
 	if (plugin::takeItems(20929 => 1, 20997 => 1, 20998 => 1)) {			#:: Shadowknight Test of Bash
 		quest::say("You is powerful! Take this!");
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			#:: Give a 14554 - Sphinx Eye Amulet
 			quest::summonitem(14554);
 		}
@@ -71,7 +71,7 @@ sub EVENT_ITEM {
 	#:: Match a 20936 - Copper Disc, a 20999 - Small Sapphire, and a 20700 - Silvery Ring
 	elsif (plugin::takeItems(20936 => 1, 20999 => 1, 20700 => 1)) {			#:: Shadowknight Test of Smash
 		quest::say("You is powerful! Take this!");
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			#:: Give a 14553 - Djinni Finger Ring
 			quest::summonitem(14553);
 		}

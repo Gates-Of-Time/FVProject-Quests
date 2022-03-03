@@ -41,7 +41,7 @@ sub EVENT_ITEM {
 	#:: Match a 20803 - Brass Knuckles, a 20801 - Ethereal Amethyst, a 20802 - Nebulous Sapphire, and a 20960 - White Spiroc Feather
 	elsif (plugin::takeItems(20803 => 1, 20801 => 1, 20802 => 1, 20960 => 1)) {		#:: Monk Test of Fists
 		quest::say("You have moved closer to enlightenment.");
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			#:: Give a 11690 - Wu's Tranquil Fist
 			quest::summonitem(11690);
 		}
