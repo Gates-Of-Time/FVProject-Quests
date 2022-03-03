@@ -30,7 +30,7 @@ sub EVENT_ITEM {
 	#:: Match a 20793 - Finely Woven Gold Mesh, a 20794 - Silken Strands, and a 20932 - Verdant Tessera
 	if (plugin::takeItems(20793 => 1, 20794 => 1, 20932 => 1)) {			#:: Monk Test of Strength
 		quest::say("You have done well, $name.");
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			#:: Give a 1282 - Mystical Back Straps
 			quest::summonitem(1282);
 		}

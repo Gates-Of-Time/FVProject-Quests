@@ -52,7 +52,7 @@ sub EVENT_ITEM {
 	#:: Match a 20777 - Black Sky Diamond, a 20779 - Efreeti Wind Staff, a 20778 - Large Sky Sapphire, and a 20966 - Sweet Nectar
 	elsif (plugin::takeItems(20777 => 1, 20779 => 1, 20778 => 1, 20966 => 1)) {		#:: Enchanter Test of Incapacitation
 		quest::say("Good. Take this as your reward.");
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			#:: Give a 11688 - Rod of Warding Winds
 			quest::summonitem(11688);
 		}

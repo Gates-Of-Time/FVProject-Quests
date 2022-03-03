@@ -30,7 +30,7 @@ sub EVENT_ITEM {
 	#:: Match a 20934 - Auburn Tessera, a 20834 - Drake Fang, and a 20835 - Leather Cord
 	if (plugin::takeItems(20934 => 1, 20834 => 1, 20835 => 1)) {			#:: Shaman Test of Might
 		quest::say("Excellent! Take this as your reward.");
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			#:: Give a 14566 - Drake Fang Amulet
 			quest::summonitem(14566);
 		}
@@ -52,7 +52,7 @@ sub EVENT_ITEM {
 	#:: Match a 20940 - Platinum Disc, a 20836 - Ethereal Amber, a 20837 - Shimmering Amber, and a 20838 - Ceremonial Belt
 	elsif (plugin::takeItems(20940 => 1, 20836 => 1, 20837 => 1, 20838 => 1)) { 	#:: Shaman Test of Health
 		quest::say("Excellent! Take this as your reward.");
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			#:: Give a 2713 - Elder Shaman's Ceremonial Bracelet
 			quest::summonitem(2713);
 		}
@@ -74,7 +74,7 @@ sub EVENT_ITEM {
 	#:: Match a 20947 - Phosphoric Globe, a 20839 - Sphinx Hide, and a 20840 - Light Damask Mantle
 	elsif (plugin::takeItems(20947 => 1, 20839 => 1, 20840 => 1)) {			#:: Shaman Test of Sight
  		quest::say("Excellent! Take this as your reward.");
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			#:: Give a 2712 - Sphinx-Hide Mantle
 			quest::summonitem(2712);
 		}

@@ -41,7 +41,7 @@ sub EVENT_ITEM {
 	#:: Match a 20859 - Bitter Honey, a 20860 - Circlet of Brambles, a 20858 - Efreeti Long Sword, and a 20962 - Emerald Spiroc Feather
 	elsif (plugin::takeItems(20859 => 1, 20860 => 1, 20858 => 1, 20962 => 1)) { 		#:: Ranger Test of the Blade
 		quest::say("Take this as your reward.");
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			#:: Give a 11697 - Yannikil
 			quest::summonitem(11697);
 		}

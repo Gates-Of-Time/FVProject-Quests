@@ -14,7 +14,7 @@ sub EVENT_TIMER {
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			quest::say("Do not waste my time, $name.  Do you wish to take the test of blades or not?");
 		}
 		elsif (quest::is_the_ruins_of_kunark_enabled()) {
@@ -25,7 +25,7 @@ sub EVENT_SAY {
 		}
 	}
 	elsif ($text=~/trinkets/i) {
-		if (!quest::quest::is_classic_enabled() && !quest::is_the_ruins_of_kunark_enabled()) {
+		if (!quest::is_classic_enabled() && !quest::is_the_ruins_of_kunark_enabled()) {
 			quest::say("Ahh, I've given out some lesser trinkets in the past that many have gotten bored with.  I'm willing to accept Aerated Pauldrons in trade for Pauldrons of the Blue Sky.");
 		}
 	}
@@ -58,7 +58,7 @@ sub EVENT_ITEM {
 	#:: Match a 20942 - Pearlescent Globe, a 20974 - Silver Mesh, and a 20975 - Spiroc Air Totem
 	elsif (plugin::takeItems(20942 => 1, 20974 => 1, 20975 => 1)) {		#:: Warrior Test of Force
 		quest::say("You have proven yourself worthy.");
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			#:: Give a 4321 - Aerated Pauldrons
 			quest::summonitem(4321);
 		}
@@ -88,7 +88,7 @@ sub EVENT_ITEM {
 		quest::exp(100000);
 		quest::depop();
 	}
-	elsif (!quest::quest::is_classic_enabled() && !quest::is_the_ruins_of_kunark_enabled()) {
+	elsif (!quest::is_classic_enabled() && !quest::is_the_ruins_of_kunark_enabled()) {
 		#:: Match a 4321 - Aerated Pauldron
 		if (plugin::takeItems(4321 => 1)) {		#:: Swap Aerated Pauldrons -> Pauldrons of the Blue Sky
 			quest::say("You have proven yourself worthy.");

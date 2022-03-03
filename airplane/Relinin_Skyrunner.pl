@@ -41,7 +41,7 @@ sub EVENT_ITEM {
 	#:: Match a 20853 - Fine Velvet Cloak, a 20852 - Harpy Tongue, and a 20851 - Mithril Disc
 	elsif (plugin::takeItems(20853 => 1, 20852 => 1, 20851 => 1)) {			#:: Ranger Test of Defense
 		quest::say("Good work, ranger.");
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			#:: Give a 2715 - Spiroc Healer's Cloak
 			quest::summonitem(2715);
 		}

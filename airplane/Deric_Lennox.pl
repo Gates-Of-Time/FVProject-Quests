@@ -41,7 +41,7 @@ sub EVENT_ITEM {
 	#:: Match a 20815 - Djinni Aura, a 20816 - Efreeti Mace, a 20814 - Glowing Sapphire, and a 20961 - Saffron Spiroc Feather
 	elsif (plugin::takeItems(20815 => 1, 20816 => 1, 20814 => 1, 20961 => 1)) {		#:: Cleric Test of Theurgy
 		quest::say("Good on ya!");
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			#:: Give a 11692 - Theurgist
 			quest::summonitem(11692);
 		}

@@ -51,7 +51,7 @@ sub EVENT_ITEM {
 	}
 	#:: Match a 20957 - Dark Spiroc Feather, a 20723 - Ethereal Topaz, and a 20724 - Sphinx Claw
 	elsif (plugin::takeItems(20957 => 1, 20723 => 1, 20724 => 1)) {					#:: Paladin Test of Love
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			quest::say("You are indeed worthy of this divine sword, $name. As long as you wield Zephyrwind, you will follow the true path.");
 			#:: Give a 11681 - Zephyrwind
 			quest::summonitem(11681);

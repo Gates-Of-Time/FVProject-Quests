@@ -30,7 +30,7 @@ sub EVENT_ITEM {
 	#:: Match a 20845 - Efreeti War Club, a 20955 - Djinni Statuette, a 20842 - Corrosive Venom, and a 20841 - Wooden Bands
 	if (plugin::takeItems(20845 => 1, 20955 => 1, 20842 => 1, 20841 => 1)) {			#:: Shaman Test of Shrink
 		quest::say("Take dis.");
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			#:: Give a 147497 - Spiroc Warhammer
 			quest::summonitem(147497);
 		}
@@ -52,7 +52,7 @@ sub EVENT_ITEM {
 	#:: Match a 20962 - Emerald Spiroc Feather, a 20843 - Bixie Essence, and a 20844 - Spiritualist`s Ring
 	elsif (plugin::takeItems(20962 => 1, 20843 => 1, 20844 => 1)) {					#:: Shaman Test of the Snake
 		quest::say("Take dis.");
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			#:: Give a 11695 - Crimson Ring of Desinence
 			quest::summonitem(11695);
 		}

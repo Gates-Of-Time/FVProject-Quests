@@ -44,7 +44,7 @@ sub EVENT_ITEM {
 	#:: Match a 20808 - Dark Wood, a 20939 - Gold Disc, and a 20809 - Small Shield
 	elsif (plugin::takeItems(20808 => 1, 20939 => 1, 20809 => 1)) { 		#:: Cleric Test of Skill
 		quest::say("Wonderful! Take this as your reward!");
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			#:: Give a 9201 - Darkwood Aegis
 			quest::summonitem(9201);
 		}
@@ -67,7 +67,7 @@ sub EVENT_ITEM {
 	#:: Match a 20946 - Adumbrate Globe, a 20810 - Faintly Glowing Diamond, and a 20811 - Shiny Pauldrons
 	elsif (plugin::takeItems(20946 => 1, 20810 => 1, 20811 => 1)) {			#:: Cleric Test of Protection
 		quest::say("Wonderful! Take this as your reward!");
-		if (quest::quest::is_classic_enabled()) {
+		if (quest::is_classic_enabled()) {
 			#:: Give a 4323 - Glowing Pauldrons
 			quest::summonitem(4323);
 		}
