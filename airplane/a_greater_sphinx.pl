@@ -33,18 +33,23 @@ sub EVENT_TIMER {
 		$key = $npc->GetCleanName() . "-dt";
 		#:: Match if the key does not exist
 		if (!quest::get_data($key)) {
-			$target = $npc->GetHateTop();
-			if ($target->IsPet()) {
-				$owner = $target->GetOwnerID();
-				$Client = $entity_list->GetClientByID($owner);
-				$Client->BuffFadeAll();
-				$npc->CastSpell(982, $owner);
-				quest::set_data($key, 1, 44);
+			if ($combat_state == 1) {
+				$target = $npc->GetHateTop();
+				if ($target->IsPet()) {
+					$owner = $target->GetOwnerID();
+					$Client = $entity_list->GetClientByID($owner);
+					$Client->BuffFadeAll();
+					$npc->CastSpell(982, $owner);
+					quest::set_data($key, 1, 44);
+				}
+				else {
+					$target->BuffFadeAll();
+					$npc->CastSpell(982, $target->GetID());
+					quest::set_data($key, 1, 44);
+				}
 			}
 			else {
-				$target->BuffFadeAll();
-				$npc->CastSpell(982, $target->GetID());
-				quest::set_data($key, 1, 44);
+				quest::stoptimer("dt")
 			}
 		}
 	}
