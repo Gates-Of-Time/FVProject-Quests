@@ -36,13 +36,6 @@ sub EVENT_SAY {
 			quest::say("When you have shown more devotion to the Brood of Kotiz, we can discuss such things.");
 		}
 	}
-#::	#:: fake text
-#::	elsif ($text=~/kor sha candlestick/i) {
-#:: 		quest::say("I need the foot and stem of my candlestick. The Stem comes from Sarnaks. The foot has been stolen by Gripe, in East Cabilis.");
-#::	}
-#::	elsif ($text=~/new revenant/i) {
-#::		quest::say("");
-#::	}
 }
 
 sub EVENT_ITEM { 
@@ -106,14 +99,32 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(443, 0);  	#:: + Brood of Kotiz
-		quest::faction(441, 0);  	#:: + Legion of Cabilis
+		quest::faction(443, 20);  	#:: + Brood of Kotiz
+		quest::faction(441, 5);  	#:: + Legion of Cabilis
 		#:: Grant a small amount of experience
 		quest::exp(200);
 		#:: Create a hash for storing cash - 500 to 1000cp
 		my %cash = plugin::RandomCash(500, 1000);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+	}
+	#:: Match a 12853 - Stem of Candlestick
+	elsif (plugin::takeItems(12853 => 1)) {
+		quest::say("So you are expecting to earn your way to rank of revenant, eh?  You shall when I have the base and stem of the candle and your occultist skullcap.");
+		#:: Give a 12853 - Stem of Candlestick
+		quest::summonitem(12853);
+	}
+	#:: Match a 12852 - Foot of Candlestick
+	elsif (plugin::takeItems(12852 => 1)) {
+		quest::say("So you are expecting to earn your way to rank of revenant, eh?  You shall when I have the base and stem of the candle and your occultist skullcap.");
+		#:: Give a 12853 - Stem of Candlestick
+		quest::summonitem(12852);
+	}
+	#:: Match a 4264 - Occultist Skullcap
+	elsif (plugin::takeItems(4264 => 1)) {
+		quest::say("So you are expecting to earn your way to rank of revenant, eh?  You shall when I have the base and stem of the candle and your occultist skullcap.");
+		#:: Give a 4264 - Occultist Skullcap
+		quest::summonitem(4264);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
