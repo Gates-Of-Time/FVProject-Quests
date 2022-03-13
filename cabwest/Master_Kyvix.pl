@@ -1,11 +1,6 @@
 sub EVENT_SAY {   
 	if ($text=~/hail/i) {
-		if (plugin::check_hasitem($client, 4246)) {
-			quest::say("So you are expecting to earn your way to rank of revenant, eh? You shall when I have the base and stem of the candle your occultist skullcap.");
-		}
-		else {
-			quest::say("Quite busy!! Quite busy!! Things must be done. [New components] to be collected!!");
-		}
+		quest::say("Quite busy!! Quite busy!! Things must be done. [New components] to be collected!!");
 	}
 	elsif ($text=~/new components/i) {
 		quest::say("Yes, yes!! I will need components from beyond the gates. I must find an [apprentice of the third rank].");
