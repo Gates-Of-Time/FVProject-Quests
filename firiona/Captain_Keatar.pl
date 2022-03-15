@@ -24,7 +24,7 @@ sub EVENT_ITEM {
 		if (plugin::takeItems(12922 => 4)) {	
 			quest::say("You serve this outpost well. Here is a small reward. You should try and hunt down [goblin battlemasters]. I have very few resources to send into the plains to track them down. Perhaps you can help us.");
 			#:: Give a 9006 - Wooden Shield
-			quest::summonitem(9006));
+			quest::summonitem(9006);
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
