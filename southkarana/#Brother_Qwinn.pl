@@ -28,7 +28,8 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 12316 - Code of Zan Fi, 10114 - Purple Headband
 	if (plugin::takeItems(12316 => 1, 10114 => 1)) {
-		quest::say("We had an agreement. The proof of a skilled monk, the purple headband, and the Code of the Whistling Fist.");
+		# Following line is probably for MQ only, and we are not supporting all that for this quest due to missing dialogues
+		# quest::say("We had an agreement. The proof of a skilled monk, the purple headband, and the Code of the Whistling Fist.");
 		quest::say("We thank you for the return of the Code of the Whistling Fist. Take this sewing needle. You shall find it useful should you aid [Brother Zephyl] in his quest. His item, the needle, a swatch of shadow silk and a scroll containing Jonathan's Whistling Warsong. Into a sewing kit they will be going. And into the brotherhood will you. I hope you do not wish me to [return the headband]..");
 		#:: Give a 12314 - Needle of the Void
 		quest::summonitem(12314);
