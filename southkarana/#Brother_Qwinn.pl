@@ -37,14 +37,14 @@ sub EVENT_ITEM {
 		quest::exp(2000);
 	}
 	#:: Match a 12314 - Needle of the Void
-	else if (plugin::takeItems(12314 => 1)) {
+	elsif (plugin::takeItems(12314 => 1)) {
 		#:: Give a 10114 - Purple Headband
 		quest::summonitem(10114);
 		#:: Ding!
 		quest::ding();
 	}
 	#:: Match a 12256 - Robe of the Lost Circle
-	else if (plugin::takeItems(12256 => 1)) {
+	elsif (plugin::takeItems(12256 => 1)) {
 		#:: Give a 10114 - Purple Headband
 		quest::summonitem(10114);
 		#:: Ding!
