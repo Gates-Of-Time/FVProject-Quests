@@ -2,9 +2,6 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Yes. yes!!  What do I have here?!!  Another [new recruit]?  If so. then speak up!  If not. then leave and do not waste my time nor risk your life.  I also seek a [legion soldier] if you be one.");
 	}
-	if((($text=~/new recruit/i) || ($text=~/legion soldier/i) || ($text=~/ready for my task/i)) && ($faction > 4)) {
-		quest::say("No Iksar resident will have anything to do with you!!");
-	}
 	elsif ($text=~/new recruit/i) {
 		#:: Match if faction is amiable or better
 		if ($faction <= 4) {
@@ -38,7 +35,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match if faction is amiable or better
 	if ($faction <= 4) {
-		#:: Match a 12915 - Marauder Snout Ring 'MM'
+		#:: Match four 12915 - Marauder Snout Ring 'MM'
 		if (plugin::takeItems(12915 => 4)) {
 			quest::emote("hands you a shimmering black piece of armor which smells quite horrid. You find it hard to keep it from slithering out of your hand. 'Here is the armor the tailors have been working on for the legion. You may test it for us. Keep up your fine work and I may have other pieces available for you to test.'");
 			#:: Give a random reward:  12917 - Leech Husk Tunic, 12918 - Leech Husk Leggings, 12919 - Leech Husk Gloves, 12920 - Leech Husk Wrist Bands, 12921 - Leech Husk Boots
