@@ -16,9 +16,9 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-  #:: Match a 12862 - Stein
-	if (plugin::takeItems(12862 => 1)) {			#:: Necromancer 6th Skullcap
-    quest::say("Well, as promised, here's your Foot of the candlestick.");
+	#:: Match a 12862 - Stein
+	if (plugin::takeItems(12862 => 1)) {
+		quest::emote("nearly faints. His eyes begin to tear up. 'Oh my sweet stein of sloshing! This is the great treasure. A shiny piece of broken metal! Ha! You never win when you deal with a Blue Talon!'");
 		#:: Give a 12852 - Foot of Candlestick
 		quest::summonitem(12852);
 		#:: Ding!
