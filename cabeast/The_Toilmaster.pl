@@ -43,6 +43,8 @@ sub EVENT_ITEM {
 		quest::emote("looks at the tome and speaks to you, scowling, 'Very well Broodling, I have a task for you. I should make you work at the feet of my Froglok Slaves, crushing granite, but the lore of the Brood has a specific rite for this situation. Take this book and learn the will of Cazic-Thule. Read it and ask me any questions that you may have before you start your penance. It would be a shame for you to fail at this task as well... though I wouldn't mind destroying you.");
 		#:: Give a 18272 - Rites of Exoneration
 		quest::summonitem(18272);
+		#:: Ding!
+		quest::ding();
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
