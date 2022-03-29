@@ -1,4 +1,6 @@
 sub EVENT_SPAWN {
+	#:: Run.
+	quest::SetRunning(1);
 	#:: Set a timer for four hours
 	quest::settimer("HastenDepop",14400);
 	#:: Clear out items
