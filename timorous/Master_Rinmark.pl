@@ -1,20 +1,21 @@
-#Master Rinmark is spawned from an iksar master in this zone and is part of the Test of Patience. Please see the iksar master's quest file for details.
-
 sub EVENT_SPAWN {
-  quest::settimer("Depop2",90);
+	#:: Set a timer 'Depop' that triggers every 90 seconds
+	quest::settimer("Depop", 90);
 }
 
 sub EVENT_TIMER {
- if ($timer eq "Depop2") {
-  my $x = $npc->GetX();
-  my $y = $npc->GetY();
-  my $z = $npc->GetZ();
-  my $h = $npc->GetHeading();
-  quest::emote("stares off into the horizon, lost in his thoughts.");
-  quest::spawn2(96320,0,0,$x,$y,$z,$h);
-  quest::stoptimer("Depop2");
-  quest::depop();
- }
+	#:: Match timer 'Depop'
+	if ($timer eq "Depop") {
+		quest::emote("stares off into the horizon, lost in his thoughts.");
+		#:: Spawn a Timorous Deep >> Rinmark (96320) without grid or guild war, at the current coordinates
+		quest::spawn2(96320, 0, 0, $x, $y, $z, $h);
+		quest::stoptimer("Depop");
+		#:: Depop without spawn timer active
+		quest::depop();
+	}
 }
 
-#Submitted by: Jim Mills
+sub EVENT_ITEM {
+	#:: Return unused items
+	plugin::returnUnusedItems();
+}
