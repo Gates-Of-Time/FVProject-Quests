@@ -1,13 +1,16 @@
-# EPIC CLERIC (Timorous deep)
-
 sub EVENT_ITEM {
-  if (plugin::check_handin(\%itemcount, 28023 => 1)) { #Orb of the triumvirate
-    quest::emote("takes the orb from you. The avatar has determined that you are worthy!");
-    quest::summonitem(5532); # Water Sprinkler of Nem Ankh 
-    quest::exp(200000); 
-    quest::ding();
-    quest::depop();
-  }
-  plugin::return_items(\%itemcount); # return unused items
+	#:: Match a 28023 - Orb of the Triumvirate
+	if (plugin::takeItems(28023 => 1)) {
+		quest::emote("takes the orb from you. The avatar has determined that you are worthy!");
+		#:: Give a 5532 - Water Sprinkler of Nem Ankh
+		quest::summonitem(5532);
+		#:: Ding!
+		quest::ding();
+		#:: Grant a massive amount of experience
+		quest::exp(200000);
+		#:: Depop without spawn timer
+		quest::depop();
+	}
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
-#End of File, Zone:timorous  NPC:96086 -- Avatar of Water
