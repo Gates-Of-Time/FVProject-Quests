@@ -19,11 +19,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(418,10);       #:: + inhabitants of firiona
-		quest::faction(92,10);        #:: + emerald warriors
-		quest::faction(314,10);       #:: + storm guard
-		quest::faction(193,-30);      #:: - legion of cabilis
-		quest::faction(250,-30);      #:: - pirates of gunthak
+		quest::faction(418, 10);       #:: + inhabitants of firiona
+		quest::faction(92, 10);        #:: + emerald warriors
+		quest::faction(314, 10);       #:: + storm guard
+		quest::faction(193, -30);      #:: - legion of cabilis
+		quest::faction(250, -30);      #:: - pirates of gunthak
 		#:: Grant a moderate amount of experience
 		quest::exp(25000);
 	}
@@ -35,11 +35,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(418,10);       #:: + inhabitants of firiona
-		quest::faction(92,10);        #:: + emerald warriors
-		quest::faction(314,10);       #:: + storm guard
-		quest::faction(193,-30);      #:: - legion of cabilis
-		quest::faction(250,-30);      #:: - pirates of gunthak
+		quest::faction(418, 10);       #:: + inhabitants of firiona
+		quest::faction(92, 10);        #:: + emerald warriors
+		quest::faction(314, 10);       #:: + storm guard
+		quest::faction(193, -30);      #:: - legion of cabilis
+		quest::faction(250, -30);      #:: - pirates of gunthak
 		#:: Grant a moderate amount of experience
 		quest::exp(25000);
 	}

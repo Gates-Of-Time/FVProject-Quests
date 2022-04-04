@@ -15,7 +15,7 @@ sub EVENT_ITEM(){
 	if (plugin::takeItems(19351 => 1)) {
     	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
 		#:: Choose a random 19368 - Spell: Boon of Immolation, 19346 - Spell: Scintillation, 19355 - Spell: Vocarate: Fire or 19357 - Spell: Vocarate: Air
-		quest::summonitem(quest::ChooseRandom(19368,19346,19355,19357));
+		quest::summonitem(quest::ChooseRandom(19368, 19346, 19355, 19357));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
@@ -25,7 +25,7 @@ sub EVENT_ITEM(){
 	elsif (plugin::takeItems(19347 => 1)) {
     	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
 		#:: Choose a random 19368 - Spell: Boon of Immolation, 19346 - Spell: Scintillation, 19355 - Spell: Vocarate: Fire or 19357 - Spell: Vocarate: Air
-		quest::summonitem(quest::ChooseRandom(19368,19346,19355,19357));
+		quest::summonitem(quest::ChooseRandom(19368, 19346, 19355, 19357));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
@@ -35,7 +35,7 @@ sub EVENT_ITEM(){
 	elsif (plugin::takeItems(19354 => 1)) {
     	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
 		#:: Choose a random 19368 - Spell: Boon of Immolation, 19346 - Spell: Scintillation, 19355 - Spell: Vocarate: Fire or 19357 - Spell: Vocarate: Air
-		quest::summonitem(quest::ChooseRandom(19368,19346,19355,19357));
+		quest::summonitem(quest::ChooseRandom(19368, 19346, 19355, 19357));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
@@ -45,7 +45,7 @@ sub EVENT_ITEM(){
 	elsif (plugin::takeItems(19358 => 1)) {
     	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
 		#:: Choose a random 19368 - Spell: Boon of Immolation, 19346 - Spell: Scintillation, 19355 - Spell: Vocarate: Fire or 19357 - Spell: Vocarate: Air
-		quest::summonitem(quest::ChooseRandom(19368,19346,19355,19357));
+		quest::summonitem(quest::ChooseRandom(19368, 19346, 19355, 19357));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience

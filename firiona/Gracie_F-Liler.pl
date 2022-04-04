@@ -12,7 +12,7 @@ sub EVENT_ITEM() {
 	if (plugin::takeItems(19378 => 1)) {
     	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
 		#:: Choose a random 19386 - Spell: Boon of the Clear Mind, 19379 - Spell: Clarity II, 19381 - Spell: Recant Magic or 19215 - Spell: Wake of Tranquility
-		quest::summonitem(quest::ChooseRandom(19386,19379,19381,19215));
+		quest::summonitem(quest::ChooseRandom(19386, 19379, 19381, 19215));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
@@ -22,7 +22,7 @@ sub EVENT_ITEM() {
 	elsif (plugin::takeItems(19269 => 1)) {
     	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
 		#:: Choose a random 19386 - Spell: Boon of the Clear Mind, 19379 - Spell: Clarity II, 19381 - Spell: Recant Magic or 19215 - Spell: Wake of Tranquility
-		quest::summonitem(quest::ChooseRandom(19386,19379,19381,19215));
+		quest::summonitem(quest::ChooseRandom(19386, 19379, 19381, 19215));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
@@ -32,7 +32,7 @@ sub EVENT_ITEM() {
 	elsif (plugin::takeItems(19384 => 1)) {
     	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
 		#:: Choose a random 19386 - Spell: Boon of the Clear Mind, 19379 - Spell: Clarity II, 19381 - Spell: Recant Magic or 19215 - Spell: Wake of Tranquility
-		quest::summonitem(quest::ChooseRandom(19386,19379,19381,19215));
+		quest::summonitem(quest::ChooseRandom(19386, 19379, 19381, 19215));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
@@ -42,7 +42,7 @@ sub EVENT_ITEM() {
 	elsif (plugin::takeItems(19374 => 1)) {
     	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
 		#:: Choose a random 19386 - Spell: Boon of the Clear Mind, 19379 - Spell: Clarity II, 19381 - Spell: Recant Magic or 19215 - Spell: Wake of Tranquility
-		quest::summonitem(quest::ChooseRandom(19386,19379,19381,19215));
+		quest::summonitem(quest::ChooseRandom(19386, 19379, 19381, 19215));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience

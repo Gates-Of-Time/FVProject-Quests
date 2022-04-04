@@ -15,7 +15,7 @@ sub EVENT_ITEM {
   if (plugin::takeItems(19315 => 1)) {
     quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!"); 
 		#:: Choose a random 19329 - Spell: Tears of Solusek, 19320 - Spell: Abscond, 19324 - Spell: Thunderbolt or 19317 - Spell: Tishan`s Discord
-		quest::summonitem(quest::ChooseRandom(19329,19320,19324,19317));
+		quest::summonitem(quest::ChooseRandom(19329, 19320, 19324, 19317));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
@@ -25,7 +25,7 @@ sub EVENT_ITEM {
   elsif (plugin::takeItems(19322 => 1)) {
     quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!"); 
 		#:: Choose a random 19329 - Spell: Tears of Solusek, 19320 - Spell: Abscond, 19324 - Spell: Thunderbolt or 19317 - Spell: Tishan`s Discord
-		quest::summonitem(quest::ChooseRandom(19329,19320,19324,19317));
+		quest::summonitem(quest::ChooseRandom(19329, 19320, 19324, 19317));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
@@ -35,7 +35,7 @@ sub EVENT_ITEM {
   elsif (plugin::takeItems(19318 => 1)) {
     quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!"); 
 		#:: Choose a random 19329 - Spell: Tears of Solusek, 19320 - Spell: Abscond, 19324 - Spell: Thunderbolt or 19317 - Spell: Tishan`s Discord
-		quest::summonitem(quest::ChooseRandom(19329,19320,19324,19317));
+		quest::summonitem(quest::ChooseRandom(19329, 19320, 19324, 19317));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
@@ -45,7 +45,7 @@ sub EVENT_ITEM {
   elsif (plugin::takeItems(19319 => 1)) {
     quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!"); 
 		#:: Choose a random 19329 - Spell: Tears of Solusek, 19320 - Spell: Abscond, 19324 - Spell: Thunderbolt or 19317 - Spell: Tishan`s Discord
-		quest::summonitem(quest::ChooseRandom(19329,19320,19324,19317));
+		quest::summonitem(quest::ChooseRandom(19329, 19320, 19324, 19317));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience

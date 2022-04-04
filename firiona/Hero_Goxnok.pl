@@ -4,17 +4,13 @@ sub EVENT_SAY {
     quest::start(215);
     $npc->SetAppearance(1); 
     quest::say("Come along. If we get separated, look for the humanoid wolf camp and beyond the tunnel, you shall find the meeting place of the spider riders and the traitor.");
-    quest::settimer("Talk1",180);
+    quest::settimer("Talk1", 180);
   }
 }
 
 sub EVENT_SIGNAL {
   if($signal == 0) {
-    my $x = $npc->GetX();
-    my $y = $npc->GetY();
-    my $z = $npc->GetZ();
-    my $h = $npc->GetHeading();
-    quest::spawn2(84401,0,0,$x,$y,$z,$h);
+    quest::spawn2(84401, 0, 0, $x, $y, $z, $h);
     quest::depop();
   }
 }
@@ -23,7 +19,7 @@ sub EVENT_TIMER {
   if ($timer eq "Talk1") {
     quest::emote("stops abruptly and shudders with fear. 'Look!! There, past the wolf people. Near an ancient tunnel can be found the meeting place. I fear we may be too late. I thought I saw a shadow dash from the tunnels, but I did not see any spider riders. We'll see when we reach it.'");
     quest::stoptimer("Talk1");
-    quest::settimer("Talk2",30);
+    quest::settimer("Talk2", 30);
   }
   if ($timer eq "Talk2") {
     quest::emote("looks over at you and sizes you up before continuing on. He says, 'We should continue, follow me.'");

@@ -10,11 +10,7 @@ sub EVENT_SAY {
 
 sub EVENT_TIMER {
   if (($timer eq "ZoneTime") && ($zonehour == 21)) {
-    my $x = $npc->GetX();
-    my $y = $npc->GetY();
-    my $z = $npc->GetZ();
-    my $h = $npc->GetHeading();
-    quest::spawn2(84028,0,0,$x,$y,$z,$h);
+    quest::spawn2(84028, 0, 0, $x, $y, $z, $h);
     quest::stoptimer("ZoneTime");
     quest::depop_withtimer();
   }

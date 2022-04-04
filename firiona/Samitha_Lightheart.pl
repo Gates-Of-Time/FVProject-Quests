@@ -14,7 +14,7 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(19238 => 1)) {
     	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
 		#:: Choose a random 19235 - Spell: Call of Karana, 19233 - Spell: Upheaval, 19236 - Spell: Egress or 19240 - Spell: Glamour of Tunare
-		quest::summonitem(quest::ChooseRandom(19235,19233,19236,19240));
+		quest::summonitem(quest::ChooseRandom(19235, 19233, 19236, 19240));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
@@ -24,7 +24,7 @@ sub EVENT_ITEM {
 	elsif (plugin::takeItems(19244 => 1)) {
     	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
 		#:: Choose a random 19235 - Spell: Call of Karana, 19233 - Spell: Upheaval, 19236 - Spell: Egress or 19240 - Spell: Glamour of Tunare
-		quest::summonitem(quest::ChooseRandom(19235,19233,19236,19240));
+		quest::summonitem(quest::ChooseRandom(19235, 19233, 19236, 19240));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
@@ -34,7 +34,7 @@ sub EVENT_ITEM {
 	elsif (plugin::takeItems(19232 => 1)) {
     	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
 		#:: Choose a random 19235 - Spell: Call of Karana, 19233 - Spell: Upheaval, 19236 - Spell: Egress or 19240 - Spell: Glamour of Tunare
-		quest::summonitem(quest::ChooseRandom(19235,19233,19236,19240));
+		quest::summonitem(quest::ChooseRandom(19235, 19233, 19236, 19240));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience
@@ -44,7 +44,7 @@ sub EVENT_ITEM {
 	elsif (plugin::takeItems(19234 => 1)) {
     	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
 		#:: Choose a random 19235 - Spell: Call of Karana, 19233 - Spell: Upheaval, 19236 - Spell: Egress or 19240 - Spell: Glamour of Tunare
-		quest::summonitem(quest::ChooseRandom(19235,19233,19236,19240));
+		quest::summonitem(quest::ChooseRandom(19235, 19233, 19236, 19240));
 		#:: Ding!
 		quest::ding();
 		#:: Grant a small amount of experience

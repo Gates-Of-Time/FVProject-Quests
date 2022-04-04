@@ -14,18 +14,18 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 12948 - Nok Shaman Powder, 12834 - Heart of Ice, 12743 - Ton Warrior Totem and a 12824 - Sabertooth Tiger Mane
 	if (plugin::takeItems(12948 => 1, 12834 => 1, 12743 => 1, 12824 => 1)) {
-   quest::emote("place's the items into a sack and removes a scroll from her robe.");
-   quest::say("This is yours. A spell I discovered and translated for one with less intelligence than the great Luminare of Firiona Vie. You may kiss my feet now.");
+    quest::emote("place's the items into a sack and removes a scroll from her robe.");
+    quest::say("This is yours. A spell I discovered and translated for one with less intelligence than the great Luminare of Firiona Vie. You may kiss my feet now.");
 		#:: Give a 12949 - Vision of Sebilite
 		quest::summonitem(12949);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-    quest::faction(418,10);     #:: + Inhabitants of Firiona Vie
-    quest::faction(92,10);      #:: + Emerald Warriors
-    quest::faction(314,10);     #:: + Storm Guard
-    quest::faction(193,-10);    #:: - Legion of Cabilis
-    quest::faction(250,-10);    #:: - Pirates of Gunthak    
+    quest::faction(418, 10);     #:: + Inhabitants of Firiona Vie
+    quest::faction(92, 10);      #:: + Emerald Warriors
+    quest::faction(314, 10);     #:: + Storm Guard
+    quest::faction(193, -10);    #:: - Legion of Cabilis
+    quest::faction(250, -10);    #:: - Pirates of Gunthak    
 		#:: Grant a small amount of experience
 		quest::exp(250);
 	}

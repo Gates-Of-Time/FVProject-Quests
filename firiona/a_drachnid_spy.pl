@@ -7,5 +7,5 @@ sub EVENT_SAY {
 }
 
 sub EVENT_DEATH_COMPLETE {
-  quest::signalwith(84319,0,0);
+  quest::signalwith(84319, 0, 0);
 }

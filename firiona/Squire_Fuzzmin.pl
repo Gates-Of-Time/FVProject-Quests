@@ -29,11 +29,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-    quest::faction(101,15); 		#:: + Firiona Vie better
-    quest::faction(92,15); 		  #:: + Emerald Warriors better
-    quest::faction(314,15); 		#:: + Storm Guard better
-    quest::faction(193,-15); 		#:: - Legion of Cabilis worse
-    quest::faction(250,-15); 		#:: - Pirates of Gunthak worse
+    quest::faction(101, 15); 		#:: + Firiona Vie better
+    quest::faction(92, 15); 		  #:: + Emerald Warriors better
+    quest::faction(314, 15); 		#:: + Storm Guard better
+    quest::faction(193, -15); 		#:: - Legion of Cabilis worse
+    quest::faction(250, -15); 		#:: - Pirates of Gunthak worse
 		#:: Grant a huge amount of experience
 		quest::exp(700000);
 	}
