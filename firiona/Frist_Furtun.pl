@@ -15,7 +15,7 @@ sub EVENT_ITEM(){
 	if (plugin::takeItems(19203 => 1)) {
 		quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");   
 		#:: Choose a random 19210 - Spell: Unswerving Hammer, 19224 - Spell: Heroic Bond, 19420 - Spell: Sunskin or 19206 - Spell: Word of Vigor
-		quest::summonitem(quest::ChooseRandom(19210,19224,19420,19206));
+		quest::summonitem(quest::ChooseRandom(19210, 19224, 19420, 19206));
 		#:: Ding!
 		quest::ding();
 	}
@@ -23,7 +23,7 @@ sub EVENT_ITEM(){
 	elsif (plugin::takeItems(19205 => 1)) {
 		quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");   
 		#:: Choose a random 19210 - Spell: Unswerving Hammer, 19224 - Spell: Heroic Bond, 19420 - Spell: Sunskin or 19206 - Spell: Word of Vigor
-		quest::summonitem(quest::ChooseRandom(19210,19224,19420,19206));
+		quest::summonitem(quest::ChooseRandom(19210, 19224, 19420, 19206));
 		#:: Ding!
 		quest::ding();
 	}
@@ -31,7 +31,7 @@ sub EVENT_ITEM(){
 	elsif (plugin::takeItems(19209 => 1)) {
 		quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");   
 		#:: Choose a random 19210 - Spell: Unswerving Hammer, 19224 - Spell: Heroic Bond, 19420 - Spell: Sunskin or 19206 - Spell: Word of Vigor
-		quest::summonitem(quest::ChooseRandom(19210,19224,19420,19206));
+		quest::summonitem(quest::ChooseRandom(19210, 19224, 19420, 19206));
 		#:: Ding!
 		quest::ding();
 	}
@@ -39,7 +39,7 @@ sub EVENT_ITEM(){
 	elsif (plugin::takeItems(19212 => 1)) {
 		quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");   
 		#:: Choose a random 19210 - Spell: Unswerving Hammer, 19224 - Spell: Heroic Bond, 19420 - Spell: Sunskin or 19206 - Spell: Word of Vigor
-		quest::summonitem(quest::ChooseRandom(19210,19224,19420,19206));
+		quest::summonitem(quest::ChooseRandom(19210, 19224, 19420, 19206));
 		#:: Ding!
 		quest::ding();
 	}
@@ -47,7 +47,7 @@ sub EVENT_ITEM(){
 	elsif (plugin::takeItems(19233 => 1)) {
 		quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");   
 		#:: Choose a random 19210 - Spell: Unswerving Hammer, 19224 - Spell: Heroic Bond, 19420 - Spell: Sunskin or 19206 - Spell: Word of Vigor
-		quest::summonitem(quest::ChooseRandom(19210,19224,19420,19206));
+		quest::summonitem(quest::ChooseRandom(19210, 19224, 19420, 19206));
 		#:: Ding!
 		quest::ding();
 	}
