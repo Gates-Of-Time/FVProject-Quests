@@ -1,6 +1,5 @@
-sub EVENT_SPAWN {
-  $hobble = $qglobals{hobble};
-  quest::follow($hobble);
+sub EVENT_SIGNAL {
+    quest::follow($signal);
 }
 
 sub EVENT_SAY { 
