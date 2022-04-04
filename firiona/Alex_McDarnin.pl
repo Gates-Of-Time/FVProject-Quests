@@ -1,5 +1,3 @@
-#Alex_McDarnin, Firiona Vie
-
 sub EVENT_SAY {
   if($text=~/Hail/i) {
     quest::say("Hail! Do you by chance bring news from the North? I sure do miss the cold. It is just a bit too warm for me down here. Well, I wish you the best of luck in your travels. Tomorrow is a new day and I am off in search of [new writings] to take back to the Tribunal.");
@@ -13,14 +11,48 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-  if(plugin::check_handin(\%itemcount, 19269 => 1) || # Cripple
-     plugin::check_handin(\%itemcount, 19238 => 1) || # Spirit of Scale
-     plugin::check_handin(\%itemcount, 19264 => 1) || # Talisman of Jasinth
-     plugin::check_handin(\%itemcount, 19272 => 1)) { # Cannibalize III
+	#:: Match a 19269 - Spell: Cripple
+  if (plugin::takeItems(19269 => 1)) {
     quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");
-    quest::summonitem(quest::ChooseRandom(19267,19271,19274,19266));
-    quest::exp(1000);
+		#:: Choose a random 19267 - Spell: Talisman of Shadoo, 19271 - Spell: Shroud of the Spirits, 19274 - Spell: Torrent of Poison or 19266 - Spell: Insidious Decay
+		quest::summonitem(quest::ChooseRandom(19267, 19271, 19274, 19266));
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(1000);
   }
-  plugin::return_items(\%itemcount);
+	#:: Match a 19238 - Spell: Spirit of Scale
+  elsif (plugin::takeItems(19238 => 1)) {
+    quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");
+		#:: Choose a random 19267 - Spell: Talisman of Shadoo, 19271 - Spell: Shroud of the Spirits, 19274 - Spell: Torrent of Poison or 19266 - Spell: Insidious Decay
+		quest::summonitem(quest::ChooseRandom(19267, 19271, 19274, 19266));
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(1000);
+  }
+	#:: Match a 19264 - Spell: Talisman of Jasinth
+  elsif (plugin::takeItems(19264 => 1)) {
+    quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");
+		#:: Choose a random 19267 - Spell: Talisman of Shadoo, 19271 - Spell: Shroud of the Spirits, 19274 - Spell: Torrent of Poison or 19266 - Spell: Insidious Decay
+		quest::summonitem(quest::ChooseRandom(19267, 19271, 19274, 19266));
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(1000);
+  }
+	#:: Match a 19272 - Spell: Cannibalize III
+  elsif (plugin::takeItems(19272 => 1)) {
+    quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");
+		#:: Choose a random 19267 - Spell: Talisman of Shadoo, 19271 - Spell: Shroud of the Spirits, 19274 - Spell: Torrent of Poison or 19266 - Spell: Insidious Decay
+		quest::summonitem(quest::ChooseRandom(19267, 19271, 19274, 19266));
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(1000);
+  }
+
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
-#END of FILE Zone:firiona  ID:84173 -- Alex McDarnin
+

@@ -1,14 +1,3 @@
-#############
-#Quest Name: Cleric Spells (Good Version)
-#Author: cavedude
-#NPCs Involved: Frist Furtun
-#Items Involved: Spell: Death Pact, Spell: Reckoning, Spell: Upheaval, Spell: 
-#Yaulp IV, Spell: Heroic Bond, Spell: Sunskin, Spell: Unswerving Hammer of 
-#Faith, Spell: Word of Vigor 
-#Zone: Firiona Vie
-#Databse: PEQ-Velious/Cavedude
-#################
-
 sub EVENT_SAY {
   if ($text=~/Hail/i) {
     quest::say("Hail to thee, adventurer! I have been sent to this new land by the Clerics of Tunare in search of the new arcane magiks said to exist beyond this outpost. I myself once searched the nearby Outlands, but to go any further would lead to my certain death. Lately, the dangers have proven to be too much for adventurers and ones like myself. Have you also ventured to this land in search of these [new magiks?]");
@@ -22,16 +11,48 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM(){
-  if (plugin::check_handin(\%itemcount, 19203 => 1) ||
-      plugin::check_handin(\%itemcount, 19205 => 1) ||
-      plugin::check_handin(\%itemcount, 19209 => 1) ||
-      plugin::check_handin(\%itemcount, 19212 => 1) ||
-      plugin::check_handin(\%itemcount, 19233 => 1)) {
-    quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");      
-    quest::summonitem(quest::ChooseRandom(19210,19224,19420,19206));
-    quest::exp(1000);
-  }
-  plugin::return_items(\%itemcount);
-}
-#END of FILE Zone:firiona ID:84177 -- Frist_Furtun
+	#:: Match a 19203 - Spell: Death Pact
+	if (plugin::takeItems(19203 => 1)) {
+		quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");   
+		#:: Choose a random 19210 - Spell: Unswerving Hammer, 19224 - Spell: Heroic Bond, 19420 - Spell: Sunskin or 19206 - Spell: Word of Vigor
+		quest::summonitem(quest::ChooseRandom(19210, 19224, 19420, 19206));
+		#:: Ding!
+		quest::ding();
+	}
+	#:: Match a 19205 - Spell: Upheaval
+	elsif (plugin::takeItems(19205 => 1)) {
+		quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");   
+		#:: Choose a random 19210 - Spell: Unswerving Hammer, 19224 - Spell: Heroic Bond, 19420 - Spell: Sunskin or 19206 - Spell: Word of Vigor
+		quest::summonitem(quest::ChooseRandom(19210, 19224, 19420, 19206));
+		#:: Ding!
+		quest::ding();
+	}
+	#:: Match a 19209 - Spell: Yaulp IV
+	elsif (plugin::takeItems(19209 => 1)) {
+		quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");   
+		#:: Choose a random 19210 - Spell: Unswerving Hammer, 19224 - Spell: Heroic Bond, 19420 - Spell: Sunskin or 19206 - Spell: Word of Vigor
+		quest::summonitem(quest::ChooseRandom(19210, 19224, 19420, 19206));
+		#:: Ding!
+		quest::ding();
+	}
+	#:: Match a 19212 - Spell: Reckoning or 19233 - Spell: Upheaval
+	elsif (plugin::takeItems(19212 => 1)) {
+		quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");   
+		#:: Choose a random 19210 - Spell: Unswerving Hammer, 19224 - Spell: Heroic Bond, 19420 - Spell: Sunskin or 19206 - Spell: Word of Vigor
+		quest::summonitem(quest::ChooseRandom(19210, 19224, 19420, 19206));
+		#:: Ding!
+		quest::ding();
+	}
+	#:: Match a 19233 - Spell: Upheaval
+	elsif (plugin::takeItems(19233 => 1)) {
+		quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");   
+		#:: Choose a random 19210 - Spell: Unswerving Hammer, 19224 - Spell: Heroic Bond, 19420 - Spell: Sunskin or 19206 - Spell: Word of Vigor
+		quest::summonitem(quest::ChooseRandom(19210, 19224, 19420, 19206));
+		#:: Ding!
+		quest::ding();
+	}
 
+
+	#:: Return unused items
+	plugin::returnUnusedItems();
+}

@@ -1,12 +1,3 @@
-# Zone: Firiona Vie
-# Short Name: Firiona
-#
-# NPC Name: Despondo
-# NPC ID: 84187
-#
-# Quest: Brain Bite (Concussion)
-# NPC's Involved: Despondo (Firiona Vie), a_human_skeleton (x3, Trakanon's Teeth, Karnor's Castle, City of Mist)
-
 sub EVENT_SAY {
   if ($text=~/Hail/i) { 
     quest::emote("looks a bit troubled. 'Welcome, Welcome adventurer, I am the wizard tutor Despondo, although few need tutorage around here. It would seem that this is no place for a student of any sorts. The lands of Kunark are quite deadly.'");
@@ -29,32 +20,49 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-  # Onyx Hand in
-  if (plugin::check_handin(\%itemcount, 10027 => 1)) { 
-    quest::summonitem(12962); # Hampton's bottle
+	#:: Match a 10027 - Onyx
+	if (plugin::takeItems(10027 => 1)) {
     quest::say("This bottle is for the one called Hampton. If you look well, you can see his name. ");
-  }
-  # Star Rose Quartz Hand in
-  elsif (plugin::check_handin(\%itemcount, 10021 => 1)) {
-    quest::summonitem(12964); # Ryla's bottle
+		#:: Give a 12962 - Ornate Bottle
+		quest::summonitem(12962);
+		#:: Ding!
+		quest::ding();		
+	}
+	#:: Match four 10021 - Star Rose Quartz
+	elsif (plugin::takeItems(10021 => 1)) {
     quest::say("Identify this when the time comes. It is Ryla's prison.");
-  }
-  # Peridot Hand in
-  elsif (plugin::check_handin(\%itemcount, 10028 => 1)) {
-    quest::summonitem(12963); # Mardon's bottle
+		#:: Give a 12964 - Ornate Bottle
+		quest::summonitem(12964);
+		#:: Ding!
+		quest::ding();
+	}
+	#:: Match four 10028 - Peridot
+	elsif (plugin::takeItems(10028 => 1)) {
     quest::say("This bottle is for Mardon. You may be able to identify his name upon it. ");
-  }
-  # Souls hand in
-  elsif (plugin::check_handin(\%itemcount, 12967 => 1, 12966 => 1, 12965 => 1)) {
-    quest::emote("embraces the bottles as if they were babes. 'Rejoice my friends!! Your souls are safe. $name, you are a good wizard. You deserve to know the secret of concussion.'");   
-    quest::summonitem(12968); # Scroll of Brain Bite
-    quest::exp(100000);
-    quest::faction(101,20);  # Firiona Vie
-    quest::faction(92,20);   # Emarald Warriors
-    quest::faction(314,20);  # Storm Guard
-    quest::faction(193,-60); # Legions of Cabilis
-    quest::faction(250,-60); # Pirates of Guntak
-  }
-  plugin::return_items(\%itemcount);
+		#:: Give a 12963 - Ornate Bottle
+		quest::summonitem(12963);
+		#:: Ding!
+		quest::ding();
+	}
+	#:: Match a 12967 - Bottle of Swirling Smoke, 12966 - Bottle of Swirling Smoke, 12965 - Bottle of Swirling Smoke
+	elsif (plugin::takeItems(12967 => 1, 12966 => 1, 12965 => 1)) {
+    quest::emote("embraces the bottles as if they were babes.");   
+		quest::say("Rejoice my friends!! Your souls are safe. $name, you are a good wizard. You deserve to know the secret of concussion.");
+		#:: Give a 12968 - Scroll of Brain Bite
+		quest::summonitem(12968);
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(101, 20);  #:: + Firiona Vie
+		quest::faction(92, 20);   #:: + Emarald Warriors
+		quest::faction(314, 20);  #:: + Storm Guard
+		quest::faction(193, -60); #:: - Legions of Cabilis
+		quest::faction(250, -60); #:: - Pirates of Guntak
+		#:: Grant a large amount of experience
+		quest::exp(100000);
+	}
+
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
 

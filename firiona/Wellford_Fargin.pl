@@ -6,8 +6,3 @@ sub EVENT_SAY {
     quest::say("If you want to help, you can begin by replacing my prized Star of Odus which was taken from my vault when I stepped out to dine. Do so, and I may trust you to collect coins. I will also reward you with an item a composer left here.");
   }
 }
-
-sub EVENT_ITEM {
-  plugin::return_items(\%itemcount);
-}
-#END of FILE Zone:firiona  ID:84120 -- Wellford_Fargin

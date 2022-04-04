@@ -1,12 +1,3 @@
-#Zone: Firiona Vie
-#Short Name: firiona
-#Zone ID: 84
-#
-#NPC Name: Tiblner Milnik
-#NPC ID: 84160
-#Quest Status: finished
-#
-
 sub EVENT_SAY {
   if ($text=~/hail/i) {
     quest::say("Huh? What? Oh, you speak so fast, it took me a moment. I have become used to the slow and stately conversation the Earth holds, where a thought can span aeons. I am the Master of Earth, you know. Though I'm usually too humble to say this, that makes me the most powerful mortal in Norrath, as everyone knows that Earth is the only REAL Element, all else must give way before its power. Water is absorbed by it, Air is ignored by it, and Fire is contained in it. But you know all these things, I am sure. Are you interested in obtaining the Element of Earth? I know Magi'kot was, but we know what happened to him, don't we?");
@@ -17,13 +8,17 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-  if (plugin::check_handin(\%itemcount, 11567 => 1, 28042 => 1, 6360 => 1, 6361 => 1)) {
-    quest::say("Take this Element and keep it with you. I wish you the best in your journey, but I must ask you to leave me now. This frantic pace you set makes me nervous.");
-    quest::summonitem(28032);
-    quest::exp(5000);
-  }
-  plugin::return_items(\%itemcount);
+	#:: Match a 11567 - Staff of Elemental Mastery: Earth, 28042 - Dirt of Underfoot, 6360 - Broom of Trilon and a 6361 - Shovel of Ponz
+	if (plugin::takeItems(11567 => 1, 28042 => 1, 6360 => 1, 6361 => 1)) {
+		quest::say("Take this Element and keep it with you. I wish you the best in your journey, but I must ask you to leave me now. This frantic pace you set makes me nervous.");
+    	#:: Give a 28032 - Element of Earth
+		quest::summonitem(28032);
+		#:: Ding!
+		quest::ding();
+		#:: Grant a moderate amount of experience
+		quest::exp(5000);
+	}
+
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
-
-#END of FILE Zone: firiona ID:84160 -- Tiblner_Milnik
-

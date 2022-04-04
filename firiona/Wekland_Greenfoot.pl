@@ -1,6 +1,3 @@
-##Could find no text for these so the text is being adapted from another 
-##freed slave quest file
-
 sub EVENT_SAY {
   if ($text=~/hail/i) {
     quest::say("Greetings friend, it is good to be freed from the clutches of those evil creatures. Tell me are you willing to help me bring some [justice] to them?");
@@ -11,9 +8,15 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-  if (plugin::check_handin(\%itemcount, 62083 => 1, 62082 => 3)) {
-    quest::say("Thank you for your assistance. Here is the reward that you were promised.");
-    quest::summonitem(62197);
-  }
-  plugin::return_items(\%itemcount);
+	#:: Match a 62083 - Bone Collar of Henxsa and 62082 - Nurgan Overseer Necklace
+	if (plugin::takeItems(62083 => 1, 62082 => 3)) {
+		quest::say("Thank you for your assistance. Here is the reward that you were promised.");
+    	#:: Give a 62197 - Silken Cape of Exploration
+		quest::summonitem(62197);
+		#:: Ding!
+		quest::ding();
+	}
+
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }

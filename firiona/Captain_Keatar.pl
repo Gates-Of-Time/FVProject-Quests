@@ -58,7 +58,7 @@ sub EVENT_ITEM {
 			#:: Create a hash for storing cash - 800 to 1200cp
 			my %cash = plugin::RandomCash(800, 1200);
 			#:: Grant a random cash reward
-			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+			quest::givecash($cash{copper}, $cash{silver}, $cash{gold}, $cash{platinum});
 		}
 	}
 	#:: Return unused items

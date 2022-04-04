@@ -12,8 +12,3 @@ sub EVENT_SAY {
     quest::say("Halt!! This tunnel is used primarily for the forces of the Union of Vie. Citizens and adventurers are to use the main entrance.");
   }
 }
-
-sub EVENT_ITEM {
-  plugin::return_items(\%itemcount);
-}
-#END of FILE Zone:firiona  ID:84124 -- Scout_Bowfist
