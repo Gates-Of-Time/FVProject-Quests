@@ -10,9 +10,39 @@ sub EVENT_SAY {
   }
 
 sub EVENT_ITEM {  
-	#:: Match a 19238 - Spell: Spirit of Scale or 19244 - Spell: Form of the Howler or 19232 - Spell: Circle of Winter or 19234 - Spell: Circle of Summer
-	if (plugin::takeItems(19238 => 1) || plugin::takeItems(19244 => 1) || plugin::takeItems(19232 => 1) || plugin::takeItems(19234 => 1)) {
-    quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
+	#:: Match a 19238 - Spell: Spirit of Scale
+	if (plugin::takeItems(19238 => 1)) {
+    	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
+		#:: Choose a random 19235 - Spell: Call of Karana, 19233 - Spell: Upheaval, 19236 - Spell: Egress or 19240 - Spell: Glamour of Tunare
+		quest::summonitem(quest::ChooseRandom(19235,19233,19236,19240));
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(1000);
+	}
+	#:: Match a 19244 - Spell: Form of the Howler
+	elsif (plugin::takeItems(19244 => 1)) {
+    	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
+		#:: Choose a random 19235 - Spell: Call of Karana, 19233 - Spell: Upheaval, 19236 - Spell: Egress or 19240 - Spell: Glamour of Tunare
+		quest::summonitem(quest::ChooseRandom(19235,19233,19236,19240));
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(1000);
+	}
+	#:: Match a 19232 - Spell: Circle of Winter
+	elsif (plugin::takeItems(19232 => 1)) {
+    	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
+		#:: Choose a random 19235 - Spell: Call of Karana, 19233 - Spell: Upheaval, 19236 - Spell: Egress or 19240 - Spell: Glamour of Tunare
+		quest::summonitem(quest::ChooseRandom(19235,19233,19236,19240));
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(1000);
+	}
+	#:: Match a 19234 - Spell: Circle of Summer
+	elsif (plugin::takeItems(19234 => 1)) {
+    	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
 		#:: Choose a random 19235 - Spell: Call of Karana, 19233 - Spell: Upheaval, 19236 - Spell: Egress or 19240 - Spell: Glamour of Tunare
 		quest::summonitem(quest::ChooseRandom(19235,19233,19236,19240));
 		#:: Ding!

@@ -11,9 +11,9 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM(){  
-	#:: Match a 19351 - Spell: Bristlebane`s Bundle or 19347 - Spell: Gift of Xev or 19354 - Spell: Quiver of Marr or 19358 - Spell: Scars of Sigil
-	if (plugin::takeItems(19351 => 1) || plugin::takeItems(19347 => 1) || plugin::takeItems(19354 => 1) || plugin::takeItems(19358 => 1)) {
-    quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
+	#:: Match a 19351 - Spell: Bristlebane`s Bundle
+	if (plugin::takeItems(19351 => 1)) {
+    	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
 		#:: Choose a random 19368 - Spell: Boon of Immolation, 19346 - Spell: Scintillation, 19355 - Spell: Vocarate: Fire or 19357 - Spell: Vocarate: Air
 		quest::summonitem(quest::ChooseRandom(19368,19346,19355,19357));
 		#:: Ding!
@@ -21,6 +21,37 @@ sub EVENT_ITEM(){
 		#:: Grant a small amount of experience
 		quest::exp(1000);
 	}
+	#:: Match a 19347 - Spell: Gift of Xev
+	elsif (plugin::takeItems(19347 => 1)) {
+    	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
+		#:: Choose a random 19368 - Spell: Boon of Immolation, 19346 - Spell: Scintillation, 19355 - Spell: Vocarate: Fire or 19357 - Spell: Vocarate: Air
+		quest::summonitem(quest::ChooseRandom(19368,19346,19355,19357));
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(1000);
+	}
+	#:: Match a 19354 - Spell: Quiver of Marr
+	elsif (plugin::takeItems(19354 => 1)) {
+    	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
+		#:: Choose a random 19368 - Spell: Boon of Immolation, 19346 - Spell: Scintillation, 19355 - Spell: Vocarate: Fire or 19357 - Spell: Vocarate: Air
+		quest::summonitem(quest::ChooseRandom(19368,19346,19355,19357));
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(1000);
+	}
+	#:: Match a 19358 - Spell: Scars of Sigil
+	elsif (plugin::takeItems(19358 => 1)) {
+    	quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
+		#:: Choose a random 19368 - Spell: Boon of Immolation, 19346 - Spell: Scintillation, 19355 - Spell: Vocarate: Fire or 19357 - Spell: Vocarate: Air
+		quest::summonitem(quest::ChooseRandom(19368,19346,19355,19357));
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(1000);
+	}
+
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }

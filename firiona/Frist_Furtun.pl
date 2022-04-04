@@ -11,14 +11,48 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM(){
-	#:: Match a 19203 - Spell: Death Pact or 19205 - Spell: Upheaval or 19209 - Spell: Yaulp IV or 19212 - Spell: Reckoning or 19233 - Spell: Upheaval
-	if (plugin::takeItems(19203 => 1) || plugin::takeItems(19205 => 1) || plugin::takeItems(19209 => 1) || plugin::takeItems(19212 => 1) || plugin::takeItems(19233 => 1)) {
+	#:: Match a 19203 - Spell: Death Pact
+	if (plugin::takeItems(19203 => 1)) {
 		quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");   
 		#:: Choose a random 19210 - Spell: Unswerving Hammer, 19224 - Spell: Heroic Bond, 19420 - Spell: Sunskin or 19206 - Spell: Word of Vigor
 		quest::summonitem(quest::ChooseRandom(19210,19224,19420,19206));
 		#:: Ding!
 		quest::ding();
 	}
+	#:: Match a 19205 - Spell: Upheaval
+	elsif (plugin::takeItems(19205 => 1)) {
+		quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");   
+		#:: Choose a random 19210 - Spell: Unswerving Hammer, 19224 - Spell: Heroic Bond, 19420 - Spell: Sunskin or 19206 - Spell: Word of Vigor
+		quest::summonitem(quest::ChooseRandom(19210,19224,19420,19206));
+		#:: Ding!
+		quest::ding();
+	}
+	#:: Match a 19209 - Spell: Yaulp IV
+	elsif (plugin::takeItems(19209 => 1)) {
+		quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");   
+		#:: Choose a random 19210 - Spell: Unswerving Hammer, 19224 - Spell: Heroic Bond, 19420 - Spell: Sunskin or 19206 - Spell: Word of Vigor
+		quest::summonitem(quest::ChooseRandom(19210,19224,19420,19206));
+		#:: Ding!
+		quest::ding();
+	}
+	#:: Match a 19212 - Spell: Reckoning or 19233 - Spell: Upheaval
+	elsif (plugin::takeItems(19212 => 1)) {
+		quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");   
+		#:: Choose a random 19210 - Spell: Unswerving Hammer, 19224 - Spell: Heroic Bond, 19420 - Spell: Sunskin or 19206 - Spell: Word of Vigor
+		quest::summonitem(quest::ChooseRandom(19210,19224,19420,19206));
+		#:: Ding!
+		quest::ding();
+	}
+	#:: Match a 19233 - Spell: Upheaval
+	elsif (plugin::takeItems(19233 => 1)) {
+		quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");   
+		#:: Choose a random 19210 - Spell: Unswerving Hammer, 19224 - Spell: Heroic Bond, 19420 - Spell: Sunskin or 19206 - Spell: Word of Vigor
+		quest::summonitem(quest::ChooseRandom(19210,19224,19420,19206));
+		#:: Ding!
+		quest::ding();
+	}
+
+
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }

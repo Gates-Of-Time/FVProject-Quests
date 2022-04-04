@@ -11,7 +11,7 @@ sub EVENT_ITEM {
 	#:: Match a 62083 - Bone Collar of Henxsa and 62082 - Nurgan Overseer Necklace
 	if (plugin::takeItems(62083 => 1, 62082 => 3)) {
 		quest::say("Thank you for your assistance. Here is the reward that you were promised.");
-    #:: Give a 62197 - Silken Cape of Exploration
+    	#:: Give a 62197 - Silken Cape of Exploration
 		quest::summonitem(62197);
 		#:: Ding!
 		quest::ding();

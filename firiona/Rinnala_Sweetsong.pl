@@ -11,7 +11,7 @@ sub EVENT_ITEM {
 	#:: Match a 62072 - Nurgan Spirit Fetish and a 62073 - Huflam's Signet Ring
 	if (plugin::takeItems(62072 => 3, 62073 => 1)) {
 		quest::say("Thank you for your assistance in bringing them to justice.  Please take this as a token of my thanks.");
-    #:: Give a 62192 - Ring of Sweet Serenades
+    	#:: Give a 62192 - Ring of Sweet Serenades
 		quest::summonitem(62192);
 		#:: Ding!
 		quest::ding();

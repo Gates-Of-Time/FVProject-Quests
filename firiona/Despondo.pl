@@ -53,11 +53,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-    quest::faction(101,20);  #:: + Firiona Vie
-    quest::faction(92,20);   #:: + Emarald Warriors
-    quest::faction(314,20);  #:: + Storm Guard
-    quest::faction(193,-60); #:: - Legions of Cabilis
-    quest::faction(250,-60); #:: - Pirates of Guntak
+		quest::faction(101,20);  #:: + Firiona Vie
+		quest::faction(92,20);   #:: + Emarald Warriors
+		quest::faction(314,20);  #:: + Storm Guard
+		quest::faction(193,-60); #:: - Legions of Cabilis
+		quest::faction(250,-60); #:: - Pirates of Guntak
 		#:: Grant a large amount of experience
 		quest::exp(100000);
 	}
