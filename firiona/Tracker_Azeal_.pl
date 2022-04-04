@@ -6,9 +6,8 @@ sub EVENT_SPAWN {
 sub EVENT_ITEM {
 	#:: Match four 12691 - Coin
 	if (plugin::takeItems(12691 => 1)) {
-    quest::emote("begins to pull his face off.. it is a disguise!!");
-    quest::say("Aha!! You have made it!! I cannot see well in this disguise, but I thought I smelled you. I have [news of the Charasis tome].");
-		#:: Ding!
+    quest::emote("begins to pull his face off.. it is a disguise!! 'Aha!! You have made it!! I cannot see well in this disguise, but I thought I smelled you. I have [news of the Charasis tome].'");
+    #:: Ding!
 		quest::ding();
     #:: Handle spawn triggers
     my $x = $npc->GetX();

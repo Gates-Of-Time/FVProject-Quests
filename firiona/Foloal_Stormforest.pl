@@ -11,18 +11,10 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-  if (plugin::check_handin(\%itemcount, 20462 => 1, 20461 => 1)) {
-    quest::emote("blinks and carefully takes the stones from you, cautiously scratching the jagged green stone against the other. Its skin seems to shiver and flake at the contact and eventually begins to shine brightly. 'With the gem nature's balance is complete. Take the stone and walk your path. Blade or lightning caller, burning sword or the mother's walk.'");
-    quest::summonitem(20468);
-  }
-  plugin::return_items(\%itemcount);
-
-  
 	#:: Match a 20462 - Softly Glowing Stone and a 20461 - Pulsing Green Stone
 	if (plugin::takeItems(20462 => 1, 20461 => 1)) {
-		quest::emote("blinks and carefully takes the stones from you, cautiously scratching the jagged green stone against the other. Its skin seems to shiver and flake at the contact and eventually begins to shine brightly.");
-    quest::say("With the gem nature's balance is complete. Take the stone and walk your path. Blade or lightning caller, burning sword or the mother's walk.");
-		#:: Give a 20468 - Warmly Glowing Stone
+		quest::emote("blinks and carefully takes the stones from you, cautiously scratching the jagged green stone against the other. Its skin seems to shiver and flake at the contact and eventually begins to shine brightly. 'With the gem nature's balance is complete. Take the stone and walk your path. Blade or lightning caller, burning sword or the mother's walk.'");
+    #:: Give a 20468 - Warmly Glowing Stone
 		quest::summonitem(20468);
 		#:: Ding!
 		quest::ding();

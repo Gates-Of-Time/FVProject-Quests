@@ -21,14 +21,12 @@ sub EVENT_SIGNAL {
 
 sub EVENT_TIMER {
   if ($timer eq "Talk1") {
-    quest::emote("stops abruptly and shudders with fear.");
-    quest::say("Look!! There, past the wolf people. Near an ancient tunnel can be found the meeting place. I fear we may be too late. I thought I saw a shadow dash from the tunnels, but I did not see any spider riders. We'll see when we reach it.");
+    quest::emote("stops abruptly and shudders with fear. 'Look!! There, past the wolf people. Near an ancient tunnel can be found the meeting place. I fear we may be too late. I thought I saw a shadow dash from the tunnels, but I did not see any spider riders. We'll see when we reach it.'");
     quest::stoptimer("Talk1");
     quest::settimer("Talk2",30);
   }
   if ($timer eq "Talk2") {
-    quest::emote("looks over at you and sizes you up before continuing on.");
-    quest::say("We should continue, follow me.");
+    quest::emote("looks over at you and sizes you up before continuing on. He says, 'We should continue, follow me.'");
     quest::stoptimer("Talk2");
   }
 }

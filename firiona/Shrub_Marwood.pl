@@ -13,18 +13,17 @@ sub EVENT_SAY {
 sub EVENT_ITEM {  
 	#:: Match a 18780 - Mantrap Root, 12955 - Tump Stump (Kromdul) and 12958 - Tump Stump (Kromdek)
 	if (plugin::takeItems(12960 => 1, 12955 => 1, 12958 => 1)) {
-		quest::emote("tosses the mantrap root out the window.. SPLASH!!");
-    quest::say("I made a mistake. I didn't need that one. Here is the shillelagh I told you about. I found it in some burned out woods far from here. I cleaned it up and found it had a spark of mana so I had it enchanted with a few charges of my spell, [Fertile Crop]. Hope you like it.");
+		quest::emote("tosses the mantrap root out the window.. SPLASH!! 'I made a mistake. I didn't need that one. Here is the shillelagh I told you about. I found it in some burned out woods far from here. I cleaned it up and found it had a spark of mana so I had it enchanted with a few charges of my spell, [Fertile Crop]. Hope you like it.'");
 		#:: Give a 12953 - Dark Oak Shillelagh
 		quest::summonitem(12953);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-    quest::faction(418,10);       #:: + inhabitants of firiona
-    quest::faction(92,10);        #:: + emerald warriors
-    quest::faction(314,10);       #:: + storm guard
-    quest::faction(193,-30);      #:: - legion of cabilis
-    quest::faction(250,-30);      #:: - pirates of gunthak
+		quest::faction(418,10);       #:: + inhabitants of firiona
+		quest::faction(92,10);        #:: + emerald warriors
+		quest::faction(314,10);       #:: + storm guard
+		quest::faction(193,-30);      #:: - legion of cabilis
+		quest::faction(250,-30);      #:: - pirates of gunthak
 		#:: Grant a moderate amount of experience
 		quest::exp(25000);
 	}
@@ -36,11 +35,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-    quest::faction(418,10);       #:: + inhabitants of firiona
-    quest::faction(92,10);        #:: + emerald warriors
-    quest::faction(314,10);       #:: + storm guard
-    quest::faction(193,-30);      #:: - legion of cabilis
-    quest::faction(250,-30);      #:: - pirates of gunthak
+		quest::faction(418,10);       #:: + inhabitants of firiona
+		quest::faction(92,10);        #:: + emerald warriors
+		quest::faction(314,10);       #:: + storm guard
+		quest::faction(193,-30);      #:: - legion of cabilis
+		quest::faction(250,-30);      #:: - pirates of gunthak
 		#:: Grant a moderate amount of experience
 		quest::exp(25000);
 	}
