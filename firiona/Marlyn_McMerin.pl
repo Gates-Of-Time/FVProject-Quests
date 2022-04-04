@@ -1,38 +1,3 @@
-#############
-#Quest Name: McMerin's Feast - "Good" Races, or any with FV faction
-#Author: BWStripes
-#NPC's Involved: 1
-#Items involved: 4
-#############
-###NPC 1
-#Name: Marlyn McMerin
-#Race 1 (Barbarian), Texture of 1, Size 7, gender of 1
-#Location XYZ: 1669.0, -3813.0, -102.379997 in Firiona vie
-#Level: 40
-#Type: Merchant
-#Reward:
-# 12941: Spell: Cannibalize II
-#############
-###Item 1
-#Name: Clay of Ghiosk. - Comes from Army Behemoths in the City of Mist - Called Strange Ochre Clay, and identifies as "Clay of Ghiosk".
-#ID: 12942
-###Item 2
-#Name: Crushed Diamonds (LORE: Crushed Dread Diamond)
-# You can find Crushed Diamonds as a ground spawn in the Timorous Deep on the Golra island at -8850, -6040.
-# Or, get a dufrenite, and head tothe Dreadlands, in the area with all the wizard spires, there is a MOB called "gem cutter skeleton". He is inside one of the pyramids (there's an entrance on the ground), and is KOS to everyone. An Enchanter, Necro, or Bard is required to charm him so that you can hail him, and he talks about sparklies. Ask him "what dread diamond," and he offers to trade a dufrenite for one. Give him a dufrenite (while he's charmed) and he gives you a "Dread Diamond" [No Drop](not crushed), and says how they are very valuable but more so in the crushed form, and that you would require high skill and a spectral pestle to crush it.
-# The spectral pestles are found on spectral guardians in Kaesora and Trakanon's Teeth, and combining the dread diamond + spectral pestle to make Crushed Diamonds, which identifies as "Crushed Dread Diamonds" (trivializes at around 70 Alchemy skill, so make sure your skill is high enough - you lose the pestle, but get the diamond back).
-#ID: 12945
-###Item 3
-#Name: Yun Shaman Powder - from Froglok Yun Shamans in Trakanon's Teeth. Black, NO TRADE.
-#ID: 12944
-###Item 4
-#Name: Greyish Bone Chips - from Skeleton Warlords in Karnor's Castle
-#ID: 12943
-###
-
-# Quest for Spell: Cannibalize II - good version - most of the text is improvised as unavailable.
-#
-
 sub EVENT_SAY {
   if($text =~ /hail/i) {
     quest::say("Greetings hearty adventurer. Searching for the components necessary for fine shaman spells are we? I have come to Kunark in search of [rare alchemy components], but I have found the dangers of Kunark are far too great for me.");
@@ -52,12 +17,16 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-  if (plugin::check_handin(\%itemcount, 12942=>1, 12945 => 1, 12944 => 1, 12943 =>1)){
+	#:: Match a 12942 - Strange Ochre Clay, 12945 - Crushed Diamonds, 12944 - Yun Shaman Powder and a 12943 - Greyish Bone Chips
+	elsif (plugin::takeItems(12942=>1, 12945 => 1, 12944 => 1, 12943 =>1)) {
     quest::say("What's this? This is amazing - you collected them all! To think, the power that these items hold if properly used. Never mind that now, here, take the scroll. You've certainly earned it.");
-    quest::exp(45000);
-    quest::summonitem(12941);
-  }
-  plugin::return_items(\%itemcount);
+		#:: Give a 12941 - Spell: Cannibalize II
+		quest::summonitem(12941);
+		#:: Ding!
+		quest::ding();
+		#:: Grant a large amount of experience
+		quest::exp(45000);
+	}
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
-
-#END of FILE Zone:firiona - Marylyn_McMarin

@@ -8,14 +8,17 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM() {
-  if (plugin::check_handin(\%itemcount, 19378 => 1) || # Spell: Color Slant
-      plugin::check_handin(\%itemcount, 19269 => 1) || # Spell: Cripple
-      plugin::check_handin(\%itemcount, 19384 => 1) || # Spell: Dementia
-      plugin::check_handin(\%itemcount, 19374 => 1)) { # Spell: Theft of Thought
-    quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");      
-    quest::summonitem(quest::ChooseRandom(19386,19379,19381,19215));
-    quest::exp(1000);
-  }
-  plugin::return_items(\%itemcount);
+	#:: Match a 19378 - Spell: Color Slant or 19269 - Spell: Cripple or 19384 - Spell: Dementia or 19374 - Spell: Theft of Thought
+	if (plugin::takeItems(19378 => 1) || plugin::takeItems(19269 => 1) || plugin::takeItems(19384 => 1) || plugin::takeItems(19374 => 1)) {
+    quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
+		#:: Choose a random 19386 - Spell: Boon of the Clear Mind, 19379 - Spell: Clarity II, 19381 - Spell: Recant Magic or 19215 - Spell: Wake of Tranquility
+		quest::summonitem(quest::ChooseRandom(19386,19379,19381,19215));
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(1000);
+	}
+	
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
-#END of FILE Zone:firiona  ID:84169 -- Gracie_F`Liler

@@ -1,5 +1,3 @@
-#Tracker Azeal is actually Hero Goxnok in disguise. He is part of the fifth quest in the Greenmist line. He will check the zone time every 30 seconds, and if it's 9 PM, he will respawn as a wandering form of himself that will path off and meet whoever is doing the quest.
-
 sub EVENT_SPAWN {
   quest::settimer("ZoneTime",30);
 }
@@ -21,8 +19,3 @@ sub EVENT_TIMER {
     quest::depop_withtimer();
   }
 }
-
-sub EVENT_ITEM {
-  plugin::return_items(\%itemcount);
-}
-#Submitted by Jim Mills

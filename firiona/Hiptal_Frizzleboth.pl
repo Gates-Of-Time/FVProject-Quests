@@ -10,18 +10,17 @@ sub EVENT_SAY {
   }
 }
 
-sub EVENT_ITEM(){
-  if (plugin::check_handin(\%itemcount, 19351 => 1) || # Bristlebane's bundle
-      plugin::check_handin(\%itemcount, 19347 => 1) || # Gift of Xev
-      plugin::check_handin(\%itemcount, 19354 => 1) || # Quiver of marr
-      plugin::check_handin(\%itemcount, 19358 => 1)) { # Scars of Sigil
-    quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");      
-    quest::summonitem(quest::ChooseRandom(19368,19346,19355,19357));
-    quest::exp(1000);
-  }
-  plugin::return_items(\%itemcount);
+sub EVENT_ITEM(){  
+	#:: Match a 19351 - Spell: Bristlebane`s Bundle or 19347 - Spell: Gift of Xev or 19354 - Spell: Quiver of Marr or 19358 - Spell: Scars of Sigil
+	if (plugin::takeItems(19351 => 1) || plugin::takeItems(19347 => 1) || plugin::takeItems(19354 => 1) || plugin::takeItems(19358 => 1)) {
+    quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
+		#:: Choose a random 19368 - Spell: Boon of Immolation, 19346 - Spell: Scintillation, 19355 - Spell: Vocarate: Fire or 19357 - Spell: Vocarate: Air
+		quest::summonitem(quest::ChooseRandom(19368,19346,19355,19357));
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(1000);
+	}
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
-
-
-#END of FILE Zone:firiona  ID:84168 -- Hiptal_Frizzleboth 
-

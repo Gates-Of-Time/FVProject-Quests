@@ -1,6 +1,3 @@
-# Al'Kabor's Research - Ring of the Messenger
-#
-
 sub EVENT_SAY {
   if ($text=~/hail/i) {
     quest::say("Greetings, $name. I am Realla Segoan from the city of Erudin. I cannot spend time chatting with you now. I have [official tasks] to perform.");
@@ -22,9 +19,7 @@ sub EVENT_SAY {
   }
   if ($text=~/help collect the research notes/i) {
     quest::say("Excellent! Take this Research Binder and fill it with the research notes when you find them. Once it is filled, seal it and take it to Noilgin Mindtune here at the outpost, so that he may deliver it to Erudin. Be forewarned though, it will be a dangerous path to follow. Most likely, the research notes have fallen into possession of some very dangerous beings.");
-    quest::summonitem(17088);
+    #:: Give a 17088 - Research Binder
+		quest::summonitem(17088);
   }
 }
-
-# EOF zone: firiona ID: 84161 NPC: #Realla_Segoan
-

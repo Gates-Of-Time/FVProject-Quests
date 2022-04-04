@@ -7,8 +7,3 @@ sub EVENT_SAY {
 		quest::selfcast(2292);
 	}
 }
-
-sub EVENT_ITEM {
-	#:: Return unused items
-	plugin::returnUnusedItems();
-}

@@ -1,6 +1,3 @@
-# warmly glowing stone quest -- ranger epic
-#
-
 sub EVENT_SAY {
   if ($text=~/are you one such as myself/i) {
     quest::emote("stares at you and whispers. 'You must be the one that has been spoken of. Yes, yes I am one of the circle. There are many of us in the lands right now, all seeking answers to the ills that have befallen our homes.'");
@@ -19,7 +16,17 @@ sub EVENT_ITEM {
     quest::summonitem(20468);
   }
   plugin::return_items(\%itemcount);
+
+  
+	#:: Match a 20462 - Softly Glowing Stone and a 20461 - Pulsing Green Stone
+	if (plugin::takeItems(20462 => 1, 20461 => 1)) {
+		quest::emote("blinks and carefully takes the stones from you, cautiously scratching the jagged green stone against the other. Its skin seems to shiver and flake at the contact and eventually begins to shine brightly.");
+    quest::say("With the gem nature's balance is complete. Take the stone and walk your path. Blade or lightning caller, burning sword or the mother's walk.");
+		#:: Give a 20468 - Warmly Glowing Stone
+		quest::summonitem(20468);
+		#:: Ding!
+		quest::ding();
+	}
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
-
-# EOF zone: firiona ID: 84207 NPC: Foloal_Stormforest
-

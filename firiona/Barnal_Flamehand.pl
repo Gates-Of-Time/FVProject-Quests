@@ -11,17 +11,16 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-  if (plugin::check_handin(\%itemcount, 19315 => 1) || # Atol's spectral shackles
-      plugin::check_handin(\%itemcount, 19322 => 1) || # Inferno of Al Kabor
-      plugin::check_handin(\%itemcount, 19318 => 1) || # Pillar of frost
-      plugin::check_handin(\%itemcount, 19319 => 1)) { # Tears of druzzil
-    quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");      
-    quest::summonitem(quest::ChooseRandom(19329,19320,19324,19317));
-    quest::exp(1000);
+	#:: Match a 19315 - Spell: Atol`s Spectral Shackles, 19322 - Spell: Inferno of Al`Kabor, 19318 - Spell: Pillar of Frost and a 19319 - Spell: Tears of Druzzil
+  if (plugin::takeItems(19315 => 1) || plugin::takeItems(19322 => 1) || plugin::takeItems(19318 => 1) || plugin::takeItems(19319 => 1)) {
+    quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!"); 
+		#:: Choose a random 19329 - Spell: Tears of Solusek, 19320 - Spell: Abscond, 19324 - Spell: Thunderbolt or 19317 - Spell: Tishan`s Discord
+		quest::summonitem(quest::ChooseRandom(19329,19320,19324,19317));
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(1000);
   }
-  plugin::return_items(\%itemcount);
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
-
-
-#END of FILE Zone:firiona  ID:84166 -- Barnal_Flamehand 
-

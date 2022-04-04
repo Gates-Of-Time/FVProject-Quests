@@ -9,17 +9,18 @@ sub EVENT_SAY {
     quest::say("I am still looking for four scrolls that I have not been able to locate. They are the scrolls of Circle of Winter, Circle of Summer, Spirit of Scale, and Form of the Howler. If you bring any of these back, I'll give you one of four very rare scrolls in my possession."); }
   }
 
-sub EVENT_ITEM {
-  if(plugin::check_handin(\%itemcount, 19238 => 1) || # Spirit of Scale
-     plugin::check_handin(\%itemcount, 19244 => 1) || # Form of the Howler
-     plugin::check_handin(\%itemcount, 19232 => 1) || # Circle of Winter
-     plugin::check_handin(\%itemcount, 19234 => 1)) { # Circle of Summer
-    quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");
-    quest::summonitem(quest::ChooseRandom(19235,19233,19236,19240));
-    quest::exp(1000);
-  }
-  plugin::return_items(\%itemcount);
+sub EVENT_ITEM {  
+	#:: Match a 19238 - Spell: Spirit of Scale or 19244 - Spell: Form of the Howler or 19232 - Spell: Circle of Winter or 19234 - Spell: Circle of Summer
+	if (plugin::takeItems(19238 => 1) || plugin::takeItems(19244 => 1) || plugin::takeItems(19232 => 1) || plugin::takeItems(19234 => 1)) {
+    quest::say("Here is the scroll that I promised. We have both gained much knowledge today. I hope to do business with you again soon. Farewell!");     
+		#:: Choose a random 19235 - Spell: Call of Karana, 19233 - Spell: Upheaval, 19236 - Spell: Egress or 19240 - Spell: Glamour of Tunare
+		quest::summonitem(quest::ChooseRandom(19235,19233,19236,19240));
+		#:: Ding!
+		quest::ding();
+		#:: Grant a small amount of experience
+		quest::exp(1000);
+	}
+	
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
-
-#END of FILE Zone:firiona  ID:84176 -- Samitha_Lightheart
-

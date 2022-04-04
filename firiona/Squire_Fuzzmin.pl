@@ -1,6 +1,3 @@
-#zone: Firiona  NPC: Squire_Fuzzmin (84312)
-#by Qadar
-
 sub EVENT_SPAWN {
   $hobble = $qglobals{hobble};
   quest::follow($hobble);
@@ -22,25 +19,26 @@ sub EVENT_SAY {
   }
 }
 
-sub EVENT_ITEM {
-  if (plugin::check_handin(\%itemcount, 12950 => 1, 12951 => 1, 12952 => 1)){
+sub EVENT_ITEM {  
+	#:: Match a 12950 - Dragon Scales (Azdalin), 12951 - Dragon Scales (Gylton) and a 12952 -Dragon Scales (Xyfyl)
+	if (plugin::takeItems(12950 => 1, 12951 => 1, 12952 => 1)) {
     quest::doanim(20);
-    quest::emote("tumbles around and stands on his hands. With his feet he pulls a long polearm from a nearby weapons cache!! 'Woohoo!! I can taste the brew in Freeport already. Here you are my friend. A real Wurmslayer!!'");
-    quest::faction(101,15);   # Firiona Vie better
-    quest::faction(92,15);    # Emerald Warriors better
-    quest::faction(314,15);   # Storm Guard better
-    quest::faction(193,-15);  # Legion of Cabilis worse
-    quest::faction(250,-15);  # Pirates of Gunthak worse
-    quest::exp(700000);
-    quest::ding;
-    quest::summonitem(5057);
-  }
-  plugin::return_items(\%itemcount);
-}
+		quest::emote("tumbles around and stands on his hands. With his feet he pulls a long polearm from a nearby weapons cache!!");
+    quest::say("Woohoo!! I can taste the brew in Freeport already. Here you are my friend. A real Wurmslayer!!");
+		#:: Give a 5057 - Wurmslayer
+		quest::summonitem(5057);
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+    quest::faction(101,15); 		#:: + Firiona Vie better
+    quest::faction(92,15); 		  #:: + Emerald Warriors better
+    quest::faction(314,15); 		#:: + Storm Guard better
+    quest::faction(193,-15); 		#:: - Legion of Cabilis worse
+    quest::faction(250,-15); 		#:: - Pirates of Gunthak worse
+		#:: Grant a huge amount of experience
+		quest::exp(700000);
+	}
 
-# Turn-ins:
-# 12950 = dragon scale (Azdalin)
-# 12951 = dragon scale (Gylton)
-# 12952 = dragon scale (Xyfl)
-# Quest reward = Wurmslayer (5057)
-# Quest depends on Sir_Hobble.pl in Firiona for proper spawn of Squire_Fuzzmin
+	#:: Return unused items
+	plugin::returnUnusedItems();
+}
