@@ -4,6 +4,12 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/timorous deep/i) {
 		quest::say("Off you go!");
+		#:: Cast 2292 - Portal to Timorous
 		quest::selfcast(2292);
 	}
+}
+
+sub EVENT_ITEM {
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
