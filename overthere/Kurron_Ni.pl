@@ -1,13 +1,10 @@
-# Part of SK Epic 1.0
-# items: 3141, 3145, 3140
-
 sub EVENT_SAY {
   if ($text=~/Hail/i) {
     quest::say("Out of my way, stranger!  I am on a delicate mission; interfere with my search and I shall relieve you of your head! Bother me no more.");
   }
-  if($text=~/mission/i) {
-    $faction = $client->GetCharacterFactionLevel(404); # Faction: Truespirit
-    if ($faction < 7) {
+  elsif($text=~/mission/i) {
+    $Faction = $client->GetCharacterFactionLevel(404); # Faction: Truespirit
+    if ($Faction < 7) {
       quest::say("My mission is none of your concern!  Now you die, pitiful fool!");
       quest::attack("$name");
     }
@@ -16,23 +13,29 @@ sub EVENT_SAY {
       quest::attack("$name");
     }
   }
-  if ($text=~/seek/i) {
+  elsif ($text=~/seek/i) {
     quest::say("I have traveled here in hopes of finding a soul worthy of assisting me in completing my mission.");
   }
-  if ($text=~/i am worthy/i) {
+  elsif ($text=~/i am worthy/i) {
     quest::say("I doubt it, but I have been wrong before. Before I share with you the details of my mission, however, you must first prove your worthiness. Agreed?");
   }
-  if($text=~/agreed/i) {
+  elsif($text=~/agreed/i) {
     quest::say("Very well then, my new friend. I have an acquaintance that stands in need of three pieces of Darkforge Armor. He requires the breast, greaves and helm to complete his set. I also must pay back a loan that has come due in the amount of 900 platinum. Return this to me and I shall share with you my dark mission, and the immeasurable reward that will be earned at its completion. Show your face here without fulfilling my request and I will offer you on the altar to Innoruuk himself. Be off!");
   }
 }
 
 sub EVENT_ITEM {
-  if (($platinum >= 900) && plugin::check_handin(\%itemcount, 3141 => 1, 3145 => 1, 3140 => 1)) { #Platinum x 900, Darkforge Breastplate, Darkforge Greaves, Darkforge Helm
+  #:: Match Platinum x 900, a 3141 - Darkforge Breastplate, a 3145 - Darkforge Greaves and a 3140 - Darkforge Helm
+	if (plugin::takeItemsCoin(0,0,0,900,3141 => 1, 3145 => 1, 3140 => 1)) {
     quest::say("Well done, $name, I honestly didn't expect to see you again. Yes, yes, this is perfect! My mission is nearly complete!");
-    quest::faction(404,7); # Faction: Truespirit
-    $npc->AddItem(18099, 1);
+    #:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(404, 7);			#:: + Truespirit
+		#:: Add a 18099 - Letter to Duriek
+		$npc->AddItem(18099);
   }
-  plugin::return_items(\%itemcount);
+
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
-# Quest by mystic414
