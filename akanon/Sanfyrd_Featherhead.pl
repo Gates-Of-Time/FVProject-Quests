@@ -30,6 +30,13 @@ sub EVENT_SAY {
 	}
 }
 
+sub EVENT_COMBAT {
+	#:: Match combat state 1 - entered combat
+	if ($combat_state == 1) {
+		quest::say("Guards! Guards! Help me!");
+	}
+}
+
 sub EVENT_ITEM {
 	#:: Match four 13198 - Scrap Metal
 	if (plugin::takeItems(13198 => 4)) {
@@ -39,17 +46,38 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(255, 3); 		#:: + Gem Cutters
-		quest::faction(288, 3); 		#:: + Merchants of Ak'Anon
-		quest::faction(333, 3); 		#:: + King Ak'Anon
-		quest::faction(238, -3); 		#:: - Dark Reflection
-		quest::faction(1604, -3); 		#:: - Clan Grikbar
+		quest::faction(255, 5); 		#:: + Gem Cutters
+		quest::faction(288, 1); 		#:: + Merchants of Ak'Anon
+		quest::faction(333, 1); 		#:: + King Ak'Anon
+		quest::faction(238, -1); 		#:: - Dark Reflection
+		quest::faction(1604, -1); 		#:: - Clan Grikbar
 		#:: Grant a moderate amount of experience
 		quest::exp(1000);
 		#:: Create a hash for storing cash - 1100 to 1200cp
 		my %cash = plugin::RandomCash(1100,1200);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+	}
+	#:: Match three 13198 - Scrap Metal
+	elsif (plugin::takeItems(13198 => 3)) {
+		quest::say("I now require all deliveries of Scrap Metal to be in loads of four.");
+		#:: Give three 13198 - Scrap Metal
+		quest::summonitem(13198);
+		quest::summonitem(13198);
+		quest::summonitem(13198);
+	}
+	#:: Match two 13198 - Scrap Metal
+	elsif (plugin::takeItems(13198 => 2)) {
+		quest::say("I now require all deliveries of Scrap Metal to be in loads of four.");
+		#:: Give two 13198 - Scrap Metal
+		quest::summonitem(13198);
+		quest::summonitem(13198);
+	}
+	#:: Match a 13198 - Scrap Metal
+	elsif (plugin::takeItems(13198 => 1)) {
+		quest::say("I now require all deliveries of Scrap Metal to be in loads of four.");
+		#:: Give a 13198 - Scrap Metal
+		quest::summonitem(13198);
 	}
 #::	#:: Turn in for the Aid Fimli Quest (POP) Bundle of Super Conductive Wires, Gold Tipped Boar Horn, Shard of Pure Energy, Silicorrosive Grease
 #::	elsif (plugin::takeItems(9426 => 1, 28618 => 1, 29906 =>1, 28165 +>1)) {
@@ -67,11 +95,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(255, 3); 		#:: + Gem Cutters
-		quest::faction(288, 3); 		#:: + Merchants of Ak'Anon
-		quest::faction(333, 3); 		#:: + King Ak'Anon
-		quest::faction(238, -3); 		#:: - Dark Reflection
-		quest::faction(1604, -3); 		#:: - Clan Grikbar
+		quest::faction(255, 1); 		#:: + Gem Cutters
+		quest::faction(288, 1); 		#:: + Merchants of Ak'Anon
+		quest::faction(333, 1); 		#:: + King Ak'Anon
+		quest::faction(238, -1); 		#:: - Dark Reflection
+		quest::faction(1604, -1); 		#:: - Clan Grikbar
 		#:: Grant a moderate amount of experience
 		quest::exp(1000);
 		#:: Create a hash for storing cash - 1100 to 1200cp
@@ -87,11 +115,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(255, 3); 		#:: + Gem Cutters
-		quest::faction(288, 3); 		#:: + Merchants of Ak'Anon
-		quest::faction(333, 3); 		#:: + King Ak'Anon
-		quest::faction(238, -3); 		#:: - Dark Reflection
-		quest::faction(1604, -3); 		#:: - Clan Grikbar
+		quest::faction(255, 10); 		#:: + Gem Cutters
+		quest::faction(288, 2); 		#:: + Merchants of Ak'Anon
+		quest::faction(333, 2); 		#:: + King Ak'Anon
+		quest::faction(238, -2); 		#:: - Dark Reflection
+		quest::faction(1604, -1); 		#:: - Clan Grikbar
 		#:: Grant a moderate amount of experience
 		quest::exp(1000);
 		#:: Create a hash for storing cash - 1100 to 1200cp
@@ -107,11 +135,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(255, 3); 		#:: + Gem Cutters
-		quest::faction(288, 3); 		#:: + Merchants of Ak'Anon
-		quest::faction(333, 3); 		#:: + King Ak'Anon
-		quest::faction(238, -3); 		#:: - Dark Reflection
-		quest::faction(1604, -3); 		#:: - Clan Grikbar
+		quest::faction(255, 1); 		#:: + Gem Cutters
+		quest::faction(288, 1); 		#:: + Merchants of Ak'Anon
+		quest::faction(333, 1); 		#:: + King Ak'Anon
+		quest::faction(238, -1); 		#:: - Dark Reflection
+		quest::faction(1604, -1); 		#:: - Clan Grikbar
 		#:: Grant a moderate amount of experience
 		quest::exp(1000);
 		#:: Create a hash for storing cash - 1100 to 1200cp
@@ -119,6 +147,22 @@ sub EVENT_ITEM {
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
+	#:: Match a 13216 - Scrap Metal
+	elsif (plugin::takeItems(13216 => 1)) {
+		quest::say("I hear there is one more on the loose. Find him and then I shall pay you.");
+		#:: Give a 13216 - Scrap Metal
+		quest::summonitem(13216);
+	}
+	#:: Match a 13217 - Scrap Metal
+	elsif (plugin::takeItems(13217 => 1)) {
+		quest::say("I hear there is one more on the loose. Find him and then I shall pay you.");
+		#:: Give a 13217 - Scrap Metal
+		quest::summonitem(13217);
+	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
+}
+
+sub EVENT_DEATH_COMPLETE {
+	quest::say("My comrades will avenge my death.");
 }
