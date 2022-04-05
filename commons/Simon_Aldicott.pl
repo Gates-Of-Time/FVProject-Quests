@@ -33,7 +33,7 @@ sub EVENT_ITEM {
 }
 
 sub EVENT_SIGNAL {
-	#:: Match a signal '1' from 
+	#:: Match a signal '1' from /commons/a_Tortured_Revenant.pl
 	if ($signal == 1) {
 		quest::say("Tis a sad thing. His soul was twisted to its current state somehow and he thought YOU were the foul Teir'Dal who destroyed him in the first place. But that is no matter..you have freed him to stand by Marrs side once more! Now, give me the ash so that I may finally put him to rest. In return for your valor I shall provide you with an ancient spell unknown to most Holy Knights of Marr.");
 	}
