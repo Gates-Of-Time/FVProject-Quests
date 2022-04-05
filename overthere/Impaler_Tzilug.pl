@@ -1,15 +1,15 @@
-# Test of Charm - enchanter epic - Enchanted Emerald
-# 
-# items: 10634, 10621
-
 sub EVENT_ITEM {
-  if (plugin::check_handin(\%itemcount, 10634 => 1)) {
-    quest::say("Your bidding has been done, now leave this land and never return.");
-    quest::exp(10000);
-    quest::summonitem(10621); # Item: Enchanted Emerald
-  }
-  plugin::return_items(\%itemcount);
+	#:: Match a 10634 - Dull Emerald
+	if (plugin::takeItems(10634 => 1) {
+		quest::say("Your bidding has been done, now leave this land and never return.");
+		#:: Give item 10621 - Enchanted Emerald
+		quest::summonitem(10621);
+		#:: Ding!
+		quest::ding();
+		#:: Grant a moderate amount of experience
+    	quest::exp(10000);
+	}
+
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
-
-# EOF Zone: overthere ID: 93149 NPC: Impaler_Tzilug
-

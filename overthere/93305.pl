@@ -1,5 +1,5 @@
-
 sub EVENT_SPAWN {
+	#:: Send a signal '2' to the indicated npc_type id without delay
 	quest::signalwith(93087,2); # NPC: General_V`Deers
 	quest::signalwith(93186,2); # NPC: #High_Priest_I`Xar
 	quest::signalwith(93124,2); # NPC: Dragoon_Barber_W`Selo
