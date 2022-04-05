@@ -18,8 +18,8 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match a 12942 - Strange Ochre Clay, 12945 - Crushed Diamonds, 12944 - Yun Shaman Powder and a 12943 - Greyish Bone Chips
-	elsif (plugin::takeItems(12942=>1, 12945 => 1, 12944 => 1, 12943 =>1)) {
-    quest::say("What's this? This is amazing - you collected them all! To think, the power that these items hold if properly used. Never mind that now, here, take the scroll. You've certainly earned it.");
+	if (plugin::takeItems(12942=>1, 12945 => 1, 12944 => 1, 12943 =>1)) {
+    		quest::say("What's this? This is amazing - you collected them all! To think, the power that these items hold if properly used. Never mind that now, here, take the scroll. You've certainly earned it.");
 		#:: Give a 12941 - Spell: Cannibalize II
 		quest::summonitem(12941);
 		#:: Ding!
@@ -27,6 +27,7 @@ sub EVENT_ITEM {
 		#:: Grant a large amount of experience
 		quest::exp(45000);
 	}
+	
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
