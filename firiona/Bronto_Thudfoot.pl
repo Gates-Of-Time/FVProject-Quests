@@ -31,7 +31,7 @@ sub EVENT_SIGNAL {
 	elsif ($signal == 2) {
 		quest::say("No way, Lenka! This place is too dangerous for this kid. Why don't you just stay here and drink it up with us? the Samson couldn't even brew bog juice right, but every once in a while a bashed-up explorer comes in carrying [Cabby Pale Ale].");
 	}
-	
+}	
 
 sub EVENT_ITEM {
 	#:: Return unused items
