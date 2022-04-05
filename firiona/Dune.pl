@@ -3,6 +3,12 @@ sub EVENT_SPAWN {
 	quest::settimer("follow", 10);
 }
 
+sub EVENT_SAY {
+	if ($text=~/hail/i) {
+		quest::emote("sniffs you and then begins to growl.");
+	}
+}
+
 sub EVENT_TIMER{
 	if ($timer eq "follow") {
 		#:: Create a scaler variable to store the npc_type ID of Firiona Vie >> Scout_Bowfist (84131)
