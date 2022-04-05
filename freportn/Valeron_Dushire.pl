@@ -28,21 +28,21 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/have all the bones/i) {
 		#:: Match a 6700 - Dusty Old Skull
-		if (plugin::check_hasitem($client, 6700) {
+		if (plugin::check_hasitem($client, 6700)) {
 			#:: Match a 6701 - Dusty Old Leg Bone
-			if (plugin::check_hasitem($client, 6701) {
+			if (plugin::check_hasitem($client, 6701)) {
 				#:: Match a 6702 - Dusty Old Jawbone
-				if (plugin::check_hasitem($client, 6702) {
+				if (plugin::check_hasitem($client, 6702)) {
 					#:: Match a 6703 - Dusty Old Finger Bones
-					if (plugin::check_hasitem($client, 6703) {
+					if (plugin::check_hasitem($client, 6703)) {
 						#:: Match a 6704 - Dusty Old Backbone
-						if (plugin::check_hasitem($client, 6704) {
+						if (plugin::check_hasitem($client, 6704)) {
 							#:: Match a 6705 - Dusty Ribcage
-							if (plugin::check_hasitem($client, 6705) {
+							if (plugin::check_hasitem($client, 6705)) {
 								#:: Match a 6706 - Dusty Broken Shield
-								if (plugin::check_hasitem($client, 6706) {
+								if (plugin::check_hasitem($client, 6706)) {
 									#:: Match a 6707 - Dusty Broken Sword
-									if (plugin::check_hasitem($client, 6707) {
+									if (plugin::check_hasitem($client, 6707)) {
 										quest::say("Excellent! You are indeed worthy to bear the title of Holy Knight! Now, about the coffin. I have spoken with Ping Fuzzlecutter, outside the western gates. Ask him about the coffin and once it is made, bring it to Simon Aldicott of Marr. I shall have Simon meet you by the lake in the Commonlands after Ping gives you the coffin.");
 									}
 								}
