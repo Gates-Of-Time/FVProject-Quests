@@ -17,7 +17,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {  
 	#:: Match a 12950 - Trunk of Missing Tomes
-	if (plugin::takeItems(55001 => 1) {
+	if (plugin::takeItems(55001 => 1)) {
     	quest::emote("looks a bit better now, having cleaned most of the sand from his body and drying off a bit.");
 		quest::say("I hope you made those pirate scum pay with their lives! When I get back to Neriak, I assure you that my first priority will be planning my revenge. You're lucky, this item washed up on shore from the wreckage of my ship. You can have it. Farewell.");
 		#:: Give a 55025 - Glowing Fluorite Stone Necklace
