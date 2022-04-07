@@ -98,6 +98,30 @@ sub EVENT_ITEM {
 			quest::set_data($key, 2);
 		}
 	}
+	#:: Match a 12721 - Morgl Skull
+	elsif (plugin::takeItems(12721 => 1)) {
+		quest::say("In my hand shall be placed three skulls of the Trilac Brotherhood and an iron cudgel of the petitioner.");
+		#:: Give a 12721 - Morgl Skull
+		quest::summonitem(12721);
+	}
+	#:: Match a 12722 - Logrin Skull
+	elsif (plugin::takeItems(12722 => 1)) {
+		quest::say("In my hand shall be placed three skulls of the Trilac Brotherhood and an iron cudgel of the petitioner.");
+		#:: Give a 12722 - Logrin Skull
+		quest::summonitem(12722);
+	}
+	#:: Match a 12723 - Waz Skull
+	elsif (plugin::takeItems(12723 => 1)) {
+		quest::say("In my hand shall be placed three skulls of the Trilac Brotherhood and an iron cudgel of the petitioner.");
+		#:: Give a 12723 - Waz Skull
+		quest::summonitem(12723);
+	}
+	#:: Match a 5140 - Iron Cudgel of the Petitioner
+	elsif (plugin::takeItems(5140 => 1)) {
+		quest::say("In my hand shall be placed three skulls of the Trilac Brotherhood and an iron cudgel of the petitioner.");
+		#:: Give a 5140 - Iron Cudgel of the Petitioner
+		quest::summonitem(5140);
+	}
 	#:: Match a 12724 - Skull with I, a 12725 - Skull with II, and a 5141 - Iron Cudgel of the Clairvoyant
 	elsif (plugin::takeItems(12724 => 1, 12725 => 1, 5141 => 1)) {
 		#:: Key up a data bucket
