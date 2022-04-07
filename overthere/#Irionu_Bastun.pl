@@ -1,18 +1,20 @@
 $key = $name . "-" . "beast_epic";
 
 sub EVENT_SAY {
-  if (quest::get_data($key) == 3) {
-    if ($text=~/lands/i) {
+  if ($text=~/lands/i) {
+    if (quest::get_data($key) == 3) {
       quest::say("I've been studying the rhinocerosss asss well asss other things I cannot discusss, but my life is about our kind and the power of our warders. This gray beast here isss so incredibly fierce and surprisingly agile for its size. I have been able to use the waysss of ferociousss beastsss in some of my conjuresss that you may have heard of hm? Endless things to learn about wild beastsss. Enough slithering of the tongue, I shall [read] thisss note now.");
     }
-    elsif ($text=~/read/i) {
+  }
+  elsif ($text=~/read/i) {
+    if (quest::get_data($key) == 3) {
       quest::say("I must go. That letter bringsss troubling newsss. I must hurry asss I now have another task I must persue urgently. I marked that letter for Muada for you. Do not lose it.");
       #:: Give a 57008 - Letter from Muada
       quest::summonitem(57008);
     }  
   }
-  elsif (quest::get_data($key) == 8) {
-    if ($text=~/track down/i) {
+  elsif ($text=~/track down/i) {
+    if (quest::get_data($key) == 8) {
       quest::say("I'm afraid that all I can tell you isss that it isss most thought of as an easily tamed creature, but now it hasss been twisted and frayed into a strange and terrible beast. Though it isss a common beast, trace it to its originsss -- where it wasss born. This one hasss been untouched by any who would tame it. It wasss once prized -- I can sense that. Extraordinary creature. Should you discover the beast, you may need to end itsss mortal existence. Return to me with what you learn. Be quick.");
     }
   }

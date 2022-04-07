@@ -1,6 +1,6 @@
 sub EVENT_ITEM {
 	#:: Match a 10634 - Dull Emerald
-	if (plugin::takeItems(10634 => 1) {
+	if (plugin::takeItems(10634 => 1)) {
 		quest::say("Your bidding has been done, now leave this land and never return.");
 		#:: Give item 10621 - Enchanted Emerald
 		quest::summonitem(10621);

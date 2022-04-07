@@ -28,7 +28,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
      #:: Match a 48044 - Child of Charasis Remains and a 4267 - Necromancer Skullcap
-     if (plugin::takeItems(48044 => 1, 4267 => 1) {
+     if (plugin::takeItems(48044 => 1, 4267 => 1)) {
           quest::say("I see now that I lack the skill necessary to control the Dark Arts. Maybe it would be wiser to allow another such as yourself to continue forward. Please accept this token as a reward in your mastering of the Dark Arts.");
           #:: Give item 48043 - Demi Lich Skullcap
           quest::summonitem(48043);
@@ -38,7 +38,7 @@ sub EVENT_ITEM {
           quest::exp(20000);
      }
      #:: Match a 4267 - Necromancer Skullcap
-     elsif (plugin::takeItems(4267 => 1) {
+     elsif (plugin::takeItems(4267 => 1)) {
           quest::say("Oh, I see you are truly gifted in the dark arts. Well I will explain my dilemma to you now if you [wish to hear].");
           #:: Give item 4267 - Necromancer Skullcap
           quest::summonitem(4267);
@@ -46,7 +46,7 @@ sub EVENT_ITEM {
           quest::set_data($key, 1);
      }
      #:: Match a 48042 - Ixpacan's Tome
-     elsif (plugin::takeItems(48042 => 1) {
+     elsif (plugin::takeItems(48042 => 1)) {
           quest::say("Wonderful! You have brought all of the items I have asked for. Your future seems very bright with the rest of the Sages. Step back now as I conjure the child of Charasis.");
           quest::emote("As Ixpacan starts his incantations, you can see an image begin to appear from the shadows.");
 	     #:: Spawn Overthere >> child_of_Charasis (93189)
