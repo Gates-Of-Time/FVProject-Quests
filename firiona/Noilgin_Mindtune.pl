@@ -1,7 +1,7 @@
 sub EVENT_SAY {
-  if ($text=~/hail/i) {
-    quest::say("Hello there, $name! I hope you are enjoying your visit to the outpost. I know I sure am.");
-  }
+	if ($text=~/hail/i) {
+		quest::say("Hello there, $name! I hope you are enjoying your visit to the outpost. I know I sure am.");
+	}
 }
 
 sub EVENT_ITEM {
@@ -12,8 +12,7 @@ sub EVENT_ITEM {
 		quest::summonitem(6069);
 		#:: Ding!
 		quest::ding();
-  }
-  
+	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
