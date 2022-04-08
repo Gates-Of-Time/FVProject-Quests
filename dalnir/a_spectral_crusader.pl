@@ -12,3 +12,8 @@ sub EVENT_SAY {
 		quest::emote("points to the ground. 'Beyond the doors lies a forge unlike any other.'");
 	}
 }
+
+sub EVENT_ITEM {
+	#:: Return unused items
+	plugin::returnUnusedItems();
+}
