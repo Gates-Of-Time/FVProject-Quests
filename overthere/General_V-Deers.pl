@@ -25,7 +25,7 @@ sub EVENT_TIMER {
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
-	if ($wp==1) {
+	if ($wp == 1) {
 		quest::say("Forward.. march!!  Your left.. Your.. left, right, march!  Eighty.. second.. dragoon soldier!!  Pick up your weapon and follow me!!");
 		#:: Send a signal '1' to the indicated NPC with no delay
 		quest::signalwith(93186, 1, 0);		#:: #High_Priest_I`Xar
