@@ -20,7 +20,7 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {	  
-	#:: Match a 10027 - Onyx, a 10028 - Peridot and a 10021 - Star Rose Quartz
+	#:: Match a 10027 - Onyx, a 10028 - Peridot, and a 10021 - Star Rose Quartz
 	if (plugin::takeItems(10027 => 1, 10028 => 1, 10021 => 1)) {
 		quest::say("This bottle is for the one called Hampton. If you look well, you can see his name.");
 		quest::say("This bottle is for Mardon. You may be able to identify his name upon it.");
@@ -29,6 +29,30 @@ sub EVENT_ITEM {
 		quest::summonitem(12962);
     		#:: Give item 12963 - Ornate Bottle (Mardon)
 		quest::summonitem(12963);
+    		#:: Give item 12964 - Ornate Bottle (Ryla)
+		quest::summonitem(12964);
+		#:: Ding!
+		quest::ding();
+	}
+	#:: Match a 10027 - Onyx
+	elsif (plugin::takeItems(10027 => 1)) {
+		quest::say("This bottle is for the one called Hampton. If you look well, you can see his name.");
+    		#:: Give item 12962 - Ornate Bottle (Hampton)
+		quest::summonitem(12962);
+		#:: Ding!
+		quest::ding();
+	}
+	#:: Match a 10028 - Peridot
+	elsif (plugin::takeItems(10028 => 1)) {
+		quest::say("This bottle is for Mardon. You may be able to identify his name upon it.");
+    		#:: Give item 12963 - Ornate Bottle (Mardon)
+		quest::summonitem(12963);
+		#:: Ding!
+		quest::ding();
+	}
+	#:: Match a 10021 - Star Rose Quartz
+	elsif (plugin::takeItems(10021 => 1)) {
+		quest::say("Identify this when the time comes. It is Ryla's prison.");
     		#:: Give item 12964 - Ornate Bottle (Ryla)
 		quest::summonitem(12964);
 		#:: Ding!
