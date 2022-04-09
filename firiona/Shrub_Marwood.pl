@@ -7,7 +7,7 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/fertile crop/i) {
 		#:: Match a 12953 - Dark Oak Shillelagh
-		if (plugin::check_hasitem($client, 12953) {
+		if (plugin::check_hasitem($client, 12953)) {
 			quest::say("Looking to get hold of my family druid spell, ehh? It doesn't come without a price. Lucky for you all I need is for you to run a small errand for me. Go fetch me a Sarnak farsight crystal, some Sarnak nightdust, some strathebone heal silk and some powder of Tsu. Do that and I will give you a copy of my family secret.");
 		}
 	}
