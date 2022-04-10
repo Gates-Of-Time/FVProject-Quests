@@ -115,6 +115,10 @@ sub EVENT_CONNECT {
 	}
 }
 
+sub EVENT_WARP {
+	quest::unique_spawn(927, 0, 0, $x, $y, $Z);
+}
+
 sub ConvertIP {
 	my $longip = $_[0];
 	$firstoctet = $longip % 256;
