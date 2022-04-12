@@ -1,4 +1,3 @@
-# items: 62098, 62099, 62205
 sub EVENT_SAY {
   if ($text=~/hail/i) {#need correct text
     quest::say("Hello traveler.  Now that I have been freed, I seek [revenge] on those who help me captive, but I am yet to weak to do it myself, so I will need your help.");
@@ -9,8 +8,15 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-  if (plugin::check_handin(\%itemcount, 62098 => 3, 62099 =>1)) {
+	#:: Match a 62098 - Fetish of Ice Mastery and a 62099 - Cialin's Ice Staff
+	if (plugin::takeItems(62098 => 3, 62099 =>1)) {
     quest::say("Thank you for helping me to gain my revenge.  May this help you on your way.");
-    quest::summonitem(62205); # Item: Sacred Mantle of Stone
+    #:: Give a 62205 - Sacred Mantle of Stone
+		quest::summonitem(62205);
+		#:: Ding!
+		quest::ding();
   }
+	
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
