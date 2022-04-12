@@ -41,6 +41,7 @@ sub EVENT_ITEM {
 		quest::say("Are you daft? How can I reconstruct the medallion of the Kylong without all three pieces?!");
 		quest::summonitem(19964);
 	}
+
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
