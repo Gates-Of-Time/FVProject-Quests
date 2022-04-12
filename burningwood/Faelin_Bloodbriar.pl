@@ -15,8 +15,8 @@ sub EVENT_ITEM {
 			quest::summonitem(20487);
 			#:: Ding!
 			quest::ding();
-				#:: Grant a huge amount of experience
-				quest::exp(1000000);
+			#:: Grant a huge amount of experience
+			quest::exp(1000000);
 		}
 	}
 	
