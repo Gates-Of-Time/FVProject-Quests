@@ -1,3 +1,6 @@
+#:: Data bucket to verify quest has been started appropriately
+$key = $client->CharacterID() . "-warrior-pike-6";
+
 sub EVENT_SPAWN {
 	#:: Create a proximity, 100 units across, 100 units tall, without proximity say
 	quest::set_proximity($x - 50, $x + 50, $y - 50, $y + 50, $z - 50, $z + 50, 0);
@@ -52,7 +55,33 @@ sub EVENT_SAY {
 			if (plugin::check_hasitem($client, 5131)) { 
 				quest::say("Yes. You need to know the weapons required. Fill the pack with javelins. Froglok bounder and goblin hunter javelins. Two of each.");
 				#:: Give a 17027 - Footmans Pack
-				quest::summonitem(17027 );
+				quest::summonitem(17027);
+			}
+		}
+		elsif ($text=~/true warrior of the legion/i) {
+			#:: Match a 5135 - Legionnaire's Mancatcher
+			if (plugin::check_hasitem($client, 5135)) { 
+				quest::say("If you are you will have proof; else you will have the wrath of the Legion upon you for such a claim.");
+			}
+		}
+		elsif ($text=~/done/i) {
+			#:: Match if the key value is 1
+			if (quest::get_data($key) == 1) { 
+				quest::say("It seems as though there is an uprising starting to brew and the War Baron would like a [legionnaire] to handle the situation.");
+			}
+		}
+		elsif ($text=~/legionnaire/i) {
+			#:: Match if the key value is 1
+			if (quest::get_data($key) == 1) { 
+				quest::say("Yes you are. I see you are willing to possibly sacrifice yourself for the cause. That is good. Take this container and hunt down their messengers. They are the ones that relay battle plans to the different tribes. Their combined messages will reveal the master plan. Go now and do not return until you have them all.");
+				#:: Give a 48002 - Book of Bindings
+				quest::summonitem(48002);
+			}
+		}
+		elsif ($text=~/before this issue is over/i) {
+			#:: Match if the key value is 2
+			if (quest::get_data($key) == 2) { 
+				quest::say("Do not concern yourself for now. Rejoice instead and seek out Weaponsmith Grugl to guide you in forging your new weapon. I must speak to War Baron Eator regarding the welfare of Cabilis now.");
 			}
 		}
 	}
@@ -143,6 +172,34 @@ sub EVENT_ITEM {
 		my %cash = plugin::RandomCash(100, 200);
 		#:: Grant a random cash reward
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+	}
+	#:: Match a 5135 - Legionnaire's Mancatcher
+	elsif (plugin::takeItems(5135 => 1)) {
+		quest::say("Ah, I have heard much of your deeds as of late $name, but there is still much to be [done].");
+		#:: Ding!
+		quest::ding();
+			#:: Set a data bucket to a value of "1"
+		quest::set_data($key, 1);
+	}
+	#:: Match a 48006 - Illegible Message (A message that somehow seems important)
+	elsif (plugin::takeItems(48006 => 1)) {
+		if(quest::get_data($key) == 1) {
+			quest::say("Hmm. . . even if the writing wasn't as smudged as it is, I still would not be able to decipher the hidden message. You must now take this and find someone with the ability to read it. I hear there is such a person on patrol but I cannot recall where.");
+			#:: Give a 48006 - Illegible Message (A message that somehow seems important)
+			quest::summonitem(48006);
+			#:: Ding!
+			quest::ding();
+		}
+	}
+	#:: Match a 14144 - Sealed Note
+	elsif (plugin::takeItems(14144 => 1)) {
+		quest::say("I see you have returned in one piece. That is good. You have shown that you are a true warrior of the Legion indeed! Take this, and show that you are more than a legionnaire. I fear we may need just that [before this issue is over].");
+		#:: Give a 48009 - Champion Crown Plans
+		quest::summonitem(48009);
+		#:: Ding!
+		quest::ding();
+			#:: Set a data bucket to a value of "2"
+		quest::set_data($key, quest::get_data($key) + 1);
 	}
 #::	elsif (plugin::check_handin(\%itemcount, 5135 =>1 )) {
 #::		quest::say("Ah, I have heard much of your deeds as of late $name, but there is still much to be [done].");
