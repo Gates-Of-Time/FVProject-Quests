@@ -191,8 +191,8 @@ sub EVENT_ITEM {
 			quest::ding();
 		}
 	}
-	#:: Match a 14144 - Sealed Note
-	elsif (plugin::takeItems(14144 => 1)) {
+	#:: Match a 48008 - Sealed Message
+	elsif (plugin::takeItems(48008 => 1)) {
 		quest::say("I see you have returned in one piece. That is good. You have shown that you are a true warrior of the Legion indeed! Take this, and show that you are more than a legionnaire. I fear we may need just that [before this issue is over].");
 		#:: Give a 48009 - Champion Crown Plans
 		quest::summonitem(48009);
@@ -201,18 +201,8 @@ sub EVENT_ITEM {
 			#:: Set a data bucket to a value of "2"
 		quest::set_data($key, quest::get_data($key) + 1);
 	}
-#::	elsif (plugin::check_handin(\%itemcount, 5135 =>1 )) {
-#::		quest::say("Ah, I have heard much of your deeds as of late $name, but there is still much to be [done].");
-#::	}
-#::	elsif (plugin::check_handin(\%itemcount, 48006 =>1 )) {
-#::		quest::say("Hmm. . . even if the writing wasn't as smudged as it is, I still would not be able to decipher the hidden message. You must now take this and find someone with the ability to read it. I hear there is such a person on patrol but I cannot recall where.");
-#::		quest::summonitem(48006); # Item: Illegible Message
-#::	}
-#::	elsif (plugin::check_handin(\%itemcount, 48008 =>1 )) {
-#::		quest::say("I see you have returned in one piece. That is good. You have shown that you are a true warrior of the Legion indeed! Take this, and show that you are more than a legionnaire. I fear we may need just that [before this issue is over].");
-#::		quest::summonitem(48009); # Item: Champion Crown Plans
-#::	}
-#::	plugin::try_tome_handins(\%itemcount, $class, 'Warrior');
+	
+	#::	plugin::try_tome_handins(\%itemcount, $class, 'Warrior');
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }

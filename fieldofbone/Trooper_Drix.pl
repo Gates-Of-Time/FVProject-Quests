@@ -35,8 +35,8 @@ sub EVENT_ITEM {
 		quest::say("Let me see now.");
 		quest::emote("uses the mixture you brought him and spreads it evenly across your document. It settles into all the wrinkles and with the speed of a Master, Trooper Drix uses the sarnak braid to seal the pieces as one.");
 		quest::say("Take this sealed note back to whoever you need to. I dare not say what it reads out loud.");
-		#:: Give a 14144 - Sealed Note
-		quest::summonitem(14144);
+		#:: Give a 48008 - Sealed Message
+		quest::summonitem(48008);
 		#:: Ding!
 		quest::ding();
 	}
