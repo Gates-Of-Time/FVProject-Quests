@@ -12,7 +12,12 @@ sub EVENT_ENTER {
 
 sub EVENT_SAY { 
 	if ($text=~/hail/i) {
-		quest::say("I am a Drill Master of the Legion of Cabilis.  I have no time for idle chitchat.  Be off if you were not summoned to this fortress!  Find that guild which was chosen for you as an egg.");
+		#:: Match a 5131 - Militia's Pike
+		if (plugin::check_hasitem($client, 5131)) { 
+			quest::say("Welcome. Welcome!! Time to train. Time to fight. Time to serve the Iksar Empire. You will need weapons. I have the [footman pike] for all new recruits to earn.");
+		} else {
+			quest::say("I am a Drill Master of the Legion of Cabilis.  I have no time for idle chitchat.  Be off if you were not summoned to this fortress!  Find that guild which was chosen for you as an egg.");
+		}
 	}
 	#:: Match if faction is amiable or better
 	if ($faction <= 4) {
@@ -29,6 +34,26 @@ sub EVENT_SAY {
 			quest::say("Then take this satchel and go to the outer walls of Cabilis and seek out large scorpions. When you can fill and combine the satchel with scorpion pincers, then you shall prove to me that you are truly a warrior and I shall send you off on your true test.");
 			#:: Give a 17993 - Pincer Satchel
 			quest::summonitem(17993);
+		}
+		elsif ($text=~/footman pike/i) {
+			#:: Match a 5131 - Militia's Pike
+			if (plugin::check_hasitem($client, 5131)) { 
+				quest::say("A footman pike is what you need. A footman pike is what you get, but earn it you will. You must [slay many beasts] to prove to us that you are a true warrior. Fail and you will be exiled to live with the Forsaken.");
+			}
+		}
+		elsif ($text=~/slay many beasts/i) {
+			#:: Match a 5131 - Militia's Pike
+			if (plugin::check_hasitem($client, 5131)) { 
+				quest::say("Yes. You will slay or you will be slain. Take this footman's pack and fill it you will. Fill it with [weapons of our foes]. When all are combined, the full footman's pack shall be returned to me along with your militia pike. Do this and earn your footman pike and then we may have a true mission for you.");
+			}
+		}
+		elsif ($text=~/weapons of our foes/i) {
+			#:: Match a 5131 - Militia's Pike
+			if (plugin::check_hasitem($client, 5131)) { 
+				quest::say("Yes. You need to know the weapons required. Fill the pack with javelins. Froglok bounder and goblin hunter javelins. Two of each.");
+				#:: Give a 17027 - Footmans Pack
+				quest::summonitem(17027 );
+			}
 		}
 	}
 	else {
@@ -82,6 +107,22 @@ sub EVENT_ITEM {
 		quest::faction(444, 2); 	#:: + Swift Tails
 		#:: Grant a small amount of experience
 		quest::exp(200);
+	}
+	#:: Match a 12430 - Full Footman's Pack and a 5131 - Militia's Pike
+	elsif (plugin::takeItems(12430  => 1, 5131 => 1 )) {
+		quest::say("Kyg knew you could do it. You will make a fine legionnaire some day but, for now, you shall be a footman. Take the footman pike head plans. Forge the footman's pike. Do so, and then you may have an audience with the War Baron on the subject of his [Memory of Sebilis].");
+		#:: Give a 12475 - Footman Head Plans
+		quest::summonitem(12475);
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction(441, 10); 	#:: + Legion of Cabilis
+		quest::faction(440, 2);		#:: + Cabilis Residents
+		quest::faction(445, 2);		#:: + Scaled Mystics
+		quest::faction(442, 2);		#:: + Crusaders of Greenmist
+		quest::faction(444, 2); 	#:: + Swift Tails
+		#:: Grant a small amount of experience
+		quest::exp(300);
 	}
 	#:: Match a 12658 - Full Pincer Satchel
 	elsif (plugin::takeItems(12658 =>1 )) {
