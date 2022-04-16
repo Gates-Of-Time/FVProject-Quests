@@ -14,23 +14,33 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-  if (plugin::check_handin(\%itemcount, 18464 => 1, 22919 => 1)){
+	#:: Match a 18464 - Dark Grey Tome and a 22919 - Sarnak Hide
+  if (plugin::takeItems(18464 => 1, 22919 => 1)){
     quest::emote("smiles at your dedication to Cazic Thule and hands you a small gem.");
-    quest::summonitem(7881); # Item: Mark of Clarity
+    #:: Give a 7881 - Mark of Clarity
+		quest::summonitem(7881);
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+    quest::faction(444,20); #:: + Swift Tails
+    quest::faction(441,10); #:: + Legion of Cabilis
+		#:: Grant a medium amount of experience
     quest::exp(20000);
-    quest::ding();
-    quest::faction(444,20); # Faction: Swift Tails
-    quest::faction(441,10); # Faction: Legion of Cabilis
   }
-  if (plugin::check_handin(\%itemcount, 18463 => 1, 22918 => 1)){
+	#:: Match a 18463 - Light Black Tome and a 22918 - Chokidai Scale
+  elsif (plugin::takeItems(18463 => 1, 22918 => 1)){
     quest::emote("smiles at your dedication to Cazic Thule and hands you a small gem.");
-    quest::summonitem(7881); # Item: Mark of Clarity
+    #:: Give a 7881 - Mark of Clarity
+		quest::summonitem(7881);
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+    quest::faction(444,20); #:: + Swift Tails
+    quest::faction(441,10); #:: + Legion of Cabilis
+		#:: Grant a medium amount of experience
     quest::exp(20000);
-    quest::ding();
-    quest::faction(444,20); # Faction: Swift Tails
-    quest::faction(441,10); # Faction: Legion of Cabilis
   }
-	#:: Match a 12899 - Emerald (The Gardens of Sebilis), a 12898 - Sapphire (), a 12896 - Ruby (The Blood of Sebilis) and a 5131 - Militia's Pike
+	#:: Match a 12899 - Emerald (The Gardens of Sebilis), a 12898 - Sapphire (The Pools of Sebilis), a 12896 - Ruby (The Blood of Sebilis) and a 5131 - Militia's Pike
 	elsif (plugin::takeItems(12899 => 1, 12898 => 1, 12896 => 1, 5132 => 1)) {
     quest::emote("gulps down a wad of phlegm.");
     quest::say("My memory has returned! Boneripper! You are no footman. I grant you the rank of soldier. Go and forge your weapon. Do not return to me until you become a [brave trooper of the empire].");
@@ -48,19 +58,25 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
     quest::exp(800);
   }
-  if (plugin::check_handin(\%itemcount, 18073 => 1, 18072 => 1, 18074 => 1, 5134 => 1)) {
-   quest::emote("takes away your pike and hands you plans not for a pike head, but for the crown of another polearm.");
-   quest::say("It is time to wield the weapon of a [true warrior of the legion]. You have done well, Legionnaire $name!");
-   quest::summonitem(12478); # Item: Legionnaire Crown Plans
-   quest::faction( 440,2); # Faction: Cabilis Residents
-   quest::faction( 441,2); # Faction: Legion of Cabilis
-   quest::faction( 445,2); # Faction: Scaled Mystics
-   quest::faction( 444,2); # Faction: Swift Tails
-   quest::faction( 442,2); # Faction: Crusaders of Greenmist
-   quest::ding();
-   quest::exp(4000);
+	#:: Match a 18073 - Legionnaire Recommendation (Swamp Garrison), a 18072 - Legionnaire Recommendation (Woods Garrison), a 18074 - Legionnaire Recommendation (Lake Garrison) and a 5134 - Trooper's Pike
+	elsif (plugin::takeItems(18073 => 1, 18072 => 1, 18074 => 1, 5134 => 1)) {
+		quest::emote("takes away your pike and hands you plans not for a pike head, but for the crown of another polearm. 'It is time to wield the weapon of a [true warrior of the legion]. You have done well, Legionnaire $name!'");
+		#:: Give a 12478 - Legionnaire Crown Plans
+		quest::summonitem(12478);
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+		quest::faction( 440,2); #:: + Cabilis Residents
+		quest::faction( 441,2); #:: + Legion of Cabilis
+		quest::faction( 445,2); #:: + Scaled Mystics
+		quest::faction( 444,2); #:: + Swift Tails
+		quest::faction( 442,2); #:: + Crusaders of Greenmist
+		#:: Grant a small amount of experience
+		quest::exp(4000);
   }
   #do all other handins first with plugin, then let it do disciplines
   plugin::try_tome_handins(\%itemcount, $class, 'Warrior');
-  plugin::return_items(\%itemcount);
+
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
