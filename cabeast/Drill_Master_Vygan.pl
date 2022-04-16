@@ -88,20 +88,6 @@ sub EVENT_SAY {
 	else {
 		quest::say("No Iksar resident will have anything to do with you!");
 	}
-#::	elsif ($text=~/true warrior of the legion/i) {
-#::		quest::say("If you are you will have proof; else you will have the wrath of the Legion upon you for such a claim.");
-#::	}
-#::	elsif ($text=~/done/i) {
-#::		quest::say("It seems as though there is an uprising starting to brew and the War Baron would like a [legionnaire] to handle the situation.");
-#::	}
-#::	elsif ($text=~/legionnaire/i) {
-#::		quest::say("Yes you are. I see you are willing to possibly sacrifice yourself for the cause. That is good. Take this container and hunt down their messengers. They are the ones that relay battle plans to the different tribes. Their combined messages will reveal the master plan. Go now and do not return until you have them all.");
-#::		#:: Give a 48002 - Book of Bindings
-#::		quest::summonitem(48002);
-#::	}
-#::	elsif ($text=~/issue is over/i) {
-#::		quest::say("Do not concern yourself for now. Rejoice instead and seek out Weaponsmith Grugl to guide you in forging your new weapon. I must speak to War Baron Eator regarding the welfare of Cabilis now.");
-#::	}
 }
 
 sub EVENT_ITEM {
