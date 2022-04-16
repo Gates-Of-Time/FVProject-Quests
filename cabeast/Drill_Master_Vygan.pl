@@ -93,7 +93,7 @@ sub EVENT_ITEM {
 		quest::exp(100);
 	}
 	#:: Match a 12675 - Froglok Escort Fife, a 12677 - Iksar Head, and a 5130 - Partisan's Pike
-	elsif (plugin::takeItems(12675 => 1, 12677 => 1, 5130 => 1 )) {
+	elsif (plugin::takeItems(12675 => 1, 12677 => 1, 5130 => 1)) {
 		quest::say("You have perfomed just as expected. I bestow upon you the rank of militiaman. Here is your new pike. Past this, you shall require the [geozite tool] to upgrade your future pikes and mancatchers. We see much promise in you, militiaman. Go forth to serve the realm.");
 		#:: Give a 5131 - Militia's Pike
 		quest::summonitem(5131);
@@ -109,7 +109,7 @@ sub EVENT_ITEM {
 		quest::exp(200);
 	}
 	#:: Match a 12430 - Full Footman's Pack and a 5131 - Militia's Pike
-	elsif (plugin::takeItems(12430  => 1, 5131 => 1 )) {
+	elsif (plugin::takeItems(12430  => 1, 5131 => 1)) {
 		quest::say("Kyg knew you could do it. You will make a fine legionnaire some day but, for now, you shall be a footman. Take the footman pike head plans. Forge the footman's pike. Do so, and then you may have an audience with the War Baron on the subject of his [Memory of Sebilis].");
 		#:: Give a 12475 - Footman Head Plans
 		quest::summonitem(12475);
@@ -125,7 +125,7 @@ sub EVENT_ITEM {
 		quest::exp(300);
 	}
 	#:: Match a 12658 - Full Pincer Satchel
-	elsif (plugin::takeItems(12658 =>1 )) {
+	elsif (plugin::takeItems(12658 =>1)) {
 		quest::say("You are a true warrior of Cabilis. You obviously are aware that in order to upgrade your pike you shall need a [geozite tool]. Take this note to the Lord of the outer gates. He desires a young warrior for a small task. Do this and he is instructed to reward you with the tool.");
 		#:: Give a random reward:  18213 - Note to Iksar Lord, 18211 - Note to Iksar Lord, 18210 - Note to Iksar Lord
 		quest::summonitem(quest::ChooseRandom(18213, 18211, 18210));
