@@ -39,6 +39,9 @@ sub EVENT_ENTERZONE {
 		quest::playertexture(1);
 		quest::playerfeature("helm", 1);
 	}
+	if ($name eq "Eru") {
+		quest::playerrace(118);
+	}
 }
 
 sub EVENT_CONNECT {
