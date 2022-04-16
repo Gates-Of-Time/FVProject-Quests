@@ -36,7 +36,7 @@ sub EVENT_ITEM {
 		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 	}
 	#:: Match a 12913 - Four Crushed Shields
-	elsif (plugin::takeItems(12913 => )) {
+	elsif (plugin::takeItems(12913 => 1)) {
 		quest::say("What?!! You crushed all the shields!! You croak-faced skulking brute!! You don't deserve to be in my garrison!! I am going to recommend you for a promotion in hopes that you will be sent to hunt dragons and meet your end!");
 		#:: Give a 18073 - Legionnaire Recommendation
 		quest::summonitem(18073);
