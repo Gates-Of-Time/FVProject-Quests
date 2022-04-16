@@ -30,17 +30,22 @@ sub EVENT_ITEM {
     quest::faction(444,20); # Faction: Swift Tails
     quest::faction(441,10); # Faction: Legion of Cabilis
   }
-  if (plugin::check_handin(\%itemcount, 12899 => 1, 12898 => 1, 12896 => 1, 5132 => 1)) {
+	#:: Match a 12899 - Emerald (The Gardens of Sebilis), a 12898 - Sapphire (), a 12896 - Ruby (The Blood of Sebilis) and a 5131 - Militia's Pike
+	elsif (plugin::takeItems(12899 => 1, 12898 => 1, 12896 => 1, 5132 => 1)) {
     quest::emote("gulps down a wad of phlegm.");
     quest::say("My memory has returned! Boneripper! You are no footman. I grant you the rank of soldier. Go and forge your weapon. Do not return to me until you become a [brave trooper of the empire].");
     quest::say("Find Drill Master Kyg to help you in this task? [Footman Moglok] needs help.");    #not live text, link to 4th pike beginning
-    quest::summonitem(12476); # Item: Soldier Head Plans
-    quest::faction(440,2); # Faction: Cabilis Residents
-    quest::faction(441,2); # Faction: Legion of Cabilis
-    quest::faction(445,2); # Faction: Scaled Mystics
-    quest::faction(444,2); # Faction: Swift Tails
-    quest::faction(442,2); # Faction: Crusaders of Greenmist
-    quest::ding();
+    #:: Give a 12476 - Soldier Head Plans
+		quest::summonitem(12476);
+		#:: Ding!
+		quest::ding();
+		#:: Set factions
+    quest::faction(440,2);  	#:: + Cabilis Residents
+    quest::faction(441,2);  	#:: + Legion of Cabilis
+    quest::faction(445,2);  	#:: + Scaled Mystics
+    quest::faction(444,2);  	#:: + Swift Tails
+    quest::faction(442,2);  	#:: + Crusaders of Greenmist
+		#:: Grant a small amount of experience
     quest::exp(800);
   }
   if (plugin::check_handin(\%itemcount, 18073 => 1, 18072 => 1, 18074 => 1, 5134 => 1)) {
