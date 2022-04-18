@@ -50,7 +50,7 @@ sub EVENT_TIMER {
 			if (scalar @ClientList > 0) {
 				quest::say("kachunk .. kachunk..");
 				#:: Send a signal '1' to Watchman Grep with no delay
-				quest::signal(56066, 1, 0);
+				quest::signalwith(56066, 1, 0);
 			}
 		}
 		#:: Match if at the highway robbery location and delivery has not been completed
