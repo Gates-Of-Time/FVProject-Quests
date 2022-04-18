@@ -4,6 +4,7 @@ sub EVENT_SAY {
 	}
 	elsif ($text=~/timorous/i) {
 		quest::say("Off you go!");
+		#:: Cast spell 2291 - Portal to Timorous
 		quest::selfcast(2291);
 	}
 }
