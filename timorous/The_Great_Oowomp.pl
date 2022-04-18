@@ -17,7 +17,7 @@ sub EVENT_ITEM {
 	#:: Match five gold
 	if (plugin::takeCoin(0, 0, 5, 0)) {
 		quest::emote("flings the coins into the air and they all fall neatly into his oversized coin pouch. 'Gaze in awe at my awesome powers of the arcane!! You, a simple citizen, shall see my power. Allakabam!!'");
-		$Mob = quest::unique_spawn(96088, 0, 0, 3122.8, 5725.2, 7.9, 13.0);
+		$Mob = quest::unique_spawn(96088, 0, 0, 3122, 5740, 6, 398.75);
 		$EntID = $entity_list->GetMobID($Mob);
 		$npc->CastSpell(10, $EntID);
 		#:: Create a timer 'Dance' that triggers every three seconds
