@@ -69,7 +69,7 @@ sub EVENT_EXIT {
 sub EVENT_TIMER {
 	#:: Match timer 'depop'
 	if ($timer eq "depop") {
-		quest::say("Don't let me catch you doing that again, $name!");
+		quest::say("Don't let me catch you doing that again or I will drag you into the Realms of Discord!");
 		quest::depop();
 	}
 }
