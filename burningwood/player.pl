@@ -1,6 +1,6 @@
 sub EVENT_ENTER {
 	$key = $name . "-druid_epic";
-	#:: Match if the key does not exist
+	#:: Match if the key equals 12
 	if (quest::get_data($key) == 12) {
 		#:: Match if #a_crippled_wurm is not spawned
 		if($entity_list->IsMobSpawnedByNpcTypeID(87155) == false) {
