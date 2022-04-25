@@ -13,7 +13,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 10059 - Star of Odus
 	if (plugin::takeItems(10059 => 1)) {
-		quest::say("Thank you!! I never could have gone to Odus to replace this. Perhaps now you can collect some rare coins. Here. I need a Torsis Ton, Royal Crown of Dalnir, Terraz Ton, Veksar Gran, Danak Gran and Ik Gran. Combine them with the box and return it to me.")
+		quest::say("Thank you!! I never could have gone to Odus to replace this. Perhaps now you can collect some rare coins. Here. I need a Torsis Ton, Royal Crown of Dalnir, Terraz Ton, Veksar Gran, Danak Gran and Ik Gran. Combine them with the box and return it to me.");
 		#:: Give a 17045 - Tin Box
 		quest::summonitem(17045);
 		#:: Ding!

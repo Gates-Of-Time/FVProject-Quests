@@ -7,7 +7,7 @@ sub EVENT_SIGNAL {
 		if (scalar @ClientList > 0) {
 			quest::say("What a glorious machine the cargo clockwork is!!");
 			#:: Send a signal '1' to Steamfont Mountains >> Cargo_Clockwork (56105) with no delay
-			quest::signal(56105, 1, 0);
+			quest::signalwith(56105, 1, 0);
 		}
 	}
 }

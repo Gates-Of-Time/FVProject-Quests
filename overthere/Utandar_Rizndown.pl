@@ -1,13 +1,13 @@
 sub EVENT_SAY {
-  if($text=~/Hail/i){
-    quest::say("It is good to see our numbers growing on this land. Welcome! May your travels be as prosperous as mine have. There are many [new powers] to be gained from this land.");
-  }
-  elsif($text=~/new powers/i){
-    quest::say("The new powers are scrolls that give us access to new and powerful spells. My collection is almost complete. I am simply [lacking] four more and then I will return back to the homeland.");
-  }
-  elsif($text=~/lacking/i){
-    quest::say("I am missing the scroll Atol's Spectral Shackles, Tears of Druzzil, Inferno of Al'kabor, and Pillar of Frost. Should you run into one, bring it to me and I'll perform an exchange for another scroll.");
-  }
+	if ($text=~/hail/i) {
+		quest::say("It is good to see our numbers growing on this land. Welcome! May your travels be as prosperous as mine have. There are many [new powers] to be gained from this land.");
+	}
+	elsif ($text=~/new powers/i) {
+		quest::say("The new powers are scrolls that give us access to new and powerful spells. My collection is almost complete. I am simply [lacking] four more and then I will return back to the homeland.");
+	}
+	elsif ($text=~/lacking/i) {
+		quest::say("I am missing the scroll Atol's Spectral Shackles, Tears of Druzzil, Inferno of Al'kabor, and Pillar of Frost. Should you run into one, bring it to me and I'll perform an exchange for another scroll.");
+	}
 }
 
 sub EVENT_ITEM {

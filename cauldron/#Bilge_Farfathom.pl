@@ -1,4 +1,4 @@
-sub EVENT_DEATH_COMPLETE{
+sub EVENT_DEATH_COMPLETE {
 	$random_result = quest::ChooseRandom(1, 2, 3, 4);
 	if ($random_result == 1) {
 		#:: Spawn a Dagnor's Cauldron >> an_aqua_goblin_mariner (70060) on pathgrid 5

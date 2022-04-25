@@ -39,6 +39,9 @@ sub EVENT_ENTERZONE {
 		quest::playertexture(1);
 		quest::playerfeature("helm", 1);
 	}
+	if ($name eq "Eru") {
+		quest::playerrace(118);
+	}
 }
 
 sub EVENT_CONNECT {
@@ -113,6 +116,10 @@ sub EVENT_CONNECT {
 			quest::gmsay("-----------------------------------------------------------------------------------------------", 14, 1);
 		}
 	}
+}
+
+sub EVENT_WARP {
+	quest::unique_spawn(927, 0, 0, $x, $y, $Z);
 }
 
 sub ConvertIP {
