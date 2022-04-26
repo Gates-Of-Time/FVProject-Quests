@@ -6,7 +6,7 @@ sub EVENT_COMBAT {
 		if(random_result <=20) {
 			quest::say("$class like you always bring out the worst in me!");
 		}
-		else if(random_result <=40) {
+		elsif(random_result <=40) {
 			quest::say("I really hate $class like you!");
 		}
 		else {

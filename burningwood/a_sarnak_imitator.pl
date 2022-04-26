@@ -11,7 +11,7 @@ sub EVENT_SAY {
 			}
 		}
   }
-	else if ($text=~/prepared/i) {
+	elsif ($text=~/prepared/i) {
 		#:: Match if the key equal to or larger than 1
 		if (quest::get_data($key_ench_epic) >= 1) {
 			quest::say("I have recently received this ancient tome; it contains knowledge that may prove invaluable to the construction of a new staff. Unfortunately, time has had its way with it. I need you to find the missing pages so we can get to work. There should be ten, unless they have been destroyed by time and decay.");
@@ -19,41 +19,41 @@ sub EVENT_SAY {
 			quest::summonitem(57918);
 		}
   }
-	else if ($text=~/chest/i) {
+	elsif ($text=~/chest/i) {
 		#:: Match if the key equal to or larger than 3
 		if (quest::get_data($key_ench_epic) >= 3) {
 			#:: Give a 52960 - Ornate Staff Chest 
 			quest::summonitem(52960);
 		}
   }
-	else if ($text=~/are you jeb lumsed/i) {
+	elsif ($text=~/are you jeb lumsed/i) {
 			quest::say("Yes, I am. Use your most enlightened magic to seek the truth of what is around you. When that is done, you will know what you seek.");
   }
-	else if ($text=~/serpent/i) {
+	elsif ($text=~/serpent/i) {
 			quest::say("The first truly powerful enchanter, Krilan Pedin, crafted the Serpent years ago. He trained his students to carry on the trade in a five-step process. Each student then became a master and chose one of their own students to pass the legacy on to. Four others and I, myself, are current practitioners of the crafting.");
   }
-	else if ($text=~/masters/i) {
+	elsif ($text=~/masters/i) {
 			quest::say("The masters are enchanters who have reached the plateau of understanding. Their names are Modani Qu'Loni, Mizzle Gepple, Nadia Starfeast, and Polzin Mrid. All are master crafters in their own right.");
   }
-	else if ($text=~/modani/i) {
+	elsif ($text=~/modani/i) {
 			quest::say("Modani is a master of illusions. You should seek him out first. Keep a careful eye out for him - he is never in his true form. The last time I spoke to him, he seemed very excited about his voyage to the elven outpost. You may or may not find more clues about his location there.");
   }
-	else if ($text=~/mizzle/i) {
+	elsif ($text=~/mizzle/i) {
 			quest::say("Mizzle is a gnome who has mastered the use of enlightened magic. Go to him once you have spoken to Modani. Mizzle is not one to travel, so you should not have to look far from his home to find him.");
   }
-	else if ($text=~/nadia/i) {
+	elsif ($text=~/nadia/i) {
 			quest::say("The mistress of charm, Nadia is very beautiful. She, too, traveled with her relatives to the new land. I just recently received a letter from her. She says more and more pilgrims and explorers are arriving every day, and that the outpost is well defended now.");
   }
-	else if ($text=~/polzin/i) {
+	elsif ($text=~/polzin/i) {
 			quest::say("Master of the Phantasms - he is the last one you will seek out. Hmm...Polzin is native to Erudin, however, after the incident near Paineel, no one has heard from him. I hope that he is well.");
   }
-	else if ($text=~/purify/i) {
+	elsif ($text=~/purify/i) {
 		#:: Check for 52952 - Oculus of Persuasion
 		if ($npc->HasItem(52952)) {
 			quest::say("The purification is not something that I alone have the power to complete. There was once a crystal that held the power to purify something of this magnitude, however it was shattered long ago. You will need to speak to the masters that remain of dwindling races.");
 		}
   }
-	else if ($text=~/races/i) {
+	elsif ($text=~/races/i) {
 		#:: Check for 52952 - Oculus of Persuasion
 		if ($npc->HasItem(52952)) {
 			quest::say("The masters are of races that walked Norrath before you or I. I do not know their current whereabouts. Alaurin and Vohnkare were the eldest of the four. There was a noble . . Ah, yes and Feyana. I do hope you find them.");

@@ -6,7 +6,7 @@ sub EVENT_COMBAT {
 		if(random_result <=20) {
 			quest::say("You will perish!!  You are weak and should have kept to your own realm!!");
 		}
-		else if(random_result <=40) {
+		elsif(random_result <=40) {
 			quest::say("I really hate $class like you!");
 		}
 		else {
