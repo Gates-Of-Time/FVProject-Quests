@@ -4,7 +4,7 @@ sub EVENT_SAY {
   if ($text=~/hail/i) {		
 		#:: Match a 5145 - Iron Cudgel of the Channeler
 		if (plugin::check_hasitem($client, 5145)) {
-			quest::say("Ahh!! A conversationalist. How good to meet you, " .. e.other:GetCleanName() .. ". Yes. I have heard of you. Go ahead and ask for that which has brought you to my tower and emboldened you to slay my weaker minions.");
+			quest::say("Ahh!! A conversationalist. How good to meet you, $name. Yes. I have heard of you. Go ahead and ask for that which has brought you to my tower and emboldened you to slay my weaker minions.");
 		}
   }
 	elsif ($text=~/sisters of scale/i) {		

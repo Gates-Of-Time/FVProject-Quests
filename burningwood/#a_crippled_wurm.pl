@@ -11,7 +11,7 @@ sub EVENT_TIMER {
 	if ($timer eq "kickthatface") {
 		if ($kick_avail == 1) {
 			$target = $npc->GetHateTop();
-			if ( $mob->CombatRange($target)) {
+			if ($mob->CombatRange($target)) {
 				$mob->DoMeleeSkillAttackDmg($target, 3500, 30);
 				$kick_avail = 0;
 				#:: Set a timer to loop every 8 seconds
@@ -20,7 +20,7 @@ sub EVENT_TIMER {
 		}
 	}
 	#:: Match timer "resetkick"
-	else if ($timer eq "resetkick") {
+	elsif ($timer eq "resetkick") {
 		$kick_avail = 1;
 	}
 }
