@@ -13,7 +13,7 @@ sub EVENT_SAY {
 			quest::say("What a coincidence! I, too, seek a skull. Perhaps you might help me [obtain the skull]. Perhaps then you shall have the skull you desire.");
 		}
   }
-  elsif ($text=~/hail/i) {		
+  elsif ($text=~/obtain the skull/i) {		
 		#:: Match a 5145 - Iron Cudgel of the Channeler
 		if (plugin::check_hasitem($client, 5145)) {
 			quest::say("I am sure you would not mind removing the head of a scaled mystic. I hope not. There is an old Iksar who once called me slave. Now he shall adorn my wall, mounted on a fine plaque. His name is Digalis. Find him. Do not return until your task is complete.");
