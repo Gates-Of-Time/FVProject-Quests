@@ -1,6 +1,6 @@
 sub EVENT_SIGNAL {
-	#:: Match a signal "Southeast Camp (Brutes)" from /frontiermtns/Boogoog.pl
-	if ($signal == Southeast Camp (Brutes)) {
+	#:: Match a signal "15147" from /frontiermtns/Boogoog.pl
+	if ($signal == 15147) {
   	quest::disable_spawn2($signal);
 		#:: Spawn Southwest Camp (Various mobs)
   	quest::enable_spawn2(NEWSPAWNGROUPID);
@@ -15,7 +15,7 @@ sub EVENT_SIGNAL {
 	elsif ($signal == Northwest Camp (Sarnak)) {
   	quest::disable_spawn2($signal);
 		#:: Spawn Southeast Camp (Brutes)
-  	quest::enable_spawn2(NEWSPAWNGROUPID);
+  	quest::enable_spawn2(15147);
 	}  
 	#:: Match a signal "Southeast Camp (Goblins) " from /frontiermtns/Boogoog.pl
 	elsif ($signal == Southeast Camp (Goblins) ) {
