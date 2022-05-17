@@ -41,8 +41,10 @@ sub EVENT_ITEM {
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
-			quest::faction(275, 1); 		#:: + Keepers of the Art
+			quest::faction(275, 2); 		#:: + Keepers of the Art
 			quest::faction(279, 1); 		#:: + King Tearis Thex
+			quest::faction(246, 1); 		#:: + Faydark Champions
+			quest::faction(239, -1); 		#:: - The Dead
 			#:: Grant a moderate amount of experience
 			quest::exp(1000);
 			#:: Create a hash for storing cash - 700 to 750cp
@@ -118,8 +120,10 @@ sub EVENT_ITEM {
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
-			quest::faction(275, 1); 		#:: + Keepers of the Art
+			quest::faction(275, 2); 		#:: + Keepers of the Art
 			quest::faction(279, 1); 		#:: + King Tearis Thex
+			quest::faction(246, 1); 		#:: + Faydark Champions
+			quest::faction(239, -1); 		#:: - The Dead
 			#:: Grant a moderate amount of experience
 			quest::exp(1000);
 			#:: Create a hash for storing cash - 700 to 750cp
@@ -144,9 +148,10 @@ sub EVENT_ITEM {
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
-			quest::faction(246, 1); 		#:: + Faydark's Champions
+			quest::faction(326, 2); 		#:: + Emerald Warriors
 			quest::faction(276, 1); 		#:: + Kelethin Merchants
 			quest::faction(325, 1); 		#:: + Merchants of Felwithe
+			quest::faction(270, -1); 		#:: - Indigo Brotherhood
 			#:: Grant a moderate amount of experience
 			quest::exp(1000);
 			#:: Create a hash for storing cash - 700 to 750cp
@@ -171,9 +176,10 @@ sub EVENT_ITEM {
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
-			quest::faction(246, 1); 		#:: + Faydark's Champions
+			quest::faction(326, 2); 		#:: + Emerald Warriors
 			quest::faction(276, 1); 		#:: + Kelethin Merchants
 			quest::faction(325, 1); 		#:: + Merchants of Felwithe
+			quest::faction(270, -1); 		#:: - Indigo Brotherhood
 			#:: Grant a moderate amount of experience
 			quest::exp(1000);
 			#:: Create a hash for storing cash - 700 to 750cp
