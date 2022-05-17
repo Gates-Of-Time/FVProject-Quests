@@ -17,10 +17,11 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(245, 1); 		#:: + Eldritch Collective
-		quest::faction(333, 1); 		#:: + King Ak'Anon
+		quest::faction(245, 2); 		#:: + Eldritch Collective
+		quest::faction(238, -1); 		#:: - Dark Reflection
+		quest::faction(239, -1); 		#:: - The Dead	
 		quest::faction(255, 1); 		#:: + Gem Choppers
-		quest::faction(239, -2); 		#:: - The Dead	
+		quest::faction(333, 1); 		#:: + King Ak'Anon
 		#:: Grant a moderate amount of experience
 		quest::exp(5000);
 		#:: Create a hash for storing cash - 600 to 800cp
