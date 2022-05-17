@@ -14,6 +14,24 @@ sub EVENT_SAY {
 	elsif ($text=~/lucky rat/i) {
 		quest::say("Now that is exactly what you need my friend, a lucky rat's foot necklace..  and, it just happens to be my specialty!  Just bring me one rat's foot, some rat whiskers, and I won't even charge you any gold. Just buy me a honey mead, and you'll be the luckiest rat dodger this side of Highpass.");
 	}
+	elsif ($text=~/where.*bank/i) {
+		quest::say("Qeynos Hold is South Qeynos is just across from the arena.  You know, over the bridge behind Firepride's.");
+	}
+	elsif ($text=~/(cleric|paladin) guild/i) {
+		quest::say("Within Qeynos are the Knights of Thunder and the Priests of Life.  Both of these orders consist of clerics and paladins and are respected by all.  The Hall of Thunder lies in South Qeynos and the Temple of Life is in North Qeynos.");
+	}
+	elsif ($text=~/(ranger|druid) guild/i) {
+		quest::say("I believe you shall find the Protectors of the Pine and Jaggedpine Treefolk in the hollow of Surefall Glade.");
+	}
+	elsif ($text=~/where.*inn/i) {
+		quest::say("If you need a place to rest, I highly recommend the Lion's Mane Inn and Tavern.  Poor adventurers all huddle together in one of the backrooms of Fish's.");
+	}
+	elsif ($text=~/where.*port/i) {
+		quest::say("The port of Qeynos is located in South Qeynos.  From here one may catch the ship to Erudin.");
+	}
+	elsif ($text=~/who.*kane/i) {
+		quest::say("Commander Kane Bayle is the commander of all the Qeynos Guard.  He is second only to his brother, Antonius Bayle.  His post is in the guard house at the city gates.  Mind you, do not bother him, he has a bit of a temper.");
+	}
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
