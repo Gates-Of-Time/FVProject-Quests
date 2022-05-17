@@ -30,10 +30,9 @@ sub EVENT_ITEM {
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
-			quest::faction(274, 1); 		#:: + Kazon Stormhammer
-			quest::faction(312, 1); 		#:: + Storm Guard
-			quest::faction(322, 1); 		#:: + Miners Guild 628
-			quest::faction(290, 1); 		#:: + Merchants of Kaladim
+			quest::faction(227, 2); 		#:: + Clerics of Underfoot
+			quest::faction(274, 2); 		#:: + Kazon Stormhammer
+			quest::faction(293, 1); 		#:: + Miner's Guild 249
 			#:: Grant a moderate amount of experience
 			quest::exp(1000);
 			#:: Create a hash for storing cash - 700 to 750cp
@@ -85,6 +84,7 @@ sub EVENT_ITEM {
 			quest::faction(312, 1); 		#:: + Storm Guard
 			quest::faction(322, 1); 		#:: + Miners Guild 628
 			quest::faction(290, 1); 		#:: + Merchants of Kaladim
+			quest::faction(232, -1); 		#:: - Craknek Warriors
 			#:: Grant a moderate amount of experience
 			quest::exp(1000);
 			#:: Create a hash for storing cash - 700 to 750cp
