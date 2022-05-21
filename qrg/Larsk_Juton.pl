@@ -56,6 +56,9 @@ sub EVENT_SAY {
 	elsif ($text=~/who.*chanda/i) {	
 		quest::say("The entire Miller family are nothing more than scum.  It is they who entice poachers to continue with their slaughter so they can profit from the skins of the wildlife.");
 	}
+	elsif ($text=~/tunare/i) {
+		quest::say("Tunare is the Mother of All.  It is through Her will that we protect this land and its many creatures.");
+	}
 }
 
 sub EVENT_ITEM {
