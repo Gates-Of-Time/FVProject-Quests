@@ -11,6 +11,45 @@ sub EVENT_SAY {
 	elsif ($text=~/master poacher/i) {
 		quest::say("'The master poacher is Talym Shoontar. If you wish to collect the bounty on this vile man, be sure to speak with our leader, Hager Sureshot. No doubt you will find him practicing his skills at the archery range.");
 	}
+	elsif ($text=~/who.*leader/i) {
+		quest::say("The land of Surefall Glade is ruled by no single hand other than Tunare, but if guidance is what you seek, I would suggest you speak with Te`Anara.  She is the head of the Jaggedpine Treefolk.  Otherwise, you could speak with Hager Sureshot of the Protectors of the Pine.");
+	}
+	elsif ($text=~/what poachers/i) {
+		quest::say("Poachers have been plaguing our land.  We do our best to stop them.  If you wish to join the fight, seek the masters of the Protectors of the Pine.");
+	}
+	elsif ($text=~/where.*mammoth/i) {
+		quest::say("That information is best kept secret.");
+	}
+	elsif ($text=~/where.*cave/i) {
+		quest::say("That information is best kept secret.");
+	}
+	elsif ($text=~/where.*druid guild/i) {
+		quest::say("The Jaggedpine Treefolk are the local druids.  The masters can be found here within the great tree.");
+	}
+	elsif ($text=~/where.*forge/i) {
+		quest::say("We have nothing like that here in Surefall Glade.  You must venture to Qeynos.");
+	}
+	elsif ($text=~/where.*oven/i) {
+		quest::say("We have nothing like that here in Surefall Glade.  You must venture to Qeynos.");
+	}
+	elsif ($text=~/where.*armor/i) {
+		quest::say("Oftentimes you can find a traveling merchant in one of the nearby houses.  Other than that you would have to travel to Qeynos.");
+	}
+	elsif ($text=~/where.*qeynos/i) {
+		quest::say("The great city of Qeynos can be found by walking along the path outside of Surefall Glade.  Many of our rangers and druids serve alongside the Qeynos Guard when the need arises.");
+	}
+	elsif ($text=~/where.*bank/i) {
+		quest::say("There is no need for a vault among our people.  You could try the Qeynos Hold in Qeynos.");
+	}
+	elsif ($text=~/who.*talym shoontar/i) {
+		quest::say("Talym Shoontar is a wanted man.  He is a very infamous poacher.  Hager Sureshot has placed a bounty upon his head.");
+	}
+	elsif ($text=~/who.*chanda/i) {	
+		quest::say("The entire Miller family are nothing more than scum.  It is they who entice poachers to continue with their slaughter so they can profit from the skins of the wildlife.");
+	}
+	elsif ($text=~/tunare/i) {
+		quest::say("Tunare is the Mother of All.  It is through Her will that we protect this land and its many creatures.");
+	}
 }
 
 sub EVENT_ITEM {
