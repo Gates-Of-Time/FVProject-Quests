@@ -46,11 +46,30 @@ sub EVENT_SAY {
 			quest::say("I have been watching you, and appreciate the help you've given to the brothers and sisters of the Silent Fist. But, I feel that such a vital matter should be left to one of our more trusted members.");
 		}
 	}
+	elsif ($text=~/black/i) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
+			quest::say("The black headband is one of the highest honors of the Silent Fist Clan.  Only [Lu'Sun] gives those out.");
+		}
+		else {
+			quest::say("I have been watching you, and appreciate the help you've given to the brothers and sisters of the Silent Fist. But, I feel that such a vital matter should be left to one of our more trusted members.");
+		}
+	}
+	elsif ($text=~/(lusun|lu'sun)/i) {
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
+			quest::say("Ahhh, Lu'Sun is a master of many skills.  He has traveled all of Norrath, studying various techniques and disciplines.  Now, he runs this small guild and passes on his knowledge to those willing to devote their lives to our cause.");
+		}
+		else {
+			quest::say("I have been watching you, and appreciate the help you've given to the brothers and sisters of the Silent Fist. But, I feel that such a vital matter should be left to one of our more trusted members.");
+		}
+	}
 	elsif ($text=~/konem/i) {
 		quest::say("Ah yes, Konem. I had him run an errand out to Surefall Glade over two days ago, and he still hasn't returned. Knowing Konem, he probably found a nice shady tree to take a nap under. If you happen to pass by him, could you please take him this note? Thanks, $name, and be safe.");
 		#:: Give a 18921 - Message to Konem
 		quest::summonitem(18921);
 	}
+	
 }
 
 sub EVENT_ITEM {
