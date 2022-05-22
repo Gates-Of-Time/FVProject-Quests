@@ -1,6 +1,24 @@
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::say("Hey, $name. Heh, heh.  Keep up the good work.  Commander Bayle needs all the patrols he can get.  He says the time is near, now that the Shrine of Bertoxxulous in the aqueducts is complete.");
+		#:: Match if faction is worse than Indifferent
+		if ($faction > 5) {
+			my $random = int(rand(4)) + 1;
+			if ($random == 1) {
+				quest::say("Is that your BREATH, or did something die in here? Now go away!");
+			}
+			elsif ($random == 2) {
+				quest::say("I wonder how much I could get for the tongue of a blithering fool?  Leave before I decide to find out for myself.");
+			}
+			elsif ($random == 3) {
+				quest::say("I didn't know Slime could speak common.  Go back to the sewer before I lose my temper.");
+			}
+			elsif ($random == 4) {
+				quest::say("Oh look, a talking lump of refuse.  How novel!");
+			}
+		}
+		else {
+			quest::say("Hey, $name. Heh, heh.  Keep up the good work.  Commander Bayle needs all the patrols he can get.  He says the time is near, now that the Shrine of Bertoxxulous in the aqueducts is complete.");
+		}
 	}
 	elsif ($text=~/order of the three/i) {
 		quest::say("The Order of Three consists of the three positive circles of the arcane known as magic, enchantment and wizardry.  This guild keeps very busy in its hall near the arena.  All in Qeynos respect their powers.");
