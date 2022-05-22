@@ -9,7 +9,7 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Ahoy, $name!  My name is Forbley Taxx.  My father was a sailor and we settled here in Qeynos.  I love the sea air.  I don't know why anyone would ever want to leave.");
 	}
-		elsif ($text=~/order of the three/i) {
+	elsif ($text=~/order of the three/i) {
 		quest::say("The Order of Three consists of the three positive circles of the arcane known as magic, enchantment and wizardry.  This guild keeps very busy in its hall near the arena.  All in Qeynos respect their powers.");
 	}
 	elsif ($text=~/where.*monk guild/i) {
