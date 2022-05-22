@@ -91,8 +91,6 @@ sub EVENT_WAYPOINT_ARRIVE {
 	}
 	elsif ($wp == 38) {
 		quest::say("Guard, stand up straight!");
-		#:: Send a signal "1" to South Qeynos >> Guard_Mezzt (1001) with no delay
-		quest::signalwith(1001,1,0);
 		#:: Send a signal "1" to South Qeynos >> Guard_Phaeton (1189) with no delay
 		quest::signalwith(1189,1,0);
 		#:: Send a signal "1" to South Qeynos >> Guard_Cyrillian (1006) with no delay
