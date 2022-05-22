@@ -6,6 +6,9 @@ sub EVENT_COMBAT {
 }
 
 sub EVENT_SAY {
+	if ($text=~/hail/) {
+		quest::say("Hail, $name!  Have you tested your mettle on the Grounds of Fate yet?  They are here in South Qeynose and there is always someone there looking for a challenging opponent.  Beware, though, once you are on the arena floor you are fair game to anyone who wishes to have your head on their pike.");
+	}
 	elsif ($text=~/order of the three/i) {
 		quest::say("The Order of Three consists of the three positive circles of the arcane known as magic, enchantment and wizardry.  This guild keeps very busy in its hall near the arena.  All in Qeynos respect their powers.");
 	}
@@ -42,10 +45,10 @@ sub EVENT_SAY {
 	elsif ($text=~/captain linarius/i) {
 		quest::say("The Qeynos Tower Guards of the hills and plains are commanded by Captain Linarius Graffe.  He often has much to report.  He is posted in a keep which spans a river.  I believe it is in the northern Plains of Karana.");
 	}
-	elsif ($text=~/where.*north qeynos/i) {
+	elsif ($text=~/where is north qeynos/i) {
 		quest::say("The passages to North Qeynos can be found near the bard's guild or next to the Clock of Ak'Anon.");
 	}
-	elsif ($text=~/where.*south qeynos/i) {
+	elsif ($text=~/where is south qeynos/i) {
 		quest::say("The passages to North Qeynos can be found near the bard's guild or next to the Clock of Ak'Anon.");
 	}
 	elsif ($text=~/where.*inn/i) {
