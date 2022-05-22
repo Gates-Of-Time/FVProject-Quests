@@ -2,7 +2,7 @@ sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("<Burp!> Heh? $name? Never hoid o' ya. Beat it. I got woik ta do.");
 	}
-		elsif ($text=~/order of the three/i) {
+	elsif ($text=~/order of the three/i) {
 		quest::say("The Order of Three consists of the three positive circles of the arcane known as magic, enchantment and wizardry.  This guild keeps very busy in its hall near the arena.  All in Qeynos respect their powers.");
 	}
 	elsif ($text=~/where.*monk guild/i) {
