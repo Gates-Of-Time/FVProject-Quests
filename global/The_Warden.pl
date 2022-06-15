@@ -14,25 +14,26 @@ sub EVENT_SPAWN {
 	$jailW = $npc->GetHeading();
 	my @clist = $entity_list->GetClientList();
 	foreach my $c (@clist) {
+		$instanceId = $c->GetInstanceID();
 		if ($c->CalculateDistance($x, $y, $z) < 150) {
 			my $random = int(rand(6)) + 1;
 			if ($random == 1) {
-				$client->MovePC($zoneid, $jailX + 10, $jailY - 10, $jailZ, $jailW);
+				$client->MovePCInstance($zoneid, $instanceId, $jailX + 10, $jailY - 10, $jailZ, $jailW);
 			}
 			elsif ($random == 2) {
-				$client->MovePC($zoneid, $jailX - 10, $jailY + 10, $jailZ, $jailW);
+				$client->MovePCInstance($zoneid, $instanceId, $jailX - 10, $jailY + 10, $jailZ, $jailW);
 			}
 			elsif ($random == 3) {
-				$client->MovePC($zoneid, $jailX + 10, $jailY - 10, $jailZ, $jailW);
+				$client->MovePCInstance($zoneid, $instanceId, $jailX + 10, $jailY - 10, $jailZ, $jailW);
 			}
 			elsif ($random == 4) {
-				$client->MovePC($zoneid, $jailX - 10, $jailY + 10, $jailZ, $jailW);
+				$client->MovePCInstance($zoneid, $instanceId, $jailX - 10, $jailY + 10, $jailZ, $jailW);
 			}
 			elsif ($random == 5) {
-				$client->MovePC($zoneid, $jailX + 10, $jailY + 10, $jailZ, $jailW);
+				$client->MovePCInstance($zoneid, $instanceId, $jailX + 10, $jailY + 10, $jailZ, $jailW);
 			}
 			elsif ($random == 6) {
-				$client->MovePC($zoneid, $jailX - 10, $jailY - 10, $jailZ, $jailW);
+				$client->MovePCInstance($zoneid, $instanceId, $jailX - 10, $jailY - 10, $jailZ, $jailW);
 			}
 			my $classplural = "${class}s";
 			$client->Message(15, "What we've got here, is a failure to communicate.  Some $classplural you just can't reach.");
@@ -43,23 +44,24 @@ sub EVENT_SPAWN {
 
 sub EVENT_EXIT {
 	my $random = int(rand(6)) + 1;
+	$instanceId = $client->GetInstanceID();
 	if ($random == 1) {
-		$client->MovePC($zoneid, $jailX + 10, $jailY - 10, $jailZ, $jailW);
+		$client->MovePCInstance($zoneid, $instanceId, $jailX + 10, $jailY - 10, $jailZ, $jailW);
 	}
 	elsif ($random == 2) {
-		$client->MovePC($zoneid, $jailX - 10, $jailY + 10, $jailZ, $jailW);
+		$client->MovePCInstance($zoneid, $instanceId, $jailX - 10, $jailY + 10, $jailZ, $jailW);
 	}
 	elsif ($random == 3) {
-		$client->MovePC($zoneid, $jailX + 10, $jailY - 10, $jailZ, $jailW);
+		$client->MovePCInstance($zoneid, $instanceId, $jailX + 10, $jailY - 10, $jailZ, $jailW);
 	}
 	elsif ($random == 4) {
-		$client->MovePC($zoneid, $jailX - 10, $jailY + 10, $jailZ, $jailW);
+		$client->MovePCInstance($zoneid, $instanceId, $jailX - 10, $jailY + 10, $jailZ, $jailW);
 	}
 	elsif ($random == 5) {
-		$client->MovePC($zoneid, $jailX + 10, $jailY + 10, $jailZ, $jailW);
+		$client->MovePCInstance($zoneid, $instanceId, $jailX + 10, $jailY + 10, $jailZ, $jailW);
 	}
 	elsif ($random == 6) {
-		$client->MovePC($zoneid, $jailX - 10, $jailY - 10, $jailZ, $jailW);
+		$client->MovePCInstance($zoneid, $instanceId, $jailX - 10, $jailY - 10, $jailZ, $jailW);
 	}
 	my $classplural = "${class}s";
 	$client->Message(15, "What we've got here, is a failure to communicate.  Some $classplural you just can't reach.");
