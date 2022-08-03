@@ -48,11 +48,6 @@ sub EVENT_TIMER {
 					quest::set_data($key, 1, 44);
 				}
 			}
-			else {
-				if ($combat_state == 0) {
-					quest::stoptimer("dt");
-				}
-			}
 		}
 	}
 }
