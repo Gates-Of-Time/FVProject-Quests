@@ -34,23 +34,31 @@ sub EVENT_TIMER {
 		#:: Match if the key does not exist
 		if (!quest::get_data($key)) {
 			$target = $npc->GetHateTop();
-			if ($target->IsPet()) {
-				$owner = $target->GetOwnerID();
-				$Client = $entity_list->GetClientByID($owner);
-				$Client->BuffFadeAll();
-				$npc->CastSpell(982, $owner);
-				quest::set_data($key, 1, 44);
+			if ($target) {
+				if ($target->IsPet()) {
+					$owner = $target->GetOwnerID();
+					$Client = $entity_list->GetClientByID($owner);
+					$Client->BuffFadeAll();
+					$npc->CastSpell(982, $owner);
+					quest::set_data($key, 1, 44);
+				}
+				else {
+					$target->BuffFadeAll();
+					$npc->CastSpell(982, $target->GetID());
+					quest::set_data($key, 1, 44);
+				}
 			}
 			else {
-				$target->BuffFadeAll();
-				$npc->CastSpell(982, $target->GetID());
-				quest::set_data($key, 1, 44);
+				if ($combat_state == 0) {
+					quest::stoptimer("dt");
+				}
 			}
 		}
 	}
 }
 
 sub EVENT_DEATH_COMPLETE {
+	quest::stoptimer("dt");
 	#:: Key a data bucket
 	$key = sirran_status;
 	#:: Set a value of '6' for 900 seconds (15 min)
