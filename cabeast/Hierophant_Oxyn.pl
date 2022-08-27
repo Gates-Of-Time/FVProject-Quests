@@ -6,7 +6,7 @@ sub EVENT_SAY {
 		quest::say("The Temple of Terror requires all young Scaled Mystics to [perform daily tasks.]. The tasks are necessary to the upkeep of our order as well as that of our brothers, the Crusaders of Greenmist.");
 	}
 	elsif ($text=~/daily tasks/i) {
-		quest::say("We require many components for various rituals. Take this Component mortar and fill it with the following items - foraged [mud crabs]. two small mosquito wings and one portion of bone chips. You must then use the pestle and combine all the components. When you have a full component mortar, you may return to me and I shall pay you your wages, but most importantly, you shall prove your devotion to the Scaled Mystics.");
+		quest::say("We require many components for various rituals. Take this Component mortar and fill it with the following items - foraged [mud crabs], two small mosquito wings and one portion of bone chips. You must then use the pestle and combine all the components. When you have a full component mortar, you may return to me and I shall pay you your wages, but most importantly, you shall prove your devotion to the Scaled Mystics.");
 		#:: Give a 17020 - Component Mortar
 		quest::summonitem(17020);
 	}
@@ -97,6 +97,14 @@ sub EVENT_ITEM {
 			#:: set the key value to 2
 			quest::set_data($key, 2);
 		}
+		else {
+			#:: Missing dialogue.
+			#:: Return a 12721 - Morgl Skull, a 12722 - Logrin Skull, a 12723 - Waz Skull, and a 5140 - Iron Cudgel of the Petitioner
+			quest::summonitem(12721);
+			quest::summonitem(12722);
+			quest::summonitem(12723);
+			quest::summonitem(5140);
+		}
 	}
 	#:: Match a 12721 - Morgl Skull
 	elsif (plugin::takeItems(12721 => 1)) {
@@ -142,6 +150,13 @@ sub EVENT_ITEM {
 			$key = $client->CharacterID() . "-skull-quest";
 			#:: set the key value to 3
 			quest::set_data($key, 3);
+		}
+		else {
+			#:: Missing dialogue
+			#:: Return a 12724 - Skull with I, a 12725 - Skull with II, and a 5141 - Iron Cudgel of the Clairvoyant
+			quest::summonitem(12724);
+			quest::summonitem(12725);
+			quest::summonitem(5141);
 		}
 	}
 	#:: Match a 3895 - Note to Oxyn
