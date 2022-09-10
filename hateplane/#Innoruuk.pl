@@ -9,13 +9,13 @@ sub EVENT_COMBAT {
 				$owner = $target->GetOwnerID();
 				$Client = $entity_list->GetClientByID($owner);
 				$Client->BuffFadeAll();
-				$npc->HateSummon($owner);
+				$npc->HateSummon();
 				$npc->CastSpell(982, $owner);
 				quest::set_data($key, 1, 44);
 			}
 			else {
 				$target->BuffFadeAll();
-				$npc->HateSummon($target);
+				$npc->HateSummon();
 				$npc->CastSpell(982, $target->GetID());
 				quest::set_data($key, 1, 44);
 			}
@@ -40,13 +40,13 @@ sub EVENT_TIMER {
 				$owner = $target->GetOwnerID();
 				$Client = $entity_list->GetClientByID($owner);
 				$Client->BuffFadeAll();
-				$npc->HateSummon($owner);
+				$npc->HateSummon();
 				$npc->CastSpell(982, $owner);
 				quest::set_data($key, 1, 44);
 			}
 			else {
 				$target->BuffFadeAll();
-				$npc->HateSummon($target);
+				$npc->HateSummon();
 				$npc->CastSpell(982, $target->GetID());
 				quest::set_data($key, 1, 44);
 			}
