@@ -10,6 +10,9 @@ sub EVENT_SPAWN {
 sub EVENT_AGGRO {
 	#:: Create a timer 'leash' that triggers every second
 	quest::settimer("leash", 1);
+	
+	#:: Trigger EVENT_ENTER subroutine to makue sure we banish out of level clients
+	EVENT_ENTER();
 }
 
 sub EVENT_HP {
