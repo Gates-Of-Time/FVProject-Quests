@@ -1,3 +1,11 @@
+sub EVENT_AGGRO {
+	quest::say("Time to mine fer yer brains!!");
+}
+
+sub EVENT_DEATH_COMPLETE {
+	quest::say("Aaargh!!  The picks of Mining Guild 628 shall avenge my death.");
+}
+
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("Hail, dere! Ain'tcha a sight fer me sore eyes! I knows dat we're strangers an' all, but might I ask a [boon] of ye?");
