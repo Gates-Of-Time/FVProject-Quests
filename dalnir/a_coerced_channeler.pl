@@ -1,7 +1,5 @@
 sub EVENT_DEATH_COMPLETE {
-  if($text=~/greenmist/i) {
-    quest::shout("the river of Xinth...");
-  }
+	quest::shout("the river of Xinth...");
 }
 
 sub EVENT_ITEM {
@@ -13,7 +11,6 @@ sub EVENT_ITEM {
 		#:: Depop with spawn timer active
 		quest::depop_withtimer();
 	}
-
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
