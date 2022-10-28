@@ -4,38 +4,38 @@ sub EVENT_SIGNAL {
 	if ($signal == 369521) {
 		quest::disable_spawn2($signal);
 		#:: Spawn Southwest Camp (Various mobs)
-  	quest::enable_spawn2(50076113);
+  	quest::enable_spawn2(369524);
 	}  
-	#:: Match a signal "50076113" <Southwest Camp (Various mobs)>
-	elsif ($signal == 50076113) {
+	#:: Match a signal "369524" <Southwest Camp (Various mobs)>
+	elsif ($signal == 369524) {
 		quest::disable_spawn2($signal);
 		#:: Spawn Northwest Camp (Sarnak)
-  	quest::enable_spawn2(50076114);
+  	quest::enable_spawn2(369525);
 	}  
-	#:: Match a signal "50076114" <Northwest Camp (Sarnak)>
-	elsif ($signal == 50076114) {
+	#:: Match a signal "369525" <Northwest Camp (Sarnak)>
+	elsif ($signal == 369525) {
 		quest::disable_spawn2($signal);
 		#:: Spawn Southeast Camp (Brutes)
   	quest::enable_spawn2(369521);
 	}  
 	#:: Goblin-Giant-Burynai Cycle 
-	#:: Match a signal "50076111" <Southeast Camp (Goblins)>
-	elsif ($signal == 50076111 ) {
+	#:: Match a signal "369522" <Southeast Camp (Goblins)>
+	elsif ($signal == 369522 ) {
 		quest::disable_spawn2($signal);
 		#:: Spawn Southwest Camp (Giants) 
-  	quest::enable_spawn2(50076112);
+  	quest::enable_spawn2(369523);
 	}  
-	#:: Match a signal "50076112" <Southwest Camp (Giants)>
-	elsif ($signal == 50076112) {
+	#:: Match a signal "369523" <Southwest Camp (Giants)>
+	elsif ($signal == 369523) {
 		quest::disable_spawn2($signal);
 		#:: Spawn Northwest Camp (Burynai) 
-  	quest::enable_spawn2(50076115);
+  	quest::enable_spawn2(369526);
 	}  
-	#:: Match a signal "50076115" <Northwest Camp (Burynai)>
-	elsif ($signal == 50076115) {
+	#:: Match a signal "369526" <Northwest Camp (Burynai)>
+	elsif ($signal == 369526) {
 		quest::disable_spawn2($signal);
 		#:: Spawn Southeast Camp (Goblins) 
-  	quest::enable_spawn2(50076111);
+  	quest::enable_spawn2(369522);
 	}  
 }
 
