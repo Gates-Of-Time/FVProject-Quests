@@ -136,3 +136,8 @@ sub ConvertIP {
 	my $convertedip = "$firstoctet.$secondoctet.$thirdoctet.$longip";
 	return $convertedip;
 }
+
+sub EVENT_LEVEL_UP {
+    #:: Train all disciplines, maximum set to player's level, minimum set to the level prior
+    quest::traindiscs($ulevel,$ulevel - 1);
+}
