@@ -8,6 +8,6 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_DEATH_COMPLETE {
-	#:: Send a signal <$SpawnPointID> to The Plane of Sky >> zone_controller (50) with no delay
-	quest::signalwith(50, $SpawnPointID, 0);
+	#:: Send a signal <$SpawnPointID> to Frontier Mountains >> zone_controller (10) with no delay
+	quest::signalwith(10, $SpawnPointID, 0);
 }
