@@ -65,6 +65,6 @@ sub EVENT_DEATH_COMPLETE {
 	#:: Match a The Plane of Sky >> a_spiroc_vanquisher (71009) or a The Plane of Sky >> The_Spiroc_Guardian (71013)
 	if ($entity_list->IsMobSpawnedByNpcTypeID(71009) || $entity_list->IsMobSpawnedByNpcTypeID(71013)) {
 		#:: Reset spawn timer for 1000ms
-		quest::UpdateSpawnTimer(2630, 1000);
+		quest::updatespawntimer(2630, 1000);
 	}
 }
