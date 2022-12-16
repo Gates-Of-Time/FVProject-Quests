@@ -139,9 +139,15 @@ sub ConvertIP {
 
 sub EVENT_LEVEL_UP {
     if (!quest::is_current_expansion_classic()) {
-        #:: Train all disciplines, maximum set to player's level, minimum set to 0 meaning all disciplines prior
-        quest::traindiscs($ulevel, 0);
-        #:: Play a Ding! sound
-        quest::ding();
+        $key = $name . "-discs-original-grant";
+        if (!quest::get_data($key)) {
+            quest::set_data($key, 1);
+            #:: Train all disciplines
+            quest::traindiscs($ulevel, 0);
+        }
+        else {
+            #:: Train all disciplines, maximum set to player's level, minimum set to the level prior
+            quest::traindiscs($ulevel, $ulevel - 1);
+        }
     }
 }
