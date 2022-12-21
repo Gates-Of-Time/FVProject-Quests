@@ -1,4 +1,4 @@
-@berserkerSpawnLocationIds = (19286, 19303, 19304, 19418);    
+@berserkerSpawnLocationIds = (19286, 19303, 19304, 19374, 19375, 19379, 19380, 19381, 19382, 19418);    
 @impalerSpawnLocationIds = ();    
 my %berserkerSpawnLocationIdsHash = map { $_ => 1 } @berserkerSpawnLocationIds;
 my %impalerSpawnLocationIdsHash = map { $_ => 1 } @impalerSpawnLocationIds;
