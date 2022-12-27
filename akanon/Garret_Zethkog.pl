@@ -32,10 +32,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(245, -10); 	#:: - Eldritch Collective
-		quest::faction(240, -10); 	#:: - Deep Muses
 		quest::faction(238, 100); 	#:: + Dark Reflection
+		quest::faction(245, -10); 	#:: - Eldritch Collective
 		quest::faction(255, -10); 	#:: - Gem Choppers
+		quest::faction(240, -10); 	#:: - Deep Muses
 		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
