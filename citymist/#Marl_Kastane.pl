@@ -14,13 +14,18 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
   $faction = $client->GetCharacterFactionLevel(404); #True Spirit
   if ($faction >= 82) {
-    if (plugin::check_handin(\%itemcount, 14384 => 1)) { #Lhranc's Token
+		#:: Match a 14384 - Lhranc's Token
+		if (plugin::takeItems(14384 => 1)) {
       quest::say("Very good, I will go deliver this right away.");
-      quest::summonitem(14383); #Innoruuk's Curse
+			#:: Give a 14383 - Innoruuk's Curse
+      quest::summonitem(14383);
+			#:: Ding!
+			quest::ding();
+			#:: Depop without spawn timer
       quest::depop();
     }
   }
-  plugin::return_items(\%itemcount);
+	
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
-
-# Quest by mystic414
