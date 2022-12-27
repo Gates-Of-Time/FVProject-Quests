@@ -36,15 +36,16 @@ sub EVENT_ITEM {
 		quest::say("Bless you, my child. Marr is grateful, as are we. Here is our thanks. Let it bring you greater strength to defeat the Militia. Go and continue the crusade. Soon you will be strong enough to slay the [true organizer].");
 		#:: Ding!
 		quest::ding();
-		#:: Grant a large amount of experience
-		quest::exp(5000);
 		#:: Give a random reward: 15019 - Spell: Armor of Faith, 15013 - Spell: Complete Healing, 15045 - Spell: Pacify
 		quest::summonitem(quest::ChooseRandom(15019, 15013, 15045));
 		#:: Set factions
-		quest::faction(362, 3); 		#:: + Priests of Marr
-		quest::faction(336, -10); 		#:: - Coalition of Tradefolk Underground
-		quest::faction(281, 3); 		#:: + Knights of Truth
-		quest::faction(311, 10); 		#:: + Steel Warriors
+		quest::faction(281, 10); 		#:: + Knights of Truth
+		quest::faction(336, -1); 		#:: - Coalition of Tradefolk Underground
+		quest::faction(330, -1); 		#:: - Freeport Militia
+		quest::faction(362, 2); 		#:: + Priests of Marr
+		quest::faction(311, 1);		 	#:: + Steel Warriors
+		#:: Grant a large amount of experience
+		quest::exp(5000);
 		#:: Cast spell 12 - Healing
 		$npc->CastSpell(12,$userid);
 	}
@@ -55,14 +56,14 @@ sub EVENT_ITEM {
 		quest::summonitem(quest::ChooseRandom(15560,15230,15219,15229,15222,15012));
 		#:: Ding!
 		quest::ding();
+		#:: Set factions
+		quest::faction(281, 20); 		#:: + Knights of Truth
+		quest::faction(336, -3); 		#:: - Coalition of Tradefolk Underground
+		quest::faction(330, -3); 		#:: - Freeport Militia
+		quest::faction(362, 4); 		#:: + Priests of Marr
+		quest::faction(311, 2);		 	#:: + Steel Warriors
 		#:: Grant a large amount of experience
 		quest::exp(5000);
-		#:: Set factions
-		quest::faction(362, 3); 		#:: + Priests of Marr
-		quest::faction(336, -10); 		#:: - Coalition of Tradefolk Underground
-		quest::faction(281, 3); 		#:: + Knights of Truth
-		quest::faction(311, 10);	 	#:: + Steel Warriors
-		quest::faction(330, -10); 		#:: - Freeport Militia
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
