@@ -32,9 +32,9 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(239, -5); 	#:: - The Dead
 		quest::faction(245, 100); 	#:: + Eldrich Collective
 		quest::faction(238, -15); 	#:: - Dark Reflection
+		quest::faction(239, -5); 	#:: - The Dead
 		quest::faction(255, 15); 	#:: + Gem Choppers
 		quest::faction(333, 15); 	#:: + King Ak'Anon		
 		#:: Grant a small amount of experience
