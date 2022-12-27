@@ -13,9 +13,6 @@ sub EVENT_SAY {
 	if ($text=~/628/i && $miner628 eq "true") {
 		quest::emote(".wizz.click.628.");
 	}
-	elsif ($text=~/628/i && $miner628 eq "false") {
-	#:: Do nothing
-	}
 }
 
 sub EVENT_ITEM {
@@ -23,13 +20,11 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(12164 => 1) && $miner628 eq "true") {
 		quest::emote(".wizz.click.628.");
 		#:: Choose a random 12162 - Gnome Take (Good Take For Rogues), 12167 - Gnome Take (Bad Take For Rogues)
-		$gnometake = quest::ChooseRandom(12162,12167);
-		#:: Give one of the Gnome Take items
-		quest::summonitem($gnometake);
+		quest::summonitem(quest::ChooseRandom(12162, 12167));
 		#:: Ding!
 		quest::ding();
-		#:: Set faction
-		quest::faction(695,-10);		#:: - Clockwork Gnome
+		#:: Set factions
+		quest::faction(695, -5);		#:: - Clockwork Gnome
 		#:: Grant a small amount of experience
 		quest::exp(500);
 	}
