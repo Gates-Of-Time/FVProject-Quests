@@ -61,10 +61,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(238, 3); 		#:: + Dark Reflection
-		quest::faction(245, -3); 		#:: - Eldritch Collective
-		quest::faction(255, -3); 		#:: - Gem Choppers
-		quest::faction(240, -3); 		#:: - Deep Muses
+		quest::faction(238, 50); 		#:: + Dark Reflection
+		quest::faction(245, -5); 		#:: - Eldritch Collective
+		quest::faction(255, -5); 		#:: - Gem Choppers
+		quest::faction(240, -5); 		#:: - Deep Muses
 		#:: Grant a small amount of experience
 		quest::exp(150);
 	}	
@@ -76,11 +76,10 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set faction
-		quest::faction(238, 3); 		#:: + Dark Reflection
-		quest::faction(245, -3); 		#:: - Eldritch Collective
-		quest::faction(255, -3); 		#:: - Gem Choppers
-		quest::faction(333, -3); 		#:: - King A'Anon
-		quest::faction(239, 3); 		#:: + The Dead
+		quest::faction(238, 25); 		#:: + Dark Reflection
+		quest::faction(245, -2); 		#:: - Eldritch Collective
+		quest::faction(255, -2); 		#:: - Gem Choppers
+		quest::faction(333, -2); 		#:: - King A'Anon
 		#:: Grant a small amount of experience
 		quest::exp(200);
 	}
