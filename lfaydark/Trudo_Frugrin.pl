@@ -12,9 +12,6 @@ sub EVENT_SAY {
 			quest::say("You dare to speak to a member of the Eldritch Collective! You had best leave before you find your soul displaced from your body.");
 		}
 	}
-		
-		
-	}
 	elsif ($text=~/lens/i) {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
