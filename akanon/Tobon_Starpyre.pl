@@ -21,9 +21,19 @@ sub EVENT_SAY {
 		quest::say("Please look around. We have much knowledge within these halls. May you soon find your place among our members. Good day.");
 	}
 	elsif ($text=~/go on a little mission/i) {
-		quest::say("Fabulous! Here is a list of the observers outside of Ak'Anon. Go and ask each for a 'spare telescope lens'. Each should give you one. We have need of them. I await your return as does your reward, either Fire Bolt or Fingers of Fire. Meant for a skilled wizard of the eighth trial.");
-		#:: Give item 18868 - List (Observers List)
-		quest::summonitem(18868);
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
+			quest::say("Fabulous! Here is a list of the observers outside of Ak'Anon. Go and ask each for a 'spare telescope lens'. Each should give you one. We have need of them. I await your return as does your reward, either Fire Bolt or Fingers of Fire. Meant for a skilled wizard of the eighth trial.");
+			#:: Give item 18868 - List (Observers List)
+			quest::summonitem(18868);
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
+			quest::say("There is much more you must do for the Library of Mechanimagica before such things can be revealed to you.  Perhaps fetching minotaur horns and returning them to Professor Theardor will earn you membership to the Library of Mechanimagica.");
+		}
+		else {
+			quest::say("You dare to speak to a member of the Eldritch Collective! You had best leave before you find your soul displaced from your body.");
+		}
 	}
 	elsif ($text=~/yendar/i) {
 		quest::say("Oh, he is my older brother. Used to be the leader of the Eldritch Collective. Then he founded the Observers, a pretty good piece of work. Went off his rocker a long while back, though. Became obsessed with Innoruuk and the Teir'Dal. Stays away for days at a time, nobody knows where he has been. Mother still worries about him, asked me to keep an eye on him. But he is a grown gnome, and with his mastery of the art, has little to fear in this world or others. But if you are seeking him, I would look outside Ak'Anon, in the Steamfonts. That is where he makes his home these days.");
@@ -59,23 +69,43 @@ sub EVENT_ITEM {
 	}
 	#:: Match a 13275 - Telescope Lens, a 13276 - Telescope Lens, a 13277 - Telescope Lens, and a 13279 - Telescope Lens
 	elsif (plugin::takeItems(13275 => 1, 13276 => 1, 13277 => 1, 13279 => 1)) {
-		quest::say("Thank you for your work. I heard news of the troubles you encountered. Besides these troubles you still completed your mission. We are grateful. And as I once stated, your reward awaits.");
-		#:: Give a random reward: 15380 - Spell: Column of Frost, 15477 - Spell: Fire Bolt, 15656 - Spell: Shock of Ice
-		quest::summonitem(quest::ChooseRandom(15380, 15477, 15656));
-		#:: Ding!
-		quest::ding();
-		#:: Set factions
-		quest::faction(240, -5); 		#:: - The Dead
-		quest::faction(245, 100); 		#:: + Eldritch Collective
-		quest::faction(238, -15); 		#:: - Dark Reflection
-		quest::faction(255, 15); 		#:: + Gem Choppers
-		quest::faction(333, 15); 		#:: + King Ak'anon
-		#:: Grant a small amount of experience
-		quest::exp(100);
-		#:: Create a hash for storing cash - 900 to 1100cp
-		my %cash = plugin::RandomCash(900,1100);
-		#:: Grant a random cash reward
-		quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		#:: Match if faction is Amiable or better
+		if ($faction <= 4) {
+			quest::say("Thank you for your work. I heard news of the troubles you encountered. Besides these troubles you still completed your mission. We are grateful. And as I once stated, your reward awaits.");
+			#:: Give a random reward: 15380 - Spell: Column of Frost, 15477 - Spell: Fire Bolt, 15656 - Spell: Shock of Ice
+			quest::summonitem(quest::ChooseRandom(15380, 15477, 15656));
+			#:: Ding!
+			quest::ding();
+			#:: Set factions
+			quest::faction(240, -5); 		#:: - The Dead
+			quest::faction(245, 100); 		#:: + Eldritch Collective
+			quest::faction(238, -15); 		#:: - Dark Reflection
+			quest::faction(255, 15); 		#:: + Gem Choppers
+			quest::faction(333, 15); 		#:: + King Ak'anon
+			#:: Grant a small amount of experience
+			quest::exp(100);
+			#:: Create a hash for storing cash - 900 to 1100cp
+			my %cash = plugin::RandomCash(900,1100);
+			#:: Grant a random cash reward
+			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
+		}
+		#:: Match if faction is Indifferent
+		elsif ($faction == 5) {
+			quest::say("There is much more you must do for the Library of Mechanimagica before such things can be revealed to you.  Perhaps fetching minotaur horns and returning them to Professor Theardor will earn you membership to the Library of Mechanimagica.");
+			#:: Return a 13275 - Telescope Lens, a 13276 - Telescope Lens, a 13277 - Telescope Lens, and a 13279 - Telescope Lens
+			quest::summonitem(13275);
+			quest::summonitem(13276);
+			quest::summonitem(13277);
+			quest::summonitem(13279);
+		}
+		else {
+			quest::say("You dare to speak to a member of the Eldritch Collective! You had best leave before you find your soul displaced from your body.");
+			#:: Return a 13275 - Telescope Lens, a 13276 - Telescope Lens, a 13277 - Telescope Lens, and a 13279 - Telescope Lens
+			quest::summonitem(13275);
+			quest::summonitem(13276);
+			quest::summonitem(13277);
+			quest::summonitem(13279);
+		}
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
