@@ -1,9 +1,9 @@
 # Quest: Brain Bite (Concussion)
 
 sub EVENT_SAY {
-  if ($text=~/hail/i) {
-    quest::say("Save my.. Soul.. Find.. Wizard.. Desp..");
-  }
+	if ($text=~/hail/i) {
+		quest::say("Save my.. Soul.. Find.. Wizard.. Desp..");
+	}
 }
 
 sub EVENT_ITEM {
@@ -16,7 +16,6 @@ sub EVENT_ITEM {
 		#:: Depop without spawn timer
 		quest::depop();
 	}
-	
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
