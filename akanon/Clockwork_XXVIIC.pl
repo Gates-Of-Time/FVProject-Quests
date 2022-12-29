@@ -24,3 +24,15 @@ sub EVENT_ITEM {
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
+
+sub EVENT_AGGRO {
+	quest::say("Click...  Tick...  City violation. Code 5150.  This unit is authorized to execute punishment.  Please stand still.  Thank you.");
+}
+
+sub EVENT_NPC_SLAY {
+	quest::say("Click...  Whirr...  Threat has been suppressed.  This unit returning to normal operations.");
+}
+
+sub EVENT_SLAY {
+	quest::say("Click...  Whirr...  Threat has been suppressed.  This unit returning to normal operations.");
+}
