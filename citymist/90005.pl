@@ -6,7 +6,7 @@ sub EVENT_DEATH_COMPLETE {
 		quest::spawn2(90174, 0, 0, $x, $y, $z, $h);
 	}
 	else {
-		#:: Spawn a City of Mist >> a_black_reaver  (90004), without grid or guild war, at the current location
-		quest::spawn2(90004, 0, 0, $x, $y, $z, $h);
+		#:: Spawn a City of Mist >> a_black_reaver (90005), without grid or guild war, at the current location
+		quest::spawn2(90005, 0, 0, $x, $y, $z, $h);
 	}
 }
