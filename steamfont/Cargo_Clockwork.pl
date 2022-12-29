@@ -27,10 +27,19 @@ sub EVENT_TIMER {
 		if (!quest::get_data($key)) {
 			#:: Match if the time is 8 AM
 			if ($zonehour == 8) {
-				#:: Set the data bucket for 7200s (2 hours)
-				quest::set_data($key, 1, 7200);
-				#:: Start path grid 177 - path to the windmills
-				quest::start(177);
+				#:: Key a data bucket
+				$key = $npc->GetCleanName() . "-five-days";
+				#:: Match if the data bucket does not exist
+				if (!quest::get_data($key)) {
+					#:: Set the data bucket for 432,000 seconds (5 days)
+					quest::set_data($key, 1, 432000);
+					#:: Key a data bucket
+					$key = $npc->GetCleanName() . "-failed";
+					#:: Set the data bucket for 7200s (2 hours)
+					quest::set_data($key, 1, 7200);
+					#:: Start path grid 177 - path to the windmills
+					quest::start(177);
+				}
 			}
 		}
 		#:: Match if at the spawnpoint (WP 0) and if delivery was completed
