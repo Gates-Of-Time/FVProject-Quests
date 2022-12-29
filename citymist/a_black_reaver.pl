@@ -2,8 +2,8 @@ sub EVENT_DEATH_COMPLETE {
 	#:: Create a scalar variable to store a random number 1 to 100
 	my $random = int(rand(100)) + 1;
 	if ($random < 80) {
-		#:: Spawn a City of Mist >> a_black_reaver  (90005), without grid or guild war, at the current location
-		quest::spawn2(90005, 0, 0, $x, $y, $z, $h);
+		#:: Spawn a City of Mist >> a_black_reaver  (90004), without grid or guild war, at the current location
+		quest::spawn2(90004, 0, 0, $x, $y, $z, $h);
 	}
 	elsif ($random < 85) {
 		#:: Spawn a City of Mist >> Lord_Ghiosk (90180), without grid or guild war, at the current location
