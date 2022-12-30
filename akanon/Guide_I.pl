@@ -7,36 +7,36 @@ sub EVENT_TIMER {
 	}
 	elsif ($timer eq "checkloc") {
 		#:: Library
-		if (($x == -771) && (y == 1210)) {
+		if (($x == -771) && ($y == 1210)) {
 			#:: Create a timer "return" that loops every 1 second
 			quest::settimer("return", 1);
 		}
 		#:: Abbey
-		elsif (($x == -606) && (y == 1207)) {
+		elsif (($x == -606) && ($y == 1207)) {
 			quest::settimer("return", 1);
 		}
 		#:: Forge
-		elsif (($x == -739) && (y == 1239)) {
+		elsif (($x == -739) && ($y == 1239)) {
 			quest::settimer("return", 1);
 		}
 		#:: Gemchopper
-		elsif (($x == -471) && (y == 957)) {
+		elsif (($x == -471) && ($y == 957)) {
 			quest::settimer("return", 1);
 		}
 		#:: Palace
-		elsif (($x == -365) && (y == 902)) {
+		elsif (($x == -365) && ($y == 902)) {
 			quest::settimer("return", 1);
 		}
 		#:: Great Wheel
-		elsif (($x == -544) && (y == 1420)) {
+		elsif (($x == -544) && ($y == 1420)) {
 			quest::settimer("return", 1);
 		}
 		#:: Exit
-		elsif (($x == -35) && (y == 5)) {
+		elsif (($x == -35) && ($y == 5)) {
 			quest::settimer("return", 1);
 		}
 		#:: Works
-		elsif (($x == 151) && (y == 717)) {
+		elsif (($x == 151) && ($y == 717)) {
 			quest::settimer("return", 1);
 		}
 	}	
