@@ -1,5 +1,5 @@
 my $LockoutTime = 345600;
-my @Data = ("timorous", 406, 2194, -5392, 6, 0s);
+my @Data = ("timorous", 406, 2194, -5392, 6, 0);
 
 sub EVENT_SAY {
 	$raid = $client->GetRaid();
