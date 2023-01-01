@@ -15,24 +15,18 @@ sub EVENT_SPAWN {
 	my @clist = $entity_list->GetClientList();
 	foreach my $c (@clist) {
 		if ($c->CalculateDistance($x, $y, $z) < 150) {
-			my $random = int(rand(6)) + 1;
+			my $random = int(rand(4)) + 1;
 			if ($random == 1) {
-				$client->MovePC($zoneid, $jailX + 10, $jailY - 10, $jailZ, $jailW);
+				DoSummonPlayer(10, -10);
 			}
 			elsif ($random == 2) {
-				$client->MovePC($zoneid, $jailX - 10, $jailY + 10, $jailZ, $jailW);
+				DoSummonPlayer(-10, 10);
 			}
 			elsif ($random == 3) {
-				$client->MovePC($zoneid, $jailX + 10, $jailY - 10, $jailZ, $jailW);
+				DoSummonPlayer(10, 10);
 			}
 			elsif ($random == 4) {
-				$client->MovePC($zoneid, $jailX - 10, $jailY + 10, $jailZ, $jailW);
-			}
-			elsif ($random == 5) {
-				$client->MovePC($zoneid, $jailX + 10, $jailY + 10, $jailZ, $jailW);
-			}
-			elsif ($random == 6) {
-				$client->MovePC($zoneid, $jailX - 10, $jailY - 10, $jailZ, $jailW);
+				DoSummonPlayer(-10, -10);
 			}
 			my $classplural = "${class}s";
 			$client->Message(15, "What we've got here, is a failure to communicate.  Some $classplural you just can't reach.");
@@ -42,24 +36,18 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_EXIT {
-	my $random = int(rand(6)) + 1;
+	my $random = int(rand(4)) + 1;
 	if ($random == 1) {
-		$client->MovePC($zoneid, $jailX + 10, $jailY - 10, $jailZ, $jailW);
+		DoSummonPlayer(10, -10);
 	}
 	elsif ($random == 2) {
-		$client->MovePC($zoneid, $jailX - 10, $jailY + 10, $jailZ, $jailW);
+		DoSummonPlayer(-10, 10);
 	}
 	elsif ($random == 3) {
-		$client->MovePC($zoneid, $jailX + 10, $jailY - 10, $jailZ, $jailW);
+		DoSummonPlayer(10, 10);
 	}
 	elsif ($random == 4) {
-		$client->MovePC($zoneid, $jailX - 10, $jailY + 10, $jailZ, $jailW);
-	}
-	elsif ($random == 5) {
-		$client->MovePC($zoneid, $jailX + 10, $jailY + 10, $jailZ, $jailW);
-	}
-	elsif ($random == 6) {
-		$client->MovePC($zoneid, $jailX - 10, $jailY - 10, $jailZ, $jailW);
+		DoSummonPlayer(-10, -10);
 	}
 	my $classplural = "${class}s";
 	$client->Message(15, "What we've got here, is a failure to communicate.  Some $classplural you just can't reach.");
@@ -71,5 +59,16 @@ sub EVENT_TIMER {
 	if ($timer eq "depop") {
 		quest::say("Don't let me catch you doing that again or I will drag you into the Realms of Discord!");
 		quest::depop();
+	}
+}
+
+sub DoSummonPlayer {
+	my ($modX, $modY) = @_;
+	$instanceId = $client->GetInstanceID();
+	if ($client->GetInstanceID() > 0) {
+		$client->MovePCInstance($zoneid, $instanceId, $jailX + $modX, $jailY + $modY, $jailZ, $jailW);
+	}
+	else {
+		$client->MovePC($zoneid, $jailX + $modX, $jailY + $modY, $jailZ, $jailW);
 	}
 }
