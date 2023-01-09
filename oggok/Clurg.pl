@@ -45,8 +45,14 @@ sub EVENT_ITEM {
 		#:: Match if faction is Amiable or better
 		if ($faction <= 4) {
 			quest::say("'Ahhh!! My Barkeep Compendium has been returned!! I am in your debt. I do not like to be in any man's debt. Let me offer you this as payment for your great service. Obtaining my book could not have been a simple task.");
-			#:: Give a 6359 - Stein of Moggok
-			quest::summonitem(6359);
+			if ( quest::is_content_flag_enabled("Classic_OldWorldDrops")) {	
+				#:: Give a 6359 - Stein of Moggok
+				quest::summonitem(6359);
+			} else {
+				#:: Give a 13380 - Stein of Moggok
+				quest::summonitem(13380);
+			}
+			
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
