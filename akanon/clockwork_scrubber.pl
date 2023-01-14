@@ -38,7 +38,7 @@ sub EVENT_TIMER {
 	#:: Pull a list of clients from the entity list
 	my @ClientList = $entity_list->GetClientList();
 	#:: Match if the ClientList array is empty
-	if (scalar @ClientList == 0) {
+	if (scalar @ClientList != 0) {
 		#:: Pull a list of objects from the entity list
 		my @objects = $entity_list->GetObjectList();
 		#:: Loop through each
