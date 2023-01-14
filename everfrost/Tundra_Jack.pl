@@ -57,7 +57,7 @@ sub EVENT_SIGNAL {
 	}
 }	
 
-sub WAYPOINT_ARRIVE {
+sub EVENT_WAYPOINT_ARRIVE {
 	if ($wp == 14 || $wp == 45) {
 		quest::say("Come on, Iceberg! Time to do a little mining.");
 	}
