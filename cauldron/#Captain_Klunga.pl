@@ -1,6 +1,14 @@
 sub EVENT_SPAWN {
-	#:: Appearance 1 - Sit
-	$npc->SetAppearance(1);
+	#:: Create a timer 'sit' that triggers ever 5 seconds
+	quest::settimer("sit", 5);
+}
+
+sub EVENT_TIMER {
+	#:: Match timer 'sit'
+	if ($timer eq "sit") {
+		#:: Appearance 1 - Sit
+		$npc->SetAppearance(1);
+	}
 }
 
 sub EVENT_ITEM {
@@ -8,6 +16,8 @@ sub EVENT_ITEM {
 	if (plugin::takeItems(12278 => 1)) {
 		#:: Appearance 0 - Stand
 		$npc->SetAppearance(0);
+		#:: Turn fly mode on
+		quest::FlyMode(1);
 		#:: Move to the specified location and guard 
 		quest::moveto(-395.87, 807.04, 71.78, 0, 1);
 	}
@@ -16,6 +26,8 @@ sub EVENT_ITEM {
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
+	#:: Turn fly mode off
+	quest::FlyMode(0);
 	#:: Create a 12274 - Chalice of Conquest at specified coordinates (lower z to appear on ground)
 	quest::creategroundobject(12274, -395.87, 807.04, 68, 0);
 	#:: Create a proximity, 20 units across, 20 units tall, without proximity say
