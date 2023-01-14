@@ -40,20 +40,18 @@ sub EVENT_ITEM {
 	#:: Match 18946 - Bloodstained Note, 12280 - Klunga's Bracelet, and 100 gold
 	if (plugin::takeItemsCoin(0, 0, 100, 0, 12280 => 1, 18946 => 1)) {
 		quest::say("Biggily boo, biggily borc.. Raise that stinky orc!! Bamm!! Okay!! It's done. Now all you have to do is find him in the spot where his soul left him and give him an orc shovel. Oh!! I didn't mention that? Oh, well. I'm sure you can find one.. somewhere. Now, get lost before I turn you into a toad!");
-		#:: Give a 12277 - Candle of Bravery
-		quest::summonitem(12277);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(245, 25);		#:: + Eldritch Collective
-		quest::faction(238, -25);		#:: - Dark Reflection
-		quest::faction(239, -25); 		#:: - The Dead
-		quest::faction(255, 25);		#:: + Gem Choppers
-		quest::faction(333, 25); 		#:: + King Ak'Anon
+		quest::faction(245, 5);			#:: + Eldritch Collective
+		quest::faction(238, -1);		#:: - Dark Reflection
+		quest::faction(239, -1); 		#:: - The Dead
+		quest::faction(255, 1);			#:: + Gem Choppers
+		quest::faction(333, 1); 		#:: + King Ak'Anon
 		#:: Grant a large amount of experience
 		quest::exp(18000);
-		#:: Spawn Dagnor's Cauldron >> #Captain_Klunga (70072)
-		quest::spawn2(70072, 0, 0, -2133.49, -727.05, 154.86, 0);
+		#:: Spawn one and only one Dagnor's Cauldron >> #Captain_Klunga (70072) at the specified coordinates
+		quest::unique_spawn(70072, 0, 0, -2133.49, -727.05, 154.86, 0);
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
