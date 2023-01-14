@@ -19,3 +19,7 @@ sub EVENT_ITEM {
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
+
+sub EVENT_AGGRO {
+	quest::say("Die, like a motherless gnoll!");
+}
