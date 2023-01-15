@@ -25,9 +25,11 @@ sub EVENT_ITEM {
 sub EVENT_TIMER {
 	#:: Match timer 'check'
 	if ($timer eq "check") {
+		#:: Match Karnor's Castle >> #Venril_Sathir (102112)
 		if ($entity_list->IsMobSpawnedByNpcTypeID(102112)) {
-		quest::stoptimer("check");
-		#:: Depop with spawn timer active
-		quest::depop_withtimer();
+			quest::stoptimer("check");
+			#:: Depop with spawn timer active
+			quest::depop_withtimer();
+		}
 	}
 }
