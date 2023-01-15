@@ -15,4 +15,6 @@ sub EVENT_ITEM {
 		$mob1attack->AddToHateList($client, 1);
 		quest::depop();
 	}
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
