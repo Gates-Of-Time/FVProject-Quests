@@ -30,7 +30,7 @@ sub EVENT_TIMER {
 				my $cdist = $npc->CalculateDistance($mobX, $mobY, $mobZ);
 				#:: Match if the item is near the NPC
 				if ($cdist <= 20) {
-					quest::emote("Clockwork Scrubber clicks as a plate slides to the side revealing a hose that extends and sucks up an item off the ground.");
+					quest::emote("clicks as a plate slides to the side revealing a hose that extends and sucks up an item off the ground.");
 					#:: Remove the item from the ground
 					$thing->Depop();
 					#:: Add the item to the NPC loot table
