@@ -1,3 +1,7 @@
+sub EVENT_AGGRO {
+	quest::say("Grrrrr. Bark. Bark. Grrrrr.");
+}
+
 sub EVENT_SPAWN {
 	my $min = 1;
 	my $range = 4;
