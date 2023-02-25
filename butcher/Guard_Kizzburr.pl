@@ -16,3 +16,8 @@ sub EVENT_SLAY {
 sub EVENT_DEATH_COMPLETE {
 	quest::say("My brothers of the Stormguard shall avenge me!! Your days are numbered!");
 }
+
+sub EVENT_ITEM {
+	#:: Return unused items
+	plugin::returnUnusedItems();
+}
