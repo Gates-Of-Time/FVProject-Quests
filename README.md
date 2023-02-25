@@ -1,9 +1,6 @@
 # FVProject Quests
 These are the quest files for [The Firionia Vie Project](https://fvproject.com/) emulated server.  These quest scripts cover Original EverQuest, as well as a portion of Kunark content that we have released.
 
-## Closed Source
-These quest scripts are closed source.  All rights are reserved.
-
 ## Contributing
 Please review our [Coding Conventions](https://github.com/Gates-Of-Time/FVProject-Quests/blob/master/CONTRIBUTING.md) and feel free to join in!
 
