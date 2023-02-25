@@ -1,3 +1,7 @@
+sub EVENT_AGGRO {
+	quest::emote("hisses and strikes!");
+}
+
 sub EVENT_SPAWN {
 	my $min = 1;
 	my $range = 4;
