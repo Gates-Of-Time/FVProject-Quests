@@ -6,13 +6,13 @@ sub EVENT_COMBAT {
 		if ($Random <= 20) {
 			quest::say("Your kind is not welcome here! Prepare to die!");
 		}
-		elsif ($Random <= 40)) {
+		elsif ($Random <= 40) {
 			quest::say("Your dead corpse will soon line my pockets with gold!");
 		}
-		elsif ($Random <= 60)) {
+		elsif ($Random <= 60) {
 			quest::say("How dare you enter our realm!");
 		}
-		elsif ($Random <= 80)) {
+		elsif ($Random <= 80) {
 			quest::say("I shall bathe in the blood of you and your fellows!");
 		}
 		else {
