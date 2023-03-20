@@ -31,12 +31,12 @@ sub EVENT_TIMER {
 				$key = $npc->GetCleanName() . "-five-days";
 				#:: Match if the data bucket does not exist
 				if (!quest::get_data($key)) {
-					#:: Set the data bucket for 432,000 seconds (5 days)
-					quest::set_data($key, 1, 432000);
+					#:: Set the data bucket for 21,600 seconds (5 game days)
+					quest::set_data($key, 1, 21600);
 					#:: Key a data bucket
 					$key = $npc->GetCleanName() . "-failed";
-					#:: Set the data bucket for 7200s (2 hours)
-					quest::set_data($key, 1, 7200);
+					#:: Set the data bucket for 4320 seconds (1 game day)
+					quest::set_data($key, 1, 4320);
 					#:: Start path grid 177 - path to the windmills
 					quest::start(177);
 				}
