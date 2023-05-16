@@ -4,7 +4,7 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
-	if ($wp == 8) {
+	if ($wp == 7) {
 		quest::say("Hello, Alayle. We just got a message from Qeynos. I think you should come with me.");
 		#:: Send a signal '1' to West Freeport >> Guard_Alayle (9141) with no delay
 		quest::signalwith(9141, 1, 0);
