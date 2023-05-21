@@ -1,6 +1,3 @@
-#:: Test of Illusion - Enchanter 1.0 Epic - Chalice of Kings
-#:: Items: 10627, 10608
-
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::say("I hope you have been sent by the King.  There is an urgent matter at hand.");
@@ -19,6 +16,7 @@ sub EVENT_ITEM {
 		quest::say("Vengeance has been fufilled! However, the King still has a heavy heart. Not until Firiona has been returned can this sadness be lifted. But in appreciation of your efforts, I am honored to present to you the King's Chalice.");
 		#:: Ding!
 		quest::ding();
+		#:: Give 100,000 experience
 		quest::exp(100000);
 		#:: Give item 10608 - Chalice of Kings
 		quest::summonitem(10608);
@@ -27,5 +25,3 @@ sub EVENT_ITEM {
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
-
-#:: EOF Zone: felwitheb ID: 62000 NPC: Joren_Nobleheart

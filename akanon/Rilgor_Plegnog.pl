@@ -60,13 +60,17 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of level-based experience
 		$client->AddLevelBasedExp(2.5, 1);
 	}
+	#:: Match a 1360 - Shining Metallic Robes
 	elsif (plugin::takeItems(1360 => 1)) {
 		quest::say("Very nice!! It is perfect! Here take this pen. Have fun with it.");
+		#:: Ding!
 		quest::ding();
+		#:: Give 50,000 experience
 		quest::exp(50000);
 		#:: Give item 10600 - Mechanical Pen
 		quest::summonitem(10600);
 	}
+	#:: Match a 54317 - Insidious Bundle
 	elsif (plugin::takeItems(54317 => 1)) {
 		quest::say("'Very fine it is. So kind of you to fulfill a dream of mine. I believe this device should be able to handle just about anything you'd need. In fact, if I were you I would take it along to your master right away.' ");
 		#:: Give item 52945 - Gnomish Translating Device

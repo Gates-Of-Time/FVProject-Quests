@@ -1,5 +1,3 @@
-#:: Test of Charm - Enchanter Epic 1.0 - Enchanted Ruby
-
 sub EVENT_ITEM {
 	if ( quest::is_content_flag_enabled("Kunark_EpicsEra")) {
 		#:: Match a 10633 - Dull Ruby

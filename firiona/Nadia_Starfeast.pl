@@ -1,14 +1,12 @@
-#:: Test of Charm - enchanter epic - start of quest
-#:: Items: 17861, 10631, 10632, 10633, 10634, 10604, 10637, 10612
-
 sub EVENT_SAY {
   if ($text=~/hail/i) {
     quest::say("Hello my dear. I am quite pleased to make your acquaintance. Perhaps even charmed!");
   }
+  #:: Verify player has a 10604 - Jeb's Seal before responding to quests for a 17861 - An Enchanters Sack
   if ($text=~/i need a sack/i && plugin::check_hasitem($client,10604)) {
     quest::say("Take this sack and combine the items I requested in it. Then return it to me.");
 	#:: Give item 17861 - An Enchanters Sack
-    quest::summonitem(17861); #An Enchanters Sack
+    quest::summonitem(17861);
   }
   if ($text=~/gems/i) {
     quest::say("I have prepared some gems that you will need to trap the essence. You will need to force a diamond, sapphire, ruby and emerald onto special creatures to obtain their essence.");
@@ -56,5 +54,3 @@ sub EVENT_ITEM {
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
-
-# EOF Zone: firiona ID: 84116 NPC: Nadia_Starfeast
