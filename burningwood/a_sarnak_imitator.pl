@@ -2,11 +2,12 @@ sub EVENT_SAY {
 	$key_EnchPre = $name . "-EnchPre";
 	$key_ench_epic = $name . "-ench_epic";
   if ($text=~/hail/i) {
-		#:: Check for 10650 - Staff of the Serpent OR Match if the key equals 2
+		#:: Check for 10650 - Staff of the Serpent OR Match if the key equals 2 for prequest
 		if ($npc->HasItem(10650) || quest::get_data($key_EnchPre) == 2) {
 			quest::say("Much time has passed since the creation of the Staff of the Serpent. The power of discord is seeping into our fair world, and only the most powerful of us shall stand to force it back. The time has come for a new tool, and a new breed of enchanter. [Are you prepared] to meet this challenge?");
 			#:: Match if the key does not exist
 			if(!quest::get_data($key_ench_epic)) {
+				#:: Flag player to start epic
 				quest::set_data($key_ench_epic, 1);
 			}
 		}
@@ -115,7 +116,7 @@ sub EVENT_ITEM {
 				quest::summonitem(52952);
 				#:: Award AA points
 				$client->AddAAPoints(5);
-    		$client->Message(15,'You have gained 5 ability points!');
+				$client->Message(15,'You have gained 5 ability points!');
 				#:: Ding!
 				quest::ding();
 				quest::set_data($key_ench_epic, quest::get_data($key_ench_epic) + 1);

@@ -18,9 +18,11 @@ sub EVENT_ITEM {
 		quest::summonitem(12100);
 		#:: Ding!
 		quest::ding();
-		#:: Part of Enchanter Epic 1.0
-		#:: Spawn The Western Plains of Karana >> Thrackin_Griften (12172), with no pathing grid or guild war set, at the specified location
-		#:: quest::spawn2(12172, 0, 0, -11570, 878, 14, 135);
+		if ( quest::is_content_flag_enabled("Kunark_EpicsEra")) {
+			#:: Part of Enchanter Epic 1.0
+			#:: Spawn The Western Plains of Karana >> Thrackin_Griften (12172), with no pathing grid or guild war set, at the specified location
+			quest::spawn2(12172, 0, 0, -11570, 878, 14, 135);
+		}
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
