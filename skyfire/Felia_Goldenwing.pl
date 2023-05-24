@@ -1,6 +1,3 @@
-#:: Test of Charm - Enchanter Epic 1.0 - Enchanted Sapphire
-#:: Items: 10632, 10619
-
 sub EVENT_ITEM {
 	if ( quest::is_content_flag_enabled("Kunark_EpicsEra")) {
 		#::Match 10632 - Dull Sapphire
@@ -13,5 +10,3 @@ sub EVENT_ITEM {
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
-
-#:: EOF Zone: skyfire ID: 91081 NPC: Felia_Goldenwing

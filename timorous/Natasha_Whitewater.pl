@@ -1,12 +1,11 @@
-# NPC:96080 Natasha Whitewater, Cleric Epic 1.0 Quest NPC
 sub EVENT_SPAWN {
 	quest::settimer("natasha_depop", 300); # Start timer to despawn after 5 minutes
 }
 
 sub EVENT_SAY {
-  if ($text=~/hail/i) {
-#    quest::say();
-  }
+	if ($text=~/hail/i) {
+	#:: No dialogue
+	}
 }
 
 sub EVENT_TIMER {

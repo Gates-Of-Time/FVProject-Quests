@@ -17,7 +17,7 @@ sub EVENT_TIMER
 {
 	if ($timer == "NatashaDepop")
 	{
-		# Player did not hand item in within 5 minutes, leave.
+		# Player did not hand item in within 5 minutes of her spawning, leave.
 		quest::depop();
 	}
 }
@@ -42,5 +42,7 @@ sub EVENT_SIGNAL {
 	if ($signal == 199) {
 		quest::say("Enough!! Your existence has come to an end!!");
 		quest::say("This conflict has been destined by the waters of the Triumvirate!!");
+		#:: Send a signal '99' to Lake Rathetear >> Shmendrik_Lavawalker (51012) with no delay
+		quest::signalwith(51012, 299, 0);
 	}
 }

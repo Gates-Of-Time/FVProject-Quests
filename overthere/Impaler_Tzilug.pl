@@ -1,6 +1,3 @@
-# Test of Charm - Enchanter Epic 1.0 - Enchanted Emerald
-# items: 10634, 10621
-
 sub EVENT_ITEM {
 	if ( quest::is_content_flag_enabled("Kunark_EpicsEra")) {
 		#:: Match 10634 - Dull Emerald
@@ -13,7 +10,6 @@ sub EVENT_ITEM {
 		}
 	}
 
-	plugin::return_items(\%itemcount);
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
-
-# EOF Zone: overthere ID: 93149 NPC: Impaler_Tzilug
