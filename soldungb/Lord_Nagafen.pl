@@ -5,6 +5,16 @@ sub EVENT_SPAWN {
 	quest::set_proximity($x - 200, $x + 200, $y - 200, $y + 200, $z - 200, $z + 200, 0);
 	#:: Create a HP event at 96 percent health
 	quest::setnexthpevent(96);
+
+	#:: Disable Pre-Revamp spawn point for Zordak Ragefire in Nagafen's Lair
+	quest::disable_spawn2(369867);
+	#:: Send a signal '1' (depop) to Nagafen's Lair >> Zordak_Ragefire (32038) with no delay
+	quest::signalwith(32038, 1, 0);
+}
+
+sub EVENT_DEATH {
+	#:: Enable Pre-Revamp spawn point for Zordak Ragefire in Nagafen's Lair
+	quest::enable_spawn2(369867);
 }
 
 sub EVENT_AGGRO {
@@ -70,3 +80,12 @@ sub WIPE_AGGRO {
 	#:: Create a HP event at 96 percent health
 	quest::setnexthpevent(96);
 }
+
+sub EVENT_SIGNAL {
+	#:: Match a signal '2' from Nagafen's Lair >> Zordak_Ragefire (32038)
+	if ($signal == 2) {
+		#:: Send 
+		quest::signalwith(32038, 1, 0);
+	}
+}
+
