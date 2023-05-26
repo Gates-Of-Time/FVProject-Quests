@@ -18,7 +18,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match a 10600 - Mechanical Pen, 10601 - Ink of the Dark, and 10602 - White Paper
-	if (plugin::takeItems(10600 => 1, 10601 => 1, 10602 => 1) {
+	if (plugin::takeItems(10600 => 1, 10601 => 1, 10602 => 1)) {
 		quest::say("Yes, that is what I wanted. Here, take these notes. My teacher will be very interested if he is shown what I have found.");
 		#:: Ding!
 		quest::ding();
@@ -26,9 +26,9 @@ sub EVENT_ITEM {
 		#:: Give a 10603 - Copy of Notes
 		quest::summonitem(10603);
 		#:: Give 50,000 experience
-		quest::exp(50000);)
+		quest::exp(50000);
 	#:: Match a 54008 - Dimly Glowing Ring, and a 54007 - Note to Stofo
-	} elsif(plugin::takeItems(54008 => 1, 54007 => 1) {
+	} elsif(plugin::takeItems(54008 => 1, 54007 => 1)) {
 		quest::emote("scans the note quickly and gasps. Hardly glancing at you, he begins examining the ring, tearing through notes and books scattered about his dark room. As he pores over a scroll of parchment covered in strange texts his eyes light up, 'Yes, yes this is it! Ofala really found something quite remarkable in this one! Watch my friend.' The slim Erudite slips the ring onto his finger and the gem begins to throb, Stofo seems to draw the power into himself for a moment then carefully places the ring back onto his desk. He closes his eyes a moment then turns to you, the darkness in his eyes almost lends fear for a moment before he smiles. 'Thank you my friend, this stone is very dangerous, but I believe that I have accessed the powers within me through it. Take these words and use them well, perhaps the power shall work for you as well, and please tell my dear sister hello.'");
 		#:: Ding!
 		quest::ding();
