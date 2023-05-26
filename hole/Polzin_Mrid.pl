@@ -31,7 +31,7 @@ sub EVENT_ITEM {
 	#:: Match a 10638 - Sack For Polzin
 	elsif (plugin::takeItems(10638 => 1)) {
 		quest::say("You have done well, take this last piece and return them to Jeb. He will be able to complete the final crafting.");
-		quest::faction(404,30); # Faction: +30 Truespirit
+		quest::faction(404, 30); # Faction: +30 Truespirit
 		#:: Give 100,000 experience
 		quest::exp(100000);
 		#:: Give a 10613 - 4th Piece of Staff
