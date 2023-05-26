@@ -6,11 +6,11 @@ sub EVENT_SPAWN {
 	quest::signalwith(32040, 2, 0);
 
     #:: Match a Nagafen's Lair >> Lord_Nagafen (32040) on the entity list
-#    if ($entity_list->IsMobSpawnedByNpcTypeID(32040)) {
-#		quest::stoptimer(1);
+    if ($entity_list->IsMobSpawnedByNpcTypeID(32040)) {
+		quest::stoptimer(1);
 		#:: Despawn and start respawn timer - maybe Naggy will be down next time
-#        quest::depop_withtimer();
-#    }
+        quest::depop_withtimer();
+    }
 }
 
 sub EVENT_SAY {
@@ -31,10 +31,6 @@ sub EVENT_ITEM
 			#:: Despawn Zordak Ragefire ("merchant" version)
 			quest::depop_withtimer();
 
-			my $x = $npc->GetX();
-			my $y = $npc->GetY();
-			my $z = $npc->GetZ();
-			my $h = $npc->GetHeading();
 			#:: Spawn one and only one Nagafen's Lair >> 32000 - #Zordak_Ragefire (KOS non-merchant version) without grid or guild war, at the current coordinates
 			quest::unique_spawn(32000, 0 , 0, $x, $y, $z, $h);
 
