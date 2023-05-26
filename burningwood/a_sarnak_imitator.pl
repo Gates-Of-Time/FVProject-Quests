@@ -114,9 +114,11 @@ sub EVENT_ITEM {
 				quest::say("You have done well, my student. The staff is now complete. In order to stand up to the true fury of discord, it will need purifying, but even in this state it shall protect you well.");
 				#:: Give a 52952 - Oculus of Persuasion
 				quest::summonitem(52952);
-				#:: Award AA points
-				$client->AddAAPoints(5);
-				$client->Message(15,'You have gained 5 ability points!');
+				if (quest::is_current_expansion_the_shadows_of_luclin()) {
+					#:: Award AA points
+					$client->AddAAPoints(5);
+					$client->Message(15,'You have gained 5 ability points!');
+				}
 				#:: Ding!
 				quest::ding();
 				quest::set_data($key_ench_epic, quest::get_data($key_ench_epic) + 1);
