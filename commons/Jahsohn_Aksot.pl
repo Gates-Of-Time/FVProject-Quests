@@ -11,13 +11,20 @@ sub EVENT_SAY {
 	if ($text=~/what task/i) {
 		quest::say("Bring me the torn pages of Magi'kot. The first section can be found in the depths of a tainted forest, warded by an angry lupine. It is also rumored that one section is found in the haunted estate of a murderer, on a many armed creature. The last may be found in the belly of an amphibian who thirsts for blood.");
 	}
-	if ($text=~/bantil sent me/i) {
-		quest::say("You are working with Bantil? I hope you had some luck finding the books. Let me know if there is anything I can do to help you. Bantil is a friend, despite his gnomish heritage.");
-		quest::setglobal("mage_epic_jah", 1, 5, "F");
-		if(defined $qglobals{mage_epic_wal}) {
-			quest::say("Oh, you may want to speak to Akksstaff again, he and Bantil never quite saw eye to eye, you may want to ask him about Bantil again.");
-		}
-	}   
+	#:: Mage Epic 1.5 Quest dialogue from the Omens of War expansion
+	if (quest::is_omens_of_war_enabled()) {
+		if ($text=~/bantil sent me/i) {
+			quest::say("You are working with Bantil? I hope you had some luck finding the books. Let me know if there is anything I can do to help you. Bantil is a friend, despite his gnomish heritage.");
+
+			$mage_epic_jah = $name . "-mage_epic_jah";
+			quest::set_data($mage_epic_jah, 1);
+
+			$mage_epic_wal = $name . "-mage_epic_wal";
+			if(defined quest::get_data($mage_epic_wal)) {
+				quest::say("Oh, you may want to speak to Akksstaff again, he and Bantil never quite saw eye to eye, you may want to ask him about Bantil again.");
+			}
+		}   
+	}
 }
 
 sub EVENT_ITEM {

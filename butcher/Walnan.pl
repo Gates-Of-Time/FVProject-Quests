@@ -1,5 +1,4 @@
 sub EVENT_SAY {
-	my $qglobals = plugin::var('qglobals');    
 	if ($text=~/hail/i) {
 		quest::say("Hallo, $name! I am Walnan, elementalist, summoner, wanderer, and sometimes teacher. Might you be a elementalist in search of the truth?");
 	}
@@ -12,11 +11,18 @@ sub EVENT_SAY {
 	elsif ($text=~/no/) {
 		quest::say("Only a few elementalists and followers outside our circle know what truly happened to Magi'kot. Even now, many are fearful to speak of his name. If you truly wish to continue, here is what you must do. Gather the Power of the Earth, warded by a fae creature. Then seek the Power of Fire, held by an elemental. Next you will need the Power of Wind, held by a twirling and prancing wanderer who has been corrupted. Finally, the Power of Water, held by a ravenous beast who is the minion of a fallen Sarnak. Bring them all to me, and I shall give you the Power of the Elements.");
 	}
-	if ($text=~/bantil sent me/i) {
-		quest::say("How is good old Bantil doing? I'm afraid I don't have any information for you, but if I hear anything I'll be sure to tell you.");
-		quest::setglobal("mage_epic_wal", 1, 5, "F");
-		if (!defined $qglobals{"mage_epic_jah"}) {
-			quest::say("Oh, you may want to speak to Akksstaff again, he and Bantil never quite saw eye to eye, you may want to ask him about Bantil again.");
+	#:: Mage Epic 1.5 Quest dialogue from the Omens of War expansion
+	if (quest::is_omens_of_war_enabled()) {
+		if ($text=~/bantil sent me/i) { #:: Bantil from Plane of Knowledge
+			quest::say("How is good old Bantil doing? I'm afraid I don't have any information for you, but if I hear anything I'll be sure to tell you.");
+
+			$mage_epic_wal = $name . "-mage_epic_wal";
+			quest::set_data($mage_epic_wal, 1);
+
+			$mage_epic_jah = $name . "-mage_epic_jah";
+			if (!defined quest::get_data($mage_epic_jah)) {
+				quest::say("Oh, you may want to speak to Akksstaff again, he and Bantil never quite saw eye to eye, you may want to ask him about Bantil again.");
+			}
 		}
 	}
 }

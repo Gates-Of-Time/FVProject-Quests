@@ -21,5 +21,7 @@ sub EVENT_ITEM {
 		#:: Give 2000 experience
 		quest::exp(2000);
 	}
-	plugin::return_items(\%itemcount);
+
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
