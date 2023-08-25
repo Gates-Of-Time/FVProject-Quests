@@ -1,5 +1,5 @@
 my $LockoutTime = 345600;
-my @Data = ("skyfire", 345, -4327, -1089, 44, 128);
+my @Data = ("sebilis", 89, -1, 248, 41, 255);
 
 sub EVENT_SAY {
 	$raid = $client->GetRaid();
