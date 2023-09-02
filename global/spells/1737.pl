@@ -13,8 +13,8 @@ sub EVENT_CAST_BEGIN {
 			&& $zoneid != 107 # nurga 
 			&& $zoneid != 89 # sebilis 
 			) {
-				$mob->InterruptSpell();
-				$Client->Message(0,"Your portal is too unstable, and collapses.");
+				$client->InterruptSpell();
+				$client->Message(0,"Your portal is too unstable, and collapses.");
 		}
     }
 }
