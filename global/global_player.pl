@@ -151,3 +151,50 @@ sub EVENT_LEVEL_UP {
         }
     }
 }
+
+# Sub to handle Kunark evac spell limitations untill velious
+sub KunarkEvacHandling {
+	if (quest::is_current_expansion_the_ruins_of_kunark()) {
+		if($zoneid != 105 # charasis 
+			&& $zoneid != 103 # chardok 
+			&& $zoneid != 90 # cityofmist 
+			&& $zoneid != 104 # dalnir 
+			&& $zoneid != 81 # droga 
+			&& $zoneid != 88 # kaseora 
+			&& $zoneid != 102 # karnor 
+			&& $zoneid != 97 # kurn 
+			&& $zoneid != 107 # nurga 
+			&& $zoneid != 89 # sebilis 
+			) {
+				$client->Message(13,"Your portal is too unstable, and collapses. You sense that this is not the place to cast this spell.");
+				# Interrupt manually
+				$client->Duck();
+				$client->Stand();
+				
+				#$client->InterruptSpell();
+				#$mob->InterruptSpell();
+		}
+    }
+}
+
+sub EVENT_CAST_BEGIN {
+	#:: Wind of the North
+	if ($spell_id == 1736) {
+		KunarkEvacHandling()
+	}
+
+	#:: Wind of the South
+	if ($spell_id == 1737) {
+		KunarkEvacHandling()
+	}
+
+	#:: Tishan's Relocation
+	if ($spell_id == 1738) {
+		KunarkEvacHandling()
+	}
+
+	#:: Markar's Relocation
+	if ($spell_id == 1739) {
+		KunarkEvacHandling()
+	}
+}
