@@ -1,3 +1,15 @@
+sub EVENT_SPAWN {
+	quest::set_proximity($x - 20, $x + 20, $y - 20, $y + 20);
+}
+
+sub EVENT_ENTER {
+	quest::shout("Fortune's told here! Donations accepted!");
+}
+ 
+sub EVENT_AGGRO {
+	quest::say("I put a curse upon thee!  Thou shalt never sire children!");
+}
+
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
 		quest::emote("So you wish to find a path in whichh to start your destiny. Very well. Open your mind and give me your hand. Tell me the faith which you follow.");
@@ -18,8 +30,15 @@ sub EVENT_SAY {
 		elsif ($text=~/erollisi/i) {
 			quest::say("To be strong in the way of love is truly the only way. Go into Karana's Paw and enjoy your day.");
 		}
-		elsif ($text=~/innoruuk/i) {
-			quest::say("To hate is your way. Just as the father of the dark race. Go forth to Nekutulos is where you should go at good pace.");
+		elsif ($text =~ /innoruuk/i) {
+			my $fac = $client->GetModCharacterFactionLevel(262); #Guards of qeynos - verified on live
+			if ($fac > 249) {
+				plugin::DoAnim("shiver");
+				quest::say("To hate is your way. Just as the father of the dark race. Go forth to Nekutulos is where you should go at good pace.");
+			}
+			else {
+				quest::say("You need to prove your dedication to our cause before I can discuss such matters with you.");
+			}
 		}
 		elsif ($text=~/karana/i) {
 			quest::say("You will be safe in this city of thunder. Travel to the catacombs for easy plunder.");
