@@ -25,7 +25,7 @@ sub EVENT_HP {
 sub EVENT_TIMER {
 	#:: Match timer 'leash'
 	if ($timer eq "leash") {
-		if ($x < -1000 || $x > -650 || $y < -1500 || $y > -1290) {
+		if ($x < -838 || $x > -361 || $y < -2280 || $y > -1850) {
 			#:: Trigger WIPE_AGGRO subroutine
 			WIPE_AGGRO();
 		}
