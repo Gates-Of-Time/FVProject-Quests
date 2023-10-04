@@ -1,3 +1,5 @@
+my @Data = ("sebilis", 89, -117, -1283, -175, 46);
+
 sub EVENT_SPAWN {
 	#:: Create a proximity 400 units across, without proximity say
 	quest::set_proximity($x - 200, $x + 200, $y - 200, $y + 200, $z - 200, $z + 200, 0);
@@ -11,6 +13,23 @@ sub EVENT_AGGRO {
 	
 	#:: Trigger EVENT_ENTER subroutine to makue sure we banish out of level clients
 	EVENT_ENTER();
+}
+
+sub EVENT_COMBAT {
+	#:: Match combat state 1 - entered combat
+	if ($combat_state == 1) {
+		$key = $npc->GetCleanName() . "-banish";
+		#:: Match if the key does not exist
+		if (!quest::get_data($key)) {
+			BANISH();
+		}
+		#:: Create a timer 'banish' that triggers every 30 seconds
+		quest::settimer("banish", 30);
+	}
+	else {
+		#:: Stop the timer 'banish' from triggering
+		quest::stoptimer("banish");
+	}
 }
 
 sub EVENT_HP {
@@ -30,6 +49,20 @@ sub EVENT_TIMER {
 			WIPE_AGGRO();
 		}
 	}
+
+	#:: Match timer 'banish'
+	if ($timer eq "banish") {
+		$key = $npc->GetCleanName() . "-banish";
+		#:: Match if the key does not exist
+		if (!quest::get_data($key)) {
+			if ($combat_state == 1) {
+				BANISH();
+			}
+			else {
+				quest::stoptimer("banish")
+			}
+		}
+	}
 }
 
 sub WIPE_AGGRO {
@@ -41,4 +74,39 @@ sub WIPE_AGGRO {
 	quest::stoptimer("leash");
 	#:: Create a HP event at 96 percent health
 	quest::setnexthpevent(96);
+}
+
+sub BANISH {
+	$Instance = quest::GetInstanceID();
+	$target = $npc->GetHateTop();
+	if ($target->IsPet()) {
+		$owner = $target->GetOwnerID();
+		$Client = $entity_list->GetClientByID($owner);
+		if ($Client->BuffCount()) {
+			for ($i=0; $i < $Client->BuffCount(); $i++) {
+				#:: Match NOT: 
+				#:: 130 - Divine Barrier
+				#:: 199 - Harmshield
+				#:: 207 - Divine Aura
+				if ($Client->FindBuffBySlot($i) !~ [130, 199, 207]) {
+					$Client->MovePCInstance($Data[1], $Instance, $Data[2], $Data[3], $Data[4], $Data[5]);
+					$entity_list->RemoveFromHateLists($Client);
+				}
+			}
+		}
+	}
+	else {
+		if ($target->BuffCount()) {
+			for ($i=0; $i < $target->BuffCount(); $i++) {
+				#:: Match NOT: 
+				#:: 130 - Divine Barrier
+				#:: 199 - Harmshield
+				#:: 207 - Divine Aura
+				if ($target->FindBuffBySlot($i) !~ [130, 199, 207]) {
+					$target->MovePCInstance($Data[1], $Instance, $Data[2], $Data[3], $Data[4], $Data[5]);
+					$entity_list->RemoveFromHateLists($target);
+				}
+			}
+		}
+	}
 }
