@@ -94,6 +94,7 @@ sub BANISH {
 				}
 			}
 		}
+		quest::set_data($key, 1, 29);
 	}
 	else {
 		if ($target->BuffCount()) {
@@ -108,5 +109,6 @@ sub BANISH {
 				}
 			}
 		}
+		quest::set_data($key, 1, 29);
 	}
 }
