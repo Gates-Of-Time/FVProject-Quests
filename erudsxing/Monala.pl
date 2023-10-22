@@ -4,6 +4,8 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_ENTER {
-	#:: Our boats are docked and Monala explains what to do.  This is not original.
-	quest::say("Hello, $name. The seas run high today!  Hop on the Golden Maiden to the South for Qeynos; the Sea King to the North for Erudin. Way, hey, blow the man down!");
+  if(!quest::is_content_flag_enabled("boats")) {
+	   #:: Our boats are docked and Monala explains what to do.  This is not original.
+	    quest::say("Hello, $name. The seas run high today!  Hop on the Golden Maiden to the South for Qeynos; the Sea King to the North for Erudin. Way, hey, blow the man down!");
+  }
 }
