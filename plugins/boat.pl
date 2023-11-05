@@ -5,7 +5,6 @@
 #
 use POSIX 'fmod';
 use Class::Struct;
-use Math::Trig;
 use Time::Local;
 
 my $eq_to_real = 1.75;
@@ -678,8 +677,13 @@ sub move_to_boat
       my $distance = sqrt( ($xdiff * $xdiff) + ($ydiff * $ydiff) );
 
       # This should be in the direction of the player
-      my $unitX = $xdiff / $distance;
-      my $unitY = $ydiff / $distance;
+      my $unitX = 0;
+      my $unitY = 0;
+
+      if($distance > 0) {
+        my $unitX = $xdiff / $distance;
+        my $unitY = $ydiff / $distance;
+      }
 
       # Current angle that player is from the boat.
       my $angle = atan2(-$unitY, -$unitX) - atan2($oldBoatUnitY, $oldBoatUnitX);
