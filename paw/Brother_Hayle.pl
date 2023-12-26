@@ -7,6 +7,10 @@ sub EVENT_SAY {
 		if ($faction <= 2) {
 			quest::say("I require the returned note I gave you, a Testimony of Truth, a Sword of Faith and finally the hilt of Soulfire. The Testimony and Sword of Faith are earned in the Hall of Truth, but for the hilt of Soulfire you shall have to battle [Xicotl].");
 		}
+  		#:: Match if Indifferent or better
+  		elsif ($faction <= 5) {
+    			quest::say("The Temple of Life smiles upon you, friend...  but such a delicate matter can only be entrusted to our most loyal members.");
+       		}
 		else {
 			quest::say("You have not yet proven yourself.");
 		}
