@@ -36,7 +36,7 @@ sub EVENT_SIGNAL {
 			quest::signalwith(10199, 2, 0);
 		}
 		elsif ($singasong == 3) {
-			quest::say("Here is one for my former lover, Joffrey Clay. You look the lute. It was my favorite one. A little white lute, and went off to Qeynos. You took the songs. They were all special ones. Packed them all up. Off to Qeynos. You killed the plant. Put it in a deep freeze. Dumped it in the trunk. With the rest of the refuse. You, left to Qeynos. You, left to Qeynos. You, left to Qeynos. You, left to Qeynos.");
+			quest::say("Here is one for my former lover, Joffrey Clay. You took the lute. It was my favorite one. A little white lute, and went off to Qeynos. You took the songs. They were all special ones. Packed them all up. Off to Qeynos. You killed the plant. Put it in a deep freeze. Dumped it in the trunk. With the rest of the refuse. You, left to Qeynos. You, left to Qeynos. You, left to Qeynos. You, left to Qeynos.");
 			#:: Send a signal '2' to East Freeport >> Talym_Shoontar (10182) with no delay
 			quest::signalwith(10182, 2, 0);
 		}
