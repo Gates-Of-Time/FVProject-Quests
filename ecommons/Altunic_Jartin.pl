@@ -1,3 +1,5 @@
+my $quest_started = 0;
+
 sub EVENT_WAYPOINT_ARRIVE {
 	#:: Match waypoint 2
 	if ($wp == 2) {
@@ -16,10 +18,13 @@ sub EVENT_SAY {
 		quest::say("Greetings, traveler! Have you need of provisions or perhaps other wares? I sell what I find upon the battlegrounds of the Commonlands.");
 	}
 	elsif ($text=~/house/i) {
-		quest::say("Follow me.");
-		quest::moveto(4791.06, -83.55, -51.47);
-		#:: Spawn one and only one East Commonlands >> Squire_Narl (22196)
-		quest::unique_spawn(22196, 0, 0, 4707.63, -105.49, -51.47);
+ 		if ($quest_started == 1) {
+			quest::say("Follow me.");
+			quest::moveto(4791.06, -83.55, -51.47);
+			#:: Spawn one and only one East Commonlands >> Squire_Narl (22196)
+			quest::unique_spawn(22196, 0, 0, 4707.63, -105.49, -51.47);
+   			$quest_started = 0;
+		}
 	}
 }
 
@@ -27,7 +32,8 @@ sub EVENT_ITEM {
 	#:: Match a 18896 - Note (Note To Altunic)
 	if (plugin::takeItems(18896 => 1)) {
 		quest::say("You are the one they have sent? A squire?!! I hope you can help me. I gather items strewn upon the grounds of the Commonlands. I sell them at good prices. Lately, I have been terrorized by a human rogue named Narl. He will no doubt appear at my [house] soon. Bring his head to me.");
-	}
+		$quest_started = 1;
+ 	}
 	#:: Match a 13867 - Human Head (Narl's Head)
 	elsif (plugin::takeItems(13867 => 1)) {
 		quest::say("You have performed a great service to me, but I fear others will attack me while I stroll the countryside. It would be very noble of you to fetch me a cloth shirt for protection from wicked creatures. It is not much, but it will help.");
