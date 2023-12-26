@@ -12,6 +12,17 @@ sub EVENT_DEATH_COMPLETE {
 	quest::spawn2(9147, 0, 0, $x, $y, $z, $h);
 }
 
+sub EVENT_COMBAT {
+	if ($combat_state == 1) {
+		my $cur_target = $npc->GetHateTop();
+		if ($cur_target) {
+			my $cid = $cur_target->CastToClient()->CharacterID();
+			#:: Signal Brother Jentry to help
+			quest::signalwith(9024, $cid);
+		}
+	}
+}
+
 sub EVENT_ITEM {
 	#:: Match a 18822 - Note
 	if (plugin::takeItems(18822=> 1)) {
