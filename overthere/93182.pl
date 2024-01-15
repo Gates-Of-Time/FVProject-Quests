@@ -1,7 +1,7 @@
 sub EVENT_ITEM {
 	#:: Match a 12848 - Spectacle, a 12850 - Forsaken Pariah Mask, a 12851 - Evergreen Ivy Ringband, and a 12610 - Green Death Rum
 	if (plugin::takeItems(12848 => 1, 12850 => 1, 12851 => 1, 12610 => 1)) {
-		if ($ulevel > 20) {
+		if ($ulevel >= 20) {
 			quest::emote("takes your hand and guides it into his ribcage. You feel something odd. It is a metal key!!");
 			#:: Give a 12849 - Metal Key
 			quest::summonitem(12849);
