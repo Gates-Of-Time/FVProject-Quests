@@ -51,8 +51,8 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(1000);
 	}
-	#:: Match a 14363 - Scepter, 13234 - Hand of Shadow, 10534 - Skeletal Finger, and 16845 - Lead Sulphide
-	elsif (plugin::takeItems(14363 => 1, 13234 => 1, 10534 => 1, 16845 => 1)) {
+	#:: Match a 14363 - Scepter, 13234 - Hand of Shadow, 10534 - Skeletal Finger, and 16485 - Lead Sulphide
+	elsif (plugin::takeItems(14363 => 1, 13234 => 1, 10534 => 1, 16485 => 1)) {
 		quest::say("So you have gathered all of the components for me to weave Shadowbound Gloves... Well done. You will be wanting these.");
 		#:: Give a 3318 - ShadowBound Gloves
 		quest::summonitem(3318);
