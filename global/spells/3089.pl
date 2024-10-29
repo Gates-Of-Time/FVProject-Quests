@@ -1,4 +1,5 @@
-#Retributive Fire used in Halloween quest Great Zombie Attack to destroy zombie troopers (20284)
+#:: 3089 - Retributive Fire
+#:: Used in Halloween quest Great Zombie Attack to destroy zombie troopers (20284)
 
 sub EVENT_SPELL_EFFECT_NPC {
 $ClientID = $entity_list->GetClientByID($caster_id);

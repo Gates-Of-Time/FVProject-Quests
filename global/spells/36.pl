@@ -1,3 +1,5 @@
+#:: 36 - Gate
+
 sub EVENT_SPELL_EFFECT_CLIENT
 {
 	$bindx = shift;

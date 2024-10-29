@@ -1,4 +1,5 @@
-#Pie Throw used in Halloween quest Toxxulia Pie Fling on scarecrows
+#:: 11575 - Throw Pie
+#:: Used in Halloween quest Toxxulia Pie Fling on scarecrows
 
 sub EVENT_SPELL_EFFECT_NPC {
 $random_result = int(rand(10));

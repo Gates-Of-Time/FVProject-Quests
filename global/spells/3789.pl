@@ -1,3 +1,4 @@
+#:: 3789 - Prayer of the Banished
 sub EVENT_SPELL_EFFECT_CLIENT
 {
 	if(($client->GetClientVersionBit() & 4294967292)!= 0)

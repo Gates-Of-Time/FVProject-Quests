@@ -1,3 +1,5 @@
+#:: 1371 - Translocate: Nek
+
 sub EVENT_SPELL_EFFECT_TRANSLOCATE_COMPLETE
 {
 	if(($client->GetClientVersionBit() & 4294967292)!= 0)

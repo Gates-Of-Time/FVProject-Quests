@@ -1,4 +1,5 @@
-#Blood Curse Antidote used in Halloween quest Lycanthrope's Cure to cure a_fallen_werewolf (20286)
+#:: 11658 - Blood Curse Antidote
+#:: Used in Halloween quest Lycanthrope's Cure to cure a_fallen_werewolf (20286)
 
 sub EVENT_SPELL_EFFECT_NPC {
 $ClientID = $entity_list->GetClientByID($caster_id);
