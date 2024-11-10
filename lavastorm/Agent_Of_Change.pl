@@ -38,10 +38,17 @@ sub EVENT_SAY {
 					quest::set_data($key, "1", 3600);
 					$client->AssignToInstance($Instance);
 					$client->Message(15, "Agent of Change says, 'Your instance has been created. Have your raid let me know when they are [ready].'");
-				}
+				}				
 				else {
+					$key = $raid->GetID() . "-" . $Data[0];
 					my $LockoutTime = quest::get_data_expires($key) - time();
-					$client->Message(15, "Agent of Change says, 'You have instance " . quest::get_data($key) . ", $name.  It will expire in $LockoutTime seconds.  Let me know if you are [ready] to return to your instance.'");
+					if (quest::get_data($key)) 
+					{
+						$client->Message(15, "Agent of Change says, 'You have instance " . quest::get_data($key) . ", $name.  It will expire in $LockoutTime seconds.  Let me know if you are [ready] to return to your instance.'");
+					} 
+					else {
+						$client->Message(15, "Agent of Change says, 'You are currently locked out, $name.  Your lockout will end in $LockoutTime seconds.'");
+					}
 				}
 			}
 			else {
