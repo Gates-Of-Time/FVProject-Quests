@@ -40,8 +40,8 @@ sub EVENT_SAY {
 					$client->Message(15, "Agent of Change says, 'Your instance has been created. Have your raid let me know when they are [ready].'");
 				}				
 				else {
-					$key = $raid->GetID() . "-" . $Data[0];
 					my $LockoutTime = quest::get_data_expires($key) - time();
+					$key = $raid->GetID() . "-" . $Data[0];
 					if (quest::get_data($key)) 
 					{
 						$client->Message(15, "Agent of Change says, 'You have instance " . quest::get_data($key) . ", $name.  It will expire in $LockoutTime seconds.  Let me know if you are [ready] to return to your instance.'");
