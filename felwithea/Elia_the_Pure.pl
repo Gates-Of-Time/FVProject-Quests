@@ -15,7 +15,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	if (quest::is_content_flag_enabled("Kunark_EpicsEra")) {
 		#:: Match a 29002 - Tainted Darksteel Shield
-		if(plugin::takeItems(29002 => 1))
+		if(plugin::takeItems(29002=> 1)) {
 			quest::emote("squints and turns her head. 'By the gods, such a twisted aura this has! To see it hurts my eyes. I will help you if for no other reason than to remove such a twisted thing from existence.' She unrolls a scroll from her pack and softly chants over the dark metal shield. She hands it back to you with an exhausted smile on her face. 'Your heart seems pure. If I was able to help at all, I am honored. May the light shine warmly upon you.'");
 			#:: Give a 29005 - Gleaming Crested Shield
 			quest::summonitem(29005);
