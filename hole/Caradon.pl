@@ -1,6 +1,6 @@
 sub EVENT_SAY {
 	#:: Create a scalar variable to store a faction value
-	$faction = $client->GetCharacterFactionLevel(404); # Faction: Truespirit
+	$faction = $client->GetCharacterFactionLevel(404);	#:: Truespirit (404)
 	if ($faction >= 44) {
 		if ($text=~/Hail/i) {
 		quest::say("Please help me get out of here! My companion, Kyrenna, and I are trapped in this hellish place!");
