@@ -22,7 +22,7 @@ sub EVENT_ITEM {
 			quest::settimer("sendsignala",3);
 		}
 		#:: Match a 18168 - Note to Arantir
-		if ((plugin::takeItemsn(18168 => 1)) {
+		if(plugin::takeItemsn(18168 => 1)) {
 			#:: Spawn one and only one Halas >> Arantir_Karondor (29089), without grid or guild war, at the current location
 			quest::unique_spawn(29089,0,0,$x,$y,$z,$h);
 			#:: Create a timer 'sendsignalb' that triggers every 3 seconds
