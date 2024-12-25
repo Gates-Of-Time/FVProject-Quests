@@ -69,23 +69,22 @@ sub EVENT_ITEM {
 						quest::faction(342, 30); 	#:: + Truespirit
 						quest::delete_data($key_wiz_epic);
 					}
-					}
 				}
 			}
-			else {
-				#:: Match a 14349 - Green Oil
-				if(plugin::takeItems(14349 => 1)) {
-					quest::say("Oh wow! You found the oil! Where is the golem? You didn't hurt him did you? I am very fond of him. Anyways, here is your reward a note and staff to give to that guy you were asking me about.");
-					#:: Give a 14339 - Staff of Gabstik
-					quest::summonitem(14339);
-					#:: Give a 18168 - Note to Arantir
-					quest::summonitem(18168);
-					#:: Ding!
-					quest::ding();
-					#:: Set factions
-					quest::faction(342, 30); 	#:: + Truespirit
-					quest::delete_data($key_wiz_epic);
-				}
+		}
+		else {
+			#:: Match a 14349 - Green Oil
+			if(plugin::takeItems(14349 => 1)) {
+				quest::say("Oh wow! You found the oil! Where is the golem? You didn't hurt him did you? I am very fond of him. Anyways, here is your reward a note and staff to give to that guy you were asking me about.");
+				#:: Give a 14339 - Staff of Gabstik
+				quest::summonitem(14339);
+				#:: Give a 18168 - Note to Arantir
+				quest::summonitem(18168);
+				#:: Ding!
+				quest::ding();
+				#:: Set factions
+				quest::faction(342, 30); 	#:: + Truespirit
+				quest::delete_data($key_wiz_epic);
 			}
 		}
 	}
