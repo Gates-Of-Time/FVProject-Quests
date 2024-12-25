@@ -1,5 +1,5 @@
 sub EVENT_SAY {
-	$key_wiz_epic = $name . "-wiz_epic-kandin";
+	$key_wiz_epic = $name . "-wiz_epic-kandin_firepot";
 	if (quest::is_content_flag_enabled("Kunark_EpicsEra")) { 
 		if($text =~ /hail/i) {
 			quest::say("Hello, there! Don't have time to talk. I'm workin', workin', workin'! Careful! Don't slip in the oil!");
@@ -30,12 +30,12 @@ sub EVENT_ITEM {
 			quest::faction(342, 30); 	#:: + Truespirit
 			quest::set_data($key_wiz_epic, 1);
 		}
-		if (quest::get_data($key_wiz_epic) >= 1) {
-			if (quest::is_current_expansion_the_ruins_of_kunark()) 
-			{
-				if (quest::get_data($key_wiz_epic) == 1) {
+		elsif (quest::get_data($key_wiz_epic) >= 1) {
+			if (quest::is_current_expansion_the_ruins_of_kunark()) {
+				my $epic_progress = quest::get_data($key_wiz_epic);
+				if ($epic_progress == 1) {
 					#:: Match a 14332 - Cazic's Skin
-					if(plugin::takeItems(14332 => 1)) {
+					if (plugin::takeItems(14332 => 1)) {
 						quest::say("Great! This is? What is this for again? Oh yeah, the casing for my firework. Here, you can have this then, oh no, wait. You can't yet. I forgot I needed another part to my firework, and you are exactly the person to get it for me! I need some mistletoe powder. Now, go find some for me! Go, go, go, go! Shoo! Oh, wait! Hold on to my bag for me, please. You can give it back after you've given me what I want.");
 						#:: Give a 14336 - Kandin's Bag
 						quest::summonitem(14336);
@@ -45,10 +45,9 @@ sub EVENT_ITEM {
 						quest::faction(342, 30); 	#:: + Truespirit
 						quest::set_data($key_wiz_epic, 2);
 					}
-				}
-				elsif (quest::get_data($key_wiz_epic) == 2) {
+				} elsif ($epic_progress == 2) {
 					#:: Match a 14333 - Mistletoe Powder
-					elsif(plugin::takeItems(14333 => 1)) {
+					if (plugin::takeItems(14333 => 1)) {
 						quest::say("Great, this is it! Here, take this, it was my brother's. Now I must be off to work! Oh, wait, wait! I need my bag back!");
 						#:: Give a 14339 - Staff of Gabstik
 						quest::summonitem(14339);
@@ -58,9 +57,8 @@ sub EVENT_ITEM {
 						quest::faction(342, 30); 	#:: + Truespirit
 						quest::set_data($key_wiz_epic, 3);
 					}
-				}
-				elsif (quest::get_data($key_wiz_epic) == 3) {
-					#:: Match a 14332 - Kandin's Bag
+				} elsif ($epic_progress == 3) {
+					#:: Match a 14336 - Kandin's Bag
 					if(plugin::takeItems(14336 => 1)) {
 						quest::say("Great! Give this to Arantir so he knows you've helped me! Hey! Have you seen my lantern anywhere?");
 						#:: Give a 18168 - Note to Arantir
@@ -71,10 +69,10 @@ sub EVENT_ITEM {
 						quest::faction(342, 30); 	#:: + Truespirit
 						quest::delete_data($key_wiz_epic);
 					}
+					}
 				}
 			}
-			else
-			{
+			else {
 				#:: Match a 14349 - Green Oil
 				if(plugin::takeItems(14349 => 1)) {
 					quest::say("Oh wow! You found the oil! Where is the golem? You didn't hurt him did you? I am very fond of him. Anyways, here is your reward a note and staff to give to that guy you were asking me about.");
