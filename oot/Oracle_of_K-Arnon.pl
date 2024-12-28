@@ -1,6 +1,6 @@
 sub EVENT_SAY {
-	#:: Match if faction is Indifferent or worse
-	if ($faction > 4) {
+	#:: Match if faction is Apprehensive or worse
+	if ($faction > 5) {
 		quest::say("Your reputation preceeds you. You are no friend to me.");
 	}
 	elsif ($text=~/hail/i) {
@@ -48,8 +48,8 @@ sub EVENT_SAY {
 
 
 sub EVENT_ITEM {
-	#:: Match if faction is Indifferent or worse
-	if ($faction > 4) {
+	#:: Match if faction is Apprehensive or worse
+	if ($faction > 5) {
 		quest::say("Your reputation preceeds you. You are no friend to me.");
 	}
 	#:: Part of The Fiery Avenger, Paladin Epic 1.0
