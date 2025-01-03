@@ -12,7 +12,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	if (quest::is_content_flag_enabled("Kunark_EpicsEra")) { 
 		#:: Match a 20643 - Twisted Symbol of the Apprentice and a 20649 - Rolling Stone Moss
-		elsif(plugin::takeItems(20643 => 1, 20649 => 1) {
+		elsif(plugin::takeItems(20643 => 1, 20649 => 1)) {
 			quest::say("'Very good, $name, you have done as the master asked yet again, take this as a reward.' Emkel reaches into his robes and pulls out a small symbol. He holds it out and the tiny symbol floats to your hand.");
 
 			#:: Give a 20644 - Symbol of the Serpent
@@ -28,7 +28,7 @@ sub EVENT_ITEM {
 
 		}
 		#:: Match a 20650 - Refined Manisi Herb
-		elsif(plugin::takeItems(20650 => 1) {
+		elsif(plugin::takeItems(20650 => 1)) {
 			quest::say("'You are truly worthy of studying with our master. Bear this new symbol and contemplate what you wish from life before you let go of it. Ask the master about the symbol of testing and he will explain all. I too was tested by him.' Emkel pulls up his sleeve to show a grievous scar from his wrist to his shoulder.");
 			quest::say("You must ask the master about the symbol of testing. Do not hand the symbol to him for he may interpret that as a breach of conduct.");
 			#:: Give a 20647 - Symbol of Testing

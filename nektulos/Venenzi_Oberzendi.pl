@@ -18,7 +18,7 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	if (quest::is_content_flag_enabled("Kunark_EpicsEra")) { 
 		#:: Match a 20642 - Symbol of the Apprentice
-		if(plugin::takeItems(20642 => 1) {
+		if(plugin::takeItems(20642 => 1)) {
 			quest::say("I see you serve my master as well now. I assume you are here to take the reagents from me which I have gathered for him? I don't know if I like the idea of you gaining the credit for my hard work here. I might consider giving you these reagents, if only you do a small [task] for me.");
 			#:: Give a 20643 - Twisted Symbol of the Apprentice
 			quest::summonitem(20643);
@@ -31,7 +31,7 @@ sub EVENT_ITEM {
 		#:: Check for 20643- Twisted Symbol of the Apprentice
 		elsif(plugin::check_hasitem($client, 20643)) {
 			#:: Match a 1320 - Flowing Black Robe
-			if(plugin::takeItems(1320 => 1) {
+			if(plugin::takeItems(1320 => 1)) {
 				quest::say("Thank you, $name. I did not think you would track down Najena and slay her. I think that I am going to return to my old life in Neriak. I am sick of the way Kazen has been treating me. He never seems to teach me anything worthwhile. Don't forget to give his lapdog that symbol with the reagents. I'm sure he will give you a new one.");
 				#:: Give a 20649 - Rolling Stone Moss
 				quest::summonitem(20649);
