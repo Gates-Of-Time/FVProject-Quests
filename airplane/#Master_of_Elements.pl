@@ -30,7 +30,7 @@ sub EVENT_ITEM {
 sub EVENT_TIMER {
 	#:: Match the timer 'depop'
 	if ($timer eq "depop") {
-		#:: Step the timer 'depop'
+		#:: Stop the timer 'depop'
 		quest::stoptimer("depop");
 		#:: Depop without spawn timer
 		quest::depop();
