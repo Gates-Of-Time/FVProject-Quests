@@ -12,9 +12,8 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	if (quest::is_content_flag_enabled("Kunark_EpicsEra")) { 
 		#:: Match a 20643 - Twisted Symbol of the Apprentice and a 20649 - Rolling Stone Moss
-		elsif(plugin::takeItems(20643 => 1, 20649 => 1)) {
+		if(plugin::takeItems(20643 => 1, 20649 => 1)) {
 			quest::say("'Very good, $name, you have done as the master asked yet again, take this as a reward.' Emkel reaches into his robes and pulls out a small symbol. He holds it out and the tiny symbol floats to your hand.");
-
 			#:: Give a 20644 - Symbol of the Serpent
 			quest::summonitem(20644);
 			#:: Ding!
@@ -40,7 +39,6 @@ sub EVENT_ITEM {
 		}
 		else {
 			quest::emote("will not accept this item.");
-
 		}
 	}
 	#:: Return unused items
