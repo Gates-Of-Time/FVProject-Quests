@@ -1,6 +1,6 @@
 sub EVENT_SPAWN {
-	#:: Create a timer 'despawn' that triggers in 300 seconds (5 min)
-  	quest::settimer("despawn", 300);
+	#:: Create a timer 'despawn' that triggers in 600 seconds (10 min)
+  	quest::settimer("despawn",600);
 }
 
 sub EVENT_TIMER {
@@ -16,8 +16,8 @@ sub EVENT_COMBAT {
 		quest::stoptimer("despawn");
 	}
 	else {
-		#:: Create a timer 'despawn' that triggers in 300 seconds (5 min)
-		quest::settimer("despawn", 300);
+		#:: Create a timer 'despawn' that triggers in 600 seconds (10 min)
+		quest::settimer("despawn", 600);
 	}
 }
 
