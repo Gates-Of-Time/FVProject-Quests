@@ -42,10 +42,10 @@ sub EVENT_ITEM {
 		#:: Grant a small amount of experience
 		quest::exp(100);
 	}
-	#:: Match a 13073 - Bone Chips, a 13782 - Ruined Wolf Pelt, a 13253 - Spiderling Eye, and a 13069 - Bat Fur
-	if (plugin::takeItems(13073 => 1, 13782 => 1, 13253 => 1, 13069 => 1)) {
-		#:: Match if faction is amiably or better
-		if ($faction <= 4) {
+	#:: Match if faction is amiably or better
+	elsif ($faction <= 4) {
+		#:: Match a 13073 - Bone Chips, a 13782 - Ruined Wolf Pelt, a 13253 - Spiderling Eye, and a 13069 - Bat Fur
+		if (plugin::takeItems(13073 => 1, 13782 => 1, 13253 => 1, 13069 => 1)) {
 			quest::say("Fine work! You are on your way to becoming an adequate combatant.");
 			#:: Give a random reward: 10018 - Hematite, 10016 - Lapis Lazuli, 10015 - Malachite, 6014 - Rusty Warhammer, 10005 - Silver Stud, 2124 - Small Patchwork Boots, 2119 - Small Tattered Belt, 2122 - Small Tattered Gloves, 2115 - Small Tattered Gorget, 2113 - Small Tattered Skullcap, 5043 - Tarnished Axe, 5045 - Tarnished Long Sword, 5042 - Tarnished Short Sword, 6012 - Worn Great Staff
 			quest::summonitem(quest::ChooseRandom(10018, 10016, 10015, 6014, 10005, 2124, 2119, 2122, 2115, 2113, 5043, 5045, 5042, 6012));
@@ -63,9 +63,9 @@ sub EVENT_ITEM {
 			#:: Grant a random cash reward
 			quest::givecash($cash{copper},$cash{silver},$cash{gold},$cash{platinum});
 		}
-		else {
-			quest::say("I will not aid beings like you.");
-		}
+	}
+	else {
+		quest::say("I will not aid beings like you.");
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
