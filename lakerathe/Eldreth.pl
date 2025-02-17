@@ -20,7 +20,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match a 28012 - Combined Parchment, two 13087 - Bottle of Milk and a 100 platinum
-	if (plugin::takeItems(28012 => 1, 13087 => 2) && plugin::takeCoin(100, 0, 0, 0)) {
+	if (plugin::takeItems(28012 => 1, 13087 => 2) && plugin::takeCoin(0, 0, 0, 100)) {
 		quest::say("Hmm, interesting. This document is not only encoded, but written in a very obscure language. From what I can gather, it's a variant of elder Teir'Dal, but not one I've encountered. I can not fully translate this, but I know one who can. Find Yendar and give him this.");
 		#:: Give a 28053 - Scribbled Parchment
 		quest::summonitem(28053);
