@@ -22,7 +22,7 @@ sub EVENT_SAY {
 
 sub EVENT_ITEM {
 	#:: Match a 28014 - Stanos' Pouch
-	if(!defined(plugin::takeItems(28014 => 1)) {
+	if(plugin::takeItems(28014 => 1)) {
 		quest::say("Ah, very nice. Very nice indeed. Good work, and I hope Malka is able to make it out, good help is hard to find. But in the meantime, I am without an acquisition expert. Do you want the job?");
 		#:: Ding
 		quest::ding();
@@ -30,7 +30,7 @@ sub EVENT_ITEM {
 		quest::exp(1500);
 	}
 	#:: Match a 5411 - Fleshripper, a 5410 - Painbringer, a 5401 - Mithril Two-Handed Sword and a 5308 - Gigantic Zweihander
-	elsif(defined(plugin::takeItems(5411 => 1, 5410 => 1, 5401 => 1, 5308 => 1)) {
+	elsif(plugin::takeItems(5411 => 1, 5410 => 1, 5401 => 1, 5308 => 1)) {
 		quest::say("Very good, though how you managed to lug around all these oversized blades amazes me. I feel we can do business now, and Malka still has not shown up. Take this dagger. I had an old client who didn't, um.. pay.. so this was extracted from him. Right after it was inserted in him. For your next job, I need a collection of robes. The Robe of the Ishva, some Shining Metallic robes, an Oracle robe, and a Robe of the Kedge. I am not even sure where all these come from, but they are on my list here, and Rokyl is one of my best clients, so I figure that is your job.");
 		#:: Ding
 		quest::ding();
@@ -42,7 +42,7 @@ sub EVENT_ITEM {
 		quest::exp(3000);
 	}
 	#:: Match a 1357 - Robe of the Ishva, a 1253 - Robe of the Kedge, a 1354 - Robe of the Oracle and a 1360 - Shining Mettalic Robes
-	elsif(defined(plugin::takeItems(1357 => 1, 1253 => 1, 1354 => 1, 1360 => 1)) {
+	elsif(plugin::takeItems(1357 => 1, 1253 => 1, 1354 => 1, 1360 => 1)) {
 		quest::say("You do good work, $race. Here is another trinket for your trouble, you should be able to make use of it. Malka still hasn't made it back yet, and I have one more order to fill, if you're willing. This one should be easy. My sword collector has decided he wants rapiers now, of all things. He has asked for an Eyerazzia, a Martune Rapier, a Burning Rapier, and a well balanced rapier.");
 		#:: Ding
 		quest::ding();
@@ -52,9 +52,9 @@ sub EVENT_ITEM {
 		quest::givecash(0, 0, 200, 15);
 		#:: Grant a small amount of experience
 		quest::exp(3000);
-	}7020
+	}
 	#:: Match a 7041 - Burning Rapier, a 7509 - Martune Rapier, a 7508 - Eyerazzia and a 7020 - Well-Balanced Rapier
-	elsif(defined(plugin::takeItems(7041 => 1, 7509 => 1, 7508 => 1, 7020 => 1)) {
+	elsif(plugin::takeItems(7041 => 1, 7509 => 1, 7508 => 1, 7020 => 1)) {
 		quest::say("You never cease to amaze me! I never thought you $race types could be so good at this sort of work. I have been stuck here and haven't any more trinkets to give you, but perhaps you could take this pouch to its new owner, since I do not have the time to deliver it myself. He will pay you in full, and you can just keep what he gives you, how does that sound? The owner is a man named Stanos Herkanor, and he or his friend Anson are supposed to meet me in Highpass this evening. Do not waste too much time getting there, he is a secretive man, and I can not guarantee he will be around long. Good luck, and maybe we will meet again. It is always a pleasure working with another professional such as yourself!");
 		#:: Ding
 		quest::ding();
