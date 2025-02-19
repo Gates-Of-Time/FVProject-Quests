@@ -39,7 +39,7 @@ sub EVENT_SAY {
 		elsif ($text=~/action/i) {
 			#:: Match if faction is Amiable or better
 			if ($faction <= 4) {
-				if ($level >= 46) {
+				if ($ulevel >= 46) {
 					quest::emote("looks at you consideringly and then scribbles something quickly on a small, worn paper. 'You seem powerful enough. Perhaps you can help those who seek to protect nature's peace. Take this note. Deliver it only into the hands of Faelin Bloodbriar. Where you will find her, I cannot say. She is a friend of mine and a wanderer. She has been seen from one end of the lands to the other. Seek her out, and quickly.'");
 					#:: Give a 20472 - Worn Note
 					quest::summonitem(20472);
