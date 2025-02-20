@@ -20,9 +20,9 @@ sub EVENT_SAY {
 sub EVENT_ITEM {
 	#:: Match a 13130 - Blackburrow Stout
 	if (plugin::takeItems(13130 => 1)) { 
-		quest::Say("Why thank you, kind citizen! Mutt, throw me the package! Here. This is for your boss. Do not return return to Kane without the other two lists. Some other bixie boy might just beat you to one of the other pieces. Go to Freeport. There you will find a woman called Opal. Quite a looker. I hear she works with the Arcane Scientists. Tell her the disease is spreading. She will help you.");
+		quest::say("Why thank you, kind citizen! Mutt, throw me the package! Here. This is for your boss. Do not return return to Kane without the other two lists. Some other bixie boy might just beat you to one of the other pieces. Go to Freeport. There you will find a woman called Opal. Quite a looker. I hear she works with the Arcane Scientists. Tell her the disease is spreading. She will help you.");
 		#:: Give a 18808 - Bayle List I
-		quest::SummonItem(18808);
+		quest::summonitem(18808);
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
@@ -31,7 +31,6 @@ sub EVENT_ITEM {
 		quest::faction(329, 2);			#:: + Carson McCabe
 		quest::faction(230, 1);			#:: + Corrupt Qeynos Guards
 		quest::faction(330, 3);			#:: + The Freeport Militia
-		#:: Grant a moderate amount of experience
 		quest::exp(1600);
 	}
 	#:: Return unused items

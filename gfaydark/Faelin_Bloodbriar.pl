@@ -1,5 +1,5 @@
 sub EVENT_SPAWN {
-	#:: Create a timer 'depop' that triggers in 1200 seconds (20 min)
+	#:: Create a timer 'depop' that triggers every 1200 seconds (20 min)
   	quest::settimer("depop",1200);
 }
 
