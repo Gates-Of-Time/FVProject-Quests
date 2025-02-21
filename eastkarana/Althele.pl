@@ -74,10 +74,10 @@ sub EVENT_SIGNAL {
 	}
 	#:: Match a signal "1" from /eastkarana/Teloa.pl
 	elsif ($signal == 1) {
-		#:: Create a timer 'prep' that triggers in 90 seconds (1.5 min)
-		quest::settimer("prep",90);
-		#:: Create a timer 'attack' that triggers in 120 seconds (2 min)
-		quest::settimer("attack",120);
+		#:: Create a timer 'prep' that triggers in 120 seconds (2 min)
+		quest::settimer("prep",120);
+		#:: Create a timer 'attack' that triggers in 150 seconds (2.5 min)
+		quest::settimer("attack",150);
 		#:: Send a signal "1" to Eastern Plains of Karana >> Teloa (15170) with no delay
 		quest::signalwith(15170,1,0);
 	}
@@ -106,22 +106,22 @@ sub EVENT_TIMER {
 		$entid1 = quest::spawn2(15153,0,0,-996,-1529,354,130);
 		$mob1 = $entity_list->GetMobID($entid1);
 		#:: Add the Althele to the hate list of the Dark_Elf_Corruptor
-		my $mobattack = $mob1->CastToNPC();
-		$mobattack->AddToHateList($npc, 1);
+		my $mob1attack = $mob1->CastToNPC();
+		$mob1attack->AddToHateList($npc, 1);
 		
 		#:: Spawn a Eastern Plains of Karana >> Dark_Elf_Reaver (15150), without grid or guild war, at the given location
 		$entid2 = quest::spawn2(15150,0,0,-1090,-1529,355.4,130);
 		$mob2 = $entity_list->GetMobID($entid2);
 		#:: Add the Althele to the hate list of the Dark_Elf_Reaver
-		my $mobattack = $mob2->CastToNPC();
-		$mobattack->AddToHateList($npc, 1);
+		my $mob2attack = $mob2->CastToNPC();
+		$mob2attack->AddToHateList($npc, 1);
 		
 		#:: Spawn a Eastern Plains of Karana >> Dark_Elf_Reaver (15150), without grid or guild war, at the given location
 		$entid3 = quest::spawn2(15150,0,0,-1063,-1490,367.5,130);
 		$mob3 = $entity_list->GetMobID($entid3);
 		#:: Add the Althele to the hate list of the Dark_Elf_Reaver
-		my $mobattack = $mob3->CastToNPC();
-		$mobattack->AddToHateList($npc, 1);
+		my $mob3attack = $mob3->CastToNPC();
+		$mob3attack->AddToHateList($npc, 1);
 	}
 }
 
