@@ -1,7 +1,7 @@
 
 sub EVENT_SAY {
 	if ($text=~/hail/i) {
-		quest::emote("gives you a crooked smile. 'Hello there, " .. e.other:GetName() .. ". I'm doin some important 'meditations' to my god here. Maybe you can go somewhere else?'");
+		quest::emote("gives you a crooked smile. 'Hello there, $name. I'm doin some important 'meditations' to my god here. Maybe you can go somewhere else?'");
 	}
 }
 
@@ -18,6 +18,7 @@ sub EVENT_ITEM {
 			quest::depop_withtimer();
 		}
 	}
+
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
