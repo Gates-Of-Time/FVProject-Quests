@@ -28,7 +28,7 @@ sub EVENT_ITEM {
 			quest::emote("will not take this item.");
 		}
 	}
-	
+
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
@@ -42,7 +42,8 @@ sub EVENT_SIGNAL {
 	}
 	#:: Match a signal "1" from /eastkarana/Althele.pl
 	elsif ($signal == 1) {
-		quest::moveto(-1584,-3669,-18,0);
+		#:: Move to the specified location and guard 
+		quest::moveto(-1584,-3669,-18,0,1);
 	}
 }
 

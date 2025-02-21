@@ -36,7 +36,8 @@ sub EVENT_SIGNAL {
 	}
 	#:: Match a signal "1" from /eastkarana/Althele.pl
 	elsif ($signal == 1) {
-		quest::moveto(-1597,-3670,-18,0);
+		#:: Move to the specified location and guard 
+		quest::moveto(-1597,-3670,-18,0,1);
 	}
 }
 
