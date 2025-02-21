@@ -1,3 +1,10 @@
+my $entid1;
+my $entid2;
+my $entid3;
+my $mob1;
+my $mob2;
+my $mob3;
+
 sub EVENT_SAY {
 	if (quest::is_content_flag_enabled(Kunark_EpicsEra)) {
 		if ($text=~/hail/i) {
@@ -96,24 +103,24 @@ sub EVENT_TIMER {
 		quest::emote("snaps her head towards you. 'Innoruuk's brood is upon us. Go, find the spawn of hatred before they reach this point and destroy them!");
 
 		#:: Spawn a Eastern Plains of Karana >> Dark_Elf_Corruptor (15153), without grid or guild war, at the given location
-		$entid = quest::spawn2(15153,0,0,-996,-1529,354,130);
-		$mob = $entity_list->GetMobID($entid);
+		$entid1 = quest::spawn2(15153,0,0,-996,-1529,354,130);
+		$mob1 = $entity_list->GetMobID($entid1);
 		#:: Add the Althele to the hate list of the Dark_Elf_Corruptor
-		my $mobattack = $mob->CastToNPC();
+		my $mobattack = $mob1->CastToNPC();
 		$mobattack->AddToHateList($npc, 1);
 		
 		#:: Spawn a Eastern Plains of Karana >> Dark_Elf_Reaver (15150), without grid or guild war, at the given location
-		$entid = quest::spawn2(15150,0,0,-1090,-1529,355.4,130);
-		$mob = $entity_list->GetMobID($entid);
+		$entid2 = quest::spawn2(15150,0,0,-1090,-1529,355.4,130);
+		$mob2 = $entity_list->GetMobID($entid2);
 		#:: Add the Althele to the hate list of the Dark_Elf_Reaver
-		my $mobattack = $mob->CastToNPC();
+		my $mobattack = $mob2->CastToNPC();
 		$mobattack->AddToHateList($npc, 1);
 		
 		#:: Spawn a Eastern Plains of Karana >> Dark_Elf_Reaver (15150), without grid or guild war, at the given location
-		$entid = quest::spawn2(15150,0,0,-1063,-1490,367.5,130);
-		$mob = $entity_list->GetMobID($entid);
+		$entid3 = quest::spawn2(15150,0,0,-1063,-1490,367.5,130);
+		$mob3 = $entity_list->GetMobID($entid3);
 		#:: Add the Althele to the hate list of the Dark_Elf_Reaver
-		my $mobattack = $mob->CastToNPC();
+		my $mobattack = $mob3->CastToNPC();
 		$mobattack->AddToHateList($npc, 1);
 	}
 }
