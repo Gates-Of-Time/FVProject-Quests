@@ -1,10 +1,3 @@
-my $entid1;
-my $entid2;
-my $entid3;
-my $mob1;
-my $mob2;
-my $mob3;
-
 sub EVENT_SAY {
 	if (quest::is_content_flag_enabled(Kunark_EpicsEra)) {
 		if ($text=~/hail/i) {
@@ -103,25 +96,40 @@ sub EVENT_TIMER {
 		quest::emote("snaps her head towards you. 'Innoruuk's brood is upon us. Go, find the spawn of hatred before they reach this point and destroy them!");
 
 		#:: Spawn a Eastern Plains of Karana >> Dark_Elf_Corruptor (15153), without grid or guild war, at the given location
-		$entid1 = quest::spawn2(15153,0,0,-996,-1529,354,130);
-		$mob1 = $entity_list->GetMobID($entid1);
-		#:: Add the Althele to the hate list of the Dark_Elf_Corruptor
-		my $mob1attack = $mob1->CastToNPC();
-		$mob1attack->AddToHateList($npc, 1);
+		my $mobid = quest::spawn2(15153,0,0,-996,-1529,354,130);
+		my $mob = $entity_list->GetMobID($mobid);
+		if($mob) {
+			#:: Add the Althele to the hate list of the Dark_Elf_Corruptor
+			my $mobnpc = $mob->CastToNPC();
+			if($mobnpc) {
+				quest::emote("Dark_Elf_Corruptor attak");
+				$mobnpc->AddToHateList($npc, 1);
+			}
+		}
 		
 		#:: Spawn a Eastern Plains of Karana >> Dark_Elf_Reaver (15150), without grid or guild war, at the given location
-		$entid2 = quest::spawn2(15150,0,0,-1090,-1529,355.4,130);
-		$mob2 = $entity_list->GetMobID($entid2);
-		#:: Add the Althele to the hate list of the Dark_Elf_Reaver
-		my $mob2attack = $mob2->CastToNPC();
-		$mob2attack->AddToHateList($npc, 1);
+		my $mobid2 = quest::spawn2(15150,0,0,-1090,-1529,355.4,130);
+		my $mob2 = $entity_list->GetMobID($mobid2);
+		if($mob2) {
+			#:: Add the Althele to the hate list of the Dark_Elf_Reaver
+			my $mob2npc = $mob2->CastToNPC();
+			if($mobnpc) {
+				quest::emote("Dark_Elf_Reaver 1 attak");
+				$mob2npc->AddToHateList($npc, 1);
+			}
+		}
 		
 		#:: Spawn a Eastern Plains of Karana >> Dark_Elf_Reaver (15150), without grid or guild war, at the given location
-		$entid3 = quest::spawn2(15150,0,0,-1063,-1490,367.5,130);
-		$mob3 = $entity_list->GetMobID($entid3);
-		#:: Add the Althele to the hate list of the Dark_Elf_Reaver
-		my $mob3attack = $mob3->CastToNPC();
-		$mob3attack->AddToHateList($npc, 1);
+		my $entid3 = quest::spawn2(15150,0,0,-1063,-1490,367.5,130);
+		my $mob3 = $entity_list->GetMobID($entid3);
+		if($mob3) {
+			#:: Add the Althele to the hate list of the Dark_Elf_Reaver
+			my $mob3npc = $mob3->CastToNPC();
+			if($mobnpc) {
+				quest::emote("Dark_Elf_Reaver 2 attak");
+				$mob3npc->AddToHateList($npc, 1);
+			}
+		}
 	}
 }
 
