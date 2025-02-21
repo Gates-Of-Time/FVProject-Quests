@@ -1,28 +1,9 @@
-my $depop1;
-my $depop2;
-my $depop3;
-my $depop4;
-my $depop5;
-my $entid1;
-my $entid2;
-my $entid3;
-my $mob1;
-my $mob2;
-my $mob3;
-my $start;
-my $moving;
-my $depopnpc1;
-my $depopnpc2;
-my $depopnpc3;
-my $depopnpc4;
-my $depopnpc5;
-
 sub EVENT_SAY {
 	if (quest::is_content_flag_enabled(Kunark_EpicsEra)) {
 		if ($text=~/hail/i) {
 			quest::say("Hello, friend. Beautiful is what I would call such a day normally but lately?");
 		}
-		if ($text=~/your eyes/i) {
+		elsif ($text=~/your eyes/i) {
 			quest::say("Yes. I cannot see any longer, my sight long since lost in the march of years. By the blessings of Tunare and Karana, though, I still make myself useful.");
 		}
 	}
@@ -50,40 +31,17 @@ sub EVENT_ITEM {
 			#:: Grant a huge amount of experience
 			quest::exp(100000);
 			
-			#:: Match a Eastern Plains of Karana >> Sionae (15178) on the entity list
-			$depop = $entity_list->GetMobByNpcTypeID(15178);
-			if ($depop) {
-				$depopnpc = $depop->CastToNPC();
-				$depopnpc->Depop();
-			}
+			#:: Depop without spawn timer active a Eastern Plains of Karana >> Sionae (15178) on the entity list
+			quest::depop(15178);
+			#:: Depop without spawn timer active a Eastern Plains of Karana >> Nuien (15167) on the entity list
+			quest::depop(15167);
+			#:: Depop without spawn timer active a Eastern Plains of Karana >> Teloa (15170) on the entity list
+			quest::depop(15170);
 
-			#:: Match a Eastern Plains of Karana >> Nuien (15167) on the entity list
-			$depop = $entity_list->GetMobByNpcTypeID(15167);
-			if ($depop) {
-				$depopnpc = $depop->CastToNPC();
-				$depopnpc->Depop();
-			}
-
-			#:: Match a Eastern Plains of Karana >> Teloa (15170) on the entity list
-			$depop = $entity_list->GetMobByNpcTypeID(15170);
-			if ($depop) {
-				$depopnpc = $depop->CastToNPC();
-				$depopnpc->Depop();
-			}
-
-			#:: Match a Eastern Plains of Karana >> Tholris (15043) on the entity list
-			$depop = $entity_list->GetMobByNpcTypeID(15043);
-			if ($depop) {
-				$depopnpc = $depop->CastToNPC();
-				$depopnpc->Depop();
-			}
-
-			#:: Match a Eastern Plains of Karana >> Fang (15042) on the entity list
-			$depop = $entity_list->GetMobByNpcTypeID(15042);
-			if ($depop) {
-				$depopnpc = $depop->CastToNPC();
-				$depopnpc->Depop();
-			}
+			#:: Depop with spawn timer active a Eastern Plains of Karana >> Tholris (15043) on the entity list
+			quest::depop_withtimer(15043);
+			#:: Depop with spawn timer active a Eastern Plains of Karana >> Fang (15042) on the entity list
+			quest::depop_withtimer(15042);
 			#:: Depop with spawn timer active
 			quest::depop_withtimer();
 		}
@@ -91,36 +49,30 @@ sub EVENT_ITEM {
 			quest::emote("will not take this item.");
 		}
   	}
+
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
 
 sub EVENT_SIGNAL {
-	#:: Match a signal "99" from /eastkarana/Sionae.pl
+	#:: Match a signal "15178" from /eastkarana/Sionae.pl
 	if ($signal == 15178) {
-		#:: Match a Eastern Plains of Karana >> Sionae (15178) on the entity list
-		$start = $entity_list->GetMobByNpcTypeID(15178);
-		$moving = $start->CastToNPC();
-		$moving->SignalNPC(1);
+		#:: Send a signal "1" to Eastern Plains of Karana >> Sionae (15178) with no delay
+		quest::signalwith(15178,1,0);
 	}
-	#:: Match a signal "99" from /eastkarana/Nuien.pl
+	#:: Match a signal "15167" from /eastkarana/Nuien.pl
 	elsif ($signal == 15167) {
-		#:: Match a Eastern Plains of Karana >> Nuien (15167) on the entity list
-		$start = $entity_list->GetMobByNpcTypeID(15167);
-		$moving = $start->CastToNPC();
-		$moving->SignalNPC(1);
+		#:: Send a signal "1" to Eastern Plains of Karana >> Nuien (15167) with no delay
+		quest::signalwith(15167,1,0);
 	}
-	else {
+	#:: Match a signal "1" from /eastkarana/Teloa.pl
+	elsif ($signal == 1) {
 		#:: Create a timer 'prep' that triggers in 90 seconds (1.5 min)
 		quest::settimer("prep",90);
 		#:: Create a timer 'attack' that triggers in 120 seconds (2 min)
 		quest::settimer("attack",120);
-		#:: Create a timer 'depop' that triggers in 600 seconds (10 min)
-		quest::settimer("depop",600);
-		#:: Match a Eastern Plains of Karana >> Teloa (15170) on the entity list
-		$start = $entity_list->GetMobByNpcTypeID(15170);
-		$moving = $start->CastToNPC();
-		$moving->SignalNPC(1);
+		#:: Send a signal "1" to Eastern Plains of Karana >> Teloa (15170) with no delay
+		quest::signalwith(15170,1,0);
 	}
 }
 
@@ -139,7 +91,7 @@ sub EVENT_TIMER {
 		quest::signalwith(15043,99,12);
 	}
 	elsif ($timer eq "attack") { #dark elves start to make their way to the gathering
-		#:: Step the timer 'attack'
+		#:: Stop the timer 'attack'
 		quest::stoptimer("attack");
 		quest::emote("snaps her head towards you. 'Innoruuk's brood is upon us. Go, find the spawn of hatred before they reach this point and destroy them!");
 
@@ -164,28 +116,12 @@ sub EVENT_TIMER {
 		my $mobattack = $mob->CastToNPC();
 		$mobattack->AddToHateList($npc, 1);
 	}
-	elsif ($timer eq "depop") { #something might have gone wrong resetting the druids after 10 minutes
-		#:: Step the timer 'depop'
-		quest::stoptimer("depop");
-		#:: Match a Eastern Plains of Karana >> Sionae (15178) on the entity list
-		$depop = $entity_list->GetMobByNpcTypeID(15178);
-		if ($depop) {
-			$depopnpc = $depop->CastToNPC();
-			$depopnpc->Depop();
-		}
+}
 
-		#:: Match a Eastern Plains of Karana >> Nuien (15167) on the entity list
-		$depop = $entity_list->GetMobByNpcTypeID(15167);
-		if ($depop) {
-			$depopnpc = $depop->CastToNPC();
-			$depopnpc->Depop();
-		}
 
-		#:: Match a Eastern Plains of Karana >> Teloa (15170) on the entity list
-		$depop = $entity_list->GetMobByNpcTypeID(15170);
-		if ($depop) {
-			$depopnpc = $depop->CastToNPC();
-			$depopnpc->Depop();
-		}
-	}
+sub EVENT_DEATH_COMPLETE {
+	#:: Stop the timer "prep"
+  	quest::stoptimer("prep");
+	#:: Stop the timer "attack"
+  	quest::stoptimer("attack");
 }

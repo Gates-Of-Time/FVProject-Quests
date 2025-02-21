@@ -1,4 +1,14 @@
-my $move;
+sub EVENT_SPAWN {
+	#:: Create a timer 'despawn' that triggers in 3600 seconds (60 min)
+  	quest::settimer("despawn", 3600);
+}
+
+sub EVENT_TIMER {
+	#:: Stop the timer "despawn"
+	quest::stoptimer("despawn");
+	#:: Depop without spawn timer
+	quest::depop();
+}
 
 sub EVENT_ITEM {
 	if (quest::is_content_flag_enabled(Kunark_EpicsEra)) {
@@ -18,6 +28,7 @@ sub EVENT_ITEM {
 			quest::emote("will not take this item.");
 		}
 	}
+	
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
@@ -26,18 +37,16 @@ sub EVENT_SIGNAL {
 	#:: Match a signal "99" from /eastkarana/Althele.pl
 	if ($signal == 99) {
 		quest::emote("shivers as her power flows into the air above the gathering.");
+		#:: Cast spell 790 - Call of the Storm
+		$npc->CastSpell(790, $owner);
 	}
-	else {
-		quest::moveto(-1584,-3669,-18);
-		$move = 1;
+	#:: Match a signal "1" from /eastkarana/Althele.pl
+	elsif ($signal == 1) {
+		quest::moveto(-1584,-3669,-18,0);
 	}
 }
 
-sub EVENT_WAYPOINT_DEPART {
-	if ($move == 1) {
-		#:: Depop without spawn timer
-		quest::depop();
-		#:: Spawn a Eastern Plains of Karana >> Sionae (15178), without grid or guild war, at the given location
-		quest::spawn2(15178,0,0,-1584,-3669,-18,0);
-	}
+sub EVENT_DEATH_COMPLETE {
+	#:: Stop the timer "despawn"
+  	quest::stoptimer("despawn");
 }

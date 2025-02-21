@@ -1,5 +1,17 @@
 my $move;
 
+sub EVENT_SPAWN {
+	#:: Create a timer 'despawn' that triggers in 3600 seconds (60 min)
+  	quest::settimer("despawn", 3600);
+}
+
+sub EVENT_TIMER {
+	#:: Stop the timer "despawn"
+	quest::stoptimer("despawn");
+	#:: Depop without spawn timer
+	quest::depop();
+}
+
 sub EVENT_ITEM {
 	if (quest::is_content_flag_enabled(Kunark_EpicsEra)) {
 		#:: Match a 20451 - Frayed Braided Grass Amulet
@@ -18,6 +30,7 @@ sub EVENT_ITEM {
 			quest::emote("will not take this item.");
 		}
 	}
+	
 	#:: Return unused items
 	plugin::returnUnusedItems();
 }
@@ -26,18 +39,16 @@ sub EVENT_SIGNAL {
 	#:: Match a signal "99" from /eastkarana/Althele.pl
 	if ($signal == 99) {
 		quest::emote("growls as his power seeps into the earth.");
+		#:: Cast spell 790 - Call of the Storm
+		$npc->CastSpell(790, $owner);
 	}
-	else {
-		quest::moveto(-1590,-3671,-18);
-		$move = 1;
+	#:: Match a signal "1" from /eastkarana/Althele.pl
+	elsif ($signal == 1) {
+		quest::moveto(-1590,-3671,-18,0);
 	}
 }
 
-sub EVENT_WAYPOINT_DEPART {
-	if ($move == 1) {
-		#:: Depop without spawn timer
-		quest::depop();
-		#:: Spawn a Eastern Plains of Karana >> Nuien (15167), without grid or guild war, at the given location
-		quest::spawn2(15167,0,0,-1590,-3671,-18,0);
-	}
+sub EVENT_DEATH_COMPLETE {
+	#:: Stop the timer "despawn"
+  	quest::stoptimer("despawn");
 }
