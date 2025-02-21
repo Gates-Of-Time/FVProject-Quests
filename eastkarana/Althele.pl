@@ -96,40 +96,13 @@ sub EVENT_TIMER {
 		quest::emote("snaps her head towards you. 'Innoruuk's brood is upon us. Go, find the spawn of hatred before they reach this point and destroy them!");
 
 		#:: Spawn a Eastern Plains of Karana >> Dark_Elf_Corruptor (15153), without grid or guild war, at the given location
-		my $mobid = quest::spawn2(15153,138,0,-996,-1529,354,130);
-		# my $mob = $entity_list->GetMobID($mobid);
-		# if($mob) {
-		# 	#:: Add the Althele to the hate list of the Dark_Elf_Corruptor
-		# 	my $mobnpc = $mob->CastToNPC();
-		# 	if($mobnpc) {
-		# 		quest::emote("Dark_Elf_Corruptor attack");
-		# 		$mobnpc->AddToHateList($npc, 1);
-		# 	}
-		# }
+		quest::spawn2(15153,138,0,-996,-1529,354,130);
 		
 		#:: Spawn a Eastern Plains of Karana >> Dark_Elf_Reaver (15150), without grid or guild war, at the given location
-		my $mobid2 = quest::spawn2(15150,138,0,-1090,-1529,355.4,130);
-		# my $mob2 = $entity_list->GetMobID($mobid2);
-		# if($mob2) {
-		# 	#:: Add the Althele to the hate list of the Dark_Elf_Reaver
-		# 	my $mob2npc = $mob2->CastToNPC();
-		# 	if($mob2npc) {
-		# 		quest::emote("Dark_Elf_Reaver 1 attack");
-		# 		$mob2npc->AddToHateList($npc, 1);
-		# 	}
-		# }
+		quest::spawn2(15150,138,0,-1090,-1529,355.4,130);
 		
 		#:: Spawn a Eastern Plains of Karana >> Dark_Elf_Reaver (15150), without grid or guild war, at the given location
-		my $entid3 = quest::spawn2(15150,138,0,-1063,-1490,367.5,130);
-		# my $mob3 = $entity_list->GetMobID($entid3);
-		# if($mob3) {
-		# 	#:: Add the Althele to the hate list of the Dark_Elf_Reaver
-		# 	my $mob3npc = $mob3->CastToNPC();
-		# 	if($mob3npc) {
-		# 		quest::emote("Dark_Elf_Reaver 2 attack");
-		# 		$mob3npc->AddToHateList($npc, 1);
-		# 	}
-		# }
+		quest::spawn2(15150,138,0,-1063,-1490,367.5,130);
 	}
 }
 
@@ -139,4 +112,20 @@ sub EVENT_DEATH_COMPLETE {
   	quest::stoptimer("prep");
 	#:: Stop the timer "attack"
   	quest::stoptimer("attack");
+	#:: Depop without spawn timer active a Eastern Plains of Karana >> Dark_Elf_Reaver (15150) on the entity list
+	quest::depop(15150);
+	#:: Depop without spawn timer active a Eastern Plains of Karana >> Dark_Elf_Corruptor (15153) on the entity list
+	quest::depop(15153);
+			
+	#:: Depop without spawn timer active a Eastern Plains of Karana >> Sionae (15178) on the entity list
+	quest::depop(15178);
+	#:: Depop without spawn timer active a Eastern Plains of Karana >> Nuien (15167) on the entity list
+	quest::depop(15167);
+	#:: Depop without spawn timer active a Eastern Plains of Karana >> Teloa (15170) on the entity list
+	quest::depop(15170);
+
+	#:: Depop with spawn timer active a Eastern Plains of Karana >> Tholris (15043) on the entity list
+	quest::depop_withtimer(15043);
+	#:: Depop with spawn timer active a Eastern Plains of Karana >> Fang (15042) on the entity list
+	quest::depop_withtimer(15042);
 }
