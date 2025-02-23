@@ -1,5 +1,5 @@
 sub EVENT_SPAWN {
-		#:: Create a timer '1' that triggers in 1800 seconds (30 min)
+	#:: Create a timer '1' that triggers in 1800 seconds (30 min)
   	quest::settimer(1,1800);
 }
 
