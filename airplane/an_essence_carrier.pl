@@ -14,7 +14,6 @@ sub EVENT_TIMER {
 }
 
 sub EVENT_DEATH_COMPLETE {
-	#:: Spawn two The Plane of Sky >> an_essence_tamer (71071), with no grid or guildwar, offset from the current location
-	quest::spawn2(71071, 0, 0, $x + 10, $y, $z, $h);
-	quest::spawn2(71071, 0, 0, $x - 10, $y, $z, $h);
+	#:: Spawn a The Plane of Sky >> an_essence_tamer (71071), with no grid or guildwar, at the current location
+	quest::spawn2(71071, 0, 0, $x, $y, $z, $h);
 }
