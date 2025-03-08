@@ -41,6 +41,7 @@ sub EVENT_ITEM {
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
+  	quest::debug("Current wp: $wp");
 	if ($wp == 6 and $x == 407 and $y() == 235) {
 		quest::say("What!? You don't approve of me buyin' some drinks with this gem? Who the heck are you to offer me a gift and order me what to do with it? Is this some kinda conditional kindness? Well? Are you gonna let me buy some booze with this or not?");
 		quest::setglobal("shamanbondl",1,1,"F");
