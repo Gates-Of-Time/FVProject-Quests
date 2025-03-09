@@ -18,6 +18,8 @@ sub EVENT_SAY {
 				quest::delete_data($key);
 				#:: Stop the timer 'depop'
 				quest::stoptimer("stop13");
+				#:: Stop Grid 13
+				quest::stop();
 				#:: Start Grid 15
 				quest::start(15);
 			} else {
