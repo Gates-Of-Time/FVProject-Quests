@@ -6,15 +6,22 @@ sub EVENT_SAY {
 		}
 		elsif($text=~/you can buy booze/i)
 		{
-			if(defined($qglobals{shamanbondl})) {
+			#:: Key up a data bucket
+			$key = $name .  "-shaman-epic-bondl";
+			#:: Match if the key does not exist
+			if(quest::get_data($key)) {
 				quest::emote("suddenly becomes completely sober and says, 'Very well, shaman, please come with me.'");
 				#:: Spawn a Feeport North >> a_greater_spirit (8117), without grid or guild war, at the specified location
 				quest::spawn2(8117,0,0,62,66,32.1,254);
-				#:: Spawn a Feeport North >> a_greater_spirit_ (8118), without grid or guild war, at the specified location
 				quest::spawn2(8118,0,0,67,103,32.1,508);
-				quest::delglobal("shamanbondl");
+				#:: Destroy the data bucket
+				quest::delete_data($key);
+				#:: Stop the timer 'depop'
+				quest::stoptimer("stop13");
 				#:: Start Grid 15
 				quest::start(15);
+			} else {
+				quest::emote("no key...");
 			}
 		}
 	}
@@ -41,18 +48,36 @@ sub EVENT_ITEM {
 }
 
 sub EVENT_WAYPOINT_ARRIVE {
-  	quest::say("Current wp: $wp");
 	if ($wp == 6) {
-  		quest::say("Current loc: $x $y");
-
-	}
-	if ($wp == 6 and $x == 407 and $y() == 235) {
 		quest::say("What!? You don't approve of me buyin' some drinks with this gem? Who the heck are you to offer me a gift and order me what to do with it? Is this some kinda conditional kindness? Well? Are you gonna let me buy some booze with this or not?");
-		quest::setglobal("shamanbondl",1,1,"F");
+		#:: Key up a data bucket
+		$key = $name . "-shaman-epic-bondl";
+		#:: Match if the key does not exist
+		if (!quest::get_data($key)) {
+			quest::set_data($key, 1);
+		}
+		#:: Create a timer 'stop13' that triggers every 120 seconds (2 min)
+		quest::settimer("stop13",120);
+	}
+	elsif ($wp == 22) {
+		#:: Create a timer 'stop15' that triggers every 30 seconds
+		quest::settimer("stop15",30);
+	}
+}
+
+
+sub EVENT_TIMER {
+	#:: Match the timer 'stop13'
+	if ($timer eq "stop13") {
+		#:: Stop the timer 'stop13'
+		quest::stoptimer("stop13");
 		#:: Stop Grid 13
 		quest::stop();
 	}
-	else if ($wp == 22 and $x == 67.5 and $y() == 78.5) {
+	#:: Match the timer 'stop15'
+	elsif ($timer eq "stop15") {
+		#:: Stop the timer 'stop15'
+		quest::stoptimer("stop15");
 		#:: Stop Grid 15
 		quest::stop();
 	}
