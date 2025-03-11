@@ -6,8 +6,8 @@ sub EVENT_ITEM {
 		quest::summonitem(20476);
 		#:: Ding!
 		quest::ding();
-		#:: Depop without spawn timer
-		quest::depop();
+		#:: Depop with spawn timer active
+		quest::depop_withtimer();
 	}
 	else {
 		quest::emote("will not take this item.");
