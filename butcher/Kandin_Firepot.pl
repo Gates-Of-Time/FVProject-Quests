@@ -27,7 +27,7 @@ sub EVENT_ITEM {
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
-			quest::faction(342, 30); 	#:: + Truespirit
+			quest::faction(404, 30); 	#:: + Truespirit
 			quest::set_data($key_wiz_epic, 1);
 		}
 		elsif (quest::get_data($key_wiz_epic) >= 1) {
@@ -42,7 +42,7 @@ sub EVENT_ITEM {
 						#:: Ding!
 						quest::ding();
 						#:: Set factions
-						quest::faction(342, 30); 	#:: + Truespirit
+						quest::faction(404, 30); 	#:: + Truespirit
 						quest::set_data($key_wiz_epic, 2);
 					}
 				} elsif ($epic_progress == 2) {
@@ -54,7 +54,7 @@ sub EVENT_ITEM {
 						#:: Ding!
 						quest::ding();
 						#:: Set factions
-						quest::faction(342, 30); 	#:: + Truespirit
+						quest::faction(404, 30); 	#:: + Truespirit
 						quest::set_data($key_wiz_epic, 3);
 					}
 				} elsif ($epic_progress == 3) {
@@ -66,7 +66,7 @@ sub EVENT_ITEM {
 						#:: Ding!
 						quest::ding();
 						#:: Set factions
-						quest::faction(342, 30); 	#:: + Truespirit
+						quest::faction(404, 30); 	#:: + Truespirit
 						quest::delete_data($key_wiz_epic);
 					}
 				}
@@ -83,7 +83,7 @@ sub EVENT_ITEM {
 				#:: Ding!
 				quest::ding();
 				#:: Set factions
-				quest::faction(342, 30); 	#:: + Truespirit
+				quest::faction(404, 30); 	#:: + Truespirit
 				quest::delete_data($key_wiz_epic);
 			}
 		}

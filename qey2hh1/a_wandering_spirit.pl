@@ -23,7 +23,7 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(342, 250); 	#:: + Truespirit
+		quest::faction(404, 250); 	#:: + Truespirit
 		#:: Grant a small amount of experience
 		quest::exp(1000);
 	}
@@ -34,7 +34,7 @@ sub EVENT_ITEM {
 		#:: Ding!
 		quest::ding();
 		#:: Set factions
-		quest::faction(342, 200); 	#:: + Truespirit
+		quest::faction(404, 200); 	#:: + Truespirit
 		#:: Grant a small amount of experience
 		quest::exp(1000);
 	}

@@ -17,7 +17,7 @@ sub EVENT_ITEM {
 			#:: Ding!
 			quest::ding();
 			#:: Set factions
-			quest::faction(342, 50); 	#:: + Truespirit
+			quest::faction(404, 50); 	#:: + Truespirit
 			#:: Grant a small amount of experience
 			quest::exp(1000);
 			#:: Start Grid 57
