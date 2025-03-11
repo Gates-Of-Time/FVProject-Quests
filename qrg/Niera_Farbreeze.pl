@@ -35,8 +35,8 @@ sub EVENT_ITEM {
 		quest::summonitem(20456);
 		#:: Ding!
 		quest::ding();
-		#:: Depop without spawn timer
-		quest::depop();
+		#:: Depop with spawn timer active
+		quest::depop_withtimer();
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
