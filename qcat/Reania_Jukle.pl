@@ -14,14 +14,6 @@ sub EVENT_SAY {
 	if($text=~/hail/i) {
 		quest::say("Greetings $name. What can I help you with?");
 	}
-#::	elsif ($text=~/what is the ink of the dark/i) {
-#::		quest::say("Ink of the Dark, you say? That isn't an everyday item, you know. In fact, I can't remember the last time someone requested it. I have given up keeping any here with me. You are going to need to find your own supply now. Sorry.");
-#::	}
-#::	elsif($text=~/where can i find the ink of the dark/i) {
-#::		quest::say("The ink is the blood of a dark scribe. Tempt him and give him this vial. He should cooperate.");
-#::		#:: Give a 10626 - Empty Ink Vial
-#::		quest::summonitem(10626);
-#::	}
 	elsif($text=~/trades/i) {
 		quest::say("I thought you might be one who was interested in the various different trades, but which one would suit you? Ahh, alas, it would be better to let you decide for yourself, perhaps you would even like to master them all! That would be quite a feat. Well, lets not get ahead of ourselves, here, take this book. When you have finished reading it, ask me for the [second book], and I shall give it to you. Inside them you will find the most basic recipes for each trade. These recipes are typically used as a base for more advanced crafting, for instance, if you wished to be a smith, one would need to find some ore and smelt it into something usable. Good luck!");
 		#:: Give a 51121 - Tradeskill Basics : Volume I
@@ -31,6 +23,16 @@ sub EVENT_SAY {
 		quest::say("Here is the second volume of the book you requested, may it serve you well!");
 		#:: Give a 51122 - Tradeskill Basics : Volume II
 		quest::summonitem(51122);
+	}
+	elsif (quest::is_content_flag_enabled("Kunark_EpicsEra")) { 
+		if ($text=~/what is the ink of the dark/i) {
+			quest::say("Ink of the Dark, you say? That isn't an everyday item, you know. In fact, I can't remember the last time someone requested it. I have given up keeping any here with me. You are going to need to find your own supply now. Sorry.");
+		}
+		elsif($text=~/where can i find the ink of the dark/i) {
+			quest::say("The ink is the blood of a dark scribe. Tempt him and give him this vial. He should cooperate.");
+			#:: Give a 10626 - Empty Ink Vial
+			quest::summonitem(10626);
+		}
 	}
 }
 

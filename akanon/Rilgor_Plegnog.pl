@@ -21,6 +21,12 @@ sub EVENT_SAY {
 		#:: Give them 51122 - Tradeskill Basics : Volume II
 		quest::summonitem(51122);
 	}
+	elsif (quest::is_content_flag_enabled("Kunark_EpicsEra")) { 
+		if ($text=~/mechanical pen/i) {
+			quest::say("Why do you want one of those contraptions. You will spend more time repairing it then you will writing with it. But if you insist on getting one, you are going to have to do a small favor.");
+			quest::emote("tugs at your robe and grins evilly. 'Mighty nice outfit you have there. Sure beats these drab robes us three are wearing. Hmm...my favorite color is purple, in fact a shiny metallic purple would do nicely. How bad did you want that pen?'");
+		}
+	}
 }
 
 sub EVENT_ITEM {
@@ -38,6 +44,18 @@ sub EVENT_ITEM {
 		quest::faction(240, -10); 		#:: - Deepmuses
 		#:: Grant a small amount of level-based experience
 		$client->AddLevelBasedExp(2.5, 1);
+	}
+	elsif (quest::is_content_flag_enabled("Kunark_EpicsEra")) { 
+		#:: Match a 1360 - Shining Metallic Robes
+		if (plugin::takeItems(1360 => 1)) {
+			quest::say("Very nice!! It is perfect! Here take this pen. Have fun with it.");
+			#:: Give item 10600 - Mechanical Pen
+			quest::summonitem(10600);
+			#:: Ding!
+			quest::ding();
+			#:: Grant a medium amount of experience
+			quest::exp(50000);
+		}
 	}
 	#:: Return unused items
 	plugin::returnUnusedItems();
