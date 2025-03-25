@@ -10,7 +10,6 @@ sub EVENT_SAY {
 				quest::say("Ah yes, you again. Do you have the items? Give me the three you possess and I'll combine them with my own.");
 			}
 			elsif(quest::get_data("wizepicA") == 1) {
-				quest::say("Ah, but it pains my heart to see this. How I could love a women like that is beyond me. And yet, I still do love her. It was on the day I was to ask her to marry me that I lost my powers. When I was about to cast my greatest spell to prove my love to her, my magic failed. She ran out on me that day. But enough of me, do you wish to hear my story?");
 			}
 			else {
 				quest::say("Before I tell you anything, I require you to help me. Seek a woman named Challice. Give her this letter and then return to me.");
@@ -46,6 +45,7 @@ sub EVENT_ITEM {
 		#:: Match a 18088 - Arantir's Ring
 		if (plugin::takeItems(14335 => 1)) 
 		{
+			quest::say("Ah, but it pains my heart to see this. How I could love a women like that is beyond me. And yet, I still do love her. It was on the day I was to ask her to marry me that I lost my powers. When I was about to cast my greatest spell to prove my love to her, my magic failed. She ran out on me that day. But enough of me, do you wish to hear my story?");
 			quest::set_data("wizepicA",1);
 		}
 		#:: Match a 18168 - Note to Arantir

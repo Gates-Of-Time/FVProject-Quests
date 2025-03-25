@@ -18,8 +18,8 @@ sub EVENT_ITEM {
 		elsif(plugin::takeItems(14335 => 1)){
 			#:: Spawn one and only one Halas >> Arantir_Karondor (29089), without grid or guild war, at the current location
 			quest::unique_spawn(29089,0,0,$x,$y,$z,$h);
-
-    		quest::set_data("wizepicA",1);
+			#:: Give a 14335 - Arantir's Ring
+			quest::summonitem(14335);
 			#:: Depop with spawn timer active
 			quest::depop_withtimer();
 		}
@@ -27,7 +27,6 @@ sub EVENT_ITEM {
 		elsif(plugin::takeItemsn(18168 => 1)) {
 			#:: Spawn one and only one Halas >> Arantir_Karondor (29089), without grid or guild war, at the current location
 			quest::unique_spawn(29089,0,0,$x,$y,$z,$h);
-			
 			quest::delete_data("wizepicA");
 			quest::set_data("wizepicB",1);
 			#:: Depop with spawn timer active
