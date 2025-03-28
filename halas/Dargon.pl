@@ -24,7 +24,7 @@ sub EVENT_ITEM {
 			quest::depop_withtimer();
 		}
 		#:: Match a 18168 - Note to Arantir
-		elsif(plugin::takeItemsn(18168 => 1)) {
+		elsif(plugin::takeItems(18168 => 1)) {
 			#:: Spawn one and only one Halas >> Arantir_Karondor (29089), without grid or guild war, at the current location
 			quest::unique_spawn(29089,0,0,$x,$y,$z,$h);
 			quest::delete_data("wizepicA");
