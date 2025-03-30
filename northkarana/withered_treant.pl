@@ -1,5 +1,5 @@
 sub EVENT_SAY {
-	if ( quest::is_content_flag_enabled("Kunark_EpicsEra")) {
+	if (quest::is_content_flag_enabled("Kunark_EpicsEra")) {
 		if ($text=~/hail/i) {
 			quest::say("Yes. My bark is blackened and cracked by sickness. If only I were the only one to be afflicted this way. Throughout the lands this is happening. Agents of some dark god are twisting the lands and their creatures.");
 		}
@@ -13,7 +13,7 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	if ( quest::is_content_flag_enabled("Kunark_EpicsEra")) {
+	if (quest::is_content_flag_enabled("Kunark_EpicsEra")) {
 		#:: Match a 20690 - Chunk of Tundra, a 20689 - Clean Lakewater, and a 20688 - Ancient Rock
 		if (plugin::takeItems(20690 => 1, 20689 => 1, 20688 => 1)){
 			quest::say("My heart cleansed of Corruption can interrupt the Flow of the corruption between the priest and his dark god, force it upon him quickly, I can sense him, he is in the Karana's somewhere.");
