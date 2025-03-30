@@ -5,6 +5,13 @@ sub EVENT_SPAWN {
 	quest::set_proximity($x - 200, $x + 200, $y - 200, $y + 200, $z - 200, $z + 200, 0);
 	#:: Create a HP event at 96 percent health
 	quest::setnexthpevent(96);
+	if (quest::is_current_expansion_the_ruins_of_kunark()) {
+		#:: Match a Nagafen's Lair >> Zordak_Ragefire (32038) on the entity list
+		if ($entity_list->GetMobByNpcTypeID(32038)) { # if Lord Nagafen is up, Zordak will despawn, https://everquest.allakhazam.com/db/npc.html?id=5153&p=6#m99097066831023
+			#:: Depop with spawn timer active
+			quest::depop_withtimer(32038);
+		}
+	}
 }
 
 sub EVENT_AGGRO {
