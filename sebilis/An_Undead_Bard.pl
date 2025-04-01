@@ -1,7 +1,7 @@
-my $spawn;
+my $doSpawnTrakanon;
 
 sub EVENT_SPAWN {
-  	$spawn = 0;
+  	$doSpawnTrakanon = 0;
 }
 
 sub EVENT_SAY {
@@ -38,7 +38,7 @@ sub EVENT_ITEM {
 		#:: Give a 20536 - Mystical Lute Body
 		quest::summonitem(20536);
 		quest::attack($name);
-		$spawn = 1;
+		$doSpawnTrakanon = 1;
 	}
 	else {
 		quest::say("I do not need this.");
@@ -48,9 +48,10 @@ sub EVENT_ITEM {
 	plugin::returnUnusedItems();
 }
 
-sub EVENT_DEATH {
-	if($spawn == 1) {
-		quest::spawn2(89181,0,0,-693,-2103,-140.62,0);
-		$spawn = 0;
+sub EVENT_DEATH_COMPLETE {
+	if($doSpawnTrakanon == 1) {
+		#:: Spawn one and only one Old Sebilis >> #Trakanon (89181), without grid or guild war, at the given location
+		quest::unique_spawn(89181,0,0,-693,-2103,-140.62,0);
+		$doSpawnTrakanon = 0;
 	}
 }
