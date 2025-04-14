@@ -44,6 +44,8 @@ sub EVENT_ITEM {
 			quest::say("Oh it must be time to reveal the staff! The piece I will help you craft is encrusted with magical gems. These gems contain the essence of various creatures. Alone they have very little power. Combined together they are much more powerful. They must be combined in a sack. Just ask if you don't have one.");
 			#:: Give a 10604 - Jeb's Seal
 			quest::summonitem(10604);
+			#:: Give a 17861 - An Enchanters Sack
+			quest::summonitem(17861);
 			#:: Ding!
 			quest::ding();
 		}

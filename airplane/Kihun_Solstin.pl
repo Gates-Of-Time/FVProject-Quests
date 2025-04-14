@@ -19,7 +19,7 @@ sub EVENT_ITEM {
 		if (plugin::takeItems(20764 => 1, 28043 => 1, 2463 => 1)) {
 			quest::say("If you have obtained the other, lesser Elements, go speak with The Master of Elements, who is now waiting for you. I wish you luck. If you have not completed all the tasks set for you, let me know, and I shall let you see the Master.");
 			#:: Give a 28033 - Element of Wind
-			quest::SummonItem(28033);
+			quest::summonitem(28033);
 			#:: Ding!
 			quest::ding();
 			#:: Grant a small amount of experience

@@ -9,7 +9,7 @@ sub EVENT_ITEM {
 	if(plugin::takeItems(18069=> 1, 18068=> 1)){
 		quest::emote("fades out of existence. The air smells of death. Something has appeared in your hand.");
 		#:: Give a 12889 - Large Tassel Bookmark
-		quest::SummonItem(12889);
+		quest::summonitem(12889);
 		#:: Ding!
 		quest::ding();
 		#:: Depop with spawn timer active

@@ -18,7 +18,7 @@ sub EVENT_ITEM {
 		if (plugin::takeItems(28027 => 1, 28028 => 1, 28029 => 1, 28030 => 1)) {
 			quest::say("Very well. Take these words back to that shriveled old gnome, Rykas, if you wish to complete this quest. Now leave me, $name, it sickens me to be this cordial for so long. And my pet needs exercise. Go!");
 			#:: Give a 28004 - Words of Mastery
-			quest::SummonItem(28004);
+			quest::summonitem(28004);
 			#:: Ding!
 			quest::ding();
 		}

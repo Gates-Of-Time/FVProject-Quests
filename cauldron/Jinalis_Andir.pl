@@ -12,7 +12,7 @@ sub EVENT_ITEM {
 		if (plugin::takeItems(11569 => 1, 28040 => 1, 28041 => 1)) {
 			quest::say("You have the control needed in order to manipulate the water which surrounds us. Take this Element and guard it well, you will need it in the times to come.");
 			#:: Give a 28006 - Element of Earth
-			quest::SummonItem(28006);
+			quest::summonitem(28006);
 			#:: Ding!
 			quest::ding();
 			#:: Grant a small amount of experience

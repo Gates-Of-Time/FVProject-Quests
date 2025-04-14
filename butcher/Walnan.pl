@@ -21,7 +21,7 @@ sub EVENT_ITEM {
 		if (plugin::takeItems(28036 => 1, 28037 => 1, 28038 => 1, 28039 => 1)) {
 			quest::say("The arcane art of Summoning is derived from the power of the elements which surround us. Continue your journey across the Ocean of Tears. In a dark fortress, you should find Akksstaf lurking about. Be wary, but tell him that you seek Magi'kot. Hurry now $name, you do not wish to miss the ship!");
 			#:: Give a 28031 - Power of the Elements
-			quest::SummonItem(28031);
+			quest::summonitem(28031);
 			#:: Ding!
 			quest::ding();
 			#:: Grant a tiny amount of experience

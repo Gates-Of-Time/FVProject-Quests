@@ -15,7 +15,7 @@ sub EVENT_ITEM {
 		if (plugin::takeItems(18958 => 1, 28007 => 1, 10376 => 1, 28008 => 1)) {
 			quest::say("I see that you are well versed in the ways of Fire. Indeed, if you are as adept in the other, lesser elements, you may just seize the Orb of Mastery after all, and avoid Magi'kot's fate. Take this element, and guard it well, for more trials are to come, I assure you. Succeed and you shall be remembered always! Oh, and $name? Watch out for the puddles! HAHAHAHAHAHA!");
 			#:: Give a 28009 - Element of Fire
-			quest::SummonItem(28009);
+			quest::summonitem(28009);
 			#:: Ding!
 			quest::ding();
 			#:: Grant a small amount of experience

@@ -20,7 +20,7 @@ sub EVENT_ITEM {
 		if (plugin::takeItems(28003 => 1, 28004 => 1, 28031 => 1)) {
 			quest::say("I see that you have completed the quest I laid before you. That speaks well of your dedication, yet you do not realize your journey has just begun. Study this tome.");
 			#:: Give a 18958 - Power of the Orb
-			quest::SummonItem(18958);
+			quest::summonitem(18958);
 			#:: Ding!
 			quest::ding();
 			#:: Grant a small amount of experience
