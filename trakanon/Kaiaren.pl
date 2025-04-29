@@ -16,7 +16,7 @@ sub EVENT_ITEM {
 		#:: Attack the player who triggered the event
 		quest::attack($name);
 		#:: Spawn one and only one Trakanon's Teeth >> #Kaiaren (95183), with no grid or guildwar, at the given location
-		quest::spawn2(95183,0,0,2470,306,-339);
+		quest::spawn2(95183,0,0,2470,306,-339,0);
 	}
 	#:: Match a 1684 - Charred Scale
 	elsif((plugin::takeItems(1684 => 1)) && ($ulevel>=46) && ($class=="Monk")) {
