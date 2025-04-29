@@ -5,7 +5,7 @@ sub EVENT_SAY {
 	elsif($text=~/i challenge eejag/i) {
 		if (quest::is_content_flag_enabled("Kunark_EpicsEra")) { 
 			#:: Spawn one and only one Lavastorm >> Eejag (27119), with no grid or guildwar, at the specified location
-			quest::spawn2(27119, 0, 0, 126, 1789, -42);
+			quest::spawn2(27119,0,0,298,1037,-60,0);
 			#:: Depop with spawn timer active
 			quest::depop_withtimer();
 		}
