@@ -67,7 +67,7 @@ sub EVENT_ITEM {
 			#:: Ding!
 			quest::ding();
 			#:: Spawn a North Kaladim >> Usbak_the_Old (67089), without grid or guild war, at the given location
-			quest::spawn2(67089,0,0,$x,$y,$z,$h);
+			quest::spawn2(67089,0,0,-189.5,346.8,1.8,34.5);
 		}
 		#:: Match a 20482 - Small bit of Mithril Ore
 		elsif (plugin::takeItems(20482 => 1)) {
