@@ -2,13 +2,13 @@ sub EVENT_SAY {
 	$faction = $client->GetCharacterFactionLevel(404);	#:: Truespirit (404)
 	if ($faction >=42) {
 		if ($text=~/hail/i) {
-		quest::say("Ahh, finally! He has sent you. No time to waste now, you must help me lift the curse at once!");
+			quest::say("Ahh, finally! He has sent you. No time to waste now, you must help me lift the curse at once!");
 		}
 		if ($text=~/curse/i) {
-		quest::say("Can you not see my condition! I have been unjustly sentenced to an eternity in this wretched form you see before you, never to leave these walls. In exchange for the cure for this curse, I swear to show you a secret that would make you the most powerful of your kind.");
+			quest::say("Can you not see my condition! I have been unjustly sentenced to an eternity in this wretched form you see before you, never to leave these walls. In exchange for the cure for this curse, I swear to show you a secret that would make you the most powerful of your kind.");
 		}
 		if ($text=~/cure/i) {
-		quest::say("I require only four things of you, dark one, and one of them you hold now. Bring me the heart of an innocent, the head of the valiant, and the will of Innoruuk. With these, my curse shall be lifted at last and I will craft a weapon that will cast a shadow over all of Norrath.");
+			quest::say("I require only four things of you, dark one, and one of them you hold now. Bring me the heart of an innocent, the head of the valiant, and the will of Innoruuk. With these, my curse shall be lifted at last and I will craft a weapon that will cast a shadow over all of Norrath.");
 		}
 	}
 	else {
