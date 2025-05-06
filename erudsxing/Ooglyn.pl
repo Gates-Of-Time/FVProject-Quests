@@ -26,6 +26,8 @@ sub EVENT_ITEM {
 			quest::settimer("Speak",105);
 		}
 	}
+	#:: Return unused items
+	plugin::returnUnusedItems();
 }
 
 sub EVENT_TIMER {
@@ -58,9 +60,4 @@ sub EVENT_TIMER {
 		#:: Stop the timer 'OoglynDepop'
 		quest::stoptimer("OoglynDepop");
 	}
-}
-
-sub EVENT_ITEM {
-	#:: Return unused items
-	plugin::returnUnusedItems();
 }
