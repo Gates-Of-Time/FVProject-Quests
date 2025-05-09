@@ -11,34 +11,39 @@ sub EVENT_SAY {
 		}
 		#:: Match if faction is Kindly or better
 		elsif ($faction <= 3) {
-			if($text=~/I will continue what I have started/i) { 
-				quest::say("This brings happiness to our hearts and we are grateful. However, we must ask you to walk one more path before you can become a true Heyokah. With trust, one can focus on what is important. With patience, one can perceive what is harmful. With wisdom, one can know what must be done. These, you have learned, yet without the might to carry out what must be done, all is for naught. Are you [prepared to walk the path of might]?");
+			$truespirit_faction = $client->GetCharacterFactionLevel(404); #:: Truespirit
+			if ($truespirit_faction >= 400) {
+				if($text=~/I will continue what I have started/i) { 
+					quest::say("This brings happiness to our hearts and we are grateful. However, we must ask you to walk one more path before you can become a true Heyokah. With trust, one can focus on what is important. With patience, one can perceive what is harmful. With wisdom, one can know what must be done. These, you have learned, yet without the might to carry out what must be done, all is for naught. Are you [prepared to walk the path of might]?");
+				}
+				elsif($text=~/I am prepared to walk the path of might/i) { 
+					quest::say("Good, good, Do you know this place, $name, this forest? The wasichu call it the Emerald Jungle, but we know it only as the terrible place. Where there is no spirituality, we are weak. The lost city in the middle of this jungle is a great void of belief not only absent of spirituality, but actually draining it from others. We are here to neutralize that void. The void is like the sky, and nothing escapes its gaze. If it senses us, it will drain us away and sometimes it turns our minds, making us [like the wasichu], crazy for things with no meaning.");
+				}
+				elsif($text=~/like the wasichu/i) { 
+					quest::say("Yes, there are some of us who have turned their backs on our world and struggle for possesions and power over others. These lost ones are our brothers and we cry for them. Our hearts are in pain like bleeding wounds when we think of them. The path of might will lead you to one of our lost brothers. We are afraid there is nothing we can do for him now, so you must eliminate him when you [find him].");
+				}
+				elsif($text=~/find him/i) { 
+					quest::say("He left us long ago and walked the land for ages. He soon met a man, one of the pointy-ears that live underground. This man was like a void just like the one over that terrible place now. Our Brother-Friend was attracted to this man's desire and ambition. He no doubt thought that he could get what he wanted in service of this [dark point ear] who denied his own creator.");
+				}
+				elsif($text=~/dark point ear/i) { 
+					quest::say("After our brother began traveling with this point-ear, they became shrouded in a darkness we could not peer through. The point-ear was a powerful being and we soon lost their trail. We have no idea where he could be now. Although, after all these centuries, he has no doubt been gathering and cultivating his wealth and power. He must be an incredibly influential being at this point. Find this point-ear and draw our brother out, then destroy him and bring us proof. We await your return in somber mourning.");
+				}
 			}
-			elsif($text=~/I am prepared to walk the path of might/i) { 
-				quest::say("Good, good, Do you know this place, $name, this forest? The wasichu call it the Emerald Jungle, but we know it only as the terrible place. Where there is no spirituality, we are weak. The lost city in the middle of this jungle is a great void of belief not only absent of spirituality, but actually draining it from others. We are here to neutralize that void. The void is like the sky, and nothing escapes its gaze. If it senses us, it will drain us away and sometimes it turns our minds, making us [like the wasichu], crazy for things with no meaning.");
-			}
-			elsif($text=~/like the wasichu/i) { 
-				quest::say("Yes, there are some of us who have turned their backs on our world and struggle for possesions and power over others. These lost ones are our brothers and we cry for them. Our hearts are in pain like bleeding wounds when we think of them. The path of might will lead you to one of our lost brothers. We are afraid there is nothing we can do for him now, so you must eliminate him when you [find him].");
-			}
-			elsif($text=~/find him/i) { 
-				quest::say("He left us long ago and walked the land for ages. He soon met a man, one of the pointy-ears that live underground. This man was like a void just like the one over that terrible place now. Our Brother-Friend was attracted to this man's desire and ambition. He no doubt thought that he could get what he wanted in service of this [dark point ear] who denied his own creator.");
-			}
-			elsif($text=~/dark point ear/i) { 
-				quest::say("After our brother began traveling with this point-ear, they became shrouded in a darkness we could not peer through. The point-ear was a powerful being and we soon lost their trail. We have no idea where he could be now. Although, after all these centuries, he has no doubt been gathering and cultivating his wealth and power. He must be an incredibly influential being at this point. Find this point-ear and draw our brother out, then destroy him and bring us proof. We await your return in somber mourning.");
-			}
-			elsif($text=~/Heyokah/i) { 
-				quest::say("Yes, you have walked the Path of the Heyokah to its end. You have become what few have and we will now call to you as Heyokah $name. From now on, you are a direct link between the spirits and man. Whether your goals are to help us or master us, you are welcomed. Though there is little time for celebration. Do you feel the darkness of this place, the forest? To eyes not trained to see beyond physical appearances, it seems like any other forest. But you know, as do we, of the mantle over the city threatening all of us. We must [rub it out].");
-			}
-			elsif($text=~/rub it out/i) { 
-				quest::say("There are many such mantles scarring the universe and each is very different from the last. Removing them requires that we learn how they were created and go about reversing the damage done. We cannot enter under the mantle for long which is why we search out Heyokah such as yourself. We need you to enter the city and find out what you can about the [city's demise]. We hope you will do this for the cause of balance but if you desire none but your own power, we shall grant that as well.");
-			}
-			elsif($text=~/city's demise/i) { 
-				quest::say("It was known as Torsis. During its history it amassed great wealth and power yet it eventually crumbled. No one understands what happened. The men of the world ask themselves how a nation as successful as Torsis could ever fall. Some blame plague, internal unrest, the constant encroachment of the forest, and marauding bands of monsters but we alone know what happened. Just as Tabien and Glaron lost sight of their spiritual paths, so did Torsis. Without the awe and inspiration of that which was greater than themselves, they eventually withered away. The mantle was born long before the last days, though, and what we need to learn is [how it all began].");
-			}
-			elsif($text=~/how it all began/i) { 
-				quest::say("Excellent! Go into the city and gather what evidence you can. The ghosts who still walk the streets may hoard precious memories that will aid us. Take this booklet and combine what you find in it. Then bring me the completed report. From there, we will know where to look next.");
-				#:: Give a 17805 - Ancient Journal
-				quest::summonitem(17805);
+			if ($truespirit_faction >= 500) {
+				if($text=~/Heyokah/i) { 
+					quest::say("Yes, you have walked the Path of the Heyokah to its end. You have become what few have and we will now call to you as Heyokah $name. From now on, you are a direct link between the spirits and man. Whether your goals are to help us or master us, you are welcomed. Though there is little time for celebration. Do you feel the darkness of this place, the forest? To eyes not trained to see beyond physical appearances, it seems like any other forest. But you know, as do we, of the mantle over the city threatening all of us. We must [rub it out].");
+				}
+				elsif($text=~/rub it out/i) { 
+					quest::say("There are many such mantles scarring the universe and each is very different from the last. Removing them requires that we learn how they were created and go about reversing the damage done. We cannot enter under the mantle for long which is why we search out Heyokah such as yourself. We need you to enter the city and find out what you can about the [city's demise]. We hope you will do this for the cause of balance but if you desire none but your own power, we shall grant that as well.");
+				}
+				elsif($text=~/city's demise/i) { 
+					quest::say("It was known as Torsis. During its history it amassed great wealth and power yet it eventually crumbled. No one understands what happened. The men of the world ask themselves how a nation as successful as Torsis could ever fall. Some blame plague, internal unrest, the constant encroachment of the forest, and marauding bands of monsters but we alone know what happened. Just as Tabien and Glaron lost sight of their spiritual paths, so did Torsis. Without the awe and inspiration of that which was greater than themselves, they eventually withered away. The mantle was born long before the last days, though, and what we need to learn is [how it all began].");
+				}
+				elsif($text=~/how it all began/i) { 
+					quest::say("Excellent! Go into the city and gather what evidence you can. The ghosts who still walk the streets may hoard precious memories that will aid us. Take this booklet and combine what you find in it. Then bring me the completed report. From there, we will know where to look next.");
+					#:: Give a 17805 - Ancient Journal
+					quest::summonitem(17805);
+				}
 			}
 		}
 	}
