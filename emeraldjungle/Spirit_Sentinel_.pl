@@ -50,7 +50,6 @@ sub EVENT_ITEM {
 				#:: Grant a large amount of experience
 				quest::exp(100000);
 			}
-			}
 			#:: Match four 18459 - Neh`Ashiir's Diary
 			elsif($truespirit_faction >= 900 && plugin::takeItems(18459 => 1)) { 
 				quest::emote("So, the truth is found! Nak mourned over the loss of his child instead of relishing the blessing of his god, Cazic-Thule. His wife and the High Scale then abandoned him in disgust, but even that was an aftereffect of what caused the king to turn his back on his faith. The child is the key! If we put the child to rest, Nak may repent of what he has done and the mantle may be lifted. The most difficult task is now at hand. Find the child, then take proof of her passing to Nak. I can feel the mantle's foundation crumbling! Now, go!");
