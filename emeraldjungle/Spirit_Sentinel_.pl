@@ -39,8 +39,9 @@ sub EVENT_ITEM {
 	if ( quest::is_content_flag_enabled("Kunark_HoleEra")) {
 		#:: Match if faction is Warmly or better
 		if ($faction <= 2) {
+			$truespirit_faction = $client->GetCharacterFactionLevel(404); #:: Truespirit
 			#:: Match four 18456 - Historic Article, a 18457 - Crusades of the High Scale and a 18458 - Head Housekeeper's Log
-			if (plugin::takeItems(18456 => 1, 18457 => 1, 18458 => 1)) { 
+			if ($truespirit_faction >= 600 && plugin::takeItems(18456 => 1, 18457 => 1, 18458 => 1)) { 
 				quest::emote("Hmmm, it appears the queen's disappearance wasn't as random as we thought. It also looks as if this High Scale were having some sort of affair with Neh. We have little but speculation at this point, so making it known to Nak'Ashiir would do nothing. Perhaps finding the resting place of the High Scale will show us more of what really happened. We suspect the icon mentioned in this log could now be located in the city's old temple. Find the icon and bring it to Kirn, wherever he is. Tell us what you learn afterwards.");
 				#:: Ding!
 				quest::ding();
@@ -49,8 +50,9 @@ sub EVENT_ITEM {
 				#:: Grant a large amount of experience
 				quest::exp(100000);
 			}
+			}
 			#:: Match four 18459 - Neh`Ashiir's Diary
-			elsif(plugin::takeItems(18459 => 1)) { 
+			elsif($truespirit_faction >= 900 && plugin::takeItems(18459 => 1)) { 
 				quest::emote("So, the truth is found! Nak mourned over the loss of his child instead of relishing the blessing of his god, Cazic-Thule. His wife and the High Scale then abandoned him in disgust, but even that was an aftereffect of what caused the king to turn his back on his faith. The child is the key! If we put the child to rest, Nak may repent of what he has done and the mantle may be lifted. The most difficult task is now at hand. Find the child, then take proof of her passing to Nak. I can feel the mantle's foundation crumbling! Now, go!");
 				#:: Ding!
 				quest::ding();
