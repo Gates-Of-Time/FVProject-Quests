@@ -17,6 +17,8 @@ sub EVENT_ITEM {
 			quest::ding();
 			#:: Spawn one and only one Burning Woods >> Ixiblat_Fer (87151), without grid or guild war, at the specified location
 			quest::unique_spawn(87151, 0, 0, 1500, -2000, -375);
+			#:: Depop with spawn timer active
+			quest::depop_withtimer();
 		}
 	}
 	
