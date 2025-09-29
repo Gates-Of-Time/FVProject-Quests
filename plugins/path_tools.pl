@@ -55,7 +55,7 @@ sub RandomRoam {
 				my $LoS_Check = $npc->CheckLoSToLoc($NewX, $NewY, $NewZ, $LoSMobSize);
 				#Check LoS to the new random Loc
 				if ($LoS_Check) {
-					quest::moveto($NewX, $NewY, $NewZ, -1, 1);
+					quest::moveto($NewX, $NewY, $NewZ, -2, 1);
 				}
 			}
 		}
@@ -105,7 +105,7 @@ sub StraightPath {
 							my $LoS_Check = $npc->CheckLoSToLoc($NewX, $NewY + 2, $NewZ, 5);
 							#Check LoS to the new random Loc
 							if ($LoS_Check) {
-								quest::moveto($NewX, $NewY, $NewZ, -1, 1);
+								quest::moveto($NewX, $NewY, $NewZ, -2, 1);
 							}
 						}
 						else {
@@ -113,13 +113,13 @@ sub StraightPath {
 							my $LoS_Check = $npc->CheckLoSToLoc($NewX, $NewY - 2, $NewZ, 5);
 							#Check LoS to the new random Loc
 							if ($LoS_Check) {
-								quest::moveto($NewX, $NewY, $NewZ, -1, 1);
+								quest::moveto($NewX, $NewY, $NewZ, -2, 1);
 							}
 						}
 					}
 				}
 				else {	# If not moving on the same Axis they are already on, just return them to their Spawn Point
-					quest::moveto($OrigX, $OrigY, $OrigZ, -1, 1);
+					quest::moveto($OrigX, $OrigY, $OrigZ, -2, 1);
 				}
 			}
 			else {	# If we are not using the orignal X, then use the original Y instead
@@ -132,7 +132,7 @@ sub StraightPath {
 							my $LoS_Check = $npc->CheckLoSToLoc($NewX + 2, $OrigY, $NewZ, 5);
 							#Check LoS to the new random Loc
 							if ($LoS_Check) {
-								quest::moveto($NewX, $OrigY, $NewZ, -1, 1);
+								quest::moveto($NewX, $OrigY, $NewZ, -2, 1);
 							}
 						}
 						else {
@@ -141,13 +141,13 @@ sub StraightPath {
 							#Check LoS to the new random Loc
 							if ($LoS_Check) {
 
-								quest::moveto($NewX, $OrigY, $NewZ, -1, 1);
+								quest::moveto($NewX, $OrigY, $NewZ, -2, 1);
 							}
 						}
 					}
 				}
 				else {	# If not moving on the same Axis they are already on, just return them to their Spawn Point
-					quest::moveto($OrigX, $OrigY, $OrigZ, -1, 1);
+					quest::moveto($OrigX, $OrigY, $OrigZ, -2, 1);
 				}
 			}
 		}
@@ -199,54 +199,11 @@ sub RandomSwim {
 					#if($npc->GetFlyMode() != 1) {
 					#	$npc->SetFlyMode(1);
 					#}
-					quest::moveto($NewX, $NewY, $SwimZ, -1, 1);
+					quest::moveto($NewX, $NewY, $SwimZ, -2, 1);
 				}
 			}
 		}
 	}
-}
-
-#Usage: my @DestArray = plugin::CalcDestFromHeading(Heading, Distance, [Mob, MaxZDiff]);
-# This plugin calculates the destination X and Y loc based on heading and distance
-# Heading is the heading you want to calculate destination X Y Z from
-# Distance is the distance you want for the destination X and Y from the source
-# Mob is an optional field to allow any mob to be set, but $npc is default
-# MaxZDiff is the max height difference from the source mob's Z you want to calculate the destination from.
-#
-# The output array can be used as follows:
-# my $DestX = $DestArray[0];
-# my $DestY = $DestArray[1];
-# my $DestZ = $DestArray[2];
-
-sub CalcDestFromHeading {
-
-	my $npc = plugin::val('$npc');
-	my $Heading = $_[0];
-	my $Distance = $_[1];
-	my $Mob = $_[2];
-	my $MaxZDiff = $_[3];
-	
-	if (!$Distance) { return; }
-	if (!$Mob) { $Mob = $npc; }
-	if (!$MaxZDiff) { $MaxZDiff = 50; }
-	
-	my $ReverseHeading = 256 - $Heading;
-	my $ConvertAngle = $ReverseHeading * 1.40625;
-	if ($ConvertAngle <= 270) {
-		$ConvertAngle = $ConvertAngle + 90;
-	}
-	else {
-		$ConvertAngle = $ConvertAngle - 270;
-	}
-	my $Radian = $ConvertAngle * (3.1415927 / 180);
-
-	my $CircleX = $Distance * cos($Radian);
-	my $CircleY = $Distance * sin($Radian);
-	my $DestX = $CircleX + $Mob->GetX();
-	my $DestY = $CircleY + $Mob->GetY();
-	my $DestZ = $Mob->FindGroundZ($DestX, $DestY, $MaxZDiff);
-	my @DestArray = ($DestX, $DestY, $DestZ);
-	return @DestArray;
 }
 
 return 1;	#This line is required at the end of every plugin file in order to use it
