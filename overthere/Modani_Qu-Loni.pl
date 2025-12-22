@@ -18,6 +18,13 @@ sub EVENT_SAY {
 		elsif ($text=~/innoruuks word/i) {
 			quest::say("The strict doctrine of the priests of Innoruuk is used as a material component in the crafting. The power of their hate must not be underestimated.");
 		}
+		elsif ($text=~/i need a sack/i) {
+			if (plugin::check_hasitem($client,10604)) {
+				quest::say("Take this sack and combine the items I requested in it. Then return it to me.");
+				#:: Give a 17861 - An Enchanters Sack
+				quest::summonitem(17861);
+			}
+		}
 	}
 }
 

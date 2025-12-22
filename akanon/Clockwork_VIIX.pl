@@ -18,6 +18,13 @@ sub EVENT_SAY {
 		elsif ($text=~/book of charm and sacrifice/i) {
 			quest::say("Oh, that is a book of good reading. If you want to take the time to read it. I haven't had much free time to read it, but now that you are getting supplies for me, I can take a break.");
 		}
+		elsif ($text=~/i need a sack/i) {
+			if (plugin::check_hasitem($client,10604)) {
+				quest::say("Take this sack and combine the items I requested in it. Then return it to me.");
+				#:: Give a 17861 - An Enchanters Sack
+				quest::summonitem(17861);
+			}
+		}
 	}
 }
 
