@@ -43,6 +43,7 @@ sub EVENT_ITEM {
   }
   else {
     quest::say("These items are not what I seek. Please bring me any two spells from the lost tomes.");
+	# Return everything on failure
     plugin::returnUnusedItems();
   }
 }
