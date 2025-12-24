@@ -1,6 +1,6 @@
 sub EVENT_SAY {
     if ($text =~ /hail/i) {
-        quest::say("Bring me exactly three scrolls for my collection, no more and no less, and you shall be rewarded.");
+        quest::say("Bring me exactly four scrolls for my collection, no more and no less, and you shall be rewarded.");
     }
 }
 
@@ -33,10 +33,10 @@ sub EVENT_ITEM {
 		}
 	}
 
-	# Must be EXACTLY 3 valid items total
-	if ($valid_count == 3) {
+	# Must be EXACTLY 4 valid items total
+	if ($valid_count == 4) {
 
-		# Remove only valid items (any combination totaling 3)
+		# Remove only valid items (any combination totaling 4)
 		plugin::takeItems(%valid_lookup);
 
 		my $reward = $rewards[int(rand(@rewards))];
@@ -46,7 +46,7 @@ sub EVENT_ITEM {
 		return;
 	}
 	else {
-		quest::say("I require exactly three scrolls for my collection. No more. No less.");
+		quest::say("I require exactly four scrolls for my collection. No more. No less.");
 		# Return everything on failure
 		plugin::returnUnusedItems();
 	}
