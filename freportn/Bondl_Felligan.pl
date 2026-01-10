@@ -16,15 +16,13 @@ sub EVENT_SAY {
 				quest::spawn2(8118,0,0,67,103,32.1,508);
 				#:: Destroy the data bucket
 				quest::delete_data($key);
-				#:: Stop the timer 'depop'
+				#:: Stop the timer 'stop13'
 				quest::stoptimer("stop13");
 				#:: Stop Grid 13
 				quest::stop();
 				#:: Start Grid 15
 				quest::start(15);
-			} else {
-				quest::emote("no key...");
-			}
+			} 
 		}
 	}
 }
