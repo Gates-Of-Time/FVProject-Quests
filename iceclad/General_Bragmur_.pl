@@ -55,63 +55,47 @@ sub EVENT_WAYPOINT_ARRIVE {
 	if ($wp eq "13") {
 		#:: Send a signal "102" to Iceclad Ocean >> Commander_Vjorik (110096) with nodelay
 		quest::signalwith(110096, 102);
-		#:: Spawn one Iceclad Ocean >> Kromrif_tracking_wolf (110097), with no grid or guildwar, at the given location
+		#:: Spawn four Iceclad Ocean >> Kromrif_tracking_wolf (110097), with no grid or guildwar, at the given location
 		quest::spawn2(110097, 0, 0, 7518.8, -3539.8, 164.0, 95.1);
-		#:: Spawn one Iceclad Ocean >> Kromrif_tracking_wolf (110097), with no grid or guildwar, at the given location
 		quest::spawn2(110097, 0, 0, 7536.8, -3525.8, 163.2, 125.4);
-		#:: Spawn one Iceclad Ocean >> Kromrif_tracking_wolf (110097), with no grid or guildwar, at the given location
 		quest::spawn2(110097, 0, 0, 7555.5, -3530.8, 162.2, 155.6);
-		#:: Spawn one Iceclad Ocean >> Kromrif_tracking_wolf (110097), with no grid or guildwar, at the given location
 		quest::spawn2(110097, 0, 0, 7512.5, -3575.6, 165.3, 32.8);
 	}
 	#::: When NPC arrives at waypoint 20
 	elsif($wp eq "20") {
-		#:: Spawn one Iceclad Ocean >> Frost_Giant_Skirmisher (110120), with no grid or guildwar, at the given location
+		#:: Spawn four Iceclad Ocean >> Frost_Giant_Skirmisher (110120), with no grid or guildwar, at the given location
 		quest::spawn2(110120, 0, 0, 7243.8, -2153.7, 150.2, 110.8);
-		#:: Spawn one Iceclad Ocean >> Frost_Giant_Skirmisher (110120), with no grid or guildwar, at the given location
 		quest::spawn2(110120, 0, 0, 7211.8, -2204.5, 145.6, 69.9);
-		#:: Spawn one Iceclad Ocean >> Frost_Giant_Skirmisher (110120), with no grid or guildwar, at the given location
 		quest::spawn2(110120, 0, 0, 7254.1, -2246.1, 147.5, 8.9);
-		#:: Spawn one Iceclad Ocean >> Frost_Giant_Skirmisher (110120), with no grid or guildwar, at the given location
 		quest::spawn2(110120, 0, 0, 7324.7, -2196.4, 153.9, 188.1);
 	}
 	#::: When NPC arrives at waypoint 33
 	elsif($wp eq "33") {
 		#:: Spawn one Iceclad Ocean >> Commander_Kvarid (110112), with no grid or guildwar, at the given location
 		quest::spawn2(110112, 0, 0, 5923.9, -1015.7, 162.5, 129.3);
-		#:: Spawn one Iceclad Ocean >> Frost_Giant_Skirmisher (110121), with no grid or guildwar, at the given location
+		#:: Spawn three Iceclad Ocean >> Frost_Giant_Skirmisher (110121), with no grid or guildwar, at the given location
 		quest::spawn2(110121, 0, 0, 5864.8, -1063.2, 157.7, 66.6);
-		#:: Spawn one Iceclad Ocean >> Frost_Giant_Skirmisher (110121), with no grid or guildwar, at the given location
 		quest::spawn2(110121, 0, 0, 5894.9, -1110.1, 160.6, 21.6);
-		#:: Spawn one Iceclad Ocean >> Frost_Giant_Skirmisher (110121), with no grid or guildwar, at the given location
 		quest::spawn2(110121, 0, 0, 5973.3, -1041.8, 163.0, 177.6);
 	}
 	#::: When NPC arrives at waypoint 68
 	elsif($wp eq "68") {
-		#:: Spawn one Iceclad Ocean >> Kromrif_Tracking_Wolf (110122), with no grid or guildwar, at the given location
+		#:: Spawn five Iceclad Ocean >> Kromrif_Tracking_Wolf (110122), with no grid or guildwar, at the given location
 		quest::spawn2(110122, 0, 0, 2265.1, 1530.2, 60.1, 142.6);
-		#:: Spawn one Iceclad Ocean >> Kromrif_Tracking_Wolf (110122), with no grid or guildwar, at the given location
 		quest::spawn2(110122, 0, 0, 2249.0, 1536.2, 56.0, 123.4);
-		#:: Spawn one Iceclad Ocean >> Kromrif_Tracking_Wolf (110122), with no grid or guildwar, at the given location
 		quest::spawn2(110122, 0, 0, 2234.1, 1530.7, 52.4, 112.4);
-		#:: Spawn one Iceclad Ocean >> Kromrif_Tracking_Wolf (110122), with no grid or guildwar, at the given location
 		quest::spawn2(110122, 0, 0, 2220.9, 1500.8, 50.4, 87.9);
-		#:: Spawn one Iceclad Ocean >> Kromrif_Tracking_Wolf (110122), with no grid or guildwar, at the given location
 		quest::spawn2(110122, 0, 0, 2242.6, 1458.6, 52.0, 19.3);
 	}
 	#::: When NPC arrives at waypoint 80
 	elsif($wp eq "80") {
 		#:: Spawn one Iceclad Ocean >> Commander_Vjorik (110109), with no grid or guildwar, at the given location
 		quest::spawn2(110109, 0, 0, 2695.9, 3725.1, 249.2, 128.4);
-		#:: Spawn one Iceclad Ocean >> Frost_Giant_Skirmisher (110121), with no grid or guildwar, at the given location
+		#:: Spawn five Iceclad Ocean >> Frost_Giant_Skirmisher (110121), with no grid or guildwar, at the given location
 		quest::spawn2(110121, 0, 0, 2678.2, 3719.1, 250.3, 89.4);
-		#:: Spawn one Iceclad Ocean >> Frost_Giant_Skirmisher (110121), with no grid or guildwar, at the given location
 		quest::spawn2(110121, 0, 0, 2709.9, 3720.5, 245.5, 165.4);
-		#:: Spawn one Iceclad Ocean >> Frost_Giant_Skirmisher (110121), with no grid or guildwar, at the given location
 		quest::spawn2(110121, 0, 0, 2711.9, 3707.5, 242.0, 192.9);
-		#:: Spawn one Iceclad Ocean >> Frost_Giant_Skirmisher (110121), with no grid or guildwar, at the given location
 		quest::spawn2(110121, 0, 0, 2678.7, 3690.9, 245.7, 35.4);
-		#:: Spawn one Iceclad Ocean >> Frost_Giant_Skirmisher (110121), with no grid or guildwar, at the given location
 		quest::spawn2(110121, 0, 0, 2666.9, 3735.2, 247.8, 95.1);
 	}
 	#::: When NPC arrives at waypoint 91
