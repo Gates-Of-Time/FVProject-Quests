@@ -1,0 +1,244 @@
+sub EVENT_SPAWN {
+    $walk1 = undef;
+    $walk2 = 0;
+    $walk3 = 0;
+    $walk4 = 0;
+    $walk5 = 0;
+}
+
+sub EVENT_SAY {
+    if ($text=~/hail/i) {
+        quest::say("Hrmff, what's this? A spy sent from the giant heathens, or the selfrighteous wurms perhaps? Either way, you'd be no [friend] of the great Coldain.");
+    }
+    elsif ($text=~/friend/i) {
+        quest::say("A friend, you say? That remains to be seen. Much more to being a friend of the Coldain than just sayin' so. Anyway, I'm too [tired] to argue about it. I haven't slept in days.");
+    }
+    elsif ($text=~/tired/i) {
+        quest::say("Did I say tired? Exhausted is more like it. Ever since that blizzard last week I haven't slept a wink. I came back from huntin' snow orcs to find that my [blanket] had blown away and now I'm just too tired to rustle up a new one.");
+    }
+    elsif ($text=~/blanket/i) {
+        quest::say("Not just any old blanket, mind ye, mine was made of the finest tundra kodiak hides and snow panther skins, two of each. When I was wrapped up in it ya couldn't see me a bit, no, I blended right into the snow, I did. Say, if you be a friend, here's yer chance to prove it. Sew me up a new blanket so I can get some rest.");
+    }
+    elsif ($text=~/nephew/i) {
+        quest::say("My nephew, Boridain, keeps running away from home to kill a bothersome [beast], thinking this will prove to all of Thurgadin that he is a great hunter. Every time he does this my sister gets hysterical and I am sent out to find him.");
+    }
+    elsif ($text=~/beast/i) {
+        quest::say("A rabid tundra kodiak has been feeding on our people for weeks now. If Boridain ever stumbled across the critter I doubt he'd stand a chance. I have a solution, but it would require the [assistance] of an outsider.");
+    }
+    elsif ($text=~/assistance/i) {
+        quest::say("I'm taking a liking to you, stranger. Your eagerness to help us will not go unnoticed. Find my nephew and give him this axe. It should keep him from hurting himself. Return to me with the ring and proof that he is safe.");
+        #:: Give a 30265 - FINDITEM.
+        quest::summonitem(30265);
+    }
+    elsif ($text=~/hunting/i) {
+        quest::say("My camp here boasts the most proficient hunters in the recorded history of the mighty Coldain empire. We alone could feed an entire clan. Things have been frustratingly [slow] lately, though.");
+    }
+    elsif ($text=~/slow/i) {
+        quest::say("After years of skinning the hides of the giantmen, my hunting knife has lost its edge. The dull blade has slowed me down considerably. It has served me well, but a new [knife] would make me a much more proficient hunter.");
+    }
+    elsif ($text=~/knife/i) {
+        quest::say("Hunt a wooly rhino and take his horn, then take a flawless hide from a walrus. Combine them in a forge with a skinning rock and bring me the new knife and the silver insignia ring.");
+    }
+    elsif ($text=~/smithing hammer/i) {
+        quest::say("[Tain] Hammerfrost can get you one. Find him and give him this.");
+        #:: Give a 30139 - FINDITEM.
+        quest::summonitem(30139);
+    }
+    elsif ($text=~/tain/i) {
+        quest::say("Tain left a short time ago, he said he had a score to settle with a particular Kromriff.");
+    }
+    elsif ($text=~/plans/i) {
+        quest::say("The bloody Ry'Gorr, friends of the frost giants, plan to raid our encampment. Their captain, Scarbrow Ga'hruk is leading the raid. I need someone to intercept his [orders] so we may prepare for the attack. Without them we could be in serious trouble.");
+    }
+    elsif ($text=~/orders/i) {
+        quest::say("Find the Ry'Gorr messenger and cut him down. Bring the message he carries to my lookout. When the attack is thwarted, return to me with the head of Scarbrow and the platinum insignia ring.");
+    }
+    elsif ($text=~/favor/i) {
+        quest::say("For several seasons there has been an unsolved mystery in this land. Not far from here an elite team of Coldain and their trained wolves were gathered to make a strike at the Kromrif. No one knows just what became of our strike force. Bring me proof of their fate and proof that whoever was responsible for their loss is no more.");
+    }
+    elsif ($text=~/mission/i) {
+        quest::say("A Coldain... A very important Coldain, has been abducted by the Rygorr. He was gathering information that is imperative to our victory over the brainless heathens. You must find him before he is killed and escort him to safety. Return to me with proof that Corbin Blackwell is safe.");
+    }
+    elsif ($text=~/ready/i) {
+        quest::say("Very well, $name, give me the Adamantite ring and I will give you the marching orders. Once the orders are given to Gloradin in the next hut, we will be underway. You then must follow me to what will be our battleground. I must warn you, I will hold your ring until the head of Chief Ry`gorr is given to me. If we fail, all will be lost... for both of us.");
+    }
+}
+
+
+sub EVENT_ITEM {
+    #:: Match a 30135 - Coldain Hunting Blanket.
+    if (plugin::takeItems(30135 => 1)) {
+		quest::say("Ahh, that'll do fine. Take this, it is but a trinket for now, but continue to serve the Coldain and it will grow in power. I must get some rest now, for I have been told my [nephew] has disappeared again and I will need to track him down tomorrow.");
+		#:: Give a 30131 - Copper Coldain Insignia Ring.
+		quest::summonitem(30131);
+
+			#:: Set factions
+			quest::faction(406, 30);   #:: + Coldain
+			quest::faction(405, 30);   #:: + Dain Frostreaver IV
+			quest::faction(419, -30);  #:: - Kromrif
+			quest::faction(448, -30);  #:: - Kromzek
+
+		#:: Grant a medium amount of experience.
+		quest::exp(50000);
+    }
+    #:: Match a 30267 - Broken Axe and a 30131 - Copper Coldain Insignia Ring.
+    elsif (plugin::takeItems(30267 => 1, 30131 => 1)) {
+		quest::say("Well done friend! My nephew is safe at home and his thirst for adventure is quenched for now. The beast will claim no more of our people. I couldn't have handled it better myself. Now I can get back to the business of [hunting].");
+		#:: Give a 30133 - Silver Coldain Insignia Ring.
+		quest::summonitem(30133);
+
+		#:: Set factions
+		quest::faction(406, 30);   #:: + Coldain
+		quest::faction(405, 30);   #:: + Dain Frostreaver IV
+		quest::faction(419, -30);  #:: - Kromrif
+		quest::faction(448, -30);  #:: - Kromzek
+
+		#:: Grant a medium amount of experience.
+		quest::exp(60000);
+    }
+    #:: Match a 30137 - Coldain Hunting Knife and a 30133 - Silver Coldain Insignia Ring.
+    elsif (plugin::takeItems(30137 => 1, 30133 => 1)) {
+		quest::say("Hrmm, not quite the work of a Coldain. Barely functional, in fact. I'll be needing to touch this up a bit. Fetch me a Coldain [smithing hammer] and I'll be sure to tell my associates in Thurgadin of your deeds.");
+		#:: Give a 30132 - Gold Coldain Insignia Ring.
+		quest::summonitem(30132);
+
+		#:: Set factions
+		quest::faction(406, 30);   #:: + Coldain
+		quest::faction(405, 30);   #:: + Dain Frostreaver IV
+		quest::faction(419, -30);  #:: - Kromrif
+		quest::faction(448, -30);  #:: - Kromzek
+
+		#:: Grant a medium amount of experience.
+		quest::exp(70000);
+    }
+    #:: Match a 30140 - Coldain Smithing Hammer and a 30132 - Gold Coldain Insignia Ring.
+    elsif (plugin::takeItems(30140 => 1, 30132 => 1)) {
+		quest::say("Ahh, there we go now, that's more like it. It would be time to return to the hunt were it not for the [plans] our spies have discovered.");
+		#:: Give a 30134 - Platinum Coldain Insignia Ring.
+		quest::summonitem(30134);
+
+		#:: Set factions
+		quest::faction(406, 30);   #:: + Coldain
+		quest::faction(405, 30);   #:: + Dain Frostreaver IV
+		quest::faction(419, -30);  #:: - Kromrif
+		quest::faction(448, -30);  #:: - Kromzek
+
+		#:: Grant a medium amount of experience.
+		quest::exp(80000);
+    }
+    #:: Match a 30141 - Head of Scarbrow and a 30134 - Platinum Coldain Insignia Ring.
+    elsif (plugin::takeItems(30141 => 1, 30134 => 1)) {
+		quest::say("Without your assistance, we would have lost our camp and our lives. Again, I thank you. Now that you have proven your loyalty to the throne I have a special [favor] to ask of you.");
+		#:: Give a 30268 - Obsidian Coldain Insignia Ring.
+		quest::summonitem(30268);
+
+		#:: Set factions
+		quest::faction(406, 30);   #:: + Coldain
+		quest::faction(405, 30);   #:: + Dain Frostreaver IV
+		quest::faction(419, -30);  #:: - Kromrif
+		quest::faction(448, -30);  #:: - Kromzek
+
+		#:: Grant a medium amount of experience.
+		quest::exp(90000);
+    }
+    #:: Match a 1045 - Rodrick's Head a 18084 - Note from Kromrif and a 30268 - Obsidian Coldain Insignia Ring.
+    elsif (plugin::takeItems(1045 => 1, 18084 => 1, 30268 => 1)) {
+		quest::emote("lowers his head and mutters, 'At least there will be some closure for their families, thanks to you. The Ry`gorr will pay for this with their lives! I will ask you to help us in the invasion of Ry`gorr keep, but first I have a delicate [mission] I was hoping you'd handle.");
+		#:: Give a 30162 - Mithril Coldain Insignia Ring.
+		quest::summonitem(30162);
+
+		#:: Set factions
+		quest::faction(406, 30);   #:: + Coldain
+		quest::faction(405, 30);   #:: + Dain Frostreaver IV
+		quest::faction(419, -30);  #:: - Kromrif
+		quest::faction(448, -30);  #:: - Kromzek
+
+		#:: Grant a large amount of experience.
+		quest::exp(100000);
+    }
+    #:: Match a 1047 - Note from Corbin.
+    elsif (plugin::takeItems(1047 => 1)) {
+		quest::say("Thank you, $name, your service to our people has been most helpful. The time has come for our people to make war with the Ry`gorr. They must pay for their transgressions against our people. We are just waiting on you. Prepare yourself for glorious battle and tell me when you are [ready].");
+		#:: Give a 30163 - Adamantium Coldain Insignia Ring.
+		quest::summonitem(30163);
+
+		#:: Set factions
+		quest::faction(406, 30);   #:: + Coldain
+		quest::faction(405, 30);   #:: + Dain Frostreaver IV
+		quest::faction(419, -30);  #:: - Kromrif
+		quest::faction(448, -30);  #:: - Kromzek
+
+		#:: Grant a large amount of experience.
+		quest::exp(110000);
+    }
+    #:: Match a 30163 - Adamantium Coldain Insignia Ring.
+    elsif (plugin::takeItems(30163 => 1)) {
+		quest::say("Give this to Gloradin and return to me immediately, it is time. May Brell be with us!");
+		#:: Give a 1093 - Marching Orders.
+		quest::summonitem(1093);
+
+		#:: Set factions
+		quest::faction(406, 30);   #:: + Coldain
+		quest::faction(405, 30);   #:: + Dain Frostreaver IV
+		quest::faction(419, -30);  #:: - Kromrif
+		quest::faction(448, -30);  #:: - Kromzek
+
+		#:: Grant a large amount of experience.
+		quest::exp(120000);
+    }
+
+    #:: Return unused items.
+    plugin::returnUnusedItems();
+}
+
+sub EVENT_WAYPOINT_DEPART {
+    if ($walk1 == undef) {
+        $walk1 = $walk1 + 1;
+        $walk2 = undef;
+        #:: Create a timer '11' that triggers every 20 seconds (20 sec).
+        quest::settimer(11, 20);
+    }
+    elsif ($walk2 == undef) {
+        $walk2 = $walk2 + 1;
+        $walk3 = undef;
+    }
+    elsif ($walk3 == undef) {
+        #:: Pause for 200 ms (0 sec).
+        quest::pause(200);
+        #:: Create a timer '12' that triggers every 10 seconds (10 sec).
+        quest::settimer(12, 10);
+        $walk3 = $walk3 + 1;
+        $walk4 = undef;
+    }
+    elsif ($walk4 == undef) {
+        $walk4 = $walk4 + 1;
+        $walk5 = undef;
+    }
+    elsif ($walk5 == undef) {
+        $walk5 = $walk5 + 1;
+        #:: Spawn a Eastern Wastes >> #Garadain_Glacierbane (116576), without grid or guild war, at the given location.
+        quest::spawn2(116576, 237, 0, 521.2, -3140, 195.6, 130.5);
+        #:: Depop with spawn timer active.
+        quest::depop_withtimer();
+    }
+}
+
+sub EVENT_TIMER {
+    if ($timer == 11) {
+        #:: Stop the timer '11'.
+        quest::stoptimer(11);
+        quest::say("Follow me closely, friend, time is of the essence. I will describe our situation as we walk.");
+    }
+    elsif ($timer == 12) {
+        #:: Stop the timer '12'.
+        quest::stoptimer(12);
+        quest::say("The Dain's own royal troops will be at our disposal for the battle. This is good news, they are hardened, experienced soldiers. The bad news is that our sources indicate that the Ry`gorr have been alerted to our presence and will be ready for an attack. This is most unfortunate... They will not go down without a fierce fight.");
+        #:: Create a timer '3' that triggers every 120 seconds (2 min 0 sec).
+        quest::settimer(3, 120);
+    }
+    elsif ($timer == 3) {
+        #:: Stop the timer '3'.
+        quest::stoptimer(3);
+        quest::say("It is of utmost importance that you stay with me throughout the fight. Your focus must be on killing Chief Rygorr and keeping me alive, mind that you do not become distracted. If I fall the Dain's men will retreat and you'll definitely be cut down.");
+    }
+}
