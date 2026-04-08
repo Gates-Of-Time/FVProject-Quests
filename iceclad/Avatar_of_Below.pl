@@ -11,7 +11,7 @@ sub EVENT_SAY {
 }
 
 sub EVENT_ITEM {
-	#:: Match a 8895 - Runed Coldain Prayer Shawl
+	#:: Match a 8895 - Runed Coldain Prayer Shawl (Dain approved)
 	if (plugin::takeItems(8895 => 1)) {
 		quest::emote("holds the shawl up close to one eye to look at the rune sewn into it. He smiles to himself and then drops it to the ground and places one hand on it. A bright blue glow starts to emanate in the snow, then there is a sudden flash! The Avatar has dissipated. All that is left behind is the Shawl lying in the snow, shimmering with a new power. $name slowly bends down to pick it up, and is infused with a blessing from Brell.");
       	#:: Give a 1200 - Blessed Coldain Prayer Shawl

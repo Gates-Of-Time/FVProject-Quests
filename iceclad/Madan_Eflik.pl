@@ -14,7 +14,7 @@ sub EVENT_TIMER {
 			quest::emote("shivers violently.  'I hate this place.  My sister always told me I shouldn't be a pirate and that you were nothing but a clockwork grease pouring imbecile!");
 		}
 
-		#:: Send a signal "100" to Iceclad Ocean >> Sojan_the_Sleepless (110066) with a no delay
+		#:: Send a signal to Iceclad Ocean >> Sojan_the_Sleepless (110066) with a 100ms delay
 		quest::signal(110066,100);
 	}	
 }

@@ -9,5 +9,6 @@ sub EVENT_SPAWN {
 }
 
 sub EVENT_DEATH {
+	#:: Send a signal to Eastern Wastes >> Corbin_Blackwell (116119) with no delay
 	quest::signal(116119, 0);
 }
