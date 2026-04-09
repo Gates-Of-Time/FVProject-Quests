@@ -24,6 +24,7 @@ sub EVENT_ITEM {
 		quest::say("My thanks to you, $name. Take this key--I know not what door it opens. Now if I can just find that necklace of power that I took from my master's lair!");
 		#:: Give a 20600 - Key to Charasis
 		quest::summonitem(20600);
+		#:: Zone 105 - charasis
 		quest::set_zone_flag(105);
 		#:: Ding!
 		quest::ding();
@@ -35,6 +36,7 @@ sub EVENT_ITEM {
 		quest::say("My thanks to you, $name. Take this key--I know not what door it opens. Now if I can just find that necklace of power that I took from my master's lair!");
 		#:: Give a 20600 - Key to Charasis
 		quest::summonitem(20600);
+		#:: Zone 105 - charasis
 		quest::set_zone_flag(105);
 		#:: Ding!
 		quest::ding();
