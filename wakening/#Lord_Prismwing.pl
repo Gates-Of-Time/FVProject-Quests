@@ -1,0 +1,41 @@
+sub EVENT_SAY {
+    #:: Match if faction is better than Indifferent
+    if ($faction < 5) {
+        if ($text =~ /hail/i) {
+            quest::emote("blinks at you a few times then speaks in a strangely musical, draconic voice. 'You vish to azzizt ze count of ze Tunarean Faerie Dragons?");
+        }
+        elsif ($text =~ /assist/i) {
+            quest::say("I vish to ztop ze Kromzek Foreman from continuing ta deztroy thiz land. Iv you vish to azzizt you can zlay ze Foreman and bring me hiz helm az proof.");
+        }
+    }
+    #:: Match if faction is Indifferent or worse
+    else {
+        quest::say("You are no friend of the Tunarean Court.  Leave me.");
+    }
+}
+
+sub EVENT_ITEM {
+    #:: Match if faction is better than Indifferent
+    if ($faction < 5) {
+        #:: Match a 24873 - Kromzek Foreman Helm
+        if (plugin::takeItems(24873 => 1)) {
+            quest::say("Good, ze Foreman iz dead and now we will be left in peazz.  Take diz az a zign of my friendship.");
+            #:: Give a 24868 - Crest of the Faerie Dragons
+            quest::summonitem(24868);
+            #:: Set factions
+            quest::faction(449, 30); #:: + Tunarean Court
+            #:: Grant a tiny amount of experience
+            quest::exp(100);
+        }
+        else {
+            quest::say("I have no use for this, $name.");
+        }
+    }
+    #:: Match if faction is Indifferent or worse
+    else {
+        quest::say("I will not aid someone who is not a friend of the Tunarean Court.");
+    }
+
+    #:: Return unused items
+    plugin::returnUnusedItems();
+}
