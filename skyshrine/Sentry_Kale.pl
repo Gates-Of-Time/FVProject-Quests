@@ -46,7 +46,7 @@ sub EVENT_ITEM {
     #:: Give exactly 10 gold and 10 platinum
     quest::givecash(0, 0, 10, 10);
     #:: Set factions
-    quest::faction(436, 10); #:: + Yelinak
+    quest::faction(436, 10);  #:: + Yelinak
     quest::faction(430, 10);  #:: + Claws of Veeshan
     quest::faction(448, -30); #:: - Kromzek
     #:: Set the friendofthekin global for 30 days
@@ -62,7 +62,7 @@ sub EVENT_ITEM {
     #:: Give exactly 10 gold and 10 platinum
     quest::givecash(0, 0, 10, 10);
     #:: Set factions
-    quest::faction(436, 10); #:: + Yelinak
+    quest::faction(436, 10);  #:: + Yelinak
     quest::faction(430, 10);  #:: + Claws of Veeshan
     quest::faction(448, -30); #:: - Kromzek
     #:: Delete the friendofthekin global
